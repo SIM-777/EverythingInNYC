@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Plan the Perfect NYC Itinerary (Complete 2026 Guide) | EverythingInNYC</title>
+<meta name="description" content="A complete 10-part system for planning your New York City trip — neighborhood grouping, attraction priorities, reservations, transportation, budgeting, and where to stay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Part divider — blog-specific, not in shared stylesheet */
+  .part-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    letter-spacing:0.08em;text-transform:uppercase;
+    background:var(--navy);color:#fff;
+    padding:5px 13px;border-radius:8px;margin-bottom:14px;
+    margin-top:3em;
+  }
+  .part-pill:first-of-type{margin-top:1.2em;}
+  .article-body h2{scroll-margin-top:90px;}
+  .day-block{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:14px;padding:18px 20px;margin-bottom:12px;
+    display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:start;
+  }
+  @media(max-width:560px){.day-block{grid-template-columns:1fr;}}
+  .day-block .time{
+    font-family:var(--font-head);font-weight:800;font-size:13.5px;
+    background:rgba(255,193,7,0.18);color:var(--navy);
+    padding:6px 10px;border-radius:9px;display:inline-block;
+    line-height:1.35;text-align:center;
+  }
+  .day-block .content p{font-size:16px;margin-bottom:0.6em;}
+  .day-block .content ul{margin:6px 0 0;padding-left:1.2em;font-size:15px;color:var(--text-secondary);}
+  .toc-box{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:16px;padding:22px 24px;margin:28px 0;
+  }
+  .toc-box .toc-label{
+    font-size:12px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.06em;color:var(--text-secondary);margin-bottom:14px;
+  }
+  .toc-box ol{
+    margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:6px;
+  }
+  .toc-box ol li{font-size:15.5px;}
+  .toc-box ol li a{color:var(--navy);font-weight:600;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary Planning</span>
+      <h1>How to Plan the Perfect NYC Itinerary — A Complete 10-Part System (2026)</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated June 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 45&ndash;60 minute read</span>
+        <span>&middot;</span>
+        <span>&#11088;&#11088;&#11088;&#11088;&#11088; Trusted by thousands of NYC travelers</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p>Most NYC itinerary guides give you a list of attractions. This one gives you a system. There's a big difference.</p>
+      <p>A list tells you <em>what</em> to see. A system tells you <em>how</em> to see it &mdash; in the right order, at the right time, without wasting half your trip on unnecessary subway rides or standing in avoidable queues.</p>
+      <p>This guide covers everything: how to set up your trip before you book anything, how to group attractions by neighborhood, how to prioritize what actually matters, when to make reservations, how to structure each day, how to get around, how to manage your budget, and where to stay. It's designed for first-time visitors but useful on every return trip.</p>
+
+      <div class="toc-box">
+        <div class="toc-label">10 Parts &mdash; Jump to Any Section</div>
+        <ol>
+          <li><a href="#part1">Before You Plan Anything</a></li>
+          <li><a href="#part2">Understand NYC Like a Local</a></li>
+          <li><a href="#part3">Decide Your Travel Style</a></li>
+          <li><a href="#part4">The Attraction Planning System</a></li>
+          <li><a href="#part5">The Attraction Prioritization Matrix</a></li>
+          <li><a href="#part6">Reservations You Should Book First</a></li>
+          <li><a href="#part7">The Perfect Day Formula</a></li>
+          <li><a href="#part8">Transportation Strategy</a></li>
+          <li><a href="#part9">Budget Planning Strategy</a></li>
+          <li><a href="#part10">Choosing the Best Neighborhood to Stay</a></li>
+        </ol>
+      </div>
+
+      <!-- ===== PART 1 ===== -->
+      <div class="part-pill">Part 1</div>
+      <h2 id="part1">Before You Plan Anything</h2>
+
+      <h3>The Biggest Mistake Most Visitors Make</h3>
+      <p>The first thing many travelers do after booking their flights is search for &ldquo;Best Things to Do in New York City.&rdquo; While that seems logical, it's actually one of the biggest reasons people end up with rushed, exhausting itineraries.</p>
+      <p>New York City isn't a destination where you can simply work through a checklist of attractions. It's a city made up of vibrant neighborhoods, each with its own atmosphere, food scene, landmarks, and experiences. A well-planned itinerary isn't about seeing the <em>most</em> attractions &mdash; it's about seeing the <em>right</em> attractions in the right order.</p>
+
+      <h3>Step 1: Decide What Kind of NYC Trip You Want</h3>
+      <p>There is no &ldquo;perfect&rdquo; NYC itinerary because every traveler has different priorities. Start by asking yourself honestly:</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Is this your first visit to New York City?</li>
+        <li><span class="dot"></span>Are you visiting specifically for Christmas?</li>
+        <li><span class="dot"></span>Are you traveling as a couple, family, or solo?</li>
+        <li><span class="dot"></span>Do you enjoy museums or would you rather explore neighborhoods?</li>
+        <li><span class="dot"></span>Are you interested in food experiences?</li>
+        <li><span class="dot"></span>Do you want a fast-paced trip or a slower vacation?</li>
+      </ul>
+
+      <h3>Step 2: How Many Days Do You Really Have?</h3>
+      <div class="card-grid cols-3">
+        <div class="card"><div class="card-tag">2 Days</div><p>Focus only on NYC's most iconic attractions.</p></div>
+        <div class="card"><div class="card-tag">3 Days</div><p>Major highlights plus one neighborhood in depth.</p></div>
+        <div class="card"><div class="card-tag">4 Days</div><p>The ideal first-time visit &mdash; landmarks, neighborhoods, museums, and Broadway.</p></div>
+        <div class="card"><div class="card-tag">5 Days</div><p>A relaxed pace with time to explore beyond Midtown.</p></div>
+        <div class="card"><div class="card-tag">6&ndash;7 Days</div><p>Enough time to experience NYC more like a local, including Brooklyn and Queens.</p></div>
+      </div>
+      <div class="callout callout-summary">
+        <div class="callout-title">&#9989; Key Principle</div>
+        <p>More days should mean <strong>more experiences</strong>, not simply more attractions.</p>
+      </div>
+
+      <h3>Step 3: Understand Your Travel Pace</h3>
+      <div class="card-grid cols-3">
+        <div class="card"><h4>&#9889; Fast Explorer</h4><p>Packed sightseeing days, early mornings, maximum attractions per day.</p></div>
+        <div class="card"><h4>&#9878;&#65039; Balanced Traveler</h4><p>Highlights with time to relax. The style most first-time visitors enjoy.</p></div>
+        <div class="card"><h4>&#9749; Slow Traveler</h4><p>Fewer places, experienced deeply. Longer time in museums, parks, and neighborhoods.</p></div>
+      </div>
+
+      <h3>Step 4: Set Your Budget Early</h3>
+      <p>Budget influences nearly every part of your trip &mdash; accommodation, transportation, Broadway, observation decks, restaurants, museums, and attraction passes. Planning it before building your itinerary makes it far easier to decide which experiences are truly worth paying for.</p>
+
+      <h3>Step 5: Choose Your Season</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>&#10052;&#65039; Winter</h4><p>Christmas decorations, holiday markets, ice skating, festive crowds. Shorter daylight hours.</p></div>
+        <div class="card"><h4>&#127800; Spring</h4><p>Comfortable temperatures, blooming parks, fewer crowds. One of the best seasons for walking.</p></div>
+        <div class="card"><h4>&#9728;&#65039; Summer</h4><p>Long daylight hours allow more sightseeing per day, but heat and humidity can be intense.</p></div>
+        <div class="card"><h4>&#127809; Fall</h4><p>Cool weather, autumn colors, comfortable walking conditions. One of the city's most beautiful seasons.</p></div>
+      </div>
+
+      <h3>Step 6: Plan Around Your Arrival and Departure</h3>
+      <p>Your first and last days are rarely full sightseeing days. Flights get delayed. Immigration can take longer than expected. Jet lag is real.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Pro Tip</div>
+        <p>Keep your arrival day flexible. Great first-day activities include walking around Times Square, visiting Bryant Park, casual shopping, or a relaxed dinner nearby. Avoid squeezing major attractions into the final hours before your flight &mdash; a relaxed departure day makes for a much more enjoyable ending to your trip.</p>
+      </div>
+
+      <!-- ===== PART 2 ===== -->
+      <div class="part-pill">Part 2</div>
+      <h2 id="part2">Understand NYC Like a Local</h2>
+
+      <h3>Why Geography Matters More Than Your Attraction List</h3>
+      <p>One of the biggest mistakes first-time visitors make isn't choosing the wrong attractions. It's choosing them in the wrong order. Many tourists unknowingly travel back and forth across Manhattan multiple times in a single day, wasting hours on transportation, rushing meals, and arriving at dinner already exhausted.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The Secret</div>
+        <p><strong>Plan by neighborhood &mdash; not by popularity.</strong> Once you understand how New York is laid out, you'll naturally create smoother, more enjoyable days.</p>
+      </div>
+
+      <h3>Manhattan's Distinct Areas</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Lower Manhattan</h4><p>The historic heart of New York. Deserves its own sightseeing day.</p><ul class="card-list"><li>Statue of Liberty</li><li>9/11 Memorial</li><li>Wall Street</li><li>One World Observatory</li><li>South Street Seaport</li></ul></div>
+        <div class="card"><h4>Midtown</h4><p>The New York most people imagine. Most attractions within walking distance &mdash; ideal for your first full day.</p><ul class="card-list"><li>Times Square</li><li>Rockefeller Center</li><li>Empire State Building</li><li>Bryant Park</li><li>Grand Central</li></ul></div>
+        <div class="card"><h4>Uptown</h4><p>Slower-paced, filled with museums and parks. Don't combine with Lower Manhattan.</p><ul class="card-list"><li>Central Park</li><li>The Met</li><li>AMNH</li><li>Guggenheim</li></ul></div>
+        <div class="card"><h4>Brooklyn &amp; Queens</h4><p>Best skyline views, neighborhood experiences, incredible international food. Perfect for days 4+.</p><ul class="card-list"><li>DUMBO</li><li>Williamsburg</li><li>Long Island City</li><li>Astoria</li></ul></div>
+      </div>
+
+      <h3>The Golden Rule of Itinerary Planning</h3>
+      <p>Never build your itinerary around individual attractions. Build it around neighborhoods. The difference in practice:</p>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">&#10060; Scattered — Avoid This</div><p>Empire State Building → Brooklyn Bridge → Central Park → Wall Street → Rockefeller Center (one per day, across the city)</p></div>
+        <div class="card"><div class="card-tag">&#9989; Grouped — Do This</div><p><strong>Midtown Day:</strong> Empire State Building → Rockefeller Center → Bryant Park → Fifth Avenue → Times Square → Grand Central</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Local Tip</div>
+        <p>Most visitors average between <strong>20,000 and 30,000 steps per day</strong>. Comfortable shoes aren't optional &mdash; they're essential. <strong>Subway between neighborhoods. Walk within neighborhoods.</strong></p>
+      </div>
+
+      <!-- ===== PART 3 ===== -->
+      <div class="part-pill">Part 3</div>
+      <h2 id="part3">Decide Your Travel Style</h2>
+
+      <h3>The Nine Traveler Types</h3>
+      <p>Most generic NYC itineraries fail because they assume every traveler wants exactly the same vacation. Before choosing attractions, decide what type of traveler you are.</p>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>The Classic First-Timer</h4><p>Famous landmarks, iconic views, must-see attractions. Statue of Liberty, Central Park, Times Square, Brooklyn Bridge, Broadway.</p></div>
+        <div class="card"><h4>The Christmas Traveler</h4><p>Visiting November&ndash;January? Build around seasonal experiences &mdash; they sell out first. Rockefeller Tree, holiday markets, Dyker Heights lights.</p></div>
+        <div class="card"><h4>The Food Explorer</h4><p>Itinerary built around neighborhoods known for food. Chelsea Market, Chinatown, Queens food halls, pizza and bagel trails.</p></div>
+        <div class="card"><h4>The Skyline Hunter</h4><p>Sunrise and sunset planning matters more than attraction count. Observation decks, DUMBO, Roosevelt Island, rooftop bars.</p></div>
+        <div class="card"><h4>The Museum Lover</h4><p>Proper time in museums instead of rushing. The Met, MoMA, AMNH, Guggenheim &mdash; pairs well with nearby parks.</p></div>
+        <div class="card"><h4>The Broadway Fan</h4><p>Shows become the centerpiece. Plan lighter afternoons before performances. Reserve restaurants near the theater district early.</p></div>
+        <div class="card"><h4>The Family Traveler</h4><p>Slower pacing, more flexibility. Avoid too many ticketed attractions in one day. Central Park, zoos, interactive museums.</p></div>
+        <div class="card"><h4>The Budget Traveler</h4><p>An unforgettable NYC trip doesn't have to be expensive. Free parks, the Staten Island Ferry, free viewpoints, and neighborhood walks cover a full week.</p></div>
+      </div>
+      <div class="callout callout-summary">
+        <div class="callout-title">&#9989; The Formula</div>
+        <p>Your perfect itinerary = <strong>Trip Length + Travel Style + Season + Budget + Energy Level.</strong> Everything else in this guide builds on that combination.</p>
+      </div>
+
+      <!-- ===== PART 4 ===== -->
+      <div class="part-pill">Part 4</div>
+      <h2 id="part4">The Attraction Planning System</h2>
+
+      <h3>Build Every Day Around One Anchor Attraction</h3>
+      <p>Every sightseeing day should begin with one major experience &mdash; your day's anchor. Once the anchor is fixed, add nearby attractions, caf&eacute;s, restaurants, and parks within walking distance. Don't plan multiple anchors in different parts of the city on the same day.</p>
+
+      <h3>The 6 NYC Neighborhood Clusters</h3>
+      <p>These are the core sightseeing zones. Each one works as a complete sightseeing day.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-tag">Cluster 1 &mdash; Midtown Manhattan</div>
+          <h4>&#128338; 1 Full Day &nbsp;&middot;&nbsp; Perfect for first-time visitors</h4>
+          <p>Times Square, Rockefeller Center, Top of the Rock, SUMMIT One Vanderbilt, Grand Central Terminal, Bryant Park, NY Public Library, Fifth Avenue, St. Patrick's Cathedral, Radio City, Broadway, Empire State Building.</p>
+          <p>Most attractions are less than a 15-minute walk apart &mdash; one of the easiest areas to explore entirely on foot.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Cluster 2 &mdash; Lower Manhattan</div>
+          <h4>Perfect for history lovers and harbor views</h4>
+          <p>Statue of Liberty Ferry, Battery Park, Wall Street, Charging Bull, Fearless Girl, 9/11 Memorial, One World Observatory, Oculus, South Street Seaport.</p>
+          <p>Combines American history, financial landmarks, and some of the city's most significant memorials.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Cluster 3 &mdash; Central Park &amp; Museum Mile</div>
+          <h4>Perfect for culture, families, relaxed sightseeing</h4>
+          <p>Central Park, Bethesda Terrace, Bow Bridge, Belvedere Castle, Strawberry Fields, The Met, Guggenheim, AMNH.</p>
+          <p>Allow plenty of time to enjoy both the museums and the park &mdash; this area shouldn't feel rushed.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Cluster 4 &mdash; Chelsea &amp; Hudson Yards</div>
+          <h4>Perfect for architecture, food, modern NYC</h4>
+          <p>High Line, Chelsea Market, Little Island, Hudson Yards, Edge, The Vessel, Whitney Museum.</p>
+          <p>One of the easiest neighborhoods to explore on foot, and ideal for food lovers.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Cluster 5 &mdash; Greenwich Village, SoHo &amp; Chinatown</div>
+          <h4>Perfect for food, shopping, photography</h4>
+          <p>Washington Square Park, Greenwich Village, Bleecker Street, SoHo, Nolita, Little Italy, Chinatown.</p>
+          <p>Rather than focusing on attractions, this day is about wandering beautiful streets and soaking up New York's atmosphere.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Cluster 6 &mdash; Brooklyn Waterfront</div>
+          <h4>Perfect for photography, sunset, relaxed walking</h4>
+          <p>Brooklyn Bridge, DUMBO, Jane's Carousel, Brooklyn Bridge Park, Time Out Market, Brooklyn Heights Promenade.</p>
+          <p>Arrive in the late afternoon to enjoy golden hour and sunset over the Manhattan skyline.</p>
+        </div>
+      </div>
+
+      <h3>The 15-Minute Rule</h3>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; One Simple Test</div>
+        <p>Ask yourself: is this attraction within a 10&ndash;15 minute walk of somewhere I'm already visiting? If yes, add it. If it requires a separate subway ride just to spend fifteen minutes there, save it for another day. This single habit dramatically reduces wasted travel time.</p>
+      </div>
+
+      <h3>Use Google Maps Like a Professional Trip Planner</h3>
+      <p>Instead of one giant saved list, organize your saved places into neighborhood collections &mdash; Midtown, Lower Manhattan, Central Park, Brooklyn, Chelsea, SoHo. As your saved locations grow, you'll naturally see complete itinerary days forming on the map.</p>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Plan Faster</div>
+        <h4>The Ultimate NYC Tourist Map</h4>
+        <p>Two maps in one: a pre-organized Google My Maps for planning your itinerary by neighborhood, and a pre-built Google Maps list that helps you discover attractions, restaurants, viewpoints, and hidden gems while you're exploring NYC.</p>
+        <ul style="list-style:none;padding:0;margin:14px 0 20px;display:flex;flex-wrap:wrap;gap:8px;">
+          <li style="font-size:15px;color:rgba(255,255,255,0.85);">&#10003; Hidden gems</li>
+          <li style="font-size:15px;color:rgba(255,255,255,0.85);margin-left:16px;">&#10003; Food &amp; restaurants</li>
+          <li style="font-size:15px;color:rgba(255,255,255,0.85);margin-left:16px;">&#10003; Observation decks</li>
+          <li style="font-size:15px;color:rgba(255,255,255,0.85);margin-left:16px;">&#10003; Christmas locations</li>
+          <li style="font-size:15px;color:rgba(255,255,255,0.85);margin-left:16px;">&#10003; Saved directly into Google Maps</li>
+        </ul>
+        <a class="btn btn-primary" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get My NYC Map</a>
+      </div>
+
+      <!-- ===== PART 5 ===== -->
+      <div class="part-pill">Part 5</div>
+      <h2 id="part5">The Attraction Prioritization Matrix</h2>
+
+      <h3>Why You Don't Need to See Everything</h3>
+      <p>Here's the truth: you are not supposed to see everything. Even lifelong New Yorkers haven't. The goal isn't to complete New York. The goal is to create unforgettable memories. Before arranging attractions into days, rank every attraction on your list into four tiers.</p>
+
+      <div class="numbered-step">
+        <div class="num" style="background:var(--success);">1</div>
+        <div><h4>Must Do</h4><p>The attractions that define your trip. Ask: &ldquo;If I came home without seeing this, would I regret it?&rdquo; Maximum 8&ndash;10 attractions &mdash; reserve these first and build everything else around them.</p><p><em>Examples: Statue of Liberty, Broadway, Central Park, Brooklyn Bridge, Top of the Rock</em></p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num" style="background:var(--info);">2</div>
+        <div><h4>Would Love to Do</h4><p>Excited about but wouldn't be disappointed to skip if necessary. These become excellent fillers around your major attractions.</p><p><em>Examples: High Line, Chelsea Market, Roosevelt Island, Grand Central, Little Island, MoMA</em></p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num" style="background:var(--warning);">3</div>
+        <div><h4>Nice Bonus</h4><p>Worth visiting only if you're already nearby. Never travel across Manhattan just for them. Think of these as pleasant surprises, not itinerary anchors.</p><p><em>Examples: Flatiron Building, Washington Mews, Pebble Beach, tiny parks, public art</em></p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num" style="background:#9CA3AF;">4</div>
+        <div><h4>Save for Next Time</h4><p>Intentionally deciding what <em>not</em> to see is one of the smartest planning decisions you'll make. New York isn't going anywhere.</p></div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The One Amazing Memory Test</div>
+        <p>Whenever you're unsure how important an attraction really is, ask yourself: five years from now, would missing this genuinely disappoint me? If yes, move it to Must Do. If not, move it down.</p>
+      </div>
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Don't Fill Every Hour</div>
+        <p>Every attraction takes longer than expected &mdash; you'll stop for photos, discover interesting shops, find caf&eacute;s, or simply want to sit in Central Park for twenty minutes. That's not wasted time. That's the experience. Leave room for New York to surprise you.</p>
+      </div>
+
+      <!-- ===== PART 6 ===== -->
+      <div class="part-pill">Part 6</div>
+      <h2 id="part6">Reservations You Should Book Before Your Trip</h2>
+
+      <h3>Reverse the Process</h3>
+      <p>Many travelers create a detailed itinerary, then try to book tickets afterward. By then, the sunset slot is sold out, Broadway only has expensive seats left, and the restaurant is fully booked. Instead, book the experiences that require reservations first, then build your itinerary around them.</p>
+
+      <h3>What to Reserve &amp; In What Order</h3>
+      <div class="numbered-step"><div class="num">1</div><div><h4>Flights</h4><p>Your arrival and departure times determine how many usable sightseeing days you actually have.</p></div></div>
+      <div class="numbered-step"><div class="num">2</div><div><h4>Hotel</h4><p>Your hotel location influences every single day. Choosing the right neighborhood often saves more time than choosing the &ldquo;best&rdquo; hotel.</p></div></div>
+      <div class="numbered-step"><div class="num">3</div><div><h4>Broadway Shows</h4><p>Book before anything else. Popular productions can sell out weeks &mdash; or months &mdash; in advance, especially during Christmas, Thanksgiving, Spring Break, and summer.</p></div></div>
+      <div class="numbered-step"><div class="num">4</div><div><h4>Observation Decks</h4><p>Try to book a sunset slot &mdash; you'll get daytime views, golden hour, sunset, blue hour, and the night skyline. Five completely different views from one ticket.</p></div></div>
+      <div class="numbered-step"><div class="num">5</div><div><h4>Statue of Liberty</h4><p>General ferry tickets are usually available. For Pedestal or Crown Access, reserve well in advance.</p></div></div>
+      <div class="numbered-step"><div class="num">6</div><div><h4>Museums &amp; Tours</h4><p>Many museums now offer timed entry. Booking ahead lets you choose the most convenient time while avoiding unnecessary queues.</p></div></div>
+      <div class="numbered-step"><div class="num">7</div><div><h4>Restaurants</h4><p>For famous or Michelin-starred venues, booking ahead is essential. Popular restaurants release reservations weeks in advance and fill quickly.</p></div></div>
+
+      <h3>Reservation Timeline at a Glance</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>When</th><th>What to Book</th></tr>
+          <tr><td>3&ndash;6 Months Before</td><td>Flights, hotels, Broadway, holiday/Christmas experiences</td></tr>
+          <tr><td>1&ndash;3 Months Before</td><td>Observation decks, Statue of Liberty, museums, guided tours</td></tr>
+          <tr><td>2&ndash;4 Weeks Before</td><td>Restaurants, rooftop bars, food tours, specialty experiences</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Don't Stack Reservations Back-to-Back</div>
+        <p>One of the easiest ways to ruin an itinerary is booking timed attractions too close together. Allow breathing room: one major reservation in the morning, lunch, flexible sightseeing, one evening reservation. This gives you time to enjoy unexpected discoveries without constantly checking your watch.</p>
+      </div>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Pro Tip &middot; Stay Flexible</div>
+        <h4>Reserve Now, Pay Later</h4>
+        <p>If you're still finalizing your itinerary, many tours and attractions on Viator let you reserve now and pay later, so you can lock in your preferred date and time while keeping your plans flexible. Most eligible bookings also include free cancellation up to 24 hours before the experience starts.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Browse Tours &amp; Attractions</a>
+      </div>
+
+      <!-- ===== PART 7 ===== -->
+      <div class="part-pill">Part 7</div>
+      <h2 id="part7">The Perfect Day Formula</h2>
+
+      <h3>Structure Each Day by Phase</h3>
+      <p>Think of every day as having several phases. Each phase is better suited to certain types of experiences. Treating every hour equally &mdash; observation deck at noon, museum in the heat of the afternoon, dinner on the opposite side of the city &mdash; is the fastest way to end up exhausted and behind schedule.</p>
+
+      <div class="day-block">
+        <div class="time">7:30&ndash;10:00 AM<br>Morning</div>
+        <div class="content"><p>The most peaceful time. Light is beautiful, temperatures are cooler, and you'll enjoy many attractions before crowds arrive.</p><ul><li>Walking across the Brooklyn Bridge</li><li>Exploring Central Park</li><li>Photographing DUMBO</li><li>Staten Island Ferry on the first run</li><li>Times Square before it fills up</li></ul></div>
+      </div>
+      <div class="day-block">
+        <div class="time">10:00 AM&ndash;12:30 PM<br>Late Morning</div>
+        <div class="content"><p>The perfect time for your first major ticketed attraction, after outdoor sightseeing is complete.</p><ul><li>SUMMIT One Vanderbilt or Top of the Rock</li><li>Empire State Building or One World Observatory</li><li>The Met or AMNH</li></ul></div>
+      </div>
+      <div class="day-block">
+        <div class="time">12:30&ndash;2:00 PM<br>Lunch</div>
+        <div class="content"><p>One of the simplest ways to waste time is chasing a famous restaurant across the city. Eat where you already are.</p></div>
+      </div>
+      <div class="day-block">
+        <div class="time">2:00&ndash;5:00 PM<br>Afternoon</div>
+        <div class="content"><p>Your energy will probably begin to drop &mdash; the perfect time for slower experiences.</p><ul><li>Museums, shopping, markets, food halls</li><li>Neighborhood exploration, coffee breaks</li></ul></div>
+      </div>
+      <div class="day-block">
+        <div class="time">5:00 PM&ndash;Sunset<br>Late Afternoon</div>
+        <div class="content"><p>One of the most underrated times of day &mdash; crowds thin, light softens, the city feels more relaxed. One of the best times for photography.</p><ul><li>High Line, Hudson River Park, Little Island</li><li>Central Park, Brooklyn Bridge Park, Brooklyn Heights Promenade</li></ul></div>
+      </div>
+      <div class="day-block">
+        <div class="time">Evening</div>
+        <div class="content"><p>Choose one memorable experience and allow yourself time to fully enjoy it.</p><ul><li>Broadway show, observation deck at night, rooftop bar</li><li>Sunset cruise, fine dining, jazz club or comedy show</li></ul></div>
+      </div>
+
+      <h3>The 2 + 2 + 1 Rule</h3>
+      <p>Every sightseeing day should include:</p>
+      <div class="card-grid cols-3">
+        <div class="card"><div class="card-icon" style="font-size:26px;font-weight:800;background:rgba(15,23,42,0.08);">2</div><h4>Major Attractions</h4><p>e.g. SUMMIT One Vanderbilt &amp; a Broadway Show</p></div>
+        <div class="card"><div class="card-icon" style="font-size:26px;font-weight:800;background:rgba(15,23,42,0.08);">2</div><h4>Minor Attractions</h4><p>e.g. Bryant Park &amp; Grand Central Terminal</p></div>
+        <div class="card"><div class="card-icon" style="font-size:26px;font-weight:800;background:rgba(15,23,42,0.08);">1</div><h4>Neighborhood</h4><p>e.g. Midtown Manhattan</p></div>
+      </div>
+      <p>That's already a complete day. Anything beyond this is a bonus.</p>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Build Buffer Time Into Every Day</div>
+        <p>Every attraction takes longer than expected. Leave at least <strong>30&ndash;60 minutes of flexibility</strong> between major activities. Those unscheduled moments &mdash; the random caf&eacute;, the street performer, the unexpected viewpoint &mdash; are often the ones you remember most.</p>
+      </div>
+
+      <h3>Alternate Busy Days With Relaxed Days</h3>
+      <div class="card-grid cols-3">
+        <div class="card"><div class="card-tag">Day 1 &middot; High Energy</div><p>Midtown sightseeing, Broadway, observation deck</p></div>
+        <div class="card"><div class="card-tag">Day 2 &middot; Relaxed</div><p>Central Park, the Met, relaxed dinner</p></div>
+        <div class="card"><div class="card-tag">Day 3 &middot; High Energy</div><p>Lower Manhattan, Brooklyn Bridge, DUMBO</p></div>
+      </div>
+
+      <!-- ===== PART 8 ===== -->
+      <div class="part-pill">Part 8</div>
+      <h2 id="part8">Transportation Strategy</h2>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The Golden Rule</div>
+        <p><strong>Walk within neighborhoods. Take the subway between neighborhoods.</strong> This single habit will save you hours over the course of your trip.</p>
+      </div>
+
+      <h3>Getting Around NYC</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>The Subway</h4><p>The fastest and cheapest way to travel between neighborhoods. Tap contactless with <a href="metrocard-omny-guide.html">OMNY</a> &mdash; your phone, watch, or card works. Most visitors only need to know three things: correct station, correct train, correct exit.</p></div>
+        <div class="card"><h4>Walking</h4><p>Many attractions are surprisingly close together. Most visitors average 20,000&ndash;30,000 steps per day. Comfortable shoes are probably the most important thing you'll pack.</p></div>
+        <div class="card"><h4>Ferries</h4><p>Transportation and sightseeing combined. The Staten Island Ferry is free and passes the Statue of Liberty. The NYC Ferry ($4.50) covers Brooklyn, Queens, and the Bronx with incredible skyline views.</p></div>
+        <div class="card"><h4>Uber &amp; Taxis</h4><p>Ideal for airport arrivals, late nights, and group travel. Avoid relying on them during rush hour in Midtown &mdash; walking is often faster.</p></div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Transportation Mistakes to Avoid</div>
+        <p>Taking the subway for one stop, returning to your hotel between activities, using Uber for every journey, and crossing Manhattan multiple times each day. Group attractions properly and let the transportation system work for you.</p>
+      </div>
+
+      <h3>Essential Apps</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Google Maps &mdash; navigation and subway directions</li>
+        <li><span class="dot"></span>Citymapper &mdash; real-time transit with service alerts</li>
+        <li><span class="dot"></span>MTA App &mdash; official subway status and weekend changes</li>
+        <li><span class="dot"></span>Weather App &mdash; NYC weather changes fast</li>
+        <li><span class="dot"></span>Airline App &mdash; for gate changes and boarding</li>
+      </ul>
+      <p><a href="metrocard-omny-guide.html">Read the full NYC transit guide for 2026 &rarr;</a></p>
+
+      <!-- ===== PART 9 ===== -->
+      <div class="part-pill">Part 9</div>
+      <h2 id="part9">Budget Planning Strategy</h2>
+
+      <h3>Spend Money Where It Matters Most</h3>
+      <p>The biggest mistake isn't spending too much &mdash; it's spending on the wrong things. Your goal isn't to spend as little as possible. It's to spend on the experiences you'll actually remember.</p>
+
+      <h3>Break Your Budget Into Categories</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Accommodation</li>
+        <li><span class="dot"></span>Food &amp; Drinks</li>
+        <li><span class="dot"></span>Transportation</li>
+        <li><span class="dot"></span>Attractions</li>
+        <li><span class="dot"></span>Shopping</li>
+        <li><span class="dot"></span>Entertainment</li>
+        <li><span class="dot"></span>Emergency Fund</li>
+      </ul>
+
+      <div class="card-grid cols-3">
+        <div class="card"><div class="card-tag">Budget Traveler</div><h4>Focus on value</h4><p>Budget hotels or hostels, public transportation, pizza and bagels, mostly free attractions with one or two paid experiences.</p></div>
+        <div class="card"><div class="card-tag">Mid-Range Traveler</div><h4>The most common choice</h4><p>Comfortable hotel, one paid attraction per day, mix of casual and sit-down restaurants, Broadway or one observation deck.</p></div>
+        <div class="card"><div class="card-tag">Luxury Traveler</div><h4>Premium experiences</h4><p>Luxury hotels, fine dining, cocktail bars, private tours, designer shopping, premium Broadway seats.</p></div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Hidden Costs People Forget</div>
+        <p>Sales tax, hotel fees, restaurant tips (20% is standard), airport transportation, coffee, snacks, drinks, souvenirs, and impulse shopping. Always keep an emergency buffer &mdash; you'll almost certainly use part of it.</p>
+      </div>
+
+      <div class="callout callout-splurge">
+        <div class="callout-title">&#11088; Worth the Splurge</div>
+        <p>A Broadway show, one observation deck, a memorable dinner, or a guided tour you're genuinely excited about. You'll remember these experiences long after you've forgotten how much they cost.</p>
+      </div>
+
+      <h3>Should You Buy an Attraction Pass?</h3>
+      <p>Attraction passes can offer excellent value &mdash; but only in the right situation. Always build your itinerary first, count how many included attractions you'll actually visit, then compare the total cost. If it saves money, buy it. If not, skip it. <strong>Build your itinerary first. Buy your pass second.</strong></p>
+
+      <p><a href="saving-money-on-nyc-trip.html">Read our full guide on saving money on an NYC trip without missing anything &rarr;</a></p>
+      <p><a href="25-free-things-to-do-in-nyc.html">Browse 25 free things to do in NYC &rarr;</a></p>
+
+      <!-- ===== PART 10 ===== -->
+      <div class="part-pill">Part 10</div>
+      <h2 id="part10">Choosing the Best Neighborhood to Stay</h2>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The Factor That Matters Most</div>
+        <p><strong>Location.</strong> A modest hotel in the right neighborhood will usually give you a much better trip than a luxury hotel far from the attractions you plan to visit. The less time you spend commuting, the more time you'll spend enjoying New York.</p>
+      </div>
+
+      <p>Your hotel location influences every single day of your trip. Choosing the right neighborhood often saves more time than choosing the &ldquo;best&rdquo; hotel. The best location depends entirely on your itinerary &mdash; where you're spending most of your days, which subway lines you need, and how much you value walking distance to your anchor attractions.</p>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Where to Stay</div>
+        <h4>The Complete NYC Hotels Guide</h4>
+        <p>A detailed, neighborhood-by-neighborhood breakdown of where to stay in New York City based on your itinerary, travel style, and budget.</p>
+        <a class="btn btn-primary" href="https://everythinginnyc.blogspot.com/2026/04/nyc-hotels-guide-where-to-stay-based-on.html" target="_blank" rel="noopener">Read the Hotels Guide</a>
+      </div>
+
+      <hr class="divider-rule">
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>How many days do you need in NYC for a first visit?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Four days is widely considered the ideal first visit &mdash; enough time for the major landmarks, at least one neighborhood deep-dive, a Broadway show, and an observation deck, without feeling constantly rushed. Five to seven days allows a much more relaxed pace.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the most important thing to do first when planning an NYC trip?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Book your Broadway show (if you want one) and your observation deck first &mdash; before anything else. Popular Broadway productions and sunset time slots sell out weeks in advance. Once these are fixed, the rest of the itinerary builds naturally around them.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I plan NYC by attraction or by neighborhood?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Always by neighborhood. Grouping attractions that are already close together is the single most effective way to reduce wasted travel time. Crossing Manhattan multiple times a day to hit individual attractions is the most common reason people end up exhausted by day two.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How much should I budget per day in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For a mid-range trip, budget roughly $150&ndash;$250 per person per day excluding accommodation. This covers one major paid attraction, a mix of meals, and local transport. Budget travelers can realistically do $80&ndash;$120 per day by leaning on free attractions, the subway, and local food spots.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the best area of NYC to stay for first-time visitors?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Midtown Manhattan (roughly 34th to 59th Street) puts you within walking distance of the most iconic first-trip attractions. However, neighborhoods like Chelsea, the Upper West Side, and even Long Island City in Queens offer much better hotel value while still being quick subway rides from everything.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the best time of year to visit NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Spring (April&ndash;June) and Fall (September&ndash;November) offer the most comfortable walking temperatures with thinner crowds than summer. December is magical but very crowded and expensive. January and February have the cheapest hotel prices and flights if you don't mind the cold.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="realistic-nyc-bucket-list.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Realistic NYC Bucket List (5&ndash;7 Days)</a></li>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Almost Dead &mdash; Getting Around NYC in 2026</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Comparing NYC Observation Decks: Edge vs Top of the Rock vs Empire State</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How I Saved Money on My NYC Trip Without Missing Anything</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
