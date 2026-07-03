@@ -9,6 +9,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Deck-colour column headers */
+  .deck-table th.th-esb  { background:#92620A; color:#fff; }
+  .deck-table th.th-rock { background:var(--info); color:#fff; }
+  .deck-table th.th-edge { background:var(--navy); color:#fff; }
+  .deck-table th.th-feat { background:var(--navy-soft); color:#fff; width:22%; }
+
+  .deck-table td { font-size:14.5px; vertical-align:top; }
+  .deck-table td:first-child {
+    font-weight:700; color:var(--navy);
+    background:rgba(15,23,42,0.03);
+  }
+  .deck-table tr:nth-child(even) td { background:rgba(15,23,42,0.015); }
+  .deck-table tr:nth-child(even) td:first-child { background:rgba(15,23,42,0.04); }
+
+  /* Winner badge inside decision table */
+  .win-badge {
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-head); font-weight:800; font-size:13.5px;
+    padding:5px 11px; border-radius:20px; white-space:nowrap;
+  }
+  .win-esb  { background:rgba(255,193,7,0.18); color:#7A5400; }
+  .win-rock { background:rgba(37,99,235,0.12); color:var(--info); }
+  .win-edge { background:rgba(15,23,42,0.1);   color:var(--navy); }
+  .win-tie  { background:rgba(22,163,74,0.12);  color:#15803D; }
+
+  /* Skip-deck cards */
+  .skip-grid {
+    display:grid; grid-template-columns:1fr; gap:16px; margin:24px 0;
+  }
+  @media(min-width:640px){ .skip-grid{ grid-template-columns:1fr 1fr; } }
+
+  .skip-card {
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:16px; padding:20px 20px 18px;
+  }
+  .skip-card .sk-priority {
+    font-size:13px; font-weight:700; color:var(--text-secondary);
+    text-transform:uppercase; letter-spacing:0.04em;
+    margin-bottom:10px;
+  }
+  .skip-card .sk-skip {
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--font-head); font-weight:800;
+    font-size:15.5px; color:var(--error); margin-bottom:6px;
+  }
+  .skip-card .sk-skip::before {
+    content:'Skip';
+    font-size:11px; font-weight:700; text-transform:uppercase;
+    letter-spacing:0.05em; background:rgba(220,38,38,0.1);
+    color:var(--error); padding:3px 8px; border-radius:20px; flex:none;
+  }
+  .skip-card .sk-choose {
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--font-head); font-weight:800;
+    font-size:15.5px; color:var(--success); margin-bottom:10px;
+  }
+  .skip-card .sk-choose::before {
+    content:'Choose';
+    font-size:11px; font-weight:700; text-transform:uppercase;
+    letter-spacing:0.05em; background:rgba(22,163,74,0.12);
+    color:var(--success); padding:3px 8px; border-radius:20px; flex:none;
+  }
+  .skip-card .sk-why {
+    font-size:14px; color:var(--text-secondary); line-height:1.5;
+    border-top:1px solid var(--border); padding-top:10px; margin-top:4px;
+  }
+</style>
 </head>
 <body>
 
@@ -139,6 +207,273 @@
         <div class="callout-title">&#128205; Transit Tips</div>
         <p>Empire State: 34th St&ndash;Herald Sq (B/D/F/M/N/Q/R/W). Top of the Rock: 47&ndash;50th Sts&ndash;Rockefeller Center (B/D/F/M). Edge: 34th St&ndash;Hudson Yards (7 line).</p>
       </div>
+
+      <h2 id="full-comparison">Edge vs Top of the Rock vs Empire State Building: Complete Comparison</h2>
+<p>Everything you actually want to know before choosing which deck &mdash; from photography quality and crowd experience to the one feature that surprises almost every first-time visitor.</p>
+
+<div class="table-wrap">
+  <table class="data-table deck-table" style="min-width:700px;">
+    <thead>
+      <tr>
+        <th class="th-feat">Feature</th>
+        <th class="th-esb">Empire State Building</th>
+        <th class="th-rock">Top of the Rock</th>
+        <th class="th-edge">Edge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Overall Experience</td>
+        <td>Visiting one of the world&rsquo;s most famous buildings. Feels like stepping into NYC history.</td>
+        <td>Classic New York skyline experience with the city&rsquo;s most iconic view.</td>
+        <td>Modern, adrenaline-filled attraction built around excitement and architecture.</td>
+      </tr>
+      <tr>
+        <td>Best For</td>
+        <td>First-time visitors, history lovers, classic NYC experience.</td>
+        <td>Photography, couples, visitors wanting the best skyline views.</td>
+        <td>Thrill seekers, families with teenagers, Instagram-worthy experiences.</td>
+      </tr>
+      <tr>
+        <td>What You&rsquo;ll Remember Most</td>
+        <td>Standing inside the Empire State Building itself and the open-air observation deck.</td>
+        <td>Seeing the Empire State Building dominate the skyline alongside Central Park.</td>
+        <td>Walking onto the glass floor and looking straight down over Manhattan.</td>
+      </tr>
+      <tr>
+        <td>Atmosphere</td>
+        <td>Historic, nostalgic, iconic.</td>
+        <td>Relaxed, elegant, scenic.</td>
+        <td>Exciting, energetic, futuristic.</td>
+      </tr>
+      <tr>
+        <td>Observation Deck Style</td>
+        <td>Large open-air terrace with protective fencing.</td>
+        <td>Multiple outdoor terraces with minimal obstruction.</td>
+        <td>Outdoor platform with glass walls, angled glass panels and glass floor.</td>
+      </tr>
+      <tr>
+        <td>Photography Quality</td>
+        <td>Excellent. Outdoor deck means very few reflections.</td>
+        <td>Often considered the best photography location in NYC because it includes the Empire State Building.</td>
+        <td>Great for dramatic photos and selfies, but not always the best skyline composition.</td>
+      </tr>
+      <tr>
+        <td>Can You See the Empire State Building?</td>
+        <td>No &mdash; you are standing on it.</td>
+        <td>Yes. The biggest reason photographers choose Top of the Rock.</td>
+        <td>Yes, but from farther away than Top of the Rock.</td>
+      </tr>
+      <tr>
+        <td>Central Park Views</td>
+        <td>Visible but not the main focus.</td>
+        <td>Outstanding. Widely regarded as the best deck for Central Park views.</td>
+        <td>Limited compared with Top of the Rock.</td>
+      </tr>
+      <tr>
+        <td>Downtown Manhattan Views</td>
+        <td>Excellent.</td>
+        <td>Very good.</td>
+        <td>Excellent due to its western location.</td>
+      </tr>
+      <tr>
+        <td>Outdoor Feeling</td>
+        <td>Strongest connection to the city &mdash; wind, sounds, and open air.</td>
+        <td>Comfortable outdoor terraces with fewer barriers.</td>
+        <td>Outdoor but partially protected by angled glass walls.</td>
+      </tr>
+      <tr>
+        <td>Glass Reflections</td>
+        <td>Minimal.</td>
+        <td>Minimal.</td>
+        <td>Possible depending on lighting and angle.</td>
+      </tr>
+      <tr>
+        <td>History &amp; Architecture</td>
+        <td>Exceptional. Rich Art Deco design and museum-quality exhibits.</td>
+        <td>Rockefeller Center history adds context but is secondary.</td>
+        <td>Very little historical significance &mdash; focus is on modern design.</td>
+      </tr>
+      <tr>
+        <td>Pre-Observation Experience</td>
+        <td>One of the best. Interactive exhibits, restored lobby, and historical displays make the journey part of the attraction.</td>
+        <td>Simple elevator experience after entering Rockefeller Center.</td>
+        <td>Multimedia exhibits lead up to a dramatic reveal of the observation deck.</td>
+      </tr>
+      <tr>
+        <td>Most Emotional Moment</td>
+        <td>Stepping onto the 86th-floor deck after seeing the building for years in films and photos.</td>
+        <td>Seeing the Manhattan skyline exactly as you&rsquo;ve always imagined it.</td>
+        <td>Taking the first step onto the suspended platform or glass floor.</td>
+      </tr>
+      <tr>
+        <td>Sunset Experience</td>
+        <td>Beautiful but extremely crowded.</td>
+        <td>Often considered the best sunset observation deck because of the skyline composition.</td>
+        <td>Excellent after sunset when the city lights become the focus.</td>
+      </tr>
+      <tr>
+        <td>Night Experience</td>
+        <td>Romantic, classic city lights.</td>
+        <td>Beautiful skyline with illuminated landmarks.</td>
+        <td>One of the strongest nighttime experiences thanks to the illuminated streets below.</td>
+      </tr>
+      <tr>
+        <td>Crowd Experience</td>
+        <td>Can feel crowded at peak times, especially sunset.</td>
+        <td>Crowds spread across multiple terraces, making it feel less congested.</td>
+        <td>Often busy around the glass floor where everyone queues for photos.</td>
+      </tr>
+      <tr>
+        <td>Average Visit Length</td>
+        <td>1.5&ndash;2.5 hours. Visitors spend time exploring exhibits.</td>
+        <td>Around 1&ndash;2 hours. Many stay longer simply enjoying the skyline.</td>
+        <td>Around 1&ndash;1.5 hours. The experience is more concentrated.</td>
+      </tr>
+      <tr>
+        <td>Photography Style</td>
+        <td>Classic skyline photography.</td>
+        <td>Iconic postcard-style skyline shots.</td>
+        <td>Dramatic perspective shots and social-media content.</td>
+      </tr>
+      <tr>
+        <td>Unique Feature</td>
+        <td>Open-air observation deck on one of the world&rsquo;s most famous skyscrapers.</td>
+        <td>Best overall skyline composition including the Empire State Building.</td>
+        <td>Highest outdoor sky deck in the Western Hemisphere with a glass floor.</td>
+      </tr>
+      <tr>
+        <td>Biggest Strength</td>
+        <td>History, atmosphere and iconic status.</td>
+        <td>Best skyline views and photography.</td>
+        <td>Thrill factor and modern design.</td>
+      </tr>
+      <tr>
+        <td>Biggest Weakness</td>
+        <td>You can&rsquo;t photograph the Empire State Building &mdash; you&rsquo;re standing on it.</td>
+        <td>Less historical significance than the Empire State Building.</td>
+        <td>Some visitors expect the best skyline but discover the attraction is really about the experience.</td>
+      </tr>
+      <tr>
+        <td>Common Visitor Regret</td>
+        <td>Paying extra for the 102nd floor expecting a dramatically different experience.</td>
+        <td>Not staying until the city lights came on.</td>
+        <td>Expecting a traditional observation deck instead of a thrill attraction.</td>
+      </tr>
+      <tr>
+        <td>Who Should Choose It?</td>
+        <td>First-time visitors who want the classic New York experience.</td>
+        <td>Visitors who only plan to visit one observation deck and care most about the skyline.</td>
+        <td>Visitors looking for something exciting, modern and different from traditional observation decks.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ============================================================
+     SECTION B — Quick Decision Guide
+     ============================================================ -->
+
+<h2 id="decision-guide">Which NYC Observation Deck Is Best? Quick Decision Guide</h2>
+<p>Find your priority in the left column and see which deck wins for that criteria.</p>
+
+<div class="table-wrap">
+  <table class="data-table" style="min-width:420px;">
+    <thead>
+      <tr>
+        <th style="background:var(--navy-soft);color:#fff;">If your priority is&hellip;</th>
+        <th style="background:var(--navy-soft);color:#fff;">Best Choice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Classic New York experience</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+      <tr><td>Best skyline photographs</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>Seeing the Empire State Building in your photos</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>History and architecture</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+      <tr><td>Most thrilling experience</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+      <tr><td>Best observation deck for sunset</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>Best observation deck at night</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+      <tr><td>Best for first-time visitors</td><td><span class="win-badge win-tie">ESB or Top of the Rock</span></td></tr>
+      <tr><td>Best for Instagram and social media</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+      <tr><td>Best for photographers</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>Best if you only care about the view</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>Best if you want to experience an iconic landmark</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+      <tr><td>Best for teenagers and adventurous travelers</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+      <tr><td>Best overall value</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+      <tr><td>Best combination if visiting two decks</td><td><span class="win-badge win-tie">ESB + Top of the Rock</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ============================================================
+     SECTION C — When to Skip Each Deck (Cards)
+     ============================================================ -->
+
+<h2 id="when-to-skip">When You Should Skip Edge, Top of the Rock or the Empire State Building</h2>
+<p>Not every deck is right for every visitor. If any of these priorities sound like yours, it&rsquo;s worth reading before you book.</p>
+
+<div class="skip-grid">
+
+  <div class="skip-card">
+    <div class="sk-priority">If you want the classic postcard skyline with the ESB in your photos</div>
+    <div class="sk-skip">Empire State Building</div>
+    <div class="sk-choose">Top of the Rock</div>
+    <div class="sk-why">You can&rsquo;t photograph the Empire State Building while standing on it. Top of the Rock gives you the iconic skyline most people imagine.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you&rsquo;re afraid of heights or glass floors</div>
+    <div class="sk-skip">Edge</div>
+    <div class="sk-choose">Empire State Building or Top of the Rock</div>
+    <div class="sk-why">Edge is designed to make you feel like you&rsquo;re suspended over Manhattan. The other two feel much less intimidating.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you only care about history and iconic landmarks</div>
+    <div class="sk-skip">Edge</div>
+    <div class="sk-choose">Empire State Building</div>
+    <div class="sk-why">The Empire State Building is part of New York&rsquo;s history. Edge is a modern attraction focused on thrills rather than heritage.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you want an adrenaline-filled experience</div>
+    <div class="sk-skip">Top of the Rock</div>
+    <div class="sk-choose">Edge</div>
+    <div class="sk-why">Top of the Rock is peaceful and scenic. Edge is built around excitement and dramatic design &mdash; not calm skyline gazing.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you&rsquo;re visiting one deck and want the best overall skyline photos</div>
+    <div class="sk-skip">Empire State Building</div>
+    <div class="sk-choose">Top of the Rock</div>
+    <div class="sk-why">Most photographers and experienced visitors prefer Top of the Rock because it includes the Empire State Building in the skyline.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you want the most iconic &ldquo;I&rsquo;ve been to NYC&rdquo; experience</div>
+    <div class="sk-skip">Edge</div>
+    <div class="sk-choose">Empire State Building</div>
+    <div class="sk-why">Visiting the Empire State Building is a bucket-list experience that many people associate with New York itself.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you&rsquo;re travelling with teenagers who enjoy interactive attractions</div>
+    <div class="sk-skip">Empire State Building</div>
+    <div class="sk-choose">Edge</div>
+    <div class="sk-why">The glass floor, angled glass walls, and thrill factor tend to be a much bigger hit with younger visitors.</div>
+  </div>
+
+  <div class="skip-card">
+    <div class="sk-priority">If you&rsquo;re looking for a quiet, romantic sunset</div>
+    <div class="sk-skip">Edge</div>
+    <div class="sk-choose">Top of the Rock</div>
+    <div class="sk-why">Top of the Rock generally offers a calmer atmosphere and arguably the city&rsquo;s best sunset skyline composition.</div>
+  </div>
+
+</div>
+<!-- end Section C -->
 
       <hr class="divider-rule">
 
