@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Wish Someone Had Explained the NYC Subway Like This | EverythingInNYC</title>
+<meta name="description" content="A first-time visitor's honest guide to the NYC subway — OMNY, uptown vs downtown, express vs local, etiquette, safety, and the mistakes everyone makes on their first ride.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Step counter cards */
+  .step-block{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:18px;
+    align-items:start;
+    margin:2.2em 0 0.4em;
+  }
+  .step-num{
+    font-family:var(--font-head);font-weight:800;font-size:22px;
+    background:var(--navy);color:#fff;
+    width:48px;height:48px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    flex:none;margin-top:4px;
+  }
+  .step-block h2{margin:0;font-size:24px;scroll-margin-top:90px;}
+
+  /* Inline comparison table */
+  .compare-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;
+  }
+  @media(max-width:540px){.compare-row{grid-template-columns:1fr;}}
+  .compare-cell{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:16px 18px;
+  }
+  .compare-cell .cc-label{
+    font-size:11.5px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;margin-bottom:10px;display:block;
+  }
+  .compare-cell.sub .cc-label{color:var(--success);}
+  .compare-cell.taxi .cc-label{color:var(--error);}
+  .compare-cell ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;}
+  .compare-cell ul li{font-size:15px;display:flex;align-items:flex-start;gap:8px;}
+  .compare-cell.sub ul li::before{content:'✓';color:var(--success);font-weight:800;flex:none;}
+  .compare-cell.taxi ul li::before{content:'✗';color:var(--error);font-weight:800;flex:none;}
+
+  /* Uptown/downtown direction cards */
+  .direction-cards{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;
+  }
+  @media(max-width:540px){.direction-cards{grid-template-columns:1fr;}}
+  .dir-card{
+    border-radius:14px;padding:18px 16px;text-align:center;
+    border:2px solid;
+  }
+  .dir-card.up{
+    border-color:rgba(22,163,74,0.4);background:rgba(22,163,74,0.07);
+  }
+  .dir-card.down{
+    border-color:rgba(37,99,235,0.35);background:rgba(37,99,235,0.06);
+  }
+  .dir-card .dir-arrow{font-size:28px;margin-bottom:8px;display:block;}
+  .dir-card .dir-label{
+    font-family:var(--font-head);font-weight:800;font-size:19px;
+    margin-bottom:6px;
+  }
+  .dir-card.up .dir-label{color:#15803D;}
+  .dir-card.down .dir-label{color:var(--info);}
+  .dir-card p{font-size:14px;color:var(--text-secondary);margin:0;}
+
+  /* Section image */
+  .section-img{margin:24px 0;}
+  .section-img img{width:100%;border-radius:14px;object-fit:cover;max-height:360px;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Infographic: 6 mistakes */
+  .infographic{
+    background:var(--navy);border-radius:22px;padding:32px 28px;margin:28px 0;
+  }
+  .infographic .ig-title{
+    font-family:var(--font-head);font-weight:800;font-size:20px;
+    color:#fff;text-align:center;margin-bottom:6px;
+  }
+  .infographic .ig-sub{
+    font-size:13.5px;color:rgba(255,255,255,0.55);
+    text-align:center;margin-bottom:24px;
+  }
+  .ig-grid{
+    display:grid;grid-template-columns:1fr;gap:12px;
+  }
+  @media(min-width:540px){.ig-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:820px){.ig-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .ig-card{
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;padding:16px 16px 14px;
+  }
+  .ig-card .ig-num{
+    font-family:var(--font-head);font-weight:800;font-size:11px;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:8px;display:block;
+  }
+  .ig-card .ig-mistake{
+    font-family:var(--font-head);font-weight:800;font-size:15px;
+    color:#fff;margin-bottom:8px;line-height:1.25;
+  }
+  .ig-card .ig-fix{
+    font-size:13px;color:rgba(255,255,255,0.65);line-height:1.45;
+  }
+  .ig-card .ig-fix span{color:var(--accent);font-weight:700;}
+
+  /* Checklist box */
+  .checklist-final{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:18px;padding:24px 26px;margin:28px 0;
+  }
+  .checklist-final h3{margin:0 0 16px;font-size:19px;}
+  .checklist-final ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  .checklist-final li{
+    display:flex;align-items:flex-start;gap:12px;font-size:16.5px;
+  }
+  .checklist-final .ck{
+    flex:none;width:22px;height:22px;border-radius:7px;
+    background:rgba(22,163,74,0.12);
+    display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+  .checklist-final .ck svg{width:12px;height:12px;color:var(--success);}
+
+  /* App cards */
+  .app-cards{
+    display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;
+  }
+  @media(min-width:560px){.app-cards{grid-template-columns:repeat(3,1fr);}}
+  .app-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:18px 16px;
+  }
+  .app-card .app-name{
+    font-family:var(--font-head);font-weight:800;font-size:16px;
+    color:var(--navy);margin-bottom:8px;
+  }
+  .app-card .app-tag{
+    display:inline-block;font-size:11.5px;font-weight:700;
+    letter-spacing:0.04em;text-transform:uppercase;
+    background:rgba(255,193,7,0.2);color:#7A5400;
+    padding:3px 9px;border-radius:20px;margin-bottom:10px;
+  }
+  .app-card p{font-size:14px;color:var(--text-secondary);margin-bottom:8px;}
+  .app-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+  .app-card ul li{font-size:13.5px;display:flex;gap:7px;align-items:flex-start;}
+  .app-card ul li::before{content:'·';font-weight:800;color:var(--accent);flex:none;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Transit</span>
+      <h1>I Wish Someone Had Explained the NYC Subway Like This</h1>
+      <p style="font-size:18px;color:var(--text-secondary);margin-top:10px;font-style:italic;">A First-Time Visitor&rsquo;s Guide to Using the NYC Subway With Confidence</p>
+      <div class="article-meta">
+        <span>&#9201;&#65039; 9 minute read</span>
+        <span>&middot;</span>
+        <span>First-time visitors</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="subway-cover.png" alt="NYC Subway guide for first-time visitors">
+
+    <div class="article-body">
+      <p>If you&rsquo;re visiting New York City for the first time, chances are you&rsquo;ve already heard two completely opposite opinions about the subway.</p>
+      <blockquote><p>&ldquo;It&rsquo;s confusing. You&rsquo;ll definitely get lost.&rdquo;</p></blockquote>
+      <blockquote><p>&ldquo;It&rsquo;s the easiest way to get around.&rdquo;</p></blockquote>
+      <p>The truth is somewhere in the middle. The NYC subway can look intimidating when you first open the map. Colored lines crisscross Manhattan, trains have numbers and letters instead of names, and stations seem to have multiple entrances leading in different directions. It feels like a puzzle.</p>
+      <p>Then something unexpected happens. Usually after your second or third ride, everything starts to click. The subway isn&rsquo;t difficult &mdash; it just works differently than many transit systems around the world. Once you understand a few basic concepts, it quickly becomes the fastest, cheapest, and often the most reliable way to explore New York City.</p>
+      <p>This guide won&rsquo;t tell you which train to take from Times Square to Central Park. Apps like Google Maps and Citymapper already do that better than any article ever could. Instead, this guide covers everything first-time visitors actually wish they knew before stepping into a station.</p>
+
+      <!-- WHY USE THE SUBWAY -->
+      <h2 id="why-use">Why You Should Use the Subway</h2>
+      <p>Many first-time visitors rely on taxis because they assume the subway will be too confusing. It&rsquo;s usually the opposite. Traffic in Manhattan can turn a 15-minute journey into a 45-minute one, especially during rush hour. Meanwhile, the subway runs underneath all of it.</p>
+
+      <div class="compare-row">
+        <div class="compare-cell sub">
+          <span class="cc-label">&#128650; Subway</span>
+          <ul>
+            <li>Usually the fastest option</li>
+            <li>Predictable travel times</li>
+            <li>Much cheaper overall</li>
+            <li>Covers almost every tourist area</li>
+          </ul>
+        </div>
+        <div class="compare-cell taxi">
+          <span class="cc-label">&#128661; Taxi / Uber</span>
+          <ul>
+            <li>Can get stuck in traffic</li>
+            <li>Travel time varies dramatically</li>
+            <li>Becomes expensive over multiple rides</li>
+            <li>Convenient but not always practical</li>
+          </ul>
+        </div>
+      </div>
+      <p>Unless you&rsquo;re carrying heavy luggage or traveling very late at night, the subway will probably become your preferred way of getting around after the first day.</p>
+
+      <!-- STEP 1: OMNY -->
+      <div class="step-block">
+        <div class="step-num">1</div>
+        <h2 id="step1">Forget Everything You Know About MetroCards</h2>
+      </div>
+      <p>If you&rsquo;ve visited New York years ago &mdash; or watched older travel videos &mdash; you&rsquo;ve probably heard about MetroCards. Forget them. MetroCards are no longer sold. The entire system now uses <strong>OMNY</strong>, New York City&rsquo;s contactless payment system.</p>
+      <p>The good news? You probably don&rsquo;t need to buy anything before your trip. You can simply tap:</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Your contactless credit or debit card</li>
+        <li><span class="dot"></span>Apple Pay</li>
+        <li><span class="dot"></span>Google Wallet</li>
+        <li><span class="dot"></span>Samsung Wallet</li>
+        <li><span class="dot"></span>A reloadable OMNY Card (if you&rsquo;re paying with cash)</li>
+      </ul>
+      <p>For most tourists, your phone or contactless bank card is all you need.</p>
+
+      <div class="section-img">
+        <img src="https://media.timeout.com/images/106296529/image.jpg" alt="OMNY contactless payment at NYC subway turnstile">
+        <div class="cap">OMNY &mdash; tap your card, phone, or watch and walk through. No MetroCard required.</div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; One Very Important Rule: Always Use the Same Payment Method</div>
+        <p>Even if Monday is Apple Pay, Tuesday is your physical credit card, and Wednesday is another card &mdash; even if they&rsquo;re all linked to the same bank account &mdash; OMNY treats each payment method as a different rider. Your rides won&rsquo;t count together toward the weekly fare cap. Pick one payment method and stick with it for your entire trip.</p>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; What Is the Weekly Fare Cap?</div>
+        <p>The OMNY weekly fare cap is one of the best money-saving features for visitors. Once you&rsquo;ve spent <strong>$35</strong> in a rolling 7-day period using the same card or device, every additional subway and local bus ride is automatically free &mdash; no unlimited pass to buy, no sign-up required. This works out at 12 paid rides before the cap kicks in. Your 7-day window starts from your very first tap.</p>
+      </div>
+
+      <div class="related-box">
+        <div class="rb-label">Deep Dive</div>
+        <ul>
+          <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Almost Dead &mdash; Complete 2026 OMNY Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- STEP 2: APPS -->
+      <div class="step-block">
+        <div class="step-num">2</div>
+        <h2 id="step2">Download These Apps Before You Land</h2>
+      </div>
+      <p>You do <strong>not</strong> need to memorize the subway map. In fact, most New Yorkers don&rsquo;t. Instead, download these before your flight.</p>
+
+      <div class="app-cards">
+        <div class="app-card">
+          <div class="app-name">Google Maps</div>
+          <div class="app-tag">Essential</div>
+          <p>Perfect for most visitors. Step-by-step directions, live arrival times, and platform info.</p>
+          <ul>
+            <li>Nearest station</li>
+            <li>Which line to take</li>
+            <li>Live arrivals</li>
+            <li>Walking directions</li>
+          </ul>
+        </div>
+        <div class="app-card">
+          <div class="app-name">Citymapper</div>
+          <div class="app-tag">Highly Recommended</div>
+          <p>Worth downloading if you&rsquo;re staying several days. Offers things Google Maps often doesn&rsquo;t.</p>
+          <ul>
+            <li>Better live disruptions</li>
+            <li>Alternative routes during delays</li>
+            <li>Which car to board for quickest exit</li>
+            <li>Ferry &amp; bus options</li>
+          </ul>
+        </div>
+        <div class="app-card">
+          <div class="app-name">MyMTA</div>
+          <div class="app-tag">Backup</div>
+          <p>The official MTA app. Your go-to whenever Google Maps doesn&rsquo;t explain why your train disappeared.</p>
+          <ul>
+            <li>Planned weekend changes</li>
+            <li>Elevator outages</li>
+            <li>Official alerts</li>
+            <li>Full subway maps</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- STEP 3: TURNSTILE -->
+      <div class="step-block">
+        <div class="step-num">3</div>
+        <h2 id="step3">Don&rsquo;t Panic at the Turnstile</h2>
+      </div>
+      <p>Every first-time visitor has the same moment. You arrive at the gate. People are walking through effortlessly. Suddenly it feels like everyone is waiting for you. Relax. Here&rsquo;s exactly what to do:</p>
+
+      <div class="numbered-step">
+        <div class="num">1</div>
+        <div><h4>Get ready before you reach the gate</h4><p>Have your phone or card ready <strong>before</strong> reaching the turnstile &mdash; not at it.</p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">2</div>
+        <div><h4>Tap once</h4><p>Tap the yellow OMNY reader once. Wait for the green <strong>GO</strong> message. Walk through.</p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">3</div>
+        <div><h4>Don&rsquo;t tap again</h4><p>Don&rsquo;t keep tapping because you think nothing happened. One tap is enough. Trying to tap multiple times is one of the most common tourist mistakes.</p></div>
+      </div>
+
+      <!-- STEP 4: UPTOWN VS DOWNTOWN -->
+      <div class="step-block">
+        <div class="step-num">4</div>
+        <h2 id="step4">Understand Uptown vs Downtown</h2>
+      </div>
+      <p>This is probably the biggest mental shift for first-time visitors. Most people assume they need to memorize subway lines. You don&rsquo;t. The first question should always be: <strong>which direction am I going?</strong></p>
+
+      <div class="direction-cards">
+        <div class="dir-card up">
+          <span class="dir-arrow">&#8593;</span>
+          <div class="dir-label">Uptown</div>
+          <p>Going <strong>north</strong> on Manhattan &mdash; toward Midtown, Central Park, Harlem, or The Bronx.</p>
+        </div>
+        <div class="dir-card down">
+          <span class="dir-arrow">&#8595;</span>
+          <div class="dir-label">Downtown</div>
+          <p>Going <strong>south</strong> toward Lower Manhattan, Wall Street, Battery Park, or Brooklyn.</p>
+        </div>
+      </div>
+
+      <p>One thing that confuses almost every first-time visitor: <strong>&ldquo;Uptown&rdquo; and &ldquo;Downtown&rdquo; don&rsquo;t refer to subway lines &mdash; they refer to the direction the train is traveling.</strong> Once you understand this, reading subway signs becomes much easier.</p>
+
+      <h3>Where Are You Going? Which Sign to Follow?</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>If You&rsquo;re Going To...</th><th>Look for Signs That Say...</th><th>Example</th></tr>
+          <tr><td>Financial District</td><td>Downtown</td><td>From Times Square to Wall Street</td></tr>
+          <tr><td>Battery Park</td><td>Downtown</td><td>From Central Park to the Statue of Liberty ferry</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>Usually Downtown or Brooklyn-bound</td><td>From Midtown to Brooklyn</td></tr>
+          <tr><td>Times Square (from downtown)</td><td>Uptown</td><td>From Wall Street to Times Square</td></tr>
+          <tr><td>Central Park</td><td>Uptown</td><td>From Times Square heading north</td></tr>
+          <tr><td>Rockefeller Center</td><td>Usually Uptown (if starting south of it)</td><td>From SoHo to Rockefeller Center</td></tr>
+          <tr><td>Harlem</td><td>Uptown</td><td>From Midtown to Harlem</td></tr>
+          <tr><td>The Bronx / Yankee Stadium</td><td>Uptown</td><td>Most trains heading north continue toward the Bronx</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; A Real Example</div>
+        <p>You&rsquo;re in <strong>Times Square</strong> and want to visit <strong>Central Park</strong>. Don&rsquo;t worry about train numbers first. Ask yourself: <em>&ldquo;Am I going north or south?&rdquo;</em> Central Park is <strong>north</strong>, so follow <strong>Uptown</strong> signs. Going to the Statue of Liberty Ferry at Battery Park instead? Battery Park is <strong>south</strong>, so follow <strong>Downtown</strong> signs.</p>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Check the Entrance Sign Before You Tap</div>
+        <p>Many NYC subway stations have <strong>separate entrances</strong> for Uptown and Downtown trains. If you enter through the wrong one, you may end up on the opposite platform &mdash; and some stations <strong>don&rsquo;t allow you to cross underground without exiting and paying again</strong>. Before tapping your card, take five seconds to read the entrance sign. It will usually say: <strong>Uptown &amp; The Bronx</strong> | <strong>Downtown &amp; Brooklyn</strong> | <strong>Queens-bound</strong> | <strong>Uptown Local</strong> | <strong>Downtown Express</strong>.</p>
+      </div>
+
+      <!-- STEP 5: LOCAL VS EXPRESS -->
+      <div class="step-block">
+        <div class="step-num">5</div>
+        <h2 id="step5">Local vs Express Trains (It&rsquo;s Easier Than You Think)</h2>
+      </div>
+      <p>This sounds complicated. It isn&rsquo;t.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Local Train</div>
+          <h4>Stops at Every Station</h4>
+          <p>Use for shorter distances or when your destination is at a smaller station not served by express trains.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Express Train</div>
+          <h4>Skips Smaller Stations</h4>
+          <p>Faster over longer distances. Saves time when traveling several stops, but only stops at major stations.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">&#9989; If You Accidentally Board the Wrong Train</div>
+        <p>Stay calm. Get off at the next stop. Cross the platform if necessary. Catch the next local train. Congratulations &mdash; you&rsquo;ve just had the same experience thousands of New Yorkers have every week. Getting on the wrong train isn&rsquo;t a disaster &mdash; it&rsquo;s part of the learning process.</p>
+      </div>
+
+      <!-- STEP 6: ETIQUETTE -->
+      <div class="step-block">
+        <div class="step-num">6</div>
+        <h2 id="step6">Learn a Few Basic Subway Etiquette Rules</h2>
+      </div>
+      <p>The subway has a rhythm. Following it makes everyone&rsquo;s journey smoother.</p>
+
+      <ul class="tag-grid">
+        <li><span class="dot"></span><strong>Let passengers exit first.</strong> Don&rsquo;t rush onto the train the moment the doors open &mdash; people need space to get off.</li>
+        <li><span class="dot"></span><strong>Move away from the doors.</strong> Walk further inside. Standing in the doorway slows everyone down.</li>
+        <li><span class="dot"></span><strong>Remove large backpacks.</strong> Especially during busy periods &mdash; keeping them on your back takes up unnecessary space.</li>
+        <li><span class="dot"></span><strong>Hold onto something.</strong> Trains accelerate and brake quickly. Even experienced riders sometimes lose their balance.</li>
+        <li><span class="dot"></span><strong>Don&rsquo;t stop immediately after the turnstile.</strong> Walk forward first. If you need to check directions, move to the side &mdash; stopping directly after entering blocks everyone behind you.</li>
+      </ul>
+
+      <!-- STEP 7: EMPTY CAR -->
+      <div class="step-block">
+        <div class="step-num">7</div>
+        <h2 id="step7">If One Subway Car Is Completely Empty&hellip; There&rsquo;s Probably a Reason</h2>
+      </div>
+      <p>Every carriage is packed. One carriage is almost empty. Your first instinct might be: <em>&ldquo;Jackpot!&rdquo;</em> Experienced riders usually think the opposite.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Local Tip</div>
+        <p>Often the empty carriage has a broken air conditioner, an unpleasant smell, a spill, or someone causing a disturbance. Not always &mdash; but often enough that it&rsquo;s worth paying attention. When in doubt, follow the locals.</p>
+      </div>
+
+      <!-- STEP 8: SAFETY -->
+      <div class="step-block">
+        <div class="step-num">8</div>
+        <h2 id="step8">Stay Safe on the Platform</h2>
+      </div>
+      <p>The NYC subway is used by millions of people every day. Like any major city&rsquo;s transit system, basic awareness goes a long way.</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Stand behind the yellow line</li>
+        <li><span class="dot"></span>Keep your phone secure</li>
+        <li><span class="dot"></span>Avoid putting wallets in back pockets</li>
+        <li><span class="dot"></span>Stay aware of your surroundings</li>
+        <li><span class="dot"></span>Keep headphone volume low enough to hear announcements</li>
+      </ul>
+      <div class="callout callout-summary">
+        <div class="callout-title">&#9989; Stay Alert, Not Anxious</div>
+        <p>You don&rsquo;t need to be nervous. Millions of tourists ride safely every year. Just stay alert and follow the same common-sense habits you&rsquo;d use in any busy city.</p>
+      </div>
+
+      <!-- STEP 9: BLACK AND WHITE SIGN -->
+      <div class="step-block">
+        <div class="step-num">9</div>
+        <h2 id="step9">The Black-and-White Sign Most Tourists Never Notice</h2>
+      </div>
+      <p>Look up while standing on the platform. You&rsquo;ll often see a black-and-white striped overhead marker. That&rsquo;s where the conductor stops.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Why This Matters</div>
+        <p>If you need help, that&rsquo;s usually the best place to stand. The conductor is often positioned at that marker and can answer questions or assist if needed. It&rsquo;s a small detail, but one that many visitors don&rsquo;t discover until their last day.</p>
+      </div>
+
+      <div class="section-img">
+        <img src="https://pbs.twimg.com/media/Gpz0c-cWMAAan78.jpg" alt="NYC subway platform conductor marker strip">
+        <div class="cap">The black-and-white striped marker on the platform &mdash; that&rsquo;s where the conductor stops.</div>
+      </div>
+
+      <!-- STEP 10: MISSING YOUR STOP -->
+      <div class="step-block">
+        <div class="step-num">10</div>
+        <h2 id="step10">Missing Your Stop Isn&rsquo;t a Big Deal</h2>
+      </div>
+      <p>Nearly everyone does it. You&rsquo;re admiring the skyline, watching people, looking at Google Maps &mdash; and suddenly your stop is gone. Don&rsquo;t panic.</p>
+      <div class="callout callout-summary">
+        <div class="callout-title">&#9989; What To Do</div>
+        <p>Get off at the next station. Cross to the opposite platform if needed. Take the next train back. You&rsquo;ll lose a few minutes &mdash; not your entire day.</p>
+      </div>
+
+      <!-- STEP 11: AVOID RUSH HOUR -->
+      <div class="step-block">
+        <div class="step-num">11</div>
+        <h2 id="step11">Avoid Learning the Subway During Rush Hour</h2>
+      </div>
+      <p>Your very first subway ride probably shouldn&rsquo;t happen at 8:30 AM on a weekday.</p>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Rush Hour (Avoid for First Ride)</div>
+          <p>Platforms are busiest, trains fill quickly, people move fast, and everything feels more intimidating. NYC rush hour peaks roughly 7:30&ndash;9:30 AM and 5:00&ndash;7:00 PM on weekdays.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Mid-Day (Perfect for First Ride)</div>
+          <p>More space, fewer crowds, more time to get comfortable. Take your first ride around 10 AM&ndash;3 PM and you&rsquo;ll find the experience much more relaxed.</p>
+        </div>
+      </div>
+
+      <!-- STEP 12: FAMILY -->
+      <div class="step-block">
+        <div class="step-num">12</div>
+        <h2 id="step12">Every Person Needs Their Own Fare</h2>
+      </div>
+      <p>If you&rsquo;re traveling as a family, this catches many visitors by surprise. Each rider needs to pay their own fare. If you&rsquo;re using one contactless card to pay for multiple people, tap separately for each person and <strong>wait for each transaction to complete</strong> before tapping again. Trying to rush the process often leads to confusion at the gate.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Children Under 44 Inches Ride Free</div>
+        <p>Children under 44 inches tall (approximately 112 cm) ride the NYC subway completely free when accompanied by a paying adult &mdash; no separate tap or card needed.</p>
+      </div>
+
+      <!-- INFOGRAPHIC: 6 MISTAKES -->
+      <h2 id="common-mistakes">6 Subway Mistakes Every NYC Tourist Makes</h2>
+      <div class="infographic">
+        <div class="ig-title">6 Subway Mistakes Every NYC Tourist Makes</div>
+        <div class="ig-sub">EverythingInNYC &mdash; Read this before your first ride</div>
+        <div class="ig-grid">
+          <div class="ig-card">
+            <span class="ig-num">Mistake 01</span>
+            <div class="ig-mistake">Searching for a MetroCard</div>
+            <div class="ig-fix">MetroCards are gone. <span>Use OMNY</span> &mdash; tap your phone, watch, or contactless card instead.</div>
+          </div>
+          <div class="ig-card">
+            <span class="ig-num">Mistake 02</span>
+            <div class="ig-mistake">Blocking the Turnstile</div>
+            <div class="ig-fix"><span>Have your payment ready</span> before you reach the gate. One tap, green GO, walk through.</div>
+          </div>
+          <div class="ig-card">
+            <span class="ig-num">Mistake 03</span>
+            <div class="ig-mistake">Entering the Wrong Side</div>
+            <div class="ig-fix"><span>Check for Uptown or Downtown signs</span> before tapping. Wrong entrance = wrong platform.</div>
+          </div>
+          <div class="ig-card">
+            <span class="ig-num">Mistake 04</span>
+            <div class="ig-mistake">Standing in the Doorway</div>
+            <div class="ig-fix">Move inside the train. <span>Step away from the doors</span> so others can board and exit.</div>
+          </div>
+          <div class="ig-card">
+            <span class="ig-num">Mistake 05</span>
+            <div class="ig-mistake">Panicking After Missing a Stop</div>
+            <div class="ig-fix"><span>Get off at the next station</span> and head back. You&rsquo;ll lose minutes, not your whole day.</div>
+          </div>
+          <div class="ig-card">
+            <span class="ig-num">Mistake 06</span>
+            <div class="ig-mistake">Avoiding the Subway Completely</div>
+            <div class="ig-fix"><span>Use Google Maps or Citymapper</span> and give it a try. It clicks after the first few rides.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is the NYC subway difficult to use?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Not once you understand the basics. Most visitors find it much easier after their first few rides. The two key things to grasp: Uptown means north, Downtown means south &mdash; and download Google Maps before you arrive.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need cash for the NYC subway?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. A contactless bank card or mobile wallet (Apple Pay, Google Wallet, Samsung Wallet) is enough for most visitors. If you only have cash, you can load an OMNY Card at station vending machines.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best app for navigating the NYC subway?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Google Maps is excellent for most travelers. Citymapper is even better if you want detailed routing and live service updates. Keep the MyMTA app installed for official alerts and planned weekend service changes.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I get on the wrong train?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Get off at the next station and take the correct train back. It happens to locals too. You&rsquo;ll lose a few minutes at most.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the NYC subway safe for tourists?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Millions of people use it every day, including countless tourists. Follow normal city precautions: stand behind the yellow line, keep valuables secure, remain aware of your surroundings, and avoid empty subway cars when others are full.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How much does the subway cost?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">$3.00 per ride. If you use the same payment method for all rides, the weekly fare cap kicks in at $35 (after 12 rides), and all further rides that week are free.</div>
+        </details>
+      </div>
+
+      <!-- CHECKLIST -->
+      <div class="checklist-final">
+        <h3>Before You Ride: Quick Subway Checklist</h3>
+        <ul>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Download Google Maps or Citymapper</li>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Enable Apple Pay or Google Wallet on your phone</li>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Pack a portable charger (your phone works hard in NYC)</li>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Decide whether you&rsquo;re traveling Uptown or Downtown before entering the station</li>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Have your payment ready before reaching the turnstile</li>
+          <li><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>Stand behind the yellow line while waiting for the train</li>
+        </ul>
+      </div>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Ready to Plan Your Full Trip?</div>
+        <h4>How to Plan the Perfect NYC Itinerary</h4>
+        <p>Now that you know how to get around, the next step is building a smart, neighborhood-based itinerary that makes the most of every day without exhausting yourself. Our complete NYC planning guide covers everything from attraction priorities and reservation timing to budgeting and where to stay.</p>
+        <a class="btn btn-primary" href="ultimate-nyc-itinerary-guide.html">Read the Complete NYC Planning Guide</a>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Almost Dead &mdash; Complete OMNY Guide for 2026</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan the Perfect NYC Itinerary (Complete 2026 Guide)</a></li>
+      <li><a href="25-mistakes-first-time-nyc-tourists.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Mistakes First-Time NYC Tourists Make</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How I Saved Money on My NYC Trip Without Missing Anything</a></li>
+      <li><a href="nyc-tourist-scams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Scams Tourists Still Fall For</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
