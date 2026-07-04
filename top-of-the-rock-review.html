@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Is Top of the Rock Worth It? Honest Review & Visitor Tips | EverythingInNYC</title>
+<meta name="description" content="Everything you need to know before visiting Top of the Rock — best time to visit, three observation levels explained, photography tips, crowd strategy, and the mistakes most visitors make.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* At-a-glance info table */
+  .info-table-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;margin:28px 0;box-shadow:var(--shadow-card);}
+  .info-table-wrap .it-head{background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;padding:12px 18px;}
+  .info-table-wrap table{width:100%;border-collapse:collapse;}
+  .info-table-wrap td{padding:11px 18px;font-size:15.5px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .info-table-wrap td:first-child{font-weight:700;color:var(--navy);width:46%;background:rgba(15,23,42,0.02);}
+  .info-table-wrap tr:last-child td{border-bottom:none;}
+
+  /* Reason/feature cards */
+  .reason-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-family:var(--font-head);font-weight:800;font-size:14px;
+    background:var(--accent);color:var(--accent-ink);
+    width:32px;height:32px;border-radius:9px;flex:none;margin-right:10px;
+    vertical-align:middle;
+  }
+  .article-body h3 .reason-num{font-size:14px;}
+
+  /* Floor cards */
+  .floor-cards{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0;}
+  @media(min-width:640px){.floor-cards{grid-template-columns:repeat(3,1fr);}}
+  .floor-card{border-radius:16px;padding:22px 20px;border:2px solid var(--border);background:var(--bg-card);position:relative;}
+  .floor-card.f67{border-color:rgba(15,23,42,0.2);}
+  .floor-card.f69{border-color:rgba(37,99,235,0.35);background:rgba(37,99,235,0.04);}
+  .floor-card.f70{border-color:rgba(255,193,7,0.6);background:rgba(255,193,7,0.05);}
+  .floor-card .fl-badge{display:inline-block;font-family:var(--font-head);font-weight:800;font-size:22px;color:var(--navy);margin-bottom:6px;}
+  .floor-card .fl-sub{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;display:block;}
+  .floor-card.f67 .fl-sub{color:var(--text-secondary);}
+  .floor-card.f69 .fl-sub{color:var(--info);}
+  .floor-card.f70 .fl-sub{color:#92620A;}
+  .floor-card h4{margin:0 0 8px;font-size:17px;}
+  .floor-card p{font-size:14px;color:var(--text-secondary);margin-bottom:10px;}
+  .floor-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+  .floor-card ul li{font-size:13.5px;display:flex;align-items:flex-start;gap:7px;}
+  .floor-card.f70 ul li::before{content:'★';color:var(--accent);font-weight:800;flex:none;font-size:11px;margin-top:3px;}
+  .floor-card.f69 ul li::before{content:'✓';color:var(--info);font-weight:800;flex:none;}
+  .floor-card.f67 ul li::before{content:'·';color:var(--text-secondary);font-weight:800;flex:none;}
+  .floor-card .fl-note{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:13px;color:var(--text-secondary);}
+
+  /* Timing cards */
+  .timing-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+  @media(min-width:640px){.timing-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:900px){.timing-grid{grid-template-columns:repeat(4,1fr);}}
+  .timing-card{border-radius:14px;padding:18px 16px;border:1.5px solid var(--border);background:var(--bg-card);}
+  .timing-card.t-morning{border-color:rgba(22,163,74,0.4);background:rgba(22,163,74,0.04);}
+  .timing-card.t-midday{border-color:var(--border);}
+  .timing-card.t-sunset{border-color:rgba(255,193,7,0.6);background:rgba(255,193,7,0.05);}
+  .timing-card.t-night{border-color:rgba(15,23,42,0.25);background:rgba(15,23,42,0.03);}
+  .timing-card .tc-icon{font-size:24px;margin-bottom:8px;display:block;}
+  .timing-card .tc-badge{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:8px;}
+  .timing-card.t-morning .tc-badge{background:rgba(22,163,74,0.15);color:#15803D;}
+  .timing-card.t-midday .tc-badge{background:rgba(95,99,104,0.12);color:var(--text-secondary);}
+  .timing-card.t-sunset .tc-badge{background:rgba(255,193,7,0.2);color:#92620A;}
+  .timing-card.t-night .tc-badge{background:rgba(15,23,42,0.1);color:var(--navy);}
+  .timing-card h4{margin:0 0 8px;font-size:16px;}
+  .timing-card p{font-size:13.5px;color:var(--text-secondary);margin-bottom:8px;}
+  .timing-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .timing-card ul li{font-size:13px;display:flex;align-items:flex-start;gap:6px;color:var(--text-secondary);}
+  .timing-card ul li::before{content:'·';font-weight:800;color:var(--accent);flex:none;}
+
+  /* Photo spot cards */
+  .photo-spots{display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0;}
+  @media(min-width:560px){.photo-spots{grid-template-columns:1fr 1fr;}}
+  .photo-spot{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 16px;}
+  .photo-spot .ps-num{font-family:var(--font-head);font-weight:800;font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-ink);background:rgba(255,193,7,0.18);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;}
+  .photo-spot h4{margin:0 0 8px;font-size:16.5px;}
+  .photo-spot p{font-size:14px;color:var(--text-secondary);margin-bottom:0;}
+
+  /* Mistake list */
+  .mistake-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:10px;}
+  .mistake-list li{
+    display:grid;grid-template-columns:28px 1fr;gap:12px;
+    align-items:start;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:14px 16px;font-size:16px;
+  }
+  .mistake-list .mx{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#fff;background:var(--error);
+    width:28px;height:28px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+    margin-top:1px;
+  }
+
+  /* Section image */
+  .section-img{margin:24px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:420px;object-fit:cover;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Practical tips */
+  .tip-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+  .tip-list li{display:flex;align-items:flex-start;gap:12px;font-size:16.5px;}
+  .tip-list .tip-icon{flex:none;font-size:18px;margin-top:2px;}
+
+  /* Pro-con bars */
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;}
+  @media(max-width:500px){.pros-cons{grid-template-columns:1fr;}}
+  .pc-col{border-radius:12px;padding:14px 16px;}
+  .pc-col.pros{background:rgba(22,163,74,0.06);border:1px solid rgba(22,163,74,0.3);}
+  .pc-col.cons{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.2);}
+  .pc-col h4{margin:0 0 10px;font-size:14.5px;}
+  .pc-col.pros h4{color:#15803D;}
+  .pc-col.cons h4{color:var(--error);}
+  .pc-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .pc-col ul li{font-size:13.5px;display:flex;align-items:flex-start;gap:7px;}
+  .pc-col.pros ul li::before{content:'✓';color:var(--success);font-weight:800;flex:none;}
+  .pc-col.cons ul li::before{content:'✗';color:var(--error);font-weight:800;flex:none;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Review</span>
+      <h1>Is Top of the Rock Worth It? Honest Review & Visitor Tips</h1>
+      <div class="article-meta">
+    
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 14 minute read</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/e7/11/55/view-from-top-of-the.jpg?w=1400&h=-1&s=1" alt="View from Top of the Rock observation deck showing the Empire State Building and Manhattan skyline">
+
+    <div class="article-body">
+
+      <p>There are now five major observation decks in New York City, each promising the best views, the tallest platform, or the most Instagram-worthy experience.</p>
+      <p>After visiting all of them, here&rsquo;s my opinion:</p>
+      <blockquote><p>If I could only recommend one observation deck to a first-time visitor, I&rsquo;d still choose Top of the Rock.</p></blockquote>
+      <p>Not because it&rsquo;s the tallest. Not because it&rsquo;s the newest. And certainly not because it has the most thrilling attractions. I recommend it because <strong>it offers the skyline most people imagine when they dream of New York City.</strong></p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Comparing All NYC Observation Decks?</div>
+        <p>If you&rsquo;re deciding between multiple decks, read our <a href="nyc-observation-decks-compared.html">complete comparison of Edge vs Top of the Rock vs Empire State Building</a> before buying your tickets.</p>
+      </div>
+
+      <p>From the very top, you get the Empire State Building standing proudly in front of you, Central Park stretching endlessly to the north, and Manhattan unfolding in every direction. It&rsquo;s one of the few places where the skyline feels complete rather than missing its most famous building. But here&rsquo;s the catch &mdash; Top of the Rock is also one of those attractions where <strong>small planning decisions make a huge difference</strong>.</p>
+      <p>Choose the wrong ticket time and you might spend half your visit waiting for space at the railing. Visit on the right evening, however, and you&rsquo;ll watch Manhattan transform from bright daylight to golden hour, then into a sea of glittering lights &mdash; all during a single visit. That&rsquo;s exactly what this guide is for.</p>
+
+      <!-- AT A GLANCE -->
+      <div class="info-table-wrap">
+        <div class="it-head">Top of the Rock at a Glance</div>
+        <table>
+          <tr><td>Location</td><td>30 Rockefeller Plaza, Midtown Manhattan</td></tr>
+          <tr><td>Observation Levels</td><td>67th, 69th &amp; 70th Floors</td></tr>
+          <tr><td>Height</td><td>Approximately 850 ft (260 m)</td></tr>
+          <tr><td>Best Known For</td><td>The best view of the Empire State Building</td></tr>
+          <tr><td>Recommended Visit Time</td><td>1&ndash;2 hours (2+ hours if visiting around sunset)</td></tr>
+          <tr><td>Best Time to Visit</td><td>Around one hour before sunset</td></tr>
+          <tr><td>Typical Hours</td><td>Daily 8:00 AM &ndash; midnight (last entry ~11:10 PM)</td></tr>
+          <tr><td>Fully Wheelchair Accessible</td><td>Yes &mdash; elevators to every level</td></tr>
+          <tr><td>Indoor &amp; Outdoor Viewing</td><td>Yes</td></tr>
+          <tr><td>Included in Attraction Passes</td><td>Yes (depending on the pass)</td></tr>
+        </table>
+      </div>
+
+      <!-- IS IT WORTH IT -->
+      <h2 id="worth-it">Is Top of the Rock Worth It?</h2>
+      <p><strong>Absolutely.</strong> In fact, it&rsquo;s one of the few attractions in New York that actually exceeds expectations. Each observation deck has something it does exceptionally well &mdash; Edge delivers adrenaline, SUMMIT offers an immersive experience, the Empire State Building lets you stand on one of the world&rsquo;s most famous skyscrapers. But Top of the Rock quietly excels at something even more important: it gives you <strong>the most complete skyline in New York City.</strong></p>
+      <p>Look south and the Empire State Building dominates the skyline. Turn north and you&rsquo;ll see the full length of Central Park. Face west and the Hudson River stretches toward New Jersey. Turn east and you&rsquo;ll spot the East River, Roosevelt Island, Queens, and dozens of buildings most visitors overlook. Every direction feels different. Every direction is worth exploring.</p>
+
+      <h2 id="why-favorite">Why It&rsquo;s Still the Best Observation Deck for Most Visitors</h2>
+
+      <h3><span class="reason-num">1</span> You Actually Get to See the Empire State Building</h3>
+      <p>This is the biggest reason. The Empire State Building isn&rsquo;t just another skyscraper &mdash; it&rsquo;s arguably the most recognizable building in New York City. If you&rsquo;re standing on it, it&rsquo;s missing from every photo you take. Top of the Rock solves that beautifully. Instead of standing on New York&rsquo;s most famous building, you&rsquo;re looking directly at it. The result is a skyline that instantly feels more iconic. It&rsquo;s one of those things most people don&rsquo;t think about until they&rsquo;re standing there &mdash; then it suddenly makes perfect sense.</p>
+
+      <h3><span class="reason-num">2</span> The Top Observation Deck Is Built for Photography</h3>
+      <p>The 70th floor has an open-air perimeter with unobstructed views. Unlike many observation decks surrounded by full-height glass walls, that means no distracting reflections, no fingerprints on the glass, and no glare ruining your sunset shots. Whether you&rsquo;re using a smartphone or a professional camera, it&rsquo;s one of the easiest observation decks in the city to shoot from.</p>
+
+      <h3><span class="reason-num">3</span> The City Is the Main Attraction</h3>
+      <p>Some observation decks are designed around the experience of the building itself &mdash; glass floors, mirror rooms, thrill attractions. Top of the Rock takes the opposite approach. The city remains the star. Everything else simply exists to help you appreciate it.</p>
+
+      <h3><span class="reason-num">4</span> It Rewards Visitors Who Slow Down</h3>
+      <p>Many visitors plan for 30 minutes. That&rsquo;s enough time to take a few pictures. It&rsquo;s not enough time to experience the skyline. If you visit around sunset, you&rsquo;ll watch Manhattan change through four completely different moods:</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Daylight</li>
+        <li><span class="dot"></span>Golden hour</li>
+        <li><span class="dot"></span>Sunset</li>
+        <li><span class="dot"></span>Blue hour &amp; night skyline</li>
+      </ul>
+      <p>That&rsquo;s when Top of the Rock becomes unforgettable.</p>
+
+      <div class="section-img">
+        <img src="TOTR1.png" alt="Top of the Rock observation deck sunset view">
+        <div class="cap">Staying through blue hour is one of the easiest ways to improve your visit &mdash; most crowds leave right after sunset, just as the skyline looks its best.</div>
+      </div>
+
+      <!-- BEFORE YOU BUY -->
+      <h2 id="tickets">Before You Buy Your Ticket</h2>
+      <p>Understanding your ticket options before booking can save you money &mdash; and help you avoid disappointment if you&rsquo;re hoping to visit at sunset.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Ticket</th><th>What&rsquo;s Included</th><th>My Recommendation</th></tr>
+          <tr><td><strong>General Admission</strong></td><td>Access to all three observation levels (67th, 69th, and 70th floors)</td><td><strong>Best choice for almost everyone</strong></td></tr>
+          <tr><td>Beam Experience</td><td>A moving recreation of the famous <em>Lunch Atop a Skyscraper</em> construction beam</td><td>Worth considering for a unique photo or special occasion</td></tr>
+          <tr><td>Skylift</td><td>A rotating platform that lifts you even higher above the observation deck</td><td>Fun, but not essential</td></tr>
+          <tr><td>VIP Experience</td><td>Expedited entry, Beam, Skylift, and VIP benefits</td><td>Best for special celebrations</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; One Thing That Surprises People</div>
+        <p>Every General Admission ticket includes access to <strong>all three observation levels</strong>. The upgrades simply add extra experiences &mdash; they don&rsquo;t unlock better views. Put your money toward a better dinner after your visit rather than upgrading unless one of those experiences genuinely appeals to you.</p>
+      </div>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Reserve Now &middot; Pay Later</div>
+        <h4>Book Top of the Rock on Viator</h4>
+        <p>Reserve your tickets as early as possible if you&rsquo;re planning to visit around sunset &mdash; those entry times are the first to sell out, especially during spring, summer, and the holiday season. Booking through Viator gives you Reserve Now, Pay Later and free cancellation on most tickets.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Tickets on Viator</a>
+      </div>
+
+      <h3>Opening Hours</h3>
+      <p>Top of the Rock is typically open daily from <strong>8:00 AM until midnight</strong>, with the last entry around <strong>11:10 PM</strong>. Operating hours can change for holidays, private events, or seasonal schedules &mdash; always check the official Rockefeller Center website before your visit.</p>
+
+      <!-- GETTING THERE -->
+      <h2 id="getting-there">Where Is It &amp; How to Get There</h2>
+      <p>Top of the Rock sits inside <strong>30 Rockefeller Plaza</strong>, right in the heart of Midtown Manhattan. One of its biggest advantages is location &mdash; instead of making a special trip across the city, you can easily combine it with nearby attractions. Within a 10&ndash;15 minute walk:</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Rockefeller Center Plaza</li>
+        <li><span class="dot"></span>St. Patrick&rsquo;s Cathedral</li>
+        <li><span class="dot"></span>Fifth Avenue</li>
+        <li><span class="dot"></span>Radio City Music Hall</li>
+        <li><span class="dot"></span>MoMA</li>
+        <li><span class="dot"></span>Bryant Park &amp; New York Public Library</li>
+        <li><span class="dot"></span>Times Square</li>
+      </ul>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Building a Midtown Day Around It</div>
+        <p>Top of the Rock fits perfectly into a full Midtown sightseeing day. Our <a href="ultimate-nyc-itinerary-guide.html">complete NYC itinerary planning guide</a> shows you exactly how to group attractions by neighborhood so nothing feels rushed.</p>
+      </div>
+
+      <h3>Nearest Subway</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Closest Station</div>
+          <h4>47&ndash;50 Sts &ndash; Rockefeller Center</h4>
+          <p>Served by the B, D, F, and M lines. The most direct option from most parts of Manhattan.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Other Nearby Stations</div>
+          <h4>Multiple Options</h4>
+          <ul class="card-list"><li>49 St (N, R, W)</li><li>5 Av/53 St (E)</li><li>51 St (6)</li><li>Times Square (~10&ndash;15 min walk)</li></ul>
+        </div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Arrive Earlier Than Your Ticket Time</div>
+        <p>Your timed ticket reserves your <strong>arrival window</strong> &mdash; not the exact moment you step onto the deck. You&rsquo;ll still go through airport-style security (metal detectors and bag inspection) before reaching the elevators. Around sunset this security checkpoint becomes the longest part of the experience. Travel light, have your ticket ready, and arrive at least <strong>20&ndash;30 minutes</strong> before your booked time.</p>
+      </div>
+
+      <!-- THREE DECKS -->
+      <h2 id="three-levels">The Three Observation Decks: Which Floor Is Actually the Best?</h2>
+      <p>One thing that surprises almost everyone on their first visit is that Top of the Rock isn&rsquo;t one observation deck &mdash; it&rsquo;s three. Most travel guides simply tell you to &ldquo;go to the top.&rdquo; That&rsquo;s technically correct, but you&rsquo;ll miss half the experience if you sprint straight to the 70th floor and never come back down.</p>
+
+      <div class="floor-cards">
+        <div class="floor-card f67">
+          <span class="fl-badge">67th Floor</span>
+          <span class="fl-sub">The Underrated Starting Point</span>
+          <h4>Best for sheltered viewing &amp; orientation</h4>
+          <p>Both indoor viewing areas and outdoor terraces protected by glass panels. Most people rush past it &mdash; that&rsquo;s a mistake.</p>
+          <ul>
+            <li>Much less exposed to wind</li>
+            <li>Indoor areas if weather turns</li>
+            <li>Easier to sit and relax</li>
+            <li>Usually quieter than the upper deck</li>
+            <li>Good place to orient yourself</li>
+          </ul>
+          <div class="fl-note">In winter, this floor is a welcome break from the cold before heading higher.</div>
+        </div>
+        <div class="floor-card f69">
+          <span class="fl-badge">69th Floor</span>
+          <span class="fl-sub">The Best Balance</span>
+          <h4>Nearly identical views, less crowded</h4>
+          <p>Often overshadowed by the famous rooftop above, but arguably the most practical viewing level. Many visitors skip it &mdash; which is exactly why it&rsquo;s worth spending time here.</p>
+          <ul>
+            <li>Excellent panoramic views</li>
+            <li>More room to walk around</li>
+            <li>Outdoor observation areas</li>
+            <li>Easier to find space at peak times</li>
+            <li>Good backup when the top is crowded</li>
+          </ul>
+          <div class="fl-note">Glass safety panels can cause reflections for photography &mdash; head up to the 70th for shots.</div>
+        </div>
+        <div class="floor-card f70">
+          <span class="fl-badge">70th Floor</span>
+          <span class="fl-sub">★ The One Everyone Comes For</span>
+          <h4>Unobstructed open-air rooftop</h4>
+          <p>No large glass walls surrounding the perimeter &mdash; low transparent barriers leave the skyline almost completely open. This single design choice is why photographers consistently rank Top of the Rock as the city&rsquo;s best deck.</p>
+          <ul>
+            <li>Completely open-air</li>
+            <li>No distracting reflections</li>
+            <li>Incredible panoramic views</li>
+            <li>Cleaner skyline photos &amp; portraits</li>
+            <li>Classic Empire State Building view</li>
+          </ul>
+          <div class="fl-note">Busiest level &mdash; see the strategy below to time your visit well.</div>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The Counter-Intuitive Strategy</div>
+        <p>Instead of immediately joining the crowd on the rooftop, explore the 67th floor first &rarr; walk around the 69th &rarr; then head to the 70th floor last. By the time you&rsquo;ve explored the lower decks, the crowd upstairs has often shifted and you&rsquo;ll find better photo opportunities. Not only does this make the experience feel less rushed, but you&rsquo;ll already know exactly where you want to take photos by the time you reach the top.</p>
+      </div>
+
+      <div class="section-img">
+        <img src="TOTR2.png" alt="Top of the Rock 70th floor open-air observation deck">
+        <div class="cap">The 70th floor&rsquo;s open perimeter &mdash; no glass walls means no reflections and sharper skyline photos in every direction.</div>
+      </div>
+
+      <!-- BEST TIME -->
+      <h2 id="best-time">When Is the Best Time to Visit Top of the Rock?</h2>
+      <p>The honest answer? There isn&rsquo;t one perfect time. There are <strong>four</strong> excellent times &mdash; and each gives you a completely different experience.</p>
+
+      <div class="timing-grid">
+        <div class="timing-card t-morning">
+          <span class="tc-icon">&#127774;</span>
+          <span class="tc-badge">Fewest Crowds</span>
+          <h4>Morning</h4>
+          <p>9:00&ndash;11:00 AM. Short security lines, more space at the railings, often crisp visibility. Best for families and peaceful sightseeing.</p>
+          <ul><li>Quietest time of day</li><li>Cooler in summer</li><li>Empire State Building lighting not visible</li></ul>
+        </div>
+        <div class="timing-card t-midday">
+          <span class="tc-icon">&#9728;&#65039;</span>
+          <span class="tc-badge">Avoid for Photos</span>
+          <h4>Midday</h4>
+          <p>11:00 AM&ndash;3:00 PM. Tour groups begin arriving. Harsher lighting, especially in summer. Usually the least photogenic time of day.</p>
+          <ul><li>Views still good</li><li>More tour groups</li><li>Flat, harsh light</li></ul>
+        </div>
+        <div class="timing-card t-sunset">
+          <span class="tc-icon">&#127752;</span>
+          <span class="tc-badge">Most Popular</span>
+          <h4>Sunset</h4>
+          <p>Book <strong>45&ndash;60 min before sunset</strong>, not at sunset. You&rsquo;ll catch daylight, golden hour, sunset, blue hour, and night skyline on one ticket.</p>
+          <ul><li>Most dramatic views</li><li>Busiest period</li><li>Sells out first</li></ul>
+        </div>
+        <div class="timing-card t-night">
+          <span class="tc-icon">&#127769;</span>
+          <span class="tc-badge">Hidden Gem</span>
+          <h4>After Dark</h4>
+          <p>Blue hour and full night views. Office lights, glowing streets, illuminated Empire State Building. Crowds thinner. One of the most underrated visits.</p>
+          <ul><li>Thinner crowds</li><li>Richer blue-hour colors</li><li>Best for repeat visitors</li></ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; The Biggest Timing Mistake</div>
+        <p>Most people book their ticket <em>for</em> sunset. Don&rsquo;t. By the time you&rsquo;ve cleared security, ridden the elevator, and found a viewing spot, you&rsquo;ve already missed part of the show. Book <strong>45&ndash;60 minutes before sunset</strong> instead. And when the sun disappears and half the crowd leaves? Stay. That&rsquo;s when blue hour begins and the deck starts feeling less crowded again.</p>
+      </div>
+
+      <h3>Crowd Patterns Throughout the Day</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Time</th><th>Crowd Level</th><th>What to Expect</th></tr>
+          <tr><td>9:00&ndash;10:00 AM</td><td>Very Low</td><td>Quietest time, excellent for photography</td></tr>
+          <tr><td>10:00 AM&ndash;12:00 PM</td><td>Low</td><td>Comfortable sightseeing</td></tr>
+          <tr><td>12:00&ndash;2:00 PM</td><td>Moderate</td><td>More tour groups arriving</td></tr>
+          <tr><td>2:00&ndash;4:00 PM</td><td>Moderate&ndash;High</td><td>Crowds steadily increase</td></tr>
+          <tr><td>4:00 PM&ndash;Sunset</td><td>High</td><td>Sunset visitors begin arriving</td></tr>
+          <tr><td>Sunset</td><td>Very High</td><td>Peak crowd levels</td></tr>
+          <tr><td>20&ndash;30 Min After Sunset</td><td>Moderate</td><td>Many visitors leave &mdash; easier to move around</td></tr>
+          <tr><td>Final Hour Before Closing</td><td>Low&ndash;Moderate</td><td>Relaxed atmosphere with beautiful night views</td></tr>
+        </table>
+      </div>
+
+      <h3>Quietest Days &amp; Best Season</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Quietest Days</div>
+          <p>Tuesday, Wednesday, and Thursday mornings are consistently calmer. Avoid Saturdays, holiday weekends, Thanksgiving week, Christmas week, New Year, Spring Break, and July&ndash;August afternoons.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best Season</div>
+          <p><strong>October</strong> is the standout. Central Park is filled with fall colors, visibility is usually excellent, temperatures are comfortable, and sunset arrives early enough that you don&rsquo;t have to stay out late.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Season</th><th>Why Visit</th><th>Things to Consider</th></tr>
+          <tr><td>Spring</td><td>Comfortable weather and moderate crowds</td><td>Some hazy days</td></tr>
+          <tr><td>Summer</td><td>Long evenings and beautiful sunsets</td><td>Hot, humid and the busiest season</td></tr>
+          <tr><td>Fall</td><td>Crisp air, colorful Central Park, excellent visibility</td><td>Sunset tickets sell quickly</td></tr>
+          <tr><td>Winter</td><td>Sharp skyline views and smaller crowds</td><td>Strong winds and very cold rooftop conditions</td></tr>
+        </table>
+      </div>
+
+      <h3>How Long Should You Plan to Stay?</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Visitor Type</th><th>Typical Visit Length</th></tr>
+          <tr><td>Quick sightseeing stop</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td>Most first-time visitors</td><td>60&ndash;90 minutes</td></tr>
+          <tr><td>Sunset visit</td><td>90&ndash;120 minutes</td></tr>
+          <tr><td>Photography enthusiasts</td><td>Up to 2 hours or more</td></tr>
+        </table>
+      </div>
+      <p>Don&rsquo;t squeeze this into a tight itinerary. Give yourself enough time to slow down, explore all three levels, and simply enjoy watching the city change beneath you.</p>
+
+      <!-- PHOTOGRAPHY -->
+      <h2 id="photography">Photography Tips &amp; Best Viewpoints</h2>
+      <p>If there&rsquo;s one reason to keep recommending Top of the Rock over every other observation deck in New York City, it&rsquo;s this: <strong>it makes photography incredibly easy.</strong> You don&rsquo;t need an expensive camera. You don&rsquo;t need to be a professional photographer. And unlike several other observation decks, you won&rsquo;t spend half your visit avoiding reflections in the glass.</p>
+
+      <h3>The Four Best Photo Spots</h3>
+      <div class="photo-spots">
+        <div class="photo-spot">
+          <span class="ps-num">Spot 01</span>
+          <h4>The Classic Empire State Building View</h4>
+          <p>Head to the <strong>south-facing side</strong> of the 70th floor. The Empire State Building front and center with Midtown and Lower Manhattan stretching behind it &mdash; the definitive New York postcard shot. Expect to wait a few minutes at peak times.</p>
+        </div>
+        <div class="photo-spot">
+          <span class="ps-num">Spot 02</span>
+          <h4>The Most Overlooked View</h4>
+          <p>Most people never spend enough time <strong>looking north</strong>. The Central Park view is completely different &mdash; an enormous green rectangle stretching toward Harlem. In autumn, the changing leaves create one of the most colorful city views anywhere in New York.</p>
+        </div>
+        <div class="photo-spot">
+          <span class="ps-num">Spot 03</span>
+          <h4>The Quiet Corners</h4>
+          <p>People stop at the <strong>first railing they reach</strong>, creating unnecessary congestion. If you simply continue walking around the deck, you&rsquo;ll find much quieter viewing areas. The northeast and northwest sides are far less crowded than the Empire State Building viewpoint.</p>
+        </div>
+        <div class="photo-spot">
+          <span class="ps-num">Spot 04</span>
+          <h4>The Sunset Western Side</h4>
+          <p>For sunset itself, the <strong>western side</strong> of the deck deserves more attention. Watching the sun sink behind New Jersey while the Manhattan skyline slowly lights up is one of those moments that reminds you why observation decks exist in the first place.</p>
+        </div>
+      </div>
+
+      <h3>Smartphone Tips</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Clean Your Lens</h4><p>The easiest improvement you can make. A quick wipe with a microfiber cloth can dramatically sharpen every photo.</p></div>
+        <div class="card"><h4>Lower Exposure Slightly</h4><p>Tap the brightest part of the skyline and reduce exposure. This preserves detail in building lights and prevents bright signs from overexposing.</p></div>
+        <div class="card"><h4>Use Night Mode After Sunset</h4><p>Hold your phone as steady as possible. The results are often surprisingly close to what you&rsquo;d expect from a dedicated camera.</p></div>
+        <div class="card"><h4>Take Multiple Shots</h4><p>Wind on the open-air 70th floor can cause slight movement. Take several frames and you&rsquo;ll almost always find one noticeably sharper than the others.</p></div>
+      </div>
+
+      <h3>DSLR &amp; Mirrorless Tips</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Time of Day</th><th>Settings Guidance</th></tr>
+          <tr><td>During the Day</td><td>ISO 100, around f/8, let shutter speed adjust automatically</td></tr>
+          <tr><td>Around Sunset</td><td>Raise ISO gradually as light fades &mdash; ISO 200&ndash;400 works well before darkness</td></tr>
+          <tr><td>Blue Hour</td><td>Increase ISO rather than risking blur &mdash; tripods are not permitted; use image stabilization</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Should You Bring a Wide-Angle Lens?</div>
+        <p>Absolutely. A wide-angle lens lets you capture the Empire State Building, surrounding skyline, dramatic foreground, and sweeping panoramas all in one frame. If you enjoy cityscape photography, it&rsquo;s easily the most useful lens to bring.</p>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Stay for Blue Hour — Don&rsquo;t Leave After Sunset</div>
+        <p>The moment the sun disappears, you&rsquo;ll notice a wave of people heading for the elevators. Resist the temptation to follow them. About 20&ndash;30 minutes after sunset, New York transforms &mdash; the sky turns deep blue, office lights come on, the Empire State Building glows, the streets become rivers of headlights. The crowds have thinned out. In my opinion, <strong>blue hour is when Top of the Rock looks its absolute best.</strong></p>
+      </div>
+
+      <!-- WHO IS IT FOR -->
+      <h2 id="visitor-types">Visiting as a Family, Couple, or Solo</h2>
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Families</div>
+          <h4>Works Extremely Well</h4>
+          <p>Kids love spotting famous buildings, looking for Central Park, and watching yellow taxis from above. Avoid sunset at weekends when crowds become dense. Morning visits are much more relaxed for young children.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Couples</div>
+          <h4>One of NYC&rsquo;s Most Romantic Views</h4>
+          <p>Honeymoon, anniversary, or just a special trip &mdash; Top of the Rock deserves a spot. Your photos naturally include the Empire State Building behind you, something you obviously can&rsquo;t capture standing on it.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Solo</div>
+          <h4>Easy to Enjoy Alone</h4>
+          <p>One of the easiest NYC attractions to visit solo. Visitors are generally friendly, and it&rsquo;s common for people to offer to take photos for one another.</p>
+        </div>
+      </div>
+
+      <h2 id="practical">Wind, Restrooms, Food &amp; Seating</h2>
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; The One Thing Nobody Warns You About: Wind</div>
+        <p>Even on warm days, the open-air 70th floor catches a surprising amount of wind. Hair blows, loose hats become airborne, phones feel less stable. Temperatures feel several degrees cooler than street level. In winter, don&rsquo;t underestimate how cold it can feel. If you&rsquo;re planning portraits, bring a hair tie. If visiting in cold months, bring gloves &mdash; your fingers will need them for any camera or phone photography.</p>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Restrooms</h4><p>Available on the <strong>66th floor</strong> and in the concourse before heading upstairs. Use one before going to the observation decks &mdash; especially around sunset when elevator traffic is at its busiest.</p></div>
+        <div class="card"><h4>Food &amp; Drinks</h4><p>The <strong>Weather Room Caf&eacute; &amp; Bar</strong> is a good option before or after your visit. Seating on the observation levels is limited &mdash; most people spend their time walking between viewpoints.</p></div>
+      </div>
+
+      <!-- MISTAKES -->
+      <h2 id="mistakes">The 10 Biggest Mistakes First-Time Visitors Make</h2>
+      <ul class="mistake-list">
+        <li><span class="mx">1</span> Booking a ticket <strong>exactly at sunset</strong> instead of 45&ndash;60 minutes earlier &mdash; and missing golden hour entirely.</li>
+        <li><span class="mx">2</span> Going straight to the 70th floor without exploring the lower levels first.</li>
+        <li><span class="mx">3</span> Leaving immediately after the sun sets and missing blue hour.</li>
+        <li><span class="mx">4</span> Only photographing the Empire State Building and ignoring the rest of the skyline.</li>
+        <li><span class="mx">5</span> Forgetting to check the <strong>visibility forecast</strong>, not just the rain forecast.</li>
+        <li><span class="mx">6</span> Wearing too few layers because the weather feels warm at street level.</li>
+        <li><span class="mx">7</span> Bringing a tripod, only to discover it&rsquo;s not permitted.</li>
+        <li><span class="mx">8</span> Assuming the visit only takes 20&ndash;30 minutes and rushing through it.</li>
+        <li><span class="mx">9</span> Stopping at the first railing instead of walking the entire perimeter to find quieter viewpoints.</li>
+        <li><span class="mx">10</span> Thinking the tallest observation deck automatically has the best views.</li>
+      </ul>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Don&rsquo;t Leave It to Chance</div>
+        <h4>Reserve Your Top of the Rock Tickets Now</h4>
+        <p>Sunset and weekend time slots are always the first to go &mdash; especially during spring, summer, and the holiday season. Secure your preferred entry time now with Reserve Now, Pay Later and free cancellation on most bookings.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve on Viator</a>
+      </div>
+
+      <!-- PRACTICAL TIPS -->
+      <h2 id="practical-tips">Practical Tips I Wish I&rsquo;d Known Before My First Visit</h2>
+      <ul class="tip-list">
+        <li><span class="tip-icon">&#128247;</span><div><strong>Walk the entire deck before taking a single photo.</strong> The first viewpoint you reach is usually the busiest. Do one complete lap first. You&rsquo;ll discover quieter corners, different lighting, and angles that many visitors never bother exploring.</div></li>
+        <li><span class="tip-icon">&#128661;</span><div><strong>Don&rsquo;t race straight to the 70th floor.</strong> Explore the 67th, spend a few minutes on the 69th, then head to the top once you&rsquo;ve got your bearings. It&rsquo;s a calmer start and helps you appreciate how each level offers a slightly different perspective.</div></li>
+        <li><span class="tip-icon">&#127769;</span><div><strong>Stay after sunset.</strong> As soon as the sun dips, half the crowd heads for the elevators. Stay 20&ndash;30 minutes more. City lights are brighter, crowds are thinner, blue hour creates richer colors, and you&rsquo;ll often find much easier access to photo spots.</div></li>
+        <li><span class="tip-icon">&#127795;</span><div><strong>Turn around and look north.</strong> Everyone comes for the Empire State Building. But the view over Central Park is equally impressive, especially in autumn when the trees turn red, orange, and gold. Easy to miss because the Midtown skyline steals the spotlight.</div></li>
+        <li><span class="tip-icon">&#127760;</span><div><strong>Check visibility &mdash; not just rain.</strong> A cloudless day isn&rsquo;t automatically the best photography day. Humidity and haze can soften the skyline considerably. Some of the best visits happen on days with dramatic clouds and excellent visibility rather than perfectly blue skies.</div></li>
+        <li><span class="tip-icon">&#128247;</span><div><strong>Clean your phone camera lens.</strong> It takes two seconds and often makes a bigger difference than buying a more expensive phone.</div></li>
+      </ul>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is Top of the Rock worth visiting?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely &mdash; and if you only plan to visit one observation deck in New York City, this would be my recommendation for most first-time visitors. Height alone doesn&rsquo;t make a better view. Top of the Rock gives you the Empire State Building in the skyline, Central Park stretching to the horizon, a true 360° outdoor experience, three different observation levels, and a location that&rsquo;s easy to fit into almost any NYC itinerary.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Top of the Rock better during the day or at night?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Neither &mdash; the best experience is seeing both. Book a ticket 45&ndash;60 minutes before sunset and stay through blue hour. You&rsquo;ll experience bright daytime skyline, golden hour, sunset, blue hour, and full nighttime city lights on one admission.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to buy separate tickets for each floor?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. Every General Admission ticket includes access to all three observation levels (67th, 69th, and 70th floors). The optional upgrades like the Beam Experience and Skylift are extras, not required to access higher floors.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Top of the Rock suitable for children?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. Elevators go all the way up, there&rsquo;s very little walking compared to some attractions, and kids usually love spotting famous buildings. Avoid sunset on weekends when crowds become much denser. Morning visits are significantly more relaxed for families.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are strollers allowed?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; the attraction is fully accessible with elevators to every level. Navigating through sunset crowds with a stroller can be frustrating, so a baby carrier is often the easier option during busy periods.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if it rains?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Light rain doesn&rsquo;t automatically ruin your visit &mdash; rainy days often bring dramatic clouds, reflective streets, smaller crowds, and unique photos. Heavy rain or thick fog is a different story and can severely limit visibility. If severe weather significantly affects operations, Rockefeller Center may offer rebooking, but don&rsquo;t assume this will always happen.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you visit in winter?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Definitely. Winter produces some of the clearest skyline views of the year &mdash; cold, dry air means less haze and sharper visibility. The trade-off is wind. Even if it feels comfortable on the street, the exposed 70th-floor deck can feel much colder. Bring gloves if you&rsquo;re planning to take photos.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are tripods allowed?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No &mdash; tripods and monopods are not permitted. Increase your ISO after sunset, use image stabilization if available, take several frames to reduce motion blur, and lean gently against the railing for extra stability. For most visitors, smartphone Night Mode performs surprisingly well.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Full Comparison</a></li>
+      <li><a href="empire-state-building-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is the Empire State Building Worth It? An Honest 2026 Review</a></li>
+      <li><a href="edge-nyc-observation-deck-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Edge NYC Worth It? My Honest Take</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Pass Is Worth It?</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan the Perfect NYC Itinerary (Complete 2026 Guide)</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
