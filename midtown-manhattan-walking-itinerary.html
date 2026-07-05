@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ultimate Midtown Manhattan Walking Itinerary: Times Square to Central Park (2026) | EverythingInNYC</title>
+<meta name="description" content="A self-guided walking itinerary through Midtown Manhattan — Times Square, Bryant Park, Grand Central, Fifth Avenue, Rockefeller Center and Central Park. 9 stops, mostly free, 5–7 hours.">
+<meta name="keywords" content="Midtown Manhattan walking itinerary, self-guided NYC walking tour, Times Square to Central Park walk, one day in Midtown NYC, best Midtown attractions">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Route overview timeline */
+  .route-timeline{
+    margin:28px 0;
+    display:flex;flex-direction:column;
+    position:relative;
+  }
+  .route-timeline::before{
+    content:'';position:absolute;
+    left:22px;top:12px;bottom:12px;
+    width:2px;background:var(--border);
+    z-index:0;
+  }
+  .rt-stop{
+    display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;
+    margin-bottom:6px;position:relative;z-index:1;
+  }
+  .rt-num{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--navy);color:#fff;
+    font-family:var(--font-head);font-weight:800;font-size:15px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .rt-stop.free .rt-num{background:var(--success);}
+  .rt-stop.paid .rt-num{background:var(--accent);color:var(--accent-ink);}
+  .rt-body{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:14px 16px;
+  }
+  .rt-body .rt-head{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    margin-bottom:6px;
+  }
+  .rt-body h4{margin:0;font-size:17px;}
+  .rt-body .rt-time{
+    font-size:12.5px;font-weight:700;color:var(--text-secondary);
+    background:var(--bg);border:1px solid var(--border);
+    padding:3px 9px;border-radius:20px;white-space:nowrap;flex:none;
+  }
+  .rt-body .rt-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .rt-body .rt-tag{
+    font-size:12px;padding:3px 9px;border-radius:20px;font-weight:600;
+  }
+  .rt-tag.free-tag{background:rgba(22,163,74,0.12);color:#15803D;}
+  .rt-tag.paid-tag{background:rgba(255,193,7,0.18);color:#7A5400;}
+  .rt-tag.photo-tag{background:rgba(37,99,235,0.1);color:var(--info);}
+  .rt-body p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+  .rt-walk{
+    display:flex;align-items:center;gap:10px;
+    padding:4px 0 4px 22px;color:var(--text-secondary);font-size:13.5px;
+  }
+  .rt-walk::before{content:'↓';font-weight:800;color:var(--border);}
+
+  /* Stop header */
+  .stop-header{
+    display:flex;align-items:center;gap:14px;margin-bottom:16px;margin-top:2.4em;
+  }
+  .stop-badge{
+    width:46px;height:46px;border-radius:14px;
+    background:var(--navy);color:#fff;
+    font-family:var(--font-head);font-weight:800;font-size:20px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .stop-header h2{margin:0;font-size:28px;scroll-margin-top:90px;}
+
+  /* Info table */
+  .info-table-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;margin:24px 0;}
+  .info-table-wrap .it-head{background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:11px 18px;}
+  .info-table-wrap table{width:100%;border-collapse:collapse;}
+  .info-table-wrap td{padding:10px 16px;font-size:15px;border-bottom:1px solid var(--border);}
+  .info-table-wrap td:first-child{font-weight:700;color:var(--navy);width:45%;background:rgba(15,23,42,0.02);}
+  .info-table-wrap tr:last-child td{border-bottom:none;}
+
+  /* Time table - compact */
+  .time-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+  .time-table th{background:var(--navy-soft);color:#fff;padding:8px 12px;text-align:left;font-family:var(--font-head);font-weight:700;}
+  .time-table td{padding:9px 12px;border-bottom:1px solid var(--border);}
+  .time-table td:first-child{color:var(--text);font-weight:600;}
+  .time-table tr:last-child td{border-bottom:none;}
+  .table-sm-wrap{overflow-x:auto;margin:16px 0;}
+
+  /* Section image */
+  .section-img{margin:24px 0;}
+  .section-img img{width:100%;border-radius:14px;object-fit:cover;max-height:420px;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Tip box (named-person tip) */
+  .author-tip{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-left:4px solid var(--accent);
+    border-radius:0 14px 14px 0;
+    padding:16px 20px;margin:20px 0;
+    font-size:16px;
+  }
+  .author-tip .at-label{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#92620A;text-transform:uppercase;letter-spacing:0.05em;
+    margin-bottom:6px;
+  }
+  .author-tip p{margin:0;color:var(--text);}
+
+  /* Mistakes grid */
+  .mistakes-grid{
+    display:grid;grid-template-columns:1fr;gap:10px;margin:20px 0;
+  }
+  @media(min-width:560px){.mistakes-grid{grid-template-columns:1fr 1fr;}}
+  .mistake-card{
+    background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.2);
+    border-radius:13px;padding:14px 16px;
+  }
+  .mistake-card h4{margin:0 0 6px;font-size:15px;color:var(--error);}
+  .mistake-card p{font-size:14px;color:var(--text-secondary);margin:0;}
+
+  /* Budget table accent row */
+  .budget-free td:first-child{color:var(--success);font-weight:700;}
+
+  /* Mistake list numbered */
+  .mistake-num-list{
+    counter-reset:mlist;list-style:none;
+    padding:0;margin:20px 0;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .mistake-num-list li{
+    counter-increment:mlist;
+    display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:14px 16px;font-size:15.5px;
+  }
+  .mistake-num-list li::before{
+    content:counter(mlist);
+    font-family:var(--font-head);font-weight:800;font-size:14px;
+    color:#fff;background:var(--navy);
+    width:36px;height:36px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    flex:none;margin-top:1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>The Ultimate Midtown Manhattan Walking Itinerary: Times Square to Central Park (2026)</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 16 minute read</span>
+        <span>&middot;</span>
+        <span>&#128694;&#65039; ~4 miles walking</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="manhattan-itinerary.png" alt="Midtown Manhattan walking itinerary — Times Square to Central Park">
+
+    <div class="article-body">
+      <p>Planning your first day in New York City can feel overwhelming. Open Google Maps and you&rsquo;ll see hundreds of attractions packed into Midtown Manhattan. Every travel blog claims you can see everything in a day, yet somehow they all leave you exhausted, zigzagging across the city, wondering why you&rsquo;re spending more time waiting at crosswalks than actually enjoying New York.</p>
+      <p>This guide takes a different approach. Instead of cramming every famous landmark into your itinerary, this route follows a <strong>logical northbound walk through Midtown</strong>, connecting many of New York City&rsquo;s most iconic attractions in an order that simply makes sense &mdash; from the electric chaos of Times Square to the peaceful paths of Central Park.</p>
+      <p>Even better, <strong>most of this itinerary is completely free</strong>. Unless you decide to visit Top of the Rock or stop for shopping, you can experience many of Midtown&rsquo;s highlights without spending a dollar.</p>
+
+      <!-- AT A GLANCE -->
+      <div class="info-table-wrap">
+        <div class="it-head">Midtown Walking Itinerary at a Glance</div>
+        <table>
+          <tr><td>Starting Point</td><td>Times Square</td></tr>
+          <tr><td>Ending Point</td><td>Central Park South</td></tr>
+          <tr><td>Distance</td><td>Approximately 4 miles (6.4 km)</td></tr>
+          <tr><td>Walking Time</td><td>About 1 hour 30 minutes (without sightseeing stops)</td></tr>
+          <tr><td>Recommended Total Time</td><td>5&ndash;7 hours</td></tr>
+          <tr><td>Difficulty</td><td>Easy &mdash; mostly flat</td></tr>
+          <tr><td>Best Start Time</td><td>8:30&ndash;9:00 AM</td></tr>
+          <tr><td>Best Days</td><td>Tuesday&ndash;Thursday</td></tr>
+          <tr><td>Best Season</td><td>Spring and Fall</td></tr>
+          <tr><td>Wheelchair Accessible</td><td>Yes, with accessible crossings and entrances throughout</td></tr>
+          <tr><td>Cost</td><td>Free (Top of the Rock optional)</td></tr>
+        </table>
+      </div>
+
+      <!-- ROUTE OVERVIEW -->
+      <h2 id="route-overview">The Route at a Glance</h2>
+      <div class="route-timeline">
+        <div class="rt-stop free">
+          <div class="rt-num">1</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Times Square</h4><span class="rt-time">8:30&ndash;9:15 AM</span></div>
+            <p>Climb the red TKTS steps, soak up the atmosphere, then keep moving.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span><span class="rt-tag photo-tag">Photos</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~8 min walk east along 42nd St</div>
+        <div class="rt-stop free">
+          <div class="rt-num">2</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Bryant Park</h4><span class="rt-time">9:20&ndash;9:50 AM</span></div>
+            <p>Best public restroom in Midtown. Grab a coffee, find a green chair, slow down.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~2 min walk (connected to Bryant Park)</div>
+        <div class="rt-stop free">
+          <div class="rt-num">3</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>New York Public Library</h4><span class="rt-time">9:50&ndash;10:50 AM</span></div>
+            <p>Don&rsquo;t photograph only the lions. The Rose Main Reading Room inside is one of Manhattan&rsquo;s finest interiors.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span><span class="rt-tag photo-tag">Photos</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~5 min walk east on 42nd St</div>
+        <div class="rt-stop free">
+          <div class="rt-num">4</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Grand Central Terminal</h4><span class="rt-time">11:00&ndash;11:45 AM</span></div>
+            <p>Look up. Find the Whispering Gallery. Walk the balconies for the best photograph.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span><span class="rt-tag photo-tag">Photos</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~3 min walk north on Lexington Ave</div>
+        <div class="rt-stop free">
+          <div class="rt-num">5</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Chrysler Building</h4><span class="rt-time">11:50 AM&ndash;12:05 PM</span></div>
+            <p>Quick photo stop. No observation deck. Best photographed from near Grand Central, not directly underneath.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free (Exterior)</span><span class="rt-tag photo-tag">Photos</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~10 min walk west to Fifth Ave</div>
+        <div class="rt-stop free">
+          <div class="rt-num">6</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Fifth Avenue</h4><span class="rt-time">12:15&ndash;1:15 PM</span></div>
+            <p>Walk the east side heading north. One or two flagship stores only. Don&rsquo;t eat here.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free (unless shopping)</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">Continuing north on Fifth Ave</div>
+        <div class="rt-stop free">
+          <div class="rt-num">7</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>St. Patrick&rsquo;s Cathedral</h4><span class="rt-time">1:15&ndash;1:45 PM</span></div>
+            <p>Step inside. The contrast between Fifth Avenue chaos and the cathedral silence is one of Midtown&rsquo;s best surprises.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span><span class="rt-tag photo-tag">Photos</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~2 min walk to Rockefeller Center</div>
+        <div class="rt-stop paid">
+          <div class="rt-num">8</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Rockefeller Center</h4><span class="rt-time">1:45&ndash;3:00 PM</span></div>
+            <p>Start at Channel Gardens. Walk through to the plaza. Optional: Top of the Rock for the best NYC skyline view.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free (plaza)</span><span class="rt-tag paid-tag">Top of Rock optional</span></div>
+          </div>
+        </div>
+        <div class="rt-walk">~10 min walk north to Central Park</div>
+        <div class="rt-stop free">
+          <div class="rt-num">9</div>
+          <div class="rt-body">
+            <div class="rt-head"><h4>Central Park South</h4><span class="rt-time">3:00+ PM</span></div>
+            <p>Enter at Grand Army Plaza. Don&rsquo;t just stop at the gates &mdash; walk in. Even 20 minutes changes the ending completely.</p>
+            <div class="rt-tags"><span class="rt-tag free-tag">Free</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE MAP NOTE -->
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Interactive Route Map</div>
+        <p>See all 9 stops plotted on a live map at the top of this article &mdash; including walking directions between each stop, estimated times, and tips for each location.</p>
+      </div>
+
+      <!-- BEFORE YOU START -->
+      <h2 id="before-you-start">Before You Start</h2>
+      <p>A little preparation goes a long way. This isn&rsquo;t a difficult walk, but you&rsquo;ll easily cover <strong>10,000&ndash;15,000 steps</strong>, often more if you explore inside attractions. Before leaving your hotel:</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Wear comfortable walking shoes</li>
+        <li><span class="dot"></span>Carry a reusable water bottle</li>
+        <li><span class="dot"></span>Bring a portable charger</li>
+        <li><span class="dot"></span>Download an offline Google Maps area</li>
+        <li><span class="dot"></span>Check the weather forecast</li>
+        <li><span class="dot"></span>Reserve Top of the Rock tickets in advance if you plan to visit</li>
+      </ul>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Still Building Your Full NYC Itinerary?</div>
+        <p>This walking route fits perfectly into a broader NYC trip plan. See our <a href="ultimate-nyc-itinerary-guide.html">complete guide to planning a perfect NYC itinerary</a> for how to structure your remaining days around neighborhoods, reservations, and pacing.</p>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Visiting at Christmas or During School Holidays?</div>
+        <p>Expect this itinerary to take significantly longer. Holiday decorations transform Midtown into one of the most beautiful parts of New York, but they also attract enormous crowds, particularly around Rockefeller Center and Fifth Avenue. Allow an extra 60&ndash;90 minutes at minimum.</p>
+      </div>
+
+      <!-- STOP 1 -->
+      <div class="stop-header" id="times-square">
+        <div class="stop-badge">1</div>
+        <h2>Times Square</h2>
+      </div>
+      <p>Love it or hate it, every first-time visitor should experience Times Square at least once. Yes, it&rsquo;s loud. Yes, it&rsquo;s crowded. And yet, standing beneath those enormous digital billboards with Broadway theaters surrounding you is one of those quintessential New York moments that simply can&rsquo;t be replicated anywhere else.</p>
+      <p>The mistake many visitors make is treating Times Square as a destination where they need to spend half the day. Most people naturally feel ready to move on after about <strong>30 to 45 minutes</strong>. That&rsquo;s enough time to soak in the atmosphere, take your photos, and enjoy the spectacle before continuing toward quieter parts of Midtown.</p>
+
+      <h3>What to Do</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Walk through the pedestrian plazas</li>
+        <li><span class="dot"></span>Climb the red TKTS steps for one of the best free panoramic views of Times Square</li>
+        <li><span class="dot"></span>Watch the constant flow of people from above</li>
+        <li><span class="dot"></span>Explore one or two nearby Broadway blocks before heading east</li>
+      </ul>
+
+      <div class="author-tip">
+        <div class="at-label">Author&rsquo;s Tip</div>
+        <p>One of my favorite things to do here isn&rsquo;t photographing the billboards &mdash; it&rsquo;s simply sitting on the red steps for five minutes and watching New York unfold around me. It&rsquo;s amazing how quickly the chaos starts to feel almost choreographed.</p>
+      </div>
+
+      <h3>Photography Tips</h3>
+      <p>If you&rsquo;re an early riser, arriving between <strong>8:00 and 9:00 AM</strong> gives you surprisingly manageable crowds, softer light, and a much better chance of capturing recognizable scenes without hundreds of people filling every frame. If you do visit after dark, let your phone&rsquo;s Night Mode do the work.</p>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Common Mistakes</div>
+        <p>Eating lunch here &mdash; restaurants around Times Square are convenient, but rarely the best value. You&rsquo;ll find better food, lower prices, and a much more enjoyable atmosphere just a few blocks away. Also avoid stopping suddenly in the middle of busy pedestrian areas for photos &mdash; step to the side first.</p>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Practical Tip</div>
+        <p>There are <strong>no permanent public restrooms in the Times Square pedestrian plazas</strong>. Wait until Bryant Park, where you&rsquo;ll find one of the cleanest public restrooms in Manhattan. Need coffee? Try Joe Coffee, Blue Bottle Coffee, or Culture Espresso (don&rsquo;t skip the cookies).</p>
+      </div>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Quick visit</td><td>20 minutes</td></tr>
+          <tr><td>First-time visitor</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td>Photography enthusiasts</td><td>Up to 1 hour</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 2 -->
+      <div class="stop-header" id="bryant-park">
+        <div class="stop-badge">2</div>
+        <h2>Bryant Park</h2>
+      </div>
+      <p>If Times Square is New York&rsquo;s living room for tourists, Bryant Park is Midtown&rsquo;s backyard. This is where office workers eat lunch, students read under the trees, friends meet for coffee, and visitors finally stop rushing.</p>
+      <p>Many itinerary guides tell you to &ldquo;walk through Bryant Park.&rdquo; I disagree. This is where your itinerary should slow down. Find one of the famous green movable chairs, grab a coffee, and spend ten or fifteen minutes simply watching the city go by. Most people don&rsquo;t plan to. That&rsquo;s exactly why Bryant Park ends up becoming one of their favorite stops.</p>
+      <p>The park also hosts seasonal events throughout the year &mdash; outdoor movies, free performances, holiday markets, and the famous Winter Village with its ice-skating rink.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; The Best Public Restroom in Midtown</div>
+        <p>Bryant Park&rsquo;s public restroom has earned an almost legendary reputation among both locals and visitors. It&rsquo;s clean, well-maintained, and reliably open. Use it before continuing &mdash; quality public restrooms become harder to find as the route progresses.</p>
+      </div>
+
+      <!-- STOP 3 -->
+      <div class="stop-header" id="nypl">
+        <div class="stop-badge">3</div>
+        <h2>New York Public Library</h2>
+      </div>
+      <p>The New York Public Library is genuinely one of the most underrated stops on this itinerary. Walking inside, you&rsquo;ll pass marble staircases, vaulted ceilings, enormous chandeliers, and intricately decorated corridors before reaching the famous Rose Main Reading Room. It&rsquo;s easy to forget you&rsquo;re standing inside a working public library.</p>
+
+      <h3>Don&rsquo;t Miss</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Astor Hall</h4><p>The grand entrance with white marble walls and staircases. Most visitors stop immediately for photos &mdash; take a few minutes here before rushing upstairs.</p></div>
+        <div class="card"><h4>Rose Main Reading Room</h4><p>Stretching nearly two city blocks in length with soaring painted ceilings and rows of historic oak reading tables. Common visitor reaction: &ldquo;I had no idea it was this beautiful.&rdquo;</p></div>
+        <div class="card"><h4>McGraw Rotunda</h4><p>Often overlooked. Contains large murals inspired by the history of writing and learning. Many visitors head straight to the Reading Room and completely miss it.</p></div>
+        <div class="card"><h4>Treasures Exhibition</h4><p>Historic manuscripts, original maps, rare books, and rotating literary artifacts. Displays change periodically &mdash; worth checking before your visit.</p></div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE26DSxDTkM3iNtbhpKrmiAJ8HwWXXdOza969obNwMAbCiVNRpHTRVB8EV8xA0MHseCLg1vToqt3Snk8FX_MAEgNnqBFFqm8zzCy2F28rAPM8WZTaNjEPDur9wtw9hwAxWODDUyqA=s1360-w1360-h1020-rw" alt="Rose Main Reading Room, New York Public Library">
+        <div class="cap">The Rose Main Reading Room &mdash; one of the finest public interiors in Manhattan, and it&rsquo;s completely free to visit.</div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Photography Tip</div>
+        <p>The balcony overlooking the Rose Main Reading Room provides the classic viewpoint. Use your phone&rsquo;s wide-angle lens to capture the scale of the room &mdash; flash isn&rsquo;t necessary. Also, <strong>look up</strong>. Some of the building&rsquo;s most impressive artwork is on the ceilings rather than the walls.</p>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">&#9888;&#65039; Common Mistakes</div>
+        <p>Only photographing the outside &mdash; the interior is even better. Rushing straight to the Reading Room without exploring surrounding corridors and exhibitions. And visiting during peak midday hours when school and tour groups are most common.</p>
+      </div>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Quick visit</td><td>20 minutes</td></tr>
+          <tr><td>Average visitor</td><td>45&ndash;60 minutes</td></tr>
+          <tr><td>Architecture or photography enthusiasts</td><td>60&ndash;90 minutes</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 4 -->
+      <div class="stop-header" id="grand-central">
+        <div class="stop-badge">4</div>
+        <h2>Grand Central Terminal</h2>
+      </div>
+      <p>Despite what many visitors call it, this is <strong>Grand Central Terminal</strong>, not Grand Central Station. For many first-time visitors, this becomes one of the biggest surprises of the entire itinerary. They expected a train station. Instead, they discovered one of New York&rsquo;s greatest public spaces.</p>
+
+      <h3>Don&rsquo;t Miss These Highlights</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span><strong>Main Concourse</strong> &mdash; Stand in the middle and look up at the celestial ceiling and famous clock. Take your time here &mdash; Grand Central actually rewards standing still.</li>
+        <li><span class="dot"></span><strong>The Whispering Gallery</strong> &mdash; Hidden beside the Oyster Bar. Stand in opposite corners of the tiled archway and speak quietly toward the wall. Your voice travels across the curved ceiling surprisingly clearly.</li>
+        <li><span class="dot"></span><strong>Vanderbilt Hall</strong> &mdash; Originally the main waiting room, now hosts exhibitions and events. What&rsquo;s here depends on when you visit.</li>
+        <li><span class="dot"></span><strong>East and West Balconies</strong> &mdash; Walk up for the classic Grand Central photograph. You&rsquo;ll capture the famous clock, bustling commuters, and magnificent ceiling in a single frame.</li>
+      </ul>
+
+      <!-- STOP 5 -->
+      <div class="stop-header" id="chrysler">
+        <div class="stop-badge">5</div>
+        <h2>Chrysler Building (View Stop)</h2>
+      </div>
+      <p>The Chrysler Building is one of New York&rsquo;s biggest &ldquo;look, don&rsquo;t enter&rdquo; attractions. Many first-time visitors arrive expecting an observation deck similar to the Empire State Building. Unfortunately, <strong>the public observation deck closed many decades ago</strong> and there is currently no public access to the upper floors. Knowing that before you arrive prevents one of the most common disappointments in Midtown. Fortunately, the building is arguably even more impressive from the outside.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Best Photography Angle</div>
+        <p>Standing directly beneath the skyscraper isn&rsquo;t the best place for photos &mdash; the perspective becomes too steep. Instead, walk a short distance back toward Grand Central. One of the best viewpoints is near the Pershing Square area, where you can comfortably fit the entire crown into the frame. Another excellent angle is looking north along Lexington Avenue.</p>
+      </div>
+
+      <h3>Look Closely</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Stainless-steel eagle gargoyles projecting from the upper floors</li>
+        <li><span class="dot"></span>Decorative ornaments inspired by Chrysler automobile hubcaps</li>
+        <li><span class="dot"></span>Triangular windows arranged in layered arches</li>
+        <li><span class="dot"></span>Intricate brickwork leading up to the famous sunburst crown</li>
+      </ul>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Quick photo stop</td><td>10 minutes</td></tr>
+          <tr><td>Architecture enthusiasts</td><td>20&ndash;30 minutes</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 6 -->
+      <div class="stop-header" id="fifth-avenue">
+        <div class="stop-badge">6</div>
+        <h2>Fifth Avenue</h2>
+      </div>
+      <p>You don&rsquo;t have to shop to enjoy Fifth Avenue. Treat it less like a shopping destination and more like an open-air museum. Between the famous storefronts are historic churches, elegant skyscrapers, public art, and some of the city&rsquo;s finest architecture.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Which Side to Walk?</div>
+        <p>If you&rsquo;re heading north toward Rockefeller Center, walk the <strong>east side</strong> of Fifth Avenue. Better views of St. Patrick&rsquo;s Cathedral, easier access to Channel Gardens, and generally smoother pedestrian flow.</p>
+      </div>
+
+      <h3>Flagship Stores Worth Considering</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Nintendo NY</h4><p>Gaming displays and exclusive merchandise. Worth a quick look even if you&rsquo;re not a gamer.</p></div>
+        <div class="card"><h4>LEGO Store</h4><p>Showcases impressive brick-built models of New York landmarks. Entertaining for adults and children.</p></div>
+        <div class="card"><h4>FAO Schwarz</h4><p>Remains one of the city&rsquo;s most iconic toy stores &mdash; worth five minutes even if you&rsquo;re not shopping.</p></div>
+        <div class="card"><h4>Kinokuniya Bookstore</h4><p>A short detour. One of Manhattan&rsquo;s best bookstores for Japanese books, stationery, manga, and unique souvenirs.</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Hidden Gem: Channel Gardens</div>
+        <p>Located between Fifth Avenue and Rockefeller Plaza, these beautifully landscaped gardens change throughout the year with seasonal flowers and decorations. Many visitors walk straight past them on their way to Top of the Rock. Slow down here &mdash; it&rsquo;s one of Midtown&rsquo;s most elegant public spaces.</p>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/0a/e0/saks-5th-avenue-next.jpg?w=1000&h=-1&s=1" alt="Saks Fifth Avenue on Fifth Avenue, New York City">
+        <div class="cap">Fifth Avenue &mdash; walk the east side heading north for the best views of St. Patrick&rsquo;s and easy access to Rockefeller Center.</div>
+      </div>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Walking only</td><td>20&ndash;30 minutes</td></tr>
+          <tr><td>One or two flagship stores</td><td>45&ndash;60 minutes</td></tr>
+          <tr><td>Dedicated shopping trip</td><td>2+ hours</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 7 -->
+      <div class="stop-header" id="st-patricks">
+        <div class="stop-badge">7</div>
+        <h2>St. Patrick&rsquo;s Cathedral</h2>
+      </div>
+      <p>In the middle of one of the busiest shopping districts in the world stands a place of remarkable peace. One moment you&rsquo;re surrounded by traffic, luxury storefronts, and thousands of pedestrians. A few steps later, you&rsquo;re standing beneath soaring Gothic arches in near silence. Even if you&rsquo;re not interested in religious history, don&rsquo;t skip this stop.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Pro Tip</div>
+        <p>The best exterior photographs are taken from across Fifth Avenue, where the cathedral is framed by Midtown&rsquo;s modern skyscrapers. Inside, resist the urge to photograph everything immediately &mdash; walk through the building first, then return to capture what stands out to you.</p>
+      </div>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Quick visit</td><td>10&ndash;15 minutes</td></tr>
+          <tr><td>Average visitor</td><td>20&ndash;30 minutes</td></tr>
+          <tr><td>Architecture enthusiasts</td><td>30&ndash;45 minutes</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 8 -->
+      <div class="stop-header" id="rockefeller">
+        <div class="stop-badge">8</div>
+        <h2>Rockefeller Center</h2>
+      </div>
+      <p>Few places capture the spirit of Midtown Manhattan quite like Rockefeller Center. Unlike Times Square, the atmosphere here is energetic without being overwhelming. It&rsquo;s one of the few places in Midtown where tourists and locals naturally mix.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Start at Channel Gardens</div>
+        <p>Don&rsquo;t rush straight toward the skating rink or Top of the Rock elevators. Begin your visit at Channel Gardens &mdash; the beautifully landscaped walkway connecting Fifth Avenue to Rockefeller Plaza. Walking through the gardens creates a much more dramatic entrance. It&rsquo;s a small detail, but it completely changes the experience.</p>
+      </div>
+
+      <h3>Don&rsquo;t Miss the Atlas Statue</h3>
+      <p>Before entering Rockefeller Plaza, walk back toward Fifth Avenue for a moment. You&rsquo;ll find the enormous bronze Atlas statue standing directly opposite St. Patrick&rsquo;s Cathedral. Many visitors photograph Atlas. Far fewer think to include the cathedral in the background. That wider composition &mdash; a twentieth-century Art Deco sculpture opposite a nineteenth-century Gothic cathedral &mdash; tells a much better story of Midtown.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Hidden Gem: Lower Concourse</div>
+        <p>Beneath Rockefeller Center is an underground concourse connecting shops, restaurants, and public spaces. Many visitors never discover it. It&rsquo;s particularly useful if it starts raining, you need a restroom, or you want somewhere quieter to sit.</p>
+      </div>
+
+      <h3>Should You Visit Top of the Rock?</h3>
+      <p>If you&rsquo;ve never been before &mdash; absolutely. In my opinion, <strong>Top of the Rock offers the best overall observation deck experience in New York City</strong>, because it&rsquo;s the only major observation deck where you can actually see the Empire State Building in your skyline photos while also enjoying sweeping views of Central Park. If you&rsquo;re choosing just one observation deck, this is the one I&rsquo;d recommend for most first-time visitors.</p>
+      <p>Don&rsquo;t assume you can simply walk up and buy a ticket. Sunset tickets regularly sell out well in advance &mdash; reserve before your trip.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Want the Full Guide?</div>
+        <p>For detailed advice on timing, floors, photography tips, and avoiding common mistakes, read our <a href="top-of-the-rock-review.html">complete Top of the Rock guide</a> before you visit.</p>
+      </div>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Reserve Now &middot; Pay Later</div>
+        <h4>Book Top of the Rock on Viator</h4>
+        <p>Sunset slots sell out first, especially during spring, summer, and the holiday season. Booking through Viator gives you Reserve Now, Pay Later and free cancellation on most bookings.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Top of the Rock Tickets</a>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/51/d4/4e/caption.jpg?w=1400&h=-1&s=1" alt="Rockefeller Center plaza and Channel Gardens">
+        <div class="cap">Rockefeller Center &mdash; enter through Channel Gardens for the most dramatic approach to the plaza.</div>
+      </div>
+
+      <div class="table-sm-wrap">
+        <table class="time-table">
+          <tr><th>Visitor Type</th><th>Recommended Time</th></tr>
+          <tr><td>Plaza only</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td>Plaza + shopping</td><td>60&ndash;90 minutes</td></tr>
+          <tr><td>Including Top of the Rock</td><td>2&ndash;3 hours</td></tr>
+        </table>
+      </div>
+
+      <!-- STOP 9 -->
+      <div class="stop-header" id="central-park">
+        <div class="stop-badge">9</div>
+        <h2>Central Park South</h2>
+      </div>
+      <p>After several hours surrounded by skyscrapers, traffic, and Midtown&rsquo;s constant energy, arriving at Central Park feels almost surreal. Within a few steps, the sound of car horns begins to fade. Tree-lined paths replace concrete sidewalks. Street musicians replace sirens.</p>
+      <p>Don&rsquo;t treat Central Park as the finish line. Treat it as your reward. Walk a little farther. Find a bench. Take a breath. Watch New Yorkers walking their dogs, families enjoying the park, horse-drawn carriages passing by, and cyclists weaving through the paths.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; Where to Enter</div>
+        <p>Enter through <strong>Grand Army Plaza</strong> at the southeast corner of Central Park. From this single location you can see the Plaza Hotel, Pulitzer Fountain, Central Park, and the surrounding Midtown skyline &mdash; one of the most elegant views in Manhattan. Then head in. Even fifteen or twenty minutes changes the ending completely.</p>
+      </div>
+
+      <div class="author-tip">
+        <div class="at-label">Author&rsquo;s Tip</div>
+        <p>If you still have energy after completing this walk, continue deeper into Central Park toward The Mall, Bethesda Terrace, or Bow Bridge. If not, you&rsquo;ve already experienced one of the finest self-guided walks in New York City. You&rsquo;ve earned a good dinner.</p>
+      </div>
+
+      <!-- PLANNING YOUR TIME -->
+      <h2 id="planning">Planning Your Time</h2>
+      <p>This itinerary works best when you give yourself permission to slow down. Sit in Bryant Park for a coffee. Wander through the New York Public Library instead of only photographing it. Spend a few extra minutes looking up inside Grand Central Terminal. Those are the moments you&rsquo;ll remember.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Stop</th><th>Recommended Time</th></tr>
+          <tr><td>Times Square</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td>Bryant Park</td><td>20&ndash;30 minutes</td></tr>
+          <tr><td>New York Public Library</td><td>45&ndash;60 minutes</td></tr>
+          <tr><td>Grand Central Terminal</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td>Chrysler Building</td><td>10&ndash;15 minutes</td></tr>
+          <tr><td>Fifth Avenue</td><td>30&ndash;60 minutes</td></tr>
+          <tr><td>St. Patrick&rsquo;s Cathedral</td><td>20&ndash;30 minutes</td></tr>
+          <tr><td>Rockefeller Center</td><td>45&ndash;60 minutes</td></tr>
+          <tr><td>Top of the Rock (Optional)</td><td>90&ndash;120 minutes</td></tr>
+          <tr><td>Central Park South</td><td>20&ndash;45 minutes</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Without Top of the Rock</div>
+          <h4>5&ndash;6.5 hours</h4>
+          <p>An ideal full day in Midtown without feeling rushed. Comfortable pacing for most visitors.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">With Top of the Rock</div>
+          <h4>6.5&ndash;8 hours</h4>
+          <p>A complete Midtown day. Start at 8:30&ndash;9:00 AM and arrive at Central Park before sunset.</p>
+        </div>
+      </div>
+
+      <!-- BUDGET -->
+      <h2 id="budget">Approximate Budget</h2>
+      <p>One of the reasons this is one of the best self-guided walks in New York City is that it can be done on almost any budget.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Attraction</th><th>Cost</th></tr>
+          <tr class="budget-free"><td>Walking Route</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Bryant Park</td><td>Free</td></tr>
+          <tr class="budget-free"><td>NY Public Library</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Grand Central Terminal</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Chrysler Building (exterior)</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Fifth Avenue walk</td><td>Free (unless shopping)</td></tr>
+          <tr class="budget-free"><td>St. Patrick&rsquo;s Cathedral</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Rockefeller Center Plaza</td><td>Free</td></tr>
+          <tr class="budget-free"><td>Central Park</td><td>Free</td></tr>
+          <tr><td>Top of the Rock</td><td>Optional</td></tr>
+        </table>
+      </div>
+
+      <h3>Money-Saving Tips</h3>
+      <div class="card-grid cols-3">
+        <div class="card"><h4>Eat Away From Times Square</h4><p>Times Square restaurants are convenient but rarely the best value. Eat around Grand Central Terminal, Bryant Park, or Rockefeller Center instead.</p></div>
+        <div class="card"><h4>Bring a Reusable Water Bottle</h4><p>Buying bottled water several times throughout the day adds up quickly. Refill whenever possible &mdash; particularly around Bryant Park or the Library.</p></div>
+        <div class="card"><h4>Choose One Observation Deck</h4><p>You don&rsquo;t need to visit all of them. If choosing just one, Top of the Rock gives you the Empire State Building and Central Park in the same view.</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Comparing Observation Decks?</div>
+        <p>Not sure which deck is best for your itinerary? Read our <a href="nyc-observation-decks-compared.html">complete comparison of Edge vs Top of the Rock vs Empire State Building</a> before deciding.</p>
+      </div>
+
+      <!-- 12 MISTAKES -->
+      <h2 id="mistakes">12 Common Mistakes First-Time Visitors Make</h2>
+      <ol class="mistake-num-list">
+        <li><strong>Spending two hours in Times Square.</strong> See it, enjoy it, then move on. 30&ndash;45 minutes is plenty.</li>
+        <li><strong>Walking straight through Bryant Park.</strong> It&rsquo;s not a shortcut &mdash; it&rsquo;s one of Midtown&rsquo;s best public spaces. Sit down for ten minutes.</li>
+        <li><strong>Skipping the Library interior.</strong> The lion statues are famous. The inside is even better. Don&rsquo;t stop at the front steps.</li>
+        <li><strong>Treating Grand Central like a train station.</strong> Slow down. Look up. Visit the balconies. Find the Whispering Gallery.</li>
+        <li><strong>Expecting to go up the Chrysler Building.</strong> You can&rsquo;t &mdash; knowing that beforehand saves disappointment.</li>
+        <li><strong>Trying to visit every Fifth Avenue store.</strong> You&rsquo;ll run out of time long before you run out of stores. Choose one or two.</li>
+        <li><strong>Skipping St. Patrick&rsquo;s Cathedral.</strong> From outside it looks impressive. Inside it&rsquo;s unforgettable.</li>
+        <li><strong>Forgetting to reserve Top of the Rock.</strong> Sunset tickets frequently sell out. Book before your trip if it&rsquo;s on your itinerary.</li>
+        <li><strong>Visiting Rockefeller Center only at night.</strong> Daylight lets you appreciate the architecture, gardens, and public art. Evening brings the lights. If possible, experience both.</li>
+        <li><strong>Ending at the park entrance.</strong> Walk into Central Park. Even twenty minutes changes the ending completely.</li>
+        <li><strong>Wearing fashion shoes.</strong> This is a walking itinerary. Comfort beats style. Your feet will thank you.</li>
+        <li><strong>Looking straight ahead.</strong> Midtown rewards people who look up. The Chrysler Building, Grand Central, St. Patrick&rsquo;s Cathedral, and Rockefeller Center all reveal far more when you take your eyes off your phone.</li>
+      </ol>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Can you do this itinerary in one day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; it&rsquo;s specifically designed as a full-day self-guided walking itinerary. Allow 5&ndash;7 hours, or longer if you visit Top of the Rock or spend extra time shopping.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this route suitable for families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. The route is mostly flat, stroller-friendly, and includes several places to rest. Children particularly enjoy Bryant Park, Grand Central&rsquo;s Whispering Gallery, FAO Schwarz, the LEGO Store, and Central Park.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the route wheelchair accessible?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. All major attractions along this itinerary have accessible entrances and curb ramps. It&rsquo;s worth checking each attraction&rsquo;s official accessibility page before your visit, as elevator access or entrances may occasionally change due to maintenance.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I do this in reverse?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">You can, but I don&rsquo;t recommend it. Starting in Times Square and finishing in Central Park creates a much more natural progression, with the pace gradually slowing as the day goes on. Ending in Central Park is also a far more relaxing finish than ending in Times Square.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Top of the Rock worth adding?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If it&rsquo;s your first visit to New York, yes. It offers the best overall skyline views in Manhattan because the Empire State Building is visible in every photo. Remember to reserve tickets in advance, especially for a sunset slot.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best season for this walk?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Spring and fall offer the most comfortable weather and best walking conditions. December is magical because of the holiday decorations, but it&rsquo;s also by far the busiest time of year &mdash; allow significantly more time for each stop.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where are the restrooms along the route?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Bryant Park (best option in Midtown), the New York Public Library, Grand Central Terminal, and Rockefeller Center (Lower Concourse) all have reliable restroom facilities. Times Square has no permanent public restrooms in the plazas.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How much does this itinerary cost?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Almost nothing if you skip Top of the Rock and shopping. Every attraction on this route charges no admission &mdash; you&rsquo;ll only spend money on food, coffee, optional shopping, and the observation deck if you choose to visit.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top of the Rock: The Ultimate Guide (2026)</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Full Comparison</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan the Perfect NYC Itinerary (Complete 2026 Guide)</a></li>
+      <li><a href="realistic-nyc-bucket-list.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Realistic NYC Bucket List (5&ndash;7 Days)</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
