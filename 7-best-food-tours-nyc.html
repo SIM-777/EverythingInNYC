@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Food Tours in NYC: 7 Walking Tours Worth Booking (2026) | EverythingInNYC</title>
+<meta name="description" content="Looking for the best food tours in NYC? Discover the top-rated food tours in Manhattan and Brooklyn, including Chinatown, Greenwich Village, Chelsea Market, and more, with local tips on which tour is right for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Tour card */
+  .tour-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:48px 0;box-shadow:var(--shadow-card);
+  }
+  .tour-card .tc-head{
+    background:var(--navy);color:#fff;
+    padding:20px 24px;
+    display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;
+  }
+  .tour-card .tc-num{
+    font-family:var(--font-head);font-weight:800;font-size:26px;
+    color:var(--accent);flex:none;line-height:1;margin-top:2px;
+  }
+  .tour-card .tc-titles{flex:1;}
+  .tour-card .tc-titles h2{
+    color:#fff;font-size:22px;margin:0 0 6px;
+  }
+  .tour-card .tc-badge{
+    display:inline-block;font-size:11.5px;font-weight:700;
+    letter-spacing:0.05em;text-transform:uppercase;
+    background:rgba(255,193,7,0.2);color:var(--accent);
+    padding:4px 10px;border-radius:20px;
+  }
+  .tour-card .tc-body{padding:24px;}
+
+  /* Tour snapshot */
+  .tour-snapshot{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    background:rgba(15,23,42,0.03);border:1px solid var(--border);
+    border-radius:12px;padding:16px;margin:18px 0;
+  }
+  @media(min-width:500px){.tour-snapshot{grid-template-columns:repeat(4,1fr);}}
+  .tour-snapshot .ts-item{}
+  .tour-snapshot .ts-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:4px;
+  }
+  .tour-snapshot .ts-val{
+    font-family:var(--font-head);font-weight:800;
+    font-size:14px;color:var(--navy);line-height:1.3;
+  }
+
+  /* Pros / cons */
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+  @media(max-width:500px){.pros-cons{grid-template-columns:1fr;}}
+  .pc-col{border-radius:12px;padding:14px 16px;}
+  .pc-col.pros{background:rgba(22,163,74,0.06);border:1px solid rgba(22,163,74,0.25);}
+  .pc-col.cons{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.15);}
+  .pc-col h4{margin:0 0 10px;font-size:14.5px;}
+  .pc-col.pros h4{color:#15803D;}
+  .pc-col.cons h4{color:var(--error);}
+  .pc-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .pc-col ul li{font-size:14px;display:flex;align-items:flex-start;gap:8px;}
+  .pc-col.pros ul li::before{content:'Yes';font-size:11px;font-weight:700;background:rgba(22,163,74,0.15);color:#15803D;padding:1px 6px;border-radius:4px;flex:none;margin-top:2px;}
+  .pc-col.cons ul li::before{content:'Note';font-size:11px;font-weight:700;background:rgba(220,38,38,0.1);color:var(--error);padding:1px 6px;border-radius:4px;flex:none;margin-top:2px;}
+
+  /* Best for pills */
+  .best-for-list{
+    display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;
+    list-style:none;padding:0;
+  }
+  .best-for-list li{
+    font-size:13px;font-weight:600;
+    background:rgba(15,23,42,0.06);color:var(--navy);
+    padding:5px 12px;border-radius:20px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .best-for-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--success);flex:none;}
+
+  /* Book button row */
+  .book-row{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+    padding:18px 24px;
+    background:rgba(15,23,42,0.03);
+    border-top:1px solid var(--border);
+  }
+  .book-row .verdict{
+    font-size:15.5px;color:var(--text-secondary);
+    flex:1;font-style:italic;
+  }
+
+  /* Decision tree infographic */
+  .decision-tree{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius-card);padding:28px 24px;margin:32px 0;
+  }
+  .dt-title{
+    font-family:var(--font-head);font-weight:800;font-size:18px;
+    color:var(--navy);text-align:center;margin-bottom:6px;
+  }
+  .dt-sub{
+    font-size:14px;color:var(--text-secondary);
+    text-align:center;margin-bottom:24px;
+  }
+  .dt-grid{
+    display:grid;grid-template-columns:1fr;gap:10px;
+  }
+  @media(min-width:560px){.dt-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:900px){.dt-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .dt-card{
+    border:1.5px solid var(--border);border-radius:14px;
+    padding:14px 16px;display:flex;align-items:flex-start;gap:12px;
+  }
+  .dt-card .dt-icon{
+    width:38px;height:38px;border-radius:10px;
+    background:var(--navy);color:#fff;
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+    flex:none;text-align:center;line-height:1.2;
+  }
+  .dt-card .dt-if{
+    font-size:12px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.04em;color:var(--text-secondary);margin-bottom:4px;
+  }
+  .dt-card .dt-choose{
+    font-family:var(--font-head);font-weight:800;font-size:15px;
+    color:var(--navy);margin-bottom:3px;
+  }
+  .dt-card .dt-why{
+    font-size:13px;color:var(--text-secondary);
+  }
+
+  /* Recommendation cards (which tour section) */
+  .rec-cards{
+    display:grid;grid-template-columns:1fr;gap:12px;margin:24px 0;
+  }
+  @media(min-width:560px){.rec-cards{grid-template-columns:1fr 1fr;}}
+  .rec-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:16px 18px;
+  }
+  .rec-card .rc-for{
+    font-size:12px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:8px;
+  }
+  .rec-card .rc-tour{
+    font-family:var(--font-head);font-weight:800;font-size:16px;
+    color:var(--navy);margin-bottom:6px;
+  }
+  .rec-card p{font-size:14px;color:var(--text-secondary);margin:0;}
+
+  /* Hidden tip box */
+  .hidden-tip{
+    background:#FFF9E8;border-left:4px solid var(--accent);
+    border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0;
+  }
+  .hidden-tip .ht-label{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#92620A;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;
+  }
+  .hidden-tip p{font-size:15px;margin:0;}
+
+  /* Nearby chips */
+  .nearby-chips{
+    display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;
+    list-style:none;padding:0;
+  }
+  .nearby-chips li{
+    font-size:13.5px;background:var(--bg);border:1px solid var(--border);
+    border-radius:9px;padding:6px 12px;color:var(--text);
+  }
+
+  /* Before you book tips */
+  .book-tip{
+    display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:13px;padding:16px 18px;margin-bottom:10px;
+  }
+  .book-tip .bt-icon{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#fff;background:var(--navy);width:36px;height:36px;
+    border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .book-tip h4{margin:0 0 4px;font-size:16.5px;}
+  .book-tip p{font-size:15px;color:var(--text-secondary);margin:0;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Food Tours</span>
+      <h1>7 Best Food Tours in New York City (Tested &amp; Reviewed)</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 13 minute read</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="food-tour.png" alt="Best food tours in New York City">
+
+    <div class="article-body">
+      <p>New York City has more than 25,000 restaurants, representing cuisines from virtually every corner of the world. You could spend weeks eating your way across the five boroughs and still barely scratch the surface. That&rsquo;s exactly why I recommend taking a food tour &mdash; especially if it&rsquo;s your first visit.</p>
+      <p>A great food tour isn&rsquo;t just about tasting amazing dishes. It&rsquo;s one of the easiest ways to understand the neighborhoods that make New York unique. One minute you&rsquo;re eating handmade dumplings in Chinatown, the next you&rsquo;re hearing the story of the immigrants who helped shape the city, and before you know it you&rsquo;re discovering bakeries, pizza shops, and family-run businesses you would have walked straight past on your own. The best guides don&rsquo;t just tell you where to eat &mdash; they explain <em>why</em> that food belongs there.</p>
+      <p>I&rsquo;ve selected the tours below because they consistently combine excellent food, knowledgeable guides, and neighborhoods that are genuinely worth exploring.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Important Note</div>
+        <p>Tour routes, restaurant stops, prices, and availability can change. Always check the latest details before booking.</p>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <h2 id="comparison">Quick Comparison: Which NYC Food Tour Is Right for You?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:560px;">
+          <tr><th>Tour</th><th>Best For</th><th>Neighborhood</th><th>Duration</th><th>Walking</th></tr>
+          <tr><td>Chinatown &amp; Little Italy</td><td>First-time visitors</td><td>Lower Manhattan</td><td>~3 hrs</td><td>Easy</td></tr>
+          <tr><td>Greenwich Village Food Tour</td><td>Best variety</td><td>Greenwich Village</td><td>~3 hrs</td><td>Easy</td></tr>
+          <tr><td>Chelsea Market &amp; High Line</td><td>Foodies &amp; photographers</td><td>Chelsea</td><td>~3 hrs</td><td>Easy</td></tr>
+          <tr><td>Brownstone Brooklyn Bites</td><td>Local neighborhoods</td><td>Carroll Gardens &amp; Cobble Hill</td><td>~3 hrs</td><td>Easy</td></tr>
+          <tr><td>Lower East Side Food &amp; Culture</td><td>History lovers</td><td>Lower East Side</td><td>~3 hrs</td><td>Moderate</td></tr>
+          <tr><td>Mafia &amp; Local Food Tour</td><td>Unique experience</td><td>Little Italy &amp; East Village</td><td>~3 hrs</td><td>Easy</td></tr>
+          <tr><td>Hell&rsquo;s Kitchen Food Tour</td><td>International cuisine</td><td>Midtown West</td><td>~3 hrs</td><td>Easy</td></tr>
+        </table>
+      </div>
+
+      <!-- WHICH TOUR SECTION -->
+      <h2 id="which-tour">Which Food Tour Should You Choose?</h2>
+
+      <div class="rec-cards">
+        <div class="rec-card">
+          <div class="rc-for">First-Time Visitors</div>
+          <div class="rc-tour">Chinatown &amp; Little Italy Food Tour</div>
+          <p>Combines two of New York&rsquo;s most famous neighborhoods with classic dishes most visitors already want to try.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Best Overall Food Variety</div>
+          <div class="rc-tour">Greenwich Village Walking &amp; Food Tour</div>
+          <p>Ten tastings across several cuisines &mdash; one of the best-value tours if your main goal is simply to eat well.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Best Modern NYC Experience</div>
+          <div class="rc-tour">Chelsea Market &amp; High Line Food Tour</div>
+          <p>Perfect if you&rsquo;re already planning to visit Hudson Yards, Little Island, or the High Line.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Best Local Neighborhood</div>
+          <div class="rc-tour">Brownstone Brooklyn Bites</div>
+          <p>If you&rsquo;ve already seen Midtown and Lower Manhattan, this tour offers a completely different side of New York.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Best History</div>
+          <div class="rc-tour">Lower East Side Food &amp; Culture Tour</div>
+          <p>The neighborhood&rsquo;s immigrant history adds another layer to every stop.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Most Unique Tour</div>
+          <div class="rc-tour">Mafia &amp; Local Food Tour</div>
+          <p>Part true-crime story, part Italian feast.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rc-for">Best International Cuisine</div>
+          <div class="rc-tour">Hell&rsquo;s Kitchen Food Tour</div>
+          <p>A great choice if you want something beyond pizza and bagels.</p>
+        </div>
+      </div>
+
+      <!-- DECISION TREE INFOGRAPHIC -->
+      <div class="decision-tree">
+        <div class="dt-title">Which NYC Food Tour Is Right for You?</div>
+        <div class="dt-sub">Match your interests to the tour that fits best</div>
+        <div class="dt-grid">
+          <div class="dt-card">
+            <div class="dt-icon">History</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Lower East Side Tour</div>
+              <div class="dt-why">Immigrant stories behind every dish in one of NYC&rsquo;s most historic neighborhoods</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">Pizza &amp; Pasta</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Chinatown &amp; Little Italy</div>
+              <div class="dt-why">Classic Italian food alongside legendary Chinatown stops in one afternoon</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">Most Food</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Greenwich Village Tour</div>
+              <div class="dt-why">Ten tastings across multiple cuisines &mdash; the most generous tour on this list</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">Neigh&shy;borhood Charm</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Brownstone Brooklyn Bites</div>
+              <div class="dt-why">Tree-lined streets and locally owned businesses &mdash; a quieter, more local New York</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">Modern NYC</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Chelsea Market &amp; High Line</div>
+              <div class="dt-why">Combines the city&rsquo;s best food hall with elevated park views and modern architecture</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">Some&shy;thing Different</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Mafia &amp; Local Food Tour</div>
+              <div class="dt-why">True-crime stories from a retired NYPD officer over a full Italian sit-down meal</div>
+            </div>
+          </div>
+          <div class="dt-card">
+            <div class="dt-icon">World Flavors</div>
+            <div>
+              <div class="dt-if">If you want</div>
+              <div class="dt-choose">Hell&rsquo;s Kitchen Tour</div>
+              <div class="dt-why">Japanese, Mexican, American and more in one of Manhattan&rsquo;s most diverse restaurant streets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 1 ===== -->
+      <div class="tour-card" id="tour1">
+        <div class="tc-head">
+          <div class="tc-num">01</div>
+          <div class="tc-titles">
+            <h2>Chinatown &amp; Little Italy Food Tour</h2>
+            <span class="tc-badge">Best Overall for First-Time Visitors</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>If someone asked me to recommend just one food tour in New York, this would probably be it. Because it perfectly captures what makes NYC&rsquo;s food scene so special.</p>
+          <p>Within a few blocks, you&rsquo;ll experience two neighborhoods that helped shape the city&rsquo;s culinary identity. The contrast is part of the fun &mdash; you&rsquo;ll leave the busy streets of Chinatown, filled with bakeries, roast duck windows, and bustling markets, before crossing into Little Italy, where old-school Italian restaurants and pastry shops have welcomed visitors for generations.</p>
+          <p>Typical tastings often include fresh dim sum, handmade dumplings, classic New York-style pizza, Italian pastries, cannoli, and other seasonal specialties depending on the day&rsquo;s route. One thing I particularly like about this tour is that it mixes food with history &mdash; between tastings you&rsquo;ll learn how immigration shaped these neighborhoods and why so many iconic New York dishes originated here.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>First-time visitors</li>
+            <li>Families</li>
+            <li>Couples</li>
+            <li>Food lovers</li>
+            <li>Visitors with only a few days in NYC</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhoods</div><div class="ts-val">Chinatown &amp; Little Italy</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Chinese, Italian &amp; classic NYC</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Excellent introduction to New York food culture</li>
+                <li>Great balance between history and food</li>
+                <li>Plenty of tastings</li>
+                <li>Easy walking pace</li>
+                <li>Two iconic neighborhoods in one tour</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Weekends can feel busy</li>
+                <li>Arrive hungry &mdash; you&rsquo;ll eat more than expected</li>
+                <li>Some restaurant stops may change depending on availability</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Columbus Park</li><li>Canal Street shopping</li><li>City Hall Park</li>
+            <li>Brooklyn Bridge entrance</li><li>The Oculus</li><li>One World Trade Center</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">If you&rsquo;re visiting New York for the first time and only book one food tour, this is the one I&rsquo;d recommend.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Chinatown-and-Little-Italy-Food-Fest/d687-22264P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 2 ===== -->
+      <div class="tour-card" id="tour2">
+        <div class="tc-head">
+          <div class="tc-num">02</div>
+          <div class="tc-titles">
+            <h2>Greenwich Village Walking &amp; Food Tasting Tour</h2>
+            <span class="tc-badge">Best Variety of Tastings</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>Greenwich Village has always done things a little differently. Artists, writers, musicians, and countless cultural movements have called this neighborhood home over the years, and that creative spirit still shows up in its food scene.</p>
+          <p>This tour is ideal if you simply want to try as many different New York foods as possible. With around <strong>ten tastings</strong>, it&rsquo;s one of the most generous food tours on this list. Rather than focusing on a single cuisine, you&rsquo;ll sample everything from savory dumplings and artisan pizza to local desserts, including New York-style cheesecake.</p>
+          <p>The food alone is worth it, but what really makes this tour enjoyable is wandering through quiet tree-lined streets that feel completely different from Midtown Manhattan. You&rsquo;ll also pass historic landmarks, hidden courtyards, jazz clubs, and charming brownstones that many visitors never discover on their own.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>Foodies</li>
+            <li>Couples</li>
+            <li>Solo travelers</li>
+            <li>Repeat NYC visitors</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhood</div><div class="ts-val">Greenwich Village</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Mixed cuisines</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Excellent variety of food</li>
+                <li>Beautiful neighborhood</li>
+                <li>Plenty of hidden streets</li>
+                <li>Relaxed pace</li>
+                <li>One of Manhattan&rsquo;s prettiest walking areas</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Not every tasting is large, but together they make a satisfying meal</li>
+                <li>Comfortable shoes recommended &mdash; you&rsquo;ll want to explore after</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Washington Square Park</li><li>Comedy Cellar</li><li>Bleecker Street</li>
+            <li>SoHo</li><li>West Village</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">If you love trying lots of different foods rather than focusing on one cuisine, this is arguably the best value food tour in New York.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Greenwich-Village-Food-Tour/d687-9510P2?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 3 ===== -->
+      <div class="tour-card" id="tour3">
+        <div class="tc-head">
+          <div class="tc-num">03</div>
+          <div class="tc-titles">
+            <h2>Chelsea Market &amp; High Line Food Tour</h2>
+            <span class="tc-badge">Best for Foodies and Photographers</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>Few places showcase modern New York quite like Chelsea. This tour combines one of the city&rsquo;s most famous food halls with one of its most popular urban parks, making it an excellent choice if you want more than just great food.</p>
+          <p>Chelsea Market is packed with independent vendors serving everything from fresh seafood and tacos to artisan donuts and handcrafted desserts. Since the selection changes over time, each visit can feel slightly different. After exploring the market, you&rsquo;ll continue onto the High Line &mdash; a beautifully landscaped elevated park built on a former railway line. Along the way you&rsquo;ll enjoy views of the Hudson River, striking modern architecture, public art installations, and the ever-changing Manhattan skyline.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>Food lovers</li>
+            <li>Photographers</li>
+            <li>First-time visitors</li>
+            <li>Architecture enthusiasts</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhood</div><div class="ts-val">Chelsea</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Modern NYC cuisine</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Combines sightseeing with food</li>
+                <li>Excellent photo opportunities</li>
+                <li>One of NYC&rsquo;s best food halls</li>
+                <li>Beautiful High Line walk</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Chelsea Market gets busy during weekends and lunchtime</li>
+                <li>Expect crowds around the High Line in peak tourist season</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Little Island</li><li>Pier 57 Rooftop Park</li><li>Hudson Yards</li>
+            <li>The Vessel (exterior)</li><li>Whitney Museum of American Art</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">If you enjoy discovering modern neighborhoods as much as eating, this tour offers one of the best combinations of sightseeing and food in New York.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Chelsea-Market-Meatpacking-and-High-Line-Food-Tour/d687-8501P8?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 4 ===== -->
+      <div class="tour-card" id="tour4">
+        <div class="tc-head">
+          <div class="tc-num">04</div>
+          <div class="tc-titles">
+            <h2>Brownstone Brooklyn Bites</h2>
+            <span class="tc-badge">Best for Exploring a Local NYC Neighborhood</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>Most first-time visitors spend nearly all their time in Manhattan. That&rsquo;s understandable &mdash; but if you never cross the East River, you&rsquo;re only seeing part of what makes New York special.</p>
+          <p>This tour takes you through <strong>Carroll Gardens</strong> and <strong>Cobble Hill</strong>, two of Brooklyn&rsquo;s most charming neighborhoods. Instead of skyscrapers and flashing billboards, you&rsquo;ll find tree-lined streets, beautiful 19th-century brownstones, family-owned restaurants, and a noticeably slower pace of life. The food reflects Brooklyn&rsquo;s diverse communities &mdash; depending on the day&rsquo;s route, expect a mix of classic Italian specialties, fresh baked goods, Middle Eastern pastries, and homemade ice cream from long-established local businesses.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>Repeat NYC visitors</li>
+            <li>Couples</li>
+            <li>Neighborhood lovers</li>
+            <li>Families</li>
+            <li>Visitors wanting to escape Midtown crowds</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhoods</div><div class="ts-val">Carroll Gardens &amp; Cobble Hill</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Italian, Mediterranean &amp; Brooklyn favorites</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Quieter, more authentic neighborhood atmosphere</li>
+                <li>Beautiful brownstone-lined streets</li>
+                <li>Excellent variety of locally owned businesses</li>
+                <li>Relaxed pace with time to enjoy each stop</li>
+                <li>A refreshing break from Manhattan&rsquo;s busiest tourist areas</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Less about iconic NYC landmarks and more about discovering local neighborhoods</li>
+                <li>Plan extra time afterward &mdash; you&rsquo;ll want to wander on your own</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hidden-tip">
+            <div class="ht-label">Hidden Tip</div>
+            <p>Many visitors head straight back to Manhattan after the tour. Instead, spend another 20&ndash;30 minutes walking through the surrounding residential streets. Some of Brooklyn&rsquo;s most beautiful architecture isn&rsquo;t on the main roads, and simply wandering a few extra blocks often becomes a highlight of the afternoon.</p>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Brooklyn Bridge Park</li><li>Brooklyn Heights Promenade</li><li>Jane&rsquo;s Carousel</li>
+            <li>DUMBO</li><li>Empire Fulton Ferry Park</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">It&rsquo;s relaxed, incredibly charming, and one of the easiest ways to discover why so many visitors fall in love with Brooklyn.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/Brooklyn/New-York-3-Hour-Afternoon-Walking-Food-and-Drink-Tour-in-Brooklyn/d22371-5713P118?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 5 ===== -->
+      <div class="tour-card" id="tour5">
+        <div class="tc-head">
+          <div class="tc-num">05</div>
+          <div class="tc-titles">
+            <h2>Taste the American Dream: Lower East Side Food &amp; Culture Tour</h2>
+            <span class="tc-badge">Best for History Lovers</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>If food tells the story of New York, nowhere tells it better than the Lower East Side. For generations, immigrants from around the world arrived here carrying recipes, traditions, and cultures that helped shape the city we know today. This tour brings those stories to life through the neighborhood&rsquo;s food.</p>
+          <p>Rather than focusing on a single cuisine, you&rsquo;ll sample dishes influenced by several immigrant communities that have called the Lower East Side home over the decades. Typical tastings often include traditional knishes, dumplings, empanadas, local baked goods, and other neighborhood specialties depending on the route. Each stop adds another chapter to the area&rsquo;s history, making the experience feel more like a cultural journey than simply a food crawl.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>History lovers</li>
+            <li>Culture enthusiasts</li>
+            <li>Solo travelers</li>
+            <li>Families with older children</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Moderate</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhood</div><div class="ts-val">Lower East Side</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Jewish, Chinese, Latin American &amp; immigrant cuisine</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Excellent storytelling</li>
+                <li>One of NYC&rsquo;s most historic neighborhoods</li>
+                <li>Wide variety of cuisines</li>
+                <li>Smaller local businesses</li>
+                <li>Food with genuine historical context</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Fewer Instagram moments than some other tours</li>
+                <li>The emphasis is just as much on history as it is on food</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hidden-tip">
+            <div class="ht-label">Hidden Tip</div>
+            <p>Many visitors finish the tour and leave immediately. If you still have energy, continue walking toward the <strong>Essex Market</strong> area, where you&rsquo;ll find even more local food vendors and independent shops.</p>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Tenement Museum</li><li>Katz&rsquo;s Delicatessen</li><li>Essex Market</li>
+            <li>Seward Park</li><li>Chinatown</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">If you enjoy understanding <em>why</em> New York&rsquo;s food scene became so famous &mdash; not just tasting it &mdash; this is one of the most rewarding tours in the city.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Lower-East-Side-Food-and-Culture-Tour/d687-5713SUNB?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 6 ===== -->
+      <div class="tour-card" id="tour6">
+        <div class="tc-head">
+          <div class="tc-num">06</div>
+          <div class="tc-titles">
+            <h2>Mafia &amp; Local Food Tour with a Retired NYPD Guide</h2>
+            <span class="tc-badge">Most Unique Food Tour in NYC</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>Most food tours tell stories about restaurants. This one tells stories about organized crime. That&rsquo;s what makes it so memorable.</p>
+          <p>Led by a retired NYPD officer, this tour combines true crime, neighborhood history, and a full Italian meal while exploring Little Italy and parts of the East Village. You&rsquo;ll hear stories about notorious mob figures, historic hangouts, famous investigations, and the transformation of neighborhoods that were once closely associated with organized crime.</p>
+          <p>Along the way you&rsquo;ll enjoy a generous Italian meal that typically includes spaghetti, eggplant rollatini, Italian bread, cannoli, and other traditional Italian dishes. Unlike many food tours where you&rsquo;re sampling small portions from multiple restaurants, this one feels closer to sitting down for a complete dinner while hearing fascinating stories between courses.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>History lovers</li>
+            <li>Couples</li>
+            <li>Adults</li>
+            <li>Repeat visitors</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhoods</div><div class="ts-val">Little Italy &amp; East Village</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">Traditional Italian</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Completely different from typical food tours</li>
+                <li>Excellent storytelling</li>
+                <li>Full sit-down meal</li>
+                <li>Fascinating neighborhood history</li>
+                <li>Entertaining even if you&rsquo;re not a true-crime fan</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Better suited to adults than young children</li>
+                <li>This experience focuses equally on storytelling, not just food stops</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hidden-tip">
+            <div class="ht-label">Hidden Tip</div>
+            <p>If you&rsquo;ve watched classic mafia films like <em>The Godfather</em> or <em>Goodfellas</em>, you&rsquo;ll appreciate many of the neighborhood references and historical locations even more.</p>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Nolita</li><li>St. Patrick&rsquo;s Old Cathedral</li><li>Bowery</li>
+            <li>East Village</li><li>Washington Square Park</li>
+          </ul>
+        </div>
+        <div class="book-row">
+          <p class="verdict">It feels more like a walking history show with excellent Italian food than a traditional tasting tour &mdash; and that&rsquo;s exactly why so many people enjoy it.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Gangster-Experience-guided-by-a-Retired-NYPD-Police-Officer/d687-241402P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- ===== TOUR 7 ===== -->
+      <div class="tour-card" id="tour7">
+        <div class="tc-head">
+          <div class="tc-num">07</div>
+          <div class="tc-titles">
+            <h2>Hell&rsquo;s Kitchen Guided Food Tour</h2>
+            <span class="tc-badge">Best for International Cuisine</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <p>Despite the name, Hell&rsquo;s Kitchen is one of Manhattan&rsquo;s most exciting neighborhoods for food. Just west of Times Square, this area has transformed from its rough-and-tumble reputation into one of the city&rsquo;s most diverse dining destinations. Walking just a few blocks, you&rsquo;ll pass Japanese ramen shops, authentic Mexican taquerias, classic New York diners, Italian trattorias, and bakeries representing cuisines from around the world.</p>
+          <p>Rather than focusing on one culture, you&rsquo;ll experience the diversity that defines modern New York. Depending on the day&rsquo;s route, tastings may include Japanese specialties, Mexican street food, classic American comfort food, desserts, and other neighborhood favorites. The location also makes it incredibly convenient if you&rsquo;re staying in Midtown or planning to see a Broadway show afterward.</p>
+
+          <h3 style="font-size:17px;margin-top:20px;">Best For</h3>
+          <ul class="best-for-list">
+            <li>First-time visitors</li>
+            <li>International food lovers</li>
+            <li>Broadway visitors</li>
+            <li>Families</li>
+            <li>Visitors staying near Times Square</li>
+          </ul>
+
+          <div class="tour-snapshot">
+            <div class="ts-item"><div class="ts-label">Duration</div><div class="ts-val">~3 hours</div></div>
+            <div class="ts-item"><div class="ts-label">Walking</div><div class="ts-val">Easy</div></div>
+            <div class="ts-item"><div class="ts-label">Neighborhood</div><div class="ts-val">Hell&rsquo;s Kitchen</div></div>
+            <div class="ts-item"><div class="ts-label">Food Style</div><div class="ts-val">International cuisine</div></div>
+          </div>
+
+          <div class="pros-cons">
+            <div class="pc-col pros">
+              <h4>Things I Like</h4>
+              <ul>
+                <li>Excellent variety of cuisines</li>
+                <li>Very convenient Midtown location</li>
+                <li>Easy walking</li>
+                <li>Great combination of history and food</li>
+                <li>Perfect before an evening Broadway show</li>
+              </ul>
+            </div>
+            <div class="pc-col cons">
+              <h4>Things to Consider</h4>
+              <ul>
+                <li>Some restaurants can be busy during weekends</li>
+                <li>If you&rsquo;re looking specifically for bagels or pizza, another tour may suit better</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hidden-tip">
+            <div class="ht-label">Hidden Tip</div>
+            <p>If your schedule allows, book an afternoon tour and pair it with a Broadway show in the evening. You&rsquo;ll already be in the neighborhood, and you won&rsquo;t need to rush back across Manhattan for dinner.</p>
+          </div>
+
+          <h3 style="font-size:17px;margin-top:18px;">Nearby Attractions</h3>
+          <ul class="nearby-chips">
+            <li>Times Square</li><li>Broadway theaters</li><li>Hudson Yards</li>
+            <li>Intrepid Sea, Air &amp; Space Museum</li><li>The Edge Observation Deck</li>
+          </ul>
+
+          <div class="callout callout-local" style="margin-top:18px;">
+            <div class="callout-title">Planning to Visit an Observation Deck Too?</div>
+            <p>Since you&rsquo;re already in Midtown after this tour, consider combining it with a visit to an observation deck. Read our <a href="top-of-the-rock-review.html">complete Top of the Rock guide</a> or our <a href="nyc-observation-decks-compared.html">full observation deck comparison</a> to decide which one is right for your trip.</p>
+          </div>
+        </div>
+        <div class="book-row">
+          <p class="verdict">If you&rsquo;re looking for the widest variety of international flavors without traveling across multiple neighborhoods, this is one of the best choices in New York.</p>
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Hells-Kitchen-Food-Tour/d687-44209P2?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+        </div>
+      </div>
+
+      <!-- BEFORE YOU BOOK -->
+      <h2 id="before-you-book">Before You Book a Food Tour</h2>
+      <p>A few simple tips can make the experience much more enjoyable.</p>
+
+      <div class="book-tip">
+        <div class="bt-icon">1</div>
+        <div><h4>Arrive Hungry</h4><p>Most tours provide enough tastings to replace lunch or dinner, so a light breakfast or snack beforehand is usually all you&rsquo;ll need.</p></div>
+      </div>
+      <div class="book-tip">
+        <div class="bt-icon">2</div>
+        <div><h4>Book Early</h4><p>The most popular tours &mdash; especially those in Chinatown, Greenwich Village, and Chelsea &mdash; often sell out during spring, fall, and the holiday season. Reserve your spot well in advance if you&rsquo;re traveling during peak months.</p></div>
+      </div>
+      <div class="book-tip">
+        <div class="bt-icon">3</div>
+        <div><h4>Wear Comfortable Shoes</h4><p>Even though these are food tours, you&rsquo;ll still spend several hours walking through city streets. Comfortable footwear will make the experience far more enjoyable.</p></div>
+      </div>
+      <div class="book-tip">
+        <div class="bt-icon">4</div>
+        <div><h4>Let the Operator Know About Dietary Restrictions</h4><p>Many tours can accommodate vegetarian or certain dietary requirements with advance notice, but options vary by operator and restaurant. Check the latest details before booking and contact the tour provider if you have allergies or specific dietary needs.</p></div>
+      </div>
+      <div class="book-tip">
+        <div class="bt-icon">5</div>
+        <div><h4>Bring Water</h4><p>Most tastings are savory, and you&rsquo;ll be walking between stops. A reusable water bottle is a good idea, especially during summer.</p></div>
+      </div>
+      <div class="book-tip">
+        <div class="bt-icon">6</div>
+        <div><h4>Check the Latest Information</h4><p>Tour routes, restaurant partners, prices, departure times, and inclusions can change throughout the year. Always review the latest information before booking.</p></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL COMPARISON -->
+      <h2 id="final-comparison">Final Comparison</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>If You Want...</th><th>My Recommendation</th></tr>
+          <tr><td>Best Overall</td><td>Chinatown &amp; Little Italy Food Tour</td></tr>
+          <tr><td>Best Variety</td><td>Greenwich Village Food Tour</td></tr>
+          <tr><td>Best Sightseeing + Food</td><td>Chelsea Market &amp; High Line</td></tr>
+          <tr><td>Best Local Neighborhood</td><td>Brownstone Brooklyn Bites</td></tr>
+          <tr><td>Best History</td><td>Lower East Side Food &amp; Culture</td></tr>
+          <tr><td>Most Unique Experience</td><td>Mafia &amp; Local Food Tour</td></tr>
+          <tr><td>Best International Cuisine</td><td>Hell&rsquo;s Kitchen Food Tour</td></tr>
+        </table>
+      </div>
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Are NYC food tours worth it?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely &mdash; especially if it&rsquo;s your first visit. A good food tour combines local history, neighborhood exploration, and multiple restaurant stops into one experience. Instead of spending hours researching where to eat, you&rsquo;ll be guided to places that have earned loyal followings over many years.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Will I get enough food?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">In most cases, yes. These tours are designed to replace a meal rather than simply offer a few samples. Arriving hungry is highly recommended.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which tour is best for first-time visitors?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The Chinatown &amp; Little Italy Food Tour is the top recommendation. It combines two iconic neighborhoods, a wide variety of food, and fascinating local history in a single afternoon.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which tour has the most food?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The Greenwich Village Walking &amp; Food Tasting Tour stands out with around ten tastings, making it one of the most generous options on this list.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which tour is best for families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The Chinatown &amp; Little Italy and Hell&rsquo;s Kitchen tours are generally the easiest choices for families thanks to their relaxed pace and broad variety of foods.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I tip the guide?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Tips are typically not included in the tour price and are appreciated if you enjoyed the experience. Check the booking page for the latest guidance on gratuities.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="greenwich-village-food-tour.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is This the Best Food Tour in NYC? My Greenwich Village Experience</a></li>
+      <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top of the Rock Observation Deck: The Ultimate Guide</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Ultimate Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="realistic-nyc-bucket-list.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Realistic NYC Bucket List (5&ndash;7 Days)</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How I Saved Money on My NYC Trip Without Missing Anything</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
