@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Weekend Getaways from NYC: 10 Amazing Escapes for Every Traveler | EverythingInNYC</title>
+<meta name="description" content="The best weekend getaways from New York City — Cold Spring, Beacon, Newport, Cape May, Montauk, the Berkshires, and more. Honest advice on timing, transportation, and what actually works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Destination card */
+  .dest-card{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:52px 0;box-shadow:var(--shadow-card);
+  }
+  .dest-card .dc-head{
+    background:var(--navy);color:#fff;
+    padding:20px 26px;
+    display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;
+  }
+  .dest-num{
+    font-family:var(--font-head);font-weight:800;font-size:28px;
+    color:var(--accent);flex:none;line-height:1;margin-top:2px;
+  }
+  .dc-titles{flex:1;}
+  .dc-titles h2{color:#fff;font-size:22px;margin:0 0 6px;line-height:1.2;scroll-margin-top:90px;}
+  .dc-badge{
+    display:inline-block;font-size:11.5px;font-weight:700;
+    letter-spacing:0.05em;text-transform:uppercase;
+    background:rgba(255,193,7,0.22);color:var(--accent);
+    padding:4px 11px;border-radius:20px;
+  }
+  .dest-card .dc-body{padding:24px 26px;}
+
+  /* Destination image */
+  .dest-img{
+    width:100%;max-height:360px;object-fit:cover;
+    border-radius:12px;margin-bottom:22px;display:block;
+  }
+  /* No-image placeholder */
+  .dest-no-img{
+    background:linear-gradient(135deg,rgba(15,23,42,0.06) 0%,rgba(15,23,42,0.02) 100%);
+    border:1px solid var(--border);border-radius:12px;
+    padding:20px 22px;margin-bottom:22px;
+  }
+  .dest-no-img .ni-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:4px;
+  }
+  .dest-no-img .ni-val{
+    font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--navy);
+  }
+
+  /* Stats grid */
+  .dest-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+    margin-bottom:22px;
+  }
+  @media(min-width:520px){.dest-stats{grid-template-columns:repeat(6,1fr);}}
+  .ds-item .ds-label{
+    font-size:10.5px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:4px;
+  }
+  .ds-item .ds-val{
+    font-family:var(--font-head);font-weight:800;font-size:13.5px;
+    color:var(--navy);line-height:1.3;
+  }
+
+  /* Section headings inside card */
+  .dc-section{margin-top:20px;}
+  .dc-section h3{
+    font-size:16px;font-family:var(--font-head);font-weight:800;
+    color:var(--navy);margin:0 0 10px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .dc-section h3::before{
+    content:'';width:3px;height:16px;
+    background:var(--accent);border-radius:2px;flex:none;
+  }
+
+  /* Two col content boxes */
+  .two-col{display:grid;grid-template-columns:1fr;gap:12px;margin:12px 0;}
+  @media(min-width:560px){.two-col{grid-template-columns:1fr 1fr;}}
+  .content-box{
+    background:rgba(15,23,42,0.03);border:1px solid var(--border);
+    border-radius:12px;padding:14px 16px;
+  }
+  .content-box h4{margin:0 0 10px;font-size:15px;color:var(--navy);}
+  .content-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .content-box ul li{font-size:14.5px;display:flex;align-items:flex-start;gap:8px;}
+  .content-box ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;margin-top:7px;}
+  .content-box.green{border-color:rgba(22,163,74,0.25);background:rgba(22,163,74,0.04);}
+  .content-box.green h4{color:#15803D;}
+  .content-box.red{border-color:rgba(220,38,38,0.2);background:rgba(220,38,38,0.03);}
+  .content-box.red h4{color:var(--error);}
+
+  /* Weekend itinerary */
+  .weekend-plan{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+  .day-block{
+    display:grid;grid-template-columns:90px 1fr;gap:16px;
+    padding:12px 0;border-bottom:1px solid var(--border);
+    align-items:start;
+  }
+  .day-block:last-child{border-bottom:none;padding-bottom:0;}
+  .day-block .day-label{
+    font-family:var(--font-head);font-weight:800;font-size:12.5px;
+    color:var(--accent-ink);background:rgba(255,193,7,0.2);
+    padding:5px 8px;border-radius:8px;text-align:center;line-height:1.3;
+  }
+  .day-block .day-content{font-size:15px;color:var(--text);}
+
+  /* Local tips */
+  .tips-list{list-style:none;padding:0;margin:12px 0;display:flex;flex-direction:column;gap:8px;}
+  .tips-list li{
+    display:flex;align-items:flex-start;gap:10px;font-size:15px;
+  }
+  .tips-list li::before{
+    content:'Tip';font-size:11px;font-weight:700;
+    background:rgba(37,99,235,0.1);color:var(--info);
+    padding:2px 7px;border-radius:4px;flex:none;margin-top:2px;white-space:nowrap;
+  }
+
+  /* Worth it verdict */
+  .verdict-row{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    padding:16px 26px;
+    background:rgba(15,23,42,0.03);border-top:1px solid var(--border);
+  }
+  .verdict-label{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    letter-spacing:0.04em;text-transform:uppercase;color:var(--navy);
+    flex:none;
+  }
+  .verdict-row p{font-size:15.5px;color:var(--text-secondary);margin:0;flex:1;font-style:italic;}
+
+  /* Car needed pill */
+  .car-yes{color:var(--error);font-weight:700;}
+  .car-no{color:var(--success);font-weight:700;}
+
+  /* Section image */
+  .section-img{margin:22px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:380px;object-fit:cover;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+  /* Decision table */
+  .dec-table th{background:var(--navy-soft);color:#fff;}
+
+  /* Final recs */
+  .recs-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0;}
+  @media(min-width:560px){.recs-grid{grid-template-columns:1fr 1fr;}}
+  .rec-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:16px 18px;
+  }
+  .rec-card .rc-icon{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:var(--navy);text-transform:uppercase;letter-spacing:0.04em;
+    margin-bottom:8px;
+  }
+  .rec-card .rc-dest{
+    font-family:var(--font-head);font-weight:800;font-size:17px;
+    color:var(--navy);margin-bottom:4px;
+  }
+  .rec-card .rc-alt{font-size:13.5px;color:var(--text-secondary);}
+
+  /* Mistakes */
+  .mistake-item{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-left:3px solid var(--error);
+    border-radius:0 12px 12px 0;
+    padding:14px 18px;margin-bottom:10px;
+  }
+  .mistake-item h4{margin:0 0 5px;font-size:16.5px;color:var(--navy);}
+  .mistake-item p{font-size:15px;color:var(--text-secondary);margin:0;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Weekend Getaways</span>
+      <h1>Best Weekend Getaways from NYC: 10 Amazing Escapes for Every Type of Traveler</h1>
+      <div class="article-meta">
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 18 minute read</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://cdn.sanity.io/images/nxpteyfv/media-studio/47210e41dbfb7acdfea9c4bd322fcebb62f621a5-3000x2000.jpg" alt="Weekend getaway from New York City — Hudson Valley landscape">
+
+    <div class="article-body">
+      <p>New York City is the greatest city in the world. It&rsquo;s also relentless. After enough subway delays, $22 cocktails, and weekends where you somehow didn&rsquo;t leave a 10-block radius, the urge to flee becomes less of a suggestion and more of a biological need.</p>
+      <p>The good news: you&rsquo;re surrounded by some of the best weekend escapes on the East Coast. Within a tank of gas or a comfortable train ride, you can trade Manhattan for the Hudson River, the Jersey Shore, the Berkshires, or a Rhode Island harbor. The variety is staggering.</p>
+      <p>The problem isn&rsquo;t finding a destination &mdash; it&rsquo;s finding the <em>right</em> destination for <em>your</em> kind of weekend. That&rsquo;s what this guide is for. Every destination here is based on what actually works &mdash; the transportation logistics, the timing, the common traps people fall into, and the experiences that consistently make travelers want to come back.</p>
+
+      <!-- COMPARISON TABLE -->
+      <h2 id="comparison">Quick Comparison: Best Weekend Getaways from NYC</h2>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/71/64/5c/my-highest-point.jpg?w=1400&h=800&s=1" alt="Hudson Valley view from Bull Hill, Cold Spring">
+        <div class="cap">Cold Spring&rsquo;s Bull Hill trail &mdash; one of the most rewarding no-car day trips within 90 minutes of Manhattan.</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:680px;font-size:13.5px;">
+          <tr><th>Destination</th><th>Drive/Train</th><th>Best For</th><th>Car?</th><th>Budget</th><th>Best Season</th></tr>
+          <tr><td><strong>Cold Spring, NY</strong></td><td>1h 15m train</td><td>Hikers, couples, day-trippers</td><td>No</td><td>$</td><td>Spring&ndash;Fall</td></tr>
+          <tr><td><strong>Beacon, NY</strong></td><td>1h 30m train</td><td>Art lovers, foodies, culture</td><td>No</td><td>$$</td><td>Spring&ndash;Fall</td></tr>
+          <tr><td><strong>Hudson, NY</strong></td><td>2h train</td><td>Antique hunters, creatives</td><td>No/Car+</td><td>$$</td><td>Any season</td></tr>
+          <tr><td><strong>Woodstock, NY</strong></td><td>2.5h drive</td><td>Hikers, music lovers, creatives</td><td>Yes</td><td>$$</td><td>Spring&ndash;Fall</td></tr>
+          <tr><td><strong>Cape May, NJ</strong></td><td>2.5&ndash;3h drive</td><td>Couples, families, beach + charm</td><td>Yes</td><td>$$&ndash;$$$</td><td>Sept&ndash;Oct</td></tr>
+          <tr><td><strong>Montauk, NY</strong></td><td>3&ndash;3.5h / Jitney</td><td>Surfers, anglers, beach lovers</td><td>Yes</td><td>$$&ndash;$$$</td><td>May&ndash;Jun, Sept&ndash;Oct</td></tr>
+          <tr><td><strong>The Hamptons</strong></td><td>2&ndash;2.5h / Jitney</td><td>Fine dining, wine, &ldquo;summering&rdquo;</td><td>Yes</td><td>$$$$</td><td>Shoulder season</td></tr>
+          <tr><td><strong>Newport, RI</strong></td><td>2.5&ndash;3h drive</td><td>Couples, mansion fans, foodies</td><td>Yes</td><td>$$$</td><td>Sept&ndash;Oct</td></tr>
+          <tr><td><strong>The Berkshires, MA</strong></td><td>2.5&ndash;3h drive</td><td>Music lovers, art, foliage</td><td>Yes</td><td>$$&ndash;$$$</td><td>Summer + Fall</td></tr>
+          <tr><td><strong>Mystic, CT</strong></td><td>2h drive/train</td><td>Families, seafood, history</td><td>No/Car+</td><td>$$</td><td>Summer&ndash;Fall</td></tr>
+          <tr><td><strong>New Hope, PA</strong></td><td>1.5&ndash;2h drive</td><td>Couples, LGBTQ+, cyclists</td><td>Yes</td><td>$$</td><td>Spring + Fall</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Budget key: $ = under $150/night &nbsp;&middot;&nbsp; $$ = $150&ndash;$300 &nbsp;&middot;&nbsp; $$$ = $300&ndash;$500 &nbsp;&middot;&nbsp; $$$$ = $500+</p>
+
+      <!-- DECISION GUIDE -->
+      <h2 id="decision">Find Your Perfect Weekend Getaway</h2>
+      <p>Not sure where to start? Use this decision guide.</p>
+      <div class="table-wrap">
+        <table class="data-table dec-table" style="min-width:360px;">
+          <tr><th>If you want&hellip;</th><th>Go to&hellip;</th></tr>
+          <tr><td>No car, easy train, hiking</td><td><strong>Cold Spring</strong></td></tr>
+          <tr><td>No car, art + great food</td><td><strong>Beacon</strong></td></tr>
+          <tr><td>Antiques + creative energy</td><td><strong>Hudson</strong></td></tr>
+          <tr><td>Mountains, hiking, music</td><td><strong>Woodstock / Catskills</strong></td></tr>
+          <tr><td>Victorian beach town, charm</td><td><strong>Cape May</strong></td></tr>
+          <tr><td>Surf, lighthouse, fishing village</td><td><strong>Montauk</strong></td></tr>
+          <tr><td>See-and-be-seen summer scene</td><td><strong>The Hamptons</strong></td></tr>
+          <tr><td>Gilded Age mansions + Cliff Walk</td><td><strong>Newport</strong></td></tr>
+          <tr><td>Classical music + fall foliage</td><td><strong>The Berkshires</strong></td></tr>
+          <tr><td>Lobster, drawbridge, families</td><td><strong>Mystic</strong></td></tr>
+          <tr><td>Covered bridges, bikes, LGBTQ+</td><td><strong>New Hope, PA</strong></td></tr>
+        </table>
+      </div>
+
+      <!-- ===== DESTINATION 1 ===== -->
+      <div class="dest-card" id="cold-spring">
+        <div class="dc-head">
+          <div class="dest-num">01</div>
+          <div class="dc-titles">
+            <h2>Cold Spring, NY</h2>
+            <span class="dc-badge">Best Weekend Getaway Without a Car</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">50 mi north</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">1h 15m Metro-North</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-no">No</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Hikers, couples</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">Day trip or 1 night</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Spring&ndash;Fall</div></div>
+          </div>
+
+          <p>Cold Spring is the best no-car escape from New York City, and it&rsquo;s not particularly close. The Metro-North drops you directly into a village that sits at the deepest point of the Hudson River, with West Point visible across the water and trailheads a short walk from the platform. What makes it work is the combination: serious hiking options for every level, a genuinely walkable Main Street with good food, and an atmosphere that feels like a real town rather than a weekend destination built for tourists.</p>
+          <p>You can have berry scones at the Cold Spring Coffeehouse before 9 AM, be on a trail with river views by 10 AM, and eating mussels at a French bistro by 7 PM &mdash; all without ever needing a car.</p>
+
+          <div class="dc-section">
+            <h3>What Makes It Special</h3>
+            <div class="content-box green">
+              <ul>
+                <li>Weekend trains from Grand Central stop directly at <strong>Breakneck Ridge Station</strong> &mdash; no car needed to reach the trailhead</li>
+                <li><strong>Bull Hill / Mount Taurus</strong> trail (4.6 miles, moderate) rewards with sweeping Hudson River, West Point, and Storm King Mountain views</li>
+                <li><strong>Cornish Estate Trail</strong> (1.8 miles, easy) winds through dramatic ruins of a 1910 stone estate &mdash; fireplaces, swimming pool, greenhouse</li>
+                <li>Hudson Highlands State Park connects Cold Spring to Beacon &mdash; a point-to-point hiking day by train is genuinely possible</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="content-box">
+              <h4>Things Visitors Don&rsquo;t Expect</h4>
+              <ul>
+                <li>Weekend morning trains are packed &mdash; board at Grand Central, not 125th Street</li>
+                <li>GPS trails to Lake Surprise Road are a trap &mdash; the access road is private and gated. Use Route 9D</li>
+                <li>Ticks are a real consideration in spring and fall. Check after every hike</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Arriving at 11 AM on a weekend &mdash; the 7:19 AM train from Grand Central gets you there before the crowds</li>
+                <li>Skipping Hudson Hil&rsquo;s for breakfast &mdash; it always has a wait but it&rsquo;s worth it</li>
+                <li>Treating it as a quick pit stop &mdash; pick one trail, eat a proper lunch, wander Main Street</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Late train, check into a B&amp;B on Main Street, dinner at Le Bouchon (outdoor seating, six varieties of mussels).</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Early morning hike &mdash; Bull Hill for views or Cornish Estate for atmosphere. Lunch at Cold Spring Cheese Shop. Afternoon on Main Street antiques and bookshops. Evening at The Depot by the wood-burning fireplace.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Morning coffee at Cold Spring Coffeehouse. Walk to Foundry Dock Park for river views. Take the 10 AM train back.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best coffee:</strong> Cold Spring Coffeehouse, one minute from the station</li>
+              <li><strong>Best picnic:</strong> Cold Spring Cheese Shop charcuterie + waterfront bench at Foundry Dock Park</li>
+              <li><strong>Best easy hike:</strong> Little Stony Point Loop &mdash; 1.3 miles, almost no elevation, ends at the Hudson&rsquo;s edge</li>
+              <li><strong>Quietest time:</strong> Thursday or Friday arrival; by 10 AM Saturday the trains are packed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Absolutely. Cold Spring is the rare escape that delivers more than it promises, costs almost nothing by train, and requires zero planning for the hiking. The starter template for weekend trips from NYC.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 2 ===== -->
+      <div class="dest-card" id="beacon">
+        <div class="dc-head">
+          <div class="dest-num">02</div>
+          <div class="dc-titles">
+            <h2>Beacon, NY</h2>
+            <span class="dc-badge">Best for Art, Food &amp; Culture Without a Car</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">60 mi north</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">1h 30m Metro-North</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-no">No</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Art, food, couples</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">1&ndash;2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Spring&ndash;Fall</div></div>
+          </div>
+
+          <p>Beacon has become the Hudson Valley&rsquo;s most complete cultural destination. It has what most similar small towns lack: a legitimate anchor attraction, a genuinely excellent food scene, and transportation that actually works without a car. That anchor is <strong>Dia Beacon</strong> &mdash; a former Nabisco box-printing factory converted into one of the largest contemporary art spaces in the country. Richard Serra, Sol LeWitt, Dan Flavin, Louise Bourgeois. 34,000 square feet of skylights. It&rsquo;s 10 minutes from the train on foot and worth a full half-day on its own.</p>
+          <p>The rest of Beacon fills in around it: two kilometres of Main Street with galleries, boutiques, bookshops, and a food scene spanning Nepalese, Thai, Italian, Afghan, and Mediterranean. There&rsquo;s a free public bus. Uber is 5&ndash;7 minutes away.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li>Dia Beacon&rsquo;s permanent collection is genuinely world-class, not tourist-grade art</li>
+                <li>Main Street food diversity would hold up in any Brooklyn neighborhood</li>
+                <li>Free public bus runs 6 AM&ndash;9 PM on weekdays and weekends</li>
+                <li>Long Dock Park offers kayak rentals and Hudson Highlands views</li>
+                <li>Bannerman Island &mdash; a castle ruin visible from the train &mdash; is accessible by guided boat tour</li>
+              </ul>
+            </div>
+            <div class="content-box">
+              <h4>Things Visitors Don&rsquo;t Expect</h4>
+              <ul>
+                <li>Book Dia Beacon tickets in advance &mdash; autumn weekends sell out</li>
+                <li>Early October is too early for foliage &mdash; mid-to-late October is peak</li>
+                <li>MetroCard is dead &mdash; use contactless payment or the MTA app for Metro-North</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cta-dark" style="margin:20px 0;">
+            <div class="cta-eyebrow">Guided Experience &middot; Beacon</div>
+            <h4>Bannerman Island Boat Tour</h4>
+            <p>Bannerman Island &mdash; the haunting castle ruin visible from the Metro-North &mdash; is only accessible by guided boat tour. A genuinely memorable add-on if you&rsquo;re spending a full weekend in Beacon.</p>
+            <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Hudson-Valley-Bannerman-Island-Guided-Tour/d687-9046P5?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive by 6 PM train. Dinner at Amacord (Italian) or Tara&rsquo;s Indian Fusion. Evening walk along Long Dock Park.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Morning coffee, then Dia Beacon for 2&ndash;3 hours. Lunch on Main Street &mdash; Glazed Over vegan donuts for dessert are mandatory. Afternoon galleries and boutiques. Sunset kayak from Hudson River Expeditions. Dinner at Ziatun.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Hike Mount Beacon fire tower or the Cold Spring connection trail. Late lunch before the train back.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li>The <strong>Swedish chocolatier on Main Street</strong> sources from lingonberries and lotus seeds &mdash; world-class bonbons</li>
+              <li><strong>Beacon Free Loop</strong> bus runs daily &mdash; grab a route map at the train station</li>
+              <li><strong>Best hike from the station:</strong> Mount Beacon &mdash; steep but the fire tower view is worth every step</li>
+              <li><strong>Combine with Cold Spring</strong> for the strongest one-two punch in the Hudson Valley</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Yes, for almost any kind of traveler. Beacon works for art weekends, hiking trips, food-focused getaways, and couples who want charm without pretension.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 3 ===== -->
+      <div class="dest-card" id="hudson">
+        <div class="dc-head">
+          <div class="dest-num">03</div>
+          <div class="dc-titles">
+            <h2>Hudson, NY</h2>
+            <span class="dc-badge">Best for Antiques, Design &amp; Creative Wandering</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">120 mi north</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">2h Amtrak</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val">No/Car+</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Antiques, creatives</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Any season</div></div>
+          </div>
+
+          <p>Hudson is slower, more grown-up, and oriented toward people who want to spend a Saturday moving between art galleries, antique dealers, boutique hotels, and excellent restaurants without any particular agenda. Warren Street &mdash; a mile-long boulevard running uphill from the Amtrak station &mdash; is the spine of the town: nearly 300 historic buildings, around 200 independent businesses. The Wes Anderson comparison gets used constantly, and it&rsquo;s not wrong.</p>
+          <p>The anchor cultural experience is <strong>Olana</strong>, 10 minutes out &mdash; the home of Hudson River School painter Frederic Church, with a Moorish-Victorian mansion perched on a bluff overlooking the river. One of the best house museums in New York State.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li>Warren Street antique dealers are genuinely serious &mdash; not flea-market territory</li>
+                <li><strong>Talbott &amp; Arding</strong> is the best food shopping stop: fresh produce, excellent cheese, craft beers, baked goods</li>
+                <li><strong>Art Omi sculpture park</strong> in Ghent (10 min by car) &mdash; large-scale funky sculptures in an open landscape, free to visit</li>
+                <li>Boutique hotels: Rivertown Lodge, Wm. Farmer &amp; Sons, The Maker</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Going on a busy summer Saturday without dinner reservations &mdash; Hudson&rsquo;s best restaurants book weeks ahead</li>
+                <li>Using Hudson as a Catskills base &mdash; the geography doesn&rsquo;t work, you&rsquo;ll spend hours driving</li>
+                <li>Expecting a &ldquo;real&rdquo; small town &mdash; Hudson now serves primarily as a destination for NYC visitors</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive by 5 PM Amtrak. Walk Warren Street before shops close. Dinner at The Maker Hotel restaurant or Wm. Farmer &amp; Sons.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Breakfast at Le Perche. Afternoon wandering Warren Street galleries and antique dealers. Mid-afternoon detour to Art Omi. Late afternoon at Talbott &amp; Arding for cheese and wine provisions. Evening dinner reservation.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Morning visit to Olana State Historic Site (guided tours fill up &mdash; book ahead). Lunch on Warren Street, train back by 3 PM.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best food shop:</strong> Talbott &amp; Arding &mdash; assemble your own perfect lunch</li>
+              <li><strong>Hidden gem:</strong> Caldwell Gallery on Warren Street for genuinely interesting contemporary work</li>
+              <li><strong>Quietest time:</strong> Weekday mornings, when the town feels local rather than weekender</li>
+              <li><strong>Best view:</strong> Olana&rsquo;s hilltop &mdash; the same view Church painted from his studio</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>For the right traveler &mdash; yes, completely. If you love design, antiques, food, and unhurried browsing, Hudson delivers a weekend unlike anywhere else near NYC.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 4 ===== -->
+      <div class="dest-card" id="woodstock">
+        <div class="dc-head">
+          <div class="dest-num">04</div>
+          <div class="dc-titles">
+            <h2>Woodstock, NY &amp; The Catskills</h2>
+            <span class="dc-badge">Best for Hiking, Mountains &amp; Creative Energy</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~100 mi NW</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">~2.5h by car</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes &mdash; Essential</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Hikers, photographers</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Spring&ndash;Fall</div></div>
+          </div>
+
+          <p>Woodstock is where you go when you need the mountains and a town with actual character. The defining hike is <strong>Overlook Mountain</strong>: 5 miles roundtrip, 1,400 feet of elevation gain on a wide non-technical path, through abandoned hotel ruins to a fire tower with 360-degree Catskill views. Dog-friendly, kid-accessible, and genuinely satisfying. The Tibetan Buddhist monastery sits directly across from the trailhead &mdash; combine a morning hike with an afternoon meditation session and you&rsquo;ve had a very different kind of Saturday.</p>
+
+          <div class="callout callout-local">
+            <div class="callout-title">Not What You Think</div>
+            <p>Woodstock is <strong>not</strong> where the 1969 festival happened. The famous concert took place in Bethel, NY, about 60 miles away. Bethel Woods Center for the Arts now occupies that site and has a museum worth visiting.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li>Overlook Mountain: dramatic views, historic ruins, and a fire tower in one trail</li>
+                <li>20-minute drive to <strong>Phoenicia</strong> for tubing (summer) and the legendary Phoenicia Diner</li>
+                <li><strong>Bread Alone bakery</strong> and <strong>Dixon Roadside</strong> represent a food scene that punches above this town&rsquo;s size</li>
+                <li>Bearsville Theater still operates with live music &mdash; genuine creative energy, not a museum piece</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>The Overlook Mountain parking lot holds 10&ndash;15 cars &mdash; arrives before 9 AM on fall weekends or walk from the road</li>
+                <li>Arriving on a peak foliage Saturday without a plan &mdash; roads and trailheads genuinely gridlock in mid-October</li>
+                <li>No Uber reliability &mdash; a car is not optional here</li>
+                <li>Skipping Phoenicia &mdash; it&rsquo;s 20 minutes away and has some of the region&rsquo;s best food</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive by 7 PM, check in to a Catskills cabin or lodge. Dinner at Dixon Roadside or one of Woodstock&rsquo;s Tinker Street restaurants.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Overlook Mountain hike &mdash; aim for 8 AM for parking and solitude. Visit the monastery afterward. Afternoon drive to Phoenicia for tubing or exploring. Evening live music at Bearsville.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Bread Alone for breakfast pastries. Morning farm stand visit. Scenic drive back on Route 28 for landscape views.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best early morning:</strong> Overlook Mountain before 8 AM in summer &mdash; you&rsquo;ll have the fire tower to yourself</li>
+              <li><strong>Don&rsquo;t miss:</strong> Echo Lake, a short detour below the fire tower &mdash; peaceful and photogenic</li>
+              <li><strong>Best food stop on the way back:</strong> Phoenicia Diner on Route 28 &mdash; classic American diner energy, genuinely excellent</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Yes, for anyone who wants mountains. The drive is real, the car is required, and fall weekends require planning. But the Catskills deliver a landscape genuinely different from anything you can reach by train.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 5 ===== -->
+      <div class="dest-card" id="cape-may">
+        <div class="dc-head">
+          <div class="dest-num">05</div>
+          <div class="dc-titles">
+            <h2>Cape May, NJ</h2>
+            <span class="dc-badge">Best Beach Weekend with Actual Charm</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://images.trvl-media.com/place/10465/c96c9d74-6898-4c20-a210-098c7813fdbc.jpg" alt="Cape May, NJ — Victorian beach town" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~165 mi south</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">2.5&ndash;3h drive</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Couples, families</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Sept&ndash;Oct</div></div>
+          </div>
+
+          <p>Cape May is the most intact Victorian seaside resort on the East Coast, and that fact changes what kind of beach weekend it is. This isn&rsquo;t about sprawling on the sand &mdash; it&rsquo;s about staying in a gingerbread B&amp;B, biking to the beach, wandering a pedestrian shopping street, and eating unexpectedly well. The single best timing move: <strong>visit in September</strong>. The summer crowds have evaporated, the weather is still excellent (mid-70s, sunny), hotel rates drop significantly, and the town&rsquo;s real character comes through.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li>The <strong>Cape May-Lewes Ferry</strong> &mdash; a 1.5-hour crossing of Delaware Bay with dolphins, lighthouses, and open water</li>
+                <li><strong>Washington Street Mall</strong> is a genuinely car-free pedestrian shopping zone &mdash; rare in New Jersey</li>
+                <li><strong>Cape May Point State Park</strong> and the 1859 lighthouse offer hiking, birding (a great migration corridor), and views</li>
+                <li>Peak hotel rates ($500&ndash;$800/night) drop under $400 after Labor Day</li>
+                <li><strong>Congress Hall</strong> &mdash; a grand 19th-century beachfront hotel that hosted four U.S. presidents</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Going in July or August on a tight budget &mdash; September gives better weather at dramatically lower prices</li>
+                <li>Relying on Uber &mdash; bring a car, or rent bikes in town</li>
+                <li>Skipping the ferry &mdash; the Cape May-Lewes crossing is one of the distinctly enjoyable parts of the trip</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive and settle in. Dinner at Louisa&rsquo;s Cafe (tiny, reservation essential) or Harpoons on the Bay.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Morning trolley tour for the architecture history. Cape May Point State Park and lighthouse in the afternoon. Bike rental and beach time. Evening food tour or Cape May Brewery.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Washington Street Mall for coffee and browsing. Mid-morning ferry to Lewes, Delaware for a bonus experience. Drive back via Garden State Parkway &mdash; avoid Sunday 4&ndash;7 PM traffic.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best coffee:</strong> Coffee Tyme on Washington Street Mall &mdash; smooth, chocolatey, and there&rsquo;s a Christopher Walken shrine</li>
+              <li><strong>Best sunset:</strong> Cape May Point State Park, looking west over Delaware Bay</li>
+              <li><strong>Best deal:</strong> Book the week after Labor Day &mdash; excellent weather and the town breathes again</li>
+              <li><strong>Bird migration:</strong> Late September&ndash;October is peak hawk migration at Cape May Point &mdash; one of the best birding spectacles on the Eastern Seaboard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Cape May is the best answer to &ldquo;beach weekend with more than just beach.&rdquo; The Victorian architecture gives it visual distinction, the food scene gives it substance, and September timing gives it everything.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 6 ===== -->
+      <div class="dest-card" id="montauk">
+        <div class="dc-head">
+          <div class="dest-num">06</div>
+          <div class="dc-titles">
+            <h2>Montauk, NY</h2>
+            <span class="dc-badge">Best Beach Escape for People Who Hate the Hamptons Scene</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://images.trvl-media.com/place/6173408/a35f4da1-d32f-44bc-a453-0a3d6a202df0.jpg" alt="Montauk, NY — coastline and lighthouse" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~120 mi east</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">3&ndash;3.5h / Jitney</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Surfers, anglers, beach</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">May&ndash;Jun, Sept&ndash;Oct</div></div>
+          </div>
+
+          <p>Montauk sits at the absolute eastern tip of Long Island, where the road runs out and the Atlantic takes over. It&rsquo;s technically part of the Hamptons, but it developed differently &mdash; as a fishing village first, a surf town second, and a weekend escape third. That order of operations still shows. The timing rule is absolute: <strong>avoid August</strong>. Route 27 traffic in July and August turns a 2.5-hour drive into 4+ hours. May, June, September, and October offer the same coastline with a fraction of the crowd.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li><strong>Ditch Plains beach</strong> is a real surf break &mdash; longboarders, shortboarders, lessons available</li>
+                <li><strong>Montauk Point Lighthouse</strong> (commissioned by George Washington, 1792) sits at a genuinely dramatic cliff-edge location</li>
+                <li>Accommodation range from budget motels to <strong>Gurney&rsquo;s Montauk Resort</strong> &mdash; rare at the East End</li>
+                <li><strong>Deep Hollow Ranch</strong> &mdash; horseback riding along the oceanfront, in operation since 1658</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Leaving NYC on Friday evening in summer &mdash; take the Hampton Jitney or leave before noon</li>
+                <li>Choosing Gurney&rsquo;s as your only dining option &mdash; try Gosman&rsquo;s on the dock and Salivar&rsquo;s</li>
+                <li>Skipping the lighthouse drive &mdash; the views across the Atlantic and Block Island Sound are the best on Long Island</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">Gurney&rsquo;s Insider Move</div>
+            <p>Day passes to Gurney&rsquo;s seawater spa are available to non-guests &mdash; worth knowing if you want the oceanfront experience without the room cost.</p>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday</div><div class="day-content">Take the Hampton Jitney or leave NYC by noon by car. Settle in, dinner at a waterfront restaurant.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Morning surf lesson at Ditch Plains (summer) or walk the Paumanok Path from the lighthouse. Afternoon beach time. Sunset at Gurney&rsquo;s seawall or Montauk Manor lawn.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Farmers&rsquo; market (summer), drive to Montauk Point Lighthouse. Head back via Amagansett or East Hampton for lunch.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best viewpoint:</strong> Montauk Point cliffs at sunrise &mdash; you&rsquo;ll often have it entirely to yourself</li>
+              <li><strong>Quietest beach:</strong> Camp Hero State Park beach &mdash; most visitors don&rsquo;t know it&rsquo;s there</li>
+              <li><strong>Best seafood:</strong> Gosman&rsquo;s on the dock for the full experience; Salivar&rsquo;s for chowder and steamers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Yes &mdash; but timing is everything. Montauk in May, June, September, or October is an excellent weekend. Montauk in August is an expensive traffic experiment.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 7 ===== -->
+      <div class="dest-card" id="newport">
+        <div class="dc-head">
+          <div class="dest-num">07</div>
+          <div class="dc-titles">
+            <h2>Newport, Rhode Island</h2>
+            <span class="dc-badge">Best Overall Weekend Getaway from NYC</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://images.trvl-media.com/place/180037/cdfca59d-3266-4930-9795-5ba243359ee6.jpg" alt="Newport, Rhode Island — Cliff Walk and Gilded Age mansions" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~180 mi NE</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">2.5&ndash;3h drive</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Couples, foodies</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2&ndash;3 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Post-Labor Day&ndash;Oct</div></div>
+          </div>
+
+          <p>Newport consistently surprises first-time visitors. The combination is hard to replicate: Gilded Age mansions along a Cliff Walk with Atlantic Ocean views, a serious restaurant scene anchored by multiple James Beard-nominated chefs, walkable streets with Colonial-era architecture, and genuine outdoor activity in every direction. The timing play is the least-known piece of advice: <strong>visit the week after Labor Day</strong>. Perfect weather, dramatically fewer crowds, same mansions, same Cliff Walk, better restaurant availability, lower hotel rates.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li><strong>The Cliff Walk</strong> &mdash; a 3.5-mile coastal path with the Atlantic on one side and Gilded Age mansion backyards on the other</li>
+                <li>The mansions are called &ldquo;cottages.&rdquo; They seat 70 for dinner. Touring them is genuinely staggering</li>
+                <li><strong>Belcourt Castle</strong> &mdash; far less known than The Breakers, sometimes toured in a nearly private experience</li>
+                <li>Ocean Drive (Ten Mile Drive) for cycling past estates, Brenton Point State Park, and cliff-edge Atlantic views</li>
+                <li>Giusto for exceptional creative waterfront cooking; Yagi Noodles for James Beard-caliber ramen with lobster bao</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Going in July &mdash; crowds are real, accommodation is expensive, September is better in every way</li>
+                <li>Only doing the mansions &mdash; the Cliff Walk, Ocean Drive, and food scene are equally important</li>
+                <li>Underestimating restaurant demand &mdash; book dinner reservations before you leave NYC</li>
+                <li>Newport is on an island &mdash; once you&rsquo;re there, you need a car or bike to move between spots</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive and check into Castle Hill Inn or The Attwater. Sunset drinks on Castle Hill&rsquo;s lawn overlooking Narragansett Bay. Dinner at Giusto or Bar &rsquo;Cino.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Morning at Nitro Bar for coffee. Mansion tour (The Breakers + Belcourt back-to-back is the ideal combination). Afternoon Cliff Walk. Sunset at Brenton Point State Park. Evening at Clarke Cooke House.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Ocean Drive bike ride or walk. Lunch at Mother Pizzeria. Drive back &mdash; leave by 2 PM to avoid Sunday return traffic.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best coffee:</strong> Nitro Bar (multiple locations) &mdash; genuine craft coffee with excellent food</li>
+              <li><strong>Best free experience:</strong> Walking the Cliff Walk at sunrise before any crowds</li>
+              <li><strong>Quietest mansion:</strong> Belcourt Castle &mdash; smaller, far less visited, and the history is just as rich</li>
+              <li><strong>Insider beach:</strong> Reject&rsquo;s Beach off the Cliff Walk &mdash; smaller, quieter, and free to access</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Newport is the strongest all-around weekend getaway in this entire guide for couples and culture-focused travelers. It consistently exceeds expectations. Just go in September.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 8 ===== -->
+      <div class="dest-card" id="berkshires">
+        <div class="dc-head">
+          <div class="dest-num">08</div>
+          <div class="dc-titles">
+            <h2>The Berkshires, MA</h2>
+            <span class="dc-badge">Best for Music, Art &amp; Fall Foliage</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGGSRNeXCpUENHcfAxeKtiEr4iCr_Pcw-bDrEbA3gZSFlauhwFTUa9nf4&s=10" alt="The Berkshires, Massachusetts — landscape and foliage" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~150 mi NW</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">2.5&ndash;3h drive</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Music, art, foliage</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Summer + Fall</div></div>
+          </div>
+
+          <p>The Berkshires operate on two distinct tracks: <strong>Track One</strong> is Tanglewood and Lenox &mdash; the summer home of the Boston Symphony Orchestra, on a 500-acre estate with lawn picnics, open-air concerts, and a genuinely transportive atmosphere. Tanglewood lawn tickets start under $20, and building a picnic spread from Guido&rsquo;s Fresh Marketplace and Berkshire Mountain Bakery before the concert is as much the point as the music. <strong>Track Two</strong> is MASS MoCA and North Adams &mdash; the largest contemporary art museum in North America, in a town with an alternative energy that feels nothing like the Lenox estate scene.</p>
+          <p>Both tracks are exceptional. The Berkshires work best when you choose one deliberately rather than trying to sample both in a single weekend.</p>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li><strong>MASS MoCA</strong> hosts installation art at a scale impossible in conventional gallery spaces</li>
+                <li><strong>The Mount</strong> &mdash; Edith Wharton&rsquo;s estate in Lenox &mdash; is one of the best literary house museums in America</li>
+                <li><strong>Mundy&rsquo;s Asia Galleries</strong> in Stockbridge: a warehouse packed with Buddhist artifacts from Kyoto auctions. One of the most surprising finds in the Northeast</li>
+                <li>Great Barrington&rsquo;s Railroad Street for ice cream, bookshops, and local food without Lenox&rsquo;s price tag</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Waiting until you arrive to buy Tanglewood tickets &mdash; popular performances sell out</li>
+                <li>Going during peak October foliage on a weekend without mid-week flexibility &mdash; roads fill completely on Columbus Day weekend</li>
+                <li>Only planning Tanglewood and skipping the landscape &mdash; Monument Mountain hike in Great Barrington is excellent</li>
+                <li>Uber is unreliable throughout the Berkshires &mdash; this is car country</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive in Lenox or Stockbridge. Dinner at Restaurant Cello or the Red Lion Inn dining room.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Morning hike at Monument Mountain or walk Naumkeag estate gardens. Afternoon picnic provisions from Guido&rsquo;s or Berkshire Mountain Bakery. Tanglewood concert in the evening.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Morning at Haven Caf&eacute; &amp; Bakery in Lenox. Drive to MASS MoCA in North Adams (45 minutes). Detour to Mundy&rsquo;s Asia Galleries in Stockbridge on the way back.</div></div>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Local Tips</h3>
+            <ul class="tips-list">
+              <li><strong>Best picnic building:</strong> Guido&rsquo;s Fresh Marketplace in Pittsfield or Great Barrington</li>
+              <li><strong>Best free morning:</strong> Walking the Tanglewood grounds before concerts begin &mdash; the estate is beautiful</li>
+              <li><strong>Best hike:</strong> Monument Mountain &mdash; historical, rewarding views, 2.5 miles round trip</li>
+              <li><strong>Best off-the-beaten-path stop:</strong> Mundy&rsquo;s Asia Galleries in Stockbridge &mdash; genuinely unlike anything else in the region</li>
+            </ul>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>For music lovers, the Berkshires are pilgrimage territory. For everyone else, fall foliage and MASS MoCA make it genuinely worth the drive if you align the trip correctly.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 9 ===== -->
+      <div class="dest-card" id="new-hope">
+        <div class="dc-head">
+          <div class="dest-num">09</div>
+          <div class="dc-titles">
+            <h2>New Hope, PA &amp; Bucks County</h2>
+            <span class="dc-badge">Most Underrated Weekend Getaway from NYC</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://images.trvl-media.com/place/6057631/8ffc4d6e-dcc7-43c5-bd73-ceee41521c05.jpg" alt="New Hope, Pennsylvania — covered bridges and Delaware Canal" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~75 mi SW</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">1.5&ndash;2h drive</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val car-yes">Yes</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Couples, LGBTQ+, cyclists</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">1&ndash;2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Fall and Spring</div></div>
+          </div>
+
+          <p>Bucks County barely registers on the weekend-trip radar for most NYC residents, and that&rsquo;s precisely why it should. It&rsquo;s 1.5 to 2 hours away, genuinely charming, significantly less expensive than the Hudson Valley equivalents, and offers experiences &mdash; covered bridge scenic drives, a Delaware Canal towpath bike path, an LGBTQ+-friendly main street town &mdash; that you can&rsquo;t find anywhere else close to the city. New Hope is unpretentious in a way that feels increasingly rare. <strong>Hot air balloon rides during fall foliage</strong> over Bucks County come up repeatedly as a bucket-list experience.</p>
+
+          <div class="callout callout-local">
+            <div class="callout-title">The Hidden Bonus Town</div>
+            <p><strong>Lambertville, NJ</strong> is directly across the river &mdash; a 5-minute walk over the bridge gives you a second equally charming main street with different shops and restaurants. Most visitors don&rsquo;t realize they can do both towns in one afternoon.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li><strong>Delaware Canal towpath</strong> &mdash; 60 miles of flat, car-free biking and walking. Rent bikes in New Hope</li>
+                <li><strong>Covered bridge driving tour</strong> &mdash; Bucks County has more covered bridges than almost any county in America. A self-guided drive takes 2&ndash;3 hours</li>
+                <li><strong>Bowman&rsquo;s Hill Wildflower Preserve</strong> &mdash; 134 acres, 800+ native plant species</li>
+                <li>New Hope&rsquo;s LGBTQ+ welcoming character is structural, not performative</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Trying to drive the covered bridges without the official map &mdash; download the Bucks County covered bridge driving tour before you leave</li>
+                <li>Only spending one afternoon &mdash; a Saturday in New Hope is a day trip; a full weekend is a completely different and more rewarding experience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Underrated, yes. Bucks County in October, with covered bridges and canal towpath turning into a foliage landscape, rivals anything in New England.</p>
+        </div>
+      </div>
+
+      <!-- ===== DESTINATION 10 ===== -->
+      <div class="dest-card" id="mystic">
+        <div class="dc-head">
+          <div class="dest-num">10</div>
+          <div class="dc-titles">
+            <h2>Mystic, CT</h2>
+            <span class="dc-badge">Best for Families &amp; New England Seafood</span>
+          </div>
+        </div>
+        <div class="dc-body">
+          <img src="https://images.trvl-media.com/place/183063/4aa2948a-1fd3-47b7-a481-5e8563fd2d53.jpg" alt="Mystic, Connecticut — waterfront and drawbridge" class="dest-img">
+
+          <div class="dest-stats">
+            <div class="ds-item"><div class="ds-label">Distance</div><div class="ds-val">~125 mi NE</div></div>
+            <div class="ds-item"><div class="ds-label">Travel</div><div class="ds-val">2h drive / Amtrak</div></div>
+            <div class="ds-item"><div class="ds-label">Car Needed</div><div class="ds-val">No/Car+</div></div>
+            <div class="ds-item"><div class="ds-label">Best For</div><div class="ds-val">Families, seafood</div></div>
+            <div class="ds-item"><div class="ds-label">Trip Length</div><div class="ds-val">1&ndash;2 nights</div></div>
+            <div class="ds-item"><div class="ds-label">Best Season</div><div class="ds-val">Summer&ndash;early Fall</div></div>
+          </div>
+
+          <p>Mystic earns its reputation from three things: the <strong>Mystic Seaport Museum</strong> (genuinely excellent for maritime history, one of the best outdoor museums in New England), the waterfront walkability, and a seafood scene anchored by some of the best lobster outside Maine. The Mystic River is the visual center &mdash; drawbridge rising, historic buildings reflected in the water, paddleboarders going by. Key note: <strong>the Mystic Seaport Museum and the Mystic Aquarium are very different experiences.</strong> If you&rsquo;re choosing, the Seaport consistently delivers better value for adults.</p>
+
+          <div class="callout callout-local">
+            <div class="callout-title">The Hidden Seafood Gem</div>
+            <p><strong>Noank</strong> &mdash; the village directly adjacent to Mystic &mdash; has Ford&rsquo;s Lobster and Abbott&rsquo;s Lobster In the Rough. Both BYOB, both excellent, and almost no tourists. Most visitors skip it entirely.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="content-box green">
+              <h4>What Makes It Special</h4>
+              <ul>
+                <li><strong>Mystic Seaport Museum</strong> is a living maritime village &mdash; historic vessels, restored buildings, costumed interpreters on a 17-acre waterfront property</li>
+                <li><strong>Ford&rsquo;s Lobster in Noank</strong> &mdash; BYOB, dock seating, river views, genuinely excellent lobster roll</li>
+                <li>The Mystic River Bascule Bridge rises regularly to let boats through &mdash; strangely satisfying to watch</li>
+                <li>Connecticut Wine Trail: Jonathan Edwards Winery in North Stonington for flights on the vineyard deck</li>
+              </ul>
+            </div>
+            <div class="content-box red">
+              <h4>Don&rsquo;t Make These Mistakes</h4>
+              <ul>
+                <li>Mystic Pizza is a tourist experience, not a Connecticut pizza experience &mdash; visit for the Julia Roberts connection, not the pizza</li>
+                <li>Planning the Aquarium as a full-day activity &mdash; even enthusiastic visitors finish in 2 hours</li>
+                <li>Skipping Noank &mdash; Ford&rsquo;s Lobster with dock seating and BYOB policy is a better meal than anything in Mystic&rsquo;s tourist center</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dc-section">
+            <h3>Best Way to Spend a Weekend</h3>
+            <div class="weekend-plan">
+              <div class="day-block"><div class="day-label">Friday Eve</div><div class="day-content">Arrive, walk downtown Mystic, dinner at The Oyster Club for seasonal seafood.</div></div>
+              <div class="day-block"><div class="day-label">Saturday</div><div class="day-content">Mystic Seaport Museum for the morning. Lunch downtown. Afternoon drive to Noank for Ford&rsquo;s Lobster early dinner with your own bottle of wine.</div></div>
+              <div class="day-block"><div class="day-label">Sunday</div><div class="day-content">Jonathan Edwards Winery (30 minutes inland) for a morning flight on the vineyard deck. Back through Mystic for Young Buns Doughnuts before heading home.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="verdict-row">
+          <span class="verdict-label">Worth It?</span>
+          <p>Yes, particularly for families and anyone who connects with maritime history. The seafood scene alone justifies the drive. Skip the aquarium unless you have young children.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- COMPARISON TABLES -->
+      <h2 id="how-to-choose">How to Choose: Comparison Tables</h2>
+
+      <h3>Best for Couples</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Destination</th><th>Why</th></tr>
+          <tr><td><strong>Newport, RI</strong></td><td>Cliff Walk, mansion tours, exceptional restaurants, romantic inns</td></tr>
+          <tr><td><strong>Cold Spring, NY</strong></td><td>Intimate village, riverside hikes, French bistro dinner</td></tr>
+          <tr><td><strong>Cape May, NJ</strong></td><td>Victorian B&amp;Bs, beach sunsets, a town designed for walking hand-in-hand</td></tr>
+          <tr><td><strong>Hudson, NY</strong></td><td>Warren Street wandering, boutique hotels, slow-paced excellence</td></tr>
+          <tr><td><strong>New Hope, PA</strong></td><td>Canal towpath cycling, covered bridge drives, genuinely unhurried</td></tr>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">Best Without a Car</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Destination</th><th>Transport</th><th>Notes</th></tr>
+          <tr><td><strong>Cold Spring, NY</strong></td><td>Metro-North</td><td>Train drops at trailhead; village walkable</td></tr>
+          <tr><td><strong>Beacon, NY</strong></td><td>Metro-North</td><td>Free town bus + Uber; fully car-free capable</td></tr>
+          <tr><td><strong>Hudson, NY</strong></td><td>Amtrak</td><td>Station walkable to Warren Street</td></tr>
+          <tr><td><strong>Mystic, CT</strong></td><td>Amtrak</td><td>Town walkable; car helps for surroundings</td></tr>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">Best for Hiking</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:420px;">
+          <tr><th>Destination</th><th>Best Trail</th><th>Difficulty</th><th>Car?</th></tr>
+          <tr><td><strong>Cold Spring</strong></td><td>Breakneck Ridge</td><td>Hard</td><td>No</td></tr>
+          <tr><td><strong>Cold Spring</strong></td><td>Bull Hill</td><td>Moderate</td><td>No</td></tr>
+          <tr><td><strong>Woodstock</strong></td><td>Overlook Mountain</td><td>Moderate</td><td>Yes</td></tr>
+          <tr><td><strong>Newport</strong></td><td>Cliff Walk</td><td>Easy</td><td>Yes</td></tr>
+          <tr><td><strong>Berkshires</strong></td><td>Monument Mountain</td><td>Moderate</td><td>Yes</td></tr>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">Best Fall Foliage Weekends</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Destination</th><th>Peak Timing</th><th>Crowd Level</th></tr>
+          <tr><td><strong>Berkshires, MA</strong></td><td>Mid&ndash;late October</td><td>High (especially Columbus Day)</td></tr>
+          <tr><td><strong>Woodstock, NY</strong></td><td>Mid October</td><td>Very high on weekends</td></tr>
+          <tr><td><strong>Cold Spring, NY</strong></td><td>Late October</td><td>Moderate</td></tr>
+          <tr><td><strong>Hudson, NY</strong></td><td>Mid&ndash;late October</td><td>Moderate</td></tr>
+          <tr><td><strong>New Hope, PA</strong></td><td>Mid&ndash;late October</td><td>Moderate</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">Fall Foliage Pro Tip</div>
+        <p>Mid-week fall trips consistently outperform weekend trips by 3&ndash;4x on the crowd experience. Tuesday&ndash;Thursday in October is the sweet spot at almost every destination.</p>
+      </div>
+
+      <h3 style="margin-top:28px;">Best for Food Obsessives</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Destination</th><th>Food Scene Highlight</th></tr>
+          <tr><td><strong>Newport, RI</strong></td><td>Giusto, Yagi Noodles (James Beard caliber), excellent brunch</td></tr>
+          <tr><td><strong>Hudson, NY</strong></td><td>Warren Street dining + Talbott &amp; Arding food shopping</td></tr>
+          <tr><td><strong>Cape May, NJ</strong></td><td>Louisa&rsquo;s Cafe, Cape May Brewery, excellent food tour</td></tr>
+          <tr><td><strong>Mystic, CT</strong></td><td>Ford&rsquo;s Lobster in Noank, The Oyster Club, BYOB wine culture</td></tr>
+          <tr><td><strong>Beacon, NY</strong></td><td>Main Street diversity spans 8+ cuisines, all genuinely good</td></tr>
+        </table>
+      </div>
+
+      <!-- MISTAKES -->
+      <h2 id="mistakes">Mistakes People Make When Planning Weekend Getaways from NYC</h2>
+
+      <div class="mistake-item"><h4>Leaving Friday Too Late</h4><p>Friday evening traffic is brutal in every direction during summer and fall. Leave before 2 PM or take the train. Driving to the Hamptons, Montauk, or the Shore in July or August on Friday evening can add 2&ndash;3 hours to any trip.</p></div>
+      <div class="mistake-item"><h4>Not Booking Restaurants Before You Leave</h4><p>The Hudson Valley, Berkshires, and Newport all have restaurants that fill weeks in advance during peak season. If you arrive Saturday night without a reservation expecting to eat well, you&rsquo;ll be disappointed.</p></div>
+      <div class="mistake-item"><h4>Underestimating Holiday Weekend Traffic</h4><p>Labor Day, Columbus Day, and Memorial Day weekends apply surge pressure to every destination within 3 hours of NYC. Leave Thursday, arrive Monday, or adjust expectations for everything.</p></div>
+      <div class="mistake-item"><h4>Trying to Visit Too Many Towns in One Weekend</h4><p>Hudson, Beacon, Cold Spring, and Rhinebeck are all within 20 miles of each other. The temptation is to hit all four. Pick two and do them properly.</p></div>
+      <div class="mistake-item"><h4>Skipping Shoulder Season</h4><p>September and October give you better weather than many expect, dramatically fewer crowds, lower accommodation rates at beach destinations, and fall foliage at the right destinations. If you&rsquo;ve been putting off a trip because summers are too crowded, shoulder season is your answer.</p></div>
+
+      <!-- FINAL RECS -->
+      <h2 id="final-recs">Final Recommendations by Travel Style</h2>
+      <div class="recs-grid">
+        <div class="rec-card"><div class="rc-icon">Best Without a Car</div><div class="rc-dest">Cold Spring</div><div class="rc-alt">Beacon second &nbsp;&middot;&nbsp; Hudson third</div></div>
+        <div class="rec-card"><div class="rc-icon">Best for Couples</div><div class="rc-dest">Newport in September</div><div class="rc-alt">Cape May in October &nbsp;&middot;&nbsp; Hudson year-round</div></div>
+        <div class="rec-card"><div class="rc-icon">Best for Serious Hikers</div><div class="rc-dest">Cold Spring / Breakneck Ridge</div><div class="rc-alt">Woodstock / Catskills for mountain terrain and full-day routes</div></div>
+        <div class="rec-card"><div class="rc-icon">Best for Culture &amp; Art</div><div class="rc-dest">Beacon (Dia Beacon)</div><div class="rc-alt">Berkshires (MASS MoCA + Tanglewood) &nbsp;&middot;&nbsp; Hudson (galleries + Olana)</div></div>
+        <div class="rec-card"><div class="rc-icon">Best Beach Without the Scene</div><div class="rc-dest">Cape May in September</div><div class="rc-alt">Montauk in May or October</div></div>
+        <div class="rec-card"><div class="rc-icon">Best Fall Foliage</div><div class="rc-dest">Berkshires for drama</div><div class="rc-alt">New Hope for something different &nbsp;&middot;&nbsp; Cold Spring by train</div></div>
+        <div class="rec-card"><div class="rc-icon">Best for Families</div><div class="rc-dest">Mystic (Seaport + lobster)</div><div class="rc-alt">Cape May (beach + bikes) &nbsp;&middot;&nbsp; Cold Spring (hikes + walkable village)</div></div>
+        <div class="rec-card"><div class="rc-icon">Most Underrated</div><div class="rc-dest">New Hope, PA</div><div class="rc-alt">Nobody expects it. Everyone who goes comes back surprised.</div></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Common Questions About Weekend Trips from NYC</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Which weekend getaway is best without a car?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Cold Spring is the best fully car-free weekend destination &mdash; the Metro-North drops you directly where you need to be, the village is walkable, and hikes start within a 10-minute walk of the station. Beacon is a close second, with a free town bus and reliable Uber. Hudson works by Amtrak with the station walkable to Warren Street.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which destination is best for first-time visitors?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Beacon for culture and ease. Cold Spring for hiking and charm. Both are train-accessible, walkable, and deliver a clear, satisfying weekend without requiring a car or complex logistics.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which destinations are overrated?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The core Hamptons villages (Southampton, East Hampton) in July and August deliver an expensive, traffic-choked weekend that rarely justifies the cost for first-time visitors. Montauk in August has the same traffic problem. Both improve dramatically in shoulder season.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which destinations are underrated?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">New Hope, PA &mdash; most NYC travelers have never considered it. Cape May in September &mdash; most people think beach equals summer and miss the ideal version. Hudson on a weekday &mdash; the town transforms when the weekend crowd isn&rsquo;t there.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How far should you drive for a weekend getaway?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Three hours is the practical ceiling for a two-night weekend. Beyond that, travel time starts competing meaningfully with time at the destination. For a one-night trip, two hours is the sweet spot.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Friday night or Saturday morning departure better?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Friday night by train is usually best if you can manage it &mdash; arrives ahead of the weekend rush, gives you Saturday morning. Saturday morning by car avoids Friday traffic but compresses the weekend. Friday by car in summer or fall holiday periods means accepting 2&ndash;3 extra hours in traffic.</div>
+        </details>
+        <details class="faq-item">
+          <summary>One night or two?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Almost always two. One night consistently feels rushed &mdash; you spend Saturday getting oriented and Sunday checking out. Two nights gives you one full day to actually be somewhere rather than passing through.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best season for weekend trips from NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Fall (September&ndash;October) is the consensus answer &mdash; excellent weather, photogenic landscapes, smaller crowds than summer, and lower prices at most destinations. Spring (April&ndash;May) is underrated for the same reasons. Summer delivers the most activity but the highest prices and most competition for everything.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which weekend getaway has the best food?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Newport for the overall dining level and James Beard-caliber options. Hudson for the experience of food as the point of the weekend. Mystic specifically for lobster and BYOB seafood culture. Cape May for the combination of a serious food scene in a town that size.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where should I go for fall foliage near NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The Berkshires peak mid-to-late October and are the most dramatic landscape, but get very crowded. Cold Spring and the Hudson Valley peak late October and are accessible by train. New Hope, PA offers covered bridge foliage drives that feel completely different. Check foliage forecasts in real time rather than locking in dates weeks ahead.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the easiest weekend getaway from NYC by train?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Cold Spring (1h 15m, Metro-North). The train practically delivers you to the trailhead. You can leave Grand Central at 7 AM Saturday and be hiking by 9 AM.</div>
+        </details>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The Best Weekend Getaway Is the One You Actually Take</div>
+        <p>Start with where you want to be on Saturday afternoon &mdash; on a hiking trail, in a museum, at a lobster dock, on a porch with wine &mdash; and work backward from there. Every destination in this guide has earned its place. Pick one, book it before you second-guess yourself, and go.</p>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Only Lower Manhattan Walking Itinerary You&rsquo;ll Need</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Ultimate Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Almost Dead &mdash; Complete OMNY &amp; Transit Guide</a></li>
+      <li><a href="realistic-nyc-bucket-list.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Realistic NYC Bucket List (5&ndash;7 Days)</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
