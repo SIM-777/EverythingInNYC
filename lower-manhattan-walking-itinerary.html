@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Only Lower Manhattan Walking Itinerary You'll Need | EverythingInNYC</title>
+<meta name="description" content="A south-to-north Lower Manhattan itinerary from Battery Park to DUMBO — with the right timing, hidden gems, honest photography tips, and everything most guides get wrong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Stop header */
+  .stop-head{
+    display:flex;align-items:center;gap:14px;
+    margin:48px 0 16px;
+    padding-top:36px;
+    border-top:1px solid var(--border);
+  }
+  .stop-head:first-of-type{border-top:none;margin-top:28px;padding-top:0;}
+  .stop-badge{
+    width:48px;height:48px;border-radius:14px;
+    background:var(--navy);color:#fff;
+    font-family:var(--font-head);font-weight:800;font-size:20px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .stop-info{}
+  .stop-info h2{margin:0 0 4px;font-size:26px;scroll-margin-top:90px;}
+  .stop-time{
+    font-size:13px;font-weight:700;
+    color:var(--text-secondary);
+    display:flex;align-items:center;gap:8px;
+  }
+  .stop-free{
+    font-size:11.5px;font-weight:700;letter-spacing:0.04em;
+    text-transform:uppercase;background:rgba(22,163,74,0.12);
+    color:#15803D;padding:3px 9px;border-radius:20px;
+  }
+  .stop-paid{
+    font-size:11.5px;font-weight:700;letter-spacing:0.04em;
+    text-transform:uppercase;background:rgba(220,38,38,0.1);
+    color:var(--error);padding:3px 9px;border-radius:20px;
+  }
+
+  /* Section image */
+  .section-img{margin:22px 0;}
+  .section-img img{width:100%;border-radius:14px;object-fit:cover;max-height:420px;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Bathroom note */
+  .bathroom-note{
+    background:#EFF6FF;border-left:4px solid var(--info);
+    border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0;
+    display:flex;align-items:flex-start;gap:10px;
+  }
+  .bathroom-note .bn-icon{
+    font-family:var(--font-head);font-weight:800;font-size:11px;
+    letter-spacing:0.04em;text-transform:uppercase;
+    background:var(--info);color:#fff;
+    padding:3px 8px;border-radius:6px;flex:none;margin-top:2px;
+    white-space:nowrap;
+  }
+  .bathroom-note p{font-size:15px;color:var(--navy);margin:0;}
+
+  /* Update warning */
+  .update-note{
+    background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);
+    border-radius:12px;padding:13px 16px;margin:16px 0;
+    font-size:15px;
+  }
+  .update-note strong{color:#92620A;}
+
+  /* Route overview table */
+  .route-table th{background:var(--navy);color:#fff;}
+  .route-table td:last-child{font-size:13.5px;}
+  .free-cell{color:#15803D;font-weight:700;}
+  .paid-cell{color:var(--error);font-weight:700;}
+
+  /* Bridge rules table */
+  .rules-table th{background:var(--navy-soft);color:#fff;font-size:13px;}
+
+  /* Comparison table header alt */
+  .comp-table th{background:var(--navy-soft);color:#fff;}
+
+  /* Travel style cards */
+  .style-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+  @media(min-width:580px){.style-cards{grid-template-columns:1fr 1fr;}}
+  @media(min-width:860px){.style-cards{grid-template-columns:repeat(3,1fr);}}
+  .style-card{border:1px solid var(--border);background:var(--bg-card);border-radius:14px;padding:18px 18px 16px;}
+  .style-card .sc-head{
+    font-family:var(--font-head);font-weight:800;font-size:14px;
+    color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:8px;
+  }
+  .style-card .sc-hours{
+    font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    background:rgba(15,23,42,0.07);color:var(--navy);
+    padding:3px 9px;border-radius:20px;flex:none;
+  }
+  .style-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+  /* Hidden gem */
+  .gem-list{display:flex;flex-direction:column;gap:12px;margin:18px 0;}
+  .gem{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    padding:14px 18px;
+  }
+  .gem h4{margin:0 0 5px;font-size:16.5px;color:var(--navy);}
+  .gem p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Photo tip inline */
+  .photo-tip{
+    background:rgba(15,23,42,0.04);border:1px solid var(--border);
+    border-radius:12px;padding:14px 16px;margin:14px 0;
+    font-size:15.5px;
+  }
+  .photo-tip .pt-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.05em;color:var(--info);
+    margin-bottom:6px;
+  }
+
+  /* Seasonal grid */
+  .season-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+  @media(min-width:560px){.season-grid{grid-template-columns:1fr 1fr;}}
+  .season-card{border:1px solid var(--border);background:var(--bg-card);border-radius:14px;padding:16px 18px;}
+  .season-card h4{margin:0 0 8px;font-size:16px;}
+  .season-card p{font-size:14.5px;color:var(--text-secondary);margin-bottom:8px;}
+  .season-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+  .season-card ul li{font-size:14px;display:flex;align-items:flex-start;gap:8px;color:var(--text-secondary);}
+  .season-card ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;margin-top:8px;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>The Only Lower Manhattan Walking Itinerary You&rsquo;ll Need (From Someone Who&rsquo;s Done It Wrong First)</h1>
+      <div class="article-meta">
+        
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 15 minute read</span>
+        <span>&middot;</span>
+        <span>&#128694;&#65039; 3.5&ndash;4.5 miles</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/2d/09/eb/caption.jpg?w=1400&h=-1&s=1" alt="Lower Manhattan skyline from the water with Brooklyn Bridge in view">
+
+    <div class="article-body">
+      <p>If you only have one day to explore Lower Manhattan, don&rsquo;t just pin every landmark on Google Maps and hope for the best. I&rsquo;ve done that. It ended with me eating a $19 sandwich near the 9/11 Memorial at 2 PM, missing the Brooklyn Bridge at golden hour, and somehow spending 35 minutes in a queue to photograph a bronze bull.</p>
+      <p>This route is what I&rsquo;d do instead.</p>
+      <p>It runs <strong>south to north</strong> &mdash; Battery Park first, Brooklyn Bridge last &mdash; and that direction isn&rsquo;t arbitrary. Morning light hits the harbor and the NYSE facade from the east. The 9/11 Memorial is less crowded before 10 AM. The bridge is dramatically better in late-afternoon golden light heading toward Brooklyn. Everything connects logically, which means you&rsquo;re walking <em>with</em> the day rather than fighting it.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Already Planning Your Full NYC Trip?</div>
+        <p>This route pairs naturally with a second day in Midtown. Read our <a href="midtown-manhattan-walking-itinerary.html">Midtown Manhattan walking itinerary</a> to plan the rest of your visit the same way &mdash; logically, by neighborhood, with the right timing for each stop.</p>
+      </div>
+
+      <!-- ROUTE OVERVIEW TABLE -->
+      <h2 id="route-overview">Quick Overview: The Full Route at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table route-table" style="min-width:580px;">
+          <tr><th>Stop</th><th>Best Time</th><th>Duration</th><th>Cost</th></tr>
+          <tr><td>Battery Park + Harbor</td><td>7:30&ndash;8:30 AM</td><td>20&ndash;30 min</td><td class="free-cell">Free</td></tr>
+          <tr><td>Staten Island Ferry</td><td>8:30&ndash;9:30 AM</td><td>50 min round trip</td><td class="free-cell">Free</td></tr>
+          <tr><td>Charging Bull</td><td>9:00&ndash;9:30 AM</td><td>15&ndash;20 min</td><td class="free-cell">Free</td></tr>
+          <tr><td>Wall Street Corridor</td><td>9:30&ndash;10:30 AM</td><td>45&ndash;60 min</td><td class="free-cell">Free (Federal Hall: free, Wed&ndash;Sun)</td></tr>
+          <tr><td>9/11 Memorial (outdoor pools)</td><td>10:30&ndash;11:30 AM</td><td>45&ndash;90 min</td><td class="free-cell">Free</td></tr>
+          <tr><td>9/11 Museum (optional)</td><td>10:30 AM&ndash;1:00 PM</td><td>2.5&ndash;3 hrs</td><td class="paid-cell">$33/adult</td></tr>
+          <tr><td>Stone Street Lunch</td><td>12:00&ndash;1:00 PM</td><td>45&ndash;60 min</td><td>$$&ndash;$$$</td></tr>
+          <tr><td>Oculus + WTC Area</td><td>1:00&ndash;1:45 PM</td><td>25&ndash;30 min</td><td class="free-cell">Free</td></tr>
+          <tr><td>Brooklyn Bridge Walk</td><td>3:30&ndash;5:00 PM</td><td>45&ndash;75 min</td><td class="free-cell">Free</td></tr>
+          <tr><td>DUMBO + Pebble Beach</td><td>5:00&ndash;7:30 PM</td><td>1.5&ndash;2.5 hrs</td><td class="free-cell">Free (pizza extra)</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Total Distance</div><p>3.5&ndash;4.5 miles depending on detours</p></div>
+        <div class="card"><div class="card-tag">Best Season</div><p>Fall (September&ndash;October) and Spring. Summer is doable but hot.</p></div>
+      </div>
+
+      <!-- WHY THIS ORDER -->
+      <h2 id="why-this-order">Why This Order Works</h2>
+      <p>Most Lower Manhattan itineraries go wrong in one of two ways: they start too late, or they put the bridge in the morning when the light is flat and the crowds haven&rsquo;t formed yet.</p>
+      <p>I start at Battery Park because the morning light is pointing <em>toward</em> the harbor from the east, which means beautiful Statue of Liberty silhouettes and empty cobblestones before the Statue of Liberty tour-boat crowd shows up. The Charging Bull gets visited before 9:30 AM &mdash; which means no queue. The Wall Street corridor gets the east-facing morning light that makes the NYSE columns look like a movie set.</p>
+      <p>By the time you reach the 9/11 Memorial before 11 AM, you&rsquo;ve avoided the school-group surge that hits mid-morning on weekdays. By 3:30 PM, you&rsquo;re on the Brooklyn Bridge &mdash; and in the fall, that&rsquo;s golden hour, with Manhattan glowing behind you as you walk toward Brooklyn. The day is front-loaded with history and logistics, and finishes with beauty. That&rsquo;s the structure.</p>
+
+      <!-- ===== STOP 1 ===== -->
+      <div class="stop-head" id="battery-park">
+        <div class="stop-badge">1</div>
+        <div class="stop-info">
+          <h2>Battery Park</h2>
+          <div class="stop-time"><span>7:30&ndash;8:30 AM</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/4a/1d/71/caption.jpg?w=1400&h=-1&s=1" alt="Battery Park harbor views at dawn with Statue of Liberty">
+        <div class="cap">Battery Park at sunrise &mdash; the best free Statue of Liberty photo of the day, and the crowds haven&rsquo;t arrived yet.</div>
+      </div>
+
+      <p>Take the 4 or 5 train to Bowling Green. Walk south toward the harbor. You&rsquo;re at the southern tip of Manhattan, with the Statue of Liberty visible across the water and the financial towers rising behind you.</p>
+
+      <h3>What to Actually Do Here</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Walk to the southern tip and find a harbor-facing bench. Sit for five minutes and let the city breathe before the day starts.</li>
+        <li><span class="dot"></span><strong>SeaGlass Carousel</strong> &mdash; luminescent fish inside a glass pavilion. Seasonal, $5 to ride, free to look at. Worth knowing about if you&rsquo;re with kids.</li>
+        <li><span class="dot"></span><strong>Castle Clinton</strong> (free, National Park Service) &mdash; a circular fort that served as an entertainment venue, immigration station, and aquarium over the centuries. Ten minutes inside if you&rsquo;re curious.</li>
+      </ul>
+
+      <div class="bathroom-note">
+        <span class="bn-icon">Restroom</span>
+        <p>Use the Battery Comfort Station at Battery Place and Washington Street before you leave. It&rsquo;s the last reliable public restroom until you&rsquo;re several blocks north.</p>
+      </div>
+
+      <div class="photo-tip">
+        <div class="pt-label">Photography Tip</div>
+        Stand at the southern tip facing southwest in early morning. The Statue of Liberty to your left, the harbor ahead, the first light catching the water. This is actually the best Statue of Liberty photo of the day &mdash; and it&rsquo;s free.
+      </div>
+
+      <!-- ===== STOP 2 ===== -->
+      <div class="stop-head" id="staten-island-ferry">
+        <div class="stop-badge">2</div>
+        <div class="stop-info">
+          <h2>Staten Island Ferry</h2>
+          <div class="stop-time"><span>8:30&ndash;9:30 AM</span><span class="stop-free">Free</span><span style="font-size:13px;color:var(--text-secondary);">Optional but Highly Recommended</span></div>
+        </div>
+      </div>
+
+      <p>The Whitehall Terminal is a 5-minute walk from Battery Park. This is the best free thing to do in New York City. Full stop.</p>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">What You Need to Know</div>
+        <p>Completely free. No ticket, no tap. Walk in like you&rsquo;re entering a park. The crossing is 25 minutes each way. You&rsquo;ll pass within clear view of the Statue of Liberty &mdash; closer than most photos suggest.</p>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">Do Not Buy Tickets From Anyone Outside the Terminal</div>
+        <p>This is a documented scam. Real tickets don&rsquo;t exist because it&rsquo;s free.</p>
+      </div>
+
+      <h3>Where to Stand</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Leaving Manhattan</h4><p>Go upstairs, go outside, go to the <strong>right (starboard) side</strong>. The Statue of Liberty passes on this side.</p></div>
+        <div class="card"><h4>Returning from Staten Island</h4><p>Switch to the <strong>left (port) side</strong> for the Manhattan skyline view growing ahead of you.</p></div>
+      </div>
+      <p>You don&rsquo;t need to get off at Staten Island. Walk through the terminal and board the next boat back. The whole round trip is 50 minutes plus a few minutes of waiting.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">The Best Version of This Trip</div>
+        <p>Take it in the evening, not the morning. The return journey after dark &mdash; Manhattan&rsquo;s skyline fully lit up, growing toward you &mdash; is described by almost everyone who&rsquo;s done it as the most beautiful free view in the city. If you skip it in the morning, consider adding an evening ride when you return to Manhattan from DUMBO.</p>
+      </div>
+
+      <!-- ===== STOP 3 ===== -->
+      <div class="stop-head" id="charging-bull">
+        <div class="stop-badge">3</div>
+        <div class="stop-info">
+          <h2>Charging Bull</h2>
+          <div class="stop-time"><span>9:00&ndash;9:30 AM</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/26/03/1b/caption.jpg?w=1400&h=-1&s=1" alt="Charging Bull sculpture in Lower Manhattan">
+        <div class="cap">The Charging Bull at 9 AM: almost no queue. By midday, expect 20&ndash;30 minutes to reach the front.</div>
+      </div>
+
+      <p>Walk north on Broadway. The Charging Bull is 3 minutes from Bowling Green subway station, sitting in Evacuation Day Plaza at the top of Bowling Green park. The honest reality: it&rsquo;s smaller than you think. By midday, there&rsquo;s a 20&ndash;30 minute queue just to stand at the front. At 9 AM on a weekday, I&rsquo;ve had it almost to myself.</p>
+
+      <h3>Three Ways to Get Your Photo (Without the Queue)</h3>
+      <div class="numbered-step">
+        <div class="num" style="background:var(--error);">1</div>
+        <div><h4>The Front &mdash; The Queue</h4><p>Classic face-to-face shot. 20&ndash;30 minute wait by mid-morning. Worth skipping if you arrive after 10 AM.</p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num" style="background:var(--info);">2</div>
+        <div><h4>The Elevated Block &mdash; No Wait</h4><p>Step onto the concrete block to the right of the bull. Shoot from above. You get the whole animal without tourist faces at eye level.</p></div>
+      </div>
+      <div class="numbered-step">
+        <div class="num" style="background:var(--success);">3</div>
+        <div><h4>The Footprint Position &mdash; Zero Wait, Best Photo</h4><p>When Fearless Girl originally stood in front of the bull (pre-2018), she left behind embedded footprints in the pavement. Stand in those footprints. Look forward. The bull&rsquo;s face fills your frame. This shot takes 10 seconds and nobody&rsquo;s waiting for it.</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Fearless Girl Moved in 2018</div>
+        <p>The Fearless Girl statue moved to Broad and Wall Streets in 2018. She now stands in front of the New York Stock Exchange. She is <strong>not</strong> next to the Charging Bull anymore &mdash; multiple photos you&rsquo;ll find online are from her original location.</p>
+      </div>
+      <div class="callout callout-mistake">
+        <div class="callout-title">Cobblestone Warning</div>
+        <p>The plaza has genuine cobblestones. They get slippery when wet. Don&rsquo;t wear heels or dress shoes.</p>
+      </div>
+
+      <!-- ===== STOP 4 ===== -->
+      <div class="stop-head" id="wall-street">
+        <div class="stop-badge">4</div>
+        <div class="stop-info">
+          <h2>Wall Street Corridor</h2>
+          <div class="stop-time"><span>9:30&ndash;10:30 AM</span><span class="stop-free">Mostly Free</span></div>
+        </div>
+      </div>
+
+      <p>Walk north on Broadway, then turn right on Wall Street. This 45-minute section covers four things that most visitors either rush or skip entirely.</p>
+
+      <h3>New York Stock Exchange Facade</h3>
+      <p>The trading floor isn&rsquo;t open to the public. You&rsquo;re photographing the columns. Morning light hits this facade from the east before 11 AM &mdash; that&rsquo;s when the shot looks best. The columns glow.</p>
+
+      <h3>Fearless Girl</h3>
+      <p>She&rsquo;s at the corner of Broad and Wall Streets, staring down the NYSE. Her position is actually better than the original &mdash; she&rsquo;s facing a symbol of financial power, which is the whole point. Early morning here is dramatically less crowded than after 10 AM.</p>
+
+      <h3>Federal Hall &mdash; Free, National Park Service</h3>
+      <p>This is the one stop most people walk past without realizing what they&rsquo;re missing. Federal Hall is where George Washington took his first oath as President of the United States, where the first U.S. Congress met, and where the Bill of Rights was drafted. It&rsquo;s free. It&rsquo;s staffed by National Park Service rangers who give tours. The interior has genuine artifacts.</p>
+      <div class="callout callout-mistake">
+        <div class="callout-title">Critical: Federal Hall Is Closed Monday and Tuesday</div>
+        <p>If you&rsquo;re visiting on a Monday or Tuesday, the exterior is still worth a photo (look for the Washington statue on the steps), but you can&rsquo;t go inside.</p>
+      </div>
+
+      <h3>Trinity Church &mdash; Free, Always Open</h3>
+      <p>A Gothic Revival church at the junction of Broadway and Wall Street that was once the tallest building in New York City. What&rsquo;s interesting isn&rsquo;t just the church &mdash; it&rsquo;s the cemetery. Alexander Hamilton is buried on the south side. So are his wife Eliza and their son Philip.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">Best Mid-Morning Quiet Stop in Lower Manhattan</div>
+        <p>The graveyard is one of the few genuinely quiet, shaded spots in Lower Manhattan. I&rsquo;ve sat on a bench there for 20 minutes at 10 AM with the noise from Broadway completely blocked by the church walls. It feels like leaving the city. Every Friday at 1 PM: the church runs a free organ recital (Pipes at One) in the main nave. Worth planning around if you&rsquo;re visiting on a Friday.</p>
+      </div>
+
+      <!-- ===== STOP 5 ===== -->
+      <div class="stop-head" id="911-memorial">
+        <div class="stop-badge">5</div>
+        <div class="stop-info">
+          <h2>The 9/11 Memorial</h2>
+          <div class="stop-time"><span>10:30 AM&ndash;12:00 PM</span><span class="stop-free">Free (Outdoor Pools)</span></div>
+        </div>
+      </div>
+
+      <p>Walk west and north to the World Trade Center site, about 8 minutes from Trinity Church. The outdoor memorial is free and always open. No ticket required to stand at the reflecting pools. The museum is separate, ticketed, and optional.</p>
+
+      <h3>The Outdoor Pools</h3>
+      <p>I&rsquo;ve been here at midday and I&rsquo;ve been here at 10 AM on a Tuesday. These are completely different experiences. Mid-morning before the school groups arrive is genuinely more reflective &mdash; quieter, more space, more time with the names.</p>
+      <div class="callout callout-summary">
+        <div class="callout-title">Two Things to Know</div>
+        <p><strong>The scale surprises everyone.</strong> Photos flatten them. In person, each pool occupies the exact footprint of one of the Twin Towers &mdash; 176 feet on each side. <strong>The sound matters.</strong> The white noise from the waterfalls separates the space from the surrounding city. At 10 AM, when it&rsquo;s not too crowded, the only thing you hear is the water. That&rsquo;s not something any photo conveys.</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">Two Spots Most People Miss</div>
+        <p><strong>Northeast corner of the South Pool</strong> &mdash; on a clear morning, One World Trade Center reflects in the black granite. <strong>The Survivor Tree</strong> in the northeast corner of the memorial plaza &mdash; a Callery pear tree recovered from the rubble, nursed back to health, and replanted here. The original fire damage is still visible at the base. Most visitors walk past it without knowing what it is.</p>
+      </div>
+
+      <div class="bathroom-note">
+        <span class="bn-icon">Restroom</span>
+        <p>There are <strong>no public bathrooms on the memorial plaza itself</strong>. Use Brookfield Place (230 Vesey Street, across West Street) &mdash; Level 1 near PJ Clarke&rsquo;s or Level 2 near Hudson Eats. Clean, free, no purchase required.</p>
+      </div>
+
+      <h3>Should You Visit the Museum?</h3>
+      <div class="table-wrap">
+        <table class="data-table comp-table" style="min-width:420px;">
+          <tr><th></th><th>The Museum</th><th>Just the Pools</th></tr>
+          <tr><td><strong>Cost</strong></td><td>$33/adult</td><td>Free</td></tr>
+          <tr><td><strong>Time</strong></td><td>2.5&ndash;3+ hours</td><td>30&ndash;45 minutes</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Those with a personal connection to 9/11, history lovers, full day visitors</td><td>First-timers with limited time, families with young children</td></tr>
+          <tr><td><strong>Emotional intensity</strong></td><td>High &mdash; bring tissues</td><td>Significant but manageable</td></tr>
+          <tr><td><strong>Closed</strong></td><td>Most Tuesdays</td><td>Never</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-mistake">
+        <div class="callout-title">Don&rsquo;t Plan the Museum AND the Bridge in the Same Afternoon</div>
+        <p>The museum takes 2.5 hours minimum and leaves most people emotionally drained. The bridge takes 45 minutes and requires presence of mind to appreciate. They don&rsquo;t combine well. If you want both: museum in the morning, rest at Stone Street, bridge in late afternoon &mdash; with 2+ hours of buffer between them.</p>
+      </div>
+
+      <!-- ===== STOP 6 ===== -->
+      <div class="stop-head" id="stone-street">
+        <div class="stop-badge">6</div>
+        <div class="stop-info">
+          <h2>Stone Street Lunch</h2>
+          <div class="stop-time"><span>12:00&ndash;1:00 PM</span><span style="font-size:13px;font-weight:700;color:var(--text-secondary);">$$&ndash;$$$</span></div>
+        </div>
+      </div>
+
+      <p>Walk south and east from the memorial area toward Stone Street. It takes about 8 minutes. Stone Street is Manhattan&rsquo;s oldest cobblestone street, paved in 1658 when this was still New Amsterdam. Today it&rsquo;s a narrow, car-free block lined with outdoor tables April through November that fills with finance workers every afternoon &mdash; and somehow doesn&rsquo;t feel touristy despite being directly between Wall Street and the memorial.</p>
+
+      <h3>Where to Eat</h3>
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Best Pizza in FiDi</div>
+          <h4>Adrienne&rsquo;s Old Fashioned Square Pizza</h4>
+          <p>54 Stone Street. Thin-crust, brick-oven, rectangular-cut. Outdoor seating in warm weather. Under $15 for a generous slice.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best Bagels</div>
+          <h4>Leo&rsquo;s Bagels</h4>
+          <p>Hanover Square, one block away. Fresh bagels made in-house all day. Lox and cream cheese. Done.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Most Historic</div>
+          <h4>Fraunces Tavern</h4>
+          <p>54 Pearl Street. NYC&rsquo;s oldest restaurant, open since 1762. Where George Washington bid farewell to his officers. The upstairs museum has the actual room ($7 admission).</p>
+        </div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">Avoid Restaurants Within Two Blocks of the 9/11 Memorial Plaza</div>
+        <p>Overpriced, mediocre, positioned entirely for tourist foot traffic. Walk the 8 minutes to Stone Street.</p>
+      </div>
+
+      <!-- ===== STOP 7 ===== -->
+      <div class="stop-head" id="oculus">
+        <div class="stop-badge">7</div>
+        <div class="stop-info">
+          <h2>The Oculus</h2>
+          <div class="stop-time"><span>1:00&ndash;1:45 PM</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/f4/76/0b/caption.jpg?w=1400&h=-1&s=1" alt="Interior of the Oculus at World Trade Center — white ribbed arches">
+        <div class="cap">The Oculus &mdash; a transit station that&rsquo;s also one of the most photographed interiors in New York. The best shot is from the upper mezzanine along the central axis.</div>
+      </div>
+
+      <p>Santiago Calatrava&rsquo;s extraordinary transportation hub sits directly across from the memorial plaza. A transit station that&rsquo;s also one of the most beautiful buildings in New York. Steel ribs extending 350 feet, a retractable skylight, a cathedral-like interior that happens to connect 12 subway lines and a PATH train.</p>
+
+      <h3>What to Do Inside</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Look up. Give yourself 60 seconds of just looking at the ribs extending overhead.</li>
+        <li><span class="dot"></span>Go to the upper mezzanine level. From the center axis, shoot the full length of the concourse &mdash; the symmetry photo that makes this building look like something from a science fiction film.</li>
+        <li><span class="dot"></span>Find the south corner on the ground level where sunlight hits the floor on a sunny afternoon. The shadows and reflections are stunning between noon and 2 PM.</li>
+      </ul>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Hidden Relic Almost No One Finds</div>
+        <p>Walk to the back-left corner near the E train entrance. You&rsquo;ll find a set of 1970s doors with spray-painted rescue worker markings still visible &mdash; the only original remaining piece of the WTC subway station. It&rsquo;s not labeled. Almost no one finds it. It stops most people cold.</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">The Way of Light</div>
+        <p>On sunny days, the skylight sends a direct beam onto the floor in the early afternoon. If you&rsquo;re here on September 11 at 10:28 AM &mdash; the exact time the second tower collapsed &mdash; the beam aligns with the central axis. Calatrava oriented the entire building to achieve it.</p>
+      </div>
+
+      <h3>Before the Bridge: Optional Detour to the Elevated Acre</h3>
+      <p>Between the Oculus and the Brooklyn Bridge, <strong>55 Water Street</strong> is worth a 20-minute rest stop. Take the escalators up from street level. You&rsquo;ll emerge onto a rooftop park above the Financial District with East River views and the Brooklyn Bridge visible in the distance. It&rsquo;s almost always quiet up here. Most visitors never know it exists. This is where I sit when my feet hurt and I still have the bridge walk ahead.</p>
+
+      <!-- ===== STOP 8 ===== -->
+      <div class="stop-head" id="brooklyn-bridge">
+        <div class="stop-badge">8</div>
+        <div class="stop-info">
+          <h2>The Brooklyn Bridge</h2>
+          <div class="stop-time"><span>3:30&ndash;5:30 PM</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Take the 4/5 or A/C from Fulton Street to Brooklyn Bridge&ndash;City Hall, or walk north on Broadway (about 15 minutes from the Oculus area). The Manhattan entrance is at Centre Street and Park Row, just past City Hall.</p>
+      <p>I&rsquo;ve walked this bridge in the morning (fine), at noon on a weekend (I wouldn&rsquo;t do it again), and at 4 PM in October (the best 45 minutes I&rsquo;ve spent in New York). Late afternoon in fall, the light goes gold. The glass towers of Manhattan catch it and throw it back. The cables frame a city that doesn&rsquo;t need a filter.</p>
+
+      <h3>Before You Start Walking</h3>
+      <div class="table-wrap">
+        <table class="data-table rules-table" style="min-width:400px;">
+          <tr><th>Rule</th><th>Why</th></tr>
+          <tr><td><strong>Stay on the south side</strong> (left heading to Brooklyn, right returning)</td><td>The north side is the bike/scooter lane. Cyclists move fast. Don&rsquo;t stand in it.</td></tr>
+          <tr><td><strong>Don&rsquo;t stop in the middle of traffic flow</strong></td><td>Step to the sides of the walkway for photos &mdash; don&rsquo;t block the current</td></tr>
+          <tr><td><strong>Don&rsquo;t climb the granite tower bases</strong></td><td>NYPD issues summonses. It also creates gridlock behind you.</td></tr>
+          <tr><td><strong>The first 100 yards have the worst light and the most people</strong></td><td>Keep walking until you&rsquo;re past the Manhattan-side tower before stopping</td></tr>
+        </table>
+      </div>
+
+      <h3>Where to Photograph the Bridge</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">From the Bridge Itself</div>
+          <ul class="card-list"><li>The cable shot: stand on the south walkway, look straight up through the suspension cables</li><li>The skyline shot: turn and face Manhattan from anywhere on the span</li></ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Better Shots From Off the Bridge</div>
+          <ul class="card-list"><li>Brooklyn Bridge Park (Pebble Beach): full bridge span visible above and Manhattan across the river</li><li>The Brooklyn Heights Promenade: 20 minutes from DUMBO, worth it if you have time</li></ul>
+        </div>
+      </div>
+      <div class="callout callout-local">
+        <div class="callout-title">Common Mix-Up</div>
+        <p>The famous "bridge framed by brick buildings" photo from Washington Street in DUMBO is of the <strong>Manhattan Bridge</strong>, not the Brooklyn Bridge. Both bridges are visible from DUMBO, but that specific shot uses the Manhattan Bridge arch. It&rsquo;s a beautiful photo &mdash; just know what you&rsquo;re photographing.</p>
+      </div>
+
+      <!-- ===== STOP 9 ===== -->
+      <div class="stop-head" id="dumbo">
+        <div class="stop-badge">9</div>
+        <div class="stop-info">
+          <h2>DUMBO</h2>
+          <div class="stop-time"><span>5:00&ndash;8:00 PM</span><span class="stop-free">Free (pizza extra)</span></div>
+        </div>
+      </div>
+
+      <p>Exit the bridge on the Brooklyn side and walk down the slope to Washington Street. DUMBO is what happens when you take a former industrial neighborhood under two bridges, add cobblestones, art galleries, and very good pizza, and let it become one of the most photogenic places in New York.</p>
+
+      <h3>What to Do</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span><strong>The Washington Street shot</strong> &mdash; look north up Washington Street toward the Manhattan Bridge. On a clear day, the Empire State Building is perfectly framed in the arch. In late afternoon the composition still works, with different light.</li>
+        <li><span class="dot"></span><strong>Pebble Beach</strong> &mdash; the small gravel beach directly below the Brooklyn Bridge. Sit on the rocks with Manhattan across the water, the bridge overhead, and the light changing. This is where I&rsquo;d tell you to end the day.</li>
+        <li><span class="dot"></span><strong>Jane&rsquo;s Carousel</strong> &mdash; the restored 1922 carousel in a glass pavilion at the water&rsquo;s edge. Open seasonally, $3 to ride. At night it&rsquo;s lit from inside and reflects off the water.</li>
+      </ul>
+
+      <h3>Pizza: The Actual Debate</h3>
+      <div class="table-wrap">
+        <table class="data-table comp-table" style="min-width:420px;">
+          <tr><th></th><th>Juliana&rsquo;s (58 Front Street)</th><th>Grimaldi&rsquo;s (1 Front Street)</th></tr>
+          <tr><td><strong>Wait</strong></td><td>Usually shorter</td><td>Often longer</td></tr>
+          <tr><td><strong>Oven</strong></td><td>Coal-fired</td><td>Coal-fired</td></tr>
+          <tr><td><strong>Heritage</strong></td><td>Original Grimaldi&rsquo;s location (Patsy Grimaldi sold; this is the original space)</td><td>The new Grimaldi&rsquo;s in the old original location</td></tr>
+          <tr><td><strong>Cash only?</strong></td><td>No</td><td>Yes</td></tr>
+          <tr><td><strong>My take</strong></td><td>Slightly shorter lines, equally excellent pizza</td><td>Worth it if the line is under 30 minutes</td></tr>
+        </table>
+      </div>
+
+      <div class="update-note">
+        <strong>2026 Update:</strong> The Tin Building by Jean-Georges (South Street Seaport) permanently closed in early 2026. Any guide still recommending it is out of date. For food in the area, Stone Street (Adrienne&rsquo;s, Fraunces Tavern) and DUMBO (Juliana&rsquo;s, Grimaldi&rsquo;s) are the reliable options.
+      </div>
+
+      <!-- HOW TO END THE DAY -->
+      <h2 id="end-of-day">How to End the Day</h2>
+      <p>After you cross the Brooklyn Bridge, after the pizza, walk to Pebble Beach and sit on the rocks. It&rsquo;s the small gravel beach directly below the bridge in Brooklyn Bridge Park. You can hear the traffic on the bridge above you. Manhattan is 1,000 feet away across the water. The light, if your timing is right, is turning the glass towers orange and pink.</p>
+      <p>Nobody planned to be there. I found it by wandering after the bridge crossing and sat down because my feet hurt. I stayed for 45 minutes. The couple next to me had been there for an hour.</p>
+      <p>This is what the day is building toward. Not a restaurant, not a photo spot &mdash; just the city from the water, at the end of a day spent inside its history and its architecture and its impossible vitality. That&rsquo;s the ending.</p>
+
+      <hr class="divider-rule">
+
+      <!-- HIDDEN GEMS -->
+      <h2 id="hidden-gems">Hidden Things Most People Miss</h2>
+      <p>These are all within 2&ndash;5 minutes of the main route and take almost no time. I&rsquo;d include all of them.</p>
+      <div class="gem-list">
+        <div class="gem"><h4>The Charging Bull Footprints</h4><p>At the spot where Fearless Girl originally stood, small bronze footprints are embedded in the pavement. Stand in them. Look toward the bull. Zero people waiting for this shot.</p></div>
+        <div class="gem"><h4>The Barthman Sidewalk Clock (Broadway at Maiden Lane)</h4><p>A working clock embedded flush into the sidewalk. Made in 1896. Thousands of people step over it every day. Walk past this on your way from Wall Street toward the WTC. It takes 10 seconds to acknowledge.</p></div>
+        <div class="gem"><h4>The Oculus Rescue Doors</h4><p>Back-left corner of the Oculus near the E train entrance. A set of 1970s doors with spray-painted rescue worker markings &mdash; the only original piece of the WTC subway station that survived. Not labeled. Almost no one finds it.</p></div>
+        <div class="gem"><h4>Trinity Church Graveyard Benches</h4><p>Hamilton&rsquo;s grave is on the south side. But the benches are the real reason to come. Broadway is 20 feet away; inside the graveyard walls you can hear almost nothing. Best mid-morning quiet stop in Lower Manhattan.</p></div>
+        <div class="gem"><h4>The Elevated Acre (55 Water Street)</h4><p>Escalators from street level take you to a rooftop park with East River views and Brooklyn Bridge sightlines. Free, almost always empty, genuinely beautiful.</p></div>
+        <div class="gem"><h4>National Museum of the American Indian</h4><p>Inside the Alexander Hamilton U.S. Custom House at Bowling Green &mdash; a free Smithsonian-affiliated museum in one of the most spectacular Beaux-Arts buildings in the city. Worth 30&ndash;45 minutes if American history is your thing.</p></div>
+      </div>
+
+      <!-- ADJUST FOR TRAVEL STYLE -->
+      <h2 id="travel-style">How to Adjust for Your Travel Style</h2>
+      <div class="style-cards">
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">5 Hours</span>Arrived Late Morning</div>
+          <p>Skip the ferry. Battery Park is a 10-minute starting point, then move directly through: Charging Bull &rarr; Wall Street &rarr; 9/11 Memorial pools (not museum) &rarr; Stone Street lunch &rarr; Oculus &rarr; Brooklyn Bridge &rarr; Pebble Beach.</p>
+        </div>
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">8 Hours</span>Full Day</div>
+          <p>Add the Staten Island Ferry in the morning, Federal Hall and Trinity Church properly, the Elevated Acre rest stop, and DUMBO pizza for dinner.</p>
+        </div>
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">12 Hours</span>Committed Day</div>
+          <p>Everything above, plus the 9/11 Museum as the day&rsquo;s emotional anchor, Fraunces Tavern for a historical drink, and the bridge crossing again after dark.</p>
+        </div>
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">Families</span>With Kids</div>
+          <p>Skip the 9/11 Museum and Federal Hall interior. Add: SeaGlass Carousel at Battery Park, Jane&rsquo;s Carousel in DUMBO, Brooklyn Bridge Park playground at Pier 6.</p>
+        </div>
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">Photographers</span></div>
+          <p>Start at 7:30 AM (Battery Park harbor, morning light). End at sunset at Pebble Beach. Bridge crossing within 90 minutes of sunset. Overcast days are good for the 9/11 Memorial &mdash; no glare on the black granite.</p>
+        </div>
+        <div class="style-card">
+          <div class="sc-head"><span class="sc-hours">History Lovers</span></div>
+          <p>Add: Federal Hall, Fraunces Tavern Museum upstairs, Trinity Church cemetery, and the National Museum of the American Indian at Bowling Green. You could spend a full day without crossing the bridge.</p>
+        </div>
+      </div>
+
+      <!-- SEASONAL NOTES -->
+      <h2 id="seasonal">Seasonal Notes</h2>
+      <div class="season-grid">
+        <div class="season-card">
+          <h4>Fall (September&ndash;October) &mdash; Best Overall</h4>
+          <p>Crowds drop 30&ndash;40% after Labor Day. Light is golden. Temperatures are comfortable for walking 4+ miles.</p>
+          <ul><li>October afternoon on the Brooklyn Bridge: there&rsquo;s no better version of this itinerary</li></ul>
+        </div>
+        <div class="season-card">
+          <h4>Summer (June&ndash;August)</h4>
+          <p>Crowds peak. The Charging Bull line is long all day. Strategy: start at 7:30 AM and do outdoor stops before 10 AM, then resume after 4 PM.</p>
+          <ul><li>Oculus (always cool)</li><li>Brookfield Place Winter Garden (free)</li><li>9/11 Museum (climate control)</li><li>Trinity Church (open during visiting hours)</li></ul>
+        </div>
+        <div class="season-card">
+          <h4>Winter (November&ndash;March)</h4>
+          <p>Dramatically fewer crowds. The Charging Bull may have snow on it &mdash; a genuinely rare and excellent photo. The 9/11 Memorial in cold, quiet air has a different quality.</p>
+          <ul><li>Sunset happens as early as 4:30 PM in December &mdash; plan the bridge crossing by 3 PM or walk in the dark (also beautiful)</li></ul>
+        </div>
+        <div class="season-card">
+          <h4>Rainy Day</h4>
+          <p>The Charging Bull, Battery Park, and the bridge are worse in heavy rain. The good news:</p>
+          <ul><li>The Oculus becomes a destination rather than a pass-through</li><li>The 9/11 Museum is excellent in rain</li><li>Brookfield Place has a stunning covered atrium</li></ul>
+        </div>
+      </div>
+
+      <!-- BATHROOM MAP -->
+      <h2 id="bathrooms">Bathrooms: The Full Map</h2>
+      <p>Nobody talks about this enough, and nothing ruins a day in Lower Manhattan faster than needing a bathroom with no plan.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:480px;">
+          <tr><th>Location</th><th>Where Exactly</th><th>Notes</th></tr>
+          <tr><td><strong>Battery Park</strong></td><td>Battery Comfort Station (Battery Pl &amp; Washington St)</td><td>Free. Use before leaving the park.</td></tr>
+          <tr><td><strong>Staten Island Ferry</strong></td><td>Inside both terminals</td><td>On the ferry itself: functional but basic</td></tr>
+          <tr><td><strong>Wall Street area</strong></td><td>Federal Hall (26 Wall St)</td><td>Open Wed&ndash;Sun only</td></tr>
+          <tr><td><strong>9/11 Memorial area</strong></td><td>Brookfield Place, Level 1 (by PJ Clarke&rsquo;s)</td><td>Best option. Free, clean, no purchase needed</td></tr>
+          <tr><td><strong>9/11 Memorial area</strong></td><td>Brookfield Place, Level 2 (Hudson Eats)</td><td>Same building, equally good</td></tr>
+          <tr><td><strong>WTC area</strong></td><td>Oculus (Westfield section)</td><td>Usually open, occasionally closed</td></tr>
+          <tr><td><strong>Brooklyn Bridge Park</strong></td><td>Orange building, Pier 2</td><td>Multiple locations throughout the park</td></tr>
+          <tr><td><strong>DUMBO</strong></td><td>Time Out Market</td><td>Clean and accessible</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-mistake">
+        <div class="callout-title">The Memorial Plaza Has No Bathrooms</div>
+        <p>Not a rumor &mdash; there are genuinely none on the plaza. Go before you arrive (Brookfield Place is one block away) or immediately after.</p>
+      </div>
+
+      <!-- REST STOPS -->
+      <h2 id="rest-stops">The Best Rest Stops Along the Route</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:480px;">
+          <tr><th>Rest Stop</th><th>Where</th><th>Best For</th><th>Notes</th></tr>
+          <tr><td><strong>The Elevated Acre</strong></td><td>55 Water Street (escalators from street)</td><td>Mid-day reset, East River views</td><td>Almost always empty. Best-kept secret in FiDi.</td></tr>
+          <tr><td><strong>Trinity Church Graveyard</strong></td><td>Broadway at Wall Street</td><td>Quiet break, shade, history</td><td>Benches available. Street noise completely blocked.</td></tr>
+          <tr><td><strong>Battery Park (southern benches)</strong></td><td>Tip of Manhattan</td><td>Morning harbor views</td><td>Best before 9 AM when it&rsquo;s quiet</td></tr>
+          <tr><td><strong>Pebble Beach</strong></td><td>Brooklyn Bridge Park</td><td>End-of-day unwinding</td><td>Gravel beach, bridge overhead, skyline ahead</td></tr>
+          <tr><td><strong>Stone Street outdoor tables</strong></td><td>Stone Street, FiDi</td><td>Lunch or afternoon break</td><td>Outdoor only April&ndash;November</td></tr>
+        </table>
+      </div>
+
+      <!-- COMMON MISTAKES -->
+      <h2 id="mistakes">Common Mistakes &mdash; And How to Avoid Them</h2>
+      <div class="numbered-step"><div class="num">1</div><div><h4>Arriving at the Charging Bull at Noon</h4><p>The queue for a photo at the front can reach 30 minutes by midday. Arrive before 9:30 AM. If you can&rsquo;t, use the footprint position &mdash; same photo, no wait.</p></div></div>
+      <div class="numbered-step"><div class="num">2</div><div><h4>Paying for the Staten Island Ferry</h4><p>Multiple people every day buy &ldquo;tickets&rdquo; from vendors near the terminal. The ferry is completely free. Walk straight through the terminal doors.</p></div></div>
+      <div class="numbered-step"><div class="num">3</div><div><h4>Not Booking 9/11 Museum Tickets in Advance</h4><p>Timed tickets sell out, especially on weekends and summer weekdays. The outdoor pools are always free, but if the museum is your plan, book online before your trip.</p></div></div>
+      <div class="numbered-step"><div class="num">4</div><div><h4>Visiting on a Monday or Tuesday if You Want Federal Hall</h4><p>It&rsquo;s closed both days. The exterior is still worth seeing; the interior is not accessible.</p></div></div>
+      <div class="numbered-step"><div class="num">5</div><div><h4>Planning the Museum AND the Bridge in the Same Afternoon</h4><p>The museum takes 2.5 hours minimum and leaves most people emotionally drained. If you want both: museum in the morning, rest at Stone Street, bridge in late afternoon &mdash; with 2+ hours of buffer.</p></div></div>
+      <div class="numbered-step"><div class="num">6</div><div><h4>Walking in the Bike Lane on the Bridge</h4><p>The bike/scooter lane is on the north side of the bridge walkway. Cyclists and e-bikes don&rsquo;t stop. Stay on the south side at all times.</p></div></div>
+      <div class="numbered-step"><div class="num">7</div><div><h4>Going to the Seaport Specifically for the Tin Building</h4><p>The Tin Building by Jean-Georges closed permanently in early 2026. The Seaport area is still worth a 15-minute walk for the architecture and East River views, but it&rsquo;s no longer a food destination.</p></div></div>
+      <div class="numbered-step"><div class="num">8</div><div><h4>Underestimating the Walking Distance</h4><p>This itinerary covers 3.5&ndash;4.5 miles depending on detours. Wear shoes that are broken in. Real ones, not &ldquo;these look like walking shoes.&rdquo;</p></div></div>
+
+      <!-- WHAT TO BRING -->
+      <h2 id="what-to-bring">Quick Reference: What to Bring</h2>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Bring These</div>
+          <ul class="check-items">
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Comfortable, broken-in walking shoes (cobblestones throughout)</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Water bottle (refillable &mdash; fountains in Battery Park and Brooklyn Bridge Park)</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Sunscreen and hat (summer &mdash; FiDi streets have minimal shade)</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Windproof layer (Brooklyn Bridge is exposed)</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pre-booked 9/11 Museum tickets if visiting inside</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Contactless payment or OMNY card for the subway</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Leave Behind</div>
+          <ul class="check-items">
+            <li><span class="check-icon" style="background:rgba(220,38,38,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>The &ldquo;Statue of Liberty ferry ticket&rdquo; someone tries to sell you outside the terminal</li>
+            <li><span class="check-icon" style="background:rgba(220,38,38,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Heels or new shoes not broken in</li>
+            <li><span class="check-icon" style="background:rgba(220,38,38,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Any expectation of finding good food directly beside the 9/11 Memorial</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">FAQ: Lower Manhattan Walking Itinerary</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>How long does it take to walk Lower Manhattan?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">A focused half-day covering the Charging Bull, Wall Street, 9/11 Memorial pools, and Oculus takes about 4&ndash;5 hours. Adding the Brooklyn Bridge and DUMBO extends it to a full 8&ndash;10 hour day covering roughly 4.5 miles.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best time to visit Lower Manhattan?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">September and October are ideal &mdash; crowds are 30&ndash;40% lower than August, temperatures are comfortable for extended walking, and the light in late afternoon is the best of the year. Avoid midday on summer weekends at the Charging Bull and Brooklyn Bridge.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Staten Island Ferry really free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. Completely free, 24/7, 365 days a year. No ticket, no app, no tap. Walk in. Anyone selling you a &ldquo;ticket&rdquo; outside the terminal is running a scam.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I do this Lower Manhattan itinerary without a car?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Entirely. Take the 4 or 5 train to Bowling Green to start. The whole route is on foot. Return from DUMBO on the A, C, or F train from High Street station.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I visit the 9/11 Museum or just the memorial pools?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you have 3 hours and a personal connection to 9/11, the museum is genuinely worth it. If you have limited time or are traveling with young children, the outdoor pools alone are moving and significant &mdash; and free. Don&rsquo;t feel like you haven&rsquo;t &ldquo;done it properly&rdquo; if you skip the museum.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Brooklyn Bridge walk worth it?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Every time. Walk it in late afternoon when the crowds thin and the light is best. It&rsquo;s 1.1 miles one way &mdash; about 45 minutes at a normal pace with stops.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best direction to walk the Brooklyn Bridge?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Both directions work. Walking from Brooklyn to Manhattan keeps the skyline in front of you the whole time. Walking from Manhattan to Brooklyn works fine if you turn back at the towers. The direction matters less than the time of day.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where are the public bathrooms in Lower Manhattan?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Battery Comfort Station in Battery Park, Brookfield Place (Level 1 and 2, across from the 9/11 Memorial &mdash; free and clean), the Oculus, and Brooklyn Bridge Park (multiple locations). The 9/11 Memorial plaza itself has no bathrooms.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Federal Hall free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, free, operated by the National Park Service. Closed Mondays and Tuesdays. Open Wednesday through Sunday.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What happened to the Tin Building by Jean-Georges?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It closed permanently in early 2026 after significant financial losses. Any guide recommending it is outdated. For food in the area, Stone Street (Adrienne&rsquo;s pizza, Fraunces Tavern) and DUMBO (Juliana&rsquo;s, Grimaldi&rsquo;s) are the reliable options.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Ultimate Midtown Manhattan Walking Itinerary: Times Square to Central Park</a></li>
+      <li><a href="best-walking-tours-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Walking Tours in NYC: 9 Tours Actually Worth Booking</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty &amp; Ellis Island (2026 Complete Guide)</a></li>
+      <li><a href="nyc-tourist-scams.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Scams Tourists Still Fall For (And How to Walk Right Past Them)</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC (That Are Actually Worth Your Time)</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop/docHeight)*100)) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+</script>
+</body>
+</html>
