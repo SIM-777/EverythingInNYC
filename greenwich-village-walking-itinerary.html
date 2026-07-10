@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenwich Village & West Village Walking Itinerary: The Ultimate Self-Guided Route | EverythingInNYC</title>
+<meta name="description" content="A complete self-guided walking itinerary through Greenwich Village and the West Village — 17 stops from Washington Square Park to the Hudson River, with hidden gems, food stops, and what most guides miss.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Stop header */
+  .stop-head{
+    display:flex;align-items:center;gap:14px;
+    margin:48px 0 16px;padding-top:36px;
+    border-top:1px solid var(--border);
+  }
+  .stop-head:first-of-type{border-top:none;margin-top:28px;padding-top:0;}
+  .stop-badge{
+    width:48px;height:48px;border-radius:14px;
+    background:var(--navy);color:#fff;
+    font-family:var(--font-head);font-weight:800;font-size:18px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .stop-info h2{margin:0 0 4px;font-size:25px;scroll-margin-top:90px;}
+  .stop-meta{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;
+  }
+  .stop-time{
+    background:rgba(15,23,42,0.07);color:var(--navy);
+    font-weight:700;padding:3px 10px;border-radius:20px;
+  }
+  .stop-free{background:rgba(22,163,74,0.12);color:#15803D;font-weight:700;padding:3px 10px;border-radius:20px;}
+
+  /* Section image */
+  .section-img{margin:22px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:420px;object-fit:cover;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Local tip box */
+  .local-tip{
+    background:#FFF9E8;border-left:4px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    padding:13px 17px;margin:16px 0;font-size:15.5px;
+  }
+  .local-tip .lt-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    color:#92620A;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;
+  }
+  .local-tip p{margin:0;}
+
+  /* Photo tip */
+  .photo-tip{
+    background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.2);
+    border-radius:12px;padding:13px 16px;margin:14px 0;font-size:15px;
+  }
+  .photo-tip .pt-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    color:var(--info);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px;
+  }
+  .photo-tip p{margin:0;}
+
+  /* Bathroom note */
+  .bathroom-note{
+    background:#EFF6FF;border-left:4px solid var(--info);
+    border-radius:0 12px 12px 0;padding:13px 17px;margin:16px 0;
+    display:flex;align-items:flex-start;gap:10px;
+  }
+  .bathroom-note .bn-icon{
+    font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    background:var(--info);color:#fff;padding:3px 8px;border-radius:6px;
+    flex:none;margin-top:2px;white-space:nowrap;
+  }
+  .bathroom-note p{font-size:15px;color:var(--navy);margin:0;}
+
+  /* Route list */
+  .route-list{
+    list-style:none;padding:0;margin:18px 0;
+    display:grid;grid-template-columns:1fr;gap:5px;
+  }
+  @media(min-width:560px){.route-list{grid-template-columns:1fr 1fr;}}
+  .route-list li{
+    display:flex;align-items:flex-start;gap:9px;
+    font-size:15px;padding:6px 0;
+  }
+  .route-list li .rn{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    background:var(--navy);color:#fff;
+    width:24px;height:24px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+
+  /* Comedy Cellar info table */
+  .info-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
+  .info-table th{background:var(--navy-soft);color:#fff;padding:8px 14px;text-align:left;font-family:var(--font-head);font-weight:700;}
+  .info-table td{padding:9px 14px;border-bottom:1px solid var(--border);}
+  .info-table td:first-child{font-weight:700;color:var(--navy);width:40%;background:rgba(15,23,42,0.02);}
+  .info-table tr:last-child td{border-bottom:none;}
+
+  /* Hidden gem list */
+  .gem-list{display:flex;flex-direction:column;gap:12px;margin:18px 0;}
+  .gem{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-left:3px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    padding:14px 18px;
+  }
+  .gem h4{margin:0 0 5px;font-size:16.5px;color:var(--navy);}
+  .gem p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Variation cards */
+  .variation-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+  @media(min-width:560px){.variation-cards{grid-template-columns:1fr 1fr;}}
+  .var-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 16px;
+  }
+  .var-card .vc-label{
+    font-family:var(--font-head);font-weight:800;font-size:12.5px;
+    letter-spacing:0.04em;text-transform:uppercase;
+    color:var(--accent-ink);background:rgba(255,193,7,0.18);
+    padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;
+  }
+  .var-card h4{margin:0 0 8px;font-size:17px;color:var(--navy);}
+  .var-card p{font-size:14.5px;color:var(--text-secondary);margin-bottom:0;}
+
+  /* Seasonal grid */
+  .season-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+  @media(min-width:560px){.season-grid{grid-template-columns:1fr 1fr;}}
+  .season-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;}
+  .season-card h4{margin:0 0 8px;font-size:16px;color:var(--navy);}
+  .season-card p{font-size:14.5px;color:var(--text-secondary);margin-bottom:0;}
+
+  /* Mistakes */
+  .mistake-item{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-left:3px solid var(--error);
+    border-radius:0 12px 12px 0;
+    padding:13px 18px;margin-bottom:10px;
+  }
+  .mistake-item h4{margin:0 0 5px;font-size:16px;color:var(--navy);}
+  .mistake-item p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Overview table */
+  .ov-table td:first-child{font-weight:700;color:var(--navy);width:40%;background:rgba(15,23,42,0.02);}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>Greenwich Village &amp; West Village Walking Itinerary: The Ultimate Self-Guided Route</h1>
+      <div class="article-meta">
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 16 minute read</span>
+        <span>&middot;</span>
+        <span>&#128694;&#65039; 2.5&ndash;3.5 miles</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/a9/63/ef/caption.jpg?w=1100&h=-1&s=1" alt="Greenwich Village and West Village streets — brownstones and tree-lined blocks in Manhattan">
+
+    <div class="article-body">
+      <p>Most people who visit Greenwich Village spend 45 minutes in Washington Square Park, find the building from Friends, and leave thinking they&rsquo;ve seen it.</p>
+      <p>They haven&rsquo;t.</p>
+      <p>The Village &mdash; and particularly the West Village, the tangle of non-grid streets that runs west of Sixth Avenue &mdash; is one of the few places in Manhattan where the best experiences aren&rsquo;t landmarks at all. They&rsquo;re a curved block that stops you mid-stride. A walled garden you almost missed behind a church. A cobblestone alley where some of the most important names in American art history once worked, behind a gate that looks private but isn&rsquo;t.</p>
+      <p>This guide is built for the version of this neighborhood that most itineraries skip entirely. It covers both Greenwich Village (roughly east of Sixth Avenue, where the grid still applies) and the West Village (where it doesn&rsquo;t), in a single connected route that moves logically, starts at the right time of day, ends somewhere memorable, and doesn&rsquo;t require you to retrace a single step.</p>
+
+      <!-- OVERVIEW TABLE -->
+      <h2 id="overview">Quick Overview</h2>
+      <div class="info-table-wrap">
+        <table class="data-table ov-table" style="min-width:360px;">
+          <tr><td>Neighborhoods</td><td>Greenwich Village + West Village</td></tr>
+          <tr><td>Total Distance</td><td>2.5&ndash;3.5 miles depending on detours</td></tr>
+          <tr><td>Walking Time</td><td>50&ndash;60 minutes (no stops)</td></tr>
+          <tr><td>Full Day Estimate</td><td>6&ndash;8 hours with all stops</td></tr>
+          <tr><td>Half Day Estimate</td><td>3&ndash;4 hours condensed</td></tr>
+          <tr><td>Difficulty</td><td>Easy &mdash; flat, but several cobblestone sections</td></tr>
+          <tr><td>Best Season</td><td>Spring (April&ndash;May) and Fall (Sept&ndash;Oct)</td></tr>
+          <tr><td>Best Time of Day</td><td>Start before 9 AM for the park; afternoon for the western streets</td></tr>
+          <tr><td>Subway Access</td><td>A/C/E/B/D/F/M to West 4th St; or 1 train to Christopher St</td></tr>
+          <tr><td>Restrooms</td><td>Washington Square Park, Jefferson Market Library, Pier 45</td></tr>
+          <tr><td>Best For</td><td>Couples, photographers, history lovers, food lovers, solo travelers, first-time Village visitors</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Building a Longer NYC Itinerary?</div>
+        <p>This Village route pairs naturally with a Midtown day or a Lower Manhattan morning. Read our <a href="ultimate-nyc-itinerary-guide.html">complete guide to planning a perfect NYC itinerary</a> to connect the days logically.</p>
+      </div>
+
+      <!-- ROUTE AT A GLANCE -->
+      <h2 id="the-route">The Route at a Glance</h2>
+      <p>This walk moves from southeast to northwest &mdash; starting at Washington Square Park, working through the hidden streets, north to Stonewall, then looping through the heart of the West Village before finishing at the Hudson River. Every step flows logically into the next with no backtracking.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Start</div><p>Washington Square Park &mdash; A/C/E/B/D/F/M to West 4th St</p></div>
+        <div class="card"><div class="card-tag">End</div><p>White Horse Tavern or Hudson River Park (Pier 45)</p></div>
+        <div class="card"><div class="card-tag">Shortcuts</div><p>Skip the riverfront to save 40 minutes; skip Bleecker Street food stops to save 30 minutes</p></div>
+        <div class="card"><div class="card-tag">Extensions</div><p>Continue north to Little Island (Pier 55) or west into the Meatpacking District</p></div>
+      </div>
+
+      <ul class="route-list">
+        <li><span class="rn">1</span>Washington Square Park + Arch</li>
+        <li><span class="rn">2</span>Washington Mews</li>
+        <li><span class="rn">3</span>MacDougal Street (Comedy Cellar, Caffe Reggio, Cafe Wha?)</li>
+        <li><span class="rn">4</span>Minetta Lane</li>
+        <li><span class="rn">5</span>Patchin Place</li>
+        <li><span class="rn">6</span>Jefferson Market Library + Garden</li>
+        <li><span class="rn">7</span>Gay Street</li>
+        <li><span class="rn">8</span>Christopher Street &rarr; Stonewall National Monument</li>
+        <li><span class="rn">9</span>Grove Street &rarr; Grove Court</li>
+        <li><span class="rn">10</span>90 Bedford Street (Friends building)</li>
+        <li><span class="rn">11</span>Commerce Street (Cherry Lane Theatre)</li>
+        <li><span class="rn">12</span>75&frac12; Bedford Street &mdash; narrowest house</li>
+        <li><span class="rn">13</span>66 Perry Street &mdash; Carrie Bradshaw&rsquo;s brownstone</li>
+        <li><span class="rn">14</span>The Garden at St. Luke in the Fields</li>
+        <li><span class="rn">15</span>White Horse Tavern</li>
+        <li><span class="rn">16</span>Bleecker Street food corridor</li>
+        <li><span class="rn">17</span>Hudson River Park / Pier 45 (optional ending)</li>
+      </ul>
+
+      <!-- ===== STOP 1 ===== -->
+      <div class="stop-head" id="washington-square">
+        <div class="stop-badge">1</div>
+        <div class="stop-info">
+          <h2>Washington Square Park</h2>
+          <div class="stop-meta"><span class="stop-time">20&ndash;40 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/12/5d/e7/walkway.jpg?w=1100&h=-1&s=1" alt="Washington Square Park walkway with arch in background">
+        <div class="cap">Washington Square Park before 9 AM &mdash; the arch photographs cleanly without crowds, and the light is exactly right.</div>
+      </div>
+
+      <p>The arch is one of the most recognized structures in New York, and it looks exactly like you hope it will &mdash; white marble, 77 feet tall, sitting at the southern end of Fifth Avenue where the road runs out. What&rsquo;s easy to miss is that the park around it changes completely depending on when you arrive.</p>
+      <p>Before 9 AM on a weekday, it&rsquo;s genuinely peaceful. A few dog walkers. Students crossing toward NYU. The fountain not yet turned on. The arch photographs cleanly without anyone in the frame. By 10 AM, there are performers setting up. By noon on a summer weekend, the place can feel like a festival whether or not one is happening.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Why It&rsquo;s the Right Place to Start</div>
+        <p>The A/C/E/B/D/F/M lines deposit you directly at the south end of the park. The neighborhood geography radiates from here. Starting at the park orients you before diving into streets that don&rsquo;t follow any logical pattern.</p>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card"><h4>Don&rsquo;t Miss</h4><p>The chess tables in the southwest corner, where games run all day every day. This is where the Village&rsquo;s &ldquo;living room&rdquo; quality is most visible &mdash; regulars, students, and visitors sharing the same concrete tables.</p></div>
+        <div class="card"><h4>Good Time to Visit</h4><p>Before 9 AM for the arch photo; 10 AM&ndash;noon for maximum people-watching energy. Avoid weekend afternoons in summer &mdash; the crowd density undermines the experience.</p></div>
+      </div>
+
+      <div class="photo-tip">
+        <div class="pt-label">Best Photo Spot</div>
+        <p>Stand at the central fountain facing north &mdash; the arch frames Fifth Avenue stretching behind it. For a different composition, stand directly under the arch and shoot straight up through the archway.</p>
+      </div>
+
+      <!-- ===== STOP 2 ===== -->
+      <div class="stop-head" id="washington-mews">
+        <div class="stop-badge">2</div>
+        <div class="stop-info">
+          <h2>Washington Mews</h2>
+          <div class="stop-meta"><span class="stop-time">10&ndash;15 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Walk out the park&rsquo;s north entrance and one short block up Fifth Avenue, then turn onto 8th Street and left into the mews. You&rsquo;ll see a chain across the entrance that makes the whole thing look private. Walk past the chain. It isn&rsquo;t.</p>
+      <p>Washington Mews is a cobblestone alley of converted carriage houses that now serve as NYU offices &mdash; roughly 150 feet long and looks like someone transplanted a street from a European village into the middle of Manhattan. Flower boxes in the windows, small-scale buildings, cobblestones, zero traffic. The light in early morning is soft and even.</p>
+
+      <div class="local-tip">
+        <div class="lt-label">Local Tip</div>
+        <p>Go before 10 AM. Once NYU activity picks up it fills with people photographing it &mdash; early morning gives you a clear composition and a quiet, European-alley feeling that disappears once the crowds arrive.</p>
+      </div>
+
+      <!-- ===== STOP 3 ===== -->
+      <div class="stop-head" id="macdougal">
+        <div class="stop-badge">3</div>
+        <div class="stop-info">
+          <h2>MacDougal Street</h2>
+          <div class="stop-meta"><span class="stop-time">15&ndash;20 min walking; 90 min with Caffe Reggio</span></div>
+        </div>
+      </div>
+
+      <p>Walk back to Fifth Avenue, south a block, then left onto MacDougal. This is the neighborhood&rsquo;s cultural spine &mdash; a single street that contains more concentrated music and comedy history than almost anywhere in New York.</p>
+
+      <h3>Comedy Cellar (117 MacDougal)</h3>
+      <p>The basement room under the Olive Tree Caf&eacute; is where modern American stand-up comedy was effectively developed. The room is small, close, and exactly the right size &mdash; the kind of space where no seat is bad and the comedian is close enough to look you in the eye. Dave Chappelle, Chris Rock, Amy Schumer, Jerry Seinfeld, Dave Attell &mdash; the list of regular performers and surprise drop-ins is essentially a catalogue of the past 30 years of major American comedy.</p>
+
+      <div class="table-wrap">
+        <table class="data-table info-table" style="min-width:380px;">
+          <tr><th>Detail</th><th>Information</th></tr>
+          <tr><td>Tickets</td><td>~$18 per person</td></tr>
+          <tr><td>Drinks minimum</td><td>Two drinks required (~$12&ndash;15 each)</td></tr>
+          <tr><td>Budget total</td><td>$45&ndash;55 per person</td></tr>
+          <tr><td>Phone policy</td><td>Phones sealed in envelope before show &mdash; comply without complaint</td></tr>
+          <tr><td>Reservations</td><td>Book online for weekends; weeknights can be walk-up 30&ndash;45 min before</td></tr>
+          <tr><td>Best time</td><td>Early evening show (6:45 PM) &mdash; you get out while dinner options are running</td></tr>
+        </table>
+      </div>
+
+      <h3>Caffe Reggio (119 MacDougal)</h3>
+      <p>Open since 1927 and claims to have introduced the cappuccino machine to America. The original machine is still on the wall. The tables are from 1902. The espresso is good, and the experience of sitting in a room that genuinely hasn&rsquo;t changed in decades is the main reason to be here. Order a cappuccino or caffe latte. Sit at an interior table. Take 20 minutes.</p>
+
+      <h3>Cafe Wha? (115 MacDougal)</h3>
+      <p>Bob Dylan performed here early in his career. Jimi Hendrix played here. The Doors were discovered here. Today it operates as a live music venue with a cover band format on weeknights. The history is real; the current experience is different from what that history suggests. Worth walking past and noting &mdash; worth visiting in the evening if live music is on your agenda.</p>
+
+      <!-- ===== STOP 4 ===== -->
+      <div class="stop-head" id="minetta-lane">
+        <div class="stop-badge">4</div>
+        <div class="stop-info">
+          <h2>Minetta Lane</h2>
+          <div class="stop-meta"><span class="stop-time">5&ndash;10 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Turn left off MacDougal toward Sixth Avenue onto Minetta Lane &mdash; a short, slightly curved street that most visitors pass without turning onto. A former stream (Minetta Brook still runs underground here) gives the street its gentle curve and quiet character. At the MacDougal end, the building now housing Panchito&rsquo;s Mexican Restaurant was, until recently, identifiable by its faded sign for the <strong>Fat Black Pussycat</strong> &mdash; the caf&eacute; where Bob Dylan wrote &ldquo;Blowin&rsquo; in the Wind&rdquo; in 1962. The sign has since been painted over. The building remains.</p>
+
+      <div class="photo-tip">
+        <div class="pt-label">Best Photo Spot</div>
+        <p>Stand at the Christopher Street end and shoot south toward the curve. The bend in the block is the composition. Morning or afternoon light both work &mdash; the street runs roughly east-west and catches light throughout the day.</p>
+      </div>
+
+      <!-- ===== STOP 5 ===== -->
+      <div class="stop-head" id="patchin-place">
+        <div class="stop-badge">5</div>
+        <div class="stop-info">
+          <h2>Patchin Place</h2>
+          <div class="stop-meta"><span class="stop-time">5 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>At the end of Minetta Lane, cross Sixth Avenue and continue to West 10th Street. Turn right. About 50 feet from Sixth Avenue on your right, look for a black iron gate set slightly back from the sidewalk. That&rsquo;s Patchin Place.</p>
+      <p>Ten brick row houses from 1848, arranged in a short cul-de-sac. Originally built for Basque boardinghouse workers; eventually became a literary address. E.E. Cummings lived here for decades. Marlon Brando crashed at his sister&rsquo;s place here when he first arrived in New York at age 19 &mdash; the red fedora he describes in his autobiography was already on his head when he stepped out of the cab.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">It Looks Private. It Isn&rsquo;t.</div>
+        <p>The gate is sometimes open, sometimes closed. If closed, you can see the full row from the entrance. If open, step in quietly &mdash; it&rsquo;s a residential space and the residents value the quiet.</p>
+      </div>
+
+      <!-- ===== STOP 6 ===== -->
+      <div class="stop-head" id="jefferson-market">
+        <div class="stop-badge">6</div>
+        <div class="stop-info">
+          <h2>Jefferson Market Library + Garden</h2>
+          <div class="stop-meta"><span class="stop-time">10&ndash;35 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Jefferson_Market_Library_at_sunset.jpg/960px-Jefferson_Market_Library_at_sunset.jpg" alt="Jefferson Market Library at sunset — Victorian Gothic clock tower on Sixth Avenue">
+        <div class="cap">Jefferson Market Library at sunset &mdash; one of the most architecturally distinctive buildings in Manhattan, and it&rsquo;s a working public library.</div>
+      </div>
+
+      <p>Walk back to Sixth Avenue and turn north one block. The building on your left is one of the most architecturally distinctive in Manhattan &mdash; a Victorian Gothic former courthouse with a clock tower, turrets, pointed arches, and stained glass, designed in 1877 and voted one of the ten most beautiful buildings in America by an architects&rsquo; poll the following decade. The <em>New York Times</em>, at its completion, called it &ldquo;a jewel in a swine&rsquo;s snout&rdquo; &mdash; a reference to the rough neighborhood that surrounded it at the time. It&rsquo;s now a branch of the New York Public Library. Entry is free.</p>
+
+      <h3>Inside the Library</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>The brick-arched basement was once a prisoner holding area and is now the Reference Room</li>
+        <li><span class="dot"></span>The winding staircase has the stained glass worth finding</li>
+        <li><span class="dot"></span>The second floor (former civil court) is the Adult Reading Room</li>
+      </ul>
+
+      <div class="local-tip">
+        <div class="lt-label">Local Tip</div>
+        <p>Go upstairs for the full effect of the architecture. Most visitors see the ground floor and leave.</p>
+      </div>
+
+      <h3>The Jefferson Market Garden</h3>
+      <p>The garden entrance is on Greenwich Avenue, between West 10th Street and Christopher Street. Open April 1 through October 31, 10 AM&ndash;6 PM. Community volunteers have maintained this space since 1975. Koi pond, rose garden, winding gravel paths, dahlias, old trees, and brick walls enclosing the whole thing &mdash; built on a site that was, over the centuries, a food market, a police court, and an 11-story Women&rsquo;s House of Detention. The garden is the most peaceful outcome of that history.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">Best Seasonal Moments</div>
+        <p>In late May, the rose garden peaks. In fall, dahlias rise above the fence. In winter the garden closes, but the library stays open.</p>
+      </div>
+
+      <div class="bathroom-note">
+        <span class="bn-icon">Restroom</span>
+        <p>The library has clean, free, accessible restrooms. This is the best public bathroom on the entire route &mdash; use it here.</p>
+      </div>
+
+      <!-- ===== STOP 7 ===== -->
+      <div class="stop-head" id="gay-street">
+        <div class="stop-badge">7</div>
+        <div class="stop-info">
+          <h2>Gay Street</h2>
+          <div class="stop-meta"><span class="stop-time">10 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Walk south from the library to Christopher Street and turn right. Half a block west, turn left onto Gay Street. One block. A gentle curve. Federal-style houses from the 1820s and 1830s. The block predates the Manhattan grid &mdash; one of the few remaining streets laid out before the 1811 Commissioners&rsquo; Plan organized everything into a strict grid. The curve is the result.</p>
+      <p>The name predates any LGBTQ+ association &mdash; it comes from an early Dutch family who owned property here. The 1969 Greenwich Village Historic District report described these houses as essentially unchanged &ldquo;from the days when they were built.&rdquo; That&rsquo;s still true.</p>
+
+      <div class="photo-tip">
+        <div class="pt-label">Best Photo Spot</div>
+        <p>Stand at the Christopher Street end and shoot south along the curve. The bend and the Federal-style facades create the composition. Morning light is particularly good here.</p>
+      </div>
+
+      <!-- ===== STOP 8 ===== -->
+      <div class="stop-head" id="stonewall">
+        <div class="stop-badge">8</div>
+        <div class="stop-info">
+          <h2>Christopher Street &rarr; Stonewall National Monument</h2>
+          <div class="stop-meta"><span class="stop-time">20&ndash;30 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Continue west on Christopher Street. The Stonewall Inn is at number 53, on the right, roughly a block and a half from Gay Street. The June 1969 riots that began here are understood as the inflection point of the LGBTQ+ rights movement in the United States &mdash; the moment a community that had been subject to routine harassment and arrest decided, on a particular night, to fight back. The building now operates simultaneously as an active commercial bar and as a National Monument administered by the National Park Service &mdash; a combination that exists nowhere else in New York.</p>
+
+      <h3>What to Do Here</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>The <strong>Stonewall National Monument Visitor Center</strong> (opened 2024, next to the Inn) is free, small, and worth 15 minutes</li>
+        <li><span class="dot"></span><strong>Christopher Park</strong>, directly across the street, holds the George Segal sculptures installed in 1992 &mdash; two same-sex couples, white-painted bronze. Most visitors walk past without noticing them. They&rsquo;re worth stopping for.</li>
+        <li><span class="dot"></span>Go inside the bar if you want &mdash; it&rsquo;s open during regular bar hours and visitors are welcome</li>
+      </ul>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">Timing Note</div>
+        <p>Midday on weekends brings tour groups. Before 11 AM on a weekday, the site is more contemplative. Come early to have the space.</p>
+      </div>
+
+      <!-- ===== STOP 9 ===== -->
+      <div class="stop-head" id="grove-street">
+        <div class="stop-badge">9</div>
+        <div class="stop-info">
+          <h2>Grove Street &rarr; Grove Court</h2>
+          <div class="stop-meta"><span class="stop-time">10 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Turn south off Christopher Street onto Bedford Street, then left onto Grove Street. Grove Street is one of the prettiest residential streets in the West Village &mdash; low-scale townhouses, trees canopying the sidewalk, a pace that feels unhurried even by Village standards. Between Seventh Avenue South and Bedford Street, you&rsquo;ll pass one of the most intact rows of pre-Civil War wooden rowhouses remaining in Manhattan. The specific rows between numbers 4 and 10 date to the 1820s.</p>
+      <p>At numbers 10 and 12 Grove Street, look for an iron gate set slightly into the fa&ccedil;ade. Through it: <strong>Grove Court</strong> &mdash; a hidden cul-de-sac of mid-19th-century row houses arranged around a private inner courtyard. It&rsquo;s residential &mdash; you can&rsquo;t enter &mdash; but the view through the gate is the photograph, and it takes exactly as long as it takes to look and appreciate it.</p>
+
+      <!-- ===== STOP 10 ===== -->
+      <div class="stop-head" id="friends-building">
+        <div class="stop-badge">10</div>
+        <div class="stop-info">
+          <h2>90 Bedford Street &mdash; The Friends Building</h2>
+          <div class="stop-meta"><span class="stop-time">5 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>The corner of Bedford and Grove Streets. The six-story tan brick building that served as the exterior establishing shot for the apartment building in Friends. Here&rsquo;s the honest version of this stop: the building is a standard 1898 tenement, unremarkable except for its television association. Two things will happen when you arrive. Either a small group of people is across the street looking at it (confirming you&rsquo;ve found it), or you&rsquo;re alone and passersby quickly notice what you&rsquo;re photographing. Take the photo, appreciate the cultural weight of a sitcom turning a random tenement into a pilgrimage site, and keep walking. The neighborhood around it is substantially more interesting than the building.</p>
+
+      <!-- ===== STOP 11 ===== -->
+      <div class="stop-head" id="commerce-street">
+        <div class="stop-badge">11</div>
+        <div class="stop-info">
+          <h2>Commerce Street &mdash; Cherry Lane Theatre</h2>
+          <div class="stop-meta"><span class="stop-time">5&ndash;10 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Turn left onto Commerce Street from Bedford. This block is worth visiting even if you&rsquo;ve never heard of Cherry Lane Theatre. Commerce Street curves &mdash; like Gay Street, like Minetta Lane, the West Village refuses the grid &mdash; and the curve makes the block feel complete in itself. During the day, when there&rsquo;s no show, it&rsquo;s quiet enough that you can walk down the middle of the street. Trees on both sides. Residential scale on every building.</p>
+      <p><strong>Cherry Lane Theatre (38 Commerce Street)</strong> opened in 1923, making it the oldest continuously operating Off-Broadway venue in New York. It began as a brewery, became a box factory, then became a theater. Samuel Beckett, Eugene O&rsquo;Neill, and Edward Albee all had work produced here.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Check the Schedule</div>
+        <p>If theater is on your agenda, check current productions at <a href="https://cherrylanetheatre.org/" target="_blank" rel="noopener">cherrylanetheatre.org</a> before your visit.</p>
+      </div>
+
+      <!-- ===== STOP 12 ===== -->
+      <div class="stop-head" id="narrowest-house">
+        <div class="stop-badge">12</div>
+        <div class="stop-info">
+          <h2>75&frac12; Bedford Street &mdash; The Narrowest House</h2>
+          <div class="stop-meta"><span class="stop-time">5 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Back on Bedford Street, continue south. At 75&frac12; Bedford, you&rsquo;ll find it: 9 feet and 6 inches wide, built in 1873 in what was previously a carriageway between two existing buildings. Edna St. Vincent Millay lived here. Cary Grant lived here. The photo takes 30 seconds. The story takes longer to tell. It&rsquo;s worth the stop specifically because the absurdity of a full residential building in a former alley is distinctly, wonderfully New York.</p>
+
+      <!-- ===== STOP 13 ===== -->
+      <div class="stop-head" id="perry-street">
+        <div class="stop-badge">13</div>
+        <div class="stop-info">
+          <h2>66 Perry Street &mdash; Carrie Bradshaw&rsquo;s Brownstone</h2>
+          <div class="stop-meta"><span class="stop-time">5 minutes</span><span class="stop-free">Free</span></div>
+        </div>
+      </div>
+
+      <p>Walk east on Perry Street. 66 Perry is a few doors down on a particularly well-maintained stretch of tree-lined brownstones. The building was used for Carrie Bradshaw&rsquo;s stoop scenes in Sex and the City. The stoop itself has a chain across it and multiple signs preventing visitors from sitting on the steps &mdash; residents installed these after years of being unable to reach their own front door. <strong>Photograph from across the street.</strong></p>
+      <p>Perry Street itself is worth a minute of lingering regardless &mdash; it&rsquo;s one of the prettier streets on the route, full of well-maintained brownstones and overhanging trees that create a canopy effect in summer and fall.</p>
+
+      <!-- ===== STOP 14 ===== -->
+      <div class="stop-head" id="st-lukes">
+        <div class="stop-badge">14</div>
+        <div class="stop-info">
+          <h2>The Garden at St. Luke in the Fields</h2>
+          <div class="stop-meta"><span class="stop-time">15&ndash;25 minutes</span><span class="stop-free">Free &mdash; daylight hours</span></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/e8/2b/ff/caption.jpg?w=1400&h=-1&s=1" alt="The walled garden at St. Luke in the Fields, West Village">
+        <div class="cap">The garden at St. Luke in the Fields &mdash; over two-thirds of an acre behind a brick wall in the West Village, free to enter, nearly unknown even to locals.</div>
+      </div>
+
+      <p>Walk west on Perry Street to Hudson Street, then south a few blocks to the Church of St. Luke in the Fields at 487 Hudson Street. The church, built in 1821, is the third-oldest church building in Manhattan. The garden behind it is accessed from Hudson Street near Barrow Street and is nearly unknown even to locals who&rsquo;ve lived in the neighborhood for years.</p>
+      <p>What you&rsquo;ll find inside: more than two-thirds of an acre, enclosed by brick walls, with gravel paths, wooden benches, perennial beds, old trees, and complete quiet. Community volunteers tend it. No ticket, no fee, no reservation.</p>
+
+      <div class="local-tip">
+        <div class="lt-label">Best Rest Stop on the Route</div>
+        <p>Sit on a bench for 15&ndash;20 minutes. The ambient noise of the city doesn&rsquo;t disappear &mdash; it dims to something manageable. Your feet will thank you when you get to the bridge or the waterfront later. People come planning to stay ten minutes and leave 40 minutes later.</p>
+      </div>
+
+      <!-- ===== STOP 15 ===== -->
+      <div class="stop-head" id="white-horse">
+        <div class="stop-badge">15</div>
+        <div class="stop-info">
+          <h2>White Horse Tavern</h2>
+          <div class="stop-meta"><span class="stop-time">20&ndash;30 minutes</span></div>
+        </div>
+      </div>
+
+      <p>Walk north on Hudson Street. The White Horse Tavern is at 567 Hudson, a corner bar with tin ceilings, the original wood bar from 1880, and sidewalk seating when the weather cooperates. The bar opened in 1880, making it the second-oldest continuously operating tavern in New York City. Dylan Thomas was a regular, famously drinking here in the final days of his life. Norman Mailer, Jack Kerouac, and James Baldwin all spent time at these tables. The literary association is genuine, not manufactured.</p>
+      <p>The experience today: good beer, reasonable prices, a reliable mix of regulars and visitors, and a bar that looks like a bar from 1880 because it is. The history is on the walls in framed photographs. Order a draft beer. Sit at the wood bar if possible. Stay 20&ndash;30 minutes.</p>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">Timing Warning</div>
+        <p>Weekend evenings draw a young crowd that uses the tavern as a pre-bar bar. This shifts the atmosphere considerably. Midweek afternoons and early evenings preserve more of the literary-hangout feeling.</p>
+      </div>
+
+      <!-- ===== STOP 16 ===== -->
+      <div class="stop-head" id="bleecker">
+        <div class="stop-badge">16</div>
+        <div class="stop-info">
+          <h2>Bleecker Street Food Corridor</h2>
+          <div class="stop-meta"><span class="stop-time">30&ndash;90 minutes</span></div>
+        </div>
+      </div>
+
+      <p>Walk east on one of the cross-streets (Grove, Commerce, or Barrow) to Bleecker Street. The stretch between Sixth and Seventh Avenues concentrates several of the neighborhood&rsquo;s most reliably good food stops within two blocks.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Magnolia Bakery &mdash; 401 Bleecker</div>
+          <p>Open since 1996, made famous by Sex and the City. <strong>Get the banana pudding, not the cupcakes.</strong> The cupcakes divide opinion; the banana pudding doesn&rsquo;t.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Bleecker Street Pizza &mdash; 69 7th Ave South</div>
+          <p>Thin crust, properly executed, under $5 for a slice. No frills, no pretension, eat it at the counter. Consistent praise from people who know the neighborhood well.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Murray&rsquo;s Cheese &mdash; 254 Bleecker</div>
+          <p>One of the most respected cheese shops in New York, with a cheese cave downstairs. Good for a serious cheese purchase, a counter-service sandwich, or picnic provisions for the river.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Three Lives &amp; Company &mdash; 154 W 10th St</div>
+          <p>An independent bookshop with floor-to-ceiling shelves and a curation that reflects genuine reading taste. Staff recommendations are consistently reliable. Worth 20&ndash;30 minutes of browsing.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Three Lives Trick</div>
+        <p>If you&rsquo;re waiting for a brunch table at Joseph Leonard on Waverly Place, Three Lives is around the corner. Put your name down, walk over, get lost in the shelves.</p>
+      </div>
+
+      <!-- ===== STOP 17 ===== -->
+      <div class="stop-head" id="pier-45">
+        <div class="stop-badge">17</div>
+        <div class="stop-info">
+          <h2>Hudson River Park / Pier 45</h2>
+          <div class="stop-meta"><span class="stop-time">Open-ended</span><span class="stop-free">Free</span><span style="font-size:13px;color:var(--text-secondary);">Optional ending</span></div>
+        </div>
+      </div>
+
+      <p>Walk west on Christopher Street to the river. Pier 45 (the Christopher Street pier) extends into the water with benches facing south toward the Statue of Liberty and downtown Manhattan. This is the right place to end the day if you have the time. Sit on a bench, watch the light change over the river, and stay as long as you want.</p>
+      <p>The sun sets behind New Jersey and drops toward the horizon in the southwest. From Pier 45, the downtown Manhattan skyline is visible to the south, and the light in the final hour before sunset hits the Hudson in a way that rewards waiting for it.</p>
+      <p>If you still have energy, walk north 15 minutes to <strong>Little Island (Pier 55)</strong> &mdash; the elevated park on tulip-shaped concrete piles that opened in 2021. Free to visit, occasionally requiring a timed reservation during busy periods. Unlike anything else on the Manhattan waterfront.</p>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">See the Skyline From the Water</div>
+        <h4>Hudson River Sailing &amp; Cruise Tours</h4>
+        <p>If the river views from Pier 45 have you wanting more, two of the best ways to see Manhattan from the water are the Schooner Adirondack sunset sail and the Circle Line Harbor Lights night cruise.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Sunset-Sail-aboard-the-Schooner-Adirondack/d687-6288P21?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Sunset Sail &mdash; Viator</a>
+          <a class="btn" style="background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.25);padding:10px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;" href="https://www.viator.com/tours/New-York-City/Circle-Line-Harbor-Lights-Night-Cruise/d687-2800HLC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Harbor Lights Cruise &mdash; Viator</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HIDDEN GEMS -->
+      <h2 id="hidden-gems">Hidden Gems Most Visitors Miss</h2>
+      <div class="gem-list">
+        <div class="gem">
+          <h4>MacDougal Alley</h4>
+          <p>A tiny, gated lane off MacDougal Street just north of the park. The carriage houses here were converted into artists&rsquo; studios in the early 1900s. Jackson Pollock had a studio here. The gate sometimes looks locked when it isn&rsquo;t &mdash; look for it on the west side of MacDougal just north of 8th Street. 100 feet long and historically remarkable. Worth 5 minutes, specifically for anyone interested in New York art history.</p>
+        </div>
+        <div class="gem">
+          <h4>Julius&rsquo; (159 W 10th Street)</h4>
+          <p>New York City&rsquo;s oldest gay bar, listed on the National Register of Historic Places. Operating since the 19th century. A working bar with genuine history that most visitors never find because it doesn&rsquo;t advertise itself the way newer bars do.</p>
+        </div>
+        <div class="gem">
+          <h4>Marie&rsquo;s Crisis Caf&eacute; (59 Grove Street)</h4>
+          <p>A cash-only piano bar where musical theater enthusiasts crowd around the piano every night and sing Broadway songs together. No attitude, no reservation, no dress code. The bartender plays, the crowd sings, strangers become temporary ensembles. There is genuinely nothing else like it in the city. Best visited after 10 PM when it really gets going.</p>
+        </div>
+        <div class="gem">
+          <h4>The Minetta Lane Red Building</h4>
+          <p>The bright red building at the MacDougal end of Minetta Lane is now a Mexican restaurant. Before the paint covered the original signage, you could read &ldquo;Fat Black Pussycat&rdquo; on the wall &mdash; the caf&eacute; where Bob Dylan wrote &ldquo;Blowin&rsquo; in the Wind&rdquo; in 1962. The building itself is the artifact. The sign is gone; the building remains.</p>
+        </div>
+        <div class="gem">
+          <h4>Grove Court (the gate)</h4>
+          <p>Already in the route, but deserves specific mention: the hidden courtyard visible through an iron gate between 10 and 12 Grove Street. Private residences, but the view through the gate is the photograph. Most people walk past the gate without looking at it.</p>
+        </div>
+      </div>
+
+      <!-- BEST FOOD STOPS -->
+      <h2 id="food">Best Food Stops</h2>
+
+      <h3>Coffee</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:400px;">
+          <tr><th>Place</th><th>Location</th><th>What to Order</th><th>Vibe</th></tr>
+          <tr><td><strong>Caffe Reggio</strong></td><td>119 MacDougal</td><td>Cappuccino</td><td>Operating since 1927; sit at a table from 1902</td></tr>
+          <tr><td><strong>Toby&rsquo;s Estate</strong></td><td>44 Charles Street</td><td>Cold brew</td><td>Serious specialty coffee; excellent mid-route stop</td></tr>
+          <tr><td><strong>Blue Stone Lane</strong></td><td>Multiple Village locations</td><td>Flat white</td><td>Australian-style; popular with the local professional crowd</td></tr>
+        </table>
+      </div>
+
+      <h3>Breakfast and Brunch</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Place</th><th>Location</th><th>Highlight</th><th>Reservation?</th></tr>
+          <tr><td><strong>Jack&rsquo;s Wife Freda</strong></td><td>Multiple Village locations</td><td>Shakshuka, Israeli-influenced menu</td><td>Yes, weekends</td></tr>
+          <tr><td><strong>Jeffrey&rsquo;s Grocery</strong></td><td>172 Waverly Place</td><td>Weekend brunch</td><td>Recommended</td></tr>
+          <tr><td><strong>Joseph Leonard</strong></td><td>170 Waverly Place</td><td>Small plates brunch</td><td>Put your name down at Three Lives while you wait</td></tr>
+        </table>
+      </div>
+
+      <h3>Lunch</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Place</th><th>What to Order</th><th>Price</th></tr>
+          <tr><td><strong>Mamoun&rsquo;s Falafel &mdash; 119 MacDougal</strong></td><td>Falafel sandwich</td><td>Under $10</td></tr>
+          <tr><td><strong>Bleecker Street Pizza &mdash; 69 7th Ave South</strong></td><td>Slice</td><td>Under $5</td></tr>
+          <tr><td><strong>John&rsquo;s of Bleecker &mdash; 278 Bleecker</strong></td><td>Whole coal-fired pie</td><td>Cash only; shared tables</td></tr>
+          <tr><td><strong>Corner Bistro &mdash; 331 W 4th Street</strong></td><td>Cheeseburger</td><td>Cash only; dive bar; beloved</td></tr>
+          <tr><td><strong>Minetta Tavern &mdash; 113 MacDougal</strong></td><td>Black Label Burger</td><td>Expensive; worth it for a special lunch</td></tr>
+        </table>
+      </div>
+
+      <h3>Evening Drinks and Historic Bars</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Bar</th><th>Address</th><th>Why Go</th><th>Notes</th></tr>
+          <tr><td><strong>White Horse Tavern</strong></td><td>567 Hudson</td><td>Dylan Thomas&rsquo;s bar, 1880</td><td>Better on weeknights than weekends</td></tr>
+          <tr><td><strong>Julius&rsquo;</strong></td><td>159 W 10th</td><td>NYC&rsquo;s oldest gay bar</td><td>National Register of Historic Places</td></tr>
+          <tr><td><strong>Marie&rsquo;s Crisis</strong></td><td>59 Grove</td><td>Broadway sing-along piano bar</td><td>After 10 PM; cash only</td></tr>
+          <tr><td><strong>Employees Only</strong></td><td>510 Hudson</td><td>Serious cocktail program</td><td>Reserve ahead or arrive early</td></tr>
+          <tr><td><strong>The Stonewall Inn</strong></td><td>53 Christopher</td><td>Historic bar, National Monument</td><td>Worth going in</td></tr>
+        </table>
+      </div>
+
+      <!-- PRACTICAL TIPS -->
+      <h2 id="practical">Practical Tips</h2>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Before You Go</div>
+          <ul class="card-list">
+            <li>Wear broken-in shoes &mdash; Washington Mews, Gay Street, parts of Bedford and Grove are cobblestone</li>
+            <li>Download offline maps &mdash; the West Village&rsquo;s non-grid layout will confuse navigation momentarily</li>
+            <li>Jefferson Market Garden is only open April 1&ndash;October 31 &mdash; don&rsquo;t build the day around it in winter</li>
+            <li>Comedy Cellar tickets sell out on weekends &mdash; book online in advance</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Crowd Avoidance</div>
+          <ul class="card-list">
+            <li>Washington Square Park: before 9 AM weekdays for the arch; after 7 PM any day for quiet</li>
+            <li>Stonewall: before 11 AM on weekdays; avoid Saturday afternoon with tour groups</li>
+            <li>Friends building: weekday mornings it&rsquo;s often just you</li>
+            <li>Bleecker Street food stops: Saturday 11 AM&ndash;2 PM is the busiest; go before 11 AM or after 3 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Restroom Locations</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>Location</th><th>Notes</th></tr>
+          <tr><td><strong>Jefferson Market Library</strong></td><td>Best option on the route &mdash; free, clean, no purchase needed</td></tr>
+          <tr><td><strong>Washington Square Park</strong></td><td>South side near playground; functional but basic</td></tr>
+          <tr><td><strong>Pier 45 (Hudson River Park)</strong></td><td>Permanent facility at the pier</td></tr>
+          <tr><td><strong>White Horse Tavern</strong></td><td>With a drink purchase</td></tr>
+          <tr><td><strong>Caffe Reggio</strong></td><td>With a purchase</td></tr>
+        </table>
+      </div>
+
+      <h3>Photography Tips</h3>
+      <div class="card-grid cols-3">
+        <div class="card"><div class="card-tag">Morning (before 10 AM)</div><p>Washington Mews, the arch, Gay Street, Jefferson Market Library exterior</p></div>
+        <div class="card"><div class="card-tag">Afternoon (2&ndash;5 PM)</div><p>Commerce Street, Perry Street, Grove Street &mdash; west-facing sections catch direct afternoon light</p></div>
+        <div class="card"><div class="card-tag">Golden Hour</div><p>Hudson River Park, Pier 45, the arch (catches warm light from the west at sunset)</p></div>
+      </div>
+
+      <!-- MISTAKES -->
+      <h2 id="mistakes">Mistakes First-Time Visitors Make</h2>
+      <div class="mistake-item"><h4>Only visiting Washington Square Park and calling it the Village</h4><p>The park is the introduction. The actual neighborhood &mdash; Commerce Street, the garden at St. Luke&rsquo;s, Gay Street, Patchin Place, Grove Court &mdash; is west of Sixth Avenue, not in the park.</p></div>
+      <div class="mistake-item"><h4>Going on a Saturday afternoon and expecting quiet streets</h4><p>The residential streets (Commerce, Perry, Gay) stay relatively calm. The landmark buildings (Friends apartment, Stonewall, Magnolia Bakery) get genuinely crowded. Weekday mornings are when this neighborhood is at its best.</p></div>
+      <div class="mistake-item"><h4>Missing the hidden courtyards and mews because they look private</h4><p>MacDougal Alley, Washington Mews, Grove Court, and Patchin Place all look like private spaces. None of them are. Walk past chains and gates that look restricted &mdash; most are navigable.</p></div>
+      <div class="mistake-item"><h4>Going to Magnolia Bakery for the cupcakes</h4><p>Get the banana pudding. The cupcakes divide opinion significantly; the banana pudding doesn&rsquo;t.</p></div>
+      <div class="mistake-item"><h4>Wearing dress shoes or heels</h4><p>The cobblestone streets are authentic and beautiful. They&rsquo;re also genuinely uneven. Multiple blocks on this route will cause real pain by mid-afternoon if you&rsquo;re not in appropriate footwear.</p></div>
+      <div class="mistake-item"><h4>Not booking Comedy Cellar tickets in advance</h4><p>Weekend shows sell out. The standby line is described consistently as poorly managed and stressful. A ticket removes the problem entirely.</p></div>
+      <div class="mistake-item"><h4>Trying to sit on Carrie Bradshaw&rsquo;s stoop</h4><p>The residents have installed a chain and posted signs. Photograph from across the street.</p></div>
+      <div class="mistake-item"><h4>Walking the whole route on MacDougal and skipping west</h4><p>MacDougal&rsquo;s commercial stretch (south of Bleecker, toward Houston) can feel more like a tourist corridor than a neighborhood. The real West Village is on the quieter blocks west of Sixth Avenue.</p></div>
+
+      <!-- ROUTE VARIATIONS -->
+      <h2 id="variations">Route Variations</h2>
+      <div class="variation-cards">
+        <div class="var-card">
+          <span class="vc-label">Half Day &mdash; 3 Hours</span>
+          <h4>The Condensed Route</h4>
+          <p>Washington Square Park (30 min) &rarr; Washington Mews (10 min) &rarr; Patchin Place (5 min) &rarr; Jefferson Market Library exterior (10 min) &rarr; Gay Street (10 min) &rarr; Stonewall (20 min) &rarr; Grove Street + Grove Court (10 min) &rarr; Friends building (5 min) &rarr; Commerce Street (10 min) &rarr; 75&frac12; Bedford (5 min) &rarr; Perry Street (10 min) &rarr; White Horse Tavern (20 min).</p>
+        </div>
+        <div class="var-card">
+          <span class="vc-label">Sunset Version</span>
+          <h4>Start at 4 PM</h4>
+          <p>Walk the residential streets &mdash; Gay, Grove, Commerce, Perry &mdash; in the late-afternoon light when the brownstones are at their best. White Horse Tavern at 5:30 PM. Walk west to Pier 45 for golden hour over the Hudson. End the evening at Marie&rsquo;s Crisis Caf&eacute; or Employees Only.</p>
+        </div>
+        <div class="var-card">
+          <span class="vc-label">For Photographers</span>
+          <h4>Light-Focused Route</h4>
+          <p>Prioritize: Washington Square Park at 8 AM for the arch, Washington Mews (8&ndash;9 AM), Gay Street (morning or afternoon), Jefferson Market Library exterior (morning light), Commerce Street (afternoon curve), Grove Court gate, Pier 45 at golden hour. Carry a wide-angle for the arch and mews; a standard 35&ndash;50mm for the residential streets.</p>
+        </div>
+        <div class="var-card">
+          <span class="vc-label">For Food Lovers</span>
+          <h4>The Eating Route</h4>
+          <p>Caffe Reggio for morning coffee &rarr; Mamoun&rsquo;s for a mid-morning falafel &rarr; Murray&rsquo;s Cheese for a counter sandwich &rarr; Magnolia Bakery banana pudding &rarr; White Horse Tavern &rarr; Employees Only for evening cocktails &rarr; dinner at Minetta Tavern.</p>
+        </div>
+        <div class="var-card">
+          <span class="vc-label">For Families</span>
+          <h4>Kid-Friendly Version</h4>
+          <p>Washington Square Park (playground on south side, fountain in summer), Jefferson Market Garden koi pond, Hudson River Park playground (Pier 46). Skip the Comedy Cellar, the narrower historical streets, and premium sit-down meals. Best timing: 10 AM&ndash;1 PM before nap time becomes a consideration.</p>
+        </div>
+        <div class="var-card">
+          <span class="vc-label">Rainy Day</span>
+          <h4>Indoor-Heavy Version</h4>
+          <p>The Village works reasonably well in rain &mdash; the tree canopy on many side streets provides partial cover. Best indoor stops: Caffe Reggio (extended coffee), Jefferson Market Library (architecture, reading rooms), Three Lives &amp; Company (browse the shelves), White Horse Tavern (afternoon drink). Skip: Pier 45 and the riverfront extension.</p>
+        </div>
+      </div>
+
+      <!-- SAMPLE TIMELINE -->
+      <h2 id="timeline">Sample Timeline</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:420px;">
+          <tr><th>Time</th><th>Stop</th><th>Notes</th></tr>
+          <tr><td><strong>8:30 AM</strong></td><td>Washington Square Park</td><td>Early morning arch photo; quiet park</td></tr>
+          <tr><td><strong>9:00 AM</strong></td><td>Washington Mews</td><td>Before NYU crowds arrive</td></tr>
+          <tr><td><strong>9:20 AM</strong></td><td>Caffe Reggio</td><td>Morning coffee at a table from 1902</td></tr>
+          <tr><td><strong>9:50 AM</strong></td><td>Minetta Lane</td><td>Bob Dylan building; quiet street</td></tr>
+          <tr><td><strong>10:00 AM</strong></td><td>Patchin Place</td><td>5 minutes; the gate may or may not be open</td></tr>
+          <tr><td><strong>10:15 AM</strong></td><td>Jefferson Market Library + Garden</td><td>Library interior, then garden (April&ndash;October)</td></tr>
+          <tr><td><strong>10:45 AM</strong></td><td>Gay Street</td><td>The curved block; 10 minutes</td></tr>
+          <tr><td><strong>11:00 AM</strong></td><td>Stonewall + Christopher Park</td><td>Visitor center, George Segal sculptures</td></tr>
+          <tr><td><strong>11:30 AM</strong></td><td>Grove Street + Grove Court</td><td>Hidden courtyard gate</td></tr>
+          <tr><td><strong>11:45 AM</strong></td><td>90 Bedford (Friends building)</td><td>5 minutes</td></tr>
+          <tr><td><strong>12:00 PM</strong></td><td>Commerce Street / Cherry Lane</td><td>Walk through; quiet curved block</td></tr>
+          <tr><td><strong>12:10 PM</strong></td><td>75&frac12; Bedford + 66 Perry St</td><td>Narrowest house; SATC brownstone</td></tr>
+          <tr><td><strong>12:30 PM</strong></td><td>St. Luke&rsquo;s Garden</td><td>Lunch break or rest; 15&ndash;20 minutes</td></tr>
+          <tr><td><strong>1:00 PM</strong></td><td>Lunch</td><td>Bleecker Street Pizza, Corner Bistro, or Minetta Tavern</td></tr>
+          <tr><td><strong>2:00 PM</strong></td><td>Bleecker Street food corridor</td><td>Murray&rsquo;s Cheese, Magnolia Bakery, Three Lives</td></tr>
+          <tr><td><strong>3:30 PM</strong></td><td>White Horse Tavern</td><td>Mid-afternoon drink</td></tr>
+          <tr><td><strong>4:30 PM</strong></td><td>Hudson River Park / Pier 45</td><td>Walk to the water; stay for golden hour</td></tr>
+          <tr><td><strong>6:30 PM</strong></td><td>Optional: Little Island or Meatpacking District</td><td>Northern extension</td></tr>
+        </table>
+      </div>
+
+      <!-- SEASONAL TIPS -->
+      <h2 id="seasonal">Seasonal Tips</h2>
+      <div class="season-grid">
+        <div class="season-card">
+          <h4>Spring (April&ndash;May) &mdash; Best Season</h4>
+          <p>Trees on Perry, Grove, and Commerce Streets in leaf, creating the canopy effect that makes these blocks look exactly like the Village you imagined. Jefferson Market Garden opens April 1 with daffodils and tulips, reaching peak roses in late May. Temperatures are comfortable for extended walking. Best specific moment: Jefferson Market Garden in late May when the rose garden peaks.</p>
+        </div>
+        <div class="season-card">
+          <h4>Summer (June&ndash;August)</h4>
+          <p>Most crowded and most energetic. The park and fountain are at their liveliest. Start before 9 AM for the park and arch. Complete the residential side streets in the morning. Use Jefferson Market Library and Caffe Reggio as air-conditioned retreats during the hottest midday hours. End at Pier 45 where river breezes make the late afternoon pleasant.</p>
+        </div>
+        <div class="season-card">
+          <h4>Fall (September&ndash;October) &mdash; Second Best</h4>
+          <p>Arguably the most photogenic. Ginkgo trees on Hudson Street turn gold in October. The lower angle of fall light hits the brownstone streets with a warmth that&rsquo;s hard to replicate in photographs but genuinely beautiful in person. Jefferson Market Garden has dahlias through October 31. Best specific moment: Grove Street or Commerce Street on a clear October afternoon when the trees are turning.</p>
+        </div>
+        <div class="season-card">
+          <h4>Winter (November&ndash;March)</h4>
+          <p>Jefferson Market Garden closes. But the neighborhood has its own winter quality &mdash; fewer visitors, easier access to the arch, and the bars (White Horse Tavern, Julius&rsquo;, Marie&rsquo;s Crisis) feel more like the local gathering places they are. Best winter experience: Washington Square Park immediately after snowfall, before 9 AM. The arch with fresh snow is one of the most beautiful winter photographs in Manhattan. The window is brief &mdash; the paths get tracked through quickly.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>How long does the Greenwich Village walking tour take?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The condensed version (Washington Square Park through White Horse Tavern) takes 3&ndash;4 hours with stops. The full route including Bleecker Street, the river, and evening venues runs 6&ndash;8 hours. A 90-minute version focused purely on walking the streets without stops is also possible.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best subway station to start from?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Take any A/C/E/B/D/F/M train to West 4th Street&ndash;Washington Square. Exit onto Washington Square South and you&rsquo;re at the park&rsquo;s entrance. Alternatively, take the 1 train to Christopher Street for a starting point in the middle of the route.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this walk good for families with young children?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Mostly yes, with adjustments. Washington Square Park has a playground. The residential streets are calm. The river is excellent. Skip the narrower historical streets if children are involved, and avoid evening venues. The best family version runs from the park to the river without the food and nightlife extensions. Best timing: 10 AM&ndash;1 PM.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What are the cobblestone sections I should know about?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Washington Mews, Gay Street (the whole block), parts of Grove Street near Commerce Street, and portions of Bedford Street have uneven cobblestones. Wear appropriate footwear &mdash; real walking shoes, not &ldquo;these look like walking shoes.&rdquo;</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Comedy Cellar worth the money?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If comedy matters to you: yes, reliably. The room is exactly the right size, the quality floor is high, and surprise drop-ins happen. Budget $45&ndash;55 per person including the drinks minimum. Book in advance for weekends without exception.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if Jefferson Market Garden is closed?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It closes November through March. The library itself remains open year-round, and the building&rsquo;s exterior is worth seeing regardless of season. The garden entrance on Greenwich Avenue shows you the closed gates &mdash; it&rsquo;s not a wasted stop, just a different stop.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Stonewall Inn worth going inside?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, if that history matters to you. It&rsquo;s a working bar &mdash; order a drink and spend 20 minutes inside. The physical space is modest; the meaning is not. The Visitor Center next door (open since 2024) provides more historical context.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where can I find a public restroom in the Village?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Jefferson Market Library (free, no purchase required, clean &mdash; the best option on the route), Washington Square Park (south side, functional), Pier 45 at Hudson River Park, and any caf&eacute; or bar where you make a purchase.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best street in the West Village for photographs?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Gay Street for its curve and Federal-style houses. Commerce Street for its quiet atmosphere and Cherry Lane Theatre. Grove Street for the wooden rowhouses. Perry Street for clean brownstone composition. Washington Mews for European-alley character. Each is distinctive &mdash; the route visits all of them.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I book a guided tour or do this self-guided?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Both work well. A self-guided route gives you complete control of timing and pace, which matters in a neighborhood that rewards slowing down. A guided tour provides historical context that isn&rsquo;t always apparent from the streets. If you want a combination, do the walk self-guided in the morning and book a food tour or comedy evening for later in the day.</div>
+        </details>
+      </div>
+
+      <div class="cta-dark" style="margin-top:36px;">
+        <div class="cta-eyebrow">Prefer a Guided Experience?</div>
+        <h4>Original Greenwich Village Food &amp; Cultural Tour</h4>
+        <p>If you&rsquo;d rather have a local guide lead you through this neighborhood &mdash; with historical context, food stops, and stories you&rsquo;d otherwise miss &mdash; this is the tour I&rsquo;d recommend booking.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/The-Original-Greenwich-Village-Food-and-Cultural-Tour/d687-420790P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="7-best-food-tours-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>7 Best Food Tours in NYC (Tested &amp; Reviewed)</a></li>
+      <li><a href="best-walking-tours-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Walking Tours in NYC: 9 Tours Actually Worth Booking</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Ultimate Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Only Lower Manhattan Walking Itinerary You&rsquo;ll Need</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop=window.scrollY||document.documentElement.scrollTop;
+  var docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=docHeight>0?Math.min(100,Math.max(0,(scrollTop/docHeight)*100)):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>
