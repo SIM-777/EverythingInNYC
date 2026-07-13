@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Famous Movie Locations NYC: The Route-Optimized Walking Itinerary | EverythingInNYC</title>
+<meta name="description" content="Walk the real NYC spots from Friends, Sex and the City, Ghostbusters, Home Alone 2 and more — two route-optimized walks, zero backtracking, real distances.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Jump nav */
+  .jump-nav{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius-card);padding:18px 22px;margin:26px 0;
+  }
+  .jump-nav .jn-title{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);
+    margin-bottom:12px;
+  }
+  .jump-nav ul{
+    list-style:none;padding:0;margin:0;
+    display:grid;grid-template-columns:1fr;gap:5px;
+  }
+  @media(min-width:560px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{
+    font-size:15px;font-weight:600;color:var(--info);
+    text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);
+  }
+  .jump-nav li a:hover{color:var(--navy);}
+
+  /* Walk section card */
+  .walk-card{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:44px 0;box-shadow:var(--shadow-card);
+  }
+  .walk-card .wc-head{
+    background:var(--navy);color:#fff;
+    padding:18px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .wc-pill{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    letter-spacing:0.05em;text-transform:uppercase;
+    background:rgba(255,193,7,0.2);color:var(--accent);
+    padding:4px 11px;border-radius:20px;white-space:nowrap;flex:none;
+  }
+  .wc-head h2{color:#fff;font-size:21px;margin:0;line-height:1.2;scroll-margin-top:90px;}
+  .walk-card .wc-body{padding:24px;}
+
+  /* Walk image */
+  .walk-img{
+    width:100%;max-height:360px;object-fit:cover;
+    border-radius:12px;margin-bottom:20px;display:block;
+  }
+
+  /* Route stop table */
+  .stops-wrap{overflow-x:auto;margin:16px 0;}
+  .stops-table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .stops-table thead th{
+    background:var(--navy);color:#fff;
+    padding:10px 14px;text-align:left;
+    font-family:var(--font-head);font-weight:700;font-size:13px;
+  }
+  .stops-table tbody td{
+    padding:10px 14px;border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  .stops-table tbody tr:last-child td{border-bottom:none;}
+  .stops-table tbody tr:nth-child(even){background:rgba(15,23,42,0.02);}
+  .stops-table td:first-child{font-weight:700;color:var(--navy);}
+  .stops-table .film-list{
+    font-size:13px;color:var(--text-secondary);font-style:italic;
+  }
+  .stops-table .walk-time{
+    white-space:nowrap;font-size:13.5px;color:var(--text-secondary);
+    font-weight:600;
+  }
+  .stops-table .walk-end{
+    font-size:12px;font-weight:700;letter-spacing:0.04em;
+    text-transform:uppercase;color:var(--success);
+  }
+
+  /* Local tip */
+  .local-tip{
+    background:#FFF9E8;border-left:4px solid var(--accent);
+    border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0;
+  }
+  .local-tip .lt-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    color:#92620A;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px;
+  }
+  .local-tip p{font-size:15.5px;color:var(--text);margin:0;}
+  .local-tip ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;}
+  .local-tip ul li{font-size:15.5px;display:flex;align-items:flex-start;gap:8px;}
+  .local-tip ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;margin-top:8px;}
+
+  /* Warning note */
+  .walk-warning{
+    background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.3);
+    border-radius:11px;padding:12px 16px;margin:14px 0;font-size:15px;
+    color:var(--text);
+  }
+  .walk-warning strong{color:#92620A;}
+
+  /* Back to top */
+  .back-top{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;font-weight:700;color:var(--text-secondary);
+    text-decoration:none;margin-top:8px;
+  }
+  .back-top:hover{color:var(--navy);}
+
+  /* Connector info box */
+  .connector-box{
+    background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.2);
+    border-radius:12px;padding:16px 18px;margin:22px 0;
+    font-size:15.5px;
+  }
+  .connector-box .cb-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    color:var(--info);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;
+  }
+  .connector-box p{margin:0;}
+
+  /* Option cards */
+  .option-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:20px 0;}
+  @media(min-width:560px){.option-cards{grid-template-columns:1fr 1fr;}}
+  .option-card{
+    border-radius:14px;padding:20px 18px;border:1.5px solid var(--border);
+  }
+  .option-card.opt-a{border-color:rgba(15,23,42,0.25);background:rgba(15,23,42,0.02);}
+  .option-card.opt-b{border-color:rgba(22,163,74,0.35);background:rgba(22,163,74,0.04);}
+  .option-card .oc-label{
+    font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+    padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:12px;
+  }
+  .option-card.opt-a .oc-label{background:rgba(15,23,42,0.08);color:var(--navy);}
+  .option-card.opt-b .oc-label{background:rgba(22,163,74,0.14);color:#15803D;}
+  .option-card h4{margin:0 0 8px;font-size:17px;color:var(--navy);}
+  .option-card p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Etiquette list */
+  .etiquette-list{
+    list-style:none;padding:0;margin:18px 0;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .etiquette-list li{
+    display:flex;align-items:flex-start;gap:12px;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:13px 16px;font-size:16px;
+  }
+  .etiquette-list li::before{
+    content:'Rule';font-size:11px;font-weight:700;
+    background:rgba(15,23,42,0.08);color:var(--navy);
+    padding:2px 7px;border-radius:4px;flex:none;margin-top:2px;
+    white-space:nowrap;
+  }
+
+  /* Zone overview */
+  .zone-overview{
+    display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;
+  }
+  @media(min-width:560px){.zone-overview{grid-template-columns:1fr 1fr;}}
+  .zone-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:18px;
+  }
+  .zone-card .zc-num{
+    font-family:var(--font-head);font-weight:800;font-size:11px;
+    letter-spacing:0.05em;text-transform:uppercase;
+    background:var(--navy);color:#fff;
+    padding:3px 9px;border-radius:6px;display:inline-block;margin-bottom:10px;
+  }
+  .zone-card h4{margin:0 0 6px;font-size:17px;color:var(--navy);}
+  .zone-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>Famous Movie Locations in NYC: The Complete Walking Itinerary</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 10 minute read</span>
+        <span>&middot;</span>
+        <span>&#128694;&#65039; Two walks &middot; 6.5&ndash;7.5 miles total</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/c7/4d/09/photo0jpg.jpg?w=1600&h=-1&s=1" alt="Famous NYC movie filming location — West Village streets">
+
+    <div class="article-body">
+      <p>I&rsquo;ve watched more people waste an entire afternoon chasing movie locations across New York than almost any other kind of sightseeing. It&rsquo;s not that the spots are hard to find &mdash; it&rsquo;s that most lists just throw fifty addresses at you in no particular order, and you end up crossing the same three blocks four times before lunch. So I actually mapped this one out. Two walks, each one a clean, single-direction loop, connected by exactly one subway ride. No wasted blocks.</p>
+      <p>Fair warning up front: this covers real ground. Between both walks you&rsquo;re looking at somewhere in the range of 6.5 to 7.5 miles of actual walking &mdash; and that&rsquo;s before you stop to take photos, poke around Washington Square Park, or wander Central Park a little longer than planned. I&rsquo;ll give you the honest split-it-up option below too, because I don&rsquo;t think you need to do this in one day to do it right.</p>
+
+      <!-- JUMP NAV -->
+      <div class="jump-nav" id="top">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#two-zones">The Two-Zone Structure</a></li>
+          <li><a href="#walk1">Walk 1: Greenwich Village &rarr; Financial District</a></li>
+          <li><a href="#walk2">Walk 2: Herald Square &rarr; Central Park</a></li>
+          <li><a href="#addon">Optional Add-On: Upper West Side</a></li>
+          <li><a href="#pace">One Day or Two?</a></li>
+          <li><a href="#etiquette">Visiting Etiquette</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- TWO-ZONE STRUCTURE -->
+      <h2 id="two-zones">The Two-Zone Structure &mdash; Read This First</h2>
+      <p>Here&rsquo;s the thing nobody tells you: NYC&rsquo;s most famous movie locations don&rsquo;t sit in one neat cluster. They fall into two genuinely separate zones &mdash; Greenwich Village / Tribeca / Financial District, and Midtown / Central Park &mdash; roughly two miles apart with nothing much movie-related in between. Try to walk both as one continuous route and you&rsquo;ll either backtrack constantly or waste an hour walking through blocks with nothing to see.</p>
+      <p>My fix: walk each zone as its own tight, one-direction loop, and take a single subway ride to connect them.</p>
+
+      <div class="zone-overview">
+        <div class="zone-card">
+          <span class="zc-num">Walk 1</span>
+          <h4>Greenwich Village &rarr; Financial District</h4>
+          <p>The denser of the two walks. Four separate filming locations in the West Village alone, within a few blocks of each other. Start at West 4th St subway station.</p>
+        </div>
+        <div class="zone-card">
+          <span class="zc-num">Walk 2</span>
+          <h4>Herald Square &rarr; Central Park</h4>
+          <p>Tighter and more forgiving &mdash; almost the whole thing runs straight up 5th Avenue. Start at 34th St-Herald Square station.</p>
+        </div>
+      </div>
+
+      <div class="connector-box">
+        <div class="cb-label">The Connector</div>
+        <p>Between the two walks: Wall St to Herald Square, about 15&ndash;20 minutes on the 4/5 express. One deliberate hop, not a zigzag.</p>
+      </div>
+
+      <!-- ===== WALK 1 ===== -->
+      <div class="walk-card" id="walk1">
+        <div class="wc-head">
+          <span class="wc-pill">Walk 1</span>
+          <h2>Greenwich Village to the Financial District</h2>
+        </div>
+        <div class="wc-body">
+          <p>This is the denser of the two walks &mdash; the West Village alone packs in four separate filming locations within a few blocks of each other. Start at the West 4th St subway station, which drops you right near the first stop.</p>
+
+          <div class="stops-wrap">
+            <table class="stops-table">
+              <thead>
+                <tr>
+                  <th>Stop</th>
+                  <th>Featured In</th>
+                  <th>Walk to Next</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Washington Square Park</td>
+                  <td><span class="film-list">When Harry Met Sally, Inside Llewyn Davis, dozens more</span></td>
+                  <td><span class="walk-time">10&ndash;15 min</span></td>
+                </tr>
+                <tr>
+                  <td>Carrie Bradshaw&rsquo;s apartment (66 Perry St)</td>
+                  <td><span class="film-list">Sex and the City</span></td>
+                  <td><span class="walk-time">5&ndash;8 min</span></td>
+                </tr>
+                <tr>
+                  <td>The Friends apartment building (90 Bedford St)</td>
+                  <td><span class="film-list">Friends</span></td>
+                  <td><span class="walk-time">3&ndash;5 min</span></td>
+                </tr>
+                <tr>
+                  <td>Phoebe&rsquo;s apartment (5 Morton St)</td>
+                  <td><span class="film-list">Friends</span></td>
+                  <td><span class="walk-time">25&ndash;30 min &nbsp;&#9888;&#65039;</span></td>
+                </tr>
+                <tr>
+                  <td>Katz&rsquo;s Delicatessen (205 E Houston St)</td>
+                  <td><span class="film-list">When Harry Met Sally &mdash; the scene</span></td>
+                  <td><span class="walk-time">10&ndash;15 min</span></td>
+                </tr>
+                <tr>
+                  <td>St. Patrick&rsquo;s Old Cathedral (Mulberry St)</td>
+                  <td><span class="film-list">The Godfather, Mean Streets</span></td>
+                  <td><span class="walk-time">15&ndash;20 min</span></td>
+                </tr>
+                <tr>
+                  <td>Ghostbusters Firehouse (14 North Moore St)</td>
+                  <td><span class="film-list">Ghostbusters</span></td>
+                  <td><span class="walk-time">20&ndash;25 min</span></td>
+                </tr>
+                <tr>
+                  <td>New York Stock Exchange (Wall St)</td>
+                  <td><span class="film-list">Trading Places</span></td>
+                  <td><span class="walk-end">End of Walk 1</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="walk-warning">
+            <strong>Note on the Phoebe&rsquo;s-to-Katz&rsquo;s leg:</strong> That&rsquo;s the one stretch of this walk that doesn&rsquo;t feel like movie-hopping so much as just crossing town &mdash; it&rsquo;s genuinely the longest single connector on either route. Good spot for a coffee break, or hop the subway one stop if you&rsquo;re tired.
+          </div>
+
+          <div class="local-tip">
+            <div class="lt-label">Local Tips</div>
+            <ul>
+              <li>Ross&rsquo;s apartment building (19&ndash;21 Grove St) sits on the same corner as the Friends building &mdash; you&rsquo;ll see both without any extra walking.</li>
+              <li>Carrie&rsquo;s stoop at 66 Perry St is roped off by the owner now. Take your photo from the sidewalk and move on &mdash; the residents have earned the right to be tired of tourists on their steps.</li>
+              <li>The Ghostbusters firehouse is a working FDNY station, not a museum. The crew is generally friendly about a quick photo, but they&rsquo;re not there for you &mdash; don&rsquo;t ask for a tour.</li>
+            </ul>
+          </div>
+
+          <div class="walk-warning">
+            <strong>Weekday note:</strong> The NYSE trading floor view only makes sense on weekdays, 9:30 AM&ndash;4 PM &mdash; the whole Financial District feels noticeably quieter on weekends, which changes the vibe of this walk&rsquo;s ending if that matters to you.
+          </div>
+
+          <img class="walk-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/c7/4d/09/photo0jpg.jpg?w=1600&h=-1&s=1" alt="West Village streets and filming locations — Greenwich Village NYC">
+
+          <div class="callout callout-local">
+            <div class="callout-title">Want the Full Neighborhood Guide Too?</div>
+            <p>Walk 1 passes through some of the most interesting streets in the city &mdash; beyond the filming locations. Our <a href="greenwich-village-walking-itinerary.html">complete Greenwich Village &amp; West Village walking itinerary</a> covers all 17 stops including the hidden courtyards, literary bars, and walled gardens most visitors miss.</p>
+          </div>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== WALK 2 ===== -->
+      <div class="walk-card" id="walk2">
+        <div class="wc-head">
+          <span class="wc-pill">Walk 2</span>
+          <h2>Herald Square to Central Park</h2>
+        </div>
+        <div class="wc-body">
+          <p>This one&rsquo;s tighter and more forgiving &mdash; almost the whole thing runs straight up 5th Avenue. Start at 34th St-Herald Square station.</p>
+
+          <div class="stops-wrap">
+            <table class="stops-table">
+              <thead>
+                <tr>
+                  <th>Stop</th>
+                  <th>Featured In</th>
+                  <th>Walk to Next</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Macy&rsquo;s Herald Square</td>
+                  <td><span class="film-list">Miracle on 34th Street</span></td>
+                  <td><span class="walk-time">3&ndash;5 min</span></td>
+                </tr>
+                <tr>
+                  <td>Empire State Building</td>
+                  <td><span class="film-list">King Kong, Sleepless in Seattle, Elf</span></td>
+                  <td><span class="walk-time">18&ndash;22 min</span></td>
+                </tr>
+                <tr>
+                  <td>Rockefeller Center + FAO Schwarz</td>
+                  <td><span class="film-list">Elf, Big (the piano scene)</span></td>
+                  <td><span class="walk-time">3&ndash;5 min</span></td>
+                </tr>
+                <tr>
+                  <td>St. Patrick&rsquo;s Cathedral</td>
+                  <td><span class="film-list">Elf and countless others</span></td>
+                  <td><span class="walk-time">8&ndash;10 min</span></td>
+                </tr>
+                <tr>
+                  <td>Tiffany &amp; Co.</td>
+                  <td><span class="film-list">Breakfast at Tiffany&rsquo;s</span></td>
+                  <td><span class="walk-time">3&ndash;5 min</span></td>
+                </tr>
+                <tr>
+                  <td>The Plaza Hotel + Trump Tower</td>
+                  <td><span class="film-list">Home Alone 2, Serendipity</span></td>
+                  <td><span class="walk-time">5&ndash;8 min</span></td>
+                </tr>
+                <tr>
+                  <td>Central Park Zoo / Wollman Rink / Gapstow Bridge</td>
+                  <td><span class="film-list">Home Alone 2, Serendipity, Annie Hall</span></td>
+                  <td><span class="walk-end">End of Walk 2</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="local-tip">
+            <div class="lt-label">Local Tips</div>
+            <ul>
+              <li>A short detour to 259A W 55th St gets you the real Soupman location from Seinfeld &mdash; a few minutes off-route between Rockefeller Center and Tiffany&rsquo;s, worth it if you&rsquo;re a big enough fan to care.</li>
+              <li>The FAO Schwarz piano from <em>Big</em> isn&rsquo;t at the store&rsquo;s original address anymore &mdash; the store relocated to Rockefeller Center, and the actual piano prop moved with it. Don&rsquo;t go looking for it on the old 5th Avenue block.</li>
+              <li>Central Park Zoo is ticketed, not free &mdash; don&rsquo;t assume you can just wander in the way you would the rest of the park.</li>
+            </ul>
+          </div>
+
+          <img class="walk-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/23/14/8a/caption.jpg?w=900&h=-1&s=1" alt="Fifth Avenue and Midtown Manhattan — Walk 2 filming locations">
+
+          <div class="cta-dark">
+            <div class="cta-eyebrow">Save on Walk 2&rsquo;s Paid Stops</div>
+            <h4>New York CityPASS</h4>
+            <p>The Empire State Building is one of the CityPASS&rsquo;s included attractions, along with the Met, the American Museum of Natural History, and two more. If you&rsquo;re planning to visit 3+ of the included attractions, the pass pays off. Do the math against individual ticket prices first.</p>
+            <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-CityPass/d687-2640NYC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">View CityPASS on Viator</a>
+          </div>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- OPTIONAL ADD-ON -->
+      <h2 id="addon">Optional Add-On: Upper West Side</h2>
+      <p>These two don&rsquo;t attach cleanly to Walk 2 without real extra distance, so treat this as a bonus rather than something to force into the main route.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Stop</th><th>Featured In</th><th>Notes</th></tr>
+          <tr>
+            <td><strong>&ldquo;Spook Central&rdquo; (55 Central Park West)</strong></td>
+            <td>Ghostbusters</td>
+            <td>A manageable extension north from the Central Park Zoo along Central Park West</td>
+          </tr>
+          <tr>
+            <td><strong>Caf&eacute; Lalo (201 W 83rd St)</strong></td>
+            <td>You&rsquo;ve Got Mail</td>
+            <td>About a mile further north of Spook Central &mdash; only worth it if you&rsquo;ve still got energy left</td>
+          </tr>
+        </table>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- ONE DAY OR TWO -->
+      <h2 id="pace">One Day or Two? Pick Your Pace</h2>
+      <p>I&rsquo;ll be straight with you: doing both walks in one day is genuinely ambitious. Here&rsquo;s how I&rsquo;d frame the choice.</p>
+
+      <div class="option-cards">
+        <div class="option-card opt-a">
+          <span class="oc-label">Option A &mdash; One Day</span>
+          <h4>Both walks, one ambitious day</h4>
+          <p>Roughly 6.5&ndash;7.5 miles of walking, likely more once you factor in photo stops and wandering. Doable if you&rsquo;re a strong walker and this is the main thing you want to do that day &mdash; but don&rsquo;t stack anything else on top of it.</p>
+        </div>
+        <div class="option-card opt-b">
+          <span class="oc-label">Option B &mdash; Split It &nbsp; Recommended</span>
+          <h4>Each walk on a separate half-day</h4>
+          <p>Walk 1 one afternoon, Walk 2 another &mdash; either on consecutive days or whenever you&rsquo;ve got a free half-day. Each walk on its own is a very manageable 2&ndash;5 miles, leaves room to actually linger at the spots that matter to you, and doesn&rsquo;t turn into an endurance test.</p>
+        </div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- VISITING ETIQUETTE -->
+      <h2 id="etiquette">Visiting Etiquette &mdash; Read This Too</h2>
+      <p>Almost every location on this list is either a private residence, a working business, or an active building &mdash; not a museum built for visitors. A few ground rules.</p>
+
+      <ul class="etiquette-list">
+        <li>Photos from the sidewalk, not the stoop. Carrie&rsquo;s building specifically has roped-off steps because of years of tourists sitting on them.</li>
+        <li>The Ghostbusters firehouse is an active fire station. A respectful photo is fine; expecting a tour or a chat isn&rsquo;t.</li>
+        <li>St. Patrick&rsquo;s Old Cathedral and St. Patrick&rsquo;s Cathedral are both active churches. Keep your voice down, especially if a service is happening.</li>
+        <li>These are people&rsquo;s homes and workplaces first, movie locations second. Act accordingly and everyone &mdash; including the next visitor &mdash; has a better time.</li>
+      </ul>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Movie Locations NYC: Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Can you go inside the Friends apartment building?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No &mdash; it&rsquo;s a real, private residential building. The exterior is what you&rsquo;re seeing on-screen; the ground floor is now home to a restaurant, The Little Owl, but the apartments themselves are private homes.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Ghostbusters firehouse still a real fire station?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, it&rsquo;s an active FDNY station (Hook &amp; Ladder 8). You can photograph the exterior, and the crew is generally friendly, but it&rsquo;s a working firehouse, not a tourist attraction.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How far is it between the Friends apartment and Sex and the City locations?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Very close &mdash; Carrie&rsquo;s building at 66 Perry St and the Friends building at 90 Bedford St are about a 5&ndash;8 minute walk apart, both in the West Village.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a full day for this?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">You can do both walks in one ambitious day (roughly 7 miles of walking), but splitting them across two easier half-days is the better experience if your schedule allows it. Each walk alone is a comfortable 2&ndash;5 miles.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the NYSE open to visitors?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The trading floor isn&rsquo;t open to the general public, but the exterior on Wall Street is a classic photo stop, best seen on a weekday when the Financial District actually feels alive &mdash; it&rsquo;s notably quiet on weekends.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where&rsquo;s the real FAO Schwarz piano from Big?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">At the current FAO Schwarz location inside Rockefeller Center &mdash; the store relocated from its original 5th Avenue address, and the piano moved with it.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are these filming locations free to visit?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Most of the exterior locations on both walks are completely free &mdash; you&rsquo;re walking to buildings, parks, and streetscapes, not paying for entry. The Empire State Building, Central Park Zoo, and any food stops are the main costs. See our <a href="nyc-trip-budget.html">NYC trip budget guide</a> for a full breakdown of what to expect at every spending level.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a guided tour that covers these locations?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; several operators run dedicated TV and movie location tours in NYC. A guided tour adds historical context and story behind each location that you can&rsquo;t always piece together from a map. If you&rsquo;re doing this solo, the self-guided route above works well; if the storytelling matters as much as the spots, a tour is worth considering.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="greenwich-village-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Greenwich Village &amp; West Village: The Ultimate Self-Guided Walking Route</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Ultimate Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="best-walking-tours-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Walking Tours in NYC: 9 Tours Actually Worth Booking</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost? Four Honest Budgets (2026)</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC (That Are Actually Worth Your Time)</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop=window.scrollY||document.documentElement.scrollTop;
+  var docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=docHeight>0?Math.min(100,Math.max(0,(scrollTop/docHeight)*100)):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>
