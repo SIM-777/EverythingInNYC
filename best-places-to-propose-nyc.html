@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Places to Propose in NYC: A Route-Optimized Day You Can Actually Follow | EverythingInNYC</title>
+<meta name="description" content="The best NYC proposal spots, mapped as one real day — Central Park, Top of the Rock, and Brooklyn's skyline, with a rain plan already built in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Jump nav */
+  .jump-nav{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius-card);padding:18px 22px;margin:26px 0;
+  }
+  .jump-nav .jn-title{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);
+    margin-bottom:12px;
+  }
+  .jump-nav ul{
+    list-style:none;padding:0;margin:0;
+    display:grid;grid-template-columns:1fr;gap:5px;
+  }
+  @media(min-width:560px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{
+    font-size:15px;font-weight:600;color:var(--info);
+    text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);
+  }
+  .jump-nav li a:hover{color:var(--navy);}
+
+  /* Route table */
+  .route-wrap{overflow-x:auto;margin:18px 0;}
+  .route-table{width:100%;border-collapse:collapse;font-size:15px;}
+  .route-table thead th{
+    background:var(--navy);color:#fff;
+    padding:10px 16px;text-align:left;
+    font-family:var(--font-head);font-weight:700;font-size:13px;
+  }
+  .route-table tbody td{
+    padding:11px 16px;border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  .route-table tbody tr:last-child td{border-bottom:none;}
+  .route-table td:first-child{
+    font-weight:700;color:var(--navy);white-space:nowrap;
+    background:rgba(15,23,42,0.02);font-size:14px;
+  }
+
+  /* Section image */
+  .section-img{margin:24px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:420px;object-fit:cover;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:8px;text-align:center;}
+
+  /* Spot comparison cards */
+  .spot-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+  @media(min-width:600px){.spot-cards{grid-template-columns:repeat(3,1fr);}}
+  .spot-card{
+    border-radius:16px;padding:22px 20px;border:1.5px solid var(--border);
+    background:var(--bg-card);position:relative;
+  }
+  .spot-card.sc-bow{border-color:rgba(255,193,7,0.5);background:rgba(255,193,7,0.03);}
+  .spot-card.sc-wagner{border-color:rgba(22,163,74,0.35);background:rgba(22,163,74,0.03);}
+  .spot-card.sc-bethesda{border-color:rgba(139,92,246,0.3);background:rgba(139,92,246,0.03);}
+  .spot-card .sc-pill{
+    display:inline-block;font-size:11px;font-weight:700;
+    letter-spacing:0.05em;text-transform:uppercase;
+    padding:3px 10px;border-radius:20px;margin-bottom:12px;
+  }
+  .spot-card.sc-bow .sc-pill{background:rgba(255,193,7,0.2);color:#7A5400;}
+  .spot-card.sc-wagner .sc-pill{background:rgba(22,163,74,0.14);color:#15803D;}
+  .spot-card.sc-bethesda .sc-pill{background:rgba(139,92,246,0.12);color:#5B21B6;}
+  .spot-card h3{margin:0 0 10px;font-size:18px;color:var(--navy);}
+  .spot-card p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Advice box */
+  .advice-box{
+    background:var(--navy);color:#fff;
+    border-radius:16px;padding:24px 26px;margin:24px 0;
+  }
+  .advice-box .ab-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:10px;
+  }
+  .advice-box p{font-size:16px;color:rgba(255,255,255,0.88);margin:0;line-height:1.7;}
+
+  /* Local tip */
+  .local-tip{
+    background:#FFF9E8;border-left:4px solid var(--accent);
+    border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0;
+  }
+  .local-tip .lt-label{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    color:#92620A;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px;
+  }
+  .local-tip p{font-size:15.5px;color:var(--text);margin:0;}
+
+  /* Brooklyn spot cards */
+  .brooklyn-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:20px 0;}
+  @media(min-width:560px){.brooklyn-cards{grid-template-columns:1fr 1fr;}}
+  .bk-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:20px 18px;
+  }
+  .bk-card .bk-tag{
+    font-size:11.5px;font-weight:700;letter-spacing:0.05em;
+    text-transform:uppercase;color:var(--text-secondary);margin-bottom:10px;display:block;
+  }
+  .bk-card h3{margin:0 0 8px;font-size:18px;color:var(--navy);}
+  .bk-card p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Ring tips list */
+  .ring-tips{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+  .ring-tips li{
+    display:flex;align-items:flex-start;gap:12px;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:13px 16px;font-size:16px;
+  }
+  .ring-tips li::before{
+    content:'';width:8px;height:8px;border-radius:50%;
+    background:var(--accent);flex:none;margin-top:7px;
+  }
+
+  /* Celebration cards */
+  .celebrate-cards{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;}
+  @media(min-width:560px){.celebrate-cards{grid-template-columns:1fr 1fr;}}
+  .cel-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 14px;
+  }
+  .cel-card h4{margin:0 0 8px;font-size:17px;color:var(--navy);}
+  .cel-card p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+  /* Back to top */
+  .back-top{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;font-weight:700;color:var(--text-secondary);
+    text-decoration:none;margin-top:16px;
+  }
+  .back-top:hover{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Couples</span>
+      <h1>Best Places to Propose in NYC: A Route-Optimized Day You Can Actually Follow</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 9 minute read</span>
+        <span>&middot;</span>
+        <span>&#128694;&#65039; ~2&ndash;2.5 miles total</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/5b/4f/b0/caption.jpg?w=1400&h=-1&s=1" alt="Central Park Bow Bridge at golden hour — best proposal spots in New York City">
+
+    <div class="article-body">
+      <p>Everyone tells you Central Park and calls it a day. That&rsquo;s not wrong, exactly &mdash; it&rsquo;s just incomplete. Central Park alone has at least three spots worth actually comparing, and if you stop there you&rsquo;re skipping the single best skyline moment in the entire city, which happens to be a subway ride away in Brooklyn. I&rsquo;ve built this as one real day, not a list: where to start, where the crowds thin out, when to cross the river, and what to do if the sky doesn&rsquo;t cooperate. Because it usually does &mdash; New York gets more clear days a year than Miami or Paris, so don&rsquo;t let weather anxiety run your planning.</p>
+      <p>One thing I want to say up front: the &ldquo;right&rdquo; spot isn&rsquo;t the most photographed one. It&rsquo;s the one that fits how you two actually want this moment to feel &mdash; an audience or none, epic skyline or something quieter. I&rsquo;ve built in both.</p>
+
+      <!-- JUMP NAV -->
+      <div class="jump-nav" id="top">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#route">The Route, Start to Finish</a></li>
+          <li><a href="#central-park">Central Park: Which Spot Is Right for You</a></li>
+          <li><a href="#permit">Do You Need a Permit?</a></li>
+          <li><a href="#brooklyn">Crossing Into Brooklyn</a></li>
+          <li><a href="#celebrate">Where to Celebrate After</a></li>
+          <li><a href="#rain">If It Rains</a></li>
+          <li><a href="#ring">Keeping the Ring Safe</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- THE ROUTE -->
+      <h2 id="route">The Route, Start to Finish</h2>
+      <p>This is built as two tight loops &mdash; Central Park and Midtown in the first half, Brooklyn&rsquo;s skyline in the second &mdash; connected by one subway ride. Don&rsquo;t try to walk between them; it&rsquo;s a real gap, not a stroll.</p>
+
+      <div class="route-wrap">
+        <table class="route-table">
+          <thead>
+            <tr>
+              <th>When</th>
+              <th>Where</th>
+              <th>Why here, why now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early morning</td>
+              <td>Bethesda Terrace</td>
+              <td>Go before the crowds arrive &mdash; by mid-morning this place fills up fast</td>
+            </tr>
+            <tr>
+              <td>Right after</td>
+              <td>Wagner Cove</td>
+              <td>A 3&ndash;5 minute walk from Bethesda &mdash; quieter, more private, genuinely one of my favorite spots in the whole park</td>
+            </tr>
+            <tr>
+              <td>Right after</td>
+              <td>Bow Bridge</td>
+              <td>Another few minutes on foot &mdash; the classic shot, better without a crowd around you</td>
+            </tr>
+            <tr>
+              <td>Late morning</td>
+              <td>Top of the Rock</td>
+              <td>About a 25&ndash;30 minute walk south, or a quick cab &mdash; go right at opening for the emptiest deck of the day</td>
+            </tr>
+            <tr>
+              <td>Early afternoon</td>
+              <td>Subway to Brooklyn</td>
+              <td>One ride, no shortcuts &mdash; this is the only real transit connection in the whole day</td>
+            </tr>
+            <tr>
+              <td>Golden hour</td>
+              <td>Brooklyn Heights Promenade</td>
+              <td>Quieter than people expect for a view this good</td>
+            </tr>
+            <tr>
+              <td>Just after</td>
+              <td>DUMBO&rsquo;s Manhattan Bridge view</td>
+              <td>A 10&ndash;15 minute walk from the Promenade &mdash; go for blue hour if you can time it</td>
+            </tr>
+            <tr>
+              <td>Evening</td>
+              <td>Dinner to celebrate</td>
+              <td>See below &mdash; pick based on whether you want to stay in Brooklyn or head back</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">Total Walking</div>
+        <p>Somewhere around 2 to 2.5 miles, split across the two halves of the day. This isn&rsquo;t a day about covering ground &mdash; it&rsquo;s about a handful of moments landing right, so I kept it light on purpose.</p>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- CENTRAL PARK -->
+      <h2 id="central-park">Central Park: Which Spot Is Actually Right for You</h2>
+      <p>I get asked constantly which Central Park spot to pick, so let me actually answer it instead of just listing three pretty places.</p>
+
+      <div class="spot-cards">
+        <div class="spot-card sc-bow">
+          <span class="sc-pill">The Classic Shot</span>
+          <h3>Bow Bridge</h3>
+          <p>The one everyone recognizes, and there&rsquo;s a reason it&rsquo;s been in more movies than I can count. It&rsquo;s also the busiest of the three, especially once the morning gets going. If this is the spot, go early or accept you&rsquo;ll have company.</p>
+        </div>
+        <div class="spot-card sc-wagner">
+          <span class="sc-pill">Most Private</span>
+          <h3>Wagner Cove</h3>
+          <p>My actual favorite. Engagement photographers shoot literally hundreds of proposals here specifically because it&rsquo;s tucked away and gives you natural cover if the weather turns. Most visitors walk right past the entrance without noticing it&rsquo;s there. That&rsquo;s exactly why I send people here.</p>
+        </div>
+        <div class="spot-card sc-bethesda">
+          <span class="sc-pill">Grand Architecture</span>
+          <h3>Bethesda Terrace</h3>
+          <p>The arches and the tiled ceiling make this feel like a completely different kind of moment &mdash; less &ldquo;nature&rdquo; and more &ldquo;grand entrance.&rdquo; It&rsquo;s also the busiest single spot in this whole itinerary. Go at opening or don&rsquo;t go expecting privacy.</p>
+        </div>
+      </div>
+
+      <div class="advice-box">
+        <div class="ab-label">My Actual Advice</div>
+        <p>If you can only pick one: Wagner Cove for privacy, Bow Bridge for the classic photo, Bethesda Terrace if the architecture itself matters to you. Do all three if you&rsquo;ve got the morning &mdash; they&rsquo;re a few minutes apart and it costs you almost nothing to see all of them before deciding where the moment actually happens.</p>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/4e/a0/68/photo1jpg.jpg?w=1400&h=-1&s=1" alt="Bow Bridge in Central Park — classic NYC proposal location">
+        <div class="cap">Bow Bridge at dawn &mdash; before the photographers, the joggers, and the tour groups all arrive at once.</div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- PERMIT -->
+      <h2 id="permit">Do You Need a Permit?</h2>
+      <p>Short answer: almost certainly not, and I want to clear this up because I&rsquo;ve seen people stress about it for no reason.</p>
+      <p>If it&rsquo;s just the two of you and a photographer with a hand-held camera &mdash; no tripod, no lighting setup, no big group &mdash; you don&rsquo;t need anything. Show up and go. Permits only come into play if you&rsquo;re bringing in a tripod, lighting rig, a bigger production, or you&rsquo;re setting up somewhere like the Conservatory Garden that leans more wedding-venue than casual park visit.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">No Permit Needed</div>
+          <ul class="card-list">
+            <li>Just the two of you + photographer</li>
+            <li>Hand-held camera only</li>
+            <li>No lighting equipment</li>
+            <li>No large group</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Permit Required</div>
+          <ul class="card-list">
+            <li>Tripod or monopod</li>
+            <li>Lighting rig or reflectors</li>
+            <li>Larger production setup</li>
+            <li>Conservatory Garden or formal venue areas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Don&rsquo;t Let Permit Anxiety Change Your Plans</div>
+        <p>The vast majority of proposals in Central Park happen without any permit, including ones with a photographer. Don&rsquo;t let this talk you out of the spot you actually want.</p>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- BROOKLYN -->
+      <h2 id="brooklyn">Crossing Into Brooklyn</h2>
+      <p>This is the half of the day most people skip, and it&rsquo;s a mistake. The Brooklyn skyline view is, in my opinion, a better payoff than anything you&rsquo;ll get from inside Manhattan &mdash; you&rsquo;re looking back at the skyline instead of standing in the middle of it.</p>
+
+      <div class="brooklyn-cards">
+        <div class="bk-card">
+          <span class="bk-tag">First Choice</span>
+          <h3>Brooklyn Heights Promenade</h3>
+          <p>This is the one I send people to first. It&rsquo;s got the same jaw-dropping Manhattan skyline as the Brooklyn Bridge itself, minus most of the tourist crowd, because most visitors don&rsquo;t realize it&rsquo;s there. Find one of the quieter benches away from the main entrance and you&rsquo;ll have real space to yourselves.</p>
+        </div>
+        <div class="bk-card">
+          <span class="bk-tag">Blue Hour Magic</span>
+          <h3>DUMBO&rsquo;s Manhattan Bridge View</h3>
+          <p>The cobblestone street with the bridge framed perfectly between the buildings &mdash; you&rsquo;ve seen this shot a hundred times without knowing where it was. It&rsquo;s genuinely stunning in person, but it does get busy, so early or blue hour is the move if you want it without a crowd of other photographers in your shot.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">More on This Corner of Brooklyn</div>
+        <p>DUMBO and the Manhattan Bridge view appear in our <a href="nyc-movie-locations-itinerary.html">NYC movie locations walking itinerary</a> as well &mdash; if you&rsquo;re spending time in this neighborhood, it&rsquo;s worth knowing what else is here.</p>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- CELEBRATE -->
+      <h2 id="celebrate">Where to Celebrate After</h2>
+      <p>One If By Land, Two If By Sea in the West Village is the classic choice for a reason &mdash; candlelit, historic, live piano, the whole thing. It&rsquo;s genuinely one of the most romantic rooms in the city. The catch: it&rsquo;s back in Manhattan, so if you&rsquo;ve just done the whole Brooklyn half of this route, that&rsquo;s a second subway ride on top of an already full day.</p>
+
+      <div class="celebrate-cards">
+        <div class="cel-card">
+          <h4>Stay in Brooklyn</h4>
+          <p>Find something in Brooklyn Heights or DUMBO and stay put &mdash; you&rsquo;ll have more energy left to actually enjoy the moment instead of rushing to a reservation across the river.</p>
+        </div>
+        <div class="cel-card">
+          <h4>Head Back to Manhattan</h4>
+          <p>One If By Land, Two If By Sea (West Village) is genuinely one of the most romantic rooms in the city. If that exact restaurant matters to you, it&rsquo;s worth the trip back. Just book well in advance.</p>
+        </div>
+      </div>
+
+      <div class="local-tip">
+        <div class="lt-label">Honest Advice</div>
+        <p>My honest recommendation: stay in Brooklyn unless the specific restaurant matters. By the time you&rsquo;ve done this full day &mdash; early morning Central Park, Top of the Rock, Brooklyn at golden hour &mdash; the last thing you need is another 40 minutes of transit before you can sit down with a drink.</p>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- RAIN -->
+      <h2 id="rain">If It Rains</h2>
+      <p>Don&rsquo;t build your whole day around the fear of rain &mdash; New York genuinely doesn&rsquo;t get that much of it, and you&rsquo;re statistically more likely to get a clear day here than in Miami or Paris. But if it does turn on you, here&rsquo;s the good news: you don&rsquo;t need a backup plan, because two of your morning stops already have one built in.</p>
+
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Bethesda Terrace</div>
+          <h4>Built-In Shelter</h4>
+          <p>That arched, tiled ceiling isn&rsquo;t just decoration &mdash; it&rsquo;s real shelter. One of the most beautiful covered spaces in the city.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Wagner Cove</div>
+          <h4>Natural Cover</h4>
+          <p>Sits under enough tree cover that a light rain barely reaches you. Part of why engagement photographers love this spot in all weather.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">DUMBO</div>
+          <h4>The Manhattan Bridge Archway</h4>
+          <p>The archway near the bridge on the Brooklyn side is a real, if occasionally crowded, place to duck under if it comes down hard on the second half of the day.</p>
+        </div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- RING SAFETY -->
+      <h2 id="ring">Keeping the Ring Safe</h2>
+      <p>Nobody talks about this part, and it&rsquo;s the part you&rsquo;re probably quietly stressing about.</p>
+
+      <ul class="ring-tips">
+        <li>Keep it on you all day, not in a bag you set down anywhere &mdash; an inside pocket, pinned if you have to, works fine.</li>
+        <li>If you&rsquo;re flying in for this, it goes in your carry-on, never checked luggage. Metal detectors don&rsquo;t usually flag rings, so airport security isn&rsquo;t actually the risky part &mdash; losing track of it in the chaos of a checkpoint is.</li>
+        <li>Get it insured and photographed before you leave home. Not every travel policy covers jewelry automatically &mdash; actually check.</li>
+        <li>If you&rsquo;re nervous about carrying it around all day, propose earlier rather than later &mdash; first thing at Wagner Cove instead of saving it for evening in Brooklyn. Less time spent managing the secret, more time enjoying being engaged.</li>
+      </ul>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Proposing in NYC: Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>What&rsquo;s the single best place to propose in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">There isn&rsquo;t one universal answer, and I&rsquo;d be lying if I gave you one. Wagner Cove if you want privacy, Bow Bridge if you want the classic recognizable shot, Brooklyn Heights Promenade if the skyline itself is the whole point.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a permit to propose in Central Park?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No, not for a normal proposal with a hand-held camera. Permits only matter if you&rsquo;re bringing a tripod, lighting equipment, or a larger production.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Central Park too crowded for a private proposal?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">The famous spots like Bow Bridge and Bethesda Terrace can be, especially by mid-morning. Wagner Cove is the one I&rsquo;d point you to if privacy matters more than the iconic backdrop.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I worry about rain ruining the day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Honestly, not much. New York has more clear days a year than you&rsquo;d expect, and two of the best spots in this itinerary already have natural cover if the weather turns.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is it safe to carry an engagement ring around the city all day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, with basic precautions &mdash; keep it on your person rather than in a bag you set down, and get it insured before you travel if you&rsquo;re flying in specifically for this.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I do Central Park and Brooklyn in the same day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">I&rsquo;d recommend it &mdash; the two halves of this route give you completely different kinds of moments, and it&rsquo;s a genuinely manageable day at around 2 to 2.5 miles of walking total. If you&rsquo;d rather keep it simple, either half works well on its own.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What time of year is best for a NYC proposal?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Spring (April&ndash;May) and fall (September&ndash;October) are the strongest choices. Central Park is at its most beautiful in both &mdash; cherry blossoms in April, golden leaves in October &mdash; and the weather is far more cooperative than the summer heat or winter cold. Bow Bridge particularly rewards an October morning visit.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I hire a surprise photographer?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you want photos of the actual moment, yes &mdash; and a good surprise photographer is worth the research. They position themselves near the spot in advance and capture the reaction without your partner knowing. For the spots in this guide, Wagner Cove and the Brooklyn Heights Promenade work especially well because the natural sight lines give a photographer room to stay unobtrusive.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="greenwich-village-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Greenwich Village &amp; West Village: The Ultimate Self-Guided Walking Route</a></li>
+      <li><a href="nyc-movie-locations-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Famous Movie Locations in NYC: The Complete Walking Itinerary</a></li>
+      <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top of the Rock: The Ultimate Guide (2026)</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Only Lower Manhattan Walking Itinerary You&rsquo;ll Need</a></li>
+      <li><a href="weekend-getaways-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Weekend Getaways from NYC (2026)</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop=window.scrollY||document.documentElement.scrollTop;
+  var docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=docHeight>0?Math.min(100,Math.max(0,(scrollTop/docHeight)*100)):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>
