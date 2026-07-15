@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best 7-Day NYC Itinerary Using the New York Pass | EverythingInNYC</title>
+<meta name="description" content="The smartest way to maximize your New York Pass without spending your vacation rushing between attractions. A route-optimized 7-day NYC itinerary built by neighborhood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Jump nav */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:18px 22px;margin:26px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:540px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:15px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  .jump-nav li a:hover{color:var(--navy);}
+
+  /* Day card */
+  .day-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin:40px 0;box-shadow:var(--shadow-card);}
+  .day-card .dc-head{background:var(--navy);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .dc-num{font-family:var(--font-head);font-weight:800;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;background:rgba(255,193,7,0.2);color:var(--accent);padding:4px 11px;border-radius:20px;white-space:nowrap;flex:none;}
+  .dc-head h2{color:#fff;font-size:20px;margin:0;line-height:1.2;scroll-margin-top:90px;flex:1;}
+  .dc-theme{font-size:14px;color:rgba(255,255,255,0.7);font-style:italic;width:100%;padding-top:4px;}
+  .day-card .dc-body{padding:22px;}
+
+  /* Quick facts grid */
+  .qf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 20px;background:rgba(15,23,42,0.03);border-radius:12px;padding:14px 16px;}
+  @media(min-width:480px){.qf-grid{grid-template-columns:repeat(3,1fr);}}
+  .qf-item .qf-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:3px;}
+  .qf-item .qf-val{font-size:14.5px;color:var(--navy);font-weight:600;}
+
+  /* Schedule table */
+  .sched-wrap{overflow-x:auto;margin:14px 0;}
+  .sched-table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .sched-table thead th{background:var(--navy);color:#fff;padding:9px 14px;text-align:left;font-family:var(--font-head);font-weight:700;font-size:13px;}
+  .sched-table tbody td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .sched-table tbody tr:last-child td{border-bottom:none;}
+  .sched-table tbody tr:nth-child(even){background:rgba(15,23,42,0.02);}
+  .sched-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap;font-size:13px;width:130px;}
+  .sched-table .pass-star{color:var(--accent);font-weight:700;}
+
+  /* Section headers inside day card */
+  .dc-section{margin-top:18px;}
+  .dc-section h3{font-size:16px;font-family:var(--font-head);font-weight:800;color:var(--navy);margin:0 0 10px;display:flex;align-items:center;gap:8px;}
+  .dc-section h3::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px;flex:none;}
+
+  /* Food / photo / skip lists */
+  .quick-list{list-style:none;padding:0;margin:8px 0;display:flex;flex-wrap:wrap;gap:6px;}
+  .quick-list li{font-size:14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 11px;}
+  .skip-list{list-style:none;padding:0;margin:8px 0;display:flex;flex-direction:column;gap:5px;}
+  .skip-list li{font-size:14.5px;color:var(--error);display:flex;align-items:center;gap:7px;}
+
+  /* Tip box */
+  .day-tip{background:#FFF9E8;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;font-size:15px;}
+  .day-tip .dt-label{font-family:var(--font-head);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;margin-bottom:5px;}
+  .day-tip p,.day-tip ul{margin:0;}
+  .day-tip ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;}
+  .day-tip ul li{display:flex;align-items:flex-start;gap:7px;font-size:15px;}
+  .day-tip ul li::before{content:'✅';flex:none;}
+
+  /* Option cards */
+  .option-cards{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;}
+  @media(min-width:540px){.option-cards{grid-template-columns:1fr 1fr 1fr;}}
+  .opt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 16px 14px;}
+  .opt-card .oc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:8px;display:block;}
+  .opt-card h4{margin:0 0 8px;font-size:16px;color:var(--navy);}
+  .opt-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+  /* Back to top */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:10px;}
+  .back-top:hover{color:var(--navy);}
+
+  /* Strategy section */
+  .strategy-box{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:18px 0;}
+  .strategy-box h3{margin:0 0 12px;font-size:18px;color:var(--navy);}
+
+  /* Pace table */
+  .pace-dot{display:inline-block;font-size:13px;}
+
+  /* Mistakes list */
+  .mistake-list{list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:8px;}
+  .mistake-list>li{counter-increment:mistakes;background:var(--bg-card);border:1px solid rgba(220,38,38,0.15);border-left:3px solid var(--error);border-radius:0 12px 12px 0;padding:12px 16px;}
+  .mistake-list>li h4{margin:0 0 5px;font-size:16px;color:var(--navy);}
+  .mistake-list>li p,.mistake-list>li ul{margin:0;font-size:15px;color:var(--text-secondary);}
+  .mistake-list>li ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;}
+  .mistake-list>li ul li::before{content:'›';margin-right:6px;color:var(--text-secondary);}
+
+  /* Right/wrong comparison */
+  .rw-table th:nth-child(1){background:rgba(22,163,74,0.8);}
+  .rw-table th:nth-child(2){background:rgba(220,38,38,0.7);}
+
+  /* Infographic placeholder */
+  .infographic-img{width:100%;border-radius:14px;margin:16px 0;display:block;}
+
+  /* Steps */
+  .steps-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:10px;counter-reset:steps;}
+  .steps-list li{counter-increment:steps;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:13px 16px;}
+  .steps-list li::before{content:counter(steps);font-family:var(--font-head);font-weight:800;font-size:14px;color:#fff;background:var(--navy);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>The Best 7-Day NYC Itinerary Using the New York Pass</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 20 minute read</span>
+        <span>&middot;</span>
+        <span>&#127760; 7 Days &middot; Route-Optimized</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="7-day-NYC-Itinerary-using-NewYork-Pass.png" alt="7-Day NYC Itinerary Using the New York Pass">
+
+    <div class="article-body">
+      <p><em>The smartest way to maximize your New York Pass without spending your vacation rushing between attractions.</em></p>
+
+      <h2>This Isn&rsquo;t Just Another 7-Day NYC Itinerary</h2>
+      <p>Search for a &ldquo;7-day New York itinerary&rdquo; and you&rsquo;ll find dozens of guides claiming you can visit 30 attractions in a week. Technically, they&rsquo;re not wrong. Realistically? You&rsquo;ll spend more time on the subway than actually enjoying New York.</p>
+      <p>This guide takes a different approach. Instead of asking <strong>&ldquo;How many attractions can I fit into seven days?&rdquo;</strong> it asks <strong>&ldquo;How can I get the most value from the New York Pass while actually enjoying New York?&rdquo;</strong></p>
+      <p>That means you&rsquo;ll visit the city&rsquo;s biggest attractions, save money with the New York Pass, avoid unnecessary backtracking, spend less time commuting, and keep enough flexibility for weather, reservation changes, and spontaneous discoveries. By the end of the week, you&rsquo;ll have experienced New York &mdash; not just checked attractions off a list.</p>
+
+      <!-- JUMP NAV -->
+      <div class="jump-nav" id="top">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#who">Who This Is For</a></li>
+          <li><a href="#mistakes-upfront">3 Things Most People Get Wrong</a></li>
+          <li><a href="#reserve-first">Reserve These Attractions First</a></li>
+          <li><a href="#strategy">How to Maximize the New York Pass</a></li>
+          <li><a href="#day1">Day 1 &mdash; Lower Manhattan</a></li>
+          <li><a href="#day2">Day 2 &mdash; Midtown East</a></li>
+          <li><a href="#day3">Day 3 &mdash; Hudson Yards &amp; Chelsea</a></li>
+          <li><a href="#day4">Day 4 &mdash; Upper West Side</a></li>
+          <li><a href="#day5">Day 5 &mdash; Flatiron &amp; Broadway</a></li>
+          <li><a href="#day6">Day 6 &mdash; Brooklyn</a></li>
+          <li><a href="#day7">Day 7 &mdash; Flexible Finale</a></li>
+          <li><a href="#cheat-sheet">Reservation Cheat Sheet</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- WHO IT'S FOR -->
+      <h2 id="who">Who This Itinerary Is For</h2>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Perfect For</div>
+          <ul class="card-list">
+            <li>First-time visitors to New York City</li>
+            <li>Travelers who purchased a 7-Day New York Pass</li>
+            <li>Couples and solo travelers</li>
+            <li>Families with older children</li>
+            <li>Visitors who enjoy walking</li>
+            <li>Anyone who wants maximum value without feeling rushed</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Skip This Itinerary If&hellip;</div>
+          <ul class="card-list">
+            <li>You prefer spending half a day inside a single museum</li>
+            <li>You have significant mobility limitations</li>
+            <li>You only want Broadway shows and restaurants</li>
+            <li>You&rsquo;re staying for fewer than six full sightseeing days</li>
+          </ul>
+          <p style="font-size:14px;color:var(--text-secondary);margin-top:10px;">In those cases, a shorter pass &mdash; or even buying individual attraction tickets &mdash; may be the better choice.</p>
+        </div>
+      </div>
+
+      <!-- 3 MISTAKES -->
+      <h2 id="mistakes-upfront">Before You Start: Three Things Most People Get Wrong</h2>
+
+      <div class="strategy-box">
+        <h3>1. The New York Pass Doesn&rsquo;t Eliminate Planning</h3>
+        <p>One of the biggest misconceptions is that buying the pass means you can simply show up everywhere. That&rsquo;s no longer how many of New York&rsquo;s most popular attractions work. Several headline attractions require <strong>advance reservations</strong>, even if admission is included with your pass. If you wait until you&rsquo;re already in New York, you may find that your preferred time slots are no longer available.</p>
+      </div>
+
+      <div class="strategy-box">
+        <h3>2. More Attractions Doesn&rsquo;t Always Mean Better Value</h3>
+        <p>Many travelers try to &ldquo;beat the pass&rdquo; by squeezing in five or six attractions every day. In reality, that&rsquo;s often the fastest way to become exhausted. The biggest value doesn&rsquo;t come from visiting the <em>most</em> attractions &mdash; it comes from visiting the <em>right</em> attractions while minimizing travel time between them. That&rsquo;s exactly how this itinerary is designed.</p>
+      </div>
+
+      <div class="strategy-box">
+        <h3>3. New York Is Bigger Than It Looks</h3>
+        <p>On a map, everything seems close together. In reality, crossing Manhattan takes time, attractions have security lines, observation decks use timed entry, ferries operate on schedules, and museums are much larger than most people expect. A realistic itinerary will almost always beat an overly ambitious one.</p>
+      </div>
+
+      <!-- RESERVE FIRST -->
+      <h2 id="reserve-first">Reserve These Attractions First</h2>
+      <p>As soon as you&rsquo;ve purchased your New York Pass, reserve the attractions that are hardest to book.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:440px;">
+          <tr><th>Priority</th><th>Attraction</th><th>Why</th></tr>
+          <tr><td>&#128308; Highest</td><td><strong>Statue of Liberty &amp; Ellis Island Ferry</strong></td><td>Popular morning departures fill quickly</td></tr>
+          <tr><td>&#128308; Highest</td><td><strong>Top of the Rock</strong></td><td>Sunset and late-afternoon slots in high demand</td></tr>
+          <tr><td>&#128308; Highest</td><td><strong>Edge</strong></td><td>Timed entry; reservations open up to 10 days ahead</td></tr>
+          <tr><td>&#128992; High</td><td><strong>Best of NYC Circle Line Cruise</strong></td><td>Prime sailing times can sell out</td></tr>
+          <tr><td>&#128992; High</td><td><strong>9/11 Museum</strong></td><td>Timed entry required</td></tr>
+          <tr><td>&#128993; Medium</td><td><strong>Empire State Building</strong></td><td>Reserve early for your preferred time</td></tr>
+          <tr><td>&#128993; Medium</td><td><strong>Guided Walking Tours</strong></td><td>Many have limited group sizes</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Pro Tip</div>
+        <p>Don&rsquo;t wait until you arrive in New York. Reserve your highest-priority attractions first, then build the rest of your itinerary around those confirmed times. The Go City app lets you manage reservations for many included attractions, while some experiences have separate booking instructions.</p>
+      </div>
+
+      <h3>Attractions Deliberately Left Out</h3>
+      <p>These attractions can be fun, but they&rsquo;re not the best use of your time on a first trip: Madame Tussauds, Color Factory, SPYSCAPE, RiseNY, Museum of Broadway, Paley Museum, Museum of the City of New York. If one of those genuinely interests you, Day 7 gives you the flexibility to swap it in.</p>
+
+      <!-- HOW BUILT -->
+      <h2>How This Itinerary Was Built</h2>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Rule 1</div><h4>Stay in One Neighborhood</h4><p>Each day focuses on one area. Less time underground, more time exploring.</p></div>
+        <div class="card"><div class="card-tag">Rule 2</div><h4>Prioritize High-Value Attractions</h4><p>The most expensive attractions are spread throughout the week so you maximize value without burning out.</p></div>
+        <div class="card"><div class="card-tag">Rule 3</div><h4>Balance Busy Days with Relaxed Days</h4><p>Central Park and Brooklyn come later, when most visitors appreciate a slower pace.</p></div>
+        <div class="card"><div class="card-tag">Rule 4</div><h4>Leave Room for Flexibility</h4><p>Weather changes. Reservations change. Energy levels change. This itinerary adapts.</p></div>
+      </div>
+
+      <!-- GLANCE TABLE -->
+      <h2>Your 7-Day Itinerary at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:420px;">
+          <tr><th>Day</th><th>Neighborhood</th><th>Main Pass Attractions</th></tr>
+          <tr><td><strong>Day 1</strong></td><td>Lower Manhattan</td><td>Statue of Liberty, One World Observatory</td></tr>
+          <tr><td><strong>Day 2</strong></td><td>Midtown East</td><td>MoMA, Top of the Rock</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>Hudson Yards &amp; Chelsea</td><td>Edge, High Line, Intrepid (Optional)</td></tr>
+          <tr><td><strong>Day 4</strong></td><td>Upper West Side</td><td>American Museum of Natural History</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>Midtown South &amp; Broadway</td><td>Empire State Building</td></tr>
+          <tr><td><strong>Day 6</strong></td><td>Brooklyn</td><td>Brooklyn Bridge &amp; DUMBO</td></tr>
+          <tr><td><strong>Day 7</strong></td><td>Flexible</td><td>Circle Line Cruise, 9/11 Museum or Bonus Attractions</td></tr>
+        </table>
+      </div>
+
+      <img src="7-day-NYC-Itinerary-overview.png" alt="7-Day NYC Itinerary Overview Infographic" class="infographic-img">
+
+      <div class="callout callout-summary">
+        <div class="callout-title">Before We Begin</div>
+        <p>Don&rsquo;t treat this itinerary as a checklist. Treat it as a framework. If you fall in love with Greenwich Village, spend another hour there. If rain forces you to swap two days, that&rsquo;s perfectly fine. The New York Pass is a fantastic way to save money &mdash; but the goal isn&rsquo;t to maximize the pass. The goal is to maximize your trip.</p>
+      </div>
+
+      <!-- AFFILIATE CTA 1 -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Before You Plan</div>
+        <h4>Get Your New York Pass</h4>
+        <p>The 7-day New York Pass gives you access to 100+ attractions &mdash; including all the headline experiences in this itinerary. Reserve yours through Viator with free cancellation on most bookings.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get the New York Pass on Viator</a>
+      </div>
+
+      <!-- STRATEGY SECTION -->
+      <h2 id="strategy">How to Get the Most Value from the New York Pass</h2>
+
+      <h3>How Many Attractions Should You Visit Per Day?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Attractions / Day</th><th>Verdict</th></tr>
+          <tr><td>1</td><td>&#10060; Usually poor value for a 7-day pass</td></tr>
+          <tr><td>2</td><td>&#9989; Comfortable and realistic</td></tr>
+          <tr><td>3</td><td>&#11088; Ideal for most sightseeing days</td></tr>
+          <tr><td>4</td><td>&#9888;&#65039; Only if they&rsquo;re close together</td></tr>
+          <tr><td>5+</td><td>&#10060; Usually too rushed</td></tr>
+        </table>
+      </div>
+      <p>Observation decks, museums and cruises often take much longer than people expect. It&rsquo;s far better to fully enjoy three attractions than to sprint through six.</p>
+
+      <h3>The Reservation Strategy</h3>
+      <ol class="steps-list">
+        <li><strong>Reserve your highest-priority attractions first:</strong> Statue of Liberty Ferry, Top of the Rock, Edge, Empire State Building, Circle Line Cruise, 9/11 Museum. Many require advance reservations through the Go City app.</li>
+        <li><strong>Write those confirmed reservation times into your itinerary.</strong></li>
+        <li><strong>Build the rest of each day around those reservations.</strong> Don&rsquo;t do it the other way around.</li>
+      </ol>
+
+      <h3>Understanding the Pace</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>Day</th><th>Pace</th><th>Walking</th></tr>
+          <tr><td><strong>Day 1</strong></td><td>Busy</td><td>9&ndash;11 km</td></tr>
+          <tr><td><strong>Day 2</strong></td><td>Busy</td><td>8&ndash;10 km</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>Moderate</td><td>7&ndash;9 km</td></tr>
+          <tr><td><strong>Day 4</strong></td><td>Relaxed</td><td>6&ndash;8 km</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>Moderate</td><td>7&ndash;9 km</td></tr>
+          <tr><td><strong>Day 6</strong></td><td>Relaxed</td><td>8&ndash;10 km</td></tr>
+          <tr><td><strong>Day 7</strong></td><td>Flexible</td><td>Flexible</td></tr>
+        </table>
+      </div>
+      <p>The trips people enjoyed most weren&rsquo;t the ones that squeezed in the highest number of attractions. They were the ones that mixed busy sightseeing days with slower neighborhood days. Wear comfortable shoes &mdash; you&rsquo;ll walk 50&ndash;60 km over the week.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Weather Swaps Are Easy</div>
+        <p>Rain on Day 6? Move Brooklyn to Day 7. Clear skies tomorrow? Bring Edge forward. Because this itinerary organizes by neighborhood, swapping two complete days never requires rebuilding the whole plan.</p>
+      </div>
+
+      <!-- AFFILIATE CTA 2 -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Ready to Plan?</div>
+        <h4>Purchase &amp; Activate Your New York Pass First</h4>
+        <p>You need your pass details before making reservations for eligible attractions. Reserve yours on Viator, then use the Go City app to lock in your attraction time slots.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get the New York Pass on Viator</a>
+      </div>
+
+      <!-- ===== DAY 1 ===== -->
+      <div class="day-card" id="day1">
+        <div class="dc-head">
+          <span class="dc-num">Day 1</span>
+          <h2>Lower Manhattan: Statue of Liberty, Financial District &amp; One World Observatory</h2>
+          <span class="dc-theme">New York&rsquo;s history, iconic landmarks, and your first unforgettable skyline view.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">Statue of Liberty, One World Observatory</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">9&ndash;11 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1&ndash;2 rides</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">Full day (9&ndash;10 hrs)</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Financial District</div></div>
+            <div class="qf-item"><div class="qf-label">&#127751; Best Evening</div><div class="qf-val">One World Observatory at sunset</div></div>
+          </div>
+
+          <p>The Statue of Liberty is the most reservation-sensitive attraction in this itinerary, so it makes sense to visit it first while energy levels are high. Once you&rsquo;re back in Manhattan, everything else is within walking distance &mdash; Wall Street, the 9/11 Memorial and One World Observatory &mdash; so you&rsquo;ll spend very little time on public transport. Statue of Liberty reservations for New York Pass holders can be made up to <strong>7 days in advance</strong>, while One World Observatory generally has more flexible entry procedures.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>8:00 AM</td><td>Arrive at Battery Park</td><td>Aim to arrive at least 30 minutes before your ferry departure. Security screening is similar to an airport.</td></tr>
+                <tr><td>8:30&ndash;11:30 AM</td><td><span class="pass-star">&#11088;</span> <strong>Statue of Liberty &amp; Ellis Island</strong></td><td>Reserve in advance. Most visitors spend 2.5&ndash;3 hours including ferry rides.</td></tr>
+                <tr><td>11:45 AM</td><td>Lunch</td><td>Stone Street is the top recommendation for a relaxed lunch after the ferry.</td></tr>
+                <tr><td>1:00 PM</td><td>Charging Bull &amp; Fearless Girl</td><td>Quick photo stop. Expect crowds.</td></tr>
+                <tr><td>1:20 PM</td><td>Wall Street &amp; NYSE</td><td>Walk through the Financial District.</td></tr>
+                <tr><td>2:00 PM</td><td>Trinity Church</td><td>One of Lower Manhattan&rsquo;s most historic landmarks.</td></tr>
+                <tr><td>2:30 PM</td><td>9/11 Memorial</td><td>Spend time here even if you&rsquo;re visiting the museum on another day.</td></tr>
+                <tr><td>3:30 PM</td><td>Oculus</td><td>Great architecture and a convenient coffee stop.</td></tr>
+                <tr><td>4:30&ndash;6:00 PM</td><td><span class="pass-star">&#11088;</span> <strong>One World Observatory</strong></td><td>Visit in the late afternoon for daylight views that transition toward sunset.</td></tr>
+                <tr><td>Evening</td><td>Dinner in FiDi or Tribeca</td><td>Stay downtown instead of returning to Midtown.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Reservation Tips</div>
+            <ul>
+              <li>Reserve the Statue of Liberty ferry as soon as your booking window opens.</li>
+              <li>If your ferry time changes, simply shift the afternoon by the same amount.</li>
+            </ul>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>Pisillo Italian Panini</li><li>Luke&rsquo;s Lobster</li><li>Stone Street</li><li>Adrienne&rsquo;s Pizza Bar</li><li>Blue Bottle Coffee (FiDi)</li>
+          </ul>
+
+          <div class="dc-section"><h3>Best Photo Spots</h3></div>
+          <ul class="quick-list">
+            <li>&#128247; Statue of Liberty</li><li>&#128247; Ellis Island</li><li>&#128247; Charging Bull</li><li>&#128247; Oculus</li><li>&#128247; One World Observatory</li>
+          </ul>
+
+          <div class="dc-section"><h3>Optional Add-Ons</h3></div>
+          <ul class="quick-list">
+            <li>Fraunces Tavern</li><li>South Street Seaport</li><li>Brooklyn Bridge (view only)</li>
+          </ul>
+
+          <div class="dc-section"><h3>Skip Today</h3></div>
+          <ul class="skip-list">
+            <li>&#10060; Brooklyn Bridge walk (covered on Day 6)</li>
+            <li>&#10060; Chinatown</li>
+            <li>&#10060; SoHo</li>
+            <li>&#10060; Midtown (covered on Days 2 &amp; 5)</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 2 ===== -->
+      <div class="day-card" id="day2">
+        <div class="dc-head">
+          <span class="dc-num">Day 2</span>
+          <h2>Midtown East: Rockefeller Center, MoMA &amp; Top of the Rock</h2>
+          <span class="dc-theme">Classic Midtown landmarks, world-class art, and New York&rsquo;s best observation deck.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">MoMA, Top of the Rock</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">8&ndash;10 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1 ride</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">8&ndash;9 hours</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Midtown East</div></div>
+            <div class="qf-item"><div class="qf-label">&#127751; Best Evening</div><div class="qf-val">Top of the Rock at sunset</div></div>
+          </div>
+
+          <p>Today&rsquo;s route follows a simple loop through Midtown East. You&rsquo;ll begin indoors at MoMA (ideal in the morning), then explore Rockefeller Center, Fifth Avenue and Bryant Park before finishing with a timed visit to Top of the Rock. Sunset reservations are among the most sought-after, so book them as early as possible. Pass holders can reserve Top of the Rock up to <strong>10 days in advance</strong> through the Go City app.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>9:00&ndash;11:00 AM</td><td><span class="pass-star">&#11088;</span> <strong>MoMA</strong></td><td>Focus on the highlights rather than trying to see every gallery.</td></tr>
+                <tr><td>11:10 AM</td><td>Rockefeller Center Plaza</td><td>Explore the plaza and Channel Gardens.</td></tr>
+                <tr><td>11:40 AM</td><td>St. Patrick&rsquo;s Cathedral</td><td>Free to enter. One of Midtown&rsquo;s architectural highlights.</td></tr>
+                <tr><td>12:15 PM</td><td>Fifth Avenue</td><td>Browse shops or simply enjoy the walk.</td></tr>
+                <tr><td>1:00 PM</td><td>Lunch</td><td>Midtown East has excellent restaurants within a few blocks.</td></tr>
+                <tr><td>2:15 PM</td><td>Bryant Park</td><td>Relax with a coffee before continuing.</td></tr>
+                <tr><td>2:45 PM</td><td>New York Public Library</td><td>Step inside the Rose Main Reading Room if it&rsquo;s open.</td></tr>
+                <tr><td>3:30 PM</td><td>Grand Central Terminal</td><td>Explore the Main Concourse and Vanderbilt Hall.</td></tr>
+                <tr><td>5:30 PM</td><td>Return to Rockefeller Center</td><td>Grab an early dinner or coffee before your reservation.</td></tr>
+                <tr><td>6:30&ndash;8:00 PM</td><td><span class="pass-star">&#11088;</span> <strong>Top of the Rock</strong></td><td>Reserve a slot about 45&ndash;60 minutes before sunset for the best lighting.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Reservation Tips</div>
+            <ul>
+              <li>Book your sunset reservation as early as possible.</li>
+              <li>Arrive 15&ndash;20 minutes before your entry time.</li>
+              <li>Timed reservations are generally enforced during busy periods.</li>
+            </ul>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>UrbanSpace Vanderbilt</li><li>The Smith</li><li>Caf&eacute; China</li><li>Bryant Park caf&eacute;s</li>
+          </ul>
+
+          <div class="dc-section"><h3>Best Photo Spots</h3></div>
+          <ul class="quick-list">
+            <li>&#128247; Rockefeller Center</li><li>&#128247; St. Patrick&rsquo;s Cathedral</li><li>&#128247; Bryant Park</li><li>&#128247; Grand Central Terminal</li><li>&#128247; Top of the Rock</li>
+          </ul>
+
+          <div class="dc-section"><h3>Skip Today</h3></div>
+          <ul class="skip-list">
+            <li>&#10060; Empire State Building (Day 5)</li>
+            <li>&#10060; Times Square (Day 5)</li>
+            <li>&#10060; Hudson Yards (Day 3)</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 3 ===== -->
+      <div class="day-card" id="day3">
+        <div class="dc-head">
+          <span class="dc-num">Day 3</span>
+          <h2>Hudson Yards, Chelsea &amp; the High Line</h2>
+          <span class="dc-theme">Modern New York, skyline views, waterfront parks, and one of the city&rsquo;s best urban walks.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">Edge Observation Deck (Intrepid optional)</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">7&ndash;9 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1 ride</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">8&ndash;9 hours</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Chelsea Market</div></div>
+            <div class="qf-item"><div class="qf-label">&#127751; Best Evening</div><div class="qf-val">Little Island or Hudson River</div></div>
+          </div>
+
+          <p>After two sightseeing-heavy days, today&rsquo;s itinerary slows the pace without sacrificing value. Rather than hopping between different parts of Manhattan, you&rsquo;ll spend the entire day walking south through one connected neighborhood: <strong>Hudson Yards &rarr; High Line &rarr; Chelsea Market &rarr; Little Island</strong>. No unnecessary subway rides. No backtracking. Just one of the most enjoyable walks in New York.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>8:30 AM</td><td>Arrive at Hudson Yards</td><td>Plan to arrive 15&ndash;20 minutes before your Edge reservation. Reservations open up to 10 days in advance.</td></tr>
+                <tr><td>9:00&ndash;10:30 AM</td><td><span class="pass-star">&#11088;</span> <strong>Edge Observation Deck</strong></td><td>Spend 60&ndash;90 minutes. Visit both indoor viewing area and outdoor sky deck. Don&rsquo;t skip the glass floor.</td></tr>
+                <tr><td>10:30&ndash;10:45 AM</td><td>The Vessel (Exterior)</td><td>Stop for photos. Exterior access always worthwhile.</td></tr>
+                <tr><td>10:45 AM&ndash;12:00 PM</td><td>Walk the High Line</td><td>Start at Hudson Yards and walk south. Gardens, public art and city views throughout.</td></tr>
+                <tr><td>12:00&ndash;1:15 PM</td><td>Lunch at Chelsea Market</td><td>One of the best places in Manhattan for a relaxed lunch. Arriving around noon helps avoid the biggest crowds.</td></tr>
+                <tr><td>1:15&ndash;2:00 PM</td><td>Explore Chelsea Market</td><td>Browse specialty food shops, bakeries and local boutiques.</td></tr>
+                <tr><td>2:10&ndash;3:00 PM</td><td>Little Island</td><td>Relax by the waterfront, enjoy the gardens or take in the Hudson River views.</td></tr>
+                <tr><td>3:15 PM onward</td><td>Optional: Intrepid Museum or Hudson River Park</td><td>Intrepid is included with the pass. Otherwise, continue strolling along Hudson River Park.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">If You Reserved Edge at Sunset</div>
+            <p>Sunset is absolutely worth it if you can secure the reservation. Simply change the order: <strong>Morning:</strong> High Line &mdash; <strong>Afternoon:</strong> Chelsea Market + Little Island &mdash; <strong>Evening:</strong> Edge at Sunset. You&rsquo;ll have a relaxed lunch, enjoy Chelsea at your own pace, and finish with one of the best skyline views in New York.</p>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Reservation Tips</div>
+            <ul>
+              <li>Reserve Edge as soon as your booking window opens.</li>
+              <li>Arrive at least 15&ndash;20 minutes early for your timed entry.</li>
+              <li>Morning visits are usually less crowded and often provide clearer views.</li>
+            </ul>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>Los Tacos No. 1</li><li>Very Fresh Noodles</li><li>Miznon</li><li>Lobster Place</li><li>Friedman&rsquo;s</li><li>Seed + Mill</li><li>Amy&rsquo;s Bread</li>
+          </ul>
+
+          <div class="dc-section"><h3>Skip Today</h3></div>
+          <ul class="skip-list">
+            <li>&#10060; Times Square</li>
+            <li>&#10060; Empire State Building</li>
+            <li>&#10060; Central Park</li>
+            <li>&#10060; Financial District</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 4 ===== -->
+      <div class="day-card" id="day4">
+        <div class="dc-head">
+          <span class="dc-num">Day 4</span>
+          <h2>Upper West Side &amp; Central Park</h2>
+          <span class="dc-theme">Slow down, explore New York&rsquo;s most famous park, and visit one of the world&rsquo;s greatest natural history museums.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">American Museum of Natural History</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">6&ndash;8 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1 ride</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">7&ndash;8 hours</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Upper West Side</div></div>
+            <div class="qf-item"><div class="qf-label">&#127795; Best Experience</div><div class="qf-val">Wandering Central Park</div></div>
+          </div>
+
+          <p>By Day 4, you&rsquo;ve already explored Lower Manhattan, Midtown, and Hudson Yards. This is the perfect point in your trip to slow the pace. Since the museum sits directly beside Central Park, you can walk between every stop without needing to navigate the subway again. It&rsquo;s one of the easiest and most relaxing days of the itinerary.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>9:30 AM</td><td>Arrive at AMNH</td><td>Museum opens at 10:00 AM daily. Arriving early helps you beat the largest crowds.</td></tr>
+                <tr><td>10:00 AM&ndash;1:00 PM</td><td><span class="pass-star">&#11088;</span> <strong>American Museum of Natural History</strong></td><td>Prioritize: Dinosaur Fossils, Hall of Ocean Life, Gems &amp; Minerals, Gilder Center, Theodore Roosevelt Rotunda.</td></tr>
+                <tr><td>1:00&ndash;2:00 PM</td><td>Lunch on the Upper West Side</td><td>Eat before entering Central Park.</td></tr>
+                <tr><td>2:00 PM</td><td>Enter Central Park at 77th&ndash;81st Street</td><td>Already beside the park &mdash; no additional transport needed.</td></tr>
+                <tr><td>2:15 PM</td><td>Belvedere Castle</td><td>One of Central Park&rsquo;s best viewpoints.</td></tr>
+                <tr><td>2:45 PM</td><td>The Great Lawn</td><td>A great place for a short break in good weather.</td></tr>
+                <tr><td>3:15 PM</td><td>Shakespeare Garden (Optional)</td><td>A peaceful detour if you&rsquo;re enjoying the slower pace.</td></tr>
+                <tr><td>3:45 PM</td><td>Bethesda Terrace &amp; Fountain</td><td>One of Central Park&rsquo;s most iconic landmarks &mdash; spend time here, don&rsquo;t just photograph and move on.</td></tr>
+                <tr><td>4:15 PM</td><td>Bow Bridge</td><td>The best photo spot in Central Park.</td></tr>
+                <tr><td>4:45 PM</td><td>The Lake</td><td>Relax and enjoy one of the park&rsquo;s most scenic areas.</td></tr>
+                <tr><td>5:30 PM+</td><td>Dinner on the Upper West Side</td><td>Columbus Avenue and Amsterdam Avenue have excellent restaurants.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">Central Park Is the Attraction</div>
+            <p>Many itineraries make the mistake of treating Central Park as somewhere you simply walk through on the way to another attraction. Don&rsquo;t do that. By giving yourself an unhurried afternoon here, you&rsquo;ll experience a side of New York that many visitors miss entirely.</p>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>Daily Provisions</li><li>Shake Shack (Columbus Ave)</li><li>Jacob&rsquo;s Pickles</li><li>The Smith</li><li>Joe Coffee</li><li>Bluestone Lane</li>
+          </ul>
+
+          <div class="dc-section"><h3>Optional Add-Ons (choose one)</h3></div>
+          <ul class="quick-list">
+            <li>Strawberry Fields</li><li>Sheep Meadow</li><li>Alice in Wonderland Statue</li><li>Conservatory Water</li><li>The Mall &amp; Literary Walk</li>
+          </ul>
+
+          <div class="dc-section"><h3>Skip Today</h3></div>
+          <ul class="skip-list">
+            <li>&#10060; Times Square</li><li>&#10060; Empire State Building</li><li>&#10060; Hudson Yards</li><li>&#10060; Lower Manhattan</li><li>&#10060; Brooklyn</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 5 ===== -->
+      <div class="day-card" id="day5">
+        <div class="dc-head">
+          <span class="dc-num">Day 5</span>
+          <h2>Flatiron, NoMad, Empire State Building &amp; Broadway</h2>
+          <span class="dc-theme">Classic Midtown landmarks, the Empire State Building, and an unforgettable Broadway evening.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">Empire State Building</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">7&ndash;9 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1 ride</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">8&ndash;9 hours</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Flatiron District</div></div>
+            <div class="qf-item"><div class="qf-label">&#127917; Evening</div><div class="qf-val">Broadway Show (recommended)</div></div>
+          </div>
+
+          <p>Today&rsquo;s route connects three neighborhoods that naturally flow into one another: <strong>Flatiron &rarr; NoMad &rarr; Empire State Building &rarr; Bryant Park &rarr; Times Square &rarr; Broadway</strong>. This itinerary passes through Herald Square on the way north, giving you more time to enjoy the Empire State Building, relax in Bryant Park, and soak up the Theater District atmosphere.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>9:00 AM</td><td>Arrive at Madison Square Park</td><td>Start the morning in one of Midtown&rsquo;s most pleasant parks.</td></tr>
+                <tr><td>9:00&ndash;9:45 AM</td><td>Madison Square Park &amp; Flatiron Building</td><td>Walk around the park and photograph the Flatiron from different angles.</td></tr>
+                <tr><td>10:00&ndash;11:30 AM</td><td>Explore NoMad</td><td>Wander through the neighborhood and nearby side streets at a relaxed pace.</td></tr>
+                <tr><td>11:45 AM&ndash;1:00 PM</td><td>Lunch</td><td>Flatiron and NoMad have excellent lunch options without Times Square crowds.</td></tr>
+                <tr><td>1:15 PM</td><td>Walk toward the Empire State Building</td><td>About 10&ndash;15 minutes on foot.</td></tr>
+                <tr><td>1:30&ndash;3:00 PM</td><td><span class="pass-star">&#11088;</span> <strong>Empire State Building Observatory</strong></td><td>Reserve through the Go City app before your trip. Timed reservations required.</td></tr>
+                <tr><td>3:15 PM</td><td>Herald Square (Optional)</td><td>Walk through if interested in shopping. Otherwise continue to Bryant Park.</td></tr>
+                <tr><td>3:45&ndash;4:45 PM</td><td>Bryant Park</td><td>Grab a coffee, relax on the lawn or enjoy one of Midtown&rsquo;s best public spaces.</td></tr>
+                <tr><td>4:45 PM</td><td>Walk through Times Square</td><td>Experience the energy without feeling pressured to stay for hours.</td></tr>
+                <tr><td>5:30 PM</td><td>Early Dinner</td><td>Eat before your Broadway show rather than afterward when restaurants are busiest.</td></tr>
+                <tr><td>7:00 or 8:00 PM</td><td>Broadway Show (Optional but Highly Recommended)</td><td>Book tickets in advance or check TKTS for same-day discounts.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Reservation Tips</div>
+            <ul>
+              <li>Reserve the Empire State Building before your trip. Timed entry is required for New York Pass users.</li>
+              <li>Arrive around 15&ndash;20 minutes early for your reservation.</li>
+              <li>If you&rsquo;re seeing a Broadway show, leave at least 60&ndash;90 minutes between the observation deck and curtain time.</li>
+            </ul>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>Eataly NYC Flatiron</li><li>Daily Provisions</li><li>The Smith</li><li>Scarpetta (splurge)</li><li>Becco (pre-Broadway)</li><li>Joe Allen (pre-Broadway)</li><li>Carmine&rsquo;s (groups)</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 6 ===== -->
+      <div class="day-card" id="day6">
+        <div class="dc-head">
+          <span class="dc-num">Day 6</span>
+          <h2>Brooklyn Bridge, DUMBO &amp; Brooklyn Heights</h2>
+          <span class="dc-theme">Iconic skyline views, historic Brooklyn neighborhoods, and one of New York&rsquo;s best ferry rides.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">None (Relaxed Neighborhood Day)</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">8&ndash;10 km</div></div>
+            <div class="qf-item"><div class="qf-label">&#128647; Subway</div><div class="qf-val">1 ride</div></div>
+            <div class="qf-item"><div class="qf-label">&#9194; Ferry</div><div class="qf-val">NYC Ferry (recommended)</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">7&ndash;8 hours</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">DUMBO</div></div>
+          </div>
+
+          <p>After several days of museums and observation decks, today is all about experiencing New York beyond the major attractions. You&rsquo;ll explore Brooklyn at a slower pace, moving naturally from the Brooklyn Bridge into DUMBO, Brooklyn Bridge Park and Brooklyn Heights before returning to Manhattan on the NYC Ferry &mdash; one of the most memorable ways to end a Brooklyn day.</p>
+
+          <div class="dc-section"><h3>Today&rsquo;s Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>8:30 AM</td><td>Arrive at City Hall</td><td>Starting from the Manhattan side lets you experience the Brooklyn Bridge in its most iconic direction.</td></tr>
+                <tr><td>8:45&ndash;9:30 AM</td><td>Walk the Brooklyn Bridge</td><td>Walk at a relaxed pace and stop often for photos. Early morning offers fewer crowds and softer light.</td></tr>
+                <tr><td>9:30&ndash;10:30 AM</td><td>Explore DUMBO</td><td>Wander Washington Street, Pebble Beach and the waterfront.</td></tr>
+                <tr><td>10:30&ndash;11:30 AM</td><td>Brooklyn Bridge Park</td><td>Follow the waterfront south while enjoying uninterrupted skyline views.</td></tr>
+                <tr><td>11:45 AM&ndash;1:00 PM</td><td>Lunch in DUMBO</td><td>Enjoy a relaxed lunch before continuing to Brooklyn Heights.</td></tr>
+                <tr><td>1:15&ndash;2:30 PM</td><td>Brooklyn Heights Promenade</td><td>One of the city&rsquo;s finest free viewpoints overlooking Lower Manhattan and New York Harbor.</td></tr>
+                <tr><td>2:30&ndash;3:30 PM</td><td>Explore Brooklyn Heights</td><td>Walk the quiet brownstone-lined streets at your own pace.</td></tr>
+                <tr><td>3:45 PM</td><td>Walk to Pier 1 or Fulton Ferry Landing</td><td>Follow signs to the NYC Ferry terminal.</td></tr>
+                <tr><td>4:00 PM+</td><td>NYC Ferry to Wall Street / Pier 11</td><td>A scenic ferry ride gives you another incredible view of Lower Manhattan and the Brooklyn Bridge &mdash; far more memorable than the subway.</td></tr>
+                <tr><td>Evening</td><td>Dinner in the Financial District or hotel</td><td>If staying in Midtown, continue by subway after arriving at Pier 11.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="dc-section"><h3>Best Food Stops</h3></div>
+          <ul class="quick-list">
+            <li>Time Out Market</li><li>Juliana&rsquo;s Pizza</li><li>Celestine</li><li>The River Caf&eacute; (splurge)</li><li>Butler</li><li>% Arabica</li>
+          </ul>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 7 ===== -->
+      <div class="day-card" id="day7">
+        <div class="dc-head">
+          <span class="dc-num">Day 7</span>
+          <h2>Flexible Finale: Cruise, Museums &amp; Your Favorite Neighborhood</h2>
+          <span class="dc-theme">Use your final day to fill the gaps, revisit your favorite neighborhood, and end your trip without rushing.</span>
+        </div>
+        <div class="dc-body">
+          <div class="qf-grid">
+            <div class="qf-item"><div class="qf-label">&#11088; Pass Attractions</div><div class="qf-val">Circle Line Cruise, 9/11 Museum (or alternatives)</div></div>
+            <div class="qf-item"><div class="qf-label">&#128694; Walking</div><div class="qf-val">5&ndash;8 km (flexible)</div></div>
+            <div class="qf-item"><div class="qf-label">&#9201;&#65039; Duration</div><div class="qf-val">Flexible</div></div>
+            <div class="qf-item"><div class="qf-label">&#127374; Best Lunch</div><div class="qf-val">Depends on your chosen neighborhood</div></div>
+            <div class="qf-item"><div class="qf-label">&#128247; Best Photo</div><div class="qf-val">Circle Line Cruise</div></div>
+            <div class="qf-item"><div class="qf-label">&#127751; Best Ending</div><div class="qf-val">Sunset cruise or a walk through your favorite neighborhood</div></div>
+          </div>
+
+          <p>No matter how carefully you plan, something almost always changes during a week in New York. Maybe it rained. Maybe your Edge reservation wasn&rsquo;t available until another day. Maybe you unexpectedly fell in love with Greenwich Village and wanted to go back. That&rsquo;s exactly why Day 7 is intentionally flexible.</p>
+
+          <div class="option-cards">
+            <div class="opt-card">
+              <span class="oc-label">Option A &mdash; Recommended</span>
+              <h4>The Full Finale</h4>
+              <p>Circle Line Cruise in the morning, 9/11 Museum in the afternoon, then revisit your favorite neighborhood to close the trip.</p>
+            </div>
+            <div class="opt-card">
+              <span class="oc-label">Option B &mdash; Catch-Up</span>
+              <h4>Missed an Attraction?</h4>
+              <p>Edge, Top of the Rock, Empire State Building, Statue of Liberty (if weather caused cancellations), AMNH, Intrepid Museum.</p>
+            </div>
+            <div class="opt-card">
+              <span class="oc-label">Option C &mdash; No More Attractions</span>
+              <h4>Just Enjoy New York</h4>
+              <p>Greenwich Village, SoHo, Central Park, Fifth Avenue shopping, a long lunch, a rooftop bar, the Hudson River Greenway. Sometimes the best final day is the one with no schedule at all.</p>
+            </div>
+          </div>
+
+          <div class="dc-section"><h3>Option A Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>9:30 AM</td><td>Relaxed Breakfast</td><td>Don&rsquo;t rush. Today is intentionally slower.</td></tr>
+                <tr><td>10:30 AM&ndash;12:30 PM</td><td><span class="pass-star">&#11088;</span> <strong>Best of NYC Circle Line Cruise</strong></td><td>One of the highest-value attractions included with the pass. Reserve in advance &mdash; popular departures fill quickly.</td></tr>
+                <tr><td>1:00 PM</td><td>Lunch</td><td>Eat near the cruise terminal or head to Hell&rsquo;s Kitchen.</td></tr>
+                <tr><td>2:30&ndash;4:30 PM</td><td><span class="pass-star">&#11088;</span> <strong>9/11 Memorial &amp; Museum</strong></td><td>Allow around two hours. Timed reservations required through the Go City app.</td></tr>
+                <tr><td>5:00 PM+</td><td>Return to your favorite neighborhood</td><td>Revisit the place you loved most during the week.</td></tr>
+                <tr><td>Evening</td><td>Farewell Dinner</td><td>Celebrate the end of your New York adventure.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Reservation Tips</div>
+            <ul>
+              <li>Reserve the Circle Line Cruise before your trip. Popular sailing times fill up, especially in spring and summer.</li>
+              <li>If visiting the 9/11 Museum, book your timed entry before arriving in New York.</li>
+              <li>Leave extra time if you&rsquo;re flying home today. Airport travel from Manhattan can easily take longer than expected.</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#top">&#8593; Back to top</a>
+        </div>
+      </div>
+
+      <!-- SECOND GLANCE TABLE -->
+      <h2>Your Complete 7-Day Itinerary at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:540px;">
+          <tr><th>Day</th><th>Neighborhood</th><th>Main Pass Attractions</th><th>Walking</th><th>Pace</th></tr>
+          <tr><td><strong>Day 1</strong></td><td>Lower Manhattan</td><td>Statue of Liberty, One World Observatory</td><td>9&ndash;11 km</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 2</strong></td><td>Midtown East</td><td>MoMA, Top of the Rock</td><td>8&ndash;10 km</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>Hudson Yards &amp; Chelsea</td><td>Edge</td><td>7&ndash;9 km</td><td>&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 4</strong></td><td>Upper West Side</td><td>American Museum of Natural History</td><td>6&ndash;8 km</td><td>&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>Flatiron, NoMad &amp; Broadway</td><td>Empire State Building</td><td>7&ndash;9 km</td><td>&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 6</strong></td><td>Brooklyn</td><td>DUMBO, Brooklyn Bridge, Brooklyn Heights</td><td>8&ndash;10 km</td><td>&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Day 7</strong></td><td>Flexible</td><td>Circle Line Cruise, 9/11 Museum or Catch-Up</td><td>Flexible</td><td>&#11088;&#11088;</td></tr>
+        </table>
+      </div>
+
+      <!-- RESERVATION CHEAT SHEET -->
+      <h2 id="cheat-sheet">Reservation Cheat Sheet</h2>
+      <p>Buying the pass doesn&rsquo;t automatically guarantee entry. Several of the most popular attractions require advance reservations even if admission is included.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:480px;">
+          <tr><th>Attraction</th><th>Reservation Required</th><th>Recommended Booking Time</th></tr>
+          <tr><td><strong>Statue of Liberty Ferry</strong></td><td>&#9989; Yes</td><td>As soon as your 7-day booking window opens</td></tr>
+          <tr><td><strong>Edge</strong></td><td>&#9989; Yes</td><td>As soon as your 10-day booking window opens</td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td>&#9989; Yes</td><td>As soon as your 10-day booking window opens</td></tr>
+          <tr><td><strong>Empire State Building</strong></td><td>&#9989; Yes</td><td>Before arriving in NYC</td></tr>
+          <tr><td><strong>9/11 Museum</strong></td><td>&#9989; Yes</td><td>Up to 14 days ahead</td></tr>
+          <tr><td><strong>Circle Line Cruise</strong></td><td>Recommended</td><td>Several days ahead during busy seasons</td></tr>
+          <tr><td><strong>American Museum of Natural History</strong></td><td>Usually not required (verify)</td><td>&mdash;</td></tr>
+          <tr><td><strong>One World Observatory</strong></td><td>Check Go City app instructions</td><td>&mdash;</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">My Booking Order</div>
+        <p>Statue of Liberty &rarr; Edge &rarr; Top of the Rock &rarr; Empire State Building &rarr; 9/11 Museum &rarr; Circle Line Cruise. Everything else can be planned around those reservations.</p>
+      </div>
+
+      <!-- COMMON MISTAKES -->
+      <h2 id="mistakes">Common Mistakes to Avoid</h2>
+      <ul class="mistake-list">
+        <li><h4>Activating Your Pass Too Late</h4><p>Every pass day ends at <strong>midnight</strong>, not 24 hours after activation. Start as early as possible to maximize value.</p></li>
+        <li><h4>Waiting Too Long to Make Reservations</h4><p>Buying the pass doesn&rsquo;t reserve your attractions. Popular time slots &mdash; especially sunset observation decks &mdash; can disappear quickly.</p></li>
+        <li><h4>Visiting Neighborhoods Out of Order</h4><p>Don&rsquo;t bounce between Central Park, the Financial District, and Hudson Yards in one day. Cluster attractions geographically instead.</p></li>
+        <li><h4>Trying to Visit Every Observation Deck</h4><p>You don&rsquo;t need Edge, Empire State Building, Top of the Rock and One World Observatory on consecutive days. Spacing them out makes each one feel special.</p></li>
+        <li><h4>Spending Too Much Time in Times Square</h4><p>Visit it, take your photos, move on. There are far better places to spend your afternoon.</p></li>
+        <li><h4>Forgetting About Security Lines</h4><p>Observation decks, ferries and major attractions all require security screening. Always arrive early.</p></li>
+        <li><h4>Underestimating Walking</h4><p>You&rsquo;ll walk 50&ndash;60 km over seven days. Comfortable shoes aren&rsquo;t optional.</p></li>
+        <li><h4>Chasing &ldquo;Free&rdquo; Attractions Just Because They&rsquo;re Included</h4><p>Included doesn&rsquo;t automatically mean worthwhile. Choose experiences you&rsquo;ll genuinely enjoy.</p></li>
+        <li><h4>Filling Every Hour of Every Day</h4><p>Leave room for coffee breaks, unexpected discoveries, great restaurants and relaxing in parks. Those moments often become the highlights.</p></li>
+        <li><h4>Skipping the Flexible Day</h4><p>Day 7 is your insurance policy against weather, reservation changes and spontaneous discoveries. Don&rsquo;t pre-fill it.</p></li>
+      </ul>
+
+      <!-- IS IT RIGHT FOR YOU -->
+      <h2>Is This Itinerary Right for You?</h2>
+      <div class="table-wrap">
+        <table class="data-table rw-table" style="min-width:380px;">
+          <tr><th>This itinerary is perfect if&hellip;</th><th>You may want a different itinerary if&hellip;</th></tr>
+          <tr><td>It&rsquo;s your first visit to NYC</td><td>You&rsquo;ve already visited NYC several times</td></tr>
+          <tr><td>You&rsquo;re buying the New York Pass</td><td>You&rsquo;re not using an attraction pass</td></tr>
+          <tr><td>You enjoy walking</td><td>You prefer taxis everywhere</td></tr>
+          <tr><td>You want a balanced trip</td><td>You&rsquo;re focused mainly on shopping</td></tr>
+          <tr><td>You like sightseeing</td><td>You&rsquo;re planning multiple Broadway shows</td></tr>
+        </table>
+      </div>
+
+      <!-- AFFILIATE CTA 3 -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Ready to Book?</div>
+        <h4>Get Your 7-Day New York Pass</h4>
+        <p>This itinerary is built around the 7-Day New York Pass &mdash; the best option if you plan to visit several major attractions every day. Reserve yours on Viator and start making reservations before the best time slots fill up.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get the New York Pass on Viator</a>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is the 7-Day New York Pass worth it?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; if you plan to visit several major attractions every day and organize your sightseeing efficiently. The key is choosing the right attractions and visiting them in the right order, not trying to maximize the count.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How many attractions should I visit each day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Aim for 2&ndash;3 major attractions plus nearby free sights. That&rsquo;s usually the sweet spot between value and enjoyment. Five or more in a single day almost always results in rushing.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I visit the same attraction twice?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. Each included attraction can generally be visited once per pass.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to reserve attractions?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Some require reservations, others don&rsquo;t. Always check the Go City app before your trip because reservation policies can change. The Statue of Liberty Ferry, Edge, Top of the Rock, Empire State Building and 9/11 Museum all currently require reservations.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does the pass include subway rides?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. You&rsquo;ll need a separate OMNY payment method for public transportation &mdash; tap your contactless card or phone at the turnstile. Read our <a href="metrocard-omny-guide.html">complete OMNY guide</a> before you travel.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I change the order of the days?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. In fact, I recommend swapping days if weather or reservation availability makes another order more practical. Just keep each day&rsquo;s activities within the same neighborhood.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if it rains?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Switch to one of the museum-focused days (Day 2 or Day 4) and move outdoor activities to another day. That&rsquo;s exactly why this itinerary includes a flexible final day as your backup.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this itinerary suitable for families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, although families with younger children may want to reduce walking distances and skip one observation deck. Day 4 (Central Park + Natural History Museum) is particularly family-friendly.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I buy the pass before booking attractions?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. You need your pass details before making reservations for eligible attractions. Purchase first, then use the Go City app to secure your time slots.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How early should I start each day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Aim to begin sightseeing between 8:00 and 9:00 AM. Early starts mean shorter lines, cooler temperatures in summer, and better use of your pass.</div>
+        </details>
+      </div>
+
+      <!-- FINAL THOUGHTS -->
+      <h2>Final Thoughts</h2>
+      <p>There are hundreds of ways to spend seven days in New York. This itinerary isn&rsquo;t designed to help you visit the greatest number of attractions &mdash; it&rsquo;s designed to help you have the <strong>best possible week</strong> while getting outstanding value from the New York Pass.</p>
+      <p>By organizing each day around neighborhoods instead of random landmarks, reserving popular attractions in advance, and leaving room for flexibility, you&rsquo;ll spend less time riding the subway and more time actually experiencing New York.</p>
+      <p>If you only take one piece of advice from this guide: <strong>don&rsquo;t try to do everything.</strong> Do the right things, in the right order. That&rsquo;s the difference between a stressful sightseeing checklist and a trip you&rsquo;ll remember for years.</p>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs. New York Pass: Which Attraction Pass Is Actually Worth It?</a></li>
+      <li><a href="nyc-modular-itinerary-framework.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Itinerary: A Modular Neighborhood Framework</a></li>
+      <li><a href="8-days-in-nyc-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Perfect 8 Days in NYC: Route-Optimized Itinerary</a></li>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Dead &mdash; Complete OMNY &amp; Subway Guide (2026)</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost? Four Honest Budgets</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Only Lower Manhattan Walking Itinerary You&rsquo;ll Need</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop=window.scrollY||document.documentElement.scrollTop;
+  var docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=docHeight>0?Math.min(100,Math.max(0,(scrollTop/docHeight)*100)):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>
