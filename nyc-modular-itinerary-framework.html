@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best NYC Itinerary: A Modular Neighborhood Framework | EverythingInNYC</title>
+<meta name="description" content="Stop copying fixed NYC itineraries. Build your own from 13 route-tested neighborhood modules — real distances, real closures, zero backtracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Jump nav */
+  .jump-nav{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--radius-card);padding:18px 22px;margin:26px 0;
+  }
+  .jump-nav .jn-title{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;
+  }
+  .jump-nav ul{
+    list-style:none;padding:0;margin:0;
+    display:grid;grid-template-columns:1fr;gap:5px;
+  }
+  @media(min-width:540px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{
+    font-size:15px;font-weight:600;color:var(--info);
+    text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);
+  }
+  .jump-nav li a:hover{color:var(--navy);}
+
+  /* One-sentence summary box */
+  .one-liner{
+    background:var(--navy);color:#fff;
+    border-radius:14px;padding:18px 22px;margin:20px 0;
+    font-size:16.5px;line-height:1.6;
+  }
+  .one-liner strong{color:var(--accent);}
+
+  /* Module card */
+  .module-card{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:20px 0;box-shadow:var(--shadow-card);
+  }
+  .module-card.core{border-top:3px solid var(--accent);}
+  .module-card.extension{border-top:3px solid var(--info);}
+  .module-card.themed{border-top:3px solid var(--purple);}
+
+  .module-card .mc-head{
+    padding:16px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    border-bottom:1px solid var(--border);
+  }
+  .mc-num{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#fff;width:34px;height:34px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .module-card.core .mc-num{background:var(--navy);}
+  .module-card.extension .mc-num{background:var(--info);}
+  .module-card.themed .mc-num{background:var(--purple);}
+  .module-card .mc-head h3{
+    margin:0;font-size:19px;color:var(--navy);flex:1;
+  }
+  .mc-badge{
+    font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    padding:3px 9px;border-radius:20px;white-space:nowrap;
+  }
+  .badge-full{background:rgba(220,38,38,0.1);color:var(--error);}
+  .badge-half{background:rgba(22,163,74,0.12);color:#15803D;}
+  .badge-standalone{background:rgba(37,99,235,0.1);color:var(--info);}
+
+  .module-card .mc-body{padding:18px 20px;}
+
+  /* Module route row */
+  .module-route{
+    background:rgba(15,23,42,0.04);border-radius:10px;
+    padding:12px 16px;margin-bottom:14px;
+    font-size:14.5px;
+  }
+  .module-route .mr-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:5px;
+  }
+  .module-route .mr-stops{
+    font-weight:700;color:var(--navy);line-height:1.5;
+  }
+  .stop-arr{color:var(--accent);font-weight:800;margin:0 2px;}
+
+  /* Module stats */
+  .module-stats{
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;
+  }
+  @media(min-width:460px){.module-stats{grid-template-columns:repeat(3,1fr);}}
+  .ms-item .ms-label{
+    font-size:10.5px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:3px;
+  }
+  .ms-item .ms-val{font-size:14px;color:var(--navy);font-weight:600;}
+
+  /* Warning box */
+  .mod-warning{
+    background:rgba(245,158,11,0.07);border-left:3px solid var(--warning);
+    border-radius:0 10px 10px 0;padding:11px 15px;margin:12px 0;
+    font-size:14.5px;color:var(--text);
+  }
+  .mod-warning strong{color:#92620A;}
+
+  /* Local tip */
+  .mod-tip{
+    background:#FFF9E8;border-left:3px solid var(--accent);
+    border-radius:0 10px 10px 0;padding:11px 15px;margin:10px 0;
+    font-size:14.5px;
+  }
+  .mod-tip .mt-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;color:#92620A;margin-bottom:4px;
+  }
+  .mod-tip p{margin:0;color:var(--text);}
+
+  /* Section image */
+  .section-img{margin:20px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:380px;object-fit:cover;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+  /* Combination rules */
+  .combo-rules{
+    counter-reset:rules;list-style:none;
+    padding:0;margin:18px 0;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .combo-rules li{
+    counter-increment:rules;
+    display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:13px 16px;font-size:16px;
+  }
+  .combo-rules li::before{
+    content:counter(rules);
+    font-family:var(--font-head);font-weight:800;font-size:14px;
+    color:#fff;background:var(--navy);
+    width:32px;height:32px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;flex:none;
+    margin-top:1px;
+  }
+
+  /* Build your trip table */
+  .build-table th{background:var(--navy-soft);color:#fff;padding:10px 14px;}
+  .build-table .bt-new td:first-child{color:var(--info);font-weight:700;}
+  .build-table .bt-tip td{
+    background:rgba(255,193,7,0.06);
+    font-style:italic;color:var(--text-secondary);
+    border-top:2px solid rgba(255,193,7,0.3);
+    font-size:14px;
+  }
+
+  /* Timing table */
+  .timing-table th{background:var(--navy);color:#fff;}
+  .timing-table td:nth-child(2){color:var(--error);font-size:14px;}
+  .timing-table td:nth-child(3){color:var(--success);font-size:14px;font-weight:600;}
+
+  /* Mistakes list */
+  .mistake-list{
+    list-style:none;padding:0;margin:18px 0;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .mistake-list li{
+    display:flex;align-items:flex-start;gap:10px;
+    background:var(--bg-card);border:1px solid rgba(220,38,38,0.15);
+    border-left:3px solid var(--error);
+    border-radius:0 12px 12px 0;
+    padding:12px 16px;font-size:16px;
+  }
+
+  /* Module group header */
+  .module-group-head{
+    display:flex;align-items:center;gap:12px;margin:36px 0 4px;
+  }
+  .mgh-bar{width:4px;height:28px;border-radius:2px;flex:none;}
+  .mgh-bar.core-bar{background:var(--accent);}
+  .mgh-bar.ext-bar{background:var(--info);}
+  .mgh-bar.theme-bar{background:var(--purple);}
+  .module-group-head h2{margin:0;font-size:26px;scroll-margin-top:90px;}
+
+  /* Back to top */
+  .back-top{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;font-weight:700;color:var(--text-secondary);
+    text-decoration:none;margin-top:8px;
+  }
+  .back-top:hover{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Itinerary</span>
+      <h1>The Best NYC Itinerary for First-Time Visitors: A Modular Neighborhood Framework</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 14 minute read</span>
+        <span>&middot;</span>
+        <span>&#128205; 13 route-tested modules</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/d1/4e/bd/caption.jpg?w=1400&h=-1&s=1" alt="New York City skyline — modular itinerary framework for NYC visitors">
+
+    <div class="article-body">
+      <p>Every NYC itinerary you&rsquo;ve ever read is the same trick dressed up differently: someone&rsquo;s personal 3, 5, or 7-day trip, presented as if it&rsquo;s the universal answer. It isn&rsquo;t. What actually works is a system &mdash; a set of neighborhood modules you snap together based on how many days you actually have, not how many the blogger happened to spend here.</p>
+      <p>I&rsquo;ve spent a long time building and re-walking these modules until the backtracking disappeared. What follows is that system: 13 route-tested blocks, the rules for combining them without wrecking your pacing, and a straight answer to &ldquo;what do I do with 3 days versus 8.&rdquo; No fixed day-by-day script &mdash; build your own from these pieces.</p>
+
+      <!-- JUMP NAV -->
+      <div class="jump-nav" id="top">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#why-modules">Why Modules Beat a Fixed Itinerary</a></li>
+          <li><a href="#before">Before You Plan Anything</a></li>
+          <li><a href="#core">The Core 7 Modules</a></li>
+          <li><a href="#extension">Extension Modules (8&ndash;13)</a></li>
+          <li><a href="#themed">Themed Modules (Bonus)</a></li>
+          <li><a href="#rules">The Combination Rules</a></li>
+          <li><a href="#build">Build Your Trip: Any Length</a></li>
+          <li><a href="#timing">Best Timing at a Glance</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- WHY MODULES -->
+      <h2 id="why-modules">Why Modules Beat a Fixed Itinerary</h2>
+      <p>Here&rsquo;s what nobody says plainly: the single biggest reason a NYC trip feels exhausting isn&rsquo;t the city, it&rsquo;s bad sequencing. Jumping between neighborhoods instead of finishing one properly is, in my experience, the number one thing that turns a great week into a tired blur. Every module below fixes that by design &mdash; each one is a self-contained loop in one connected part of the city. You never double back across Manhattan to grab something you skipped that morning.</p>
+      <p>The second rule I build every trip around: cap it at 3&ndash;4 real stops a day, not 5&ndash;6. I know that feels like leaving things on the table. It isn&rsquo;t &mdash; it&rsquo;s the difference between remembering a place and just checking it off.</p>
+
+      <div class="one-liner">
+        <strong>The one-sentence version:</strong> Pick modules based on how many days you have, sequence them so you never cross the same ground twice, and build in a real rest day if you&rsquo;re staying six days or more.
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- BEFORE YOU PLAN -->
+      <h2 id="before">Before You Plan Anything</h2>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Expect 6&ndash;8 planned miles a day from these modules. Real walking, once you start wandering, tends to run higher &mdash; treat this as your floor, not your ceiling.</li>
+        <li><span class="dot"></span>Manhattan to Brooklyn is always one deliberate subway ride. Never attempt it on foot &mdash; it&rsquo;s a genuinely different scale of walk than it looks like on a map. Read our <a href="nyc-subway-guide-first-time-visitors.html">complete NYC subway guide</a> before you go.</li>
+        <li><span class="dot"></span>Pick one observation deck for the whole trip. Doing two is rarely worth the repeat view.</li>
+      </ul>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">Hours Change &mdash; Always Verify</div>
+        <p>Hours and closure days change &mdash; sometimes permanently, sometimes just for a season. Anywhere this guide sends you inside a building (a museum, the library, a landmark with an entry fee), check the current hours before you build a day around it. Closures are flagged throughout, but always verify close to your actual travel dates.</p>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- CORE 7 -->
+      <div class="module-group-head" id="core">
+        <div class="mgh-bar core-bar"></div>
+        <h2>The Core 7 Modules</h2>
+      </div>
+      <p>The essential building blocks &mdash; the ones I&rsquo;d tell any first-timer to start from, in roughly the order I&rsquo;d add them as a trip gets longer.</p>
+
+      <!-- Module 1 -->
+      <div class="module-card core" id="m1">
+        <div class="mc-head">
+          <span class="mc-num">1</span>
+          <h3>Midtown Core</h3>
+          <span class="mc-badge badge-half">Half or Full Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Bryant Park <span class="stop-arr">&rarr;</span> NY Public Library <span class="stop-arr">&rarr;</span> Rockefeller Center <span class="stop-arr">&rarr;</span> 5th Avenue <span class="stop-arr">&rarr;</span> Times Square</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day or full day &mdash; absorbs an observation deck stop well</div></div>
+            <div class="ms-item"><div class="ms-label">Timing</div><div class="ms-val">Times Square: 4:00&ndash;5:30 PM</div></div>
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Timing Note</div>
+            <p>Save Times Square for 4:00&ndash;5:30 PM &mdash; better light, thinner crowds than a morning visit.</p>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> The library&rsquo;s main branch closes entirely on Sundays during summer (mid-July through early September) &mdash; check current hours before planning a summer-Sunday visit around it.
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card core" id="m2">
+        <div class="mc-head">
+          <span class="mc-num">2</span>
+          <h3>Liberty &amp; Lower Manhattan</h3>
+          <span class="mc-badge badge-full">Full Day Only</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Battery Park ferry <span class="stop-arr">&rarr;</span> Liberty &amp; Ellis Islands <span class="stop-arr">&rarr;</span> Stone Street <span class="stop-arr">&rarr;</span> Wall Street <span class="stop-arr">&rarr;</span> 9/11 Memorial <span class="stop-arr">&rarr;</span> Brooklyn Bridge <span class="stop-arr">&rarr;</span> DUMBO</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Distance</div><div class="ms-val">~4.8 miles</div></div>
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Full day only &mdash; ferry timing anchors everything</div></div>
+            <div class="ms-item"><div class="ms-label">First Ferry</div><div class="ms-val">~9:00 AM</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> The 9/11 Memorial &amp; Museum is closed Tuesdays, and ticketed attractions here require advance booking &mdash; check current hours and reservation windows before you build this day.
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Local Tip</div>
+            <p>Tuesday through Thursday tend to be the calmest days at the Statue of Liberty if your dates are flexible at all. This is also the heaviest module in the whole library &mdash; don&rsquo;t put it next to another full walking day without something lighter between them.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card core" id="m3">
+        <div class="mc-head">
+          <span class="mc-num">3</span>
+          <h3>Central Park / Upper East Side</h3>
+          <span class="mc-badge badge-full">Full Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">The Met <span class="stop-arr">&rarr;</span> Central Park (Bethesda Terrace, Bow Bridge, Strawberry Fields) <span class="stop-arr">&rarr;</span> Exit toward Columbus Circle / UWS</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Full day</div></div>
+            <div class="ms-item"><div class="ms-label">Met Arrival</div><div class="ms-val">9:30 AM</div></div>
+            <div class="ms-item"><div class="ms-label">Park Time</div><div class="ms-val">2:00&ndash;5:30 PM</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> The Met is closed Wednesdays &mdash; verify current museum hours before locking this day in, especially if it&rsquo;s your only shot at it.
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Local Tip</div>
+            <p>Central Park is 843 acres. Don&rsquo;t try to &ldquo;see the whole park&rdquo; &mdash; pick a corner and actually enjoy it.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card core" id="m4">
+        <div class="mc-head">
+          <span class="mc-num">4</span>
+          <h3>Harlem</h3>
+          <span class="mc-badge badge-half">Half-Day Minimum</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Strivers&rsquo; Row <span class="stop-arr">&rarr;</span> Schomburg Center <span class="stop-arr">&rarr;</span> Apollo Theater (exterior)</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Distance</div><div class="ms-val">~1.2 miles</div></div>
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day min; full day with soul food lunch</div></div>
+            <div class="ms-item"><div class="ms-label">Sunday Trade-off</div><div class="ms-val">Best atmosphere, but Schomburg is closed</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Current status:</strong> The Apollo Theater is under construction with performances relocated nearby &mdash; verify its current status before treating it as a full stop rather than an exterior photo.
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Local Tip</div>
+            <p>Only about 15 minutes from Midtown by express train. Visitors consistently assume it&rsquo;s farther than it is &mdash; don&rsquo;t skip it on that assumption.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card core" id="m5">
+        <div class="mc-head">
+          <span class="mc-num">5</span>
+          <h3>Village, SoHo &amp; Chelsea</h3>
+          <span class="mc-badge badge-full">Full Day (Loose)</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Washington Square Park <span class="stop-arr">&rarr;</span> West Village streets <span class="stop-arr">&rarr;</span> SoHo <span class="stop-arr">&rarr;</span> Chelsea Market <span class="stop-arr">&rarr;</span> High Line <span class="stop-arr">&rarr;</span> Hudson Yards</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Full day &mdash; deliberately loose, fewer fixed stops</div></div>
+            <div class="ms-item"><div class="ms-label">Start Time</div><div class="ms-val">10:00 AM, after rush clears</div></div>
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Local Tip</div>
+            <p>Don&rsquo;t over-plan this one. The whole point is being allowed to duck into a shop that catches your eye.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module-card core" id="m6">
+        <div class="mc-head">
+          <span class="mc-num">6</span>
+          <h3>Williamsburg</h3>
+          <span class="mc-badge badge-half">Half-Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Domino Park <span class="stop-arr">&rarr;</span> Bedford Avenue <span class="stop-arr">&rarr;</span> Smorgasburg (seasonal, Saturdays)</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day, ideally after a rest morning</div></div>
+            <div class="ms-item"><div class="ms-label">Window</div><div class="ms-val">1:00&ndash;5:30 PM</div></div>
+            <div class="ms-item"><div class="ms-label">Smorgasburg</div><div class="ms-val">Apr&ndash;Oct, Saturdays only</div></div>
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Note</div>
+            <p>Any day other than Saturday, or outside the April&ndash;October season, swap Smorgasburg for a sit-down restaurant on Bedford Avenue instead.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 7 -->
+      <div class="module-card core" id="m7">
+        <div class="mc-head">
+          <span class="mc-num">7</span>
+          <h3>MoMA &amp; Midtown East</h3>
+          <span class="mc-badge badge-half">Half-Day + Evening</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">MoMA <span class="stop-arr">&rarr;</span> Grand Central <span class="stop-arr">&rarr;</span> Chrysler Building (exterior) <span class="stop-arr">&rarr;</span> TKTS / Broadway</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day into an evening Broadway show</div></div>
+            <div class="ms-item"><div class="ms-label">MoMA Hours</div><div class="ms-val">Standard: 9:30 AM&ndash;1:00 PM</div></div>
+            <div class="ms-item"><div class="ms-label">Friday Bonus</div><div class="ms-val">Extended to 5:30 PM; NY residents free 5:30&ndash;8:30 PM</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Never pair with Module 3 same day:</strong> The Met and MoMA both deserve unhurried time. Cramming both in one day means enjoying neither. Confirm current MoMA hours before you go.
+          </div>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/4d/e4/cb/view-of-the-main-concourse.jpg?w=1800&h=-1&s=1" alt="Grand Central Terminal main concourse ceiling — Module 7 stop">
+            <div class="cap">Grand Central Terminal&rsquo;s main concourse &mdash; one of the finest public spaces in America, and a 2-minute walk from MoMA PS1&rsquo;s Manhattan location.</div>
+          </div>
+        </div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- EXTENSION MODULES -->
+      <div class="module-group-head" id="extension">
+        <div class="mgh-bar ext-bar"></div>
+        <h2>Extension Modules for Longer Trips</h2>
+      </div>
+      <p>Once the Core 7 are covered &mdash; usually around day 7 or 8 &mdash; these are what I&rsquo;d add next, roughly in the order I&rsquo;d add them.</p>
+
+      <!-- Module 8 -->
+      <div class="module-card extension" id="m8">
+        <div class="mc-head">
+          <span class="mc-num">8</span>
+          <h3>Central Brooklyn</h3>
+          <span class="mc-badge badge-standalone">Standalone Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Brooklyn Museum <span class="stop-arr">&rarr;</span> Botanic Garden <span class="stop-arr">&rarr;</span> Prospect Park</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Full standalone day &mdash; doesn&rsquo;t combine well with anything else</div></div>
+            <div class="ms-item"><div class="ms-label">Transit</div><div class="ms-val">Direct from Midtown, ~28 min</div></div>
+            <div class="ms-item"><div class="ms-label">Window</div><div class="ms-val">10:00 AM&ndash;6:00 PM</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> The Brooklyn Museum is closed Tuesdays &mdash; verify current hours before this becomes your only day for it. On a First Saturday (select months), the museum runs free evening hours worth building the day around.
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 9 -->
+      <div class="module-card extension" id="m9">
+        <div class="mc-head">
+          <span class="mc-num">9</span>
+          <h3>Coney Island</h3>
+          <span class="mc-badge badge-standalone">Standalone Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Stillwell Ave station <span class="stop-arr">&rarr;</span> Nathan&rsquo;s Famous <span class="stop-arr">&rarr;</span> Luna Park <span class="stop-arr">&rarr;</span> New York Aquarium <span class="stop-arr">&rarr;</span> Boardwalk</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Distance</div><div class="ms-val">0.6 miles internally &mdash; tightest loop in the library</div></div>
+            <div class="ms-item"><div class="ms-label">Commute</div><div class="ms-val">~50&ndash;60 min each way</div></div>
+            <div class="ms-item"><div class="ms-label">Best Day</div><div class="ms-val">Friday or Saturday for longest park hours</div></div>
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Why It&rsquo;s Standalone</div>
+            <p>The 50&ndash;60 minute commute each way is why it doesn&rsquo;t pair with anything else same-day &mdash; the commute itself is the cost of admission.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 10 -->
+      <div class="module-card extension" id="m10">
+        <div class="mc-head">
+          <span class="mc-num">10</span>
+          <h3>Long Island City (Queens)</h3>
+          <span class="mc-badge badge-half">Half-Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Hunter&rsquo;s Point South Park <span class="stop-arr">&rarr;</span> Gantry Plaza State Park (Pepsi-Cola sign) <span class="stop-arr">&rarr;</span> MoMA PS1</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day, timed for sunset</div></div>
+            <div class="ms-item"><div class="ms-label">Transit</div><div class="ms-val">NYC Ferry from E 34th St, ~5 min</div></div>
+            <div class="ms-item"><div class="ms-label">Best Window</div><div class="ms-val">Golden hour / sunset</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> MoMA PS1 is closed both Tuesdays and Wednesdays &mdash; a stricter schedule than MoMA&rsquo;s Manhattan location. Confirm current hours before counting on it.
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 11 -->
+      <div class="module-card extension" id="m11">
+        <div class="mc-head">
+          <span class="mc-num">11</span>
+          <h3>Chinatown &amp; Lower East Side</h3>
+          <span class="mc-badge badge-half">Half-Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Mahayana Buddhist Temple <span class="stop-arr">&rarr;</span> Doyers Street <span class="stop-arr">&rarr;</span> Tenement Museum <span class="stop-arr">&rarr;</span> Essex Market</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day</div></div>
+            <div class="ms-item"><div class="ms-label">Window</div><div class="ms-val">11:00 AM&ndash;3:00 PM</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Book ahead:</strong> The Tenement Museum is guided-tour-only &mdash; no self-guided option. Book ahead and check current tour times before you arrive.
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 12 -->
+      <div class="module-card extension" id="m12">
+        <div class="mc-head">
+          <span class="mc-num">12</span>
+          <h3>Governors Island</h3>
+          <span class="mc-badge badge-half">Half-Day or Evening</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Stops in order</div>
+            <div class="mr-stops">Ferry from Battery Maritime Building <span class="stop-arr">&rarr;</span> The Hills <span class="stop-arr">&rarr;</span> Hammock Grove <span class="stop-arr">&rarr;</span> Waterfront promenade <span class="stop-arr">&rarr;</span> Fort Jay</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day or genuine evening</div></div>
+            <div class="ms-item"><div class="ms-label">Free Ferry</div><div class="ms-val">Weekend, before 11:00 AM</div></div>
+            <div class="ms-item"><div class="ms-label">Ferry Time</div><div class="ms-val">Under 10 minutes</div></div>
+          </div>
+          <div class="mod-warning">
+            <strong>Closure to know:</strong> Fort Jay is open Wednesday&ndash;Sunday only, and access is currently limited to one entrance due to construction &mdash; check current access if seeing it specifically matters to you.
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Local Tip</div>
+            <p>The 5:30 PM ferry in summer is the move &mdash; day-trip families are leaving, and the light from 6 PM to sunset over the harbor is the best of the day.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 13 -->
+      <div class="module-card extension" id="m13">
+        <div class="mc-head">
+          <span class="mc-num">13</span>
+          <h3>Red Hook</h3>
+          <span class="mc-badge badge-half">Half-Day</span>
+        </div>
+        <div class="mc-body">
+          <div class="module-route">
+            <div class="mr-label">Anchor &amp; Stops</div>
+            <div class="mr-stops">IKEA free ferry from Manhattan <span class="stop-arr">&rarr;</span> Louis Valentino Jr. Park <span class="stop-arr">&rarr;</span> Fairway Market <span class="stop-arr">&rarr;</span> Pioneer Works</div>
+          </div>
+          <div class="module-stats">
+            <div class="ms-item"><div class="ms-label">Best For</div><div class="ms-val">Half-day &mdash; a second-or-third-trip pick</div></div>
+            <div class="ms-item"><div class="ms-label">Best Day</div><div class="ms-val">Weekend afternoon</div></div>
+            <div class="ms-item"><div class="ms-label">Character</div><div class="ms-val">Rawer, less polished than Williamsburg</div></div>
+          </div>
+          <div class="mod-tip">
+            <div class="mt-label">Note</div>
+            <p>Deliberately rawer and less polished than Williamsburg or DUMBO &mdash; a real working-waterfront feel. Not a first-timer&rsquo;s Brooklyn day; that&rsquo;s Module 6.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- THEMED MODULES -->
+      <div class="module-group-head" id="themed">
+        <div class="mgh-bar theme-bar"></div>
+        <h2>Themed Modules (Bonus)</h2>
+      </div>
+      <p>Two more modules worth knowing about if a particular theme matters more to you than general sightseeing.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Movie Locations Downtown</div>
+          <h4>Cult TV &amp; Film Route</h4>
+          <p>Washington Square Park &rarr; iconic film/TV apartment buildings in the West Village &rarr; Katz&rsquo;s Deli &rarr; St. Patrick&rsquo;s Old Cathedral &rarr; a working firehouse used in a famous film &rarr; Wall Street.</p>
+          <p style="font-size:14px;color:var(--text-secondary);margin-top:8px;">Shares real geography with Module 11 (Chinatown/LES) &mdash; don&rsquo;t run both on the same trip without expecting repeated ground.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Romantic Central Park</div>
+          <h4>Bethesda &rarr; Wagner &rarr; Bow</h4>
+          <p>Bethesda Terrace &rarr; Wagner Cove &rarr; Bow Bridge, all within a few minutes of each other. Best before 9:00 AM if privacy or a quiet moment is the point.</p>
+          <p style="font-size:14px;color:var(--text-secondary);margin-top:8px;">See our full <a href="best-places-to-propose-nyc.html">NYC proposal spots guide</a> for the complete route and timing advice.</p>
+        </div>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- COMBINATION RULES -->
+      <h2 id="rules">The Combination Rules</h2>
+      <p>This is the part that actually makes the module system work instead of just being a list. Six rules, and I&rsquo;d genuinely follow all six.</p>
+
+      <ol class="combo-rules">
+        <li>Manhattan to Brooklyn is always one deliberate subway hop &mdash; never a walk, never more than once in a single day.</li>
+        <li>Never schedule two &ldquo;unhurried 2&ndash;3 hour&rdquo; anchors in one day. The Met, MoMA, and the Brooklyn Museum all demand real time &mdash; pairing any two in a day shortchanges both.</li>
+        <li>Pick one observation deck for the whole trip, and let whichever module you&rsquo;re already doing decide which one &mdash; don&rsquo;t treat it as a separate decision.</li>
+        <li>The heaviest module (Liberty &amp; Lower Manhattan, Module 2) should never sit next to another full walking day without something lighter between them.</li>
+        <li>Dedicated-commute modules &mdash; Central Brooklyn, Coney Island, Red Hook (8, 9, 13) &mdash; don&rsquo;t combine with anything else same-day. The commute itself is the cost of admission.</li>
+        <li>A genuine rest day belongs after every 4&ndash;5 active modules. Not a euphemism for &ldquo;one less museum&rdquo; &mdash; an actual morning with no plan.</li>
+      </ol>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- BUILD YOUR TRIP -->
+      <h2 id="build">Build Your Trip: Any Length, Same Blocks</h2>
+      <p>This is the actual point of building modules instead of a fixed itinerary &mdash; here&rsquo;s how any trip length assembles from the same pieces.</p>
+
+      <div class="table-wrap">
+        <table class="data-table build-table" style="min-width:360px;">
+          <tr><th>Days</th><th>Add This Module</th></tr>
+          <tr><td><strong>1</strong></td><td>Midtown Core, or Liberty &amp; Lower Manhattan &mdash; never both</td></tr>
+          <tr><td><strong>2</strong></td><td>Midtown Core + Liberty &amp; Lower Manhattan</td></tr>
+          <tr><td><strong>3</strong></td><td>+ Central Park / UES</td></tr>
+          <tr><td><strong>4</strong></td><td>+ Village, SoHo &amp; Chelsea</td></tr>
+          <tr><td><strong>5</strong></td><td>+ Williamsburg (paired with a rest morning)</td></tr>
+          <tr><td><strong>6</strong></td><td>+ MoMA &amp; Midtown East &mdash; also where a real rest day should enter if you haven&rsquo;t used one yet</td></tr>
+          <tr><td><strong>7</strong></td><td>+ Harlem</td></tr>
+          <tr><td><strong>8</strong></td><td>The full sequence above, ordered to avoid backtracking</td></tr>
+          <tr><td><strong>9</strong></td><td>+ Central Brooklyn</td></tr>
+          <tr><td><strong>10</strong></td><td>+ Coney Island, or a genuine day trip out of the city</td></tr>
+          <tr><td><strong>11</strong></td><td>+ Governors Island (half-day) + Chinatown/LES (half-day) &mdash; the two fastest, lowest-commitment modules pair well</td></tr>
+          <tr><td><strong>12</strong></td><td>+ Long Island City (timed for sunset)</td></tr>
+          <tr><td><strong>13</strong></td><td>+ Red Hook</td></tr>
+          <tr class="bt-tip"><td colspan="2"><strong>Why this order specifically:</strong> Each addition is the next-cheapest module to bolt on without disturbing what&rsquo;s already scheduled &mdash; cheapest measured in transit cost and how much it disrupts the spacing rules, not just distance on a map.</td></tr>
+        </table>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- BEST TIMING -->
+      <h2 id="timing">Best Timing at a Glance</h2>
+      <p>A quick reference for every module &mdash; but treat this as a starting point, not gospel. Hours and closure days shift, sometimes seasonally, so verify before you build a day around any single stop.</p>
+
+      <div class="table-wrap">
+        <table class="data-table timing-table" style="min-width:480px;">
+          <tr><th>Module</th><th>Avoid</th><th>Best Window</th></tr>
+          <tr><td><strong>1 Midtown Core</strong></td><td>Sunday in summer (library closed)</td><td>4:00&ndash;5:30 PM for Times Square</td></tr>
+          <tr><td><strong>2 Liberty &amp; Lower Manhattan</strong></td><td>Tuesday (9/11 Museum closed)</td><td>First ferry, ~9:00 AM</td></tr>
+          <tr><td><strong>3 Central Park / UES</strong></td><td>Wednesday (Met closed)</td><td>9:30 AM Met arrival</td></tr>
+          <tr><td><strong>4 Harlem</strong></td><td>Sunday if Schomburg matters</td><td>10:00 AM&ndash;2:00 PM</td></tr>
+          <tr><td><strong>5 Village / SoHo / Chelsea</strong></td><td>No hard closures</td><td>10:00 AM start</td></tr>
+          <tr><td><strong>6 Williamsburg</strong></td><td>Any day but Saturday if Smorgasburg matters</td><td>1:00&ndash;5:30 PM</td></tr>
+          <tr><td><strong>7 MoMA / Midtown East</strong></td><td>Same day as Module 3</td><td>Friday for extended hours</td></tr>
+          <tr><td><strong>8 Central Brooklyn</strong></td><td>Tuesday (museum closed)</td><td>First Saturday, if it aligns</td></tr>
+          <tr><td><strong>9 Coney Island</strong></td><td>Early week (shorter park hours)</td><td>Friday or Saturday</td></tr>
+          <tr><td><strong>10 Long Island City</strong></td><td>Tuesday &amp; Wednesday (PS1 closed)</td><td>Golden hour / sunset</td></tr>
+          <tr><td><strong>11 Chinatown / LES</strong></td><td>No hard closure</td><td>11:00 AM&ndash;3:00 PM</td></tr>
+          <tr><td><strong>12 Governors Island</strong></td><td>Monday&ndash;Tuesday if Fort Jay matters</td><td>Weekend, before 11:00 AM</td></tr>
+          <tr><td><strong>13 Red Hook</strong></td><td>No hard closure</td><td>Weekend afternoon</td></tr>
+        </table>
+      </div>
+
+      <a class="back-top" href="#top">&#8593; Back to top</a>
+
+      <!-- MISTAKES -->
+      <h2 id="mistakes">Common Mistakes</h2>
+      <ul class="mistake-list">
+        <li>Jumping between neighborhoods instead of finishing one properly &mdash; the single most repeated planning mistake.</li>
+        <li>Booking 5&ndash;6 attractions into one day. It reads fine on paper and falls apart by 3 PM.</li>
+        <li>Starting days too late, then rushing the evening to compensate.</li>
+        <li>Doing two observation decks or two major museums in the same trip without spacing them out.</li>
+        <li>Assuming a module&rsquo;s stated hours never change &mdash; always verify before you build a day around a single building.</li>
+      </ul>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">NYC Itinerary Framework: Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>How many days do I actually need in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Most first-timers need at least 3&ndash;4 full days for the Core 7 modules to feel unrushed. Less than that, and you&rsquo;re choosing between modules rather than doing all of them.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a car?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No &mdash; every module in this framework is built around subway, ferry, and walking. A car adds friction, not speed, inside the city.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I buy a sightseeing pass?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Only if you&rsquo;re confident you&rsquo;ll hit 3+ paid attractions covered by it &mdash; do the math against individual ticket prices before assuming it saves money.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What if it rains?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Several modules (Central Park/UES, MoMA/Midtown East, Chinatown/LES) already lean on indoor anchors. Swap outdoor-heavy modules like Governors Island or Central Brooklyn for an indoor-heavy one and revisit them on a clearer day.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I really build my own itinerary from this instead of following a fixed one?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">That&rsquo;s the entire point of the framework &mdash; pick modules for your trip length using the assembly table, respect the six combination rules, and you&rsquo;ll end up with a route that doesn&rsquo;t backtrack, without needing to follow someone else&rsquo;s fixed day-by-day plan.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the best first module for a one-day visit?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Midtown Core for a first day in New York on any budget, or Liberty &amp; Lower Manhattan if you&rsquo;re a strong walker and the Statue of Liberty is a priority. Never both &mdash; each is a full-day module on its own.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I decide which observation deck to use?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Let the module decide for you: if you&rsquo;re doing Module 1 (Midtown Core), Top of the Rock fits naturally. If you&rsquo;re doing Module 5 (Village/SoHo/Chelsea), Edge at Hudson Yards is a logical end to the High Line walk. If you&rsquo;re doing Module 7 (MoMA/Midtown East), SUMMIT One Vanderbilt is two minutes from Grand Central. Don&rsquo;t treat the observation deck as a separate itinerary decision &mdash; it should be an extension of whichever module you&rsquo;re already doing.</div>
+        </details>
+      </div>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Going Deeper on Itinerary Planning</div>
+        <h4>How to Plan a NYC Itinerary: Step-by-Step</h4>
+        <p>For more on customization, pacing, budgeting by day, and avoiding the structural mistakes most visitors make before they even arrive &mdash; the complete planning guide covers all of it.</p>
+        <a class="btn btn-primary" href="ultimate-nyc-itinerary-guide.html">Read the Full Planning Guide</a>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan the Perfect NYC Itinerary (Complete 2026 Guide)</a></li>
+      <li><a href="8-days-in-nyc-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Perfect 8 Days in NYC: Route-Optimized Itinerary</a></li>
+      <li><a href="nyc-subway-guide-first-time-visitors.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>I Wish Someone Had Explained the NYC Subway Like This</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost? Four Honest Budgets</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var scrollTop=window.scrollY||document.documentElement.scrollTop;
+  var docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=docHeight>0?Math.min(100,Math.max(0,(scrollTop/docHeight)*100)):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>
