@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Things to Do in NYC at Christmas 2026: The Ultimate Holiday Guide | EverythingInNYC</title>
+<meta name="description" content="The best things to do in NYC at Christmas — Rockefeller Tree, Bryant Park, Dyker Heights, Radio City Rockettes, holiday markets and more. Honest timing, crowd tips, and what's actually worth it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- FIXED SUB-NAV ---- */
+  .xmas-subnav{
+    position:sticky;top:60px;z-index:90;
+    background:rgba(250,250,248,0.96);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    overflow-x:auto;white-space:nowrap;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .xmas-subnav::-webkit-scrollbar{display:none;}
+  .xmas-subnav .xsn-inner{
+    display:flex;align-items:center;gap:4px;
+    padding:8px 16px;max-width:1100px;margin:0 auto;
+  }
+  .xsn-inner a{
+    font-size:13px;font-weight:700;color:var(--text-secondary);
+    padding:5px 13px;border-radius:20px;
+    text-decoration:none;white-space:nowrap;flex:none;
+    transition:all 0.15s;
+  }
+  .xsn-inner a:hover{background:rgba(15,23,42,0.07);color:var(--navy);}
+  .xsn-inner a.active-sec{background:var(--navy);color:#fff;}
+
+  /* ---- SECTION IMAGE ---- */
+  .section-img{margin:22px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:400px;object-fit:cover;display:block;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+  /* ---- ATTRACTION CARD ---- */
+  .attr-card{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:44px 0;box-shadow:var(--shadow-card);
+  }
+  .attr-card .ac-head{
+    background:var(--navy);color:#fff;
+    padding:16px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .ac-rank{
+    font-family:var(--font-head);font-weight:800;font-size:13px;
+    color:#fff;background:rgba(255,255,255,0.15);
+    padding:4px 11px;border-radius:20px;flex:none;
+  }
+  .ac-head h2{color:#fff;font-size:20px;margin:0;flex:1;scroll-margin-top:120px;}
+  .ac-head .ac-tag{
+    font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    color:var(--accent);background:rgba(255,193,7,0.15);
+    padding:3px 10px;border-radius:20px;flex:none;
+  }
+  .attr-card .ac-body{padding:22px;}
+
+  /* ---- SECTION DIVIDER HEADING ---- */
+  .ac-section{margin-top:18px;}
+  .ac-section h3{
+    font-size:16px;font-family:var(--font-head);font-weight:800;
+    color:var(--navy);margin:0 0 10px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .ac-section h3::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px;flex:none;}
+
+  /* ---- VERDICT TABLE ---- */
+  .verdict-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0;}
+  .verdict-table td{padding:8px 14px;border-bottom:1px solid var(--border);}
+  .verdict-table tr:last-child td{border-bottom:none;}
+  .verdict-table td:first-child{font-weight:700;color:var(--navy);background:rgba(15,23,42,0.02);width:50%;}
+
+  /* ---- BOTTOM LINE ---- */
+  .bottom-line{
+    background:var(--navy);color:#fff;
+    padding:14px 18px;font-size:16px;font-weight:600;
+    line-height:1.6;
+  }
+  .bottom-line strong{color:var(--accent);}
+
+  /* ---- TIMING GRID (do/don't) ---- */
+  .timing-grid{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0;}
+  @media(min-width:480px){.timing-grid{grid-template-columns:1fr 1fr;}}
+  .tg-avoid{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.2);border-radius:10px;padding:12px 14px;}
+  .tg-do{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.25);border-radius:10px;padding:12px 14px;}
+  .tg-avoid .tg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--error);margin-bottom:6px;}
+  .tg-do .tg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#15803D;margin-bottom:6px;}
+  .tg-avoid ul,.tg-do ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .tg-avoid ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .tg-avoid ul li::before{content:'✗';position:absolute;left:0;color:var(--error);font-weight:700;}
+  .tg-do ul li{font-size:14.5px;padding-left:16px;position:relative;}
+  .tg-do ul li::before{content:'✓';position:absolute;left:0;color:#15803D;font-weight:700;}
+
+  /* ---- NEARBY LIST ---- */
+  .nearby-list{list-style:none;padding:0;margin:10px 0;display:flex;flex-wrap:wrap;gap:6px;}
+  .nearby-list li{font-size:14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;}
+
+  /* ---- MISTAKE LIST ---- */
+  .mistake-pills{list-style:none;padding:0;margin:10px 0;display:flex;flex-direction:column;gap:5px;}
+  .mistake-pills li{font-size:15px;color:var(--error);display:flex;align-items:flex-start;gap:8px;}
+
+  /* ---- NEIGHBORHOOD CARD ---- */
+  .nbhd-cards{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+  @media(min-width:560px){.nbhd-cards{grid-template-columns:1fr 1fr;}}
+  .nbhd-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 18px 14px;}
+  .nbhd-card .nc-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:8px;display:block;}
+  .nbhd-card h3{margin:0 0 6px;font-size:17px;color:var(--navy);}
+  .nbhd-card .nc-tagline{font-size:14px;color:var(--info);font-weight:600;margin-bottom:10px;display:block;}
+  .nbhd-card p,.nbhd-card ul{font-size:15px;color:var(--text-secondary);margin:0;}
+  .nbhd-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;}
+  .nbhd-card ul li{display:flex;align-items:flex-start;gap:7px;}
+  .nbhd-card ul li::before{content:'›';color:var(--accent);font-weight:800;margin-top:1px;flex:none;}
+  .nbhd-card .nc-stars{font-size:16px;margin-top:10px;font-weight:700;color:var(--navy);}
+
+  /* ---- ROUTE FLOW ---- */
+  .route-flow{
+    background:rgba(15,23,42,0.03);border-radius:12px;
+    padding:14px 18px;margin:12px 0;
+    display:flex;flex-wrap:wrap;gap:0;align-items:center;
+  }
+  .rf-stop{
+    font-size:15px;font-weight:700;color:var(--navy);
+    padding:4px 0;
+  }
+  .rf-arrow{color:var(--accent);font-weight:800;margin:0 8px;font-size:18px;}
+
+  /* ---- MARKET CARD ---- */
+  .mkt-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:18px 18px 14px;margin:14px 0;
+  }
+  .mkt-card .mk-badge{
+    font-size:11.5px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;
+  }
+  .mkt-card.best .mk-badge{background:rgba(255,193,7,0.2);color:#7A5400;}
+  .mkt-card.shopping .mk-badge{background:rgba(37,99,235,0.1);color:var(--info);}
+  .mkt-card.park .mk-badge{background:rgba(22,163,74,0.12);color:#15803D;}
+  .mkt-card.indoor .mk-badge{background:rgba(139,92,246,0.1);color:#5B21B6;}
+  .mkt-card h3{margin:0 0 8px;font-size:18px;color:var(--navy);}
+  .mkt-card p{font-size:15px;color:var(--text-secondary);margin-bottom:10px;}
+  .mkt-card ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;}
+  .mkt-card ul li{font-size:14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;}
+
+  /* ---- TRANSPORT TABLE ---- */
+  .transport-table td:first-child{font-size:16px;width:40px;}
+
+  /* ---- CROWD TIMING ---- */
+  .crowd-grid{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0;}
+  @media(min-width:480px){.crowd-grid{grid-template-columns:1fr 1fr;}}
+  .crowd-item{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;}
+  .crowd-item h4{margin:0 0 8px;font-size:15px;color:var(--navy);}
+  .crowd-item .ci-avoid{font-size:14px;color:var(--error);margin-bottom:4px;display:flex;gap:6px;}
+  .crowd-item .ci-do{font-size:14px;color:#15803D;display:flex;gap:6px;}
+
+  /* ---- DAILY FORMULA ---- */
+  .formula-chain{
+    display:flex;flex-direction:column;gap:0;
+    border:1px solid var(--border);border-radius:14px;overflow:hidden;
+    margin:14px 0;
+  }
+  .fc-step{
+    display:flex;align-items:center;gap:14px;
+    padding:13px 18px;border-bottom:1px solid var(--border);
+  }
+  .fc-step:last-child{border-bottom:none;}
+  .fc-time{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.04em;
+    background:var(--navy);color:#fff;
+    padding:4px 11px;border-radius:20px;white-space:nowrap;flex:none;
+  }
+  .fc-step p{font-size:15.5px;color:var(--text);margin:0;}
+
+  /* ---- PROS/CONS ---- */
+  .pros-cons{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+  @media(min-width:480px){.pros-cons{grid-template-columns:1fr 1fr;}}
+  .pros-box,.cons-box{border-radius:14px;padding:16px 18px;}
+  .pros-box{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.25);}
+  .cons-box{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.2);}
+  .pros-box h4{color:#15803D;margin:0 0 10px;font-size:16px;}
+  .cons-box h4{color:var(--error);margin:0 0 10px;font-size:16px;}
+  .pros-box ul,.cons-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .pros-box ul li,.cons-box ul li{font-size:15px;display:flex;align-items:flex-start;gap:8px;}
+  .pros-box ul li::before{content:'✓';color:#15803D;font-weight:700;flex:none;}
+  .cons-box ul li::before{content:'✗';color:var(--error);font-weight:700;flex:none;}
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:10px;}
+  .back-top:hover{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<!-- FIXED SUB-NAV -->
+<nav class="xmas-subnav" id="subnav">
+  <div class="xsn-inner">
+    <a href="#intro">Overview</a>
+    <a href="#when-to-visit">When to Visit</a>
+    <a href="#attractions">Top Attractions</a>
+    <a href="#neighborhoods">Neighborhoods</a>
+    <a href="#markets">Christmas Markets</a>
+    <a href="#transport">Getting Around</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Holiday Guide</span>
+      <h1>Things to Do in NYC at Christmas 2026: The Ultimate Holiday Guide for First-Time Visitors</h1>
+      <div class="article-meta">
+        <span>&#128197; Updated 2026</span>
+        <span>&middot;</span>
+        <span>&#9201;&#65039; 22 minute read</span>
+        <span>&middot;</span>
+        <span>&#127876; Christmas in New York City</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="christmas_cover.png" alt="NYC at Christmas — Rockefeller Center Christmas Tree, Fifth Avenue lights, Bryant Park Winter Village">
+
+    <div class="article-body" id="intro">
+
+      <p>New York City at Christmas isn&rsquo;t just another holiday destination &mdash; it&rsquo;s the place that inspired countless Christmas movies, postcards, and bucket lists. Seeing the Rockefeller Christmas Tree glowing after sunset, strolling down Fifth Avenue beneath festive lights, sipping hot chocolate at a holiday market, or wandering through snow-covered Central Park are experiences that many travelers dream about for years.</p>
+
+      <p>But here&rsquo;s what most travel guides won&rsquo;t tell you: <strong>Christmas in NYC can be just as overwhelming as it is magical.</strong> Visit the Rockefeller Tree at the wrong time and you&rsquo;ll find yourself shoulder-to-shoulder with thousands of people. Wait too long to book the Rockettes or an observation deck, and your preferred time may already be sold out. Try to squeeze too many attractions into one day, and you&rsquo;ll spend more time rushing than actually enjoying the city.</p>
+
+      <p>The good news? A little planning goes a long way. This guide is designed specifically for first-time visitors who want to experience the very best of Christmas in New York without wasting time, backtracking across the city, or falling into common tourist traps.</p>
+
+      <!-- TOC -->
+      <div class="jump-nav">
+        <div class="jn-title">What&rsquo;s in This Guide</div>
+        <ul>
+          <li><a href="#when-to-visit">When Is the Best Time to Visit?</a></li>
+          <li><a href="#attractions">The Best Christmas Attractions (Ranked)</a></li>
+          <li><a href="#neighborhoods">Best Neighborhoods at Christmas</a></li>
+          <li><a href="#markets">The Best Christmas Markets</a></li>
+          <li><a href="#transport">Getting Around (Without Losing Your Mind)</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- IS IT WORTH IT -->
+      <h2>Is Christmas in NYC Worth It?</h2>
+      <p><strong>Absolutely &mdash; but only if you know what to expect.</strong> New York City during the holidays is unlike anywhere else. The festive atmosphere, world-famous decorations, Christmas markets, Broadway shows, and iconic landmarks create an experience that&rsquo;s difficult to replicate anywhere in the world. That said, Christmas is also one of the busiest and most expensive times to visit.</p>
+
+      <div class="pros-cons">
+        <div class="pros-box">
+          <h4>Why Go</h4>
+          <ul>
+            <li>World-famous Christmas decorations</li>
+            <li>Incredible holiday atmosphere</li>
+            <li>Seasonal markets and festive food</li>
+            <li>Broadway and holiday shows</li>
+            <li>Plenty of holiday activities for all ages</li>
+          </ul>
+        </div>
+        <div class="cons-box">
+          <h4>What to Expect</h4>
+          <ul>
+            <li>Larger crowds, especially in Midtown</li>
+            <li>Higher hotel prices</li>
+            <li>Popular attractions sell out early</li>
+            <li>Cold weather and shorter daylight hours</li>
+            <li>Requires more planning than other seasons</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUICK PLANNING GUIDE -->
+      <h2>Quick Planning Guide</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Question</th><th>Quick Answer</th></tr>
+          <tr><td><strong>Best time to visit</strong></td><td>Early December &mdash; best balance of decorations, crowds, and hotel prices</td></tr>
+          <tr><td><strong>Busiest period</strong></td><td>Christmas Week through New Year&rsquo;s</td></tr>
+          <tr><td><strong>Ideal trip length</strong></td><td>5&ndash;7 days for first-time visitors</td></tr>
+          <tr><td><strong>Christmas Day visits</strong></td><td>Yes &mdash; many attractions open, some on reduced hours</td></tr>
+          <tr><td><strong>Do you need reservations?</strong></td><td>Yes &mdash; for Broadway, Rockettes, observation decks at sunset, ice skating, and popular restaurants</td></tr>
+          <tr><td><strong>Best way to get around</strong></td><td>Walk within neighborhoods, subway between neighborhoods</td></tr>
+          <tr><td><strong>Will it snow?</strong></td><td>Maybe &mdash; never count on it. Plan for cold weather instead</td></tr>
+        </table>
+      </div>
+
+      <!-- WHEN TO VISIT -->
+      <h2 id="when-to-visit">When Is the Best Time to Visit NYC at Christmas?</h2>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Early December &#11088; Recommended</div>
+          <p>Most Christmas decorations already up, holiday markets fully open, Broadway running, festive atmosphere without peak crowds. Best balance for most first-time visitors.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Mid-December</div>
+          <p>Even stronger holiday atmosphere. Busier shopping streets, longer queues, larger Rockefeller crowds, more holiday events. Book accommodations and attractions earlier.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Christmas Week</div>
+          <p>Packed sidewalks in Midtown, longer attraction waits, higher hotel rates, popular restaurants sold out weeks ahead. Magical &mdash; but plan ahead and pace yourself.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">After Christmas (Dec 26&ndash;Early Jan)</div>
+          <p>Most decorations, holiday markets, and festive displays remain up through New Year&rsquo;s, many into early January. Great atmosphere with slightly fewer crowds than Christmas Week.</p>
+        </div>
+      </div>
+
+      <h3>Holiday Season Timeline</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>Period</th><th>What to Expect</th></tr>
+          <tr><td><strong>Late November</strong></td><td>Holiday decorations begin appearing, Christmas markets start opening</td></tr>
+          <tr><td><strong>Early December</strong></td><td>Nearly all major displays complete. Best balance of atmosphere and crowds.</td></tr>
+          <tr><td><strong>Mid December</strong></td><td>Peak holiday atmosphere with increasing crowds and events</td></tr>
+          <tr><td><strong>Christmas Week</strong></td><td>Most festive &mdash; and most crowded. Book everything well in advance.</td></tr>
+          <tr><td><strong>December 26&ndash;30</strong></td><td>Decorations remain, holiday spirit continues, visitor numbers stay high</td></tr>
+          <tr><td><strong>New Year&rsquo;s Week</strong></td><td>Holiday displays continue alongside New Year&rsquo;s celebrations</td></tr>
+          <tr><td><strong>Early January</strong></td><td>Many decorations remain before gradually being removed</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Three Rules Before You Plan</div>
+        <p><strong>1. Plan by neighborhood, not by attraction.</strong> Exploring one area at a time minimizes walking and unnecessary subway rides. <strong>2. Book popular experiences early.</strong> Observation decks at sunset, the Rockettes, Broadway shows, and Christmas dinner reservations are among the first things to sell out. <strong>3. Don&rsquo;t try to see everything.</strong> Christmas in New York is best experienced at a relaxed pace. Leave room for spontaneous stops and atmosphere. See our <a href="nyc-observation-decks-compared.html">full observation deck comparison guide</a> before booking.</p>
+      </div>
+
+      <!-- NEW YORK PASS CTA -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Save on Holiday Attractions</div>
+        <h4>New York Pass &mdash; 100+ Attractions Included</h4>
+        <p>If your Christmas itinerary includes observation decks, the American Museum of Natural History, and other major paid attractions, the New York Pass can offer excellent value. Just remember &mdash; having the pass doesn&rsquo;t guarantee entry. Popular attractions still require advance reservations.</p>
+        <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get the New York Pass on Viator</a>
+      </div>
+
+      <!-- ATTRACTIONS AT A GLANCE -->
+      <h2 id="attractions">The Best Things to Do in NYC at Christmas</h2>
+      <p>Some attractions are absolute must-dos. Others are fantastic if you have extra time. Here&rsquo;s a quick comparison before the full breakdown.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:600px;font-size:13.5px;">
+          <tr><th>Attraction</th><th>Time Needed</th><th>Best Time</th><th>Crowds</th><th>Reservation</th><th>Worth It?</th></tr>
+          <tr><td><strong>Rockefeller Center Tree</strong></td><td>45&ndash;90 min</td><td>Early morning or after sunset</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>No</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Fifth Avenue Holiday Walk</strong></td><td>1&ndash;2 hrs</td><td>Blue hour &amp; evening</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>No</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Bryant Park Winter Village</strong></td><td>2&ndash;3 hrs</td><td>Afternoon into evening</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>No*</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td>1&ndash;1.5 hrs</td><td>Sunset</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>Recommended</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Radio City Christmas Spectacular</strong></td><td>~2 hrs</td><td>Afternoon or evening</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>Yes</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Edge at Hudson Yards</strong></td><td>1&ndash;1.5 hrs</td><td>Sunset</td><td>&#11088;&#11088;&#11088;</td><td>Recommended</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Dyker Heights Christmas Lights</strong></td><td>3&ndash;4 hrs</td><td>After 6 PM</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>No</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13.5px;color:var(--text-secondary);">* Bryant Park entry is free. Ice skating requires advance booking.</p>
+
+      <!-- ATTRACTION 1 -->
+      <div class="attr-card" id="rockefeller">
+        <div class="ac-head">
+          <span class="ac-rank">&#127945;</span>
+          <h2>Rockefeller Center Christmas Tree</h2>
+          <span class="ac-tag">Must Do</span>
+        </div>
+        <div class="ac-body">
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e9/92/42/rockefeller-center-christmas.jpg?w=2000&h=-1&s=1" alt="Rockefeller Center Christmas Tree illuminated at night">
+            <div class="cap">The Rockefeller Center Christmas Tree after dark &mdash; the single most iconic Christmas image in New York City.</div>
+          </div>
+
+          <p>If there&rsquo;s one attraction that defines Christmas in New York, it&rsquo;s the Rockefeller Center Christmas Tree. Standing beneath the towering tree surrounded by thousands of lights is a bucket-list experience that lives up to the hype. Yes, it gets crowded. Yes, you&rsquo;ll probably wait for photos. But it&rsquo;s still one of those places that every first-time visitor should experience.</p>
+
+          <div class="ac-section"><h3>Best Time to Visit</h3></div>
+          <div class="timing-grid">
+            <div class="tg-avoid">
+              <div class="tg-label">Avoid</div>
+              <ul>
+                <li>Saturday evening (peak crowds)</li>
+                <li>Scheduling a timed attraction immediately after</li>
+              </ul>
+            </div>
+            <div class="tg-do">
+              <div class="tg-label">Best Times</div>
+              <ul>
+                <li>Early morning for photos (sunrise, shorter waits)</li>
+                <li>Blue hour and evening for atmosphere</li>
+                <li>Late evening after the main rush</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ac-section"><h3>Photography Tips</h3></div>
+          <ul class="nearby-list">
+            <li>Walk around the entire plaza for angles</li><li>Include the skating rink in your composition</li><li>Try elevated walkways for overhead views</li><li>Visit once in daylight, again after dark</li>
+          </ul>
+
+          <div class="ac-section"><h3>Nearby Attractions (All Within 10 Minutes Walking)</h3></div>
+          <ul class="nearby-list">
+            <li>Top of the Rock</li><li>Radio City Music Hall</li><li>Fifth Avenue Holiday Windows</li><li>St. Patrick&rsquo;s Cathedral</li><li>FAO Schwarz</li><li>Saks Fifth Avenue</li><li>Bryant Park Winter Village</li>
+          </ul>
+
+          <table class="verdict-table">
+            <tr><td>Christmas Atmosphere</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Photography</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Family Friendly</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>First-Time Visitors</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          </table>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If you&rsquo;re only visiting one Christmas attraction in NYC, this should be it.</div>
+      </div>
+
+      <!-- ATTRACTION 2 -->
+      <div class="attr-card" id="fifth-avenue">
+        <div class="ac-head">
+          <span class="ac-rank">&#127948;</span>
+          <h2>Fifth Avenue Holiday Lights &amp; Window Displays</h2>
+          <span class="ac-tag">Must Do &mdash; Free</span>
+        </div>
+        <div class="ac-body">
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/0d/20/e5/saks-fifth-avenue-perfect.jpg?w=1400&h=-1&s=1" alt="Saks Fifth Avenue holiday light display, Fifth Avenue New York">
+            <div class="cap">Fifth Avenue at blue hour &mdash; the most spectacular free Christmas experience in the city.</div>
+          </div>
+
+          <p>Once you&rsquo;ve seen the Rockefeller Christmas Tree, don&rsquo;t jump on the subway. Continue on foot along Fifth Avenue, where some of New York City&rsquo;s most famous holiday displays await. Every holiday season, luxury retailers transform their storefronts with elaborate window displays featuring animated scenes, festive artwork, lighting effects, intricate decorations, and larger-than-life Christmas themes. Even if you have no intention of shopping, the displays are worth seeing.</p>
+
+          <div class="ac-section"><h3>Stores Worth Stopping For</h3></div>
+          <ul class="nearby-list">
+            <li>Bergdorf Goodman</li><li>Tiffany &amp; Co.</li><li>Cartier</li><li>Louis Vuitton</li><li>Saks Fifth Avenue</li><li>Macy&rsquo;s Herald Square</li><li>Bloomingdale&rsquo;s</li>
+          </ul>
+
+          <div class="callout callout-tip" style="margin-top:14px;">
+            <div class="callout-title">Pro Tip: Look Up</div>
+            <p>One of the most common mistakes is looking only at shop windows. Some of the most impressive decorations are <strong>above street level</strong> &mdash; wrapped around building facades, hanging over entrances, or decorating upper floors.</p>
+          </div>
+
+          <table class="verdict-table">
+            <tr><td>Christmas Atmosphere</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Photography</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Overall Value</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          </table>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> Walk it at blue hour into the evening. The entire experience is free, and it connects every other Midtown Christmas attraction into one seamless route.</div>
+      </div>
+
+      <!-- ATTRACTION 3 -->
+      <div class="attr-card" id="bryant-park">
+        <div class="ac-head">
+          <span class="ac-rank">&#127949;</span>
+          <h2>Bryant Park Winter Village</h2>
+          <span class="ac-tag">Best Christmas Market</span>
+        </div>
+        <div class="ac-body">
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/66/f6/0e/caption.jpg?w=1400&h=-1&s=1" alt="Bryant Park Winter Village holiday market, skating rink at Christmas">
+            <div class="cap">Bryant Park Winter Village &mdash; the best place in New York City to slow down and actually enjoy Christmas.</div>
+          </div>
+
+          <p><em>If I could only recommend one Christmas market in NYC, this would be it.</em> Bryant Park combines holiday shopping, seasonal food, ice skating, Christmas lights, outdoor seating, and a festive atmosphere &mdash; all in one of the city&rsquo;s best public spaces. It&rsquo;s the kind of place where you can easily spend a couple of hours without ever feeling like you&rsquo;re simply checking off another attraction.</p>
+
+          <div class="ac-section"><h3>Best Time to Visit</h3></div>
+          <p>Late afternoon into evening. You&rsquo;ll get daylight for shopping, sunset over Midtown, holiday lights after dark, and the rink illuminated at night. Morning visits are quieter for shopping or photography, but the market doesn&rsquo;t feel quite as festive until later in the day.</p>
+
+          <div class="ac-section"><h3>Ice Skating</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card"><div class="card-tag">vs. Rockefeller Center</div><p>Bryant Park&rsquo;s rink is larger, better value, and has more skating space. Skating is free if you bring your own skates &mdash; skate rentals and timed reservations are typically required during busy periods.</p></div>
+            <div class="card"><div class="card-tag">Best Food to Try</div><p>Hot chocolate, fresh pastries, holiday cookies, gourmet grilled cheese, international street food, seasonal desserts. Come hungry &mdash; sample several vendors rather than planning a full sit-down meal.</p></div>
+          </div>
+
+          <table class="verdict-table">
+            <tr><td>Holiday Atmosphere</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Food</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Shopping</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Family Friendly</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          </table>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If you&rsquo;re only visiting one Christmas market, make it Bryant Park Winter Village.</div>
+      </div>
+
+      <!-- ATTRACTION 4 -->
+      <div class="attr-card" id="top-of-rock">
+        <div class="ac-head">
+          <span class="ac-rank">4</span>
+          <h2>Top of the Rock</h2>
+          <span class="ac-tag">Best Observation Deck</span>
+        </div>
+        <div class="ac-body">
+          <p>If it&rsquo;s your first visit to New York, <strong>Top of the Rock is the observation deck I&rsquo;d recommend.</strong> You get the skyline that most people picture &mdash; including the Empire State Building framed against the city. Add Christmas decorations just steps away at Rockefeller Center, and it&rsquo;s hard to beat. It also fits naturally into a day exploring Rockefeller Center and Fifth Avenue, so you won&rsquo;t waste time traveling across the city.</p>
+
+          <div class="ac-section"><h3>Best Time to Visit</h3></div>
+          <p>Book a <strong>sunset timeslot</strong> if your budget allows only one observation deck. You&rsquo;ll experience daytime views, golden hour, blue hour, and the city lighting up after dark &mdash; effectively four different experiences in one visit. Allow 60&ndash;90 minutes including security, the elevator ride, and exploring multiple viewing levels.</p>
+
+          <div class="ac-section"><h3>Is It Better Than the Empire State Building?</h3></div>
+          <p>For most first-time visitors: <strong>yes.</strong> Standing on Top of the Rock lets you actually see the Empire State Building in your photos. That&rsquo;s why it&rsquo;s generally the better first choice. Read our <a href="top-of-the-rock-review.html">full Top of the Rock review</a> for the complete breakdown.</p>
+
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Book on Viator</div>
+              <h4>Top of the Rock Tickets</h4>
+              <p>Reserve your sunset timeslot as early as possible &mdash; these are the first to sell out during the holiday season.</p>
+              <a style="display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--info);text-decoration:underline;" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Top of the Rock &rarr;</a>
+            </div>
+            <div class="card">
+              <div class="card-tag">Or Include It in the Pass</div>
+              <h4>New York Pass</h4>
+              <p>Top of the Rock is included with the New York Pass. If you&rsquo;re visiting multiple paid attractions, the pass can save money.</p>
+              <a style="display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--info);text-decoration:underline;" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">View New York Pass &rarr;</a>
+            </div>
+          </div>
+
+          <div class="callout callout-local" style="margin-top:4px;">
+            <div class="callout-title">The Perfect Midtown Christmas Route</div>
+            <p><strong>Rockefeller Center &rarr; Fifth Avenue &rarr; Bryant Park &rarr; Top of the Rock</strong> &mdash; all within walking distance, naturally structured into one afternoon and evening.</p>
+          </div>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If you&rsquo;re only choosing one observation deck, Top of the Rock offers the best overall Christmas experience.</div>
+      </div>
+
+      <!-- ATTRACTION 5 -->
+      <div class="attr-card" id="rockettes">
+        <div class="ac-head">
+          <span class="ac-rank">5</span>
+          <h2>Radio City Christmas Spectacular starring the Rockettes</h2>
+          <span class="ac-tag">Must Book Early</span>
+        </div>
+        <div class="ac-body">
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/5c/8c/bb/caption.jpg?w=1400&h=-1&s=1" alt="Radio City Music Hall Christmas Spectacular Rockettes performance">
+            <div class="cap">The Radio City Christmas Spectacular &mdash; one of those experiences that is uniquely, unmistakably New York.</div>
+          </div>
+
+          <p>Some Christmas experiences are uniquely New York. The Radio City Christmas Spectacular is one of them. Even if you&rsquo;re not usually interested in theater or dance performances, this show delivers the kind of festive atmosphere that perfectly complements a Christmas trip to NYC. For many visitors, it&rsquo;s one of the highlights of their vacation.</p>
+
+          <div class="ac-section"><h3>Show Details</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card"><div class="card-tag">What to Expect</div><ul class="card-list"><li>World-famous Rockettes choreography</li><li>Live music and massive stage sets</li><li>Christmas storytelling and special effects</li><li>~90 minute performance</li><li>Family-friendly</li></ul></div>
+            <div class="card"><div class="card-tag">Seat Tips</div><p>You don&rsquo;t need the most expensive seats. Most central Orchestra and First Mezzanine seats offer excellent views. Prioritize a centered view over proximity to the stage.</p></div>
+          </div>
+
+          <div class="ac-section"><h3>When to Book</h3></div>
+          <p>Book as early as possible. The closer you get to Christmas, the fewer seats remain. If you&rsquo;re traveling during Mid-December, Christmas Week, or the week between Christmas and New Year&rsquo;s &mdash; book immediately. Afternoon shows pair well with a Rockefeller Center evening; evening shows are a perfect ending to a Midtown sightseeing day.</p>
+
+          <div class="cta-dark" style="margin-top:18px;">
+            <div class="cta-eyebrow">Book the Christmas Spectacular</div>
+            <h4>Radio City Christmas Spectacular &mdash; Starring the Rockettes</h4>
+            <p>Reserve your seats as early as possible. Popular time slots during Christmas Week can sell out weeks in advance.</p>
+            <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Radio-City-Christmas-Spectacular-starring-the-Rockettes/d687-3340XMAS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book on Viator</a>
+          </div>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If your budget allows one holiday performance, this is the one to book.</div>
+      </div>
+
+      <!-- ATTRACTION 6 -->
+      <div class="attr-card" id="edge">
+        <div class="ac-head">
+          <span class="ac-rank">6</span>
+          <h2>Edge &amp; Hudson Yards&rsquo; Shine Bright Holiday Display</h2>
+          <span class="ac-tag">Best Modern Experience</span>
+        </div>
+        <div class="ac-body">
+          <p>While Midtown is classic New York Christmas, Hudson Yards offers something different &mdash; modern architecture, dazzling light installations, luxury shopping, rooftop skyline views, and one of the city&rsquo;s best sunset observation decks. It&rsquo;s less traditional than Rockefeller Center, but that&rsquo;s exactly why it&rsquo;s worth visiting if you have an extra half-day.</p>
+
+          <div class="ac-section"><h3>The Perfect Hudson Yards Visit</h3></div>
+          <div class="route-flow">
+            <span class="rf-stop">Shine Bright holiday lights</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Shopping center</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Coffee / dessert</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Edge at sunset</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">High Line to Chelsea Market</span>
+          </div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">Edge Review</div>
+            <p>For the full breakdown of what to expect at Edge, best timing, and photography tips, read our <a href="edge-nyc-observation-deck-review.html">complete Edge observation deck review</a>.</p>
+          </div>
+
+          <table class="verdict-table">
+            <tr><td>Holiday Atmosphere</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Skyline Views</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Photography</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Crowds</td><td>&#11088;&#11088;&#11088;</td></tr>
+          </table>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If you&rsquo;ve already explored Midtown, Hudson Yards is the perfect place to spend another festive evening.</div>
+      </div>
+
+      <!-- ATTRACTION 7 -->
+      <div class="attr-card" id="dyker">
+        <div class="ac-head">
+          <span class="ac-rank">7</span>
+          <h2>Dyker Heights Christmas Lights</h2>
+          <span class="ac-tag">Most Unique Experience</span>
+        </div>
+        <div class="ac-body">
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/35/e7/4e/caption.jpg?w=1000&h=-1&s=1" alt="Dyker Heights Christmas lights — elaborate residential decorations in Brooklyn">
+            <div class="cap">Dyker Heights, Brooklyn &mdash; where New Yorkers go all-in on Christmas decorations. Unlike anything in Midtown.</div>
+          </div>
+
+          <p>If Rockefeller Center is New York&rsquo;s official Christmas icon, Dyker Heights is its unofficial neighborhood celebration. Instead of commercial displays, you&rsquo;ll find entire residential blocks transformed by homeowners competing to create the city&rsquo;s most spectacular Christmas decorations &mdash; giant Santas, life-sized nutcrackers, animated displays, thousands of lights, Christmas music, and elaborately decorated homes. It&rsquo;s unlike anything you&rsquo;ll experience in Midtown.</p>
+
+          <div class="ac-section"><h3>Is It Worth the Trip?</h3></div>
+          <p>For most visitors spending <strong>4 days or more</strong> in New York: yes. If you&rsquo;re only in the city for two or three days, your time is better spent exploring Midtown. Visit <strong>after dark, between 6 PM and 9 PM</strong>. Arriving too early is the biggest mistake &mdash; the displays aren&rsquo;t the same before the lights are fully visible.</p>
+
+          <div class="ac-section"><h3>Self-Guided or Tour?</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card"><div class="card-tag">Visit Independently</div><p>Ideal if you&rsquo;re comfortable on the subway and prefer exploring at your own pace. Take the subway to Bay Ridge, Brooklyn.</p></div>
+            <div class="card"><div class="card-tag">Join a Guided Tour</div><p>Best choice for first-time visitors who want transportation included and prefer not to navigate Brooklyn at night alone.</p></div>
+          </div>
+
+          <div class="cta-dark" style="margin-top:16px;">
+            <div class="cta-eyebrow">Skip the Navigation</div>
+            <h4>Dyker Heights Christmas Lights Tour</h4>
+            <p>A guided evening tour includes transportation, covers all the major streets, and gives you the context behind the decorations. Reserve in advance &mdash; popular during December.</p>
+            <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/Dyker-Heights-Christmas-Lights-Tour/d687-13836DOE?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book the Dyker Heights Tour on Viator</a>
+          </div>
+
+          <div class="ac-section"><h3>Common Mistakes</h3></div>
+          <ul class="mistake-pills">
+            <li>&#10060; Combining Dyker Heights with Rockefeller Center on the same evening</li>
+            <li>&#10060; Arriving before sunset</li>
+            <li>&#10060; Only walking one street &mdash; displays spread across several blocks</li>
+          </ul>
+
+          <table class="verdict-table">
+            <tr><td>Holiday Atmosphere</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Photography</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Family Friendly</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+            <tr><td>Value</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          </table>
+
+          <a class="back-top" href="#subnav">&#8593; Back to top</a>
+        </div>
+        <div class="bottom-line"><strong>Bottom line:</strong> If Midtown captures the spirit of Christmas in New York, Dyker Heights shows how New Yorkers celebrate it at home.</div>
+      </div>
+
+      <!-- PRIORITY RANKING -->
+      <h2>Which Christmas Attractions Should You Prioritize?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>Rank</th><th>Attraction</th><th>Priority</th></tr>
+          <tr><td>&#127945;</td><td><strong>Rockefeller Center Christmas Tree</strong></td><td>Must Do</td></tr>
+          <tr><td>&#127948;</td><td><strong>Bryant Park Winter Village</strong></td><td>Must Do</td></tr>
+          <tr><td>&#127949;</td><td><strong>Fifth Avenue Holiday Walk</strong></td><td>Must Do</td></tr>
+          <tr><td>4</td><td>Top of the Rock</td><td>Highly Recommended</td></tr>
+          <tr><td>5</td><td>Radio City Christmas Spectacular</td><td>Highly Recommended</td></tr>
+          <tr><td>6</td><td>Dyker Heights Christmas Lights</td><td>Highly Recommended (4+ day trips)</td></tr>
+          <tr><td>7</td><td>Hudson Yards &amp; Edge</td><td>Recommended</td></tr>
+          <tr><td>8</td><td>Central Park</td><td>Recommended</td></tr>
+          <tr><td>9</td><td>Columbus Circle Holiday Market</td><td>If Time Allows</td></tr>
+          <tr><td>10</td><td>Times Square</td><td>Walk Through, Don&rsquo;t Linger</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- NEIGHBORHOODS -->
+      <h2 id="neighborhoods">The Best Neighborhoods to Experience Christmas in NYC</h2>
+      <p>One of the biggest mistakes first-time visitors make is planning their trip around individual attractions. A much better approach is to plan by <strong>neighborhood</strong>. New York&rsquo;s best Christmas experiences naturally cluster together &mdash; instead of taking the subway after every attraction, you can spend hours exploring on foot.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:540px;font-size:13.5px;">
+          <tr><th>Neighborhood</th><th>Best For</th><th>Time Needed</th><th>Best Time</th><th>Atmosphere</th></tr>
+          <tr><td><strong>Midtown East</strong></td><td>Classic Christmas attractions</td><td>Half to full day</td><td>Afternoon &amp; Evening</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Bryant Park / Midtown West</strong></td><td>Holiday market &amp; skating</td><td>2&ndash;3 hrs</td><td>Afternoon</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Central Park &amp; Upper West Side</strong></td><td>Winter scenery</td><td>Half day</td><td>Morning</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>West Village &amp; Greenwich Village</strong></td><td>Cozy Christmas atmosphere</td><td>2&ndash;3 hrs</td><td>Evening</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Hudson Yards &amp; Chelsea</strong></td><td>Modern holiday lights</td><td>Half day</td><td>Late Afternoon &amp; Evening</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>SoHo</strong></td><td>Holiday shopping</td><td>Half day</td><td>Afternoon</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Financial District</strong></td><td>Quiet holiday walk</td><td>2&ndash;3 hrs</td><td>Evening</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Dyker Heights</strong></td><td>Christmas lights</td><td>Evening</td><td>After Dark</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+        </table>
+      </div>
+
+      <div class="nbhd-cards">
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 1</span>
+          <h3>Midtown East</h3>
+          <span class="nc-tagline">The heart of Christmas in New York</span>
+          <ul>
+            <li>Rockefeller Center Christmas Tree</li>
+            <li>Top of the Rock</li>
+            <li>Radio City Music Hall</li>
+            <li>Fifth Avenue window displays</li>
+            <li>Saks Fifth Avenue, St. Patrick&rsquo;s Cathedral, FAO Schwarz</li>
+          </ul>
+          <p style="margin-top:10px;font-size:14.5px;">Don&rsquo;t miss stepping inside St. Patrick&rsquo;s Cathedral &mdash; it&rsquo;s beautifully decorated and provides a peaceful break from the Midtown crowds.</p>
+          <div class="nc-stars">&#11088;&#11088;&#11088;&#11088;&#11088; — If you&rsquo;re spending one Christmas evening in Manhattan, spend it here.</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 2</span>
+          <h3>Bryant Park &amp; Midtown West</h3>
+          <span class="nc-tagline">The best place to slow down and enjoy Christmas</span>
+          <ul>
+            <li>Holiday market stalls and ice skating</li>
+            <li>Seasonal food and hot chocolate</li>
+            <li>Christmas music and outdoor seating</li>
+            <li>New York Public Library nearby</li>
+          </ul>
+          <p style="margin-top:10px;font-size:14.5px;">Start late afternoon, browse the market, grab a snack, watch the skaters, and stay until the lights come on.</p>
+          <div class="nc-stars">&#11088;&#11088;&#11088;&#11088;&#11088; — If Rockefeller Center is the city&rsquo;s Christmas icon, Bryant Park is where you&rsquo;ll actually want to linger.</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 3</span>
+          <h3>Central Park &amp; Upper West Side</h3>
+          <span class="nc-tagline">The side of Christmas that feels like a movie</span>
+          <div style="margin:8px 0;font-size:14.5px;color:var(--text-secondary);">Suggested half-day route:</div>
+          <div class="route-flow" style="flex-direction:column;gap:4px;">
+            <span class="rf-stop">Columbus Circle &rarr; Holiday Market &rarr; Central Park</span>
+            <span class="rf-stop">Bethesda Terrace &rarr; Bow Bridge &rarr; Tavern on the Green</span>
+          </div>
+          <div class="nc-stars" style="margin-top:10px;">&#11088;&#11088;&#11088;&#11088;&#11088; — Don&rsquo;t skip Central Park just because it&rsquo;s cold. It becomes even more beautiful during the holidays.</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 4</span>
+          <h3>West Village &amp; Greenwich Village</h3>
+          <span class="nc-tagline">The neighbourhood that feels like Christmas without trying too hard</span>
+          <ul>
+            <li>Brownstones with wreaths and twinkling lights</li>
+            <li>Cozy cafés and independent bookstores</li>
+            <li>Quiet residential streets</li>
+            <li>Decorated restaurants</li>
+          </ul>
+          <p style="margin-top:10px;font-size:14.5px;">Best in early evening after dinner. Simply wander without a strict plan. Sometimes the best Christmas moments are the ones you didn&rsquo;t schedule.</p>
+          <div class="nc-stars">&#11088;&#11088;&#11088;&#11088;&#11088; — Perfect for couples, photographers, and anyone wanting a slower pace.</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 5</span>
+          <h3>Hudson Yards &amp; Chelsea</h3>
+          <span class="nc-tagline">The perfect mix of skyline views, festive lights, and great food</span>
+          <div style="margin:8px 0;font-size:14.5px;color:var(--text-secondary);">Ideal walking route:</div>
+          <div class="route-flow">
+            <span class="rf-stop">Hudson Yards</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Edge</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">High Line</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Chelsea Market</span>
+          </div>
+          <div class="nc-stars" style="margin-top:10px;">&#11088;&#11088;&#11088;&#11088; — One of the easiest neighbourhoods to explore without feeling rushed.</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 6</span>
+          <h3>SoHo</h3>
+          <span class="nc-tagline">Best for holiday shopping</span>
+          <ul>
+            <li>Boutique shops and designer brands</li>
+            <li>Independent retailers and cafés</li>
+            <li>Stylish holiday decorations</li>
+          </ul>
+          <p style="margin-top:10px;font-size:14.5px;">Pairs well with Nolita, Little Italy, and Greenwich Village. Great for an afternoon of shopping and café hopping.</p>
+          <div class="nc-stars">&#11088;&#11088;&#11088;&#11088;</div>
+        </div>
+        <div class="nbhd-card">
+          <span class="nc-tag">Neighbourhood 7</span>
+          <h3>Financial District</h3>
+          <span class="nc-tagline">NYC&rsquo;s most underrated holiday neighbourhood</span>
+          <ul>
+            <li>Brookfield Place Luminaries</li>
+            <li>The Oculus holiday decorations</li>
+            <li>Stone Street festive atmosphere</li>
+            <li>The Seaport</li>
+          </ul>
+          <p style="margin-top:10px;font-size:14.5px;">Noticeably calmer than Midtown while still offering beautiful holiday displays. Best for photography and a relaxed evening walk.</p>
+          <div class="nc-stars">&#11088;&#11088;&#11088;&#11088;</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- CHRISTMAS MARKETS -->
+      <h2 id="markets">The Best Christmas Markets in NYC</h2>
+      <p>For many visitors, wandering through a Christmas market is just as memorable as seeing the Rockefeller Christmas Tree. You don&rsquo;t need to visit every market &mdash; most first-time visitors will have a better experience choosing one or two and spending more time enjoying them.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:560px;font-size:13.5px;">
+          <tr><th>Market</th><th>Best For</th><th>Time Needed</th><th>Food</th><th>Shopping</th><th>Worth It?</th></tr>
+          <tr><td><strong>Bryant Park Winter Village</strong></td><td>Overall experience</td><td>2&ndash;3 hrs</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Union Square Holiday Market</strong></td><td>Local artisans</td><td>1.5&ndash;2 hrs</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Columbus Circle Holiday Market</strong></td><td>Combined with Central Park</td><td>45&ndash;90 min</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+          <tr><td><strong>Grand Central Holiday Fair</strong></td><td>Indoor market in bad weather</td><td>45&ndash;60 min</td><td>&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;</td></tr>
+        </table>
+      </div>
+
+      <div class="mkt-card best">
+        <span class="mk-badge">&#127945; Best Overall</span>
+        <h3>Bryant Park Winter Village</h3>
+        <p>The best combination of shopping, seasonal food, ice skating, Christmas lights, and holiday atmosphere. Unlike many markets that feel like a quick stop, Bryant Park is somewhere you&rsquo;ll naturally want to spend a few hours. Best for first-time visitors, families, couples, evening visits, and food lovers.</p>
+        <ul><li>Hot chocolate</li><li>Fresh pastries</li><li>Holiday desserts</li><li>Watching the skaters</li><li>The NY Public Library lit up after dark</li></ul>
+      </div>
+
+      <div class="mkt-card shopping">
+        <span class="mk-badge">Best Shopping</span>
+        <h3>Union Square Holiday Market</h3>
+        <p>If Bryant Park wins for atmosphere, Union Square wins for shopping. Larger selection of handmade gifts, artwork, jewelry, candles, Christmas ornaments, and locally made products &mdash; the best market if you want to bring home something unique rather than a generic souvenir.</p>
+      </div>
+
+      <div class="mkt-card park">
+        <span class="mk-badge">Best with Central Park</span>
+        <h3>Columbus Circle Holiday Market</h3>
+        <p>Not as large as Bryant Park or Union Square, but its location is what makes it special. A perfect winter morning: Columbus Circle &rarr; Holiday Market &rarr; Central Park &rarr; Bethesda Terrace &rarr; Bow Bridge &rarr; Tavern on the Green. Everything flows naturally without unnecessary walking.</p>
+      </div>
+
+      <div class="mkt-card indoor">
+        <span class="mk-badge">Rainy Day Option</span>
+        <h3>Grand Central Holiday Fair</h3>
+        <p>If it&rsquo;s operating during your visit, it&rsquo;s worth a quick look. The biggest advantage: it&rsquo;s indoors &mdash; a good option in rain, very cold temperatures, or if you already plan to visit Grand Central Terminal. Not a destination on its own, but it works well as part of a Midtown itinerary. Availability varies by year; confirm before your trip.</p>
+      </div>
+
+      <div class="callout callout-local" style="margin-top:18px;">
+        <div class="callout-title">Market Tips</div>
+        <p>Visit on weekdays if possible &middot; Arrive earlier for easier shopping &middot; Stay into the evening for the lights &middot; Wear gloves &middot; Browse the entire market before buying gifts &middot; Leave some room in your luggage if you plan to shop</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- GETTING AROUND -->
+      <h2 id="transport">Getting Around NYC at Christmas</h2>
+      <p>Christmas is one of the busiest times of the year in New York City. The biggest mistake first-time visitors make isn&rsquo;t choosing the wrong attraction &mdash; it&rsquo;s underestimating how long it takes to move between neighborhoods during the holidays. Plan your days around geography and you&rsquo;ll spend far less time commuting.</p>
+
+      <div class="table-wrap">
+        <table class="data-table transport-table" style="min-width:380px;">
+          <tr><th>Transport</th><th>Best For</th><th>Recommendation</th></tr>
+          <tr><td>&#128694;</td><td>Exploring one neighborhood</td><td>&#11088;&#11088;&#11088;&#11088;&#11088; &mdash; Best option within a neighborhood</td></tr>
+          <tr><td>&#128647;</td><td>Traveling between neighborhoods</td><td>&#11088;&#11088;&#11088;&#11088;&#11088; &mdash; Fastest and most reliable</td></tr>
+          <tr><td>&#128661;</td><td>Late nights or bad weather</td><td>&#11088;&#11088;&#11088; &mdash; Use when necessary</td></tr>
+          <tr><td>&#128141;</td><td>Scenic but slower</td><td>&#11088;&#11088;&#11088; &mdash; Not worth it during busy periods</td></tr>
+          <tr><td>&#9972;&#65039;</td><td>Skyline views</td><td>&#11088;&#11088;&#11088;&#11088; &mdash; Great end to a Brooklyn day</td></tr>
+        </table>
+      </div>
+
+      <h3>Holiday Crowd Strategy</h3>
+      <div class="crowd-grid">
+        <div class="crowd-item">
+          <h4>Rockefeller Center</h4>
+          <div class="ci-avoid">&#10060; Saturday evening</div>
+          <div class="ci-do">&#9989; Weekday morning or late evening</div>
+        </div>
+        <div class="crowd-item">
+          <h4>Bryant Park</h4>
+          <div class="ci-avoid">&#10060; Friday evening</div>
+          <div class="ci-do">&#9989; Weekday afternoon</div>
+        </div>
+        <div class="crowd-item">
+          <h4>Fifth Avenue</h4>
+          <div class="ci-avoid">&#10060; Weekend afternoons</div>
+          <div class="ci-do">&#9989; Weekday evenings</div>
+        </div>
+        <div class="crowd-item">
+          <h4>Observation Decks</h4>
+          <div class="ci-avoid">&#10060; Buying tickets same day</div>
+          <div class="ci-do">&#9989; Reserve sunset tickets in advance</div>
+        </div>
+        <div class="crowd-item">
+          <h4>Christmas Markets</h4>
+          <div class="ci-avoid">&#10060; Saturday afternoon</div>
+          <div class="ci-do">&#9989; Weekday morning or late afternoon</div>
+        </div>
+        <div class="crowd-item">
+          <h4>Busiest Week</h4>
+          <div class="ci-avoid">&#10060; December 23&ndash;January 1 is peak</div>
+          <div class="ci-do">&#9989; Leave extra flexibility in your schedule</div>
+        </div>
+      </div>
+
+      <h3>My Recommended Daily Formula</h3>
+      <div class="formula-chain">
+        <div class="fc-step"><span class="fc-time">Morning</span><p>One major attraction</p></div>
+        <div class="fc-step"><span class="fc-time">Late Morning</span><p>Explore the surrounding neighbourhood on foot</p></div>
+        <div class="fc-step"><span class="fc-time">Lunch</span><p>Stay in the same area</p></div>
+        <div class="fc-step"><span class="fc-time">Afternoon</span><p>One or two nearby attractions</p></div>
+        <div class="fc-step"><span class="fc-time">Coffee Break</span><p>Hot chocolate or seasonal coffee &mdash; don&rsquo;t skip this</p></div>
+        <div class="fc-step"><span class="fc-time">Evening</span><p>Holiday lights, Broadway, observation deck, or dinner</p></div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Essential Transportation Tips</div>
+        <p>Download Google Maps offline before your trip &middot; Use contactless payment for the subway &middot; Wear comfortable waterproof shoes &middot; Carry a portable phone charger &middot; Keep gloves easily accessible &middot; Plan one neighbourhood at a time</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions About Christmas in NYC</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is Christmas a good time to visit New York City?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. Christmas is one of the most magical times to visit NYC &mdash; the Rockefeller Center Christmas Tree, festive window displays, holiday markets, Broadway shows, and seasonal events create an experience that&rsquo;s difficult to replicate anywhere in the world. The trade-off is that it&rsquo;s also one of the busiest and most expensive times of the year, so planning ahead is essential.</div>
+        </details>
+        <details class="faq-item">
+          <summary>When is the best time to visit NYC at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most first-time visitors, early December offers the best balance of festive atmosphere, manageable crowds, and hotel prices. If you visit during Christmas Week (December 23&ndash;25), expect larger crowds and higher accommodation costs, but you&rsquo;ll also experience the city at its most festive.</div>
+        </details>
+        <details class="faq-item">
+          <summary>When do Christmas decorations go up and come down in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Holiday decorations begin appearing in late November, with most major displays fully installed by early December. Many decorations remain through New Year&rsquo;s Day, and some stay up until the first week of January. If you&rsquo;re visiting after New Year&rsquo;s, check the official website of any attraction that&rsquo;s high on your list.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is New York crowded at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; Christmas is one of the busiest times of the year. The most crowded areas are Rockefeller Center, Fifth Avenue, Times Square, Bryant Park, and popular observation decks. Visiting on weekday mornings or booking timed attractions in advance makes a big difference.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is NYC worth visiting on Christmas Day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. Many of the city&rsquo;s most popular attractions remain open on Christmas Day, though some operate with reduced hours. It&rsquo;s also one of the best days to enjoy quieter walks through Central Park or visit an observation deck. Make restaurant reservations well in advance.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How many days do you need for Christmas in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Two days gets you the major highlights. Three days covers the main attractions at a comfortable pace. Five days lets you experience the city&rsquo;s best holiday neighborhoods and markets. Seven days is ideal for first-time visitors who want a relaxed itinerary without feeling rushed.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which Christmas market is the best?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most visitors, Bryant Park Winter Village is the best overall choice &mdash; it combines holiday shopping, festive food, ice skating, and atmosphere. If you&rsquo;re mainly interested in handmade gifts and unique products, Union Square Holiday Market is an excellent alternative.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which observation deck is best at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you&rsquo;re only visiting one observation deck, Top of the Rock is the best choice for most first-time visitors. You&rsquo;ll enjoy stunning skyline views with a direct view of the Empire State Building, and you&rsquo;re just steps away from Rockefeller Center and Fifth Avenue.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Dyker Heights worth visiting?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; especially if you&rsquo;re spending four or more days in New York. The neighborhood&rsquo;s over-the-top Christmas light displays are unlike anything you&rsquo;ll find in Midtown. If you&rsquo;re only visiting for a short weekend, focus on Manhattan&rsquo;s holiday attractions instead.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Times Square worth visiting at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Walk through it to experience the atmosphere, then continue exploring nearby attractions. Most visitors find Rockefeller Center, Bryant Park, and Fifth Avenue much more memorable during the holiday season.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I buy the New York Pass for Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It depends on how many attractions you plan to visit. If your itinerary includes several paid attractions such as observation decks and museums, a sightseeing pass can offer good value. Just remember that having a pass doesn&rsquo;t guarantee entry &mdash; many popular attractions still require advance reservations during the holiday season.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Will it snow in New York at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Maybe &mdash; but never count on it. Snow is certainly possible in December, but it&rsquo;s never guaranteed. Plan your trip expecting cold weather rather than a white Christmas, and treat snowfall as a bonus if it happens.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What should I wear in NYC at Christmas?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Dress in warm layers: insulated coat, sweater or fleece, hat, gloves, scarf, comfortable waterproof shoes or boots, and thick socks. You&rsquo;ll likely spend several hours outdoors, so comfortable footwear is just as important as warm clothing.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to book attractions in advance?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For many Christmas experiences, yes. Book early for observation decks (especially sunset), the Radio City Christmas Spectacular, Broadway shows, ice skating sessions, and Christmas Eve/Day restaurants. Waiting until you arrive can significantly limit your choices, particularly in the second half of December.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What&rsquo;s the biggest mistake first-time visitors make?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Trying to do too much. Christmas in New York isn&rsquo;t about checking every attraction off a list. The best trips are built around neighborhoods, allowing time to explore decorated streets, browse holiday markets, enjoy a warm drink, and soak up the atmosphere between major sights. Slow down, plan strategically, and you&rsquo;ll enjoy the city far more.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Which Observation Deck Wins?</a></li>
+      <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top of the Rock: The Ultimate Guide (2026)</a></li>
+      <li><a href="edge-nyc-observation-deck-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Edge NYC Worth It? An Honest Review</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC (That Are Actually Worth Your Time)</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost? Four Honest Budgets</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs. New York Pass: Which Attraction Pass Is Actually Worth It?</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Progress bar */
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* Active sub-nav highlight */
+var sections=['intro','when-to-visit','attractions','neighborhoods','markets','transport','faq'];
+var navLinks=document.querySelectorAll('.xsn-inner a');
+function updateNav(){
+  var cur='intro';
+  sections.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-130) cur=id;
+  });
+  navLinks.forEach(function(a){
+    a.classList.toggle('active-sec',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
