@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-Day Family NYC Itinerary: A Realistic Plan That Won't Exhaust Parents or Kids | EverythingInNYC</title>
+<meta name="description" content="Skip the exhausting schedules. Follow this realistic 7-day NYC family itinerary that parents love, with smart routes, playground breaks, and unforgettable experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- STICKY SIDEBAR NAV ---- */
+  .side-nav{
+    display:none;
+    position:fixed;
+    top:80px;
+    width:160px;
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:14px 0;
+    z-index:80;
+    box-shadow:var(--shadow-card);
+  }
+  @media(min-width:1120px){
+    .side-nav{display:block;left:calc(50% - 510px);}
+  }
+  @media(min-width:1280px){
+    .side-nav{left:calc(50% - 540px);}
+  }
+  .sn-title{
+    font-family:var(--font-head);font-weight:800;font-size:11px;
+    letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);
+    padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;
+  }
+  .side-nav a{
+    display:block;padding:7px 14px;font-size:13.5px;
+    font-weight:600;color:var(--text-secondary);
+    text-decoration:none;border-left:3px solid transparent;
+    transition:all 0.15s;line-height:1.3;
+  }
+  .side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+  .side-nav a.sn-active{
+    color:var(--navy);font-weight:800;
+    border-left-color:var(--accent);
+    background:rgba(255,193,7,0.07);
+  }
+  .side-nav .sn-day{
+    font-size:11px;font-weight:700;
+    background:var(--navy);color:#fff;
+    border-radius:5px;padding:1px 6px;
+    margin-right:5px;display:inline-block;
+  }
+
+  /* ---- DAY CARD ---- */
+  .day-card{
+    border:1px solid var(--border);background:var(--bg-card);
+    border-radius:var(--radius-card);overflow:hidden;
+    margin:42px 0;box-shadow:var(--shadow-card);
+  }
+  .day-card .dc-head{
+    background:var(--navy);color:#fff;
+    padding:18px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+  .dc-tag{
+    font-family:var(--font-head);font-weight:800;font-size:12px;
+    letter-spacing:0.05em;text-transform:uppercase;
+    background:rgba(255,193,7,0.2);color:var(--accent);
+    padding:4px 11px;border-radius:20px;flex:none;white-space:nowrap;
+  }
+  .dc-head h2{color:#fff;font-size:20px;margin:0;flex:1;line-height:1.2;}
+  .dc-head .dc-meta{
+    font-size:13px;color:rgba(255,255,255,0.65);
+    width:100%;padding-top:4px;
+  }
+  .day-card .dc-body{padding:22px 24px;}
+
+  /* ---- SECTION IMAGE ---- */
+  .section-img{margin:20px 0;}
+  .section-img img{width:100%;border-radius:12px;max-height:380px;object-fit:cover;display:block;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+  /* ---- SCHEDULE TABLE ---- */
+  .sched-wrap{overflow-x:auto;margin:14px 0;}
+  .sched-table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .sched-table thead th{background:var(--navy);color:#fff;padding:9px 14px;text-align:left;font-family:var(--font-head);font-weight:700;font-size:13px;}
+  .sched-table tbody td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .sched-table tbody tr:last-child td{border-bottom:none;}
+  .sched-table tbody tr:nth-child(even){background:rgba(15,23,42,0.02);}
+  .sched-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap;font-size:13px;width:110px;}
+
+  /* ---- DAY SECTION HEADING ---- */
+  .dc-section{margin-top:20px;}
+  .dc-section h3{
+    font-size:16px;font-family:var(--font-head);font-weight:800;
+    color:var(--navy);margin:0 0 10px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .dc-section h3::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px;flex:none;}
+
+  /* ---- ROUTE FLOW ---- */
+  .route-flow{
+    background:rgba(15,23,42,0.04);border-radius:12px;
+    padding:14px 18px;margin:12px 0;
+    display:flex;flex-wrap:wrap;align-items:center;gap:4px;
+  }
+  .rf-stop{font-size:15px;font-weight:700;color:var(--navy);padding:3px 0;}
+  .rf-arrow{color:var(--accent);font-weight:800;margin:0 5px;font-size:16px;}
+
+  /* ---- TIP BOX ---- */
+  .day-tip{
+    background:#FFF9E8;border-left:3px solid var(--accent);
+    border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;
+    font-size:15.5px;
+  }
+  .day-tip .dt-label{font-family:var(--font-head);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;margin-bottom:5px;}
+  .day-tip p,.day-tip ul{margin:0;}
+  .day-tip ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;}
+  .day-tip ul li{font-size:15px;padding-left:14px;position:relative;}
+  .day-tip ul li::before{content:'-';position:absolute;left:0;color:#92620A;font-weight:700;}
+
+  /* ---- WHY IT WORKS BOX ---- */
+  .why-box{
+    background:rgba(15,23,42,0.03);border:1px solid var(--border);
+    border-radius:12px;padding:14px 18px;margin:16px 0;
+  }
+  .why-box .wb-label{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy);margin-bottom:8px;}
+  .why-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .why-box ul li{font-size:15px;padding-left:16px;position:relative;}
+  .why-box ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+
+  /* ---- OPTION CARDS ---- */
+  .option-cards{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;}
+  @media(min-width:560px){.option-cards.two-col{grid-template-columns:1fr 1fr;}}
+  .opt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 18px 14px;}
+  .opt-card .oc-badge{
+    font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+    padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;
+  }
+  .opt-card.opt-a .oc-badge{background:rgba(15,23,42,0.08);color:var(--navy);}
+  .opt-card.opt-b .oc-badge{background:rgba(37,99,235,0.1);color:var(--info);}
+  .opt-card.opt-c .oc-badge{background:rgba(22,163,74,0.1);color:#15803D;}
+  .opt-card.opt-d .oc-badge{background:rgba(139,92,246,0.1);color:#5B21B6;}
+  .opt-card.opt-e .oc-badge{background:rgba(220,38,38,0.08);color:var(--error);}
+  .opt-card h4{margin:0 0 8px;font-size:17px;color:var(--navy);}
+  .opt-card p{font-size:14.5px;color:var(--text-secondary);margin-bottom:8px;}
+  .opt-card .oc-best{font-size:13px;color:var(--text-secondary);font-style:italic;}
+  .opt-card ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:4px;}
+  .opt-card ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .opt-card ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+  /* ---- CHECKLIST ---- */
+  .checklist{list-style:none;padding:0;margin:14px 0;display:flex;flex-wrap:wrap;gap:8px;}
+  .checklist li{
+    font-size:14.5px;background:var(--bg-card);border:1px solid var(--border);
+    border-radius:8px;padding:5px 13px;
+  }
+
+  /* ---- TIPS LIST ---- */
+  .tips-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+  .tips-list li{
+    display:flex;align-items:flex-start;gap:12px;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:12px;padding:12px 16px;font-size:15.5px;
+  }
+  .tips-list li .tip-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;
+    background:var(--navy);color:#fff;
+    padding:2px 7px;border-radius:5px;flex:none;margin-top:2px;white-space:nowrap;
+  }
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:10px;}
+  .back-top:hover{color:var(--navy);}
+
+  /* ---- WHERE TO STAY TABLE ---- */
+  .stay-table td:first-child{font-weight:700;color:var(--navy);background:rgba(15,23,42,0.02);}
+
+  /* ---- JUMP NAV (mobile) ---- */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:480px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  .jump-nav li a:hover{color:var(--navy);}
+  @media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- STICKY SIDEBAR NAV -->
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">This Article</div>
+  <a href="#prep">Before You Start</a>
+  <a href="#day1"><span class="sn-day">1</span> Midtown</a>
+  <a href="#day2"><span class="sn-day">2</span> Upper West Side</a>
+  <a href="#day3"><span class="sn-day">3</span> Lower Manhattan</a>
+  <a href="#day4"><span class="sn-day">4</span> Brooklyn</a>
+  <a href="#day5"><span class="sn-day">5</span> Midtown</a>
+  <a href="#day6"><span class="sn-day">6</span> Adventure Day</a>
+  <a href="#day7"><span class="sn-day">7</span> Goodbye</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Family Itinerary</span>
+      <h1>7-Day Family NYC Itinerary: A Realistic Plan That Won&rsquo;t Exhaust Parents or Kids</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span>
+        <span>&middot;</span>
+        <span>18 minute read</span>
+        <span>&middot;</span>
+        <span>7 days &middot; All ages</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="7-day-family-itinerary-cover.png" alt="7-Day Family NYC Itinerary — a realistic plan for families visiting New York City">
+
+    <div class="article-body">
+      <p>Planning a family trip to New York City sounds exciting &mdash; until you start building an itinerary. Suddenly you&rsquo;re trying to squeeze in the Statue of Liberty, Central Park, three museums, Times Square, a Broadway show, two observation decks, Brooklyn Bridge, shopping, and every famous food spot... all before your kids decide they&rsquo;ve officially walked enough.</p>
+
+      <p>That&rsquo;s where most NYC itineraries go wrong. They treat New York like a checklist. Families who&rsquo;ve actually enjoyed their trip tend to do the opposite &mdash; they stay in one neighborhood, slow down, leave room for playgrounds and snack breaks, and accept that you simply can&rsquo;t (and shouldn&rsquo;t) see everything in one visit.</p>
+
+      <p>The best family vacations in New York aren&rsquo;t the ones that fit in the most attractions &mdash; they&rsquo;re the ones where nobody is counting down the minutes until they can sit down.</p>
+
+      <!-- MOBILE JUMP NAV -->
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Day</div>
+        <ul>
+          <li><a href="#prep">Before You Start</a></li>
+          <li><a href="#day1">Day 1 &mdash; Midtown</a></li>
+          <li><a href="#day2">Day 2 &mdash; Upper West Side</a></li>
+          <li><a href="#day3">Day 3 &mdash; Lower Manhattan</a></li>
+          <li><a href="#day4">Day 4 &mdash; Brooklyn</a></li>
+          <li><a href="#day5">Day 5 &mdash; Midtown Again</a></li>
+          <li><a href="#day6">Day 6 &mdash; Adventure Day</a></li>
+          <li><a href="#day7">Day 7 &mdash; Goodbye</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- AT A GLANCE -->
+      <h2>At a Glance: Your 7-Day NYC Family Itinerary</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:400px;">
+          <tr><th>Day</th><th>Neighborhood</th><th>Highlights</th></tr>
+          <tr><td><strong>Day 1</strong></td><td>Midtown</td><td>Bryant Park, Fifth Avenue, FAO Schwarz, Times Square</td></tr>
+          <tr><td><strong>Day 2</strong></td><td>Upper West Side</td><td>American Museum of Natural History, Central Park</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>Lower Manhattan</td><td>Statue of Liberty or Staten Island Ferry, Battery Park, SeaGlass Carousel</td></tr>
+          <tr><td><strong>Day 4</strong></td><td>Brooklyn</td><td>Brooklyn Bridge, DUMBO, Jane&rsquo;s Carousel, Brooklyn Bridge Park</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>Midtown</td><td>Rockefeller Center, Top of the Rock, Broadway</td></tr>
+          <tr><td><strong>Day 6</strong></td><td>Flexible Adventure Day</td><td>Bronx Zoo, Coney Island, Roosevelt Island, Intrepid or Yankees Game</td></tr>
+          <tr><td><strong>Day 7</strong></td><td>Favorite Neighborhood</td><td>Relaxed morning before departure</td></tr>
+        </table>
+      </div>
+
+      <!-- WHY IT WORKS -->
+      <h2>Why This Itinerary Works Better Than Most</h2>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Rule 1 &mdash; One Neighborhood at a Time</div>
+          <p>This itinerary keeps each day focused on one area. Less time underground, fewer subway changes, less backtracking, more time actually exploring. Instead of hopping across Manhattan, you&rsquo;re walking through one neighborhood properly.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Rule 2 &mdash; One Major Attraction Per Day</div>
+          <p>Most kids remember one incredible experience far better than three rushed ones. Day 2 revolves around the museum. Day 3 is the ferry. Day 5 is Rockefeller Center. Everything else is flexible.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Rule 3 &mdash; Every Afternoon Includes a Reset</div>
+          <p>Nearly every day includes playgrounds, waterfront parks, carousels, open lawns, picnic spots, or ice cream breaks. These aren&rsquo;t wasted time &mdash; they&rsquo;re often the moments everyone remembers most.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Rule 4 &mdash; Evenings Stay Flexible</div>
+          <p>Except for Broadway night, evenings are intentionally light. Return to the hotel, grab pizza, revisit Times Square, or simply relax. Vacation shouldn&rsquo;t feel like a race.</p>
+        </div>
+      </div>
+
+      <!-- BEFORE YOU START -->
+      <h2 id="prep">Before You Start Planning</h2>
+
+      <h3>Book These Attractions Before Your Trip</h3>
+      <ul class="checklist">
+        <li>Statue of Liberty Ferry</li>
+        <li>Top of the Rock</li>
+        <li>Broadway show</li>
+        <li>Yankees game (if attending)</li>
+      </ul>
+
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Save on Multiple Attractions</div>
+        <h4>New York Pass and CityPASS</h4>
+        <p>If your family is planning to visit several major paid attractions, a sightseeing pass can offer good value. The New York Pass covers 100+ attractions with free entry. CityPASS includes five headline experiences at a significant discount. Not sure which to choose? Read our <a href="citypass-vs-new-york-pass.html">full CityPASS vs New York Pass comparison</a> before booking.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://www.viator.com/tours/New-York-City/New-York-Pass/d687-3878PASS?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get the New York Pass on Viator</a>
+          <a class="btn" style="background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.25);padding:10px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;" href="https://www.viator.com/tours/New-York-City/New-York-CityPass/d687-2640NYC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Get CityPASS on Viator</a>
+        </div>
+      </div>
+
+      <h3>Do Not Overbook Timed Reservations</h3>
+      <p>This is one of the easiest ways to create unnecessary stress. Try to limit yourself to one timed attraction each day. That leaves enough flexibility if breakfast takes longer than expected, your child wants extra playground time, subway delays happen, or the weather changes. A relaxed itinerary almost always beats a perfectly scheduled one.</p>
+
+      <h3>Pack for Walking</h3>
+      <p>Even with a carefully planned route, you&rsquo;ll walk between 10,000 and 15,000 steps most days. Comfortable shoes are far more important than fashionable ones. Also carry refillable water bottles, a portable charger, sunscreen, snacks, a small pack of wipes, and lightweight rain jackets. If you&rsquo;re traveling with toddlers, a lightweight umbrella stroller is much easier to manage than a large travel system.</p>
+
+      <h3>Where to Stay</h3>
+      <div class="table-wrap">
+        <table class="data-table stay-table" style="min-width:300px;">
+          <tr><th>Neighborhood</th><th>Best For</th></tr>
+          <tr><td>Midtown West</td><td>First-time visitors</td></tr>
+          <tr><td>Midtown East</td><td>Easy subway access</td></tr>
+          <tr><td>Upper West Side</td><td>Museums and Central Park</td></tr>
+          <tr><td>Long Island City</td><td>Better hotel prices with quick Manhattan access</td></tr>
+        </table>
+      </div>
+      <p>Avoid changing hotels during a one-week trip. The time saved is not worth the hassle.</p>
+
+      <h3>Daily Rhythm That Works</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Time</th><th>Activity</th></tr>
+          <tr><td>Morning</td><td>Major attraction</td></tr>
+          <tr><td>Lunch</td><td>Sit-down break</td></tr>
+          <tr><td>Afternoon</td><td>Park, playground or relaxed sightseeing</td></tr>
+          <tr><td>Evening</td><td>Flexible dinner and optional activity</td></tr>
+        </table>
+      </div>
+
+      <!-- ===== DAY 1 ===== -->
+      <div class="day-card" id="day1">
+        <div class="dc-head">
+          <span class="dc-tag">Day 1</span>
+          <h2>Arrival and a Relaxed Introduction to Midtown</h2>
+          <span class="dc-meta">Estimated walking: 7,000&ndash;9,000 steps &nbsp;&middot;&nbsp; No timed reservations</span>
+        </div>
+        <div class="dc-body">
+          <p>After a flight, it&rsquo;s tempting to jump straight into sightseeing. Resist the urge. Your goal today isn&rsquo;t to &ldquo;see New York.&rdquo; It&rsquo;s to get excited about the week ahead without wearing everyone out before the trip has really begun.</p>
+
+          <div class="dc-section"><h3>Suggested Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>Afternoon</td><td>Hotel check-in or luggage drop</td></tr>
+                <tr><td>4:00 PM</td><td>Bryant Park</td></tr>
+                <tr><td>4:30 PM</td><td>New York Public Library</td></tr>
+                <tr><td>5:15 PM</td><td>Fifth Avenue walk</td></tr>
+                <tr><td>5:45 PM</td><td>FAO Schwarz or LEGO Store</td></tr>
+                <tr><td>7:00 PM</td><td>Pizza dinner</td></tr>
+                <tr><td>8:00 PM</td><td>Times Square after dark</td></tr>
+                <tr><td>9:00 PM</td><td>Hotel</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/9e/8e/01/caption.jpg?w=1400&h=-1&s=1" alt="Bryant Park in Midtown Manhattan — a relaxed introduction to New York City">
+            <div class="cap">Bryant Park is the perfect first stop &mdash; compact, walkable, and genuinely welcoming for all ages.</div>
+          </div>
+
+          <div class="dc-section"><h3>Stop by Stop</h3></div>
+
+          <h4>Bryant Park</h4>
+          <p>Bryant Park is the perfect introduction to Manhattan. Parents can relax with a coffee while kids enjoy the open space, seasonal activities, or simply watch the constant flow of people. Unlike Central Park, Bryant Park is compact and easy to explore without committing to a long walk.</p>
+
+          <h4>New York Public Library</h4>
+          <p>Even if you don&rsquo;t spend long inside, it&rsquo;s worth stepping into the beautiful main hall before continuing toward Fifth Avenue. It&rsquo;s one of those places that feels surprisingly calm despite being in the middle of Midtown.</p>
+
+          <h4>FAO Schwarz or the LEGO Store</h4>
+          <p>Instead of dragging children through another landmark, let them spend some time exploring one of New York&rsquo;s iconic toy stores. Whether they buy something or not, these stores are attractions in their own right. You&rsquo;ll probably spend longer here than you planned &mdash; and that&rsquo;s perfectly fine.</p>
+
+          <h4>Dinner: Keep It Simple</h4>
+          <p>Don&rsquo;t queue for a famous restaurant on your first night. Grab a classic New York pizza instead &mdash; quick, affordable, and almost guaranteed to be a hit with everyone.</p>
+
+          <h4>Times Square After Dark</h4>
+          <p>Save Times Square for after sunset. The lights, giant screens, and atmosphere are far more impressive once it gets dark. Spend 30 to 60 minutes soaking it all in before heading back to the hotel. There&rsquo;s no need to stay until late &mdash; tomorrow is a full day.</p>
+
+          <div class="why-box">
+            <div class="wb-label">Why This Day Works</div>
+            <ul>
+              <li>Minimal walking after travel</li>
+              <li>No timed reservations</li>
+              <li>Plenty of flexibility if your flight is delayed</li>
+              <li>Kids immediately get something fun instead of another tourist stop</li>
+              <li>Sets a relaxed pace for the rest of the week</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 2 ===== -->
+      <div class="day-card" id="day2">
+        <div class="dc-head">
+          <span class="dc-tag">Day 2</span>
+          <h2>Dinosaurs, Central Park and the Perfect Family Day</h2>
+          <span class="dc-meta">Estimated walking: varies &nbsp;&middot;&nbsp; Upper West Side &mdash; everything walkable</span>
+        </div>
+        <div class="dc-body">
+          <p>If your family only has one day to experience the &ldquo;classic New York&rdquo; that appears in movies, this is probably it. You&rsquo;ll spend the morning exploring one of the world&rsquo;s greatest museums before slowing the pace in Central Park for the afternoon. The route flows naturally from north to south, so you&rsquo;re not doubling back or crisscrossing the park. Once you leave the subway, everything is walkable.</p>
+
+          <div class="dc-section"><h3>Day 2 Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>8:00 AM</td><td>Breakfast near your hotel</td></tr>
+                <tr><td>9:00 AM</td><td>Subway to the Upper West Side</td></tr>
+                <tr><td>9:45 AM</td><td>Arrive at the museum before opening</td></tr>
+                <tr><td>10:00 AM</td><td>American Museum of Natural History</td></tr>
+                <tr><td>1:00 PM</td><td>Lunch</td></tr>
+                <tr><td>2:00 PM</td><td>Belvedere Castle</td></tr>
+                <tr><td>2:30 PM</td><td>Turtle Pond</td></tr>
+                <tr><td>3:00 PM</td><td>Great Lawn</td></tr>
+                <tr><td>3:45 PM</td><td>Heckscher Playground</td></tr>
+                <tr><td>4:45 PM</td><td>Central Park Carousel</td></tr>
+                <tr><td>5:30 PM</td><td>Walk toward Columbus Circle</td></tr>
+                <tr><td>Evening</td><td>Dinner and return to hotel</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="dc-section"><h3>American Museum of Natural History</h3></div>
+          <p>If you&rsquo;re traveling with children, don&rsquo;t try to see the entire museum. It&rsquo;s enormous, and museum fatigue is real. Instead, focus on the exhibits that families consistently enjoy most.</p>
+          <ul class="checklist">
+            <li>Dinosaur Halls</li><li>Hall of Ocean Life (Blue Whale)</li><li>Gems and Minerals</li><li>Space Exhibits</li><li>Mammal Halls (if time allows)</li>
+          </ul>
+          <p>Allow around three hours. That&rsquo;s enough time to experience the highlights without everyone feeling overwhelmed. Arrive before opening &mdash; the museum gets noticeably busier as the morning progresses.</p>
+
+          <div class="dc-section"><h3>Into Central Park</h3></div>
+          <div class="route-flow">
+            <span class="rf-stop">American Museum of Natural History</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Belvedere Castle</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Turtle Pond</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Great Lawn</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Heckscher Playground</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Central Park Carousel</span>
+            <span class="rf-arrow">&rarr;</span>
+            <span class="rf-stop">Columbus Circle</span>
+          </div>
+          <p>This route naturally moves south through the park with very little backtracking. Belvedere Castle feels like a real adventure for younger children, with views across Turtle Pond and excellent spots for parents to sit. The Great Lawn is where you spread out a blanket, enjoy a snack, or simply let the kids run around. Heckscher Playground is where tired children play and parents finally sit down. End with the carousel &mdash; a simple, low-stress activity that children consistently remember.</p>
+
+          <div class="day-tip">
+            <div class="dt-label">Family Tips for Day 2</div>
+            <ul>
+              <li>Arrive before opening &mdash; the museum gets noticeably busier as the morning progresses</li>
+              <li>Don&rsquo;t attempt every exhibit &mdash; you&rsquo;ll enjoy it more by focusing on highlights</li>
+              <li>Pack snacks &mdash; much cheaper than buying food at every break</li>
+              <li>Let the kids climb &mdash; the large rocks around Central Park are just as exciting as playgrounds</li>
+              <li>Take your time &mdash; an hour at the playground instead of another museum is not falling behind</li>
+            </ul>
+          </div>
+
+          <div class="why-box">
+            <div class="wb-label">Why This Day Works</div>
+            <ul>
+              <li>No unnecessary subway rides &mdash; you stay in one neighborhood all day</li>
+              <li>Plenty of green space and built-in rest stops</li>
+              <li>Flexible timing at every stop</li>
+              <li>Something enjoyable for every age</li>
+              <li>Rarely feels rushed</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 3 ===== -->
+      <div class="day-card" id="day3">
+        <div class="dc-head">
+          <span class="dc-tag">Day 3</span>
+          <h2>Lower Manhattan Without the Stress</h2>
+          <span class="dc-meta">Option A: 11,000&ndash;13,000 steps &nbsp;&middot;&nbsp; Option B: 9,000&ndash;11,000 steps</span>
+        </div>
+        <div class="dc-body">
+          <p>Lower Manhattan is where many family itineraries fall apart. Parents often try to fit the Statue of Liberty, Ellis Island, Wall Street, the 9/11 Museum, the Brooklyn Bridge, One World Observatory, South Street Seaport and a harbor cruise into one day. On paper it looks efficient. In reality it&rsquo;s exhausting. Today&rsquo;s goal is simple: experience Lower Manhattan without rushing.</p>
+
+          <div class="dc-section"><h3>Choose Your Version</h3></div>
+          <div class="option-cards two-col">
+            <div class="opt-card opt-a">
+              <span class="oc-badge">Option A &mdash; Recommended</span>
+              <h4>Statue of Liberty + Ellis Island</h4>
+              <p>Best for first-time visitors, children aged 7 and up, families who enjoy history, and anyone who doesn&rsquo;t mind spending several hours on the ferry.</p>
+            </div>
+            <div class="opt-card opt-b">
+              <span class="oc-badge">Option B &mdash; Under 6s</span>
+              <h4>Staten Island Ferry Route</h4>
+              <p>Skip Liberty Island. Instead enjoy the Staten Island Ferry, Battery Park, SeaGlass Carousel, Wall Street and the 9/11 Memorial. You&rsquo;ll still enjoy fantastic skyline views while saving several hours.</p>
+            </div>
+          </div>
+
+          <div class="dc-section"><h3>Option A Schedule (Statue of Liberty)</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>7:30 AM</td><td>Breakfast</td></tr>
+                <tr><td>8:00 AM</td><td>Subway to Battery Park</td></tr>
+                <tr><td>8:30 AM</td><td>Security and ferry queue</td></tr>
+                <tr><td>9:00 AM</td><td>Ferry departure</td></tr>
+                <tr><td>9:30&ndash;1:30 PM</td><td>Liberty Island and Ellis Island</td></tr>
+                <tr><td>1:45 PM</td><td>Lunch near Battery Park</td></tr>
+                <tr><td>2:45 PM</td><td>SeaGlass Carousel</td></tr>
+                <tr><td>3:30 PM</td><td>Battery Park</td></tr>
+                <tr><td>4:15 PM</td><td>Charging Bull (optional)</td></tr>
+                <tr><td>4:45 PM</td><td>Wall Street (optional)</td></tr>
+                <tr><td>5:30 PM</td><td>9/11 Memorial (optional)</td></tr>
+                <tr><td>Evening</td><td>Dinner</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">The Statue of Liberty</div>
+            <p>The ferry is the attraction. Children often enjoy the boat ride almost as much as the island itself. Don&rsquo;t rush. Take time to enjoy the skyline, watch the boats and simply appreciate being on the water. Read our <a href="how-to-visit-statue-of-liberty.html">complete Statue of Liberty visitor guide</a> before making reservations.</p>
+          </div>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/e9/cc/51/caption.jpg?w=1400&h=-1&s=1" alt="SeaGlass Carousel, Battery Park, Lower Manhattan">
+            <div class="cap">SeaGlass Carousel in Battery Park &mdash; one of the most memorable small stops of the whole week for younger children.</div>
+          </div>
+
+          <div class="dc-section"><h3>Option B Schedule (Younger Kids)</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>8:00 AM</td><td>Breakfast</td></tr>
+                <tr><td>9:00 AM</td><td>Staten Island Ferry</td></tr>
+                <tr><td>10:30 AM</td><td>Return to Manhattan</td></tr>
+                <tr><td>11:00 AM</td><td>Battery Park</td></tr>
+                <tr><td>Noon</td><td>Lunch</td></tr>
+                <tr><td>1:00 PM</td><td>SeaGlass Carousel</td></tr>
+                <tr><td>2:00 PM</td><td>Wall Street</td></tr>
+                <tr><td>2:45 PM</td><td>Charging Bull</td></tr>
+                <tr><td>3:30 PM</td><td>9/11 Memorial</td></tr>
+                <tr><td>4:30 PM</td><td>Return to hotel</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>The Staten Island Ferry is free, the skyline views are excellent, children usually enjoy riding a real commuter ferry, and there&rsquo;s no pressure to follow a strict schedule once you&rsquo;re back in Manhattan. For many families it delivers much of the same excitement as the Statue of Liberty ferry with far less time commitment.</p>
+
+          <div class="day-tip">
+            <div class="dt-label">Family Tips for Day 3</div>
+            <ul>
+              <li>Arrive early &mdash; earlier ferry departures are quieter and cooler in warmer months</li>
+              <li>Pack snacks &mdash; the ferry and islands can take longer than expected</li>
+              <li>Wear layers &mdash; the breeze on the harbor can feel noticeably cooler than inland Manhattan</li>
+              <li>Skip attractions without regret &mdash; if your family finishes at Battery Park, you&rsquo;ve still had an excellent day</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 4 ===== -->
+      <div class="day-card" id="day4">
+        <div class="dc-head">
+          <span class="dc-tag">Day 4</span>
+          <h2>Brooklyn Bridge, DUMBO and the Day Families Don&rsquo;t Expect to Love</h2>
+          <span class="dc-meta">Estimated walking: 12,000&ndash;14,000 steps &nbsp;&middot;&nbsp; No timed reservations</span>
+        </div>
+        <div class="dc-body">
+          <p>If there&rsquo;s one day that consistently surprises families, it&rsquo;s this one. Most people arrive expecting Times Square or the Statue of Liberty to be the highlight of the trip. Instead, they end up talking about a morning walk across the Brooklyn Bridge, watching their kids ride Jane&rsquo;s Carousel, eating ice cream by the waterfront, and letting everyone simply enjoy New York without rushing to the next attraction. Today is intentionally slower.</p>
+
+          <div class="dc-section"><h3>Day 4 Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>7:30 AM</td><td>Breakfast</td></tr>
+                <tr><td>7:50 AM</td><td>Walk to the Brooklyn Bridge entrance</td></tr>
+                <tr><td>8:00 AM</td><td>Walk across the Brooklyn Bridge</td></tr>
+                <tr><td>8:45 AM</td><td>Arrive in DUMBO</td></tr>
+                <tr><td>9:00 AM</td><td>Coffee and breakfast stop</td></tr>
+                <tr><td>10:00 AM</td><td>Jane&rsquo;s Carousel</td></tr>
+                <tr><td>10:45 AM</td><td>Pebble Beach</td></tr>
+                <tr><td>11:30 AM</td><td>Brooklyn Bridge Park</td></tr>
+                <tr><td>1:00 PM</td><td>Lunch</td></tr>
+                <tr><td>2:00 PM</td><td>Playground and waterfront relaxation</td></tr>
+                <tr><td>4:00 PM</td><td>Ice cream</td></tr>
+                <tr><td>5:00 PM</td><td>NYC Ferry (optional) or subway back</td></tr>
+                <tr><td>Evening</td><td>Relaxed dinner</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/95/e9/ef/caption.jpg?w=1400&h=-1&s=1" alt="Brooklyn Bridge early morning walk with Manhattan skyline">
+            <div class="cap">The Brooklyn Bridge at 8:00 AM &mdash; start early and you&rsquo;ll have the bridge largely to yourselves.</div>
+          </div>
+
+          <div class="dc-section"><h3>Start Early: Brooklyn Bridge Before the Crowds</h3></div>
+          <p>By 10:00 AM, the Brooklyn Bridge becomes noticeably busier. Walking with young children, stopping for photos, or simply enjoying the skyline becomes much harder once the crowds arrive. An 8:00 AM crossing gives you cooler temperatures, better photos, fewer cyclists, space to enjoy the views, and a much calmer experience. The walk itself takes around 35&ndash;45 minutes at a relaxed family pace. Don&rsquo;t rush. Stop often. The views looking back toward Manhattan are some of the best in the city.</p>
+
+          <div class="dc-section"><h3>DUMBO and the Waterfront</h3></div>
+          <p><strong>Jane&rsquo;s Carousel</strong> is located inside a beautiful glass pavilion overlooking the East River. Children instantly slow down and start enjoying themselves. Parents get incredible skyline views. Everyone leaves happy. It&rsquo;s also one of the best-value attractions of the week. <strong>Pebble Beach</strong> is a five-minute walk away &mdash; children love exploring the rocky shoreline while parents enjoy uninterrupted views of the Brooklyn Bridge, Manhattan Bridge, and Lower Manhattan skyline. <strong>Brooklyn Bridge Park</strong> has everything families need: playgrounds, open lawns, waterfront promenades, shade, and incredible skyline views. Sit down for a while. Watch the ferries. Let the kids play.</p>
+
+          <div class="day-tip">
+            <div class="dt-label">The Afternoon Has No Fixed Schedule</div>
+            <p>That is not an oversight. It is one of the reasons this itinerary works so well. Families can revisit the playground, relax on the lawns, take skyline photos, enjoy another carousel ride, or simply wander through DUMBO. This flexibility often becomes the difference between a stressful vacation and an enjoyable one.</p>
+          </div>
+
+          <div class="day-tip">
+            <div class="dt-label">Return by NYC Ferry</div>
+            <p>If the weather is nice, consider returning by NYC Ferry. The ride offers another perspective of the skyline and gives everyone a chance to sit down after a full day of walking. If the ferry schedule doesn&rsquo;t suit, the subway is still quick and easy.</p>
+          </div>
+
+          <div class="why-box">
+            <div class="wb-label">Why This Day Works</div>
+            <ul>
+              <li>No major timed reservations</li>
+              <li>No pressure to finish by a certain hour</li>
+              <li>Brooklyn gives families space away from Midtown crowds</li>
+              <li>Children can move more freely along the waterfront</li>
+              <li>Most of the 12,000&ndash;14,000 steps are leisurely rather than rushed</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 5 ===== -->
+      <div class="day-card" id="day5">
+        <div class="dc-head">
+          <span class="dc-tag">Day 5</span>
+          <h2>Rockefeller Center, Top of the Rock and Broadway</h2>
+          <span class="dc-meta">Estimated walking: 10,000&ndash;12,000 steps &nbsp;&middot;&nbsp; Reserve Top of the Rock and Broadway in advance</span>
+        </div>
+        <div class="dc-body">
+          <p>By the fifth day, most families have settled into a comfortable rhythm. You&rsquo;ve already explored parks, museums, ferries and Brooklyn. Today is your classic Midtown day. The secret is knowing what not to include. Many first-time visitors try to combine the Empire State Building, Top of the Rock, SUMMIT One Vanderbilt, Fifth Avenue, Broadway and Times Square all in one day. That is simply too much. Instead, today revolves around one observation deck, a relaxed afternoon, and an unforgettable Broadway show.</p>
+
+          <div class="dc-section"><h3>Day 5 Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>8:30 AM</td><td>Breakfast</td></tr>
+                <tr><td>9:30 AM</td><td>Rockefeller Center</td></tr>
+                <tr><td>10:00 AM</td><td>Top of the Rock</td></tr>
+                <tr><td>12:00 PM</td><td>Lunch</td></tr>
+                <tr><td>1:00 PM</td><td>St. Patrick&rsquo;s Cathedral</td></tr>
+                <tr><td>1:30 PM</td><td>Nintendo NY</td></tr>
+                <tr><td>2:00 PM</td><td>LEGO Store</td></tr>
+                <tr><td>2:30 PM</td><td>FAO Schwarz</td></tr>
+                <tr><td>3:30&ndash;6:00 PM</td><td>Return to hotel &mdash; rest</td></tr>
+                <tr><td>6:15 PM</td><td>Early dinner</td></tr>
+                <tr><td>7:30 PM</td><td>Broadway show</td></tr>
+                <tr><td>10:15 PM</td><td>Return to hotel</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="dc-section"><h3>Top of the Rock: The Best Observation Deck for This Itinerary</h3></div>
+          <p>Every family asks the same question: which observation deck should we visit? If you&rsquo;re only doing one, Top of the Rock is the right choice for this itinerary. From the Empire State Building, you can&rsquo;t photograph the Empire State Building. From Top of the Rock, you get one of New York&rsquo;s most iconic skyline views &mdash; Central Park stretching north and the Empire State Building rising to the south. It&rsquo;s also easier to navigate than some newer decks, with fewer distractions, and it fits naturally into the day because you&rsquo;re already at Rockefeller Center. No extra subway ride. No backtracking.</p>
+
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Book Top of the Rock</div>
+              <h4>Reserve now, pay later</h4>
+              <p>Sunset timeslots sell out quickly. Reserve through Viator for the best availability with free cancellation on most bookings.</p>
+              <a style="display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--info);text-decoration:underline;" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve on Viator</a>
+            </div>
+            <div class="card">
+              <div class="card-tag">Compare All Options</div>
+              <h4>Not sure which deck to choose?</h4>
+              <p>Our full comparison covers Top of the Rock vs the Empire State Building vs SUMMIT One Vanderbilt so you can pick the right one for your family.</p>
+              <a style="display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--info);text-decoration:underline;" href="nyc-observation-decks-compared.html">Read the Comparison Guide</a>
+            </div>
+          </div>
+
+          <div class="dc-section"><h3>The Most Important Part of Today: Go Back to Your Hotel</h3></div>
+          <p>This might sound strange. It is also one of the best decisions you&rsquo;ll make all week. Between about 3:30 PM and 6:00 PM, do almost nothing. Take a nap. Watch TV. Change clothes. Let younger children rest. Broadway is much more enjoyable when everyone isn&rsquo;t already exhausted. Aim to finish dinner at least an hour before the performance.</p>
+
+          <div class="dc-section"><h3>Broadway</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Great for Younger Families</div>
+              <ul class="card-list">
+                <li>The Lion King</li>
+                <li>Aladdin</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-tag">Better for Older Children and Teenagers</div>
+              <ul class="card-list">
+                <li>Harry Potter and the Cursed Child</li>
+                <li>Wicked</li>
+                <li>Back to the Future: The Musical</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cta-dark" style="margin-top:18px;">
+            <div class="cta-eyebrow">Book Your Broadway Show</div>
+            <h4>Browse Available Shows on Viator</h4>
+            <p>Placing Broadway on Day 5 works much better than Day 1 or 2. Everyone is familiar with the city by now, and you&rsquo;re less likely to feel overwhelmed navigating the Theater District. Arrive at the theater around 30&ndash;45 minutes before curtain time.</p>
+            <a class="btn btn-primary" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Browse Broadway Shows on Viator</a>
+          </div>
+
+          <div class="why-box">
+            <div class="wb-label">Why This Day Works</div>
+            <ul>
+              <li>Everything is within walking distance &mdash; compact Midtown day</li>
+              <li>The afternoon hotel break transforms it into one of the most enjoyable days</li>
+              <li>One observation deck, done properly, is better than three rushed visits</li>
+              <li>Broadway is the natural climax of a week well spent</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 6 ===== -->
+      <div class="day-card" id="day6">
+        <div class="dc-head">
+          <span class="dc-tag">Day 6</span>
+          <h2>Your Flexible Adventure Day</h2>
+          <span class="dc-meta">Estimated walking: 8,000&ndash;14,000 steps depending on your choice</span>
+        </div>
+        <div class="dc-body">
+          <p>By now, you&rsquo;ve seen many of New York City&rsquo;s biggest landmarks. Today is different. Instead of rushing between attractions, pick one major adventure and build the day around it. This flexibility serves two purposes: it gives everyone a break from a fixed sightseeing schedule, and it provides a buffer if you&rsquo;ve had bad weather earlier in the week or decided to skip something.</p>
+
+          <div class="dc-section"><h3>Choose Your Adventure</h3></div>
+          <div class="option-cards">
+            <div class="opt-card opt-a">
+              <span class="oc-badge">Option A</span>
+              <h4>Bronx Zoo</h4>
+              <p class="oc-best">Best for: Toddlers, younger children and animal lovers</p>
+              <p>One of the largest urban zoos in the world. Easy to spend an entire day here without feeling rushed. Plenty of space, rest areas, and a pace that works for children who have had enough museums.</p>
+            </div>
+            <div class="opt-card opt-b">
+              <span class="oc-badge">Option B</span>
+              <h4>Coney Island</h4>
+              <p class="oc-best">Best for: Summer trips</p>
+              <ul>
+                <li>The beach and boardwalk</li>
+                <li>Luna Park rides</li>
+                <li>Nathan&rsquo;s Famous hot dogs</li>
+                <li>New York Aquarium (optional)</li>
+              </ul>
+              <p style="margin-top:8px;font-size:14.5px;color:var(--text-secondary);">This feels more like a traditional family vacation day than a sightseeing day.</p>
+            </div>
+            <div class="opt-card opt-c">
+              <span class="oc-badge">Option C</span>
+              <h4>Intrepid Museum</h4>
+              <p class="oc-best">Best for: Kids who love airplanes, ships and space</p>
+              <ul>
+                <li>Aircraft carrier deck</li>
+                <li>Fighter jets</li>
+                <li>Space Shuttle Enterprise</li>
+                <li>Submarine (additional ticket)</li>
+              </ul>
+              <p style="margin-top:8px;font-size:14.5px;color:var(--text-secondary);">Unlike many museums, this one encourages exploration rather than quiet observation.</p>
+            </div>
+            <div class="opt-card opt-d">
+              <span class="oc-badge">Option D</span>
+              <h4>Roosevelt Island</h4>
+              <p class="oc-best">Best for: Families wanting a slower pace</p>
+              <p>Ride the Roosevelt Island Tram across the East River, then explore Four Freedoms Park, riverfront promenades, open green spaces and quiet playgrounds. It feels worlds away from Midtown despite being only minutes from Manhattan.</p>
+            </div>
+            <div class="opt-card opt-e">
+              <span class="oc-badge">Option E</span>
+              <h4>Yankees Game</h4>
+              <p class="oc-best">Best for: Baseball season visits</p>
+              <p>Even if your family isn&rsquo;t obsessed with baseball, the atmosphere, food and energy make it a memorable outing. Don&rsquo;t worry too much about buying the perfect seats &mdash; the experience matters more than the exact view.</p>
+              <a style="display:inline-block;margin-top:10px;font-weight:700;font-size:14px;color:var(--info);text-decoration:underline;" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Browse Yankees tickets on Viator</a>
+            </div>
+          </div>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/de/65/5d/20170703-133528-largejpg.jpg?w=1400&h=-1&s=1" alt="Coney Island boardwalk and beach, Brooklyn, New York">
+            <div class="cap">Coney Island in summer &mdash; the boardwalk, beach, and Luna Park make for a completely different kind of New York day.</div>
+          </div>
+
+          <div class="dc-section"><h3>Which Option Should You Choose?</h3></div>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:280px;">
+              <tr><th>Age</th><th>Best Choice</th></tr>
+              <tr><td>Under 5</td><td>Bronx Zoo or Roosevelt Island</td></tr>
+              <tr><td>5&ndash;10</td><td>Bronx Zoo, Intrepid Museum or Coney Island</td></tr>
+              <tr><td>10 and over</td><td>Yankees Game, Coney Island or Intrepid Museum</td></tr>
+              <tr><td>Mixed Ages</td><td>Bronx Zoo &mdash; usually appeals to everyone</td></tr>
+            </table>
+          </div>
+
+          <div class="why-box">
+            <div class="wb-label">Why This Day Works</div>
+            <ul>
+              <li>Breaks the cycle of &ldquo;major attraction after major attraction&rdquo;</li>
+              <li>Gives your family freedom to choose based on interests and energy level</li>
+              <li>Acts as the perfect backup day if rain or delays caused plan changes earlier in the week</li>
+              <li>Keep the evening free &mdash; enjoy dinner, revisit a favorite neighborhood, or pack for tomorrow</li>
+            </ul>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- ===== DAY 7 ===== -->
+      <div class="day-card" id="day7">
+        <div class="dc-head">
+          <span class="dc-tag">Day 7</span>
+          <h2>A Relaxed Goodbye to New York</h2>
+          <span class="dc-meta">Morning departure &nbsp;&middot;&nbsp; No major attractions</span>
+        </div>
+        <div class="dc-body">
+          <p>One of the biggest mistakes visitors make is trying to squeeze in every attraction they missed before heading to the airport. Don&rsquo;t. The final day should feel easy. Instead of chasing landmarks, revisit the place your family enjoyed most. That&rsquo;s often what leaves the strongest final impression.</p>
+
+          <div class="dc-section"><h3>Day 7 Schedule</h3></div>
+          <div class="sched-wrap">
+            <table class="sched-table">
+              <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+              <tbody>
+                <tr><td>Morning</td><td>Return to your favorite neighborhood</td></tr>
+                <tr><td>10:00 AM</td><td>Coffee, playground or park</td></tr>
+                <tr><td>11:30 AM</td><td>Souvenir shopping</td></tr>
+                <tr><td>Noon</td><td>Pizza or bagels</td></tr>
+                <tr><td>Afternoon</td><td>Airport</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-grid cols-2">
+            <div class="card"><div class="card-tag">Central Park</div><p>Perfect if the kids loved climbing the rocks or visiting the playground.</p></div>
+            <div class="card"><div class="card-tag">Bryant Park</div><p>An easy final stop before heading toward Penn Station or Grand Central.</p></div>
+            <div class="card"><div class="card-tag">DUMBO</div><p>If Day 4 became everyone&rsquo;s favorite, return for another waterfront walk and a final skyline photo.</p></div>
+            <div class="card"><div class="card-tag">Fifth Avenue</div><p>Pick up souvenirs and enjoy one last stroll through Midtown.</p></div>
+          </div>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">Leave Earlier Than You Think</div>
+            <p>New York traffic is unpredictable. Allow extra time to reach the airport, especially if you&rsquo;re traveling during rush hour. The stress of nearly missing your flight isn&rsquo;t the memory you want to take home.</p>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PACKING + MONEY -->
+      <h2>Family Packing Checklist</h2>
+      <ul class="checklist">
+        <li>Comfortable walking shoes</li>
+        <li>Refillable water bottles</li>
+        <li>Portable charger</li>
+        <li>Sunscreen</li>
+        <li>Snacks</li>
+        <li>Small first-aid kit</li>
+        <li>Wet wipes</li>
+        <li>Lightweight rain jacket</li>
+        <li>OMNY payment method</li>
+      </ul>
+
+      <h2>Money-Saving Tips</h2>
+      <ul class="tips-list">
+        <li><span class="tip-label">Tip</span>Eat a large breakfast before sightseeing &mdash; reduces the number of snack stops needed during the day.</li>
+        <li><span class="tip-label">Tip</span>Carry refillable water bottles &mdash; bottled water from carts costs several times more.</li>
+        <li><span class="tip-label">Tip</span>Use playgrounds instead of paid attractions every afternoon &mdash; children often enjoy them just as much.</li>
+        <li><span class="tip-label">Tip</span>Choose one observation deck instead of multiple &mdash; you don&rsquo;t need to see every rooftop view.</li>
+        <li><span class="tip-label">Tip</span>Consider an attraction pass only if you&rsquo;ll visit enough included attractions to make it worthwhile. Read our <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass comparison</a> before deciding.</li>
+        <li><span class="tip-label">Tip</span>Mix paid attractions with free experiences like Central Park, Brooklyn Bridge, Staten Island Ferry and Battery Park.</li>
+      </ul>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is 7 days too long in New York City with kids?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Not at all. A week gives you enough time to explore different neighborhoods without rushing from one attraction to the next. It also leaves room for playgrounds, rest breaks and flexible afternoons that make family trips much more enjoyable.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should we stay in Manhattan?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most first-time visitors, yes. Midtown, the Upper West Side and Long Island City are all excellent bases with convenient subway access. Long Island City in Queens is worth considering if budget matters &mdash; hotel prices are noticeably lower with only a 10&ndash;15 minute subway ride to Midtown.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is a stroller worth bringing?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you&rsquo;re traveling with toddlers, a lightweight travel stroller is absolutely worth it. It doubles as a place for naps, carries backpacks and saves tired little legs after long sightseeing days. Opt for an umbrella stroller over a full travel system &mdash; far easier on the subway.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which observation deck is best for families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you&rsquo;re only visiting one, Top of the Rock is the easiest choice for this itinerary. The views include Central Park and the Empire State Building, and it&rsquo;s conveniently located within a compact Midtown sightseeing day. Read our <a href="nyc-observation-decks-compared.html">full observation deck comparison</a> if you want to weigh all the options.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should we buy a New York attraction pass?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It depends. If you&rsquo;re planning to visit several included attractions, a sightseeing pass can offer good value. If your itinerary mixes free attractions with just a few paid experiences, buying individual tickets may work out better. Our <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass comparison</a> breaks down exactly when each pass pays off.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the biggest mistake families make?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Trying to do too much. Children rarely remember how many attractions they visited. They remember riding a carousel, eating pizza in the park, spotting squirrels in Central Park, watching the skyline from the Brooklyn waterfront and seeing Times Square light up for the first time. Those moments don&rsquo;t need to be rushed.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs. New York Pass: Which Attraction Pass Is Actually Worth It?</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty and Ellis Island</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Which Observation Deck Wins?</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Dead: Complete OMNY and Subway Guide</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Progress bar */
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* Sidebar active state */
+var secIds=['prep','day1','day2','day3','day4','day5','day6','day7','faq'];
+var sideLinks=document.querySelectorAll('.side-nav a');
+function updateSidebar(){
+  var cur='prep';
+  secIds.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  sideLinks.forEach(function(a){
+    var href=a.getAttribute('href');
+    a.classList.toggle('sn-active',href==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateSidebar,{passive:true});
+updateSidebar();
+</script>
+</body>
+</html>
