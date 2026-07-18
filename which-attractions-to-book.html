@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which NYC Attractions Should You Book Before Your Trip? | EverythingInNYC</title>
+<meta name="description" content="Only a handful of NYC attractions genuinely need to be booked well ahead. Here's exactly which ones, how far in advance, and which you can safely leave until you arrive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- STICKY SIDEBAR NAV ---- */
+  .side-nav{
+    display:none;position:fixed;top:80px;width:164px;
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);
+  }
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+  .side-nav a{display:block;padding:7px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+
+  /* ---- PRIORITY BADGE ---- */
+  .pri{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:0.03em;padding:2px 9px;border-radius:20px;white-space:nowrap;}
+  .pri-must{background:rgba(220,38,38,0.1);color:#B91C1C;}
+  .pri-high{background:rgba(234,88,12,0.1);color:#C2410C;}
+  .pri-rec{background:rgba(161,98,7,0.1);color:#92620A;}
+  .pri-flex{background:rgba(22,163,74,0.1);color:#15803D;}
+  .pri-vflex{background:rgba(100,116,139,0.1);color:#475569;}
+
+  /* ---- BOOKING TIER CARDS ---- */
+  .tier-cards{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0;}
+  @media(min-width:560px){.tier-cards{grid-template-columns:1fr 1fr;}}
+  .tier-card{border-radius:12px;padding:16px 18px;}
+  .tier-card.t-now{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.2);}
+  .tier-card.t-2to4{background:rgba(234,88,12,0.04);border:1px solid rgba(234,88,12,0.2);}
+  .tier-card.t-1wk{background:rgba(161,98,7,0.06);border:1px solid rgba(161,98,7,0.2);}
+  .tier-card.t-days{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.2);}
+  .tier-card.t-flex{background:rgba(100,116,139,0.05);border:1px solid var(--border);}
+  .tier-card .tc-label{font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;display:block;}
+  .t-now .tc-label{color:#B91C1C;}
+  .t-2to4 .tc-label{color:#C2410C;}
+  .t-1wk .tc-label{color:#92620A;}
+  .t-days .tc-label{color:#15803D;}
+  .t-flex .tc-label{color:#475569;}
+  .tier-card h4{margin:0 0 8px;font-size:16px;color:var(--navy);}
+  .tier-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .tier-card ul li{font-size:14.5px;padding-left:14px;position:relative;color:var(--text);}
+  .tier-card ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+  /* ---- ATTRACTION SECTION CARD ---- */
+  .attr-section{border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;margin:38px 0;box-shadow:var(--shadow-card);}
+  .attr-section .as-head{background:var(--navy);color:#fff;padding:16px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .as-head h2{color:#fff;font-size:20px;margin:0;flex:1;line-height:1.2;scroll-margin-top:90px;}
+  .as-head .as-pri{font-size:12px;font-weight:700;background:rgba(255,193,7,0.2);color:var(--accent);padding:4px 11px;border-radius:20px;flex:none;letter-spacing:0.03em;}
+  .attr-section .as-body{padding:22px 24px;}
+
+  /* ---- BOOKING SUMMARY TABLE (inside card) ---- */
+  .bst{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0;}
+  .bst td{padding:8px 13px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .bst tr:last-child td{border-bottom:none;}
+  .bst td:first-child{font-weight:700;color:var(--navy);background:rgba(15,23,42,0.02);width:52%;}
+
+  /* ---- ADVICE BOX ---- */
+  .advice{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0;}
+  @media(min-width:480px){.advice{grid-template-columns:1fr 1fr;}}
+  .adv-box{border-radius:10px;padding:12px 15px;}
+  .adv-do{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.25);}
+  .adv-avoid{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.18);}
+  .adv-box .av-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;display:block;}
+  .adv-do .av-label{color:#15803D;}
+  .adv-avoid .av-label{color:#B91C1C;}
+  .adv-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .adv-box ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .adv-box ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+  /* ---- TIP BOX ---- */
+  .plan-tip{background:#FFF9E8;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;font-size:15.5px;}
+  .plan-tip .pt-label{font-family:var(--font-head);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;margin-bottom:5px;}
+
+  /* ---- BOOK BUTTON ROW ---- */
+  .viator-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .viator-btn{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:#fff;background:var(--navy);padding:9px 16px;border-radius:9px;text-decoration:none;transition:opacity 0.15s;}
+  .viator-btn:hover{opacity:0.88;}
+  .viator-btn .vb-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,0.7);display:block;line-height:1;}
+  .viator-btn .vb-name{font-size:14px;font-weight:700;display:block;line-height:1.2;}
+
+  /* ---- SECTION DIVIDER HEADING ---- */
+  .as-section{margin-top:20px;}
+  .as-section h3{font-size:16px;font-family:var(--font-head);font-weight:800;color:var(--navy);margin:0 0 10px;display:flex;align-items:center;gap:8px;}
+  .as-section h3::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px;flex:none;}
+
+  /* ---- TIMELINE / ORDER LIST ---- */
+  .order-steps{list-style:none;padding:0;margin:14px 0;counter-reset:steps;display:flex;flex-direction:column;gap:0;}
+  .order-steps li{counter-increment:steps;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:13px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);}
+  .order-steps li:first-child{border-radius:12px 12px 0 0;}
+  .order-steps li:last-child{border-bottom:none;border-radius:0 0 12px 12px;}
+  .order-steps li::before{content:counter(steps);font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .order-steps li strong{display:block;font-size:15px;color:var(--navy);margin-bottom:3px;}
+  .order-steps li span{font-size:14.5px;color:var(--text-secondary);}
+
+  /* ---- TIMELINE PHASES ---- */
+  .timeline{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:18px 0;}
+  .tl-phase{padding:14px 18px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:start;}
+  .tl-phase:last-child{border-bottom:none;}
+  @media(max-width:500px){.tl-phase{grid-template-columns:1fr;}}
+  .tl-label{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.04em;color:#fff;background:var(--navy);padding:4px 11px;border-radius:20px;display:inline-block;white-space:nowrap;}
+  .tl-items{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;}
+  .tl-items li{font-size:14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 11px;}
+
+  /* ---- SEASONAL CARDS ---- */
+  .season-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;}
+  @media(min-width:560px){.season-grid{grid-template-columns:1fr 1fr;}}
+  .season-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;}
+  .season-card h4{margin:0 0 6px;font-size:16px;color:var(--navy);}
+  .season-card .sc-sub{font-size:13px;color:var(--text-secondary);margin-bottom:10px;display:block;}
+  .season-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .season-card ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .season-card ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:12px;}
+  .back-top:hover{color:var(--navy);}
+
+  /* ---- JUMP NAV (mobile) ---- */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:480px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  @media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- STICKY SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">Sections</div>
+  <a href="#intro">Overview</a>
+  <a href="#priority">Booking Priority</a>
+  <a href="#obs-decks">Observation Decks</a>
+  <a href="#statue">Statue of Liberty</a>
+  <a href="#911">9/11 Museum</a>
+  <a href="#museums">Museums</a>
+  <a href="#cruises">Cruises</a>
+  <a href="#broadway">Broadway</a>
+  <a href="#passes">Attraction Passes</a>
+  <a href="#seasonal">Seasonal Planning</a>
+  <a href="#weather">Weather Strategy</a>
+  <a href="#reference">Quick Reference</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Planning Guide</span>
+      <h1>Which NYC Attractions Should You Book Before Your Trip? (And Which Ones You Can Leave Until the Day)</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span>
+        <span>&middot;</span>
+        <span>20 minute read</span>
+        <span>&middot;</span>
+        <span>Booking strategy for all major NYC attractions</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="which-attraction-to-book-cover.png" alt="Which NYC attractions should you book before your trip?">
+
+    <div class="article-body" id="intro">
+
+      <p>Planning a New York City trip can feel overwhelming. Every attraction seems to tell you to &ldquo;book early,&rdquo; but if you reserve everything months in advance, you&rsquo;ll end up with a rigid itinerary that leaves no room for good weather, spontaneous discoveries, or simply slowing down.</p>
+
+      <p>The truth is that <strong>only a handful of NYC attractions genuinely need to be booked well ahead of time.</strong> Everything else is far more flexible than most first-time visitors realize. The smartest approach isn&rsquo;t booking everything early &mdash; it&rsquo;s knowing what deserves an early reservation and what can safely wait until you&rsquo;re already in the city.</p>
+
+      <!-- MOBILE JUMP NAV -->
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#priority">Booking Priority Guide</a></li>
+          <li><a href="#obs-decks">Observation Decks</a></li>
+          <li><a href="#statue">Statue of Liberty</a></li>
+          <li><a href="#911">9/11 Museum</a></li>
+          <li><a href="#museums">Museums</a></li>
+          <li><a href="#cruises">Cruises and Boat Tours</a></li>
+          <li><a href="#broadway">Broadway Shows</a></li>
+          <li><a href="#passes">Attraction Passes</a></li>
+          <li><a href="#seasonal">Seasonal Planning</a></li>
+          <li><a href="#weather">Weather Strategy</a></li>
+          <li><a href="#reference">Quick Reference</a></li>
+        </ul>
+      </div>
+
+      <!-- QUICK ANSWER TABLE -->
+      <h2>Quick Answer: Which NYC Attractions Should You Book Before Your Trip?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:520px;font-size:13.5px;">
+          <tr><th>Attraction</th><th>Book Early?</th><th>How Early?</th><th>Same Day?</th><th>Priority</th></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/New-York-City-Statue-of-Liberty-Sunset-Cruise/d687-3763P33?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Broadway hit shows</a></td><td>Yes</td><td>1&ndash;3 months</td><td>Sometimes</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td>Christmas Spectacular</td><td>Yes</td><td>1&ndash;3 months</td><td>Rarely</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td>Statue of Liberty Crown</td><td>Yes</td><td>Up to 6 months</td><td>No</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td>Statue Pedestal</td><td>Yes</td><td>2&ndash;8 weeks</td><td>Sometimes</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/SUMMIT-One-Vanderbilt-Experience-Ticket/d687-77354P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">SUMMIT One Vanderbilt (Sunset)</a></td><td>Yes</td><td>2&ndash;3 weeks</td><td>Sometimes</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Top of the Rock (Sunset)</a></td><td>Yes</td><td>1&ndash;2 weeks</td><td>Sometimes</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Edge (Sunset)</a></td><td>Yes</td><td>1&ndash;2 weeks</td><td>Sometimes</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Empire State Building</a></td><td>Recommended</td><td>About 1 week</td><td>Yes</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/One-World-Observatory-Admission/d687-8747ONEWORLD?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">One World Observatory</a></td><td>Recommended</td><td>Several days</td><td>Yes</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td>9/11 Museum</td><td>Recommended</td><td>Several days</td><td>Sometimes</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><a href="https://www.viator.com/tours/New-York-City/New-York-City-Statue-of-Liberty-Sunset-Cruise/d687-3763P33?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Sunset Cruise</a></td><td>Recommended</td><td>1 week</td><td>Sometimes</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td>The Met</td><td>No</td><td>Same day</td><td>Yes</td><td><span class="pri pri-vflex">Very Flexible</span></td></tr>
+          <tr><td>American Museum of Natural History</td><td>No</td><td>Same day</td><td>Yes</td><td><span class="pri pri-vflex">Very Flexible</span></td></tr>
+          <tr><td>Central Park</td><td>No</td><td>No booking</td><td>Yes</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+          <tr><td>High Line</td><td>No</td><td>No booking</td><td>Yes</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+          <tr><td>Brooklyn Bridge</td><td>No</td><td>No booking</td><td>Yes</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+        </table>
+      </div>
+
+      <!-- BIGGEST MISTAKE -->
+      <h2>The Biggest Mistake First-Time Visitors Make</h2>
+      <p>The biggest mistake isn&rsquo;t booking too late. It&rsquo;s <strong>booking everything too early.</strong> Many travelers create an itinerary where every hour is locked in weeks before they even arrive. That sounds organised. In reality it often creates problems: rain ruins your observation deck visit; you&rsquo;re exhausted after a long day and need to keep going; the Statue of Liberty takes much longer than expected; you discover an amazing neighborhood but have to leave because another reservation is coming up.</p>
+
+      <p>A better strategy is simple: <strong>only lock in the attractions that are difficult to replace. Keep everything else flexible.</strong> That&rsquo;s how every NYC itinerary here on EverythingInNYC is planned &mdash; and it&rsquo;s the approach that consistently makes the difference between a stressful visit and one that feels enjoyable from start to finish. See our <a href="ultimate-nyc-itinerary-guide.html">complete NYC itinerary planning guide</a> for more.</p>
+
+      <hr class="divider-rule">
+
+      <!-- BOOKING PRIORITY GUIDE -->
+      <h2 id="priority">Booking Priority Guide</h2>
+      <p>Instead of treating every attraction equally, divide them into five categories.</p>
+
+      <div class="tier-cards">
+        <div class="tier-card t-now">
+          <span class="tc-label">Book Immediately</span>
+          <h4>Reserve as soon as flights are confirmed</h4>
+          <ul>
+            <li>Broadway shows</li>
+            <li>Christmas Spectacular</li>
+            <li>Statue of Liberty Crown tickets</li>
+            <li>Major concerts</li>
+            <li>Playoff games</li>
+            <li>New Year&rsquo;s Eve cruises</li>
+            <li>Holiday dinner cruises</li>
+          </ul>
+          <p style="font-size:14px;margin-top:10px;color:var(--text-secondary);">These have limited inventory. Once tickets are gone, they&rsquo;re gone.</p>
+        </div>
+        <div class="tier-card t-2to4">
+          <span class="tc-label">Book 2&ndash;4 Weeks Before</span>
+          <h4>Sunset slots sell first</h4>
+          <ul>
+            <li>SUMMIT sunset</li>
+            <li>Top of the Rock sunset</li>
+            <li>Edge sunset</li>
+            <li>Statue Pedestal</li>
+            <li>Holiday observation decks</li>
+            <li>Christmas cruises</li>
+            <li>Popular Yankees weekend games</li>
+          </ul>
+          <p style="font-size:14px;margin-top:10px;color:var(--text-secondary);">These attractions rarely sell out completely &mdash; but the best time slots do.</p>
+        </div>
+        <div class="tier-card t-1wk">
+          <span class="tc-label">Book Around One Week Before</span>
+          <h4>Availability good, but plan ahead</h4>
+          <ul>
+            <li>One World Observatory</li>
+            <li>Circle Line sunset cruises</li>
+            <li>9/11 Museum</li>
+            <li>Yankee Stadium Tour</li>
+            <li>Holiday walking tours</li>
+          </ul>
+          <p style="font-size:14px;margin-top:10px;color:var(--text-secondary);">Availability is usually good. You&rsquo;re mainly reserving your preferred time, not fighting for scarce tickets.</p>
+        </div>
+        <div class="tier-card t-days">
+          <span class="tc-label">Book a Few Days Before</span>
+          <h4>Good for flexible planners</h4>
+          <ul>
+            <li>Statue of Liberty General Admission</li>
+            <li>Empire State Building (weekday)</li>
+            <li>Edge (non-sunset)</li>
+            <li>Top of the Rock (morning)</li>
+            <li>Circle Line daytime cruises</li>
+          </ul>
+          <p style="font-size:14px;margin-top:10px;color:var(--text-secondary);">Most still have availability unless you&rsquo;re visiting during Christmas or another major holiday.</p>
+        </div>
+        <div class="tier-card t-flex" style="grid-column:1/-1;">
+          <span class="tc-label">Usually Safe to Leave Until You Arrive</span>
+          <h4>Perfect weather-day attractions</h4>
+          <ul style="flex-direction:row;flex-wrap:wrap;gap:6px;">
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">The Met</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">American Museum of Natural History</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">Central Park</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">High Line</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">Brooklyn Bridge</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">Times Square</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">Fifth Avenue</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:3px 10px;padding-left:10px;">Grand Central Terminal</li>
+          </ul>
+          <p style="font-size:14px;margin-top:10px;color:var(--text-secondary);">If rain is forecast tomorrow, swap one of these with today&rsquo;s outdoor plans. If it&rsquo;s sunny, go outdoors and come back to these later.</p>
+        </div>
+      </div>
+
+      <h2>My Golden Rule for Planning NYC</h2>
+      <div class="callout callout-summary">
+        <div class="callout-title">Book experiences, not places</div>
+        <p>Places like Central Park, SoHo and Brooklyn Bridge will still be there tomorrow. Experiences with fixed seating, limited capacity, timed entry, or sunset availability are what deserve reservations. Once those are secured, everything else becomes much easier.</p>
+      </div>
+
+      <h2>My Recommended Booking Order</h2>
+      <ol class="order-steps">
+        <li><strong>Flights and Hotel</strong><span>Locks your travel dates.</span></li>
+        <li><strong>Broadway Shows</strong><span>Fixed dates, rising prices and limited seats.</span></li>
+        <li><strong>Holiday Shows, Concerts and Sports</strong><span>Event-specific tickets disappear quickly.</span></li>
+        <li><strong>Statue of Liberty Crown or Pedestal</strong><span>Limited daily capacity.</span></li>
+        <li><strong>Sunset Observation Deck</strong><span>The best time slots sell first.</span></li>
+        <li><strong>Dinner and Holiday Cruises</strong><span>Limited departures.</span></li>
+        <li><strong>9/11 Museum</strong><span>Timed entry with busy holiday periods.</span></li>
+        <li><strong>Attraction Pass Reservations</strong><span>Reserve any attractions requiring timed entry as soon as you buy the pass.</span></li>
+        <li><strong>Museums</strong><span>Easy to fit around everything else.</span></li>
+        <li><strong>Parks and Neighborhoods</strong><span>No reservations needed.</span></li>
+      </ol>
+
+      <h2>Build Your Booking Timeline</h2>
+      <div class="timeline">
+        <div class="tl-phase">
+          <span class="tl-label">1&ndash;3 Months Before</span>
+          <ul class="tl-items">
+            <li>Broadway</li><li>Christmas Spectacular</li><li>Holiday cruises</li><li>Major concerts</li><li>Sports events</li><li>Statue Crown tickets</li>
+          </ul>
+        </div>
+        <div class="tl-phase">
+          <span class="tl-label">2&ndash;4 Weeks Before</span>
+          <ul class="tl-items">
+            <li>SUMMIT sunset</li><li>Top of the Rock sunset</li><li>Edge sunset</li><li>Statue Pedestal</li><li>Holiday tours</li>
+          </ul>
+        </div>
+        <div class="tl-phase">
+          <span class="tl-label">One Week Before</span>
+          <ul class="tl-items">
+            <li>One World Observatory</li><li>9/11 Museum</li><li>Circle Line</li><li>Stadium tours</li>
+          </ul>
+        </div>
+        <div class="tl-phase">
+          <span class="tl-label">2&ndash;3 Days Before</span>
+          <ul class="tl-items">
+            <li>Empire State Building</li><li>Edge (daytime)</li><li>General Statue ferry</li><li>Observation decks (weather permitting)</li>
+          </ul>
+        </div>
+        <div class="tl-phase">
+          <span class="tl-label">Same Day</span>
+          <ul class="tl-items">
+            <li>The Met</li><li>Central Park</li><li>High Line</li><li>Brooklyn Bridge</li><li>Fifth Avenue</li><li>Grand Central</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- OBSERVATION DECKS -->
+      <h2 id="obs-decks">Observation Deck Reservations: Which Ones Actually Need Early Booking?</h2>
+      <p>If there&rsquo;s one category that confuses visitors the most, it&rsquo;s observation decks. Every deck offers timed entry and recommends booking ahead. But they are not equally difficult to reserve. The key is understanding that you&rsquo;re not competing for admission &mdash; you&rsquo;re competing for the best time slots. See our <a href="nyc-observation-decks-compared.html">full NYC observation deck comparison</a> for a complete breakdown of each deck.</p>
+
+      <!-- SUMMIT -->
+      <div class="attr-section" id="summit">
+        <div class="as-head">
+          <h2>SUMMIT One Vanderbilt</h2>
+          <span class="as-pri">Must Book (Sunset)</span>
+        </div>
+        <div class="as-body">
+          <p>Between the mirrored rooms, glass ledges, immersive art installations and floor-to-ceiling views, SUMMIT has become one of the city&rsquo;s most in-demand attractions. That popularity means it&rsquo;s one of the easiest places to end up with a disappointing time slot if you wait too long.</p>
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Reservation required?</td><td>Yes</td></tr>
+            <tr><td>Timed entry?</td><td>Yes</td></tr>
+            <tr><td>Walk-up tickets?</td><td>Sometimes, subject to availability</td></tr>
+            <tr><td>Same-day possible?</td><td>Sometimes</td></tr>
+            <tr><td>Ideal booking window</td><td>1&ndash;2 weeks</td></tr>
+            <tr><td>Sunset booking</td><td>2&ndash;3 weeks during peak seasons</td></tr>
+          </table></div>
+          <div class="advice">
+            <div class="adv-do">
+              <span class="av-label">What Sells First</span>
+              <ul>
+                <li>Sunset slots</li><li>Friday and Saturday evenings</li><li>Holiday weekends</li><li>Christmas week</li>
+              </ul>
+            </div>
+            <div class="adv-avoid">
+              <span class="av-label">Common Mistakes</span>
+              <ul>
+                <li>Waiting until arriving in NYC to reserve</li>
+                <li>Booking sunset before checking the weather forecast</li>
+                <li>Scheduling SUMMIT immediately after another timed attraction with no buffer</li>
+                <li>Assuming attraction passes automatically reserve a time slot</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-tip"><div class="pt-label">Money-Saving Tip</div><p>Morning tickets are often cheaper than sunset tickets while still offering spectacular views. If your budget is limited, choose an earlier time slot rather than paying a premium simply because it&rsquo;s sunset.</p></div>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/SUMMIT-One-Vanderbilt-Experience-Ticket/d687-77354P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">SUMMIT One Vanderbilt on Viator</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- TOP OF THE ROCK -->
+      <div class="attr-section" id="tor">
+        <div class="as-head">
+          <h2>Top of the Rock</h2>
+          <span class="as-pri">Book Early (Sunset)</span>
+        </div>
+        <div class="as-body">
+          <p>If I had to recommend one observation deck for first-time visitors, Top of the Rock would still be my choice. Nowhere else combines unobstructed views of Central Park and the Empire State Building in the same panorama. That popularity means sunset remains one of the hardest reservations to secure.</p>
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Reservation required?</td><td>Yes</td></tr>
+            <tr><td>Timed entry?</td><td>Yes</td></tr>
+            <tr><td>Walk-up available?</td><td>Usually</td></tr>
+            <tr><td>Same-day tickets?</td><td>Often</td></tr>
+            <tr><td>Ideal booking window</td><td>Around 1 week</td></tr>
+            <tr><td>Sunset</td><td>2 weeks during busy periods</td></tr>
+          </table></div>
+          <div class="advice">
+            <div class="adv-do">
+              <span class="av-label">When to Book Early</span>
+              <ul>
+                <li>Any sunset visit</li>
+                <li>Summer visits</li>
+                <li>Thanksgiving, Christmas, New Year&rsquo;s</li>
+                <li>Long weekends</li>
+              </ul>
+            </div>
+            <div class="adv-avoid">
+              <span class="av-label">Common Mistakes</span>
+              <ul>
+                <li>Booking sunset before checking the weather</li>
+                <li>Expecting to photograph the Rockefeller Christmas Tree from the observation deck</li>
+                <li>Underestimating elevator queues during holiday periods</li>
+              </ul>
+            </div>
+          </div>
+          <p>For weekday mornings, booking just a few days ahead is usually fine. For sunset, reserve as soon as your itinerary is finalised.</p>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">Top of the Rock on Viator</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- EDGE -->
+      <div class="attr-section" id="edge">
+        <div class="as-head">
+          <h2>Edge</h2>
+          <span class="as-pri">Book Early (Sunset only)</span>
+        </div>
+        <div class="as-body">
+          <p>Edge combines one of New York&rsquo;s highest outdoor observation decks with a glass floor and open-air viewing platform. Its booking pattern sits somewhere between SUMMIT and Top of the Rock &mdash; more flexible than either for daytime visits, but sunset slots still disappear quickly in peak seasons.</p>
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Reservation required?</td><td>Yes</td></tr>
+            <tr><td>Same-day possible?</td><td>Usually</td></tr>
+            <tr><td>Timed entry?</td><td>Yes</td></tr>
+            <tr><td>Ideal booking window</td><td>About 1 week</td></tr>
+            <tr><td>Sunset</td><td>1&ndash;2 weeks</td></tr>
+          </table></div>
+          <div class="advice">
+            <div class="adv-do">
+              <span class="av-label">Best Time to Visit</span>
+              <ul>
+                <li>Morning &mdash; smaller crowds, better photos, better visibility</li>
+                <li>Late afternoon &mdash; beautiful light before sunset</li>
+              </ul>
+            </div>
+            <div class="adv-avoid">
+              <span class="av-label">Book Early Only If&hellip;</span>
+              <ul>
+                <li>You want sunset</li>
+                <li>Visiting during peak tourist season</li>
+                <li>Traveling over a holiday</li>
+              </ul>
+            </div>
+          </div>
+          <p>Otherwise, Edge is one of the easier observation decks to fit into your itinerary. I&rsquo;d rather wait until the weather forecast becomes clearer before booking daytime visits.</p>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">Edge Observation Deck on Viator</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <!-- EMPIRE STATE + ONE WORLD -->
+      <div class="attr-section" id="esb-owo">
+        <div class="as-head">
+          <h2>Empire State Building and One World Observatory</h2>
+          <span class="as-pri">Flexible</span>
+        </div>
+        <div class="as-body">
+          <p>Both of these are among the most flexible major observation decks in New York. The Empire State Building spreads visitors more evenly throughout the day, which generally means better availability, more same-day tickets, and easier itinerary changes. One World Observatory is often overlooked in booking discussions and consistently has the most flexible availability of all the major decks.</p>
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Empire State Building</div>
+              <table class="bst">
+                <tr><td>Reservation required?</td><td>Yes</td></tr>
+                <tr><td>Walk-up available?</td><td>Usually</td></tr>
+                <tr><td>Same-day tickets?</td><td>Yes</td></tr>
+                <tr><td>Ideal booking window</td><td>A few days to one week</td></tr>
+              </table>
+              <p style="font-size:14.5px;margin-top:10px;">This is one attraction I&rsquo;d intentionally leave flexible until the weather forecast looks promising. Avoid visiting in poor visibility because tickets were booked weeks earlier.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">One World Observatory</div>
+              <table class="bst">
+                <tr><td>Reservation required?</td><td>Yes</td></tr>
+                <tr><td>Same-day possible?</td><td>Often</td></tr>
+                <tr><td>Ideal booking window</td><td>3&ndash;5 days</td></tr>
+                <tr><td>Sunset booking</td><td>Around 1 week</td></tr>
+              </table>
+              <p style="font-size:14.5px;margin-top:10px;">Fewer visitors prioritise it, larger visitor capacity, and less competition for sunset slots. Outside major holidays, reserve just a few days before.</p>
+            </div>
+          </div>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">Empire State Building on Viator</span></span>
+            </a>
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/One-World-Observatory-Admission/d687-8747ONEWORLD?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">One World Observatory on Viator</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <h3>Which Observation Deck Sells Out Fastest?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:340px;">
+          <tr><th>Observation Deck</th><th>Sunset Demand</th><th>Overall Priority</th></tr>
+          <tr><td><strong>SUMMIT One Vanderbilt</strong></td><td>Very High</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td>Very High</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Edge</strong></td><td>High</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Empire State Building</strong></td><td>Moderate</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td><strong>One World Observatory</strong></td><td>Moderate</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- STATUE OF LIBERTY -->
+      <div class="attr-section" id="statue">
+        <div class="as-head">
+          <h2>Statue of Liberty and Ellis Island</h2>
+          <span class="as-pri">Must Book (Crown) / Book Early (Pedestal)</span>
+        </div>
+        <div class="as-body">
+          <p>If there&rsquo;s one attraction that causes more booking confusion than any other in New York City, it&rsquo;s the Statue of Liberty. The answer depends entirely on which ticket you want. Most visitors don&rsquo;t need to panic &mdash; but if you want special access, waiting too long can mean missing out completely.</p>
+
+          <div class="as-section"><h3>Three Completely Different Ticket Types</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">General Admission &mdash; Most Visitors</div>
+              <p>Round-trip ferry, Liberty Island, Ellis Island, Statue of Liberty Museum, Ellis Island National Museum of Immigration. This is what most visitors buy.</p>
+              <p style="font-size:14px;margin-top:8px;"><strong>Booking window:</strong> Weekdays 3&ndash;5 days &middot; Weekends 1 week &middot; Christmas 2&ndash;3 weeks</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Pedestal Reserve Ticket</div>
+              <p>Everything in General Admission plus access inside the pedestal, elevated viewing area, and museum access. Daily capacity is much smaller.</p>
+              <p style="font-size:14px;margin-top:8px;"><strong>Booking window:</strong> Quiet months 2&ndash;3 weeks &middot; Holiday periods: as soon as dates are confirmed</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Crown Reserve Ticket &mdash; Book Immediately</div>
+              <p>Access inside the Statue&rsquo;s crown via a narrow spiral staircase. Limited daily visitors. By far the hardest ticket to obtain.</p>
+              <p style="font-size:14px;margin-top:8px;"><strong>Booking window:</strong> Up to 6 months &mdash; book immediately after confirming your trip</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">My Recommendation</div>
+              <p>Unless climbing into the statue has been on your bucket list for years, General Admission gives you Liberty Island, incredible skyline views, Ellis Island, both museums, and the ferry ride &mdash; without planning months ahead.</p>
+            </div>
+          </div>
+
+          <div class="callout callout-mistake" style="margin-top:16px;">
+            <div class="callout-title">The Biggest Traveller Mistake</div>
+            <p>Buying tickets from the wrong website. Many sites advertise &ldquo;Statue of Liberty Tickets&rdquo; when they&rsquo;re actually selling sightseeing cruises, harbor rides, or heavily marked-up reseller tickets without island access. The <strong>only official ferry operator is Statue City Cruises.</strong> Always double-check before purchasing.</p>
+          </div>
+
+          <div class="as-section"><h3>Morning vs Afternoon Ferry</h3></div>
+          <p>Book the earliest ferry you realistically can. You&rsquo;ll experience shorter security lines, cooler temperatures in summer, smaller crowds, better photos, and more flexibility for the rest of your day. Late afternoon departures often feel rushed, especially if you&rsquo;re also visiting Ellis Island.</p>
+
+          <div class="plan-tip"><div class="pt-label">Don&rsquo;t Skip Ellis Island</div><p>It&rsquo;s included with your ticket and contains one of New York&rsquo;s best museums. Allow 2&ndash;3 hours for Liberty Island and 1&ndash;2 hours for Ellis Island. Rushing through both in under two hours usually leaves visitors disappointed.</p></div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">Pair It With</div>
+            <p>The Statue of Liberty fits perfectly into a full Lower Manhattan day: Ellis Island, Battery Park, Wall Street, Charging Bull, Fearless Girl, Trinity Church, Stone Street, 9/11 Memorial, One World Observatory. See our <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a> for the full route.</p>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- 9/11 MUSEUM -->
+      <div class="attr-section" id="911">
+        <div class="as-head">
+          <h2>9/11 Memorial and Museum</h2>
+          <span class="as-pri">Book Early (Museum)</span>
+        </div>
+        <div class="as-body">
+          <p>The 9/11 Memorial and the 9/11 Museum are often mentioned together, but they have completely different booking requirements. The outdoor memorial is open to everyone and requires no reservation. The museum uses timed-entry tickets and can become surprisingly busy during holidays, school vacations, and &mdash; crucially &mdash; rainy days.</p>
+
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Memorial reservation required?</td><td>No &mdash; walk up any time</td></tr>
+            <tr><td>Museum reservation required?</td><td>Yes &mdash; ticketed timed entry</td></tr>
+            <tr><td>Walk-up tickets?</td><td>Sometimes</td></tr>
+            <tr><td>Same-day possible?</td><td>Often</td></tr>
+            <tr><td>Ideal booking window</td><td>3&ndash;7 days</td></tr>
+            <tr><td>Holiday booking</td><td>1&ndash;2 weeks</td></tr>
+          </table></div>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">Rain Changes Everything</div>
+            <p>When heavy rain is forecast, visitors cancel Central Park, Brooklyn Bridge, and observation deck visits and replace them with museums. The 9/11 Museum is one of the biggest beneficiaries &mdash; it can become significantly busier than on clear days. If rain is in the forecast and you haven&rsquo;t reserved, check availability early in the morning.</p>
+          </div>
+
+          <div class="advice">
+            <div class="adv-do">
+              <span class="av-label">Best Time to Visit</span>
+              <ul>
+                <li>First morning entry &mdash; quieter galleries, smaller crowds, more time to reflect</li>
+                <li>Allow 2&ndash;3 hours minimum</li>
+                <li>Don&rsquo;t schedule another timed attraction immediately after</li>
+              </ul>
+            </div>
+            <div class="adv-avoid">
+              <span class="av-label">Common Mistakes</span>
+              <ul>
+                <li>Trying to rush through in under an hour</li>
+                <li>Booking another attraction immediately afterward</li>
+                <li>Assuming the memorial and museum are the same experience</li>
+                <li>Saving it as a rainy-day backup without realising everyone else has the same idea</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-local">
+            <div class="callout-title">Pair It With</div>
+            <p>The 9/11 Museum fits perfectly into a Lower Manhattan day alongside One World Observatory, the Oculus, Wall Street, Battery Park, and the Statue of Liberty. See our <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a> for the complete route.</p>
+          </div>
+
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- MUSEUMS -->
+      <h2 id="museums">Museums: Which Ones Actually Need Reservations?</h2>
+      <p>One pleasant surprise for many first-time visitors is that most NYC museums are much easier to visit than major tourist attractions. Unlike Broadway or observation decks, museums generally have larger visitor capacities, longer opening hours, and fewer fixed time slots. That means you can usually keep them flexible until much closer to your visit.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">American Museum of Natural History</div>
+          <p>One of the city&rsquo;s most popular museums is also one of its easiest to fit into your schedule. Same-day admission is often available outside holiday periods. Only book ahead if visiting Christmas, Spring Break, Thanksgiving week, or major public holidays. Allow 3&ndash;5 hours minimum. Arrive before opening to beat school groups.</p>
+          <p style="margin-top:8px;font-size:14px;"><strong>Priority:</strong> <span class="pri pri-vflex">Very Flexible</span></p>
+        </div>
+        <div class="card">
+          <div class="card-tag">The Metropolitan Museum of Art</div>
+          <p>The Met is one of the most flexible major attractions in New York and one of the easiest places to adjust around weather and changing plans. This is exactly the type of attraction to leave open until you&rsquo;re already in New York. If rain appears in tomorrow&rsquo;s forecast, visit The Met. If it&rsquo;s sunny, go somewhere outdoors instead.</p>
+          <p style="margin-top:8px;font-size:14px;"><strong>Priority:</strong> <span class="pri pri-vflex">Very Flexible</span></p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Museum of Modern Art (MoMA)</div>
+          <p>MoMA is more popular than many museums but still far easier to book than observation decks. Book several days ahead during normal season and around one week before holiday weekends. Note: temporary blockbuster exhibitions can increase demand significantly &mdash; if there&rsquo;s one you&rsquo;re excited about, don&rsquo;t leave it until the last minute.</p>
+          <p style="margin-top:8px;font-size:14px;"><strong>Priority:</strong> <span class="pri pri-vflex">Very Flexible</span></p>
+        </div>
+        <div class="card">
+          <div class="card-tag">My Museum Strategy</div>
+          <p>I don&rsquo;t assign museums to fixed days months ahead. Instead, I keep two or three museum options ready and decide based on weather, energy level, how busy previous attractions were, or whether a reservation finished early. This approach makes the entire itinerary feel much less stressful.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:18px;">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>Museum</th><th>Priority</th><th>Same-Day Friendly?</th></tr>
+          <tr><td>The Met</td><td><span class="pri pri-vflex">Very Flexible</span></td><td>Yes</td></tr>
+          <tr><td>American Museum of Natural History</td><td><span class="pri pri-vflex">Very Flexible</span></td><td>Yes</td></tr>
+          <tr><td>MoMA</td><td><span class="pri pri-vflex">Very Flexible</span></td><td>Usually</td></tr>
+          <tr><td>9/11 Museum</td><td><span class="pri pri-high">Book Early</span></td><td>Sometimes</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- CRUISES -->
+      <h2 id="cruises">Cruises and Boat Tours</h2>
+      <p>A cruise is one of the best ways to see New York City &mdash; but also one of the easiest attractions to overthink. Some cruises should absolutely be booked ahead. Others are surprisingly easy to leave until the day before, or even the same day. The difference comes down to three things: time of day, time of year, and type of cruise.</p>
+
+      <div class="attr-section" id="circle-line">
+        <div class="as-head">
+          <h2>Circle Line Sightseeing Cruises</h2>
+          <span class="as-pri">Flexible (Sunset: Book Early)</span>
+        </div>
+        <div class="as-body">
+          <p>Circle Line is the most popular sightseeing cruise company in New York. With multiple departures every day, many travelers assume reservations aren&rsquo;t necessary. That&rsquo;s only partly true. Daytime cruises usually have good availability. Sunset cruises are much more popular and book considerably faster.</p>
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Reservation required?</td><td>Yes (ticket required)</td></tr>
+            <tr><td>Same-day available?</td><td>Usually (daytime)</td></tr>
+            <tr><td>Ideal booking window</td><td>3&ndash;7 days</td></tr>
+            <tr><td>Sunset cruise</td><td>Around 1 week</td></tr>
+            <tr><td>Holiday weekends</td><td>2&ndash;3 weeks</td></tr>
+          </table></div>
+          <div class="plan-tip"><div class="pt-label">Statue Cruises vs Sightseeing Cruises</div><p>These are not the same thing. Statue City Cruises stops at Liberty Island and Ellis Island and includes museum access. Circle Line is a sightseeing cruise that does not stop at any island. Many visitors accidentally buy a sightseeing cruise believing they&rsquo;re visiting the Statue of Liberty. Always double-check before purchasing.</p></div>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/Circle-Line-Complete-Manhattan-Island-Cruise/d687-2800FIC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">Circle Line Full Manhattan Cruise</span></span>
+            </a>
+            <a class="viator-btn" href="https://www.viator.com/tours/New-York-City/New-York-City-Statue-of-Liberty-Sunset-Cruise/d687-3763P33?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Reserve Now, Pay Later</span><span class="vb-name">Circle Line Sunset Cruise</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <div class="card-grid cols-2" style="margin-top:14px;">
+        <div class="card">
+          <div class="card-tag">Dinner Cruises &mdash; Must Book</div>
+          <p>Unlike sightseeing cruises, capacity is much smaller, departures are limited, and many travelers book for celebrations. Recommended timeline: normal season 2&ndash;3 weeks &middot; Christmas 4&ndash;8 weeks &middot; New Year&rsquo;s Eve: several months. This is one attraction where waiting rarely improves your options.</p>
+          <p style="margin-top:8px;"><span class="pri pri-must">Must Book</span></p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Holiday Cruises &mdash; Must Book</div>
+          <p>Christmas Lights, Thanksgiving, Fourth of July, and New Year&rsquo;s Eve cruises are among the hardest boat tours to reserve. Unlike standard sightseeing cruises, there is often only one departure, limited seating, and one special date. When they&rsquo;re full, there isn&rsquo;t another sailing tomorrow.</p>
+          <p style="margin-top:8px;"><span class="pri pri-must">Must Book</span></p>
+        </div>
+      </div>
+
+      <div class="attr-section" id="helicopter" style="margin-top:24px;">
+        <div class="as-head">
+          <h2>Helicopter Tours</h2>
+          <span class="as-pri">Weather Dependent</span>
+        </div>
+        <div class="as-body">
+          <p>If you&rsquo;re considering a helicopter tour, your booking strategy should be very different from any other attraction. Unlike observation decks, weather has a much bigger impact. I&rsquo;d wait until the forecast looks good before reserving &mdash; unless you&rsquo;re visiting during Christmas, on a holiday weekend, or only in NYC for one day.</p>
+          <div class="advice">
+            <div class="adv-avoid">
+              <span class="av-label">Common Mistakes</span>
+              <ul>
+                <li>Booking the first day of the trip before checking the forecast</li>
+                <li>Not leaving time to reschedule if weather causes cancellations</li>
+                <li>Assuming tours operate in all weather</li>
+              </ul>
+            </div>
+            <div class="adv-do">
+              <span class="av-label">My Approach</span>
+              <ul>
+                <li>Wait until 2&ndash;3 days before when the forecast is more reliable</li>
+                <li>Book immediately if the forecast looks clear</li>
+                <li>Always check the operator&rsquo;s cancellation policy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="viator-row">
+            <a class="viator-btn" href="https://www.viator.com/New-York-City-tours/Helicopter-Tours/d687-g1-c2?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+              <span><span class="vb-sub">Browse Options</span><span class="vb-name">Best Helicopter Tours in NYC</span></span>
+            </a>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BROADWAY -->
+      <div class="attr-section" id="broadway">
+        <div class="as-head">
+          <h2>Broadway Shows</h2>
+          <span class="as-pri">Must Book</span>
+        </div>
+        <div class="as-body">
+          <p>If there&rsquo;s one attraction I&rsquo;d tell every first-time visitor to prioritise, it&rsquo;s Broadway. Unlike observation decks, museums or cruises, Broadway performances have fixed dates, fixed start times and a limited number of seats. Once a performance sells out, there isn&rsquo;t another departure an hour later. That&rsquo;s why Broadway sits at the very top of the booking priority list.</p>
+
+          <div class="table-wrap"><table class="bst">
+            <tr><td>Reservation required?</td><td>Yes</td></tr>
+            <tr><td>Same-day tickets?</td><td>Sometimes (TKTS)</td></tr>
+            <tr><td>Ideal booking window</td><td>2&ndash;8 weeks</td></tr>
+            <tr><td>Holiday visits</td><td>2&ndash;3 months</td></tr>
+          </table></div>
+
+          <div class="as-section"><h3>Not Every Broadway Show Is the Same</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Blockbuster Shows &mdash; 1&ndash;3 Months Early</div>
+              <p>Shows that tourists travel specifically to see, that families prioritise, and that often sell out during holidays. Christmas? Book even earlier. These are the shows where waiting means missing out entirely, not just paying more.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Popular Shows &mdash; 3&ndash;6 Weeks Early</div>
+              <p>Usually excellent availability but not always at the lowest prices. Booking 3&ndash;6 weeks ahead gives you good seat selection without over-committing too early.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Smaller Productions &mdash; A Few Days Early</div>
+              <p>Often much easier to buy after arriving in New York. You can sometimes decide just a few days before the performance.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Families Should Book Earlier</div>
+              <p>Finding four seats together, good weekend performances, and school holiday availability becomes much harder. Family-friendly shows are consistently among the busiest.</p>
+            </div>
+          </div>
+
+          <div class="as-section"><h3>How Far Ahead by Travel Period</h3></div>
+          <div class="table-wrap"><table class="bst">
+            <tr><td>January</td><td>2&ndash;4 weeks</td></tr>
+            <tr><td>Spring Break</td><td>1&ndash;2 months</td></tr>
+            <tr><td>Summer</td><td>1&ndash;2 months</td></tr>
+            <tr><td>Thanksgiving</td><td>2&ndash;3 months</td></tr>
+            <tr><td>Christmas</td><td>As soon as travel dates are confirmed</td></tr>
+            <tr><td>New Year&rsquo;s</td><td>Immediately</td></tr>
+          </table></div>
+
+          <div class="as-section"><h3>Can You Buy Broadway Tickets the Same Day?</h3></div>
+          <div class="card-grid cols-2">
+            <div class="card"><div class="card-tag">Regular Tickets</div><p>Guarantees entry. Best for must-see shows, families, and first-time visitors. Don&rsquo;t gamble on last-minute availability for the shows that matter most.</p></div>
+            <div class="card"><div class="card-tag">TKTS</div><p>Discounted same-day tickets for participating shows. Perfect if you&rsquo;re flexible. Not ideal if you&rsquo;ve dreamed of seeing one particular musical for years. The distinction: "I want to see a Broadway show" vs "I have to see this Broadway show."</p></div>
+          </div>
+
+          <div class="plan-tip"><div class="pt-label">Money-Saving Tips</div><p>Attend a weekday performance &middot; Consider a matinee &middot; Compare official ticket prices before looking at resale sites &middot; Use TKTS if you&rsquo;re flexible &middot; Enter digital lotteries but always have a backup plan.</p></div>
+
+          <p><strong>My Broadway strategy:</strong> If there&rsquo;s one show I absolutely want to see, I buy it first. Everything else gets planned around that reservation. If there&rsquo;s time for a second show, I&rsquo;ll decide once I&rsquo;m in New York and either use TKTS or buy a last-minute ticket. This approach gives you both certainty and flexibility.</p>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ATTRACTION PASSES -->
+      <div class="attr-section" id="passes">
+        <div class="as-head">
+          <h2>Attraction Passes: The Mistake Almost Every First-Time Visitor Makes</h2>
+          <span class="as-pri">Read Before Buying</span>
+        </div>
+        <div class="as-body">
+          <p>Buying an attraction pass can be one of the smartest ways to save money in New York City. It can also become one of the biggest sources of frustration if you don&rsquo;t understand how reservations work. Every year, travelers purchase a pass believing they&rsquo;ve secured entry to every attraction &mdash; only to discover that the attraction they wanted most no longer has any reservation slots available.</p>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">A pass gives you admission. It does not always guarantee the time you want.</div>
+            <p>As soon as you&rsquo;ve purchased your attraction pass, reserve every attraction that requires timed entry. Don&rsquo;t wait until arriving in New York. See our <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass comparison</a> to choose the right pass before booking.</p>
+          </div>
+
+          <div class="as-section"><h3>Which Attractions Usually Require Reservations with a Pass?</h3></div>
+          <ul class="checklist" style="list-style:none;padding:0;margin:10px 0;display:flex;flex-wrap:wrap;gap:6px;">
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">SUMMIT One Vanderbilt</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">Edge</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">Top of the Rock (certain periods)</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">Statue of Liberty ferry</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">9/11 Museum</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">Circle Line Cruises</li>
+            <li style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:14.5px;">Some guided tours</li>
+          </ul>
+
+          <div class="as-section"><h3>Pass Holders: Reserve in This Order</h3></div>
+          <ol class="order-steps">
+            <li><strong>SUMMIT</strong><span>Sunset disappears quickly.</span></li>
+            <li><strong>Statue of Liberty</strong><span>Especially pedestal access.</span></li>
+            <li><strong>9/11 Museum</strong><span>Particularly during holidays.</span></li>
+            <li><strong>Other Observation Decks</strong><span>Edge, Top of the Rock, Empire State Building (if reservations apply).</span></li>
+            <li><strong>Circle Line Cruises</strong><span>Especially sunset departures.</span></li>
+          </ol>
+
+          <div class="plan-tip"><div class="pt-label">Attraction Pass Planning Tip</div><p>One of the biggest advantages of attraction passes is flexibility. Don&rsquo;t ruin that flexibility by scheduling four timed attractions across different boroughs in one day. Instead, plan one morning reservation and one afternoon reservation and leave the rest of the day open.</p></div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- SEASONAL PLANNING -->
+      <h2 id="seasonal">Seasonal Booking Strategy</h2>
+      <p>Booking advice changes dramatically depending on when you&rsquo;re visiting New York. A strategy that works perfectly in February can be disastrous during Christmas week.</p>
+
+      <div class="season-grid">
+        <div class="season-card">
+          <h4>January</h4>
+          <span class="sc-sub">Crowds: Lowest of the year</span>
+          <p style="font-size:15px;">You can be much more relaxed. Many attractions remain available just a few days ahead. Excellent month for flexible travelers.</p>
+        </div>
+        <div class="season-card">
+          <h4>Spring Break</h4>
+          <span class="sc-sub">Crowds: Significantly higher</span>
+          <ul>
+            <li>Broadway: 1&ndash;2 months ahead</li>
+            <li>SUMMIT: 2&ndash;4 weeks ahead</li>
+            <li>Statue of Liberty: 1&ndash;2 weeks ahead</li>
+            <li>9/11 Museum: 1&ndash;2 weeks ahead</li>
+          </ul>
+        </div>
+        <div class="season-card">
+          <h4>Summer</h4>
+          <span class="sc-sub">Crowds: One of the busiest seasons</span>
+          <p style="font-size:15px;">Book anything important at least 1&ndash;2 weeks ahead. Sunset observation decks, Statue ferries, and cruises become noticeably busier.</p>
+        </div>
+        <div class="season-card">
+          <h4>Fall (September&ndash;Early November)</h4>
+          <span class="sc-sub">Crowds: Manageable</span>
+          <p style="font-size:15px;">One of the best combinations of pleasant weather, manageable crowds, and flexibility. Booking is still recommended but you&rsquo;ll generally have more options than summer.</p>
+        </div>
+        <div class="season-card">
+          <h4>Thanksgiving</h4>
+          <span class="sc-sub">Crowds: Jump considerably</span>
+          <ul>
+            <li>Broadway: 2&ndash;3 months ahead</li>
+            <li>Observation decks: 2&ndash;4 weeks ahead</li>
+            <li>Holiday cruises: 4&ndash;6 weeks ahead</li>
+          </ul>
+        </div>
+        <div class="season-card">
+          <h4>Christmas</h4>
+          <span class="sc-sub">Crowds: A completely different level</span>
+          <ul>
+            <li>Broadway and Rockettes: immediately</li>
+            <li>SUMMIT sunset: 2&ndash;3 weeks ahead</li>
+            <li>Top of the Rock: 2&ndash;3 weeks ahead</li>
+            <li>Holiday cruises: 4&ndash;8 weeks ahead</li>
+            <li>Holiday skating sessions: 2&ndash;3 weeks ahead</li>
+          </ul>
+          <p style="font-size:14px;margin-top:8px;">Christmas is not the time to rely on same-day availability.</p>
+        </div>
+        <div class="season-card" style="grid-column:1/-1;">
+          <h4>New Year&rsquo;s Week</h4>
+          <span class="sc-sub">Crowds: Arguably the hardest week of the year</span>
+          <p style="font-size:15px;">Demand peaks across observation decks, cruises, Broadway, restaurants, and holiday attractions. If you&rsquo;re visiting this week, book everything important well in advance. New Year&rsquo;s Eve cruises should be reserved several months ahead.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- WEATHER STRATEGY -->
+      <h2 id="weather">Rain Strategy and Weather Planning</h2>
+      <p>One mistake I see all the time is travelers creating a weather-proof itinerary without actually considering the weather. Instead, divide attractions into two groups and keep your plan flexible enough to swap based on the forecast.</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Fixed Attractions &mdash; Reserve These</div>
+          <ul class="card-list">
+            <li>Broadway and concerts</li>
+            <li>Sporting events</li>
+            <li>Holiday cruises</li>
+            <li>Statue Crown tickets</li>
+          </ul>
+          <p style="font-size:14.5px;margin-top:8px;">These are difficult or impossible to replace. Reserve them regardless of the forecast.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Flexible Attractions &mdash; Keep These Open</div>
+          <ul class="card-list">
+            <li>Museums (move forward on rainy days)</li>
+            <li>Observation decks (move to clear days)</li>
+            <li>Central Park, Brooklyn Bridge, High Line</li>
+            <li>Neighborhood walks</li>
+          </ul>
+          <p style="font-size:14.5px;margin-top:8px;">This gives you room to swap days when heavy rain is forecast.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:18px;">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>Attraction</th><th>Weather Impact</th></tr>
+          <tr><td>Helicopter Tours</td><td>Very High</td></tr>
+          <tr><td>Observation Decks</td><td>Very High</td></tr>
+          <tr><td>Sunset Cruises</td><td>High</td></tr>
+          <tr><td>Circle Line Cruises</td><td>Moderate</td></tr>
+          <tr><td>Statue Ferry</td><td>Moderate</td></tr>
+          <tr><td>Museums</td><td>Minimal</td></tr>
+        </table>
+      </div>
+
+      <div class="plan-tip"><div class="pt-label">If Rain Is Forecast Tomorrow</div><p>Move indoor attractions forward: The Met, MoMA, AMNH, 9/11 Museum, Broadway. Then move outdoor attractions to the next clear day. This simple adjustment can completely transform your trip.</p></div>
+
+      <hr class="divider-rule">
+
+      <!-- QUICK REFERENCE -->
+      <h2 id="reference">Quick Reference: How Early Should You Book Each NYC Attraction?</h2>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:560px;font-size:13.5px;">
+          <tr><th>Attraction</th><th>Reservation Required</th><th>Same-Day Possible</th><th>Recommended Booking Window</th><th>Priority</th></tr>
+          <tr><td><strong>Broadway (Popular Shows)</strong></td><td>Yes</td><td>Sometimes</td><td>1&ndash;3 months</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Radio City Christmas Spectacular</strong></td><td>Yes</td><td>Rarely</td><td>1&ndash;3 months</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Statue of Liberty Crown</strong></td><td>Yes</td><td>No</td><td>Up to 6 months</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Statue Pedestal</strong></td><td>Yes</td><td>Sometimes</td><td>2&ndash;8 weeks</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Statue General Admission</strong></td><td>Yes</td><td>Usually</td><td>3&ndash;7 days</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td><strong>SUMMIT One Vanderbilt</strong></td><td>Yes</td><td>Sometimes</td><td>1&ndash;2 weeks</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td>Yes</td><td>Usually</td><td>About 1 week</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Edge</strong></td><td>Yes</td><td>Usually</td><td>About 1 week</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Empire State Building</strong></td><td>Yes</td><td>Yes</td><td>3&ndash;7 days</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td><strong>One World Observatory</strong></td><td>Yes</td><td>Yes</td><td>3&ndash;5 days</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+          <tr><td><strong>9/11 Museum</strong></td><td>Yes</td><td>Often</td><td>3&ndash;7 days</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td><strong>Circle Line Cruise</strong></td><td>Yes</td><td>Often</td><td>3&ndash;7 days</td><td><span class="pri pri-rec">Recommended</span></td></tr>
+          <tr><td><strong>Dinner Cruises</strong></td><td>Yes</td><td>Rarely</td><td>2&ndash;4 weeks</td><td><span class="pri pri-must">Must Book</span></td></tr>
+          <tr><td><strong>Helicopter Tour</strong></td><td>Yes</td><td>Sometimes</td><td>2&ndash;5 days (after forecast)</td><td><span class="pri pri-high">Book Early</span></td></tr>
+          <tr><td>The Met</td><td>No</td><td>Yes</td><td>Same day</td><td><span class="pri pri-vflex">Very Flexible</span></td></tr>
+          <tr><td>American Museum of Natural History</td><td>No</td><td>Yes</td><td>Same day</td><td><span class="pri pri-vflex">Very Flexible</span></td></tr>
+          <tr><td>MoMA</td><td>No</td><td>Usually</td><td>Same day or a few days</td><td><span class="pri pri-vflex">Very Flexible</span></td></tr>
+          <tr><td>Central Park</td><td>No</td><td>Yes</td><td>No reservation</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+          <tr><td>Brooklyn Bridge</td><td>No</td><td>Yes</td><td>No reservation</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+          <tr><td>High Line</td><td>No</td><td>Yes</td><td>No reservation</td><td><span class="pri pri-flex">Flexible</span></td></tr>
+        </table>
+      </div>
+
+      <h2>Attractions That Sell Out the Fastest</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:340px;">
+          <tr><th>Attraction</th><th>Why It Sells Out</th></tr>
+          <tr><td><strong>Statue of Liberty Crown</strong></td><td>Extremely limited daily capacity</td></tr>
+          <tr><td><strong>Broadway hit shows</strong></td><td>Fixed seating &mdash; no extra departures</td></tr>
+          <tr><td><strong>Christmas Spectacular</strong></td><td>Holiday demand and fixed performance schedule</td></tr>
+          <tr><td><strong>Holiday dinner cruises</strong></td><td>Limited departures and celebration bookings</td></tr>
+          <tr><td><strong>New Year&rsquo;s Eve cruises</strong></td><td>One-night event with no alternative</td></tr>
+          <tr><td><strong>SUMMIT at sunset</strong></td><td>Most requested time slot of the most popular deck</td></tr>
+          <tr><td><strong>Top of the Rock at sunset</strong></td><td>Extremely popular photography time</td></tr>
+          <tr><td><strong>Holiday skating sessions</strong></td><td>Seasonal demand with timed capacity</td></tr>
+        </table>
+      </div>
+
+      <h2>My Final Booking Strategy</h2>
+      <p>Here&rsquo;s exactly what I&rsquo;d reserve before leaving home if planning a first trip to New York.</p>
+      <div class="timeline">
+        <div class="tl-phase"><span class="tl-label">Immediately</span><ul class="tl-items"><li>Flights and hotel</li><li>Broadway</li><li>Holiday shows</li><li>Statue Crown (if applicable)</li></ul></div>
+        <div class="tl-phase"><span class="tl-label">Two Weeks Before</span><ul class="tl-items"><li>SUMMIT sunset</li><li>Sunset observation deck</li><li>Statue Pedestal</li><li>Dinner cruise</li></ul></div>
+        <div class="tl-phase"><span class="tl-label">One Week Before</span><ul class="tl-items"><li>9/11 Museum</li><li>Circle Line</li><li>Stadium tour</li></ul></div>
+        <div class="tl-phase"><span class="tl-label">Three Days Before</span><ul class="tl-items"><li>Empire State Building (after checking forecast)</li><li>One World Observatory</li><li>Edge (daytime)</li><li>General Statue ferry</li></ul></div>
+        <div class="tl-phase"><span class="tl-label">While Already in NYC</span><ul class="tl-items"><li>The Met</li><li>AMNH</li><li>Central Park</li><li>High Line</li><li>Brooklyn Bridge</li><li>Fifth Avenue</li><li>SoHo</li><li>Greenwich Village</li></ul></div>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The Bottom Line</div>
+        <p>You won&rsquo;t miss New York&rsquo;s most popular attractions by planning smartly &mdash; but you also won&rsquo;t feel trapped by a rigid itinerary. Lock in the experiences with fixed seating or limited capacity. Leave everything else flexible enough to respond to weather, energy levels, and the spontaneous discoveries that make any New York trip memorable.</p>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan a NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Which Observation Deck Wins?</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty and Ellis Island</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Only Lower Manhattan Walking Itinerary You Need</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Attraction Pass Is Actually Worth It?</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Progress bar */
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* Sidebar active state */
+var secs=['intro','priority','obs-decks','statue','911','museums','cruises','broadway','passes','seasonal','weather','reference'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='intro';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
