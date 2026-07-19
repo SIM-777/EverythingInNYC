@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors | EverythingInNYC</title>
+<meta name="description" content="Choosing the right neighborhood matters more than choosing the right hotel. An honest guide to where to stay in NYC — from Hell's Kitchen and Chelsea to Long Island City and Brooklyn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- STICKY SIDEBAR NAV ---- */
+  .side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+  .side-nav a{display:block;padding:7px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+
+  /* ---- NEIGHBOURHOOD CARD ---- */
+  .nbhd-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin:42px 0;box-shadow:var(--shadow-card);}
+  .nbhd-card .nc-head{background:var(--navy);color:#fff;padding:16px 22px;}
+  .nc-head h2{color:#fff;font-size:20px;margin:0 0 5px;line-height:1.2;scroll-margin-top:90px;}
+  .nc-head .nc-verdict{font-size:14.5px;color:rgba(255,255,255,0.75);font-style:italic;line-height:1.4;}
+  .nbhd-card .nc-img{width:100%;max-height:320px;object-fit:cover;display:block;}
+  .nbhd-card .nc-body{padding:22px 24px;}
+
+  /* ---- SNAPSHOT TABLE ---- */
+  .snap-table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 16px;}
+  .snap-table tr:nth-child(odd){background:rgba(15,23,42,0.02);}
+  .snap-table td{padding:7px 12px;border-bottom:1px solid var(--border);}
+  .snap-table tr:last-child td{border-bottom:none;}
+  .snap-table td:first-child{font-weight:700;color:var(--navy);width:46%;}
+
+  /* ---- RATING BADGE ---- */
+  .rat{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:0.02em;}
+  .rat-ex{background:rgba(22,163,74,0.12);color:#15803D;}   /* Excellent */
+  .rat-vg{background:rgba(37,99,235,0.09);color:var(--info);}  /* Very Good */
+  .rat-gd{background:rgba(161,98,7,0.1);color:#92620A;}      /* Good */
+  .rat-fr{background:rgba(100,116,139,0.1);color:#475569;}   /* Fair */
+  .rat-vh{background:rgba(220,38,38,0.08);color:#B91C1C;}    /* Very High (noise) */
+  .rat-md{background:rgba(234,88,12,0.08);color:#C2410C;}    /* Medium (noise) */
+  .rat-lo{background:rgba(22,163,74,0.09);color:#15803D;}    /* Low (noise) */
+
+  /* ---- PROS CONS ---- */
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+  @media(max-width:500px){.pros-cons{grid-template-columns:1fr;}}
+  .pros-box,.cons-box{border-radius:10px;padding:13px 15px;}
+  .pros-box{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.2);}
+  .cons-box{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.16);}
+  .pros-box h4{color:#15803D;margin:0 0 8px;font-size:14px;font-family:var(--font-head);font-weight:800;text-transform:uppercase;letter-spacing:0.05em;}
+  .cons-box h4{color:#B91C1C;margin:0 0 8px;font-size:14px;font-family:var(--font-head);font-weight:800;text-transform:uppercase;letter-spacing:0.05em;}
+  .pros-box ul,.cons-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .pros-box ul li,.cons-box ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .pros-box ul li::before{content:'+';position:absolute;left:0;color:#15803D;font-weight:700;}
+  .cons-box ul li::before{content:'-';position:absolute;left:0;color:#B91C1C;font-weight:700;}
+
+  /* ---- VERDICT STRIP ---- */
+  .verdict-strip{background:var(--navy);color:#fff;padding:12px 20px;font-size:15.5px;font-weight:600;line-height:1.5;}
+  .verdict-strip strong{color:var(--accent);}
+
+  /* ---- SECTION HEADING inside card ---- */
+  .nc-section{margin-top:18px;}
+  .nc-section h3{font-size:16px;font-family:var(--font-head);font-weight:800;color:var(--navy);margin:0 0 10px;display:flex;align-items:center;gap:8px;}
+  .nc-section h3::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px;flex:none;}
+
+  /* ---- RANK CARDS ---- */
+  .rank-cards{display:flex;flex-direction:column;gap:10px;margin:14px 0;}
+  .rank-card{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;}
+  .rank-num{font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none;text-align:center;line-height:1;}
+  .rank-num.r1{background:#B8860B;}
+  .rank-num.r2{background:#708090;}
+  .rank-num.r3{background:#8B5E3C;}
+  .rank-card > div strong{display:block;font-size:16px;color:var(--navy);margin-bottom:4px;}
+  .rank-card > div span{font-size:14.5px;color:var(--text-secondary);}
+
+  /* ---- STYLE GRID ---- */
+  .style-grid{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0;}
+  @media(min-width:540px){.style-grid{grid-template-columns:1fr 1fr;}}
+  .style-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:15px 17px;}
+  .style-card .sc-if{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:6px;display:block;}
+  .style-card h4{margin:0 0 6px;font-size:16px;color:var(--navy);}
+  .style-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+  .style-card ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:3px;}
+  .style-card ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .style-card ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+  /* ---- DECISION TREE ---- */
+  .decision-tree{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:18px 0;}
+  .dt-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);}
+  .dt-row:last-child{border-bottom:none;}
+  .dt-if{padding:11px 16px;background:rgba(15,23,42,0.02);font-size:14.5px;border-right:1px solid var(--border);}
+  .dt-then{padding:11px 16px;font-size:14.5px;font-weight:700;color:var(--navy);}
+
+  /* ---- BOOKING CHECKLIST ---- */
+  .checklist-pills{list-style:none;padding:0;margin:14px 0;display:flex;flex-wrap:wrap;gap:7px;}
+  .checklist-pills li{font-size:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:5px 13px;}
+
+  /* ---- MISTAKE LIST ---- */
+  .mistake-list{list-style:none;padding:0;margin:14px 0;counter-reset:mlist;display:flex;flex-direction:column;gap:10px;}
+  .mistake-list li{counter-increment:mlist;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--error);border-radius:0 12px 12px 0;padding:14px 16px;}
+  .mistake-list li::before{content:counter(mlist);font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--error);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .mistake-list li strong{display:block;font-size:15px;color:var(--navy);margin-bottom:3px;grid-column:2;}
+  .mistake-list li p{font-size:15px;color:var(--text-secondary);margin:0;grid-column:2;}
+
+  /* ---- SUMMARY TABLE (lower-manhattan etc.) ---- */
+  .sum-table td:first-child{font-weight:700;color:var(--navy);}
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:10px;}
+  .back-top:hover{color:var(--navy);}
+
+  /* ---- JUMP NAV (mobile) ---- */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:480px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  @media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- STICKY SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">This Guide</div>
+  <a href="#intro">Overview</a>
+  <a href="#quick-rec">Quick Picks</a>
+  <a href="#right-for-you">By Travel Style</a>
+  <a href="#manhattan">Manhattan</a>
+  <a href="#outside">Outside Manhattan</a>
+  <a href="#by-style">Best by Category</a>
+  <a href="#booking">Hotel Advice</a>
+  <a href="#mistakes">Common Mistakes</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Hotel Guide</span>
+      <h1>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span>
+        <span>&middot;</span>
+        <span>22 minute read</span>
+        <span>&middot;</span>
+        <span>10 neighborhoods reviewed</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="where-to-stay-NYC-cover.png" alt="Where to stay in NYC — best neighborhoods guide for first-time visitors">
+
+    <div class="article-body" id="intro">
+
+      <p><em>Choosing the right neighborhood matters more than choosing the right hotel.</em></p>
+
+      <p>Most first-time visitors spend weeks comparing hotels, but overlook the decision that has a much bigger impact on their trip: <strong>where to stay in New York City.</strong></p>
+
+      <p>Two hotels with the same rating and price can offer completely different experiences depending on the neighborhood. One might let you walk home after a Broadway show, grab breakfast around the corner, and reach most attractions in minutes. The other might mean spending an extra hour every day on the subway and returning to streets that feel empty after dark.</p>
+
+      <p>This guide answers the questions travelers actually ask before booking: Which neighborhood is genuinely best for a first visit? Is Times Square worth the premium? Is staying outside Manhattan a smart way to save money? Which neighborhoods are quiet? Which are overrated? What trade-offs should you expect?</p>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#quick-rec">Quick Recommendations</a></li>
+          <li><a href="#right-for-you">Which Is Right for You?</a></li>
+          <li><a href="#manhattan">Manhattan Neighborhoods</a></li>
+          <li><a href="#outside">Outside Manhattan</a></li>
+          <li><a href="#by-style">Best by Travel Style</a></li>
+          <li><a href="#booking">Hotel Booking Advice</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The One Thing to Remember</div>
+        <p>Don&rsquo;t book the best hotel &mdash; book the best neighborhood. A great location will improve every single day of your trip. You&rsquo;ll spend less time commuting, discover better restaurants, enjoy your evenings more, and experience a side of New York that many visitors miss entirely. See our <a href="ultimate-nyc-itinerary-guide.html">complete NYC itinerary planning guide</a> for how to build your week around your hotel choice.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- QUICK RECOMMENDATIONS -->
+      <h2 id="quick-rec">Quick Recommendations</h2>
+      <p>If you only read one table in this guide, make it this one.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;">
+          <tr><th>If You Want&hellip;</th><th>Stay Here</th><th>Why</th></tr>
+          <tr><td>Best first visit</td><td><strong>Hell&rsquo;s Kitchen</strong></td><td>Best balance of convenience, restaurants and Broadway</td></tr>
+          <tr><td>Short trip (3&ndash;4 days)</td><td><strong>Midtown East</strong></td><td>Minimizes commuting</td></tr>
+          <tr><td>Families</td><td><strong>Upper West Side</strong></td><td>Quiet, safe, Central Park nearby</td></tr>
+          <tr><td>Couples</td><td><strong>Greenwich Village</strong></td><td>Romantic streets and restaurants</td></tr>
+          <tr><td>Budget</td><td><strong>Long Island City</strong></td><td>Best hotel value close to Manhattan</td></tr>
+          <tr><td>Food lovers</td><td><strong>Chelsea</strong></td><td>Outstanding dining and walkability</td></tr>
+          <tr><td>Broadway</td><td><strong>Hell&rsquo;s Kitchen</strong></td><td>Walk home after shows</td></tr>
+          <tr><td>Luxury</td><td><strong>SoHo or Tribeca</strong></td><td>Boutique and luxury hotels</td></tr>
+          <tr><td>Nightlife</td><td><strong>Williamsburg</strong></td><td>Bars, music and restaurants</td></tr>
+          <tr><td>Quiet stay</td><td><strong>Battery Park City</strong></td><td>Waterfront and peaceful</td></tr>
+          <tr><td>Christmas</td><td><strong>Midtown East</strong></td><td>Walk to Rockefeller Center</td></tr>
+          <tr><td>Longer stay (5&ndash;7 days)</td><td><strong>Chelsea</strong></td><td>Great location without Midtown chaos</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">My Overall Recommendation</div>
+        <p>If you&rsquo;re unsure, book <strong>Hell&rsquo;s Kitchen.</strong> It offers the best combination of location, restaurants, walkability, subway access, and value for most first-time visitors.</p>
+      </div>
+
+      <!-- FULL COMPARISON TABLE -->
+      <h2>NYC Neighborhood Comparison</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:640px;font-size:13px;">
+          <tr><th>Neighborhood</th><th>Avg. Cost</th><th>Walkability</th><th>Subway</th><th>Noise</th><th>Best For</th><th>Biggest Downside</th></tr>
+          <tr><td><strong>Hell&rsquo;s Kitchen</strong></td><td>$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-md">Medium</span></td><td>First visits</td><td>Some blocks feel busy</td></tr>
+          <tr><td><strong>Midtown East</strong></td><td>$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-md">Medium</span></td><td>Short trips</td><td>Less nightlife</td></tr>
+          <tr><td><strong>Chelsea</strong></td><td>$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-md">Medium</span></td><td>Food &amp; walking</td><td>Fewer hotel choices</td></tr>
+          <tr><td><strong>Greenwich Village</strong></td><td>$$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-lo">Low</span></td><td>Couples</td><td>Expensive</td></tr>
+          <tr><td><strong>SoHo</strong></td><td>$$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-md">Medium</span></td><td>Luxury / shopping</td><td>Premium pricing</td></tr>
+          <tr><td><strong>Upper West Side</strong></td><td>$$$</td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-lo">Low</span></td><td>Families</td><td>Longer downtown rides</td></tr>
+          <tr><td><strong>Financial District</strong></td><td>$$</td><td><span class="rat rat-gd">Good</span></td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-lo">Low</span></td><td>Best value</td><td>Quiet evenings</td></tr>
+          <tr><td><strong>Long Island City</strong></td><td>$$</td><td><span class="rat rat-gd">Good</span></td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-lo">Low</span></td><td>Budget</td><td>Less NYC atmosphere</td></tr>
+          <tr><td><strong>Williamsburg</strong></td><td>$$$</td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-vg">Very Good</span></td><td><span class="rat rat-md">Medium</span></td><td>Nightlife / food</td><td>Daily commute</td></tr>
+          <tr><td><strong>Times Square</strong></td><td>$$$$</td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-ex">Excellent</span></td><td><span class="rat rat-vh">Very High</span></td><td>Broadway only</td><td>Noise &amp; crowds</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Hotel cost: $$ = budget &middot; $$$ = mid-range &middot; $$$$ = premium.</p>
+
+      <hr class="divider-rule">
+
+      <!-- WHICH IS RIGHT FOR YOU -->
+      <h2 id="right-for-you">Which NYC Neighborhood Is Right for You?</h2>
+      <p>Instead of ranking neighborhoods from best to worst, start with <strong>how you plan to experience New York.</strong></p>
+
+      <div class="style-grid">
+        <div class="style-card">
+          <span class="sc-if">First trip to NYC</span>
+          <h4>Hell&rsquo;s Kitchen or Midtown East</h4>
+          <p>These locations minimize commuting and make sightseeing much easier.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Traveling with children</span>
+          <h4>Upper West Side or Midtown East</h4>
+          <p>Quieter streets, supermarkets, playgrounds, and larger family-friendly hotels.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">On a budget</span>
+          <h4>Long Island City or Financial District</h4>
+          <p>Often save $50&ndash;150 per night while staying within 10&ndash;20 minutes of Midtown.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Honeymoon or anniversary</span>
+          <h4>Greenwich Village or West Village</h4>
+          <p>Beautiful streets, intimate restaurants, boutique hotels, and a much more romantic atmosphere than Midtown.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Broadway is your priority</span>
+          <h4>Hell&rsquo;s Kitchen or Midtown West</h4>
+          <p>Being able to walk back to your hotel after a show is one of the biggest quality-of-life improvements you can make.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Food matters most</span>
+          <h4>Chelsea, Hell&rsquo;s Kitchen or Greenwich Village</h4>
+          <p>These neighborhoods consistently offer better dining than the Times Square area.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Hate crowds</span>
+          <h4>Upper West Side or Battery Park City</h4>
+          <p>Avoid Times Square. Both of these neighborhoods feel noticeably calmer without sacrificing subway access.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Love nightlife</span>
+          <h4>Williamsburg, Greenwich Village or East Village</h4>
+          <p>Bars, live music, late-night restaurants, and energy that carries well past midnight.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Visiting at Christmas</span>
+          <h4>Midtown East or Hell&rsquo;s Kitchen</h4>
+          <p>Walk to Rockefeller Center, Fifth Avenue, Bryant Park, and Broadway without relying on packed subway trains.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Staying one night</span>
+          <h4>Midtown East</h4>
+          <p>Stay as centrally as possible. Every hour spent commuting on a short trip is time lost.</p>
+        </div>
+        <div class="style-card">
+          <span class="sc-if">Staying a full week</span>
+          <h4>Chelsea or Greenwich Village</h4>
+          <p>Neighborhood atmosphere becomes much more important than absolute convenience. These neighborhoods become part of the experience.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Five Questions to Ask Before Booking Any Hotel</div>
+        <p>Can I walk to a subway station in under 5&ndash;8 minutes? &nbsp;&middot;&nbsp; Will I want to return during the afternoon? &nbsp;&middot;&nbsp; What will the neighborhood feel like after dinner? &nbsp;&middot;&nbsp; Am I paying for convenience or simply paying for Times Square? &nbsp;&middot;&nbsp; Will I enjoy spending my evenings here? Those answers will usually have a bigger impact on your trip than whether your hotel has four stars instead of three.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- MANHATTAN NEIGHBORHOODS -->
+      <h2 id="manhattan">Manhattan Neighborhoods</h2>
+
+      <!-- NOLITA -->
+      <div class="nbhd-card" id="nolita">
+        <div class="nc-head">
+          <h2>Nolita</h2>
+          <div class="nc-verdict">If you love boutique hotels, independent cafes, and neighborhood charm, Nolita is one of Manhattan&rsquo;s hidden gems.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/b2/c0/65/nolita.jpg?w=2000&h=-1&s=1" alt="Nolita neighborhood, Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$&ndash;$$$$ ($250&ndash;600+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-ex">Excellent</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low&ndash;Medium</span></td></tr>
+            <tr><td>Safety</td><td>High</td></tr>
+            <tr><td>Best For</td><td>Couples, food lovers, boutique hotels</td></tr>
+            <tr><td>Avoid If</td><td>You want lots of hotel choices</td></tr>
+          </table>
+
+          <p>Nolita feels like the quieter, more authentic sibling of SoHo. Instead of flagship stores and shopping crowds, you&rsquo;ll find neighbourhood cafes, independent boutiques, excellent brunch spots, tree-lined streets, and relaxed evenings. Many travelers say they accidentally discovered Nolita while walking through SoHo &mdash; and wished they&rsquo;d booked their hotel there instead.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Excellent restaurants</li>
+                <li>Less crowded than SoHo</li>
+                <li>Beautiful streets</li>
+                <li>Great cafes</li>
+                <li>Walk everywhere</li>
+                <li>Close to Little Italy and Chinatown</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Limited hotel inventory</li>
+                <li>Boutique hotels dominate</li>
+                <li>Premium pricing</li>
+                <li>Smaller rooms</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nc-section"><h3>What Visitors Don&rsquo;t Expect</h3></div>
+          <p>Even though SoHo is only a few minutes away, Nolita feels significantly quieter. Visitors appreciate being able to leave the shopping crowds behind while still enjoying easy access to them. The biggest challenge isn&rsquo;t the neighborhood &mdash; it&rsquo;s finding availability. Because there are relatively few hotels, they often sell out months in advance.</p>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> If you&rsquo;re looking for neighborhood atmosphere rather than tourist attractions outside your hotel, Nolita is one of the city&rsquo;s best-kept secrets.</div>
+      </div>
+
+      <!-- TRIBECA -->
+      <div class="nbhd-card" id="tribeca">
+        <div class="nc-head">
+          <h2>Tribeca</h2>
+          <div class="nc-verdict">Luxury, quiet, spacious, and sophisticated. One of Manhattan&rsquo;s nicest neighborhoods &mdash; but also one of the most expensive.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/d9/79/eb/20180504-152909-largejpg.jpg?w=1600&h=-1&s=1" alt="Tribeca neighborhood, Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$$&ndash;$$$$$ ($350&ndash;900+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low</span></td></tr>
+            <tr><td>Safety</td><td>Very High</td></tr>
+            <tr><td>Best For</td><td>Luxury travelers, families, longer stays</td></tr>
+            <tr><td>Avoid If</td><td>You&rsquo;re on a budget or want nightlife</td></tr>
+          </table>
+
+          <p>Tribeca feels completely different from Midtown. Instead of crowds you&rsquo;ll find quiet streets, luxury apartments, excellent restaurants, boutique hotels, and converted warehouse buildings. Many visitors describe it as feeling more relaxed than almost anywhere else in Manhattan.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Beautiful architecture</li>
+                <li>Spacious sidewalks</li>
+                <li>Excellent dining</li>
+                <li>Luxury hotels</li>
+                <li>Very quiet</li>
+                <li>Family-friendly</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Extremely expensive</li>
+                <li>Limited nightlife</li>
+                <li>Fewer attractions nearby</li>
+                <li>Smaller hotel selection</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nc-section"><h3>Hidden Advantages</h3></div>
+          <p>Many first-time visitors assume Tribeca will feel isolated. Instead they discover that SoHo is only minutes away, the Financial District is within walking distance, and subway connections are excellent. Larger hotel rooms than Midtown, excellent coffee shops, and less crowded restaurants are among the things travelers appreciate most.</p>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> If budget isn&rsquo;t a concern, it&rsquo;s one of the city&rsquo;s most pleasant places to stay.</div>
+      </div>
+
+      <!-- FINANCIAL DISTRICT -->
+      <div class="nbhd-card" id="fidi">
+        <div class="nc-head">
+          <h2>Financial District (FiDi)</h2>
+          <div class="nc-verdict">The best-value neighborhood in Manhattan. Lower hotel prices, excellent subway access, and quieter evenings make it one of the smartest choices for many visitors.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/2a/f4/a9/caption.jpg?w=1100&h=-1&s=1" alt="Financial District, Lower Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$&ndash;$$$ ($180&ndash;350+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-ex">Excellent</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low</span></td></tr>
+            <tr><td>Safety</td><td>High</td></tr>
+            <tr><td>Best For</td><td>Budget-conscious travelers, couples, longer stays</td></tr>
+            <tr><td>Avoid If</td><td>You want nightlife outside your hotel</td></tr>
+          </table>
+
+          <p>Financial District surprises more visitors than almost any other neighborhood. Many book it simply because hotels are cheaper. After arriving they discover excellent subway access, waterfront walks, historic streets, surprisingly good restaurants, and larger hotel rooms. For travelers who don&rsquo;t mind taking the subway to Midtown, it often represents exceptional value.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Lower hotel prices</li>
+                <li>Excellent transit</li>
+                <li>Larger rooms</li>
+                <li>Waterfront views</li>
+                <li>Historic atmosphere</li>
+                <li>Good weekend hotel deals</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Office district feel</li>
+                <li>Quieter evenings</li>
+                <li>Less nightlife</li>
+                <li>Fewer late-night restaurants</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nc-section"><h3>The Biggest Surprise</h3></div>
+          <p>It doesn&rsquo;t feel deserted. While weekdays are busy with office workers, weekends are much livelier than many travelers expect thanks to tourism around the 9/11 Memorial, Wall Street, Stone Street, ferries, and Battery Park. Some visitors miss the energy of Midtown, but many others are pleasantly surprised.</p>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> If you want to save money <strong>without leaving Manhattan,</strong> Financial District is probably your smartest option.</div>
+      </div>
+
+      <!-- BATTERY PARK CITY -->
+      <div class="nbhd-card" id="battery-park">
+        <div class="nc-head">
+          <h2>Battery Park City</h2>
+          <div class="nc-verdict">One of Manhattan&rsquo;s quietest and safest neighborhoods. Perfect for families &mdash; but it lacks the energy many first-time visitors expect from New York.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/c2/23/de/caption.jpg?w=500&h=500&s=1" alt="Battery Park City waterfront, Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$&ndash;$$$$ ($220&ndash;450+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Very Low</span></td></tr>
+            <tr><td>Safety</td><td>Very High</td></tr>
+            <tr><td>Best For</td><td>Families, seniors, quiet stays</td></tr>
+            <tr><td>Avoid If</td><td>You want nightlife or neighbourhood buzz</td></tr>
+          </table>
+
+          <p>Battery Park City almost doesn&rsquo;t feel like Midtown Manhattan. Instead you&rsquo;ll find waterfront parks, jogging paths, playgrounds, beautiful river views, and modern residential buildings. Many visitors appreciate returning to a calm environment after busy sightseeing days. The neighbourhood feels almost suburban at night &mdash; some travelers love this; others find it too quiet.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Extremely peaceful</li>
+                <li>Waterfront walks</li>
+                <li>Great for children</li>
+                <li>Beautiful sunsets</li>
+                <li>Excellent hotel quality</li>
+                <li>Easy Statue of Liberty ferry access</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Few bars</li>
+                <li>Limited nightlife</li>
+                <li>Fewer restaurant options</li>
+                <li>Longer walk to some subway stations</li>
+              </ul>
+            </div>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> For families and travelers seeking a peaceful base, excellent. For a classic first-time NYC experience with spontaneous exploration, Hell&rsquo;s Kitchen, Chelsea, or Greenwich Village are usually stronger options.</div>
+      </div>
+
+      <!-- LOWER MANHATTAN SUMMARY -->
+      <h3>Lower Manhattan at a Glance</h3>
+      <div class="table-wrap">
+        <table class="data-table sum-table" style="min-width:380px;">
+          <tr><th>Neighborhood</th><th>Best For</th><th>Biggest Strength</th><th>Biggest Trade-Off</th></tr>
+          <tr><td>Nolita</td><td>Boutique stays, cafes</td><td>Neighbourhood charm</td><td>Limited hotels</td></tr>
+          <tr><td>Tribeca</td><td>Luxury travelers</td><td>Quiet elegance</td><td>Very expensive</td></tr>
+          <tr><td>Financial District</td><td>Best hotel value</td><td>Lower prices &amp; transit</td><td>Quieter evenings</td></tr>
+          <tr><td>Battery Park City</td><td>Families &amp; relaxation</td><td>Waterfront &amp; parks</td><td>Limited nightlife</td></tr>
+        </table>
+      </div>
+
+      <!-- UPPER WEST SIDE -->
+      <div class="nbhd-card" id="uws">
+        <div class="nc-head">
+          <h2>Upper West Side</h2>
+          <div class="nc-verdict">If you&rsquo;re traveling with children, enjoy museums and parks, or simply want a quieter New York experience, the Upper West Side is one of the safest recommendations you can make.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/85/8a/8b/upper-west-side.jpg?w=1200&h=-1&s=1" alt="Upper West Side, Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$ ($220&ndash;450+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low</span></td></tr>
+            <tr><td>Safety</td><td>Very High</td></tr>
+            <tr><td>Best For</td><td>Families, seniors, museum lovers, longer stays</td></tr>
+            <tr><td>Avoid If</td><td>Broadway is your main priority</td></tr>
+          </table>
+
+          <p>The Upper West Side consistently receives praise for feeling like a genuine residential neighborhood rather than a tourist district. Instead of souvenir shops and tour groups, you&rsquo;ll find tree-lined streets, neighbourhood cafes, bookstores, playgrounds, bakeries, and Central Park on your doorstep. Many visitors say it feels relaxing after spending busy days exploring Midtown.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Central Park on your doorstep</li>
+                <li>Family-friendly atmosphere</li>
+                <li>Excellent museums nearby</li>
+                <li>Great cafes and breakfast spots</li>
+                <li>Less touristy</li>
+                <li>Beautiful architecture</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Longer subway rides downtown</li>
+                <li>Fewer hotels</li>
+                <li>Limited nightlife</li>
+                <li>Broadway requires a subway ride</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nc-section"><h3>What Visitors Don&rsquo;t Expect</h3></div>
+          <p>Many first-time visitors worry the Upper West Side will feel &ldquo;too far away.&rdquo; After arriving, they often realize that reaching Midtown takes only around 10&ndash;20 minutes by subway &mdash; and the neighbourhood itself becomes one of their favourite parts of the trip.</p>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> For families and travelers staying five nights or longer, absolutely. For a three-day sightseeing trip focused on Midtown, stay farther south.</div>
+      </div>
+
+      <!-- UPPER EAST SIDE -->
+      <div class="nbhd-card" id="ues">
+        <div class="nc-head">
+          <h2>Upper East Side</h2>
+          <div class="nc-verdict">Elegant, refined and surprisingly practical. An excellent choice for museum lovers and travelers seeking a quieter stay.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/79/39/16/upper-east-side.jpg?w=700&h=-1&s=1" alt="Upper East Side, Manhattan">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$ ($220&ndash;500+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low</span></td></tr>
+            <tr><td>Safety</td><td>Very High</td></tr>
+            <tr><td>Best For</td><td>Museums, luxury, families, quieter trips</td></tr>
+            <tr><td>Avoid If</td><td>You want nightlife</td></tr>
+          </table>
+
+          <p>The Upper East Side offers a polished, residential atmosphere. It&rsquo;s home to Museum Mile, Central Park, elegant brownstones, luxury shopping, and quieter restaurants. Recent subway improvements have made it considerably easier to reach from Midtown than many first-time visitors expect.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Beautiful streets</li>
+                <li>Excellent museums</li>
+                <li>Safer atmosphere</li>
+                <li>Great restaurants</li>
+                <li>Luxury hotels</li>
+                <li>Easy Central Park access</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Less nightlife</li>
+                <li>Hotels still relatively expensive</li>
+                <li>Longer commute to Lower Manhattan</li>
+                <li>Can feel &ldquo;too quiet&rdquo; after dark</li>
+              </ul>
+            </div>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> If museums and Central Park are major priorities, it&rsquo;s one of Manhattan&rsquo;s best neighborhoods.</div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- OUTSIDE MANHATTAN -->
+      <h2 id="outside">Outside Manhattan: Is It Worth It?</h2>
+      <p>This is probably the most common accommodation question asked by first-time visitors. The answer depends on <strong>why</strong> you&rsquo;re staying outside Manhattan.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>Neighborhood</th><th>Stay Here If&hellip;</th><th>Skip It If&hellip;</th></tr>
+          <tr><td><strong>Long Island City</strong></td><td>You want the best hotel value with a quick subway ride</td><td>You want Manhattan outside your hotel door</td></tr>
+          <tr><td><strong>Williamsburg</strong></td><td>You love restaurants, bars and local neighborhoods</td><td>You&rsquo;re focused on Midtown attractions</td></tr>
+          <tr><td><strong>DUMBO</strong></td><td>You want luxury, views and photography</td><td>You want lots of hotel choices</td></tr>
+          <tr><td><strong>Downtown Brooklyn</strong></td><td>You want lower prices and good transit</td><td>You want a memorable neighborhood atmosphere</td></tr>
+        </table>
+      </div>
+
+      <!-- LONG ISLAND CITY -->
+      <div class="nbhd-card" id="lic">
+        <div class="nc-head">
+          <h2>Long Island City (Queens)</h2>
+          <div class="nc-verdict">The smartest budget alternative to Manhattan &mdash; but only if you&rsquo;re comfortable trading atmosphere for value.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/88/15/2a/photo0jpg.jpg?w=1400&h=-1&s=1" alt="Long Island City, Queens, NYC skyline views">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$ ($160&ndash;320+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-gd">Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-ex">Excellent</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-lo">Low</span></td></tr>
+            <tr><td>Safety</td><td>High</td></tr>
+            <tr><td>Best For</td><td>Budget travelers, families, longer stays</td></tr>
+            <tr><td>Avoid If</td><td>You want classic Manhattan atmosphere outside your hotel</td></tr>
+          </table>
+
+          <p>Long Island City appears in almost every travel discussion about saving money without sacrificing convenience. Modern hotels, larger rooms, lower prices, and excellent subway access make it the clear leader for budget-conscious travelers. Many Midtown hotels cost $100&ndash;150 more per night for considerably smaller rooms.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Best hotel value near Manhattan</li>
+                <li>Large modern hotels</li>
+                <li>Fast subway to Midtown (10&ndash;15 min)</li>
+                <li>Quiet streets</li>
+                <li>Good skyline views</li>
+                <li>Excellent airport access</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Doesn&rsquo;t feel like Manhattan</li>
+                <li>Less nightlife</li>
+                <li>Smaller restaurant scene</li>
+                <li>Fewer attractions nearby</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nc-section"><h3>The Real Trade-Off</h3></div>
+          <p>The subway ride isn&rsquo;t the issue. The biggest adjustment is psychological. Many visitors miss stepping outside their hotel and immediately feeling immersed in Manhattan. For travelers who enjoy wandering without a plan, this is worth considering. For those happy to subway into Manhattan each morning and return each evening, LIC is one of the best value decisions they can make.</p>
+
+          <div class="callout callout-local" style="margin-top:14px;">
+            <div class="callout-title">Manhattan vs Long Island City: The Numbers</div>
+            <p>A Midtown hotel at $350/night vs Long Island City at $230/night over five nights is a saving of around <strong>$600.</strong> That&rsquo;s an extra Broadway show, a helicopter tour, several fine dining experiences, or another night in New York entirely. For a once-in-a-lifetime three-day trip, staying in Manhattan often provides a richer overall experience. For a longer trip, LIC makes excellent sense.</p>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> If saving $100+ per night means extending your trip or affording more attractions, LIC is one of the best value decisions you can make.</div>
+      </div>
+
+      <!-- WILLIAMSBURG -->
+      <div class="nbhd-card" id="williamsburg">
+        <div class="nc-head">
+          <h2>Williamsburg (Brooklyn)</h2>
+          <div class="nc-verdict">Fantastic neighborhood. Not my first recommendation for a first trip &mdash; but easily one of the best for a second or third visit.</div>
+        </div>
+        <img class="nc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/07/81/caption.jpg?w=800&h=800&s=1" alt="Williamsburg, Brooklyn">
+        <div class="nc-body">
+          <table class="snap-table">
+            <tr><td>Average Hotel Price</td><td>$$$ ($220&ndash;450+)</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Noise</td><td><span class="rat rat-md">Medium</span></td></tr>
+            <tr><td>Safety</td><td>High</td></tr>
+            <tr><td>Best For</td><td>Nightlife, food, younger travelers</td></tr>
+            <tr><td>Avoid If</td><td>Your itinerary is Midtown-heavy</td></tr>
+          </table>
+
+          <p>Williamsburg has evolved into one of New York&rsquo;s premier neighborhoods for restaurants, rooftop bars, independent shops, cafes, and live music. Many visitors spend an entire day here even when staying elsewhere. The important thing to know: Williamsburg hotels aren&rsquo;t significantly cheaper than Manhattan. You&rsquo;re paying for the neighborhood experience rather than lower hotel prices.</p>
+
+          <div class="pros-cons">
+            <div class="pros-box">
+              <h4>Pros</h4>
+              <ul>
+                <li>Outstanding food</li>
+                <li>Excellent nightlife</li>
+                <li>Great cafes</li>
+                <li>Boutique hotels</li>
+                <li>Waterfront parks</li>
+                <li>Local atmosphere</li>
+              </ul>
+            </div>
+            <div class="cons-box">
+              <h4>Cons</h4>
+              <ul>
+                <li>Daily subway commute to Manhattan</li>
+                <li>Hotels not significantly cheaper</li>
+                <li>Fewer major attractions nearby</li>
+              </ul>
+            </div>
+          </div>
+          <a class="back-top" href="#sideNav">Back to top</a>
+        </div>
+        <div class="verdict-strip"><strong>Worth it?</strong> Wonderful &mdash; but generally recommend Manhattan for a first visit unless nightlife is your top priority.</div>
+      </div>
+
+      <!-- DUMBO + DOWNTOWN BROOKLYN (compact) -->
+      <div class="card-grid cols-2" style="margin-top:18px;">
+        <div class="card">
+          <div class="card-tag">DUMBO</div>
+          <p><strong>Verdict:</strong> Incredible views, limited hotels. Better as a day-trip destination than a hotel base for most first-time visitors.</p>
+          <table class="snap-table" style="margin-top:10px;">
+            <tr><td>Price</td><td>$$$$</td></tr>
+            <tr><td>Walkability</td><td><span class="rat rat-vg">Very Good</span></td></tr>
+            <tr><td>Best For</td><td>Luxury travelers, photographers</td></tr>
+            <tr><td>Avoid If</td><td>You want hotel variety</td></tr>
+          </table>
+          <p style="margin-top:10px;font-size:14.5px;">DUMBO offers some of New York&rsquo;s most famous skyline views. Most visitors explore everything within a day, then travel elsewhere for restaurants and nightlife. Excellent place to visit &mdash; more niche as a hotel base.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Downtown Brooklyn</div>
+          <p><strong>Verdict:</strong> Practical rather than exciting. Strong subway connections and better hotel prices, but lacks the charm of Williamsburg or DUMBO.</p>
+          <table class="snap-table" style="margin-top:10px;">
+            <tr><td>Price</td><td>$$&ndash;$$$</td></tr>
+            <tr><td>Subway Access</td><td><span class="rat rat-ex">Excellent</span></td></tr>
+            <tr><td>Best For</td><td>Budget-conscious travelers</td></tr>
+            <tr><td>Avoid If</td><td>You want classic NYC atmosphere</td></tr>
+          </table>
+          <p style="margin-top:10px;font-size:14.5px;">Its biggest strength is transportation. If Financial District and Long Island City are sold out or expensive, Downtown Brooklyn is a perfectly reasonable alternative &mdash; but not a first recommendation.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BEST BY TRAVEL STYLE -->
+      <h2 id="by-style">Best Neighborhoods by Travel Style</h2>
+      <p>Choosing the right neighborhood isn&rsquo;t about finding the &ldquo;best&rdquo; area &mdash; it&rsquo;s about finding the one that matches how you want to experience New York. A family with two young children and a couple celebrating their honeymoon shouldn&rsquo;t stay in the same neighborhood simply because it&rsquo;s &ldquo;central.&rdquo;</p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Best for First-Time Visitors</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>Hell&rsquo;s Kitchen</strong><span>Walk to Broadway, Times Square, Rockefeller Center, and Hudson Yards. Excellent restaurants. Returns to a neighborhood that still feels like New York rather than an outdoor theme park.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>Midtown East</strong><span>Best for travelers whose priority is seeing as much as possible. Transportation is difficult to beat.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Chelsea</strong><span>For visitors staying five nights or longer, Chelsea often becomes the better overall experience as the neighborhood itself becomes part of the vacation.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Families</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>Upper West Side</strong><span>Quieter streets, Central Park, playgrounds, American Museum of Natural History, grocery stores, and family restaurants. Noticeably calmer than Midtown.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>Battery Park City</strong><span>Ideal for younger children. Waterfront parks, stroller-friendly paths, playgrounds, and peaceful evenings.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Midtown East</strong><span>For families on shorter trips who prefer to reduce daily commuting.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Couples</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>Greenwich Village</strong><span>The most romantic neighborhood in New York. Evening walks, jazz clubs, intimate restaurants, cafes, tree-lined streets. Encourages wandering without an itinerary.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>West Village</strong><span>Even quieter. Even prettier. Boutique hotels and brownstone-lined streets make it ideal for anniversaries and honeymoons.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Chelsea</strong><span>Excellent dining, galleries, and easy walks along the High Line create a great balance of romance and sightseeing.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Budget Travelers</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>Long Island City</strong><span>Save $50&ndash;150 per night. Modern hotels, larger rooms, Midtown in about 10&ndash;15 minutes.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>Financial District</strong><span>Best budget choice within Manhattan. Weekend rates can be especially attractive.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Downtown Brooklyn</strong><span>A reasonable alternative if LIC prices rise or Manhattan hotels are unavailable.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Luxury Travelers</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>SoHo</strong><span>Luxury shopping, boutique hotels, stylish restaurants, and upscale atmosphere.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>Tribeca</strong><span>Quieter, more exclusive. Larger luxury hotels and outstanding restaurants.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Central Park South</strong><span>Iconic luxury brands, skyline views, and immediate access to Fifth Avenue and Central Park.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Food Lovers</div>
+          <div class="rank-cards">
+            <div class="rank-card">
+              <div class="rank-num r1">1st</div>
+              <div><strong>Chelsea</strong><span>Chelsea Market, excellent restaurants, and easy walks to Flatiron and Greenwich Village.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r2">2nd</div>
+              <div><strong>Hell&rsquo;s Kitchen</strong><span>Ninth Avenue consistently surprises visitors with the quality and variety of restaurants. Locals specifically recommend eating here instead of Times Square.</span></div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num r3">3rd</div>
+              <div><strong>Greenwich Village</strong><span>Outstanding cafes, brunch, Italian restaurants, desserts, and late-night dining.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEST BY SEASON / TRIP LENGTH -->
+      <h3>Best Neighborhood by Trip Length</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Trip Length</th><th>Recommendation</th><th>Why</th></tr>
+          <tr><td>1&ndash;2 nights</td><td><strong>Midtown East</strong></td><td>Minimize commuting</td></tr>
+          <tr><td>3&ndash;4 nights</td><td><strong>Hell&rsquo;s Kitchen</strong></td><td>Best overall balance</td></tr>
+          <tr><td>5&ndash;7 nights</td><td><strong>Chelsea</strong></td><td>Atmosphere + convenience</td></tr>
+          <tr><td>7+ nights</td><td><strong>Upper West Side or Long Island City</strong></td><td>Better value and neighbourhood feel</td></tr>
+        </table>
+      </div>
+
+      <!-- EDITOR'S PICKS -->
+      <h3>Editor&rsquo;s Picks</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Best Overall</div><h4>Hell&rsquo;s Kitchen</h4><p>The best mix of convenience, dining, Broadway access, and value.</p></div>
+        <div class="card"><div class="card-tag">Best Value in Manhattan</div><h4>Financial District</h4><p>Excellent hotels, lower prices, and outstanding subway access.</p></div>
+        <div class="card"><div class="card-tag">Best Budget Option</div><h4>Long Island City</h4><p>The easiest way to save money without sacrificing convenience.</p></div>
+        <div class="card"><div class="card-tag">Best Atmosphere</div><h4>Greenwich Village</h4><p>If you want to fall in love with New York rather than simply see it.</p></div>
+        <div class="card"><div class="card-tag">Best Luxury</div><h4>Tribeca</h4><p>Quiet, sophisticated, and consistently exceptional.</p></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HOTEL BOOKING ADVICE -->
+      <h2 id="booking">Hotel Booking Advice</h2>
+      <p>Choosing the right neighborhood is only half the battle. The timing of your booking, the exact hotel location, and even the room you request can dramatically affect both the cost and your overall experience.</p>
+
+      <h3>How Far in Advance Should You Book?</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">6&ndash;9 Months Ahead</div>
+          <p>Book this early for: Christmas, Thanksgiving, New Year&rsquo;s Eve, Spring Break, Marathon Weekend, popular fall weekends. Many of the best-located hotels sell out months in advance, especially around Midtown and the Theater District.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">3&ndash;5 Months Ahead (Ideal for Most)</div>
+          <p>The sweet spot for spring, summer, and early fall trips. You&rsquo;ll usually find the widest selection before prices begin climbing closer to arrival.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">1&ndash;2 Months Ahead</div>
+          <p>Still possible, but hotel choice becomes more limited, prices often increase, family rooms disappear quickly, and boutique hotels may already be sold out.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Last-Minute Bookings</div>
+          <p>Can occasionally work during quieter periods (especially January and parts of February), but it&rsquo;s a gamble rather than a strategy. For first-time visitors with fixed travel dates, booking early is almost always the safer option.</p>
+        </div>
+      </div>
+
+      <h3>When Are NYC Hotels Cheapest?</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Usually Lowest Prices</div>
+          <ul class="card-list">
+            <li>Late January</li>
+            <li>February (excluding holiday weekends)</li>
+            <li>Early March</li>
+            <li>Some Financial District weekends</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Usually Highest Prices</div>
+          <ul class="card-list">
+            <li>Christmas and New Year</li>
+            <li>Thanksgiving</li>
+            <li>September and October</li>
+            <li>Major conferences</li>
+            <li>Large sporting events</li>
+            <li>School holidays</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">The Date Flexibility Tip</div>
+        <p>If your dates are flexible by even one or two days, compare weekday and weekend rates. In Midtown, weekends can sometimes be cheaper because business travelers leave. The Financial District often sees the opposite effect due to leisure demand.</p>
+      </div>
+
+      <!-- AFFILIATE CTA -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Find the Right Hotel</div>
+        <h4>Book with Free Cancellation</h4>
+        <p>Browse hotels in every neighborhood covered in this guide. Free cancellation lets you book your preferred location now and rebook later if prices drop or your plans change.</p>
+        <!-- NOTE TO EDITOR: Replace # below with your hotel affiliate link (Booking.com, Hotels.com, etc.) -->
+        <a class="btn btn-primary" href="https://www.booking.com/searchresults.en-us.html?ss=New+York+City" target="_blank" rel="noopener">Browse NYC Hotels</a>
+      </div>
+
+      <h3>Practical Hotel Tips</h3>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The 5-Minute Subway Rule</div>
+        <p>Don&rsquo;t just look at the neighborhood &mdash; look at the walking time to the nearest subway entrance. Ideal: 2&ndash;5 minutes. Still good: 5&ndash;8 minutes. Think carefully: 10+ minutes. After walking 20,000&ndash;30,000 steps in a day, an extra ten-minute walk each way feels much longer than it looks on Google Maps.</p>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Should You Book a Refundable Rate?</div>
+          <p>If you&rsquo;re booking several months in advance: yes. NYC hotel prices fluctuate frequently. Many experienced travelers book a refundable room, then check prices periodically. If the rate drops, they simply rebook at the lower price.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Room Size Reality</div>
+          <p>Hotel rooms in Manhattan are often much smaller than expected. A standard room may comfortably fit one or two people and two suitcases &mdash; and not much else. For extra space, consider Long Island City, the Financial District, or select Downtown Brooklyn hotels.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Free Breakfast?</div>
+          <p>Only a genuine advantage if it&rsquo;s truly included at no extra cost. In Chelsea, Hell&rsquo;s Kitchen, Greenwich Village, and the Upper West Side, you&rsquo;ll find bagels, bakeries, and cafes within a two-minute walk. Many travelers prefer exploring local spots to eating the same hotel breakfast every morning.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Hotel Fees to Watch For</div>
+          <ul class="card-list">
+            <li>Destination or resort fees</li>
+            <li>Parking fees</li>
+            <li>Luggage storage charges</li>
+            <li>Early check-in fees</li>
+            <li>Late check-out fees</li>
+            <li>Wi-Fi fees (rare but check)</li>
+          </ul>
+          <p style="font-size:14.5px;margin-top:8px;">A hotel that appears $30 cheaper per night can easily end up costing the same after mandatory fees.</p>
+        </div>
+      </div>
+
+      <h3>Best Hotel Booking Checklist</h3>
+      <ul class="checklist-pills">
+        <li>Within 5&ndash;8 min walk of a subway station?</li>
+        <li>Does the nearest station serve multiple lines?</li>
+        <li>Restaurants nearby for late arrivals?</li>
+        <li>Grocery store or pharmacy within walking distance?</li>
+        <li>Checked for mandatory fees?</li>
+        <li>Read recent reviews for noise and cleanliness?</li>
+        <li>Free cancellation if prices drop?</li>
+        <li>Checked the exact street on Street View?</li>
+        <li>Room size suitable for your party and luggage?</li>
+      </ul>
+
+      <hr class="divider-rule">
+
+      <!-- COMMON MISTAKES -->
+      <h2 id="mistakes">Common Mistakes First-Time Visitors Make</h2>
+      <ol class="mistake-list">
+        <li>
+          <strong>Staying in Times Square Because &ldquo;That&rsquo;s Where Tourists Stay&rdquo;</strong>
+          <p>Many travelers later say they would have preferred Hell&rsquo;s Kitchen or Midtown East. They still could have walked to Times Square &mdash; but slept much better.</p>
+        </li>
+        <li>
+          <strong>Choosing the Cheapest Hotel Near the Airports</strong>
+          <p>Saving money on the room often results in longer commutes, expensive taxis, and lost sightseeing time. Airport hotels are only worth considering for overnight layovers.</p>
+        </li>
+        <li>
+          <strong>Ignoring Subway Access</strong>
+          <p>A cheaper hotel fifteen minutes from the subway can be less convenient than a slightly more expensive hotel beside a major station. Location within the neighborhood often matters more than the neighborhood itself.</p>
+        </li>
+        <li>
+          <strong>Booking Based Only on Hotel Stars</strong>
+          <p>A well-located three-star hotel in Chelsea frequently provides a better experience than a five-star hotel that requires a 45-minute commute every day. Prioritize neighborhood, exact location, and reviews over star ratings.</p>
+        </li>
+        <li>
+          <strong>Assuming All of Midtown Feels the Same</strong>
+          <p>Midtown East, Midtown West, Hell&rsquo;s Kitchen, and Times Square each have very different atmospheres despite being adjacent. Choosing the right part of Midtown is just as important as choosing Midtown itself.</p>
+        </li>
+        <li>
+          <strong>Staying Too Far Away to Save a Small Amount</strong>
+          <p>Saving $50&ndash;75 per night sounds appealing. But over a short trip, the extra commuting can easily outweigh the savings &mdash; especially if it prevents you from returning to the hotel for a midday break.</p>
+        </li>
+        <li>
+          <strong>Overlooking the Neighborhood After Dark</strong>
+          <p>Many travelers only research daytime attractions. Ask instead: Where will I have dinner? Can I grab a drink nearby? Will I feel comfortable returning after Broadway? The evenings often shape your overall impression of New York more than the sightseeing itself.</p>
+        </li>
+      </ol>
+
+      <!-- FINAL DECISION TREE -->
+      <h2>Final Recommendation</h2>
+      <p>If you&rsquo;re still undecided, use this simple framework.</p>
+      <div class="decision-tree">
+        <div class="dt-row"><div class="dt-if">You want the best all-around first-time experience</div><div class="dt-then">Hell&rsquo;s Kitchen</div></div>
+        <div class="dt-row"><div class="dt-if">You want maximum sightseeing efficiency</div><div class="dt-then">Midtown East</div></div>
+        <div class="dt-row"><div class="dt-if">You love food and walkable neighborhoods</div><div class="dt-then">Chelsea</div></div>
+        <div class="dt-row"><div class="dt-if">You&rsquo;re planning a romantic getaway</div><div class="dt-then">Greenwich Village</div></div>
+        <div class="dt-row"><div class="dt-if">You&rsquo;re traveling with children</div><div class="dt-then">Upper West Side</div></div>
+        <div class="dt-row"><div class="dt-if">You want to save money without sacrificing convenience</div><div class="dt-then">Long Island City</div></div>
+        <div class="dt-row"><div class="dt-if">You want the best value while staying in Manhattan</div><div class="dt-then">Financial District</div></div>
+        <div class="dt-row"><div class="dt-if">You&rsquo;re looking for luxury and atmosphere</div><div class="dt-then">Tribeca or SoHo</div></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is Times Square really the best place to stay for first-time visitors?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Usually no. Times Square is the best place to visit, not necessarily the best place to sleep. Most first-time visitors enjoy spending several hours there. Far fewer enjoy the constant crowds, traffic noise, bright lights, expensive restaurants, and premium hotel prices. Unless your main priority is walking home from Broadway in under five minutes, Hell&rsquo;s Kitchen or Midtown East usually provide a better overall experience.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which neighborhood is the best overall?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If forced to recommend only one neighborhood for most first-time visitors: Hell&rsquo;s Kitchen. Excellent restaurants, walkable to major attractions, great subway access, Broadway nearby, better atmosphere than Times Square, and better value than many Midtown hotels. It strikes the best balance between convenience and enjoying New York as a neighborhood rather than just a collection of attractions.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Long Island City too far from Manhattan?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Not at all. Travel time to Midtown is often only 10&ndash;15 minutes by subway. The biggest difference isn&rsquo;t transportation &mdash; it&rsquo;s atmosphere. When you leave your hotel in Long Island City, you&rsquo;re in a modern residential neighborhood. When you leave a hotel in Midtown or Chelsea, you&rsquo;re already surrounded by iconic New York streets. That&rsquo;s why many repeat visitors happily stay in LIC, while first-time visitors often prefer Manhattan if their budget allows.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is staying in Brooklyn worth it?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It depends. For a first visit focused on sightseeing, usually no &mdash; you&rsquo;ll likely spend most of your time in Manhattan anyway. For repeat visits, absolutely. Neighborhoods like Williamsburg offer some of New York&rsquo;s best restaurants, bars, cafes, and local atmosphere.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Financial District too quiet?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Compared with Midtown, yes. Compared with many city centers around the world, not really. Weekdays feel busy with office workers. Weekends become more tourist-oriented thanks to One World Observatory, the 9/11 Memorial, Wall Street, Staten Island Ferry, and Battery Park. If you&rsquo;re expecting bars on every corner, you&rsquo;ll probably be disappointed. If you&rsquo;re looking for a quieter hotel at a lower price, it&rsquo;s one of Manhattan&rsquo;s best values.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which neighborhood feels the most like classic New York?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It depends on what you picture. Skyscrapers, yellow taxis, Broadway: choose Midtown East, Midtown West, or Hell&rsquo;s Kitchen. Brownstones, cafes, and tree-lined streets: choose Greenwich Village, West Village, or Upper West Side. Luxury shopping and stylish hotels: choose SoHo or Tribeca.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which neighborhood has the best food?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Overall: Chelsea first, then Hell&rsquo;s Kitchen, then Greenwich Village. These three neighborhoods consistently receive the strongest praise for restaurant quality, variety, and local dining atmosphere.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which neighborhoods are safest?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">All neighborhoods recommended in this guide are generally considered safe for visitors using normal city awareness. The areas that consistently make travelers feel most comfortable include the Upper West Side, Upper East Side, Battery Park City, Tribeca, and Midtown East. The busiest neighborhoods, like Times Square, often have a strong police presence but also attract more scams and pickpockets simply because of the large tourist concentration. The biggest safety issues for most visitors are not violent crime &mdash; they&rsquo;re distractions, crowded sidewalks, and common tourist scams.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I stay near Central Park?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If Central Park is one of your top priorities, yes. Otherwise, don&rsquo;t choose a hotel solely because it&rsquo;s next to the park. Most visitors spend one morning or one afternoon there &mdash; possibly one full day. They spend the rest of their trip exploring elsewhere. For most first-time visitors, Hell&rsquo;s Kitchen or Midtown East provide better overall convenience.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Airbnb a good option in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Generally, hotels are the safer and more reliable choice. New York has strict regulations governing short-term rentals. Before booking an Airbnb, verify that it complies with local rules and carefully read cancellation policies, check-in procedures, and guest reviews. For many first-time visitors, a hotel offers fewer surprises and more flexibility.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How close should my hotel be to a subway station?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Ideally within a 5-minute walk. The maximum recommended distance is around 8 minutes. Beyond that, the extra walking becomes surprisingly noticeable after long sightseeing days.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the biggest hotel booking mistake?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Choosing a hotel based on price alone. A slightly more expensive hotel in the right neighborhood can save hours of commuting, reduce transportation costs, and make your entire trip more enjoyable. Think of your hotel as part of the experience &mdash; not just a place to sleep.</div>
+        </details>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+      <li><a href="7-day-family-nyc-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>7-Day Family NYC Itinerary: A Realistic Plan</a></li>
+      <li><a href="which-attractions-to-book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Attractions Should You Book Before Your Trip?</a></li>
+      <li><a href="metrocard-omny-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The MetroCard Is Dead: Complete OMNY and Subway Guide</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Attraction Pass Is Actually Worth It?</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Progress bar */
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* Sidebar active state */
+var secs=['intro','quick-rec','right-for-you','manhattan','outside','by-style','booking','mistakes','faq'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='intro';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
