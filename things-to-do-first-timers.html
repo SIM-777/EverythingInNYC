@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>40 Best Things to Do in NYC: Honest Guide for First-Time Visitors | EverythingInNYC</title>
+<meta name="description" content="40 honest recommendations for first-time visitors to New York City. What's worth your time, what's overrated, how long things really take, and how to build better days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- STICKY SIDEBAR ---- */
+  .side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+  .side-nav a{display:block;padding:7px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+
+  /* ---- PRIORITY BADGE ---- */
+  .pri{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.03em;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+  .pri-essential{background:rgba(15,23,42,0.1);color:var(--navy);}
+  .pri-high{background:rgba(37,99,235,0.1);color:var(--info);}
+  .pri-medium{background:rgba(161,98,7,0.1);color:#92620A;}
+  .pri-low{background:rgba(100,116,139,0.1);color:#475569;}
+  .pri-free{background:rgba(22,163,74,0.1);color:#15803D;}
+  .pri-paid{background:rgba(220,38,38,0.08);color:#B91C1C;}
+
+  /* ---- ATTRACTION CARD (compact) ---- */
+  .attr-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin-bottom:18px;box-shadow:var(--shadow-card);}
+  .attr-card .ac-head{background:var(--navy);padding:13px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .ac-num{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);flex:none;}
+  .ac-head h3{color:#fff;font-size:17px;margin:0;flex:1;line-height:1.2;scroll-margin-top:90px;}
+  .ac-head .ac-pri{flex:none;}
+  .attr-card .ac-body{padding:16px 18px;}
+
+  /* ---- SNAPSHOT GRID ---- */
+  .snap-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px;}
+  @media(min-width:480px){.snap-grid{grid-template-columns:repeat(4,1fr);}}
+  .sg-item .sg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:2px;}
+  .sg-item .sg-val{font-size:14px;color:var(--navy);font-weight:600;}
+
+  /* ---- PAIR WITH ---- */
+  .pair-flow{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:8px 0 0;font-size:14px;}
+  .pair-stop{font-weight:700;color:var(--navy);}
+  .pair-arrow{color:var(--accent);font-weight:800;font-size:15px;}
+
+  /* ---- VERDICT STRIP ---- */
+  .verdict-strip{background:rgba(15,23,42,0.04);border-top:1px solid var(--border);padding:10px 18px;font-size:14.5px;font-style:italic;color:var(--navy);}
+
+  /* ---- SECTION IMAGE ---- */
+  .section-img{margin:24px 0;}
+  .section-img img{width:100%;border-radius:14px;max-height:400px;object-fit:cover;display:block;}
+  .section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+  /* ---- ROUTE BOX ---- */
+  .route-box{background:rgba(15,23,42,0.03);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:14px 0;}
+  .route-box .rb-label{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;}
+  .route-box .rb-time{font-size:12px;font-weight:600;color:var(--text-secondary);background:var(--bg);border:1px solid var(--border);padding:2px 8px;border-radius:12px;}
+  .route-box .rb-flow{display:flex;flex-wrap:wrap;align-items:center;gap:4px;}
+  .rb-flow .rs{font-size:15px;font-weight:700;color:var(--navy);}
+  .rb-flow .ra{color:var(--accent);font-weight:800;font-size:16px;}
+
+  /* ---- MISTAKE TABLE ---- */
+  .mistake-table td:first-child{font-weight:600;color:var(--error);background:rgba(220,38,38,0.03);}
+
+  /* ---- OBS DECK GRID ---- */
+  .obs-grid{display:grid;grid-template-columns:1fr;gap:10px;margin:16px 0;}
+  @media(min-width:560px){.obs-grid{grid-template-columns:1fr 1fr;}}
+  .obs-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;}
+  .obs-card .oc-if{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-secondary);margin-bottom:5px;}
+  .obs-card h4{margin:0 0 4px;font-size:16px;color:var(--navy);}
+  .obs-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+  /* ---- STYLE SECTION ---- */
+  .style-table td:first-child{font-weight:700;color:var(--navy);}
+  .style-table td:nth-child(2){font-size:14px;}
+
+  /* ---- ATTR GRID (2-col on desktop) ---- */
+  .attr-grid{display:grid;grid-template-columns:1fr;gap:0;}
+  @media(min-width:700px){.attr-grid{grid-template-columns:1fr 1fr;gap:16px;}}
+
+  /* ---- CHECKLIST ---- */
+  .final-checklist{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:7px;}
+  .final-checklist li{display:flex;align-items:flex-start;gap:12px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:15px;}
+  .final-checklist li::before{content:'';width:18px;height:18px;border:2px solid var(--border);border-radius:4px;flex:none;margin-top:1px;}
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:8px;}
+  .back-top:hover{color:var(--navy);}
+
+  /* ---- JUMP NAV (mobile) ---- */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:480px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  @media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">This Guide</div>
+  <a href="#intro">Overview</a>
+  <a href="#plan">Before You Plan</a>
+  <a href="#iconic">Iconic Sights</a>
+  <a href="#museums">Museums</a>
+  <a href="#neighborhoods">Neighborhoods</a>
+  <a href="#outdoors">Outdoors</a>
+  <a href="#by-style">By Travel Style</a>
+  <a href="#top25">Top 25 List</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Things To Do</span>
+      <h1>40 Best Things to Do in NYC: Honest Recommendations for First-Time Visitors</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span>
+        <span>&middot;</span>
+        <span>25 minute read</span>
+        <span>&middot;</span>
+        <span>40 attractions reviewed</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="things-to-do-first-timer.png" alt="Best things to do in New York City for first-time visitors">
+
+    <div class="article-body" id="intro">
+
+      <p><em>Wondering what is actually worth your limited time in New York City? This guide cuts through the hype. Instead of listing every attraction, it helps you decide what deserves your itinerary, what to skip, and how to combine experiences into unforgettable days.</em></p>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The One Rule to Remember</div>
+        <p>The best NYC trips are not the ones that check off the most attractions. They are the ones that combine iconic sights with neighborhoods, parks, great food, and time to simply enjoy the city. Many first-time visitors try to fit 8&ndash;10 attractions into a day. Almost everyone regrets it. A much better formula: 2&ndash;3 major attractions, one neighborhood to explore, one memorable meal, time to wander, and one evening activity.</p>
+      </div>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#plan">Before You Plan</a></li>
+          <li><a href="#iconic">Iconic Sights (1&ndash;10)</a></li>
+          <li><a href="#museums">Museums (11&ndash;15)</a></li>
+          <li><a href="#walking">High Line &amp; Walking (16&ndash;18)</a></li>
+          <li><a href="#neighborhoods">Neighborhoods (19&ndash;30)</a></li>
+          <li><a href="#outdoors">Outdoors &amp; Waterfronts (31&ndash;40)</a></li>
+          <li><a href="#by-style">Best by Travel Style</a></li>
+          <li><a href="#top25">My Top 25 List</a></li>
+        </ul>
+      </div>
+
+      <!-- MASTER RANKINGS TABLE -->
+      <h2>My Overall Rankings at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:520px;font-size:13.5px;">
+          <tr><th>Attraction</th><th>Priority</th><th>Real Time</th><th>Cost</th><th>Verdict</th></tr>
+          <tr><td><strong>Central Park</strong></td><td><span class="pri pri-essential">Essential</span></td><td>3&ndash;5 hrs</td><td>Free</td><td>Don&rsquo;t rush it</td></tr>
+          <tr><td><strong>Brooklyn Bridge</strong></td><td><span class="pri pri-essential">Essential</span></td><td>2&ndash;3 hrs</td><td>Free</td><td>Best free attraction</td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td><span class="pri pri-essential">Essential</span></td><td>2 hrs</td><td>$$$</td><td>Best observation deck overall</td></tr>
+          <tr><td><strong>9/11 Memorial</strong></td><td><span class="pri pri-essential">Essential</span></td><td>45&ndash;60 min</td><td>Free</td><td>Powerful and unforgettable</td></tr>
+          <tr><td><strong>Greenwich Village</strong></td><td><span class="pri pri-essential">Essential</span></td><td>2&ndash;4 hrs</td><td>Free</td><td>Where many fall in love with NYC</td></tr>
+          <tr><td><strong>DUMBO</strong></td><td><span class="pri pri-essential">Essential</span></td><td>2 hrs</td><td>Free</td><td>Most photogenic neighborhood</td></tr>
+          <tr><td><strong>Broadway</strong></td><td><span class="pri pri-essential">Essential</span></td><td>2.5&ndash;3 hrs</td><td>$$&ndash;$$$$</td><td>Uniquely New York</td></tr>
+          <tr><td><strong>SUMMIT One Vanderbilt</strong></td><td><span class="pri pri-high">Very High</span></td><td>2 hrs</td><td>$$$</td><td>Most unique deck</td></tr>
+          <tr><td><strong>High Line</strong></td><td><span class="pri pri-high">Very High</span></td><td>1.5&ndash;2 hrs</td><td>Free</td><td>Pair with Chelsea Market</td></tr>
+          <tr><td><strong>The Met</strong></td><td><span class="pri pri-high">High</span></td><td>4&ndash;6 hrs</td><td>$$$</td><td>World-class museum</td></tr>
+          <tr><td><strong>Times Square</strong></td><td><span class="pri pri-medium">Visit Once</span></td><td>30&ndash;60 min</td><td>Free</td><td>Visit, then move on</td></tr>
+          <tr><td><strong>Statue of Liberty</strong></td><td><span class="pri pri-medium">Depends</span></td><td>5&ndash;7 hrs</td><td>$$$</td><td>Huge time commitment</td></tr>
+          <tr><td><strong>Empire State Building</strong></td><td><span class="pri pri-medium">Medium</span></td><td>2 hrs</td><td>$$$</td><td>Choose for history, not the view</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PLAN SECTION -->
+      <h2 id="plan">Before You Choose Attractions</h2>
+
+      <h3>The Biggest Mistakes First-Time Visitors Make</h3>
+      <div class="table-wrap">
+        <table class="data-table mistake-table" style="min-width:360px;">
+          <tr><th>Mistake</th><th>Better Approach</th></tr>
+          <tr><td>Visiting 8 attractions in one day</td><td>Limit yourself to 2&ndash;3 major attractions</td></tr>
+          <tr><td>Buying tickets for multiple observation decks</td><td>Choose one paid deck and add free skyline viewpoints</td></tr>
+          <tr><td>Spending half a day in Times Square</td><td>Visit for 30&ndash;60 minutes, then explore nearby neighborhoods</td></tr>
+          <tr><td>Crossing Manhattan repeatedly</td><td>Group attractions by neighborhood</td></tr>
+          <tr><td>Eating beside major attractions</td><td>Walk 10&ndash;15 minutes away for better food and prices</td></tr>
+          <tr><td>Ignoring weather</td><td>Save observation decks for clear days if possible</td></tr>
+          <tr><td>Underestimating walking</td><td>Expect 15,000&ndash;25,000 steps per day</td></tr>
+        </table>
+      </div>
+
+      <h3>How Long Things Really Take</h3>
+      <p>One of the biggest planning mistakes is trusting the official visit time. That usually does not include security, queues, walking from the subway, or stopping for photos.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:340px;">
+          <tr><th>Attraction</th><th>Official Visit</th><th>Realistic Time</th></tr>
+          <tr><td>Central Park</td><td>1&ndash;2 hrs</td><td>3&ndash;5 hrs</td></tr>
+          <tr><td>Statue of Liberty + Ellis Island</td><td>3&ndash;4 hrs</td><td>5&ndash;7 hrs</td></tr>
+          <tr><td>Empire State Building</td><td>1 hr</td><td>2&ndash;3 hrs</td></tr>
+          <tr><td>Top of the Rock</td><td>1 hr</td><td>2 hrs</td></tr>
+          <tr><td>SUMMIT</td><td>1 hr</td><td>2&ndash;3 hrs at sunset</td></tr>
+          <tr><td>The Met</td><td>2 hrs</td><td>4&ndash;6 hrs</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>30 min</td><td>2&ndash;3 hrs with DUMBO</td></tr>
+          <tr><td>High Line</td><td>45 min</td><td>1.5&ndash;2 hrs with Chelsea Market</td></tr>
+        </table>
+      </div>
+      <p><strong>Rule of thumb:</strong> If an attraction advertises a one-hour visit, plan for at least two.</p>
+
+      <h3>Choose the Right Observation Deck</h3>
+      <p>Do not pay for three observation decks. Choose the one that matches your travel style. For a full breakdown, read our <a href="nyc-observation-decks-compared.html">NYC observation decks comparison guide</a>.</p>
+
+      <div class="obs-grid">
+        <div class="obs-card"><div class="oc-if">For the best overall skyline</div><h4>Top of the Rock</h4><p>Includes the Empire State Building and Central Park in your photos. The most balanced view in NYC.</p></div>
+        <div class="obs-card"><div class="oc-if">For the most unique experience</div><h4>SUMMIT One Vanderbilt</h4><p>Mirrors, immersive art, interactive rooms. An experience, not just a view.</p></div>
+        <div class="obs-card"><div class="oc-if">For the biggest adrenaline rush</div><h4>Edge</h4><p>Outdoor platform and glass floor extending beyond the building. Not for the faint-hearted.</p></div>
+        <div class="obs-card"><div class="oc-if">For the iconic experience</div><h4>Empire State Building</h4><p>Historic Art Deco building with global recognition. Choose it for the building, not the view.</p></div>
+        <div class="obs-card"><div class="oc-if">For downtown views</div><h4>One World Observatory</h4><p>Best if you are already exploring Lower Manhattan. Not worth crossing the city for alone.</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">My Recommendation</div>
+        <p><strong>Top of the Rock</strong> is the best choice for most first-time visitors. It offers the city&rsquo;s most balanced skyline, includes the Empire State Building in your photos, and works beautifully at sunset. Skip multiple observation decks unless you are a skyline enthusiast or photographer.</p>
+      </div>
+
+      <h3>Build Days Around Neighborhoods, Not Attractions</h3>
+      <div class="card-grid cols-2">
+        <div class="route-box">
+          <div class="rb-label">Midtown Icons <span class="rb-time">Full Day</span></div>
+          <div class="rb-flow">
+            <span class="rs">Bryant Park</span><span class="ra">&#8594;</span>
+            <span class="rs">NY Public Library</span><span class="ra">&#8594;</span>
+            <span class="rs">Grand Central</span><span class="ra">&#8594;</span>
+            <span class="rs">SUMMIT</span><span class="ra">&#8594;</span>
+            <span class="rs">Top of the Rock</span><span class="ra">&#8594;</span>
+            <span class="rs">Broadway</span>
+          </div>
+        </div>
+        <div class="route-box">
+          <div class="rb-label">Brooklyn Skyline Day <span class="rb-time">Half&ndash;Full Day</span></div>
+          <div class="rb-flow">
+            <span class="rs">Brooklyn Bridge</span><span class="ra">&#8594;</span>
+            <span class="rs">DUMBO</span><span class="ra">&#8594;</span>
+            <span class="rs">Time Out Market</span><span class="ra">&#8594;</span>
+            <span class="rs">Brooklyn Bridge Park</span><span class="ra">&#8594;</span>
+            <span class="rs">Heights Promenade</span><span class="ra">&#8594;</span>
+            <span class="rs">NYC Ferry</span>
+          </div>
+        </div>
+        <div class="route-box">
+          <div class="rb-label">Downtown History Day <span class="rb-time">Full Day</span></div>
+          <div class="rb-flow">
+            <span class="rs">Battery Park</span><span class="ra">&#8594;</span>
+            <span class="rs">Statue of Liberty</span><span class="ra">&#8594;</span>
+            <span class="rs">Wall Street</span><span class="ra">&#8594;</span>
+            <span class="rs">9/11 Memorial</span><span class="ra">&#8594;</span>
+            <span class="rs">One World Observatory</span>
+          </div>
+        </div>
+        <div class="route-box">
+          <div class="rb-label">West Side Walk <span class="rb-time">Half Day</span></div>
+          <div class="rb-flow">
+            <span class="rs">Little Island</span><span class="ra">&#8594;</span>
+            <span class="rs">Chelsea Market</span><span class="ra">&#8594;</span>
+            <span class="rs">High Line</span><span class="ra">&#8594;</span>
+            <span class="rs">Hudson Yards</span><span class="ra">&#8594;</span>
+            <span class="rs">Edge</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ICONIC SIGHTS -->
+      <h2 id="iconic">Iconic Sights</h2>
+      <p>These are the attractions that define a first visit to New York. Most should appear somewhere on your itinerary &mdash; but each deserves honest advice, not just a glowing recommendation.</p>
+
+      <!-- CENTRAL PARK -->
+      <div class="attr-card" id="central-park">
+        <div class="ac-head">
+          <span class="ac-num">1.</span>
+          <h3>Central Park</h3>
+          <span class="ac-pri"><span class="pri pri-essential">Essential</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">3&ndash;5 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">No</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Morning or late afternoon</div></div>
+          </div>
+          <p>Central Park is not one attraction &mdash; it is dozens. Most people arrive expecting a park and leave wishing they had planned more time. Lakes, bridges, quiet trails, street performers, skyline views, rowboats, gardens, and famous film locations make every section feel different. <strong>Don&rsquo;t try to see everything.</strong> Choose one section and explore it properly. The southern half is the most iconic; Bethesda Terrace, Bow Bridge, Sheep Meadow, and The Mall cover the highlights without requiring a full day.</p>
+          <p><strong>Best first-time route:</strong> Enter at 59th Street &rarr; Gapstow Bridge &rarr; The Pond &rarr; Bethesda Terrace &rarr; Bow Bridge &rarr; The Mall &rarr; Sheep Meadow. Allow 3&ndash;5 hours at an unhurried pace.</p>
+          <div class="plan-tip" style="background:#FFF9E8;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:15px;">
+            <strong style="font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;display:block;margin-bottom:4px;">Local Tip</strong>
+            Don&rsquo;t just walk the main paths. The smaller side trails are where the park feels magical. Also avoid visiting in the middle of a hot summer afternoon &mdash; early morning is always best.
+          </div>
+          <div class="pair-flow">
+            <strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong>
+            <span class="pair-stop">Fifth Avenue</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">The Met</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Upper East Side</span>
+          </div>
+        </div>
+        <div class="verdict-strip">Essential. This is the one attraction almost nobody regrets &mdash; and almost everyone wishes they had spent longer at.</div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/88/5d/43/fonte-bethesda-com-o.jpg?w=1400&h=-1&s=1" alt="Bethesda Terrace and Fountain, Central Park, New York City">
+        <div class="cap">Bethesda Terrace &mdash; the heart of Central Park and one of the most photographed spots in New York City.</div>
+      </div>
+
+      <!-- TIMES SQUARE -->
+      <div class="attr-card" id="times-square">
+        <div class="ac-head">
+          <span class="ac-num">2.</span>
+          <h3>Times Square</h3>
+          <span class="ac-pri"><span class="pri pri-medium">Visit Once</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;60 minutes</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">After dark</div></div>
+            <div class="sg-item"><div class="sg-label">Crowds</div><div class="sg-val">Extremely High</div></div>
+          </div>
+          <p>You absolutely should visit. You absolutely should not spend half your day here. The lights, energy, giant screens, and crowds create an atmosphere that is impossible to replicate elsewhere &mdash; but unless you are shopping or heading to a Broadway show, 30&ndash;60 minutes is genuinely enough. Visit once during daylight and again after sunset if you happen to be nearby. Night is when Times Square feels like Times Square.</p>
+          <p>Avoid eating here. Avoid shopping for souvenirs here. Walk 10 minutes to Bryant Park, Hell&rsquo;s Kitchen, Rockefeller Center, or Broadway for a far better use of your time.</p>
+        </div>
+        <div class="verdict-strip">Visit. Take photos. Enjoy the spectacle. Then leave.</div>
+      </div>
+
+      <!-- BROOKLYN BRIDGE -->
+      <div class="attr-card" id="brooklyn-bridge">
+        <div class="ac-head">
+          <span class="ac-num">3.</span>
+          <h3>Brooklyn Bridge</h3>
+          <span class="ac-pri"><span class="pri pri-essential">Essential</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunrise or sunset</div></div>
+            <div class="sg-item"><div class="sg-label">Best Season</div><div class="sg-val">Spring and Fall</div></div>
+          </div>
+          <p>The best free walk in New York City. Unlike observation decks, you are part of the skyline instead of looking at it from above. You get skyline views, historic architecture, East River views, Manhattan views, and Brooklyn views &mdash; all in one walk. Walk from Manhattan to Brooklyn so the skyline stays in front of you the entire way. The biggest mistake is returning immediately instead of exploring DUMBO, Brooklyn Bridge Park, and the Brooklyn Heights Promenade afterward.</p>
+          <div class="pair-flow">
+            <strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Perfect pairing:</strong>
+            <span class="pair-stop">Brooklyn Bridge</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">DUMBO</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Time Out Market</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Brooklyn Bridge Park</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Heights Promenade</span>
+          </div>
+        </div>
+        <div class="verdict-strip">Essential. If you skip this, you will miss one of the city&rsquo;s defining experiences.</div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/95/e9/ef/caption.jpg?w=1400&h=-1&s=1" alt="Brooklyn Bridge early morning walk, Manhattan skyline in background">
+        <div class="cap">The Brooklyn Bridge at 8 AM &mdash; start early and you will have the walkway largely to yourself.</div>
+      </div>
+
+      <!-- STATUE OF LIBERTY -->
+      <div class="attr-card" id="statue-of-liberty">
+        <div class="ac-head">
+          <span class="ac-num">4.</span>
+          <h3>Statue of Liberty and Ellis Island</h3>
+          <span class="ac-pri"><span class="pri pri-medium">Depends on Your Trip</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">5&ndash;7 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Strongly Recommended</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">First ferry</div></div>
+          </div>
+          <p>Worth it for history lovers and first-time visitors with 4+ days. Not automatically worth half a day for everyone. The biggest trade-off: this attraction consumes almost an entire sightseeing day, meaning you give up Greenwich Village, SoHo, the High Line, Chelsea, and Brooklyn. Ask yourself: do you want to visit the monument or simply see it? If the goal is seeing Lady Liberty, the <strong>Staten Island Ferry</strong> gives you excellent harbor views without sacrificing half your itinerary.</p>
+        </div>
+        <div class="verdict-strip">Worth it only if it is genuinely high on your bucket list. Otherwise, use that time exploring neighborhoods.</div>
+      </div>
+
+      <!-- TOP OF THE ROCK -->
+      <div class="attr-card" id="top-of-the-rock">
+        <div class="ac-head">
+          <span class="ac-num">5.</span>
+          <h3>Top of the Rock</h3>
+          <span class="ac-pri"><span class="pri pri-essential">Essential</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Yes</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">45 min before sunset</div></div>
+          </div>
+          <p>The best observation deck for most first-time visitors. Unlike the Empire State Building, you actually get the Empire State Building in your photos. You also see Central Park, Midtown skyline, Lower Manhattan, and the Hudson River &mdash; the most balanced skyline in NYC. Arrive about an hour before sunset. You will experience daylight, golden hour, sunset, and the city lights in one visit.</p>
+          <div class="pair-flow">
+            <strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong>
+            <span class="pair-stop">Rockefeller Center</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">St. Patrick&rsquo;s Cathedral</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Fifth Avenue</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Broadway</span>
+          </div>
+          <a class="btn btn-primary" style="display:inline-block;margin-top:12px;font-size:14px;padding:9px 18px;border-radius:9px;" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Top of the Rock on Viator</a>
+        </div>
+        <div class="verdict-strip">If you are only paying for one observation deck, choose this one.</div>
+      </div>
+
+      <!-- SUMMIT -->
+      <div class="attr-card" id="summit">
+        <div class="ac-head">
+          <span class="ac-num">6.</span>
+          <h3>SUMMIT One Vanderbilt</h3>
+          <span class="ac-pri"><span class="pri pri-high">Very High</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1.5&ndash;2.5 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Essential</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Late afternoon or sunset</div></div>
+          </div>
+          <p>SUMMIT is part observation deck, part immersive art installation. Instead of simply looking at the skyline, you walk through mirrored rooms, glass floors, floating balloons, and floor-to-ceiling windows. One of the few attractions that feels genuinely different from anything else in the city. Note: you will spend surprisingly little time outside, and the mirrored floors mean visitors should wear non-reflective clothing if photography is important.</p>
+          <div class="pair-flow">
+            <strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong>
+            <span class="pair-stop">Grand Central</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">SUMMIT</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Bryant Park</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Broadway</span>
+          </div>
+          <a class="btn btn-primary" style="display:inline-block;margin-top:12px;font-size:14px;padding:9px 18px;border-radius:9px;" href="https://www.viator.com/tours/New-York-City/SUMMIT-One-Vanderbilt-Experience-Ticket/d687-77354P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve SUMMIT on Viator</a>
+        </div>
+        <div class="verdict-strip">Choose SUMMIT for the most memorable experience. Choose Top of the Rock for the best skyline.</div>
+      </div>
+
+      <!-- EMPIRE STATE BUILDING -->
+      <div class="attr-card" id="empire-state">
+        <div class="ac-head">
+          <span class="ac-num">7.</span>
+          <h3>Empire State Building</h3>
+          <span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Early morning</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Recommended</div></div>
+          </div>
+          <p>Visit for the history and the iconic building &mdash; not because it has the best observation deck. The Art Deco lobby, history, and global recognition make it one of NYC&rsquo;s true icons. The biggest drawback: you cannot see the Empire State Building because you are standing on it. That is why many visitors prefer Top of the Rock. Choose the Empire State Building for the experience of being inside a piece of history, not for the view.</p>
+          <a class="btn btn-primary" style="display:inline-block;margin-top:10px;font-size:14px;padding:9px 18px;border-radius:9px;" href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Empire State Building on Viator</a>
+        </div>
+        <div class="verdict-strip">Excellent. Just do not choose it solely because it is famous.</div>
+      </div>
+
+      <!-- EDGE -->
+      <div class="attr-card" id="edge">
+        <div class="ac-head">
+          <span class="ac-num">8.</span>
+          <h3>Edge</h3>
+          <span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1.5&ndash;2 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset</div></div>
+            <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Thrill-seekers</div></div>
+          </div>
+          <p>The best observation deck for thrill-seekers. The outdoor platform extends dramatically beyond the building, creating one of NYC&rsquo;s most exciting viewpoints. Less compelling if you are mainly after classic skyline photography. The Midtown skyline from Edge is less balanced than the view from Top of the Rock &mdash; but the experience of standing on a glass floor suspended over the city is genuinely unlike anything else.</p>
+          <a class="btn btn-primary" style="display:inline-block;margin-top:10px;font-size:14px;padding:9px 18px;border-radius:9px;" href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve Edge on Viator</a>
+        </div>
+        <div class="verdict-strip">Fantastic. Just not the first deck I would recommend.</div>
+      </div>
+
+      <!-- ONE WORLD -->
+      <div class="attr-card" id="one-world">
+        <div class="ac-head">
+          <span class="ac-num">9.</span>
+          <h3>One World Observatory</h3>
+          <span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2 hours</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Morning</div></div>
+            <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Downtown days</div></div>
+          </div>
+          <p>Worth visiting if you are already exploring Lower Manhattan, but not a first recommendation for a paid observation deck. The elevator experience is excellent and the views over New York Harbor, Brooklyn, and Lower Manhattan are spectacular. Many visitors find the indoor experience less immersive than the outdoor decks at Top of the Rock or Edge.</p>
+          <div class="pair-flow">
+            <strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong>
+            <span class="pair-stop">9/11 Memorial</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Oculus</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Wall Street</span><span class="pair-arrow">&#8594;</span>
+            <span class="pair-stop">Battery Park</span>
+          </div>
+          <a class="btn btn-primary" style="display:inline-block;margin-top:10px;font-size:14px;padding:9px 18px;border-radius:9px;" href="https://www.viator.com/tours/New-York-City/One-World-Observatory-Admission/d687-8747ONEWORLD?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve One World Observatory on Viator</a>
+        </div>
+        <div class="verdict-strip">Excellent addition to a Downtown day. Not worth crossing the city just for this.</div>
+      </div>
+
+      <!-- 9/11 MEMORIAL -->
+      <div class="attr-card" id="911-memorial">
+        <div class="ac-head">
+          <span class="ac-num">10.</span>
+          <h3>9/11 Memorial</h3>
+          <span class="ac-pri"><span class="pri pri-essential">Essential</span></span>
+        </div>
+        <div class="ac-body">
+          <div class="snap-grid">
+            <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">45&ndash;60 min</div></div>
+            <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+            <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">No</div></div>
+            <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Morning or evening</div></div>
+          </div>
+          <p>One of the most powerful places in New York. The memorial is remarkably simple, respectful, and moving. Even visitors who were not expecting an emotional experience often leave saying it became one of the highlights of their trip. It is quieter than the surrounding Financial District, and the sound of the waterfalls creates a surprisingly peaceful atmosphere. Do not rush through. Do not treat it as a photo stop. Allow yourself time to pause here.</p>
+        </div>
+        <div class="verdict-strip">Essential. Allow yourself time to pause rather than rushing to the next attraction.</div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- MUSEUMS -->
+      <h2 id="museums">Museums</h2>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/0d/20/e5/saks-fifth-avenue-perfect.jpg?w=1400&h=-1&s=1" alt="Fifth Avenue, Midtown Manhattan, New York City">
+        <div class="cap">Fifth Avenue is the perfect walking connector between observation decks, museums, and Rockefeller Center.</div>
+      </div>
+
+      <div class="attr-grid">
+        <div class="attr-card" id="the-met">
+          <div class="ac-head"><span class="ac-num">11.</span><h3>The Metropolitan Museum of Art</h3><span class="ac-pri"><span class="pri pri-high">High Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">4&ndash;6 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Weekday mornings</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Art and history lovers</div></div>
+            </div>
+            <p>One of the world&rsquo;s best museums if museums genuinely interest you. The Met is not one museum &mdash; it is dozens. Egyptian temples, medieval armor, European masterpieces, rooftop views, Asian art, American wings. Pick 2&ndash;3 sections that genuinely interest you. You will enjoy them far more than trying to see everything. Don&rsquo;t visit after already walking 20,000 steps.</p>
+            <div class="pair-flow"><strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong><span class="pair-stop">Central Park (enter through the park)</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Upper East Side cafes</span></div>
+          </div>
+          <div class="verdict-strip">World-class. Only worth half a day if museums genuinely interest you.</div>
+        </div>
+
+        <div class="attr-card" id="moma">
+          <div class="ac-head"><span class="ac-num">12.</span><h3>Museum of Modern Art (MoMA)</h3><span class="ac-pri"><span class="pri pri-high">High Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Weekday mornings</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Modern art lovers</div></div>
+            </div>
+            <p>Smaller and easier to digest than The Met. A better choice if you only have time for one museum and enjoy modern art. You will find many of the world&rsquo;s most recognizable modern artworks in just a few hours. Avoid visiting after a full day of sightseeing &mdash; museum fatigue is real.</p>
+          </div>
+          <div class="verdict-strip">If modern art excites you, MoMA is outstanding. Otherwise, explore Greenwich Village instead.</div>
+        </div>
+
+        <div class="attr-card" id="911-museum">
+          <div class="ac-head"><span class="ac-num">13.</span><h3>9/11 Museum</h3><span class="ac-pri"><span class="pri pri-high">High Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Highly Recommended</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Adults, older teenagers</div></div>
+            </div>
+            <p>Outstanding museum, but emotionally demanding. This is not just a museum &mdash; it is a deeply personal account of one of the defining events of modern history. Do not underestimate how emotionally intense it can be, and do not plan an action-packed afternoon immediately afterward. Keep the rest of your day light: Battery Park, Hudson River waterfront, dinner in Tribeca.</p>
+          </div>
+          <div class="verdict-strip">One of NYC&rsquo;s best museums. Plan your day around its emotional weight.</div>
+        </div>
+
+        <div class="attr-card" id="amnh">
+          <div class="ac-head"><span class="ac-num">14.</span><h3>American Museum of Natural History</h3><span class="ac-pri"><span class="pri pri-high">High Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">3&ndash;4 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Highlights</div><div class="sg-val">Dinosaurs, Blue Whale, Space</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Families</div></div>
+            </div>
+            <p>One of the best family attractions in NYC and an excellent rainy-day option. The Dinosaur Halls, Hall of Ocean Life Blue Whale, Space Exhibits, and Wildlife Halls are the standout sections. Arrive before opening to beat school groups.</p>
+            <div class="pair-flow"><strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong><span class="pair-stop">Central Park</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Upper West Side</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Riverside Park</span></div>
+          </div>
+          <div class="verdict-strip">One of the city&rsquo;s best museums for families and children.</div>
+        </div>
+
+        <div class="attr-card" id="guggenheim">
+          <div class="ac-head"><span class="ac-num">15.</span><h3>Guggenheim Museum</h3><span class="ac-pri"><span class="pri pri-low">If You Have Time</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1&ndash;2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Architecture lovers</div></div>
+              <div class="sg-item"><div class="sg-label">Skip If</div><div class="sg-val">Already visiting Met and MoMA</div></div>
+            </div>
+            <p>Visit as much for the Frank Lloyd Wright building as for the exhibitions. Excellent museum, but not essential on your first NYC visit. Only prioritize it if architecture is a genuine interest.</p>
+          </div>
+          <div class="verdict-strip">Excellent museum. Not essential on a first trip.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HIGH LINE & WALKING -->
+      <h2 id="walking">High Line, Chelsea Market and Little Island</h2>
+
+      <div class="attr-grid">
+        <div class="attr-card" id="high-line">
+          <div class="ac-head"><span class="ac-num">16.</span><h3>The High Line</h3><span class="ac-pri"><span class="pri pri-high">Very High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1.5&ndash;2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Morning or evening</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Couples, photographers</div></div>
+            </div>
+            <p>One of NYC&rsquo;s smartest urban transformations. You walk through gardens, public art installations, old railway tracks, and constantly changing city views. It is much more than an elevated park. Walk south to north &mdash; the skyline gradually becomes more dramatic as you approach Hudson Yards. Avoid Saturday afternoon and walking it in the hottest part of the day.</p>
+            <div class="pair-flow"><strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong><span class="pair-stop">Little Island</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">High Line</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Chelsea Market</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Edge</span></div>
+          </div>
+          <div class="verdict-strip">One of NYC&rsquo;s highest-value free attractions. Do not end your visit without exploring Chelsea.</div>
+        </div>
+
+        <div class="attr-card" id="chelsea-market">
+          <div class="ac-head"><span class="ac-num">17.</span><h3>Chelsea Market</h3><span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">45&ndash;90 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$&ndash;$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Weekday lunch</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Food lovers</div></div>
+            </div>
+            <p>Excellent food stop. Not a destination by itself. Think of it as a stylish food hall rather than an authentic neighborhood market. The variety is excellent but prices reflect the location. Do not visit only for Chelsea Market &mdash; pair it with the High Line and Hudson River Park. Avoid peak weekend lunch hours.</p>
+          </div>
+          <div class="verdict-strip">Worth stopping at. Just do not build your day around it.</div>
+        </div>
+
+        <div class="attr-card" id="little-island">
+          <div class="ac-head"><span class="ac-num">18.</span><h3>Little Island</h3><span class="ac-pri"><span class="pri pri-medium">Worth It</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;60 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset</div></div>
+              <div class="sg-item"><div class="sg-label">Skip If</div><div class="sg-val">Crossing the city just for it</div></div>
+            </div>
+            <p>Small, scenic, and surprisingly relaxing. The elevated landscaping, river views, and creative design make it feel completely different from other city parks. An excellent addition to a West Side walking day &mdash; but not a standalone destination worth a dedicated trip.</p>
+          </div>
+          <div class="verdict-strip">A perfect supporting attraction &mdash; not a standalone destination.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- NEIGHBORHOODS -->
+      <h2 id="neighborhoods">Neighborhoods and City Experiences</h2>
+      <p>This is where many first-time visitors make the biggest planning mistake. They focus almost entirely on attractions and treat neighborhoods as the space between them. Do the opposite. Some of New York&rsquo;s best memories come from wandering streets, discovering restaurants, and stumbling across places you never planned to visit.</p>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/9e/8e/01/caption.jpg?w=1400&h=-1&s=1" alt="Bryant Park, Midtown Manhattan, New York City">
+        <div class="cap">Bryant Park &mdash; the perfect place to slow down in the middle of a busy Midtown sightseeing day.</div>
+      </div>
+
+      <div class="attr-grid">
+        <div class="attr-card" id="grand-central">
+          <div class="ac-head"><span class="ac-num">19.</span><h3>Grand Central Terminal</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;60 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Morning or evening</div></div>
+              <div class="sg-item"><div class="sg-label">Don&rsquo;t Miss</div><div class="sg-val">Celestial ceiling, Dining Concourse</div></div>
+            </div>
+            <p>Far more than a train station. Most people expect a quick photo &mdash; instead they end up exploring the Main Concourse, Celestial ceiling, Whispering Gallery, Vanderbilt Hall, and the lower-level food hall. Walking in, taking one picture, and leaving is one of the biggest mistakes. Give it time.</p>
+          </div>
+          <div class="verdict-strip">One of Midtown&rsquo;s best free attractions.</div>
+        </div>
+
+        <div class="attr-card" id="bryant-park">
+          <div class="ac-head"><span class="ac-num">20.</span><h3>Bryant Park</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;60 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Lunch or late afternoon</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Coffee breaks, families</div></div>
+            </div>
+            <p>Bryant Park is not exciting. It is relaxing. That is exactly why it belongs on your itinerary &mdash; every Midtown itinerary benefits from a quiet pause. In winter, the holiday market and skating rink make it one of the city&rsquo;s most festive spots.</p>
+          </div>
+          <div class="verdict-strip">One of Midtown&rsquo;s smartest stops.</div>
+        </div>
+
+        <div class="attr-card" id="ny-public-library">
+          <div class="ac-head"><span class="ac-num">21.</span><h3>New York Public Library</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;45 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Don&rsquo;t Miss</div><div class="sg-val">Rose Main Reading Room</div></div>
+              <div class="sg-item"><div class="sg-label">Pair With</div><div class="sg-val">Bryant Park (next door)</div></div>
+            </div>
+            <p>Worth visiting even if you never open a book. The Rose Main Reading Room, marble staircases, stone lions outside, and historic exhibitions make it one of Midtown&rsquo;s most beautiful stops. Quick, beautiful, free, and easy.</p>
+          </div>
+          <div class="verdict-strip">Quick, beautiful, free. Easy recommendation.</div>
+        </div>
+
+        <div class="attr-card" id="rockefeller-center">
+          <div class="ac-head"><span class="ac-num">22.</span><h3>Rockefeller Center</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;60 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free (plaza)</div></div>
+              <div class="sg-item"><div class="sg-label">Best Season</div><div class="sg-val">Christmas</div></div>
+              <div class="sg-item"><div class="sg-label">Note</div><div class="sg-val">Top of Rock is extra</div></div>
+            </div>
+            <p>Visit even if you are not going to Top of the Rock. Famous architecture, seasonal decorations, ice skating in winter, NBC Studios, and a natural walking location in Midtown. During December it becomes one of NYC&rsquo;s absolute must-see locations.</p>
+          </div>
+          <div class="verdict-strip">Excellent stop that naturally fits a Midtown day.</div>
+        </div>
+
+        <div class="attr-card" id="fifth-avenue">
+          <div class="ac-head"><span class="ac-num">23.</span><h3>Fifth Avenue</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">45&ndash;90 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free to walk</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Window shopping, architecture</div></div>
+              <div class="sg-item"><div class="sg-label">Skip If</div><div class="sg-val">Expecting bargains</div></div>
+            </div>
+            <p>Better for window shopping and architecture than actually shopping. Pair it with Rockefeller Center, St. Patrick&rsquo;s Cathedral, Central Park, and the Plaza for a natural Midtown walking route. Worth walking &mdash; not worth dedicating half a day.</p>
+          </div>
+          <div class="verdict-strip">Worth walking. Not worth dedicating half a day.</div>
+        </div>
+
+        <div class="attr-card" id="broadway">
+          <div class="ac-head"><span class="ac-num">24.</span><h3>Broadway</h3><span class="ac-pri"><span class="pri pri-essential">Essential</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2.5&ndash;3 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$&ndash;$$$$</div></div>
+              <div class="sg-item"><div class="sg-label">Reservation</div><div class="sg-val">Strongly Recommended</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Everyone</div></div>
+            </div>
+            <p>Broadway is not just entertainment &mdash; it is one of the experiences that makes New York feel different from every other city. Even people who do not usually watch musicals often leave impressed. Matinee performances free up your evening; evening shows work perfectly after a lighter sightseeing day. Avoid overpriced resale tickets &mdash; check the official box office first.</p>
+          </div>
+          <div class="verdict-strip">One of the highest-value experiences in NYC. If your budget allows one expensive experience, make it a Broadway show.</div>
+        </div>
+
+        <div class="attr-card" id="greenwich-village">
+          <div class="ac-head"><span class="ac-num">25.</span><h3>Greenwich Village</h3><span class="ac-pri"><span class="pri pri-essential">Essential</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;4 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Couples, food lovers</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Evening</div></div>
+            </div>
+            <p>This is where many visitors fall in love with New York. Unlike Midtown, Greenwich Village is not about famous attractions &mdash; it is about atmosphere. Tree-lined streets, brownstones, jazz clubs, independent cafes, and Washington Square Park. Do not walk straight through. Do not skip coffee. Do not treat it as somewhere on the way to something else.</p>
+            <div class="pair-flow"><strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong><span class="pair-stop">Washington Square Park</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">West Village</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">SoHo</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Chelsea</span></div>
+          </div>
+          <div class="verdict-strip">Do not schedule this. Experience it.</div>
+        </div>
+
+        <div class="attr-card" id="soho">
+          <div class="ac-head"><span class="ac-num">26.</span><h3>SoHo</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free to wander</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Shopping, photography, architecture</div></div>
+              <div class="sg-item"><div class="sg-label">Pair With</div><div class="sg-val">Greenwich Village, Nolita</div></div>
+            </div>
+            <p>One of NYC&rsquo;s best neighborhoods for simply wandering. The cast-iron buildings and side streets are often more memorable than the shopping itself. Excellent half-day neighborhood.</p>
+          </div>
+          <div class="verdict-strip">Excellent half-day neighborhood.</div>
+        </div>
+
+        <div class="attr-card" id="chinatown">
+          <div class="ac-head"><span class="ac-num">27.</span><h3>Chinatown</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Food lovers</div></div>
+              <div class="sg-item"><div class="sg-label">Avoid</div><div class="sg-val">Eating near Canal Street</div></div>
+            </div>
+            <p>One of NYC&rsquo;s best food neighborhoods. Some of the city&rsquo;s best and most affordable meals are here. Explore side streets rather than the main roads near Canal Street, which tend toward tourist pricing. Come hungry &mdash; this is one of the best-value experiences in the city.</p>
+          </div>
+          <div class="verdict-strip">Come hungry.</div>
+        </div>
+
+        <div class="attr-card" id="little-italy">
+          <div class="ac-head"><span class="ac-num">28.</span><h3>Little Italy</h3><span class="ac-pri"><span class="pri pri-low">Low Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">20&ndash;30 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Use</div><div class="sg-val">Walk through it</div></div>
+              <div class="sg-item"><div class="sg-label">Avoid</div><div class="sg-val">Expecting the city&rsquo;s best Italian food</div></div>
+            </div>
+            <p>Pleasant to walk through, but do not build your day around it. It is directly beside Chinatown, which makes it a natural walk-through. Take a few photos, then eat elsewhere unless you have researched a specific restaurant.</p>
+          </div>
+          <div class="verdict-strip">Nice addition. Not a destination.</div>
+        </div>
+
+        <div class="attr-card" id="dumbo">
+          <div class="ac-head"><span class="ac-num">29.</span><h3>DUMBO</h3><span class="ac-pri"><span class="pri pri-essential">Essential</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunrise or sunset</div></div>
+              <div class="sg-item"><div class="sg-label">Don&rsquo;t Miss</div><div class="sg-val">Washington St, Jane&rsquo;s Carousel</div></div>
+            </div>
+            <p>One of the most photogenic neighborhoods in New York City. Do not leave immediately after taking the famous Washington Street bridge photo &mdash; the waterfront, Brooklyn Bridge Park, Pebble Beach, and Jane&rsquo;s Carousel are all within a short walk and often more enjoyable than the bridge photo itself.</p>
+            <div class="pair-flow"><strong style="font-size:13px;color:var(--text-secondary);margin-right:4px;">Pair with:</strong><span class="pair-stop">Brooklyn Bridge</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">DUMBO</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Brooklyn Bridge Park</span><span class="pair-arrow">&#8594;</span><span class="pair-stop">Heights Promenade</span></div>
+          </div>
+          <div class="verdict-strip">Absolutely essential.</div>
+        </div>
+
+        <div class="attr-card" id="williamsburg">
+          <div class="ac-head"><span class="ac-num">30.</span><h3>Williamsburg</h3><span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">Half day</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Coffee, food, nightlife</div></div>
+              <div class="sg-item"><div class="sg-label">Skip If</div><div class="sg-val">Short trip</div></div>
+            </div>
+            <p>Worth visiting if you have four or more days in NYC. Independent cafes, vintage shops, waterfront parks, and excellent restaurants create a more local side of New York. Not essential for every first-time visitor, but very rewarding if you have the time.</p>
+          </div>
+          <div class="verdict-strip">Not essential for every first-time visitor. Very rewarding if you have time.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- OUTDOORS -->
+      <h2 id="outdoors">Waterfronts, Ferries and Outdoor Experiences</h2>
+      <p>If there is one category that first-time visitors consistently underestimate, it is New York&rsquo;s waterfronts. Some of the city&rsquo;s best skyline views are completely free.</p>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/de/65/5d/20170703-133528-largejpg.jpg?w=1400&h=-1&s=1" alt="Coney Island boardwalk and beach, Brooklyn, New York">
+        <div class="cap">Coney Island in summer &mdash; the boardwalk, beach, and Luna Park make for a completely different kind of New York day.</div>
+      </div>
+
+      <div class="attr-grid">
+        <div class="attr-card" id="staten-island-ferry">
+          <div class="ac-head"><span class="ac-num">31.</span><h3>Staten Island Ferry</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1&ndash;1.5 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Skyline views, budget travelers</div></div>
+            </div>
+            <p>One of the best free experiences in New York. You get Statue of Liberty views, Lower Manhattan skyline, harbor views, and a real commuter ferry experience &mdash; without paying for a sightseeing cruise. Stand outside rather than inside the cabin. Board the return ferry immediately rather than spending time on Staten Island itself. If your goal is seeing the Statue of Liberty rather than visiting it, this is one of the best values in NYC.</p>
+          </div>
+          <div class="verdict-strip">Excellent value. One of the best free experiences in the city.</div>
+        </div>
+
+        <div class="attr-card" id="roosevelt-island-tram">
+          <div class="ac-head"><span class="ac-num">32.</span><h3>Roosevelt Island Tram</h3><span class="ac-pri"><span class="pri pri-medium">Worth It</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1&ndash;2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Subway fare</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Families, photographers</div></div>
+            </div>
+            <p>A surprisingly memorable ride that many first-time visitors overlook. The tram offers aerial views of the East River, Midtown skyline, and Queensboro Bridge. Once on Roosevelt Island, you will find waterfront paths and a much quieter atmosphere than Manhattan. One of NYC&rsquo;s most underrated experiences.</p>
+          </div>
+          <div class="verdict-strip">Excellent value. One of NYC&rsquo;s most underrated experiences.</div>
+        </div>
+
+        <div class="attr-card" id="governors-island">
+          <div class="ac-head"><span class="ac-num">33.</span><h3>Governors Island</h3><span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">3&ndash;5 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Ferry (often free)</div></div>
+              <div class="sg-item"><div class="sg-label">Best Season</div><div class="sg-val">Spring&ndash;Fall</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Families, cycling, picnics</div></div>
+            </div>
+            <p>Fantastic if you have four or more days. Think of it as a giant waterfront park with skyline views, hammocks, art installations, historic buildings, and bike paths. Wonderful &mdash; just not essential on a short itinerary.</p>
+          </div>
+          <div class="verdict-strip">Wonderful. Not essential on a short itinerary.</div>
+        </div>
+
+        <div class="attr-card" id="brooklyn-bridge-park">
+          <div class="ac-head"><span class="ac-num">34.</span><h3>Brooklyn Bridge Park</h3><span class="ac-pri"><span class="pri pri-essential">Essential</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">1&ndash;2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset and blue hour</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Everyone</div></div>
+            </div>
+            <p>The best free skyline viewpoint in New York City. This is where many visitors take their favorite NYC photos. Manhattan skyline, Brooklyn Bridge, waterfront promenades, lawns, Jane&rsquo;s Carousel, and Pebble Beach. Do not just cross the Brooklyn Bridge &mdash; spend time here. Do not leave after Washington Street, and do not miss sunset.</p>
+          </div>
+          <div class="verdict-strip">Don&rsquo;t just cross the Brooklyn Bridge. Spend time here.</div>
+        </div>
+
+        <div class="attr-card" id="brooklyn-heights-promenade">
+          <div class="ac-head"><span class="ac-num">35.</span><h3>Brooklyn Heights Promenade</h3><span class="ac-pri"><span class="pri pri-high">High</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;45 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best Time</div><div class="sg-val">Sunset</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Couples, sunset walks</div></div>
+            </div>
+            <p>One of the most peaceful skyline viewpoints in NYC. Unlike observation decks, you can sit, relax, and enjoy the skyline for as long as you like. Simple, beautiful, and highly recommended.</p>
+          </div>
+          <div class="verdict-strip">Simple. Beautiful. Highly recommended.</div>
+        </div>
+
+        <div class="attr-card" id="battery-park">
+          <div class="ac-head"><span class="ac-num">36.</span><h3>Battery Park</h3><span class="ac-pri"><span class="pri pri-medium">Worth Visiting</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">30&ndash;45 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Ferry departures, harbor views</div></div>
+              <div class="sg-item"><div class="sg-label">Pair With</div><div class="sg-val">Statue of Liberty, Staten Island Ferry</div></div>
+            </div>
+            <p>More useful as a starting point than as a destination. Worth walking through before a Downtown sightseeing day, but do not plan half a day here.</p>
+          </div>
+          <div class="verdict-strip">Worth walking through. Not a destination.</div>
+        </div>
+
+        <div class="attr-card" id="wall-street">
+          <div class="ac-head"><span class="ac-num">37.</span><h3>Wall Street and the Financial District</h3><span class="ac-pri"><span class="pri pri-medium">Worth Visiting</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">45&ndash;90 min</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Don&rsquo;t Miss</div><div class="sg-val">NYSE, Federal Hall, Trinity Church</div></div>
+              <div class="sg-item"><div class="sg-label">Avoid</div><div class="sg-val">30 min queue for a Bull photo</div></div>
+            </div>
+            <p>Better for architecture and history than for spending a long afternoon. Worth walking through as part of a Downtown day. The Charging Bull is iconic but draws enormous crowds &mdash; a photo is nice but not worth 30 minutes of waiting.</p>
+          </div>
+          <div class="verdict-strip">Interesting. Not an all-day destination.</div>
+        </div>
+
+        <div class="attr-card" id="prospect-park">
+          <div class="ac-head"><span class="ac-num">38.</span><h3>Prospect Park</h3><span class="ac-pri"><span class="pri pri-medium">Medium Priority</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2&ndash;3 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Repeat visitors, families</div></div>
+              <div class="sg-item"><div class="sg-label">Skip If</div><div class="sg-val">First short trip</div></div>
+            </div>
+            <p>If Central Park feels like Manhattan&rsquo;s living room, Prospect Park feels like Brooklyn&rsquo;s backyard. Excellent park &mdash; lower priority than Central Park for first-time visitors.</p>
+          </div>
+          <div class="verdict-strip">Excellent park. Lower priority on a first visit.</div>
+        </div>
+
+        <div class="attr-card" id="brooklyn-botanic-garden">
+          <div class="ac-head"><span class="ac-num">39.</span><h3>Brooklyn Botanic Garden</h3><span class="ac-pri"><span class="pri pri-medium">Seasonal</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">2 hours</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">$$</div></div>
+              <div class="sg-item"><div class="sg-label">Best Season</div><div class="sg-val">Spring</div></div>
+              <div class="sg-item"><div class="sg-label">Best For</div><div class="sg-val">Cherry blossom season, photography</div></div>
+            </div>
+            <p>One of NYC&rsquo;s best seasonal attractions. Wonderful in spring during cherry blossom season. Less essential during colder months.</p>
+          </div>
+          <div class="verdict-strip">Wonderful in spring. Less essential during winter.</div>
+        </div>
+
+        <div class="attr-card" id="coney-island">
+          <div class="ac-head"><span class="ac-num">40.</span><h3>Coney Island</h3><span class="ac-pri"><span class="pri pri-medium">Summer Only</span></span></div>
+          <div class="ac-body">
+            <div class="snap-grid">
+              <div class="sg-item"><div class="sg-label">Time</div><div class="sg-val">Half day</div></div>
+              <div class="sg-item"><div class="sg-label">Cost</div><div class="sg-val">Free (rides extra)</div></div>
+              <div class="sg-item"><div class="sg-label">Best Season</div><div class="sg-val">Summer</div></div>
+              <div class="sg-item"><div class="sg-label">Don&rsquo;t Miss</div><div class="sg-val">Boardwalk, Nathan&rsquo;s Famous</div></div>
+            </div>
+            <p>Fun, nostalgic, and completely different from Manhattan &mdash; but only worth the journey if you have enough time. Skip if you are visiting during winter or only have three days. The boardwalk, Luna Park rides, Nathan&rsquo;s Famous hot dogs, and the beach make for a memorable summer day.</p>
+          </div>
+          <div class="verdict-strip">Worth it for longer trips. Not a first-priority attraction.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BY TRAVEL STYLE -->
+      <h2 id="by-style">Best Things to Do by Travel Style</h2>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">If You Only Have 2 Days</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>1</td><td>Central Park</td></tr>
+              <tr><td>2</td><td>Brooklyn Bridge + DUMBO</td></tr>
+              <tr><td>3</td><td>Top of the Rock (or SUMMIT)</td></tr>
+              <tr><td>4</td><td>Times Square (30 min)</td></tr>
+              <tr><td>5</td><td>Greenwich Village</td></tr>
+              <tr><td>6</td><td>Broadway (if budget allows)</td></tr>
+              <tr><td>7</td><td>9/11 Memorial</td></tr>
+            </table>
+          </div>
+          <p style="font-size:14px;margin-top:10px;color:var(--error);font-weight:600;">Skip: Statue of Liberty, Governors Island, Coney Island, multiple museums, multiple decks.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">If You Have 3&ndash;5 Days &mdash; Add</div>
+          <ul class="card-list">
+            <li>The Met or MoMA</li>
+            <li>High Line</li>
+            <li>Chelsea Market</li>
+            <li>Grand Central</li>
+            <li>Bryant Park</li>
+            <li>Staten Island Ferry</li>
+            <li>Roosevelt Island Tram</li>
+            <li>Williamsburg</li>
+            <li>American Museum of Natural History</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Couples</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>Brooklyn Bridge at sunset</td><td>Iconic skyline walk</td></tr>
+              <tr><td>DUMBO</td><td>Romantic waterfront</td></tr>
+              <tr><td>Greenwich Village</td><td>Cafes and quiet streets</td></tr>
+              <tr><td>Central Park (Bow Bridge)</td><td>Rowboats and Sheep Meadow</td></tr>
+              <tr><td>Broadway</td><td>Memorable evening</td></tr>
+              <tr><td>Top of the Rock</td><td>Sunset skyline</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Families</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>Central Park</td><td>Playgrounds, zoo, open space</td></tr>
+              <tr><td>Museum of Natural History</td><td>Dinosaurs, interactive exhibits</td></tr>
+              <tr><td>Staten Island Ferry</td><td>Fun and free</td></tr>
+              <tr><td>Brooklyn Bridge Park</td><td>Carousel and playgrounds</td></tr>
+              <tr><td>SUMMIT</td><td>Interactive experience</td></tr>
+              <tr><td>Coney Island</td><td>Summer only</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best for Photographers</div>
+          <ul class="card-list">
+            <li><strong>Sunrise:</strong> Brooklyn Bridge, DUMBO, Central Park</li>
+            <li><strong>Golden Hour:</strong> Top of the Rock, Brooklyn Heights Promenade, Little Island</li>
+            <li><strong>Blue Hour:</strong> Brooklyn Bridge Park, Times Square</li>
+            <li><strong>Night:</strong> Times Square, Rockefeller Center, Fifth Avenue</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best Free Experiences</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>Central Park</td><td>Free</td></tr>
+              <tr><td>Brooklyn Bridge</td><td>Free</td></tr>
+              <tr><td>DUMBO</td><td>Free</td></tr>
+              <tr><td>Brooklyn Bridge Park</td><td>Free</td></tr>
+              <tr><td>Times Square</td><td>Free</td></tr>
+              <tr><td>Bryant Park</td><td>Free</td></tr>
+              <tr><td>Grand Central Terminal</td><td>Free</td></tr>
+              <tr><td>NY Public Library</td><td>Free</td></tr>
+              <tr><td>Staten Island Ferry</td><td>Free</td></tr>
+              <tr><td>High Line</td><td>Free</td></tr>
+              <tr><td>Roosevelt Island Tram</td><td>Subway fare</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEASONAL TABLE -->
+      <h3>Best Things to Do by Season</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;font-size:13.5px;">
+          <tr><th>Season</th><th>Prioritize</th><th>Skip or Reconsider</th></tr>
+          <tr><td><strong>Spring</strong></td><td>Central Park, Brooklyn Botanic Garden, High Line</td><td>Observation decks on perfect weather days (always prefer outdoors)</td></tr>
+          <tr><td><strong>Summer</strong></td><td>Governors Island, Brooklyn Bridge Park, Little Island</td><td>Long midday walks in extreme heat</td></tr>
+          <tr><td><strong>Fall</strong></td><td>Central Park, Greenwich Village, Brooklyn Bridge</td><td>Very little &mdash; this is arguably the best season</td></tr>
+          <tr><td><strong>Winter</strong></td><td>Broadway, museums, Rockefeller Center, Bryant Park Winter Village</td><td>Governors Island (limited), Coney Island</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- TOP 25 LIST -->
+      <h2 id="top25">My Top 25 Things to Do in NYC</h2>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">1&ndash;13</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>1</td><td>Central Park</td></tr>
+              <tr><td>2</td><td>Brooklyn Bridge</td></tr>
+              <tr><td>3</td><td>Top of the Rock</td></tr>
+              <tr><td>4</td><td>Greenwich Village</td></tr>
+              <tr><td>5</td><td>Brooklyn Bridge Park</td></tr>
+              <tr><td>6</td><td>Broadway</td></tr>
+              <tr><td>7</td><td>9/11 Memorial</td></tr>
+              <tr><td>8</td><td>DUMBO</td></tr>
+              <tr><td>9</td><td>The Met</td></tr>
+              <tr><td>10</td><td>High Line</td></tr>
+              <tr><td>11</td><td>SUMMIT One Vanderbilt</td></tr>
+              <tr><td>12</td><td>Grand Central Terminal</td></tr>
+              <tr><td>13</td><td>Staten Island Ferry</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">14&ndash;25</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table style-table" style="font-size:13.5px;">
+              <tr><td>14</td><td>Bryant Park</td></tr>
+              <tr><td>15</td><td>MoMA</td></tr>
+              <tr><td>16</td><td>Times Square (brief visit)</td></tr>
+              <tr><td>17</td><td>Chinatown</td></tr>
+              <tr><td>18</td><td>Roosevelt Island Tram</td></tr>
+              <tr><td>19</td><td>Little Island</td></tr>
+              <tr><td>20</td><td>Museum of Natural History</td></tr>
+              <tr><td>21</td><td>Rockefeller Center</td></tr>
+              <tr><td>22</td><td>SoHo</td></tr>
+              <tr><td>23</td><td>One World Observatory</td></tr>
+              <tr><td>24</td><td>Williamsburg</td></tr>
+              <tr><td>25</td><td>Chelsea Market</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h2>If I Could Only Do 10 Things</h2>
+      <ol class="order-steps" style="list-style:none;padding:0;margin:14px 0;counter-reset:steps;display:flex;flex-direction:column;gap:0;">
+        <li style="counter-increment:steps;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);border-radius:0;"><span style="content:counter(steps);font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">1</span><span>Walk through Central Park &mdash; allow at least 3 hours and take the smaller trails</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">2</span><span>Cross the Brooklyn Bridge to DUMBO &mdash; start early and stay for the waterfront</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">3</span><span>Watch the sunset from Top of the Rock</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">4</span><span>Spend an evening wandering Greenwich Village without a fixed plan</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">5</span><span>See a Broadway show</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">6</span><span>Visit the 9/11 Memorial &mdash; allow time to simply be there</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">7</span><span>Explore the High Line and Chelsea Market in one walking afternoon</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">8</span><span>Wander Grand Central Terminal and sit in Bryant Park</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--border);background:var(--bg-card);"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">9</span><span>Ride the Staten Island Ferry for skyline and Statue of Liberty views</span></li>
+        <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px 16px;background:var(--bg-card);border-radius:0 0 12px 12px;"><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;">10</span><span>Have at least one meal in a neighborhood rather than beside a major attraction</span></li>
+      </ol>
+
+      <!-- FINAL CHECKLIST -->
+      <h2>Final Planning Checklist</h2>
+      <p>Before finalizing your itinerary, make sure you can answer yes to these questions.</p>
+      <ul class="final-checklist">
+        <li>Have I limited myself to 2&ndash;3 major attractions per day?</li>
+        <li>Have I chosen one observation deck instead of several?</li>
+        <li>Have I grouped attractions by neighborhood to avoid unnecessary backtracking?</li>
+        <li>Have I booked timed-entry tickets for popular attractions and Broadway shows?</li>
+        <li>Have I left time to wander neighborhoods rather than scheduling every hour?</li>
+        <li>Have I included at least one free skyline viewpoint?</li>
+        <li>Have I planned around the weather where possible?</li>
+        <li>Have I balanced indoor attractions with outdoor experiences?</li>
+        <li>Have I avoided planning meals directly beside major tourist attractions?</li>
+        <li>Have I accepted that I will not see everything &mdash; and that is perfectly fine?</li>
+      </ul>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Edge vs Top of the Rock vs Empire State Building: Which Observation Deck Wins?</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="which-attractions-to-book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Attractions Should You Book Before Your Trip?</a></li>
+      <li><a href="where-to-stay-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+      <li><a href="7-day-family-nyc-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>7-Day Family NYC Itinerary: A Realistic Plan</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+var secs=['intro','plan','iconic','museums','walking','neighborhoods','outdoors','by-style','top25'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='intro';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
