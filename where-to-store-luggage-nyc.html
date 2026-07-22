@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where to Store Luggage in NYC Before Hotel Check-In | EverythingInNYC</title>
+<meta name="description" content="The best places to store luggage in NYC before hotel check-in. Compare hotel storage, Bounce, LuggageHero, airports, prices, safety tips, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---- STICKY SIDEBAR ---- */
+  .side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+  .side-nav a{display:block;padding:7px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+
+  /* ---- RATING BADGE (replaces stars) ---- */
+  .rtg{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:0.02em;white-space:nowrap;}
+  .rtg-top{background:rgba(15,23,42,0.1);color:var(--navy);}
+  .rtg-ex{background:rgba(22,163,74,0.11);color:#15803D;}
+  .rtg-vg{background:rgba(37,99,235,0.1);color:var(--info);}
+  .rtg-gd{background:rgba(161,98,7,0.1);color:#92620A;}
+
+  /* ---- SERVICE CARDS ---- */
+  .service-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0;}
+  @media(min-width:560px){.service-grid{grid-template-columns:repeat(3,1fr);}}
+  .service-card{border:1px solid var(--border);border-radius:14px;background:var(--bg-card);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px;}
+  .sc-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--navy);}
+  .sc-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-secondary);}
+  .sc-body{font-size:14.5px;color:var(--text-secondary);flex:1;}
+  .sc-verdict{font-size:14px;font-weight:700;color:var(--navy);margin-top:4px;}
+
+  /* ---- NBHD LOCATION CARDS ---- */
+  .loc-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin:28px 0;box-shadow:var(--shadow-card);}
+  .loc-card .lc-head{background:var(--navy);padding:13px 20px;display:flex;align-items:center;gap:10px;}
+  .lc-num{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);flex:none;}
+  .lc-head h3{color:#fff;font-size:18px;margin:0;flex:1;line-height:1.2;scroll-margin-top:90px;}
+  .lc-badge{flex:none;}
+  .loc-card .lc-body{padding:18px 20px;}
+
+  /* ---- PROS / CONS ---- */
+  .pc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;}
+  @media(max-width:460px){.pc-row{grid-template-columns:1fr;}}
+  .pc-box{border-radius:10px;padding:12px 14px;}
+  .pc-pros{background:rgba(22,163,74,0.04);border:1px solid rgba(22,163,74,0.18);}
+  .pc-cons{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.16);}
+  .pc-pros h4{color:#15803D;margin:0 0 8px;font-size:13px;font-family:var(--font-head);font-weight:800;text-transform:uppercase;letter-spacing:0.05em;}
+  .pc-cons h4{color:#B91C1C;margin:0 0 8px;font-size:13px;font-family:var(--font-head);font-weight:800;text-transform:uppercase;letter-spacing:0.05em;}
+  .pc-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+  .pc-box ul li{font-size:14.5px;padding-left:14px;position:relative;}
+  .pc-pros ul li::before{content:'+';position:absolute;left:0;color:#15803D;font-weight:700;}
+  .pc-cons ul li::before{content:'-';position:absolute;left:0;color:#B91C1C;font-weight:700;}
+
+  /* ---- VERDICT STRIP ---- */
+  .verdict-strip{background:var(--navy);color:#fff;padding:11px 20px;font-size:15px;font-weight:600;line-height:1.5;}
+  .verdict-strip strong{color:var(--accent);}
+
+  /* ---- ROUTE BOX ---- */
+  .route-box{background:rgba(15,23,42,0.03);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:12px 0;}
+  .rb-label{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy);margin-bottom:10px;}
+  .rb-flow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;}
+  .rb-flow .rs{font-size:14.5px;font-weight:700;color:var(--navy);}
+  .rb-flow .ra{color:var(--accent);font-weight:800;font-size:16px;}
+
+  /* ---- SCENARIO CARD ---- */
+  .scenario-card{border:1px solid var(--border);border-radius:14px;background:var(--bg-card);overflow:hidden;margin:14px 0;}
+  .sc-head-bar{background:var(--accent);padding:10px 18px;font-family:var(--font-head);font-weight:800;font-size:14px;color:var(--navy);}
+  .scenario-card .sc-body-p{padding:14px 18px;}
+
+  /* ---- SAFETY CHECKLIST ---- */
+  .safety-check{list-style:none;padding:0;margin:12px 0;display:flex;flex-direction:column;gap:6px;}
+  .safety-check li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14.5px;}
+  .safety-check li .ck{width:22px;height:22px;border:2px solid var(--border);border-radius:5px;flex:none;background:#fff;}
+  .safety-check li span{grid-column:2;}
+
+  /* ---- VALUABLES TABLE ---- */
+  .val-table td:first-child{font-weight:700;color:var(--navy);}
+  .val-table .keep{background:rgba(220,38,38,0.03);}
+  .val-table .keep td:first-child{color:var(--error);}
+
+  /* ---- AIRPORT CARD ---- */
+  .airport-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;}
+  @media(min-width:560px){.airport-grid{grid-template-columns:repeat(3,1fr);}}
+  .airport-card{border:1px solid var(--border);border-radius:14px;background:var(--bg-card);padding:16px 18px;}
+  .airport-card .ap-name{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--navy);margin-bottom:6px;}
+  .airport-card .ap-rec{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+  .rec-no{background:rgba(220,38,38,0.08);color:#B91C1C;}
+  .rec-some{background:rgba(161,98,7,0.1);color:#92620A;}
+  .airport-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+  /* ---- PRIORITY LIST (numbered, no grid bug) ---- */
+  .priority-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+  .priority-list li{display:flex;align-items:flex-start;gap:12px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:11px 15px;}
+  .pl-num{font-family:var(--font-head);font-weight:800;font-size:14px;color:var(--navy);border:2px solid var(--accent);border-radius:8px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .priority-list li .pl-text{font-size:15px;display:flex;flex-direction:column;gap:3px;}
+  .priority-list li .pl-text strong{display:block;color:var(--navy);}
+  .priority-list li .pl-text span{color:var(--text-secondary);font-size:14px;}
+
+  /* ---- JUMP NAV mobile ---- */
+  .jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+  .jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+  .jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;}
+  @media(min-width:480px){.jump-nav ul{grid-template-columns:1fr 1fr;}}
+  .jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+  @media(min-width:1120px){.jump-nav{display:none;}}
+
+  /* ---- BACK TO TOP ---- */
+  .back-top{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text-secondary);text-decoration:none;margin-top:8px;}
+  .back-top:hover{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">This Guide</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#hotel-storage">Hotel Storage</a>
+  <a href="#services">Storage Services</a>
+  <a href="#neighborhoods">By Neighborhood</a>
+  <a href="#airports">Airports &amp; Timing</a>
+  <a href="#attractions">Attractions</a>
+  <a href="#safety">Safety &amp; FAQ</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Travel Tips</span>
+      <h1>Where to Store Luggage in NYC Before Hotel Check-In</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span>
+        <span>&middot;</span>
+        <span>15 minute read</span>
+        <span>&middot;</span>
+        <span>Every scenario covered</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="where-to-store-luggage-in-NYC.png" alt="Where to store luggage in NYC before hotel check-in — complete guide">
+
+    <div class="article-body" id="quick-answer">
+
+      <p>Landing in New York at 8 AM only to discover your hotel check-in is not until 3 PM is one of the most common travel problems in the city. Fortunately, you usually <strong>do not need to drag your suitcase around Manhattan for hours</strong> &mdash; and you often do not need to pay for luggage storage at all.</p>
+
+      <p>This guide covers the best luggage storage options in NYC, when to use them, how much they cost, where to store bags based on your itinerary, and the common mistakes that waste both time and money.</p>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#quick-answer">Quick Answer</a></li>
+          <li><a href="#hotel-storage">Hotel Storage</a></li>
+          <li><a href="#services">Best Services</a></li>
+          <li><a href="#neighborhoods">By Neighborhood</a></li>
+          <li><a href="#airports">Airports &amp; Timing</a></li>
+          <li><a href="#attractions">Attractions Guide</a></li>
+          <li><a href="#safety">Safety &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">Quick Answer</div>
+        <p>If you are staying at a hotel, <strong>go there first.</strong> Most NYC hotels will hold your luggage before check-in and after checkout, often at no extra cost. It saves money, avoids unnecessary subway trips, and lets you start sightseeing immediately. Only consider a third-party service if you are staying in an Airbnb, your hotel will not store bags, or storing luggage elsewhere is more convenient for your itinerary.</p>
+      </div>
+
+      <h2>At a Glance: Best Luggage Storage Options in NYC</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:500px;">
+          <tr><th>Option</th><th>Cost</th><th>Best For</th><th>Skip If</th><th>Verdict</th></tr>
+          <tr><td><strong>Hotel luggage storage</strong></td><td>Usually Free</td><td>Hotel guests</td><td>Airbnb stays</td><td><span class="rtg rtg-top">Best Overall</span></td></tr>
+          <tr><td><strong>Bounce</strong></td><td>$$</td><td>Most travelers</td><td>Need lockers only</td><td><span class="rtg rtg-ex">Excellent</span></td></tr>
+          <tr><td><strong>LuggageHero</strong></td><td>$$</td><td>Hourly storage</td><td>Need overnight everywhere</td><td><span class="rtg rtg-ex">Excellent</span></td></tr>
+          <tr><td><strong>Radical Storage</strong></td><td>$$</td><td>Alternative to Bounce</td><td>Looking for lockers only</td><td><span class="rtg rtg-vg">Very Good</span></td></tr>
+          <tr><td><strong>Airport storage</strong></td><td>$$$</td><td>Long layovers only</td><td>Visiting Manhattan first</td><td><span class="rtg rtg-gd">Rarely Recommended</span></td></tr>
+        </table>
+      </div>
+
+      <h2>30-Second Decision Guide</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>Your Situation</th><th>Best Option</th></tr>
+          <tr><td>Staying at a hotel</td><td><strong>Leave bags at the hotel first</strong></td></tr>
+          <tr><td>Hotel room not ready yet</td><td>Hotel luggage storage</td></tr>
+          <tr><td>Airbnb or vacation rental</td><td>Bounce, LuggageHero, or Radical Storage</td></tr>
+          <tr><td>Flying home late after checkout</td><td>Leave luggage at your hotel until departure</td></tr>
+          <tr><td>Visiting Broadway before heading to the airport</td><td>Store near Times Square or Penn Station</td></tr>
+          <tr><td>Spending the day downtown before an evening flight</td><td>Store near Lower Manhattan</td></tr>
+          <tr><td>Taking Amtrak or NJ Transit later</td><td>Store near Penn Station</td></tr>
+          <tr><td>Hotel in Queens, sightseeing in Manhattan</td><td>Store in Manhattan, not at your hotel</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Golden Rule</div>
+        <p>Store your luggage where <strong>your day ends</strong>, not where it begins. This single decision saves more time than any price comparison.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HOTEL STORAGE -->
+      <h2 id="hotel-storage">Should You Leave Your Luggage at the Hotel?</h2>
+
+      <p><strong>Yes &mdash; in most cases.</strong></p>
+      <p>This is the option many first-time visitors overlook. Instead of searching for luggage storage after landing, go directly to your hotel, leave your luggage with the front desk or bell service, explore the city, and return when your room is ready. This is usually the simplest, cheapest, and most convenient solution.</p>
+
+      <h3>Hotel Luggage Storage: What to Expect</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>Question</th><th>Typical Answer</th></tr>
+          <tr><td>Before check-in?</td><td>Usually yes</td></tr>
+          <tr><td>After checkout?</td><td>Usually yes</td></tr>
+          <tr><td>Cost</td><td>Often free</td></tr>
+          <tr><td>Reservation required?</td><td>No</td></tr>
+          <tr><td>Overnight storage</td><td>Usually no</td></tr>
+          <tr><td>Tip expected?</td><td>Appreciated but not required</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Best For</div>
+          <ul class="card-list">
+            <li>Hotel guests arriving early</li>
+            <li>Late departures &mdash; leaving bags after checkout</li>
+            <li>Families with multiple suitcases</li>
+            <li>Business travelers using the bell desk</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Skip If</div>
+          <ul class="card-list">
+            <li>Staying in an Airbnb or vacation rental</li>
+            <li>Self check-in apartment with no staff</li>
+            <li>Your final sightseeing is far from your hotel</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Planning your hotel stay? See our guide to <a href="where-to-stay-nyc.html">where to stay in NYC for first-time visitors</a> to find the right neighborhood for your itinerary.</p>
+
+      <h3>When You Should Use a Luggage Storage Service</h3>
+      <p>Hotel storage is not always available. You will likely need a third-party service if you are staying in an Airbnb or vacation rental, changing hotels mid-trip, spending the day far from your hotel, arriving before accommodation opens, or leaving long after checkout. In these cases, <strong>location matters more than price.</strong> A storage location that saves $2 is not a bargain if it adds an hour of unnecessary travel.</p>
+
+      <hr class="divider-rule">
+
+      <!-- SERVICES -->
+      <h2 id="services">Best Luggage Storage Services in NYC</h2>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="sc-name">Bounce</div>
+          <div class="sc-tag">Best Overall</div>
+          <div class="sc-body">The largest network of partner locations in NYC, concentrated around Midtown, Times Square, and all major tourist areas. Easy online booking, no lockers needed. Quality varies by partner location, so always read reviews for the specific spot, not just the platform.</div>
+          <div class="sc-verdict">Excellent &mdash; first choice for most travelers.</div>
+          <a class="btn btn-outline" style="margin-top:10px;display:inline-block;font-size:13.5px;padding:8px 14px;border-radius:8px;" href="https://bounce.com" target="_blank" rel="noopener noreferrer">Visit Bounce</a>
+        </div>
+        <div class="service-card">
+          <div class="sc-name">LuggageHero</div>
+          <div class="sc-tag">Best Hourly Pricing</div>
+          <div class="sc-body">Charges by the hour, which makes it the better choice if you only need storage for a few hours rather than a full day. Smaller network than Bounce, but strong coverage in Midtown and major transit hubs. Good insurance included.</div>
+          <div class="sc-verdict">Excellent &mdash; best for short-term storage.</div>
+          <a class="btn btn-outline" style="margin-top:10px;display:inline-block;font-size:13.5px;padding:8px 14px;border-radius:8px;" href="https://luggagehero.com" target="_blank" rel="noopener noreferrer">Visit LuggageHero</a>
+        </div>
+        <div class="service-card">
+          <div class="sc-name">Radical Storage</div>
+          <div class="sc-tag">Best Alternative</div>
+          <div class="sc-body">A solid backup when Bounce does not have a conveniently located partner nearby. Similar model to Bounce &mdash; partner businesses across the city. Good for finding a better-reviewed location even if pricing is similar.</div>
+          <div class="sc-verdict">Very Good &mdash; reliable backup option.</div>
+          <a class="btn btn-outline" style="margin-top:10px;display:inline-block;font-size:13.5px;padding:8px 14px;border-radius:8px;" href="https://radicalstorage.com" target="_blank" rel="noopener noreferrer">Visit Radical Storage</a>
+        </div>
+      </div>
+
+      <h3>Which Service Should You Choose?</h3>
+      <div class="card-grid cols-2" style="margin-top:14px;">
+        <div class="card"><div class="card-tag">Choose Bounce if&hellip;</div><ul class="card-list"><li>You want the largest number of locations</li><li>You are staying or sightseeing in Midtown</li><li>You need something close to major attractions</li></ul></div>
+        <div class="card"><div class="card-tag">Choose LuggageHero if&hellip;</div><ul class="card-list"><li>You only need storage for a few hours</li><li>Hourly pricing works better for your schedule</li></ul></div>
+        <div class="card"><div class="card-tag">Choose Radical Storage if&hellip;</div><ul class="card-list"><li>Bounce does not have a convenient nearby location</li><li>You find a better-reviewed partner at this platform</li></ul></div>
+      </div>
+
+      <h3>How Much Does Luggage Storage Cost?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Storage Time</th><th>Typical Price</th></tr>
+          <tr><td>A few hours</td><td>$5&ndash;10 per bag</td></tr>
+          <tr><td>Full day</td><td>$7&ndash;15 per bag</td></tr>
+          <tr><td>Premium central locations</td><td>Higher</td></tr>
+          <tr><td>Hotel storage for guests</td><td>Often free</td></tr>
+        </table>
+      </div>
+      <p>Prices vary by location, provider, insurance coverage, and booking time. Hotel luggage storage is often free for guests, making it the best value whenever available.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Before You Book: Quick Checklist</div>
+        <p>Ask your hotel first. &nbsp;&middot;&nbsp; Compare nearby locations, not just prices. &nbsp;&middot;&nbsp; Read reviews for the individual storage location (not just the platform). &nbsp;&middot;&nbsp; Confirm opening hours. &nbsp;&middot;&nbsp; Check insurance coverage. &nbsp;&middot;&nbsp; Keep valuables with you regardless of where you store bags.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BY NEIGHBORHOOD -->
+      <h2 id="neighborhoods">Best Places to Store Luggage in NYC by Neighborhood</h2>
+
+      <p>The best luggage storage location is not necessarily the one closest to your hotel &mdash; it is the one that fits <strong>the rest of your day.</strong> Many first-time visitors make this mistake: leave bags at the hotel, sightsee all day, ride back just to collect luggage, then return to Penn Station or the airport. Instead, think about where your trip ends, not where it starts.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:500px;font-size:13.5px;">
+          <tr><th>Area</th><th>Best For</th><th>Ideal If You&rsquo;re&hellip;</th><th>Rating</th></tr>
+          <tr><td><strong>Penn Station / Moynihan</strong></td><td>Trains &amp; airport transfers</td><td>Leaving via Amtrak, NJ Transit, or LIRR</td><td><span class="rtg rtg-top">Top Pick</span></td></tr>
+          <tr><td><strong>Times Square / Theater District</strong></td><td>Broadway</td><td>Watching a show before heading home</td><td><span class="rtg rtg-top">Top Pick</span></td></tr>
+          <tr><td><strong>Grand Central</strong></td><td>East Midtown</td><td>Visiting SUMMIT, Chrysler Building, or Metro-North</td><td><span class="rtg rtg-top">Top Pick</span></td></tr>
+          <tr><td><strong>Financial District</strong></td><td>Downtown sightseeing</td><td>Statue of Liberty, Wall Street, 9/11 Memorial</td><td><span class="rtg rtg-ex">Excellent</span></td></tr>
+          <tr><td><strong>SoHo</strong></td><td>Shopping</td><td>Spending most of the day shopping</td><td><span class="rtg rtg-ex">Excellent</span></td></tr>
+          <tr><td><strong>Chelsea / Hudson Yards</strong></td><td>High Line area</td><td>Exploring the west side</td><td><span class="rtg rtg-ex">Excellent</span></td></tr>
+          <tr><td><strong>DUMBO</strong></td><td>Brooklyn Bridge</td><td>Walking the bridge then exploring Brooklyn</td><td><span class="rtg rtg-vg">Very Good</span></td></tr>
+          <tr><td><strong>Williamsburg</strong></td><td>Trendy neighborhoods</td><td>Cafes, nightlife, and local shopping</td><td><span class="rtg rtg-gd">Good</span></td></tr>
+          <tr><td><strong>Long Island City</strong></td><td>Hotel convenience</td><td>Staying in LIC and not returning to Manhattan</td><td><span class="rtg rtg-gd">Good</span></td></tr>
+        </table>
+      </div>
+
+      <!-- 1. PENN STATION -->
+      <div class="loc-card" id="penn-station">
+        <div class="lc-head">
+          <span class="lc-num">1.</span>
+          <h3>Penn Station and Moynihan Train Hall</h3>
+          <span class="lc-badge"><span class="rtg rtg-top">Top Pick</span></span>
+        </div>
+        <div class="lc-body">
+          <p><strong>Best for almost everyone leaving NYC by train or heading to JFK via LIRR.</strong> If your trip ends at Penn Station, this is usually the smartest place to store your luggage. You avoid a separate subway trip back to your hotel, and pickup fits naturally at the end of your day before boarding.</p>
+          <div class="route-box">
+            <div class="rb-label">Ideal Penn Station Day</div>
+            <div class="rb-flow">
+              <span class="rs">Central Park</span><span class="ra">&#8594;</span>
+              <span class="rs">Fifth Avenue</span><span class="ra">&#8594;</span>
+              <span class="rs">Times Square</span><span class="ra">&#8594;</span>
+              <span class="rs">Broadway show</span><span class="ra">&#8594;</span>
+              <span class="rs">Collect luggage</span><span class="ra">&#8594;</span>
+              <span class="rs">Penn Station</span>
+            </div>
+          </div>
+          <div class="pc-row">
+            <div class="pc-box pc-pros"><h4>Pros</h4><ul><li>Excellent transportation connections</li><li>Huge concentration of nearby storage providers</li><li>Ideal for airport transfers</li><li>Convenient after Broadway shows</li></ul></div>
+            <div class="pc-box pc-cons"><h4>Cons</h4><ul><li>Busy during rush hour</li><li>Slightly higher prices in this area</li></ul></div>
+          </div>
+          <div class="callout callout-tip" style="margin-top:12px;">
+            <div class="callout-title">Important</div>
+            <p>Penn Station does <strong>not</strong> have public luggage lockers. Plan to use a nearby third-party luggage storage provider instead.</p>
+          </div>
+        </div>
+        <div class="verdict-strip"><strong>Verdict:</strong> If you are unsure where to store your bags, Penn Station is one of the safest recommendations for most visitors.</div>
+      </div>
+
+      <!-- 2. TIMES SQUARE -->
+      <div class="loc-card" id="times-square">
+        <div class="lc-head">
+          <span class="lc-num">2.</span>
+          <h3>Times Square and Theater District</h3>
+          <span class="lc-badge"><span class="rtg rtg-top">Top Pick</span></span>
+        </div>
+        <div class="lc-body">
+          <p><strong>Best for Broadway shows and Midtown sightseeing.</strong> Many visitors arrive carrying suitcases before an evening performance &mdash; that is a mistake. Most Broadway theaters do not have luggage storage, and large suitcases are generally not allowed inside. Store your luggage nearby, watch your show, collect your bags afterward, then head to Penn Station or the airport.</p>
+          <div class="card-grid cols-2" style="margin-top:12px;">
+            <div class="card"><div class="card-tag">Best If You&rsquo;re Visiting</div><ul class="card-list"><li>Broadway</li><li>Times Square</li><li>Rockefeller Center</li><li>Radio City Music Hall</li><li>Bryant Park</li></ul></div>
+            <div class="card"><div class="card-tag">Best For</div><ul class="card-list"><li>Broadway nights</li><li>Midtown hotel guests</li><li>First-time visitors on a full Midtown day</li></ul></div>
+          </div>
+          <div class="pc-row">
+            <div class="pc-box pc-pros"><h4>Pros</h4><ul><li>Many storage locations in the area</li><li>Easy walk to all main theaters</li><li>Perfect for pre-show storage</li></ul></div>
+            <div class="pc-box pc-cons"><h4>Cons</h4><ul><li>Busy and crowded area</li><li>Prices can run slightly higher than other areas</li></ul></div>
+          </div>
+        </div>
+        <div class="verdict-strip"><strong>Verdict:</strong> The smartest storage area if Broadway is part of your last day.</div>
+      </div>
+
+      <!-- 3. GRAND CENTRAL -->
+      <div class="loc-card" id="grand-central">
+        <div class="lc-head">
+          <span class="lc-num">3.</span>
+          <h3>Grand Central Terminal</h3>
+          <span class="lc-badge"><span class="rtg rtg-top">Top Pick</span></span>
+        </div>
+        <div class="lc-body">
+          <p><strong>Best for East Midtown.</strong> Choose Grand Central if your day includes SUMMIT One Vanderbilt, the Chrysler Building, Grand Central Terminal itself, the United Nations, or Midtown East generally. It is much more convenient than walking back toward Penn Station at the end of the day.</p>
+          <div class="route-box">
+            <div class="rb-label">Ideal Grand Central Day</div>
+            <div class="rb-flow">
+              <span class="rs">Central Park</span><span class="ra">&#8594;</span>
+              <span class="rs">Fifth Avenue</span><span class="ra">&#8594;</span>
+              <span class="rs">SUMMIT One Vanderbilt</span><span class="ra">&#8594;</span>
+              <span class="rs">Collect luggage</span><span class="ra">&#8594;</span>
+              <span class="rs">Metro-North</span>
+            </div>
+          </div>
+          <div class="callout callout-tip" style="margin-top:12px;">
+            <div class="callout-title">Common Misconception</div>
+            <p>Many visitors assume Grand Central has public luggage lockers. It does not. Use a nearby luggage storage partner provider instead.</p>
+          </div>
+        </div>
+        <div class="verdict-strip"><strong>Verdict:</strong> Excellent transit hub with plenty of nearby storage options for East Midtown days.</div>
+      </div>
+
+      <!-- 4. FINANCIAL DISTRICT -->
+      <div class="loc-card" id="financial-district">
+        <div class="lc-head">
+          <span class="lc-num">4.</span>
+          <h3>Financial District</h3>
+          <span class="lc-badge"><span class="rtg rtg-ex">Excellent</span></span>
+        </div>
+        <div class="lc-body">
+          <p><strong>Best for Downtown sightseeing.</strong> If your plans include the Statue of Liberty ferries, Wall Street, the 9/11 Memorial, One World Observatory, or a cruise departure, storing luggage in the Financial District saves the most time. See our <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a> to build the perfect day around these stops.</p>
+          <div class="route-box">
+            <div class="rb-label">Smart Downtown Day</div>
+            <div class="rb-flow">
+              <span class="rs">Store luggage</span><span class="ra">&#8594;</span>
+              <span class="rs">Statue of Liberty</span><span class="ra">&#8594;</span>
+              <span class="rs">Wall Street</span><span class="ra">&#8594;</span>
+              <span class="rs">9/11 Memorial</span><span class="ra">&#8594;</span>
+              <span class="rs">Collect luggage</span><span class="ra">&#8594;</span>
+              <span class="rs">Subway to airport</span>
+            </div>
+          </div>
+          <p style="margin-top:10px;"><strong>Skip if:</strong> Your day ends in Midtown or at Broadway. The additional travel would cancel any saving.</p>
+          <p><strong>Best for:</strong> Cruise passengers &middot; Travelers with evening flights &middot; Anyone spending a full day downtown.</p>
+        </div>
+        <div class="verdict-strip"><strong>Verdict:</strong> Essential choice for a downtown-heavy final day.</div>
+      </div>
+
+      <!-- 5-9: COMPACT CARDS -->
+      <div class="card-grid cols-2" style="margin-top:20px;">
+        <div class="loc-card" id="soho" style="margin:0;">
+          <div class="lc-head">
+            <span class="lc-num">5.</span>
+            <h3>SoHo</h3>
+            <span class="lc-badge"><span class="rtg rtg-ex">Excellent</span></span>
+          </div>
+          <div class="lc-body">
+            <p><strong>Best for shopping days.</strong> Large shopping bags plus luggage quickly become exhausting. Store your suitcase before exploring SoHo, Nolita, Little Italy, and Chinatown. Less useful if your day ends in Midtown.</p>
+            <p><strong>Best for:</strong> Shopping &middot; Boutique browsing &middot; Fashion lovers</p>
+          </div>
+          <div class="verdict-strip"><strong>Verdict:</strong> Shop freely &mdash; store the suitcase first.</div>
+        </div>
+
+        <div class="loc-card" id="chelsea-hudson" style="margin:0;">
+          <div class="lc-head">
+            <span class="lc-num">6.</span>
+            <h3>Chelsea and Hudson Yards</h3>
+            <span class="lc-badge"><span class="rtg rtg-ex">Excellent</span></span>
+          </div>
+          <div class="lc-body">
+            <p><strong>Best for west side walking days.</strong> Perfect if your plans include the High Line, Chelsea Market, Edge, or Hudson Yards.</p>
+            <div class="route-box" style="margin:10px 0 0;">
+              <div class="rb-label">West Side Day</div>
+              <div class="rb-flow">
+                <span class="rs">Store luggage</span><span class="ra">&#8594;</span>
+                <span class="rs">High Line</span><span class="ra">&#8594;</span>
+                <span class="rs">Chelsea Market</span><span class="ra">&#8594;</span>
+                <span class="rs">Edge</span><span class="ra">&#8594;</span>
+                <span class="rs">Collect</span>
+              </div>
+            </div>
+          </div>
+          <div class="verdict-strip"><strong>Verdict:</strong> Ideal for west side itineraries.</div>
+        </div>
+
+        <div class="loc-card" id="dumbo" style="margin:0;">
+          <div class="lc-head">
+            <span class="lc-num">7.</span>
+            <h3>DUMBO</h3>
+            <span class="lc-badge"><span class="rtg rtg-vg">Very Good</span></span>
+          </div>
+          <div class="lc-body">
+            <p><strong>Best for Brooklyn Bridge days.</strong> Do not carry luggage across the Brooklyn Bridge &mdash; it is one of the most common first-timer mistakes. Stairs, crowds, and uneven surfaces make it genuinely unpleasant. Store luggage first, walk the bridge comfortably, explore DUMBO, then return later.</p>
+            <p><strong>Great for:</strong> Brooklyn Bridge &middot; Jane&rsquo;s Carousel &middot; Brooklyn Bridge Park &middot; Time Out Market</p>
+          </div>
+          <div class="verdict-strip"><strong>Verdict:</strong> Always store before crossing the bridge.</div>
+        </div>
+
+        <div class="loc-card" id="williamsburg" style="margin:0;">
+          <div class="lc-head">
+            <span class="lc-num">8.</span>
+            <h3>Williamsburg</h3>
+            <span class="lc-badge"><span class="rtg rtg-gd">Good</span></span>
+          </div>
+          <div class="lc-body">
+            <p><strong>Best if spending most of the day in Williamsburg</strong> &mdash; cafe hopping, vintage shopping, brewery visits, or nightlife. Otherwise, Midtown storage is usually more convenient. Not worth a dedicated trip if the rest of your day is in Manhattan.</p>
+          </div>
+          <div class="verdict-strip"><strong>Verdict:</strong> Only if your whole day is in Williamsburg.</div>
+        </div>
+      </div>
+
+      <!-- 9. LONG ISLAND CITY -->
+      <div class="callout callout-tip" style="margin-top:18px;" id="lic">
+        <div class="callout-title">9. Long Island City &mdash; A Common Mistake</div>
+        <p>Many budget-conscious visitors stay in Long Island City. The common mistake: hotel in LIC &rarr; subway into Manhattan &rarr; sightsee &rarr; return to LIC &rarr; go back into Manhattan &rarr; airport. That is two unnecessary subway trips. If your final sightseeing is in Manhattan, store your luggage near <strong>Penn Station, Grand Central, or Times Square</strong> before heading to the airport instead.</p>
+      </div>
+
+      <h3>Quick Decision: Which Neighborhood?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>If your day ends&hellip;</th><th>Store luggage here</th></tr>
+          <tr><td>At Penn Station</td><td><strong>Penn Station</strong></td></tr>
+          <tr><td>At Broadway</td><td><strong>Times Square</strong></td></tr>
+          <tr><td>At SUMMIT</td><td><strong>Grand Central</strong></td></tr>
+          <tr><td>At Statue of Liberty</td><td><strong>Financial District</strong></td></tr>
+          <tr><td>Shopping in SoHo</td><td><strong>SoHo</strong></td></tr>
+          <tr><td>On the High Line</td><td><strong>Chelsea</strong></td></tr>
+          <tr><td>At Brooklyn Bridge</td><td><strong>DUMBO</strong></td></tr>
+          <tr><td>In Williamsburg</td><td><strong>Williamsburg</strong></td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Choosing Between Locations</div>
+        <p>Saving $2 on luggage storage is not worth adding an extra hour of subway travel. When comparing options, prioritize in this order: <strong>convenience first, then opening hours, then reviews of the specific location, then security, then price.</strong> A well-located storage point saves far more time and hassle than the cheapest option.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- AIRPORTS -->
+      <h2 id="airports">Airport Luggage Storage, Early Arrivals and Late Flights</h2>
+
+      <p>Airport luggage storage sounds convenient, but for most visitors it is the wrong solution. Unless you are planning to stay near the airport all day, storing your luggage there usually adds extra travel time and an unnecessary return trip. Your hotel or a luggage storage location in Manhattan is almost always the better choice.</p>
+
+      <h3>Airport Comparison</h3>
+      <div class="airport-grid">
+        <div class="airport-card">
+          <div class="ap-name">JFK Airport</div>
+          <span class="ap-rec rec-no">Usually No</span>
+          <p>No traditional public lockers. If you are arriving in NYC to explore the city, do not waste time looking for airport storage. Travel into Manhattan, leave bags at your hotel, and start sightseeing. JFK is your arrival point &mdash; not your luggage storage location.</p>
+        </div>
+        <div class="airport-card">
+          <div class="ap-name">LaGuardia (LGA)</div>
+          <span class="ap-rec rec-no">Usually No</span>
+          <p>No general public luggage storage. Most visitors landing here are heading straight into Manhattan. Go directly into the city, start sightseeing, and store luggage closer to where you will actually spend your day.</p>
+        </div>
+        <div class="airport-card">
+          <div class="ap-name">Newark (EWR)</div>
+          <span class="ap-rec rec-some">Sometimes</span>
+          <p>Very limited options. Can make sense for long layovers, if you are staying near the airport, or if you are not planning to enter Manhattan. For everyone else, store luggage where you will actually spend your day.</p>
+        </div>
+      </div>
+
+      <h3>Early Arrival Scenarios</h3>
+      <div class="card-grid cols-2">
+        <div class="scenario-card">
+          <div class="sc-head-bar">Scenario 1: Flight Lands at 7:30 AM, Check-In at 3 PM</div>
+          <div class="sc-body-p">
+            <div class="table-wrap">
+              <table class="data-table" style="min-width:220px;">
+                <tr><th>Step</th><th>What to Do</th></tr>
+                <tr><td>1</td><td>Travel to your hotel</td></tr>
+                <tr><td>2</td><td>Leave luggage with the front desk</td></tr>
+                <tr><td>3</td><td>Start sightseeing immediately</td></tr>
+                <tr><td>4</td><td>Return when your room is ready</td></tr>
+              </table>
+            </div>
+            <p style="font-size:14.5px;margin-top:10px;">This is almost always the simplest option. Many travelers are surprised that hotels are happy to store luggage long before check-in time.</p>
+          </div>
+        </div>
+        <div class="scenario-card">
+          <div class="sc-head-bar">Scenario 2: Hotel Won&rsquo;t Hold Luggage</div>
+          <div class="sc-body-p">
+            <p>Choose a luggage storage location near your <strong>first major stop</strong>, not your hotel. If your hotel is in Midtown but your first attraction is the Statue of Liberty, store luggage downtown instead. Avoid making an extra trip back to your hotel.</p>
+          </div>
+        </div>
+        <div class="scenario-card">
+          <div class="sc-head-bar">Scenario 3: Staying in an Airbnb</div>
+          <div class="sc-body-p">
+            <p>Many vacation rentals do not offer luggage storage. Plan ahead and book storage before arriving rather than searching while carrying luggage around the city. Bounce or LuggageHero are the best options here.</p>
+          </div>
+        </div>
+        <div class="scenario-card">
+          <div class="sc-head-bar">Scenario 4: Late Flight After Hotel Checkout</div>
+          <div class="sc-body-p">
+            <p>Checkout at 11 AM, flight at 9 PM &mdash; that is almost an entire sightseeing day. <strong>Best option:</strong> leave your luggage with the hotel. Most hotels will hold it until you return. If the hotel cannot help, choose storage near Penn Station, Times Square, Grand Central, or the Financial District depending on your itinerary.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Best Storage Based on Departure Time</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Departure</th><th>Recommendation</th></tr>
+          <tr><td>Afternoon flight</td><td>Hotel luggage storage</td></tr>
+          <tr><td>Evening flight</td><td>Hotel or storage near your last attraction</td></tr>
+          <tr><td>Late-night train</td><td>Penn Station</td></tr>
+          <tr><td>Broadway before airport</td><td>Times Square</td></tr>
+          <tr><td>Downtown sightseeing then airport</td><td>Financial District</td></tr>
+        </table>
+      </div>
+
+      <h3>Cruise Passengers</h3>
+      <p>Cruise schedules rarely match hotel check-in or flight times, leaving you with several free hours before heading to the airport.</p>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Manhattan Cruise Terminal</div><p>Store luggage near Midtown, Penn Station, or Hudson Yards depending on your plans. All are within easy walking or subway distance of the terminal.</p></div>
+        <div class="card"><div class="card-tag">Brooklyn Cruise Terminal</div><p>Good storage areas include DUMBO, the Financial District, and Downtown Brooklyn. Choose whichever matches your post-cruise sightseeing before heading to the airport.</p></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ATTRACTIONS -->
+      <h2 id="attractions">Can You Bring Luggage to NYC Attractions?</h2>
+
+      <p>One of the easiest ways to ruin your day in New York is showing up at an attraction with a suitcase. Most major attractions <strong>do not provide luggage storage</strong>, and many will not let you enter with large bags. Do not assume there are lockers at the entrance &mdash; there usually are not. If you are carrying anything larger than a small backpack, plan to store it before you arrive.</p>
+
+      <h3>Quick Reference: Can You Bring Luggage?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:560px;font-size:13.5px;">
+          <tr><th>Attraction</th><th>Large Suitcases</th><th>Small Backpack</th><th>Storage Available?</th><th>Recommendation</th></tr>
+          <tr><td><strong>Statue of Liberty &amp; Ellis Island</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes (security)</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>9/11 Memorial &amp; Museum</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>One World Observatory</strong></td><td style="color:var(--error);font-weight:700;">Not recommended</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>Empire State Building</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>Top of the Rock</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>SUMMIT One Vanderbilt</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>Edge</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>The Met</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>Coat check only</td><td>Do not bring suitcases</td></tr>
+          <tr><td><strong>MoMA</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>Limited coat check</td><td>Store luggage first</td></tr>
+          <tr><td><strong>American Museum of Natural History</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Yes</td><td>Coat check only</td><td>Store luggage first</td></tr>
+          <tr><td><strong>Broadway Theaters</strong></td><td style="color:var(--error);font-weight:700;">Usually no</td><td>Small bags only</td><td>Varies by theater</td><td>Store nearby</td></tr>
+          <tr><td><strong>Yankee Stadium</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Within size limits</td><td>No</td><td>Store beforehand</td></tr>
+          <tr><td><strong>Citi Field</strong></td><td style="color:var(--error);font-weight:700;">No</td><td>Within policy</td><td>No</td><td>Store beforehand</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2" style="margin-top:18px;">
+        <div class="card">
+          <div class="card-tag">Statue of Liberty and Ellis Island</div>
+          <p>Security is similar to an airport &mdash; large luggage is not permitted. There is no convenient place to leave your suitcase before boarding. Store your luggage in the <strong>Financial District</strong> before heading to Battery Park. See our <a href="how-to-visit-statue-of-liberty.html">complete Statue of Liberty visitor guide</a> for full planning advice.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Observation Decks</div>
+          <p>None of NYC&rsquo;s observation decks allow large luggage. Security checkpoints are designed for visitors, not bags. Even if technically permitted in some cases, carrying a suitcase through crowded elevators and decks is impractical. See our <a href="nyc-observation-decks-compared.html">observation decks comparison</a> for full booking advice. Store luggage nearby before your reservation.</p>
+          <div class="table-wrap" style="margin-top:10px;">
+            <table class="data-table" style="font-size:13px;">
+              <tr><th>Deck</th><th>Best Storage</th></tr>
+              <tr><td>SUMMIT</td><td>Grand Central</td></tr>
+              <tr><td>Top of the Rock</td><td>Midtown</td></tr>
+              <tr><td>Empire State Building</td><td>Penn Station or Midtown</td></tr>
+              <tr><td>Edge</td><td>Hudson Yards</td></tr>
+              <tr><td>One World Observatory</td><td>Financial District</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Broadway Shows</div>
+          <p>Broadway is where luggage causes the most problems. Most theaters have no luggage lockers, limited lobby space, and will not allow large suitcases inside. Even if a theater has a coat check, it is not intended for full-size luggage. Store your bags in the Theater District before your show, then collect them afterward and walk to Penn Station or the airport.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Museums</div>
+          <p>Most museums welcome small backpacks but not rolling suitcases. Coat checks, when available, are for coats, umbrellas, and small personal items &mdash; not travel luggage. If you are visiting The Met, MoMA, American Museum of Natural History, Guggenheim, or the Whitney Museum, leave your suitcase elsewhere first.</p>
+        </div>
+      </div>
+
+      <h3>Attraction Planning Matrix</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Today&rsquo;s Main Activity</th><th>Store Luggage Here</th></tr>
+          <tr><td>Statue of Liberty</td><td>Financial District</td></tr>
+          <tr><td>Broadway</td><td>Times Square</td></tr>
+          <tr><td>SUMMIT</td><td>Grand Central</td></tr>
+          <tr><td>Edge</td><td>Hudson Yards</td></tr>
+          <tr><td>Empire State Building</td><td>Midtown</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>DUMBO or Financial District</td></tr>
+          <tr><td>Shopping in SoHo</td><td>SoHo</td></tr>
+          <tr><td>Yankees Game</td><td>Near your hotel or subway station</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">If You Have Multiple Attractions</div>
+        <p>Choose storage based on your <strong>last major stop</strong>. If your day goes Empire State Building &rarr; Times Square &rarr; Broadway &rarr; Penn Station, store luggage near Times Square or Penn Station at the start of the day. Do not store near the Empire State Building and then make a separate trip to retrieve bags before your show.</p>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Rule of Thumb</div>
+        <p>If you are asking whether it is a good idea to bring a suitcase to an attraction, the answer is almost always <strong>no.</strong></p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- SAFETY -->
+      <h2 id="safety">Safety Tips, Common Mistakes and FAQs</h2>
+
+      <p>Most luggage storage services work through local businesses such as hotels, convenience stores, cafes, and souvenir shops. The platform matters &mdash; but the <strong>individual location</strong> matters even more. Some partner locations are far better reviewed than others.</p>
+
+      <h3>How to Choose a Safe Luggage Storage Location</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>What to Check</th><th>Why It Matters</th></tr>
+          <tr><td>Recent reviews for the <strong>specific location</strong></td><td>Some locations are much better than others</td></tr>
+          <tr><td>Opening hours confirmed</td><td>You do not want to be locked out after closing</td></tr>
+          <tr><td>Staffed location</td><td>Better accountability than unattended storage</td></tr>
+          <tr><td>Bags stored in a separate room</td><td>More secure than bags left in public view</td></tr>
+          <tr><td>Insurance details</td><td>Know what is covered before checking in</td></tr>
+          <tr><td>Easy walking distance from your stop</td><td>Saves time at the end of the day</td></tr>
+        </table>
+      </div>
+
+      <h3>What Should Never Go Into Stored Luggage?</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag" style="color:#B91C1C;border-color:rgba(220,38,38,0.25);">Always Keep With You</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table val-table" style="font-size:13.5px;">
+              <tr><td>Passport</td><td>Essential travel document</td></tr>
+              <tr><td>Wallet</td><td>Obvious, but worth stating</td></tr>
+              <tr><td>Phone</td><td>Needed throughout the day</td></tr>
+              <tr><td>Medications</td><td>You may need them unexpectedly</td></tr>
+              <tr><td>Laptop</td><td>High-value item</td></tr>
+              <tr><td>Camera</td><td>Expensive and fragile</td></tr>
+              <tr><td>Jewelry</td><td>Difficult to replace</td></tr>
+              <tr><td>Cash</td><td>Avoid unnecessary risk</td></tr>
+              <tr><td>Flight documents</td><td>You will need them later</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag" style="color:#15803D;border-color:rgba(22,163,74,0.25);">Safe to Store</div>
+          <ul class="card-list">
+            <li>Clothes and shoes</li>
+            <li>Toiletries</li>
+            <li>Souvenirs</li>
+            <li>Jackets and coats</li>
+            <li>Chargers and cables</li>
+            <li>Books</li>
+            <li>Snacks</li>
+            <li>Empty shopping bags</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Before You Drop Off Your Bags: Quick Checklist</h3>
+      <p>A one-minute check can save hours of frustration later.</p>
+      <ul class="safety-check">
+        <li><div class="ck"></div><span>Remove all valuables &mdash; passport, wallet, medications, electronics</span></li>
+        <li><div class="ck"></div><span>Confirm the closing time of the storage location</span></li>
+        <li><div class="ck"></div><span>Double-check the pickup address (not just the platform listing)</span></li>
+        <li><div class="ck"></div><span>Take a quick photo of your luggage before drop-off</span></li>
+        <li><div class="ck"></div><span>Make sure the claim tag is securely attached</span></li>
+        <li><div class="ck"></div><span>Verify your pickup time and plan your return accordingly</span></li>
+      </ul>
+
+      <h3>Common Mistakes to Avoid</h3>
+      <div class="table-wrap">
+        <table class="data-table mistake-table" style="min-width:420px;">
+          <tr><th>Mistake</th><th>Why It&rsquo;s a Problem</th><th>Better Choice</th></tr>
+          <tr><td>Going straight to a storage service without asking your hotel</td><td>You may pay for something your hotel offers for free</td><td>Visit your hotel first</td></tr>
+          <tr><td>Choosing the cheapest location</td><td>You might spend more time getting there</td><td>Prioritize convenience</td></tr>
+          <tr><td>Storing luggage near your hotel instead of your last stop</td><td>Creates an unnecessary return trip</td><td>Store where your day ends</td></tr>
+          <tr><td>Assuming Penn Station has public lockers</td><td>It does not</td><td>Use nearby storage providers</td></tr>
+          <tr><td>Assuming Grand Central has lockers</td><td>It does not</td><td>Use nearby storage providers</td></tr>
+          <tr><td>Bringing luggage to Broadway</td><td>Most theaters will not accommodate large bags</td><td>Store luggage in the Theater District first</td></tr>
+          <tr><td>Carrying luggage across the Brooklyn Bridge</td><td>Stairs, crowds, and uneven surfaces</td><td>Store luggage before crossing</td></tr>
+          <tr><td>Forgetting to check closing hours</td><td>You may not be able to retrieve your bags</td><td>Always verify hours before booking</td></tr>
+          <tr><td>Leaving passports or medications in stored luggage</td><td>Difficult or impossible to replace during your trip</td><td>Keep all essentials with you</td></tr>
+        </table>
+      </div>
+
+      <h3>Smart Traveler Tips</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Stay Flexible</div><p>If your itinerary changes, choose a storage location that will not force you to backtrack across the city.</p></div>
+        <div class="card"><div class="card-tag">Think Beyond Price</div><p>Saving $3 is not worth an extra subway ride or 45 minutes of travel time.</p></div>
+        <div class="card"><div class="card-tag">Book Ahead During Peak Seasons</div><p>Storage locations around Times Square, Penn Station, Grand Central, and Broadway can fill up during Christmas, Thanksgiving, New Year&rsquo;s, Marathon Weekend, and major events.</p></div>
+        <div class="card"><div class="card-tag">Traveling with Children or Multiple Bags</div><p>Hotel luggage storage is almost always the easiest option for families. A convenient location is more valuable than the cheapest one for solo travelers too.</p></div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Can I leave my luggage at my hotel before check-in?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Usually, yes. Most NYC hotels will store luggage before your room is ready. Simply go to the front desk or bell service upon arrival, leave your bags, and start sightseeing. Return when your room is ready.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Will hotels hold luggage after checkout?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Often, yes. This is one of the easiest ways to enjoy your final day in the city before heading to the airport. Leave your bags with the hotel in the morning after checkout and collect them later in the day.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is hotel luggage storage free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Usually. Some hotels may charge a small fee, especially after checkout or for extended storage. It is worth asking specifically when you arrive so there are no surprises.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which luggage storage service is best?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most travelers: Bounce, for its extensive network across Manhattan. For hourly storage: LuggageHero, which charges by the hour rather than by the day. For a backup option: Radical Storage, a solid alternative when another provider has a more convenient location nearby.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does Penn Station have luggage lockers?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. Plan to use a nearby third-party luggage storage location instead. There are several Bounce and LuggageHero partner locations within easy walking distance of Penn Station and Moynihan Train Hall.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does Grand Central Terminal have luggage lockers?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. Choose one of the nearby luggage storage providers if you are using Grand Central. There are partner locations within a short walk of the terminal.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I bring luggage to Broadway?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Generally, no. Large suitcases are not appropriate for Broadway theaters. Most theaters have no luggage lockers, limited lobby space, and will not allow large bags inside. Store luggage in the Theater District before your show.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I bring luggage to observation decks?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. Store it beforehand. Security checkpoints are designed for visitors, not travel luggage, and even if permitted, carrying a suitcase through crowded elevators and observation areas is impractical.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I bring luggage to museums?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Small backpacks are usually fine. Rolling suitcases are not. Coat checks at major museums are intended for coats and small personal items, not travel luggage. Plan storage in advance before visiting any major museum.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I tip hotel staff for storing luggage?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It is appreciated but not mandatory. If a bell attendant helps with your bags, many travelers choose to leave a small tip. There is no obligation, but it is a thoughtful gesture for a free service.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I store luggage overnight?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Some storage providers allow overnight storage, while others do not. Always confirm the policy before booking. Your hotel is usually the better option for any storage that spans overnight.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is luggage storage insured?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Many third-party providers include insurance, but coverage limits vary. If you are carrying expensive equipment, check the details before leaving your bags. Regardless of insurance, keep valuables with you at all times.</div>
+        </details>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL RECS -->
+      <h2>Final Recommendations</h2>
+      <p>If you only remember five things from this guide, make them these:</p>
+
+      <ul class="priority-list">
+        <li>
+          <span class="pl-num">1</span>
+          <div class="pl-text"><strong>Ask Your Hotel First</strong><span>It may solve the problem for free. Most NYC hotels will store luggage before check-in and after checkout at no charge.</span></div>
+        </li>
+        <li>
+          <span class="pl-num">2</span>
+          <div class="pl-text"><strong>Store Bags Where Your Day Ends</strong><span>This saves more time than finding the cheapest storage location. Plan based on your last stop, not your first.</span></div>
+        </li>
+        <li>
+          <span class="pl-num">3</span>
+          <div class="pl-text"><strong>Do Not Expect Lockers at Major Attractions or Train Stations</strong><span>Penn Station, Grand Central, and almost all major attractions have no public luggage lockers. Plan ahead rather than assuming they will be available.</span></div>
+        </li>
+        <li>
+          <span class="pl-num">4</span>
+          <div class="pl-text"><strong>Keep Valuables With You Always</strong><span>Passport, electronics, medications, and anything difficult to replace should never go into stored luggage, regardless of the provider&rsquo;s insurance policy.</span></div>
+        </li>
+        <li>
+          <span class="pl-num">5</span>
+          <div class="pl-text"><strong>Convenience Beats Price</strong><span>An extra dollar or two is worth paying if it saves an unnecessary subway trip. Always prioritize location over cost when comparing options.</span></div>
+        </li>
+      </ul>
+
+      <h3>Editor&rsquo;s Choice by Traveler Type</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Traveler Type</th><th>Best Recommendation</th></tr>
+          <tr><td>First-time visitors</td><td>Hotel luggage storage whenever available</td></tr>
+          <tr><td>Airbnb guests</td><td>Bounce near your itinerary</td></tr>
+          <tr><td>Broadway visitors</td><td>Store luggage in the Theater District</td></tr>
+          <tr><td>Shopping in SoHo</td><td>Store luggage in SoHo</td></tr>
+          <tr><td>Visiting Lower Manhattan</td><td>Store luggage in the Financial District</td></tr>
+          <tr><td>Leaving by Amtrak or NJ Transit</td><td>Store luggage near Penn Station</td></tr>
+          <tr><td>Metro-North travelers</td><td>Store luggage near Grand Central</td></tr>
+          <tr><td>Families</td><td>Hotel luggage storage &mdash; easiest by far</td></tr>
+          <tr><td>Cruise passengers</td><td>Store near your post-cruise sightseeing area</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="where-to-stay-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State Building</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Tickets, Ferries and Tips</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Lower Manhattan: A Walking Itinerary</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var secs=['quick-answer','hotel-storage','services','neighborhoods','airports','attractions','safety'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='quick-answer';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
