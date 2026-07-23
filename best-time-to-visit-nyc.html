@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Time to Visit NYC: Month-by-Month Guide | EverythingInNYC</title>
+<meta name="description" content="When is the best time to visit New York City? This honest month-by-month guide is based on real traveler experiences — weather, crowds, prices and seasonal highlights for every month of the year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- STICKY SIDEBAR ---- */
+.side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.4;}
+.side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+.sn-btn{margin:10px 10px 0;display:block;background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:12px;text-align:center;padding:9px 8px;border-radius:10px;text-decoration:none;line-height:1.3;border-top:1px solid var(--border);}
+.sn-btn:hover{background:rgba(15,23,42,0.85);}
+
+/* ---- MONTH CARD ---- */
+.month-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin:32px 0;box-shadow:var(--shadow-card);}
+.mc-head{background:var(--navy);padding:15px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.mc-head h2{color:#fff;font-size:22px;margin:0;flex:1;line-height:1.2;scroll-margin-top:90px;}
+.mc-verdict{flex:none;font-size:13px;font-style:italic;color:rgba(255,255,255,0.72);max-width:200px;text-align:right;line-height:1.3;}
+.mc-body{padding:20px 24px;}
+
+/* ---- AT A GLANCE ---- */
+.glance-table{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 16px;}
+.glance-table tr{border-bottom:1px solid var(--border);}
+.glance-table tr:last-child{border-bottom:none;}
+.glance-table td{padding:7px 10px;}
+.glance-table td:first-child{font-weight:700;color:var(--navy);width:38%;}
+.glance-table tr:nth-child(even){background:rgba(15,23,42,0.02);}
+
+/* ---- SCORE PILLS (replacing stars) ---- */
+.sc{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+.sc-best{background:rgba(22,163,74,0.12);color:#15803D;}
+.sc-vg{background:rgba(37,99,235,0.09);color:var(--info);}
+.sc-gd{background:rgba(161,98,7,0.1);color:#92620A;}
+.sc-fr{background:rgba(100,116,139,0.1);color:#475569;}
+.sc-poor{background:rgba(220,38,38,0.08);color:#B91C1C;}
+
+/* ---- COLUMNS: pros/why vs complaints ---- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+@media(max-width:500px){.two-col{grid-template-columns:1fr;}}
+.tc-box{background:rgba(15,23,42,0.025);border:1px solid var(--border);border-radius:10px;padding:12px 14px;}
+.tc-box h4{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 8px;}
+.tc-pros h4{color:#15803D;}
+.tc-cons h4{color:#B91C1C;}
+.tc-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.tc-box li{font-size:14.5px;padding-left:14px;position:relative;}
+.tc-pros li::before{content:'+';position:absolute;left:0;color:#15803D;font-weight:700;}
+.tc-cons li::before{content:'-';position:absolute;left:0;color:#B91C1C;font-weight:700;}
+
+/* ---- BEST FOR PILLS ---- */
+.bestfor{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0;}
+.bfp{font-size:13px;font-weight:600;background:rgba(15,23,42,0.06);color:var(--navy);padding:4px 12px;border-radius:20px;}
+
+/* ---- DON'T MISS STRIP ---- */
+.dont-miss{background:rgba(255,193,7,0.08);border:1px solid rgba(255,193,7,0.3);border-radius:10px;padding:11px 15px;margin:12px 0;font-size:14.5px;}
+.dont-miss strong{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;display:block;margin-bottom:5px;}
+
+/* ---- SECTION IMAGE ---- */
+.section-img{margin:28px 0 20px;}
+.section-img img{width:100%;border-radius:14px;max-height:400px;object-fit:cover;display:block;}
+.section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+/* ---- COMPARISON VERDICT CARD ---- */
+.verdict-card{background:var(--navy);color:#fff;border-radius:var(--radius-card);padding:18px 22px;margin:22px 0;}
+.verdict-card .vc-title{font-family:var(--font-head);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent);margin-bottom:8px;}
+.verdict-card p{font-size:15.5px;line-height:1.6;margin:0;color:rgba(255,255,255,0.9);}
+
+/* ---- FINAL COMPARISON TABLE dots ---- */
+.dot-bar{display:flex;gap:3px;align-items:center;}
+.dot-bar .d{width:9px;height:9px;border-radius:50%;background:var(--border);}
+.dot-bar .d.on{background:var(--navy);}
+.dot-bar.green .d.on{background:#15803D;}
+.dot-bar.red .d.on{background:#B91C1C;}
+
+/* ---- CTA BLOCK ---- */
+.cta-map-block{background:var(--navy);border-radius:var(--radius-card);padding:24px 28px;text-align:center;margin:32px 0;}
+.cta-map-block h3{color:#fff;font-size:22px;margin:0 0 8px;}
+.cta-map-block p{color:rgba(255,255,255,0.78);margin:0 0 18px;font-size:15.5px;}
+
+/* ---- JUMP NAV mobile ---- */
+.jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+.jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
+@media(min-width:480px){.jump-nav ul{grid-template-columns:repeat(4,1fr);}}
+.jump-nav li a{font-size:14px;font-weight:700;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+@media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">Jump to Month</div>
+  <a href="#intro">Overview</a>
+  <a href="#jan">January</a>
+  <a href="#feb">February</a>
+  <a href="#mar">March</a>
+  <a href="#apr">April</a>
+  <a href="#may">May</a>
+  <a href="#jun">June</a>
+  <a href="#jul">July</a>
+  <a href="#aug">August</a>
+  <a href="#sep">September</a>
+  <a href="#oct">October</a>
+  <a href="#nov">November</a>
+  <a href="#dec">December</a>
+  <a href="#verdict">Final Verdict</a>
+  <a class="sn-btn" href="index.html">Check out all NYC travel guides</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Travel Planning</span>
+      <h1>Best Time to Visit NYC: Month-by-Month Guide (Based on Real Traveler Experiences)</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span><span>&middot;</span>
+        <span>All 12 months reviewed</span><span>&middot;</span>
+        <span>18 minute read</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="best-mont-to-visit.png" alt="Best time to visit New York City — month by month guide based on real traveler experiences">
+
+    <div class="article-body" id="intro">
+
+      <p>Ask ten New Yorkers when you should visit, and you will probably get ten different answers.</p>
+      <p>Ask thousands of travelers who have already been, and a clear pattern starts to emerge. After analyzing hundreds of trip reports, Reddit discussions, TripAdvisor forums, and firsthand accounts, one conclusion appears again and again:</p>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The Short Version</div>
+        <p>There is not a bad time to visit New York City &mdash; but there is a best time depending on the kind of trip you want. Most repeat visitors choose <strong>spring or fall.</strong> Not because there are more attractions, but because they enjoy the attractions more.</p>
+      </div>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Month</div>
+        <ul>
+          <li><a href="#jan">Jan</a></li><li><a href="#feb">Feb</a></li><li><a href="#mar">Mar</a></li>
+          <li><a href="#apr">Apr</a></li><li><a href="#may">May</a></li><li><a href="#jun">Jun</a></li>
+          <li><a href="#jul">Jul</a></li><li><a href="#aug">Aug</a></li><li><a href="#sep">Sep</a></li>
+          <li><a href="#oct">Oct</a></li><li><a href="#nov">Nov</a></li><li><a href="#dec">Dec</a></li>
+        </ul>
+      </div>
+
+      <!-- QUICK ANSWER -->
+      <h2>Quick Answer</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>If you want&hellip;</th><th>Visit in&hellip;</th></tr>
+          <tr><td>Best overall weather</td><td><strong>October</strong></td></tr>
+          <tr><td>Best spring weather</td><td><strong>May</strong></td></tr>
+          <tr><td>Lowest hotel prices</td><td><strong>January, February</strong></td></tr>
+          <tr><td>Christmas atmosphere</td><td><strong>Early December</strong></td></tr>
+          <tr><td>Fall colors</td><td><strong>Mid to Late October</strong></td></tr>
+          <tr><td>Cherry blossoms</td><td><strong>April</strong></td></tr>
+          <tr><td>Long walking days</td><td><strong>May, September, October</strong></td></tr>
+          <tr><td>Outdoor dining</td><td><strong>May, June, September</strong></td></tr>
+          <tr><td>Budget trip</td><td><strong>January, February</strong></td></tr>
+          <tr><td>Photography</td><td><strong>October, Early December</strong></td></tr>
+          <tr><td>Families</td><td><strong>May, October</strong></td></tr>
+          <tr><td>Couples</td><td><strong>October, Early December</strong></td></tr>
+          <tr><td>Avoid if possible</td><td>Late July and August (unless you love heat)</td></tr>
+        </table>
+      </div>
+
+      <!-- TOP 3 -->
+      <h2>My Top 3 Recommendations</h2>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">1st Choice: October</div>
+          <p>If New York had a perfect month, this would be it. Humidity is gone, parks turn gold and amber, walking ten miles a day feels effortless, and outdoor dining is still everywhere. It is not the cheapest month &mdash; but very few travelers regret visiting in October.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">2nd Choice: May</div>
+          <p>Think of May as October&rsquo;s spring equivalent. Central Park is green, outdoor cafes fill the sidewalks, rooftop bars reopen, and temperatures are comfortable enough that you rarely think about the weather at all. For many locals, May and October are interchangeable as NYC&rsquo;s best months.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">3rd Choice: September</div>
+          <p>September gives you most of summer&rsquo;s advantages without its biggest drawback. The city is lively, outdoor dining is thriving, days are still long, and the oppressive humidity of July and August begins to fade. Late September is especially popular with repeat visitors.</p>
+          <div class="callout callout-tip" style="margin-top:10px;">
+            <div class="callout-title">September Note</div>
+            <p>The UN General Assembly typically takes place in late September, which can cause Midtown East hotel prices to spike. Always check dates before booking.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">The Biggest Planning Mistake</div>
+          <p>Most first-time visitors book during summer, Christmas, or New Year&rsquo;s. Experienced travelers often recommend avoiding all three &mdash; not because these periods are bad, but because <strong>NYC is a walking city.</strong> You will cover 8&ndash;12 miles a day. How comfortable that is depends almost entirely on the weather.</p>
+        </div>
+      </div>
+
+      <!-- BY TRAVELER TYPE -->
+      <h2>Before Choosing a Month, Decide What Kind of Traveler You Are</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Your Priority</th><th>Best Time</th></tr>
+          <tr><td>Walking all day</td><td>May, September, October</td></tr>
+          <tr><td>Saving money</td><td>January, February</td></tr>
+          <tr><td>Christmas decorations</td><td>Early December</td></tr>
+          <tr><td>Photography</td><td>October</td></tr>
+          <tr><td>Broadway &amp; museums</td><td>January&ndash;March</td></tr>
+          <tr><td>Rooftop bars</td><td>June, September</td></tr>
+          <tr><td>Parks &amp; gardens</td><td>April, May</td></tr>
+          <tr><td>Outdoor concerts</td><td>June&ndash;August</td></tr>
+          <tr><td>Fall scenery</td><td>October</td></tr>
+          <tr><td>Holiday markets</td><td>Late November to Early December</td></tr>
+        </table>
+      </div>
+
+      <p>Read more about planning your time in our <a href="ultimate-nyc-itinerary-guide.html">complete NYC itinerary planning guide</a>.</p>
+
+      <hr class="divider-rule">
+
+      <!-- MONTHS -->
+      <h2>NYC Month by Month</h2>
+      <p>Rather than repeating average temperatures, each section focuses on what travelers repeatedly say <em>after</em> visiting &mdash; what surprised them, what they regretted, and what they would do differently.</p>
+
+      <!-- JANUARY -->
+      <div class="month-card" id="jan">
+        <div class="mc-head">
+          <h2>January</h2>
+          <div class="mc-verdict">Best for budget travelers who don&rsquo;t mind the cold</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Cold, windy, occasionally snowy</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-best">Lowest of year</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-best">Lowest of year</span></td></tr>
+            <tr><td>Walking</td><td>Good with proper winter clothing</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent</span></td></tr>
+            <tr><td>Best For</td><td>Budget travelers, museums, Broadway</td></tr>
+          </table>
+          <p>January rarely tops &ldquo;best month&rdquo; lists, yet it is one of the biggest surprises in traveler discussions. Visitors expecting a miserable experience often leave impressed by how much easier &mdash; and cheaper &mdash; the city is after the holiday rush. The word travelers mention most is not &ldquo;cold&rdquo;: it is <strong>wind.</strong> Manhattan&rsquo;s street grid can feel significantly colder than the forecast because of wind tunneling between skyscrapers. Pack for cold wind, not deep snow.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Why Travelers Like It</h4>
+              <ul>
+                <li>Cheapest hotel prices all year</li>
+                <li>Shorter attraction lines</li>
+                <li>Easier restaurant reservations</li>
+                <li>Broadway discounts</li>
+                <li>Less crowded museums</li>
+                <li>A more local feel</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Common Complaints</h4>
+              <ul>
+                <li>Wind chill</li>
+                <li>Early sunsets</li>
+                <li>Dirty snow after storms</li>
+                <li>Less time in parks</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Broadway Week &middot; Restaurant Week &middot; Hotel Week &middot; The Met &middot; MoMA &middot; Observation decks on clear days
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Budget travelers</span><span class="bfp">Museum lovers</span><span class="bfp">Broadway fans</span><span class="bfp">Couples</span><span class="bfp">Repeat visitors</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEBRUARY -->
+      <div class="month-card" id="feb">
+        <div class="mc-head">
+          <h2>February</h2>
+          <div class="mc-verdict">Cold on the outside, surprisingly good value on the inside</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Cold, windy, occasionally snowy</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-best">Low</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-best">Very Low</span></td></tr>
+            <tr><td>Walking</td><td>Good with winter clothing</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent</span></td></tr>
+            <tr><td>Best For</td><td>Budget travelers, couples, indoor attractions</td></tr>
+          </table>
+          <p>February is consistently described as one of the city&rsquo;s best-value months. Many travelers expect it to be dramatically colder than January &mdash; most experienced visitors say it feels very similar. The recurring advice: dress properly, and you will spend far less time thinking about the weather. Many photographers actually prefer winter because leafless trees create clearer skyline views.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Hidden Advantages</h4>
+              <ul>
+                <li>Short security lines at attractions</li>
+                <li>Easier observation deck visits</li>
+                <li>Less crowded museums</li>
+                <li>Better restaurant availability</li>
+                <li>Luxury hotels at impossible-in-October prices</li>
+                <li>Locals seem less rushed</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Typical Complaints</h4>
+              <ul>
+                <li>Wind stronger than expected</li>
+                <li>Cold hands quickly without gloves</li>
+                <li>Parks less vibrant</li>
+                <li>Short daylight hours</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Broadway Week &middot; Restaurant Week &middot; Valentine&rsquo;s Day events &middot; Lunar New Year celebrations &middot; Central Park after fresh snowfall
+          </div>
+          <div class="callout callout-local" style="margin-top:14px;">
+            <div class="callout-title">What Travelers Say</div>
+            <p>Many visitors describe February as feeling like &ldquo;the real New York&rdquo; rather than the version built around tourism. Very few complaints mention crowds or prices.</p>
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Budget travelers</span><span class="bfp">Couples</span><span class="bfp">Museum lovers</span><span class="bfp">Broadway fans</span><span class="bfp">Solo travelers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARCH -->
+      <div class="month-card" id="mar">
+        <div class="mc-head">
+          <h2>March</h2>
+          <div class="mc-verdict">The transition month that is harder to predict than travelers expect</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Highly unpredictable</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-vg">Moderate</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-vg">Moderate</span></td></tr>
+            <tr><td>Walking</td><td>Good with layers</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-vg">Good</span></td></tr>
+            <tr><td>Best For</td><td>Flexible travelers, early spring trips</td></tr>
+          </table>
+          <p>March divides opinion more than January or February. Some visitors enjoy sunny afternoons, blooming flowers, and comfortable sightseeing. Others encounter freezing wind, rain, or even late-season snow. The recurring advice from locals: <strong>treat March as a winter month with occasional spring previews</strong> &mdash; not the other way around. Early March feels very different from late March.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Hidden Advantages</h4>
+              <ul>
+                <li>Lower prices than April and May</li>
+                <li>Less crowded attractions</li>
+                <li>Longer daylight returning</li>
+                <li>The city beginning to wake up</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Common Complaints</h4>
+              <ul>
+                <li>Unpredictable weather</li>
+                <li>Rain showers</li>
+                <li>Windy afternoons</li>
+                <li>Bare trees early in the month</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            St. Patrick&rsquo;s Day Parade &middot; Early cherry blossoms (late March) &middot; First outdoor cafes reopening
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Budget travelers</span><span class="bfp">Flexible itineraries</span><span class="bfp">Couples</span><span class="bfp">Repeat visitors</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- APRIL -->
+      <div class="month-card" id="apr">
+        <div class="mc-head">
+          <h2>April</h2>
+          <div class="mc-verdict">Spring finally arrives &mdash; but don&rsquo;t expect perfect weather every day</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Mild but unpredictable</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-vg">Moderate to Busy</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-gd">Increasing</span></td></tr>
+            <tr><td>Walking</td><td>Excellent most days</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-vg">Very Good</span></td></tr>
+            <tr><td>Best For</td><td>Spring lovers, photographers, first-time visitors</td></tr>
+          </table>
+          <p>April is where New York starts looking like the city you have seen in photos. Trees turn green, flowers bloom, outdoor cafes reopen. The biggest surprise: many visitors expect summer-like temperatures and end up buying an extra sweater. Always pack one warm layer, even if the forecast looks perfect.</p>
+          <p><strong>On cherry blossoms:</strong> they are stunning &mdash; but short-lived. Bloom timing changes every year, and many visitors arrive too early or too late. Beyond the blossoms, however, April offers something even better: the entire city turning green again.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Why Travelers Like It</h4>
+              <ul>
+                <li>Parks becoming vibrant again</li>
+                <li>Outdoor dining returning</li>
+                <li>Comfortable sightseeing temperatures</li>
+                <li>Longer daylight</li>
+                <li>Beautiful neighbourhood walks</li>
+                <li>Brooklyn Botanic Garden in bloom</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Common Complaints</h4>
+              <ul>
+                <li>Rain showers</li>
+                <li>Cool evenings</li>
+                <li>Cherry blossoms not at peak</li>
+                <li>Hotel prices rising</li>
+                <li>More weekend crowds</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Cherry blossoms &middot; Central Park in bloom &middot; Brooklyn Botanic Garden &middot; New York Botanical Garden &middot; Easter Parade
+          </div>
+          <div class="bestfor">
+            <span class="bfp">First-time visitors</span><span class="bfp">Photographers</span><span class="bfp">Couples</span><span class="bfp">Families</span><span class="bfp">Garden lovers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/de/d9/bc/caption.jpg?w=1400&h=-1&s=1" alt="Cherry blossoms in bloom at Brooklyn Botanic Garden, New York City, April">
+        <div class="cap">Brooklyn Botanic Garden in April &mdash; one of the most popular places to see cherry blossoms in New York City.</div>
+      </div>
+
+      <!-- MAY -->
+      <div class="month-card" id="may">
+        <div class="mc-head">
+          <h2>May</h2>
+          <div class="mc-verdict">If October is NYC&rsquo;s best fall month, May is its best spring month</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Warm and comfortable</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-vg">Moderate</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">High</span></td></tr>
+            <tr><td>Walking</td><td><span class="sc sc-best">Outstanding</span></td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent</span></td></tr>
+            <tr><td>Best For</td><td>Almost everyone</td></tr>
+          </table>
+          <p>Few months receive as much praise from experienced travelers as May. The weather is described repeatedly as &ldquo;perfect.&rdquo; Parks are fully green, outdoor dining is thriving, and walking all day rarely feels exhausting. Unlike June, July, and August, very few discussions complain about the weather. Most visitors simply stop thinking about it &mdash; which is probably the highest compliment weather can receive.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Why Travelers Love May</h4>
+              <ul>
+                <li>Outdoor cafes on every block</li>
+                <li>Rooftop bars open</li>
+                <li>Street performers everywhere</li>
+                <li>Parks full of locals</li>
+                <li>Comfortable evenings</li>
+                <li>Long daylight hours</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>The Trade-Offs</h4>
+              <ul>
+                <li>High hotel prices</li>
+                <li>Weekend crowds</li>
+                <li>Seasonal allergies</li>
+                <li>Occasional spring showers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Fleet Week &middot; Manhattanhenge (late May) &middot; Outdoor dining &middot; Governors Island &middot; Smorgasburg &middot; Rooftop bars
+          </div>
+          <div class="bestfor">
+            <span class="bfp">First-time visitors</span><span class="bfp">Families</span><span class="bfp">Couples</span><span class="bfp">Solo travelers</span><span class="bfp">Food lovers</span><span class="bfp">Walkers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- APRIL VS MAY COMPARISON -->
+      <div class="table-wrap" style="margin:20px 0;">
+        <table class="data-table" style="min-width:400px;">
+          <tr><th>Category</th><th>April</th><th>May</th></tr>
+          <tr><td>Weather</td><td>Good but unpredictable</td><td>Consistently comfortable</td></tr>
+          <tr><td>Crowds</td><td>Moderate</td><td>Moderate to Busy</td></tr>
+          <tr><td>Hotel Prices</td><td>High</td><td>Higher</td></tr>
+          <tr><td>Parks</td><td>Beginning to bloom</td><td>Fully green</td></tr>
+          <tr><td>Outdoor Dining</td><td>Growing</td><td>Peak spring season</td></tr>
+          <tr><td>Photography</td><td>Cherry blossoms</td><td>Green parks, vibrant streets</td></tr>
+          <tr><td>Verdict</td><td><span class="sc sc-vg">Excellent</span></td><td><span class="sc sc-best">Outstanding</span></td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">My Advice on April vs May</div>
+        <p>If cherry blossoms are your priority, choose April and accept some weather uncertainty. For almost everyone else, May is the stronger all-around choice. It is one of the few months where travelers struggle to find meaningful downsides.</p>
+      </div>
+
+      <!-- JUNE -->
+      <div class="month-card" id="jun">
+        <div class="mc-head">
+          <h2>June</h2>
+          <div class="mc-verdict">Summer without the worst of summer</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Warm, increasingly humid</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-gd">Busy</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">High</span></td></tr>
+            <tr><td>Walking</td><td><span class="sc sc-best">Excellent (especially early June)</span></td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-vg">Very Good</span></td></tr>
+            <tr><td>Best For</td><td>Outdoor activities, nightlife, first-time visitors</td></tr>
+          </table>
+          <p>June is really two months. Early June is warm, comfortable, and long-daylit with pleasant evenings. Late June: humidity begins building, subway platforms get hotter, and afternoon walks become more tiring. One piece of advice appears repeatedly: <strong>if possible, visit during the first half of June.</strong></p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>What Makes June Great</h4>
+              <ul>
+                <li>Sunset after 8 PM</li>
+                <li>Festivals every weekend</li>
+                <li>Comfortable evenings</li>
+                <li>Vibrant nightlife</li>
+                <li>Parks at their greenest</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>What to Watch Out For</h4>
+              <ul>
+                <li>Rising hotel prices</li>
+                <li>Humidity late in the month</li>
+                <li>Crowded observation decks</li>
+                <li>Busy rooftop bars</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Pride Month &middot; Shakespeare in the Park &middot; Governors Island &middot; Rooftop bars &middot; Bryant Park movie nights
+          </div>
+          <div class="bestfor">
+            <span class="bfp">First-time visitors</span><span class="bfp">Nightlife lovers</span><span class="bfp">Festival-goers</span><span class="bfp">Couples</span><span class="bfp">Outdoor enthusiasts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- JULY -->
+      <div class="month-card" id="jul">
+        <div class="mc-head">
+          <h2>July</h2>
+          <div class="mc-verdict">An incredible city &mdash; but one that demands a different game plan</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Hot and humid</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-poor">Very Busy</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">Very High</span></td></tr>
+            <tr><td>Walking</td><td>Best before 10 AM and after 6 PM</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-gd">Good</span></td></tr>
+            <tr><td>Best For</td><td>Festivals, baseball, nightlife, rooftop bars</td></tr>
+          </table>
+          <p>July receives more complaints than almost any other month. Surprisingly, those complaints are not about attractions &mdash; they are about <strong>humidity.</strong> Even visitors from warm climates say NYC feels more uncomfortable because of the combination of humidity, walking, and the urban heat island effect. Subway stations are repeatedly described as &ldquo;the hottest part of the city.&rdquo;</p>
+          <p>The recurring advice is not to skip July &mdash; it is to plan around the weather: <strong>walk early, rest midday, explore again in the evening.</strong></p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Hidden Advantages</h4>
+              <ul>
+                <li>Long daylight hours</li>
+                <li>Incredible nightlife</li>
+                <li>Rooftop season peak</li>
+                <li>Outdoor concerts</li>
+                <li>Festivals nearly every weekend</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Most Common Complaints</h4>
+              <ul>
+                <li>Oppressive humidity</li>
+                <li>Sweating while walking</li>
+                <li>Hot subway platforms</li>
+                <li>Afternoon exhaustion</li>
+                <li>Constant need for water</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Macy&rsquo;s Fourth of July Fireworks &middot; Outdoor concerts &middot; Baseball games &middot; Rooftop bars &middot; Shakespeare in the Park
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Nightlife lovers</span><span class="bfp">Festival-goers</span><span class="bfp">Baseball fans</span><span class="bfp">Repeat visitors</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUGUST -->
+      <div class="month-card" id="aug">
+        <div class="mc-head">
+          <h2>August</h2>
+          <div class="mc-verdict">The most misunderstood month of the year</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Hot, humid, occasionally stormy</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-gd">Busy (quieter in neighborhoods)</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">High</span></td></tr>
+            <tr><td>Walking</td><td>Best mornings and evenings</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-fr">Fair to Good</span></td></tr>
+            <tr><td>Best For</td><td>Beaches, festivals, repeat visitors</td></tr>
+          </table>
+          <p>August has a reputation for being the worst month to visit. That is only half true. If your dream trip involves walking from sunrise to sunset every day, May or October will serve you better. But if you are happy to slow down, explore evenings, and visit beaches, August can still be a fantastic time. The key factor is your tolerance for heat and humidity.</p>
+          <p>One interesting trend: <strong>late August often feels noticeably better than late July.</strong> Many locals say the city begins cooling slightly toward the end of the month &mdash; not guaranteed, but a pleasant surprise when it happens.</p>
+          <div class="callout callout-tip">
+            <div class="callout-title">Local Tip</div>
+            <p>Don&rsquo;t forget that NYC is a beach city. Many tourists never leave Manhattan and miss one of summer&rsquo;s biggest advantages: Coney Island and Rockaway Beach are both reachable by subway.</p>
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Beach lovers</span><span class="bfp">Nightlife travelers</span><span class="bfp">Festival-goers</span><span class="bfp">Repeat visitors</span><span class="bfp">Heat-tolerant travelers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUMMER VERDICT -->
+      <h3>Summer Verdict: June vs. July vs. August</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:460px;">
+          <tr><th>Category</th><th>June</th><th>July</th><th>August</th></tr>
+          <tr><td>Walking Comfort</td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-fr">Fair</span></td><td><span class="sc sc-fr">Fair</span></td></tr>
+          <tr><td>Humidity</td><td>Moderate</td><td>High</td><td>High</td></tr>
+          <tr><td>Crowds</td><td>Busy</td><td>Very Busy</td><td>Busy</td></tr>
+          <tr><td>Hotel Prices</td><td>High</td><td>Very High</td><td>High</td></tr>
+          <tr><td>Rooftop Bars</td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-best">Excellent</span></td></tr>
+          <tr><td>Beaches</td><td>Good</td><td>Excellent</td><td>Excellent</td></tr>
+          <tr><td>Verdict</td><td><strong>Best summer month</strong></td><td>Plan around heat</td><td>Great if you embrace summer</td></tr>
+        </table>
+      </div>
+      <div class="verdict-card">
+        <div class="vc-title">My Summer Advice</div>
+        <p>If you are set on a summer trip, choose early June whenever possible. It delivers almost everything people love about summer in NYC &mdash; long days, rooftop bars, outdoor dining, and packed event calendars &mdash; without the relentless humidity that dominates so many July and August trip reports.</p>
+      </div>
+
+      <!-- SEPTEMBER -->
+      <div class="month-card" id="sep">
+        <div class="mc-head">
+          <h2>September</h2>
+          <div class="mc-verdict">If you only visit NYC once, September is one of the safest choices you can make</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Warm, comfortable, humidity fading</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-vg">Busy but manageable</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-gd">Moderate to High</span></td></tr>
+            <tr><td>Walking</td><td><span class="sc sc-best">Outstanding</span></td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent</span></td></tr>
+            <tr><td>Best For</td><td>First-time visitors, photographers, food lovers, walkers</td></tr>
+          </table>
+          <p>After months of humidity complaints, the tone of traveler discussions changes almost overnight in September. Phrases like &ldquo;perfect walking weather,&rdquo; &ldquo;ideal temperatures,&rdquo; and &ldquo;my favourite time to visit&rdquo; start appearing repeatedly. Many locals argue September offers the weather people <em>expected</em> July to have.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Why Travelers Love September</h4>
+              <ul>
+                <li>Comfortable evenings</li>
+                <li>Outdoor dining without heat</li>
+                <li>Clear skyline views</li>
+                <li>Long sightseeing days</li>
+                <li>Excellent restaurant atmosphere</li>
+                <li>The city fully alive again</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Watch Out For</h4>
+              <ul>
+                <li>Higher hotel prices</li>
+                <li>Busy weekends</li>
+                <li>Rain showers</li>
+                <li>UN-related Midtown traffic (late month)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            US Open Tennis &middot; Outdoor dining &middot; Food festivals &middot; Governors Island &middot; Rooftop bars &middot; Street fairs
+          </div>
+          <div class="callout callout-tip" style="margin-top:12px;">
+            <div class="callout-title">Hotel Booking Warning</div>
+            <p>The UN General Assembly typically takes place in late September. Hotel prices around Midtown East can increase significantly. Always check <a href="https://www.un.org/en/ga" target="_blank" rel="noopener noreferrer">official UN General Assembly dates</a> before booking your hotel.</p>
+          </div>
+          <div class="bestfor">
+            <span class="bfp">First-time visitors</span><span class="bfp">Couples</span><span class="bfp">Families</span><span class="bfp">Solo travelers</span><span class="bfp">Food lovers</span><span class="bfp">Photographers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OCTOBER -->
+      <div class="month-card" id="oct">
+        <div class="mc-head">
+          <h2>October</h2>
+          <div class="mc-verdict">The month almost everyone recommends</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Cool, crisp and comfortable</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-gd">Busy</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">High</span></td></tr>
+            <tr><td>Walking</td><td><span class="sc sc-best">Outstanding</span></td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent &mdash; Best Overall</span></td></tr>
+            <tr><td>Best For</td><td>Almost every type of traveler</td></tr>
+          </table>
+          <p>Across hundreds of traveler discussions, one month appears more often than any other. Not because of one standout event. Not because it is the cheapest. Simply because it has the fewest compromises. Humidity is gone, parks begin changing color, and spending an entire day outdoors feels effortless.</p>
+          <p>On fall foliage timing: early October may still be fairly green. Mid-October usually offers the best balance. Late October brings stronger autumn colors. Even without peak foliage, travelers consistently rate October as NYC&rsquo;s most enjoyable month. Many repeat visitors walk 10&ndash;15 miles a day without feeling exhausted.</p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>What Makes October Special</h4>
+              <ul>
+                <li>Comfortable evenings</li>
+                <li>Beautiful neighbourhoods</li>
+                <li>Halloween atmosphere</li>
+                <li>Outdoor cafes</li>
+                <li>Ideal sightseeing pace</li>
+                <li>Fall colors across all parks</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>The Trade-Offs</h4>
+              <ul>
+                <li>Hotel prices (book early)</li>
+                <li>Busy weekends</li>
+                <li>Occasional rain</li>
+                <li>Shorter daylight late in the month</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Fall foliage &middot; Village Halloween Parade &middot; Pumpkin displays &middot; Outdoor dining &middot; NBA and NHL season beginning
+          </div>
+          <div class="bestfor">
+            <span class="bfp">First-time visitors</span><span class="bfp">Couples</span><span class="bfp">Families</span><span class="bfp">Photographers</span><span class="bfp">Solo travelers</span><span class="bfp">Walkers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/c4/c8/4b/caption.jpg?w=1400&h=-1&s=1" alt="Central Park in autumn, New York City fall foliage October">
+        <div class="cap">Central Park in October &mdash; the fall foliage typically peaks mid-to-late month and makes this one of the most photographed times of year in NYC.</div>
+      </div>
+
+      <!-- NOVEMBER -->
+      <div class="month-card" id="nov">
+        <div class="mc-head">
+          <h2>November</h2>
+          <div class="mc-verdict">The year&rsquo;s most underrated month</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Cool, becoming colder later</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-vg">Moderate</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-vg">Moderate (higher near Thanksgiving)</span></td></tr>
+            <tr><td>Walking</td><td><span class="sc sc-best">Excellent</span></td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-vg">Very Good</span></td></tr>
+            <tr><td>Best For</td><td>Fall lovers, photographers, couples</td></tr>
+          </table>
+          <p>November does not receive the same attention as October or December, but experienced travelers mention it far more often than expected. It combines the best parts of both seasons: early November still feels like autumn, and late November begins transitioning into Christmas. Between those two periods sits one of the best-value windows of the entire year.</p>
+          <p>Many repeat visitors intentionally book <strong>the first half of November</strong> for its combination of pleasant walking weather and better hotel rates. Late November, after Thanksgiving, rapidly transforms into the holiday season &mdash; giving visitors both fall and Christmas in one trip.</p>
+          <div class="table-wrap" style="margin:12px 0;">
+            <table class="data-table" style="min-width:240px;">
+              <tr><th>Time</th><th>Price Trend</th></tr>
+              <tr><td>Early November</td><td>Moderate</td></tr>
+              <tr><td>Mid-November</td><td>Moderate to High</td></tr>
+              <tr><td>Thanksgiving Week</td><td>Very High</td></tr>
+              <tr><td>After Thanksgiving</td><td>Holiday pricing begins</td></tr>
+            </table>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Fall foliage (early month) &middot; NYC Marathon &middot; Bryant Park Winter Village &middot; Fifth Avenue holiday windows (late month) &middot; Macy&rsquo;s Thanksgiving Day Parade
+          </div>
+          <div class="callout callout-local" style="margin-top:12px;">
+            <div class="callout-title">What Travelers Say About November</div>
+            <p>Many describe it as: &ldquo;October with Christmas slowly arriving.&rdquo; Photographers especially like November because autumn colors and holiday lights briefly overlap.</p>
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Couples</span><span class="bfp">Photographers</span><span class="bfp">First-time visitors</span><span class="bfp">Walkers</span><span class="bfp">Quieter holiday experience</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DECEMBER -->
+      <div class="month-card" id="dec">
+        <div class="mc-head">
+          <h2>December</h2>
+          <div class="mc-verdict">The most magical &mdash; and the most demanding &mdash; month of the year</div>
+        </div>
+        <div class="mc-body">
+          <table class="glance-table">
+            <tr><td>Weather</td><td>Cold</td></tr>
+            <tr><td>Crowds</td><td><span class="sc sc-poor">Extremely Busy</span></td></tr>
+            <tr><td>Hotel Prices</td><td><span class="sc sc-poor">Highest of the year</span></td></tr>
+            <tr><td>Walking</td><td>Good with winter clothing</td></tr>
+            <tr><td>Overall Value</td><td><span class="sc sc-best">Excellent for holiday lovers</span></td></tr>
+            <tr><td>Best For</td><td>Christmas trips, families, photographers</td></tr>
+          </table>
+          <p>No month divides opinion like December. Almost everyone agrees NYC is one of the world&rsquo;s greatest Christmas destinations. Almost everyone also agrees that <strong>timing makes or breaks the experience.</strong> Visit during the first half of December and you will likely leave wondering why everyone doesn&rsquo;t come then. Visit between Christmas and New Year&rsquo;s without expecting the crowds, and your memories may be very different.</p>
+          <p>Travelers often expect a snowy Christmas postcard. Reality is less predictable. Snow is possible &mdash; guaranteed snow is not. Many December visitors never see snowfall at all. The decorations, however, consistently exceed expectations. The strategy repeated most often: <strong>visit major attractions before 9 AM on weekdays whenever possible.</strong></p>
+          <div class="two-col">
+            <div class="tc-box tc-pros">
+              <h4>Why People Love It</h4>
+              <ul>
+                <li>Incredible atmosphere</li>
+                <li>Holiday music everywhere</li>
+                <li>Cozy cafes</li>
+                <li>Beautiful night photography</li>
+                <li>Festive neighbourhoods beyond Midtown</li>
+                <li>Walk at day, return for the lights</li>
+              </ul>
+            </div>
+            <div class="tc-box tc-cons">
+              <h4>Recurring Complaints</h4>
+              <ul>
+                <li>Hotel prices</li>
+                <li>Massive crowds</li>
+                <li>Long attraction lines</li>
+                <li>Difficult restaurant reservations</li>
+                <li>Packed sidewalks</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dont-miss">
+            <strong>Don&rsquo;t Miss</strong>
+            Rockefeller Christmas Tree &middot; Fifth Avenue holiday windows &middot; Bryant Park Winter Village &middot; Dyker Heights Christmas Lights &middot; Radio City Christmas Spectacular &middot; Ice skating
+          </div>
+          <div class="callout callout-local" style="margin-top:12px;">
+            <div class="callout-title">Editor&rsquo;s Note</div>
+            <p>Almost nobody regrets seeing the Christmas decorations. They regret not planning around the crowds. For a full guide, see our <a href="nyc-christmas-things-to-do.html">Ultimate NYC Christmas Guide</a>.</p>
+          </div>
+          <div class="table-wrap" style="margin:12px 0;">
+            <table class="data-table" style="min-width:240px;">
+              <tr><th>Time</th><th>Price Trend</th></tr>
+              <tr><td>Early December</td><td>Very High</td></tr>
+              <tr><td>Mid-December</td><td>Peak</td></tr>
+              <tr><td>Christmas Week</td><td>Extremely High</td></tr>
+              <tr><td>New Year&rsquo;s</td><td>Highest of the Year</td></tr>
+            </table>
+          </div>
+          <div class="bestfor">
+            <span class="bfp">Christmas lovers</span><span class="bfp">Families</span><span class="bfp">Couples</span><span class="bfp">Photographers</span><span class="bfp">Holiday shoppers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e9/92/42/rockefeller-center-christmas.jpg?w=1400&h=-1&s=1" alt="Rockefeller Center Christmas tree New York City December">
+        <div class="cap">The Rockefeller Center Christmas tree &mdash; the centerpiece of NYC&rsquo;s holiday season and one of the most photographed spots in December.</div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL COMPARISON TABLE -->
+      <h2 id="verdict">Quick Comparison: Which Month Should You Choose?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:540px;font-size:13.5px;">
+          <tr><th>Month</th><th>Weather</th><th>Crowds</th><th>Value</th><th>Overall</th></tr>
+          <tr><td><strong>January</strong></td><td><span class="sc sc-fr">Fair</span></td><td><span class="sc sc-best">Quiet</span></td><td><span class="sc sc-best">Cheapest</span></td><td>Great Value</td></tr>
+          <tr><td><strong>February</strong></td><td><span class="sc sc-fr">Fair</span></td><td><span class="sc sc-best">Quiet</span></td><td><span class="sc sc-best">Cheapest</span></td><td>Great Value</td></tr>
+          <tr><td><strong>March</strong></td><td><span class="sc sc-gd">Good</span></td><td><span class="sc sc-vg">Light</span></td><td><span class="sc sc-vg">Moderate</span></td><td>Good</td></tr>
+          <tr><td><strong>April</strong></td><td><span class="sc sc-vg">Very Good</span></td><td><span class="sc sc-gd">Moderate</span></td><td><span class="sc sc-gd">Moderate</span></td><td>Very Good</td></tr>
+          <tr><td><strong>May</strong></td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-gd">Moderate</span></td><td><span class="sc sc-gd">Moderate</span></td><td>Excellent</td></tr>
+          <tr><td><strong>June</strong></td><td><span class="sc sc-vg">Very Good</span></td><td><span class="sc sc-gd">Moderate</span></td><td><span class="sc sc-gd">Moderate</span></td><td>Very Good</td></tr>
+          <tr><td><strong>July</strong></td><td><span class="sc sc-fr">Fair</span></td><td><span class="sc sc-poor">Very Busy</span></td><td><span class="sc sc-poor">High</span></td><td>Good (with planning)</td></tr>
+          <tr><td><strong>August</strong></td><td><span class="sc sc-fr">Fair</span></td><td><span class="sc sc-poor">Busy</span></td><td><span class="sc sc-poor">High</span></td><td>Fair</td></tr>
+          <tr><td><strong>September</strong></td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-gd">Moderate</span></td><td><span class="sc sc-gd">Moderate</span></td><td>Excellent</td></tr>
+          <tr><td><strong>October</strong></td><td><span class="sc sc-best">Excellent</span></td><td><span class="sc sc-gd">Moderate</span></td><td><span class="sc sc-gd">Moderate</span></td><td><strong>Best Overall</strong></td></tr>
+          <tr><td><strong>November</strong></td><td><span class="sc sc-vg">Very Good</span></td><td><span class="sc sc-vg">Light</span></td><td><span class="sc sc-vg">Moderate</span></td><td>Excellent Value</td></tr>
+          <tr><td><strong>December</strong></td><td><span class="sc sc-gd">Good</span></td><td><span class="sc sc-poor">Very Busy</span></td><td><span class="sc sc-poor">Highest</span></td><td>Magical</td></tr>
+        </table>
+      </div>
+
+      <!-- EDITOR'S VERDICT -->
+      <div class="verdict-card">
+        <div class="vc-title">Editor&rsquo;s Verdict</div>
+        <p>After reading hundreds of firsthand traveler experiences, one conclusion stands out: there is not a universally perfect month to visit New York City. There are simply months that better match the kind of trip you want.</p>
+        <br>
+        <p>If you are chasing postcard-perfect weather and days where you barely think about the forecast, <strong>May, September, and October</strong> consistently deliver.</p>
+        <br>
+        <p>If your budget matters more than anything else, <strong>January and February</strong> offer incredible value that many first-time visitors overlook entirely.</p>
+        <br>
+        <p>And if seeing New York dressed up for the holidays has been on your bucket list for years, visit during <strong>the first half of December</strong>. You will experience most of the festive atmosphere without the extreme prices and crowds that arrive closer to Christmas and New Year&rsquo;s.</p>
+        <br>
+        <p>Above all: <strong>don&rsquo;t choose a month because it is popular. Choose it because it matches the trip you actually want.</strong></p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-map-block">
+        <div class="cta-eyebrow" style="color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;">Plan Your Trip</div>
+        <h3>NYC Bucket List Map &mdash; 250+ Spots Pinned</h3>
+        <p>Whatever month you visit, this Google Maps guide makes it easy to organize your itinerary by neighborhood. 250+ attractions, restaurants, viewpoints, and hidden gems, ready to use on your phone.</p>
+        <a class="btn btn-primary" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map Guide</a>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="nyc-christmas-things-to-do.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Things to Do in NYC at Christmas</a></li>
+      <li><a href="where-to-stay-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="nyc-trip-budget.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+      <li><a href="which-attractions-to-book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Attractions Should You Book Before Your Trip?</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var secs=['intro','jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec','verdict'];
+var slinks=document.querySelectorAll('.side-nav a:not(.sn-btn)');
+function updateNav(){
+  var cur='intro';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
