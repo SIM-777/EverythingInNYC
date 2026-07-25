@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Things to Do in SoHo NYC: A Local's Walking Guide | EverythingInNYC</title>
+<meta name="description" content="The best things to do in SoHo NYC — beyond the tourist checklist. A self-guided walking route through Greene Street, Crosby Street and the cast-iron architecture that makes this neighborhood unlike anywhere else.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- SIDEBAR ---- */
+.side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+.side-nav a{display:block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all 0.15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);background:rgba(15,23,42,0.04);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,0.07);}
+
+/* ---- RATING PILL (no stars) ---- */
+.rp{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:0.02em;white-space:nowrap;}
+.rp-os{background:rgba(15,23,42,0.1);color:var(--navy);}       /* Outstanding */
+.rp-ex{background:rgba(22,163,74,0.11);color:#15803D;}          /* Excellent */
+.rp-vg{background:rgba(37,99,235,0.09);color:var(--info);}     /* Very Good */
+.rp-gd{background:rgba(161,98,7,0.1);color:#92620A;}           /* Good */
+.rp-av{background:rgba(100,116,139,0.1);color:#475569;}         /* Average */
+.rp-ess{background:var(--navy);color:#fff;}                     /* Essential */
+.rp-skip{background:rgba(220,38,38,0.08);color:#B91C1C;}        /* Skip */
+
+/* ---- ROUTE STOP CARD ---- */
+.stop-card{border:1px solid var(--border);background:var(--bg-card);border-radius:var(--radius-card);overflow:hidden;margin:28px 0;box-shadow:var(--shadow-card);}
+.sc-head{background:var(--navy);padding:14px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.sc-num{font-family:var(--font-head);font-weight:800;font-size:22px;color:var(--accent);flex:none;line-height:1;}
+.sc-head h2{color:#fff;font-size:20px;margin:0;flex:1;line-height:1.2;scroll-margin-top:90px;}
+.sc-time{font-size:12px;font-weight:700;background:rgba(255,255,255,0.15);color:#fff;padding:3px 10px;border-radius:20px;flex:none;}
+.stop-card .sc-body{padding:18px 22px;}
+
+/* ---- SNAPSHOT TABLE (inside stop cards) ---- */
+.snap-t{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 14px;}
+.snap-t tr{border-bottom:1px solid var(--border);}
+.snap-t tr:last-child{border-bottom:none;}
+.snap-t td{padding:6px 10px;}
+.snap-t td:first-child{font-weight:700;color:var(--navy);width:38%;}
+.snap-t tr:nth-child(odd){background:rgba(15,23,42,0.02);}
+
+/* ---- LOCAL TIP BOX ---- */
+.tip-box{background:#FFF9E8;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:14.5px;}
+.tip-box strong{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#92620A;display:block;margin-bottom:4px;}
+
+/* ---- VERDICT STRIP ---- */
+.verdict-strip{background:rgba(15,23,42,0.04);border-top:1px solid var(--border);padding:10px 22px;font-size:14.5px;font-style:italic;color:var(--navy);}
+
+/* ---- STREET CARD ---- */
+.street-card{border:1px solid var(--border);border-radius:14px;padding:18px 20px;background:var(--bg-card);margin-bottom:14px;}
+.street-card .st-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.street-card .st-verdict{flex:none;}
+.street-card .st-meta{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-secondary);margin-bottom:8px;}
+.street-card p{font-size:15px;color:var(--text-secondary);margin:0;}
+
+/* ---- ARCH DETAIL (numbered, no grid bug) ---- */
+.arch-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:10px;}
+.arch-list li{display:flex;align-items:flex-start;gap:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:13px 16px;}
+.arch-num{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--accent);background:var(--navy);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.arch-list li .al-text{display:flex;flex-direction:column;gap:3px;}
+.arch-list li .al-text strong{color:var(--navy);font-size:15.5px;}
+.arch-list li .al-text span{font-size:14.5px;color:var(--text-secondary);}
+
+/* ---- RESTAURANT CARD ---- */
+.rest-card{border:1px solid var(--border);border-radius:14px;padding:16px 18px;background:var(--bg-card);}
+.rest-card .rc-name{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--navy);margin-bottom:4px;}
+.rest-card .rc-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-secondary);margin-bottom:8px;display:block;}
+.rest-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+.rest-card ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:3px;}
+.rest-card ul li{font-size:14px;padding-left:14px;position:relative;}
+.rest-card ul li::before{content:'-';position:absolute;left:0;color:var(--text-secondary);}
+
+/* ---- GEM CARD ---- */
+.gem-card{border:1px solid var(--border);border-radius:14px;padding:16px 18px;background:var(--bg-card);}
+.gem-card .gc-name{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--navy);margin-bottom:4px;}
+.gem-card .gc-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+.gem-card .gc-meta span{font-size:12.5px;font-weight:600;background:rgba(15,23,42,0.06);padding:2px 10px;border-radius:20px;}
+.gem-card p{font-size:14.5px;color:var(--text-secondary);margin:0;}
+
+/* ---- CHECKLIST ---- */
+.soho-checklist{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:7px;}
+.soho-checklist li{display:flex;align-items:flex-start;gap:12px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:10px 15px;font-size:15px;}
+.soho-checklist li::before{content:'';width:20px;height:20px;border:2px solid var(--border);border-radius:5px;flex:none;margin-top:1px;background:#fff;}
+
+/* ---- ROUTE FLOW ---- */
+.route-flow{background:rgba(15,23,42,0.03);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:14px 0;}
+.route-flow .rf-label{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy);margin-bottom:10px;}
+.route-flow .rf-stops{display:flex;flex-wrap:wrap;align-items:center;gap:5px;}
+.rf-stops .rs{font-size:15px;font-weight:700;color:var(--navy);}
+.rf-stops .ra{color:var(--accent);font-weight:800;font-size:16px;}
+
+/* ---- SECTION IMAGE ---- */
+.section-img{margin:28px 0 20px;}
+.section-img img{width:100%;border-radius:14px;max-height:420px;object-fit:cover;display:block;}
+.section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+/* ---- JUMP NAV (mobile) ---- */
+.jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:22px 0;}
+.jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.jump-nav li a{font-size:14.5px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,0.3);}
+@media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">This Guide</div>
+  <a href="#glance">At a Glance</a>
+  <a href="#worth-it">Is It Worth It?</a>
+  <a href="#route">Walking Route</a>
+  <a href="#streets">Best Streets</a>
+  <a href="#architecture">Architecture</a>
+  <a href="#photography">Photography</a>
+  <a href="#eat">Where to Eat</a>
+  <a href="#shopping">Shopping</a>
+  <a href="#hidden">Hidden Gems</a>
+  <a href="#practical">Practical Tips</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">Neighborhood Guide</span>
+      <h1>Things to Do in SoHo NYC: A Local&rsquo;s Walking Guide (Beyond the Tourist Checklist)</h1>
+      <div class="article-meta">
+        <span>Updated 2026</span><span>&middot;</span>
+        <span>Self-guided walking route</span><span>&middot;</span>
+        <span>1.6 miles</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="soho_guide_cover.png" alt="Things to do in SoHo NYC — self-guided walking guide for first-time visitors">
+
+    <div class="article-body" id="glance">
+
+      <p><em>Looking for the best things to do in SoHo NYC? Skip the generic attraction lists. This self-guided walking guide shows you exactly where to walk, what to see, where to eat, what to skip, and how to experience one of New York City&rsquo;s most beautiful neighborhoods like someone who actually knows it.</em></p>
+
+      <div class="table-wrap" style="margin-top:20px;" id="at-glance">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Best For</th><td>Architecture, shopping, cafes, photography, first-time visitors</td></tr>
+          <tr><th>Time Needed</th><td>2.5&ndash;4 hours</td></tr>
+          <tr><th>Walking Distance</th><td>About 1.6 miles (2.6 km)</td></tr>
+          <tr><th>Cost</th><td>Free (excluding food and shopping)</td></tr>
+          <tr><th>Best Time to Visit</th><td>Weekday mornings (8&ndash;10 AM)</td></tr>
+          <tr><th>Best Season</th><td>Spring and Fall</td></tr>
+          <tr><th>Family Friendly</th><td>Yes</td></tr>
+          <tr><th>Accessibility</th><td>Mostly, but expect cobblestone streets</td></tr>
+          <tr><th>Don&rsquo;t Miss</th><td>Greene Street, Crosby Street, cast-iron architecture, a coffee stop, Nolita afterward</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">Check Out All NYC Travel Guides</div>
+        <p>This guide is part of our complete NYC travel library. For itineraries, attraction comparisons, neighborhood walks, and trip planning tools, visit the <a href="index.html">EverythingInNYC homepage</a>.</p>
+      </div>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#worth-it">Is It Worth It?</a></li>
+          <li><a href="#route">Walking Route</a></li>
+          <li><a href="#streets">Best Streets</a></li>
+          <li><a href="#architecture">Architecture Guide</a></li>
+          <li><a href="#photography">Photography</a></li>
+          <li><a href="#eat">Where to Eat</a></li>
+          <li><a href="#shopping">Shopping</a></li>
+          <li><a href="#hidden">Hidden Gems</a></li>
+          <li><a href="#practical">Practical Tips</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- IS IT WORTH IT -->
+      <h2 id="worth-it">Is SoHo Worth Visiting?</h2>
+
+      <p>Absolutely. In fact, SoHo deserves a spot on almost every first-time New York itinerary &mdash; not because it has one world-famous attraction, not because there is a museum you cannot miss, but because <strong>the neighborhood itself is the attraction.</strong></p>
+
+      <p>People often arrive expecting an afternoon of shopping. They leave talking about beautiful old buildings, quiet cobblestone streets, cafes they stumbled across, and how unexpectedly photogenic everything felt. If someone asked me to recommend one Manhattan neighborhood that captures New York&rsquo;s energy without feeling overwhelmingly touristy, SoHo would be near the top of the list.</p>
+
+      <h3>Who Will Love SoHo?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Traveler Type</th><th>Worth Visiting?</th></tr>
+          <tr><td>First-time NYC visitor</td><td><span class="rp rp-ess">Essential</span></td></tr>
+          <tr><td>Couples</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td>Street photographers</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td>Architecture lovers</td><td><span class="rp rp-ess">One of NYC&rsquo;s best</span></td></tr>
+          <tr><td>Coffee lovers</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td>Fashion &amp; shopping fans</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td>Families</td><td><span class="rp rp-vg">Very Good</span></td></tr>
+          <tr><td>Budget travelers</td><td><span class="rp rp-gd">Worth visiting</span></td></tr>
+          <tr><td>Nightlife seekers</td><td>Better options nearby</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Who Might Be Disappointed?</div>
+        <p>You may find SoHo overrated if you are expecting major museums, iconic attractions like the Statue of Liberty, cheap outlet shopping, or vibrant nightlife. If your idea of a great neighborhood is checking famous landmarks off a list, SoHo may feel surprisingly quiet. If your idea of travel is wandering beautiful streets with a coffee in hand, you will probably love it.</p>
+      </div>
+
+      <h3>How Much Time Should You Spend?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>Available Time</th><th>What You&rsquo;ll Experience</th></tr>
+          <tr><td>1 hour</td><td>Walk Greene Street and grab a coffee</td></tr>
+          <tr><td>2 hours</td><td>See the highlights without much shopping</td></tr>
+          <tr><td>3 hours</td><td>The ideal first visit</td></tr>
+          <tr><td>Half day</td><td>Shopping, cafes, galleries and lunch</td></tr>
+          <tr><td>Full day</td><td>Only if shopping is your priority</td></tr>
+        </table>
+      </div>
+      <p>For most visitors, <strong>three hours is the sweet spot</strong> &mdash; enough to wander without rushing, stop for coffee, browse a few stores, admire the architecture, enjoy lunch, and take plenty of photos.</p>
+
+      <h3>Quick Verdict</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>Category</th><th>Rating</th></tr>
+          <tr><td>Overall Experience</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td>Walking &amp; Architecture</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td>Photography</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td>Shopping</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td>Food &amp; Coffee</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td>Families</td><td><span class="rp rp-vg">Very Good</span></td></tr>
+          <tr><td>Budget Friendly</td><td><span class="rp rp-av">Average</span></td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">My Three Rules for Visiting SoHo</div>
+        <p><strong>1. Walk side streets more than Broadway.</strong> Think of Broadway as transportation. Think of the side streets as the destination. &nbsp;&middot;&nbsp; <strong>2. Look up every few minutes.</strong> The architecture above the storefronts is what makes SoHo internationally famous. &nbsp;&middot;&nbsp; <strong>3. Don&rsquo;t schedule every minute.</strong> Leave at least 30 minutes completely unplanned. Some of the best discoveries in SoHo happen because something catches your eye.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- WALKING ROUTE -->
+      <h2 id="route">The Perfect Self-Guided Walking Route Through SoHo</h2>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/c1/f6/a3/soho.jpg?w=1400&h=-1&s=1" alt="SoHo New York City cast-iron buildings and cobblestone streets">
+        <div class="cap">SoHo&rsquo;s cast-iron loft buildings are best seen by walking slowly and looking up. Most of the neighborhood&rsquo;s beauty is above eye level.</div>
+      </div>
+
+      <p>The best SoHo walk is not a straight line from attraction to attraction. It is a slow zigzag through beautiful side streets, cafes, hidden corners, and architectural highlights. If you simply follow Broadway from one end to the other, you will probably leave wondering why everyone loves SoHo. Follow this route instead.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Distance</th><td>About 1.6 miles (2.6 km)</td></tr>
+          <tr><th>Walking Time</th><td>40&ndash;50 minutes without stops</td></tr>
+          <tr><th>Recommended Visit</th><td>2.5&ndash;4 hours</td></tr>
+          <tr><th>Direction</th><td>South to North</td></tr>
+          <tr><th>Start</th><td>Canal Street</td></tr>
+          <tr><th>Finish</th><td>Nolita (recommended) or Greenwich Village</td></tr>
+        </table>
+      </div>
+
+      <div class="route-flow">
+        <div class="rf-label">Full Route</div>
+        <div class="rf-stops">
+          <span class="rs">Canal Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Greene Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Spring Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Mercer Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Prince Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Crosby Street</span><span class="ra">&#8594;</span>
+          <span class="rs">Nolita</span>
+        </div>
+      </div>
+
+      <!-- STOP 1 -->
+      <div class="stop-card" id="canal-street">
+        <div class="sc-head">
+          <span class="sc-num">1</span>
+          <h2>Canal Street &mdash; Leave the Chaos Behind</h2>
+          <span class="sc-time">5&ndash;10 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Worth Stopping?</td><td>Only briefly</td></tr>
+            <tr><td>Photography</td><td><span class="rp rp-av">Average</span></td></tr>
+            <tr><td>Crowds</td><td>High</td></tr>
+            <tr><td>Architecture</td><td><span class="rp rp-av">Average</span></td></tr>
+          </table>
+          <p>Most people know Canal Street for counterfeit souvenirs, bargain electronics, and crowds. That is not why you are here. Cross Canal Street and keep walking north. Within one block, the neighborhood changes completely. The sidewalks become calmer, the buildings become taller, and cast-iron facades begin replacing discount stores. You will immediately notice that SoHo feels completely different from Chinatown despite being separated by just one street.</p>
+          <div class="tip-box">
+            <strong>Don&rsquo;t Spend Too Much Time Here</strong>
+            Canal Street is simply your gateway. The real walk starts after you cross it.
+          </div>
+        </div>
+        <div class="verdict-strip">Canal Street is your starting point. Walk through it quickly and head north.</div>
+      </div>
+
+      <!-- STOP 2 -->
+      <div class="stop-card" id="greene-street">
+        <div class="sc-head">
+          <span class="sc-num">2</span>
+          <h2>Greene Street &mdash; The Soul of SoHo</h2>
+          <span class="sc-time">25&ndash;40 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Photography</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Architecture</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Shopping</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            <tr><td>Crowds</td><td>Moderate</td></tr>
+            <tr><td>Verdict</td><td><span class="rp rp-ess">Essential</span></td></tr>
+          </table>
+          <p>If someone gave me only twenty minutes in SoHo, I would spend almost all of it on Greene Street. Beautiful cast-iron buildings, cobblestones, wide loft windows, elegant storefronts, historic fire escapes. It is one of the few streets in Manhattan where simply walking slowly is enough to justify the visit.</p>
+          <p>Walk half a block. Stop. Look up. Continue. Repeat. Most visitors never notice that nearly every building has different decorative details. One facade might feature elaborate Corinthian columns. The next has completely different window proportions.</p>
+          <div class="tip-box">
+            <strong>Best Photo Spots</strong>
+            Looking north from any intersection &middot; Mid-block back toward Canal Street &middot; Street-level shots with cobblestones in the foreground &middot; Upward shots highlighting the cast-iron facades
+          </div>
+          <div class="tip-box">
+            <strong>Best Time</strong>
+            Before 10 AM. You will photograph the buildings instead of waiting for gaps between crowds.
+          </div>
+          <p><strong>Things Most Visitors Miss:</strong> Decorative iron columns &middot; Cornices above the fourth floor &middot; Original loft windows &middot; Fire escapes creating layered photographs &middot; Historic building entrances hidden beside luxury stores.</p>
+        </div>
+        <div class="verdict-strip">Essential. If you only have time for one street in SoHo, make it this one.</div>
+      </div>
+
+      <!-- STOP 3 -->
+      <div class="stop-card" id="spring-street">
+        <div class="sc-head">
+          <span class="sc-num">3</span>
+          <h2>Spring Street &mdash; The Perfect Midpoint</h2>
+          <span class="sc-time">20&ndash;30 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Coffee</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Shopping</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Photography</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            <tr><td>Atmosphere</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          </table>
+          <p>Spring Street is where SoHo&rsquo;s personality really comes together. It is less about one specific attraction and more about how everything blends together. Coffee shops spill onto sidewalks. Boutiques sit beside bakeries. People browse slowly rather than rushing. Not as crowded as Broadway. Not as quiet as Crosby Street. Just enough of everything.</p>
+          <div class="tip-box">
+            <strong>Local Tip</strong>
+            Don&rsquo;t eat lunch yet. Keep walking. You will appreciate a longer lunch after you have explored more of the neighborhood.
+          </div>
+        </div>
+        <div class="verdict-strip">Perfect for coffee, window shopping, and watching the neighborhood go by.</div>
+      </div>
+
+      <!-- STOP 4 -->
+      <div class="stop-card" id="mercer-street">
+        <div class="sc-head">
+          <span class="sc-num">4</span>
+          <h2>Mercer Street &mdash; Shop Without the Madness</h2>
+          <span class="sc-time">15&ndash;25 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Shopping</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Crowds</td><td>Moderate</td></tr>
+            <tr><td>Architecture</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            <tr><td>Photography</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          </table>
+          <p>Mercer Street offers many of the brands people come to SoHo for, but with a noticeably calmer atmosphere than Broadway. If shopping is one of your priorities, spend more time here than on Broadway. You will still find flagship stores, but you will actually have room to enjoy them. Even if you do not buy anything, Mercer is one of the nicest streets for window shopping.</p>
+          <div class="tip-box">
+            <strong>Local Tip</strong>
+            Do not feel obligated to enter every store. One of the easiest ways to burn out in SoHo is trying to shop everywhere. Pick a handful of stores that genuinely interest you and keep moving.
+          </div>
+        </div>
+        <div class="verdict-strip">Better for shopping than Broadway. Calmer, more enjoyable, same brands.</div>
+      </div>
+
+      <!-- STOP 5 -->
+      <div class="stop-card" id="prince-street">
+        <div class="sc-head">
+          <span class="sc-num">5</span>
+          <h2>Prince Street &mdash; The Neighborhood&rsquo;s Living Room</h2>
+          <span class="sc-time">20&ndash;30 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Food</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Shopping</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Photography</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            <tr><td>Atmosphere</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          </table>
+          <p>If Greene Street is the heart of SoHo&rsquo;s architecture, Prince Street is its social center. People are not rushing here. They are meeting friends, waiting for brunch, shopping, taking photos, eating outside. It feels alive without becoming overwhelming. This is where I usually stop for a proper meal. By now you have walked enough to appreciate a longer break.</p>
+          <div class="tip-box">
+            <strong>Don&rsquo;t Miss</strong>
+            Before leaving Prince Street, take one last look back toward Greene Street. It is one of the best long views in the neighborhood.
+          </div>
+        </div>
+        <div class="verdict-strip">The ideal lunch stop. Enjoy the atmosphere instead of rushing to the next destination.</div>
+      </div>
+
+      <!-- STOP 6 -->
+      <div class="stop-card" id="crosby-street">
+        <div class="sc-head">
+          <span class="sc-num">6</span>
+          <h2>Crosby Street &mdash; My Favorite Street in SoHo</h2>
+          <span class="sc-time">20&ndash;30 min</span>
+        </div>
+        <div class="sc-body">
+          <table class="snap-t">
+            <tr><td>Photography</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Crowds</td><td>Low</td></tr>
+            <tr><td>Shopping</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            <tr><td>Atmosphere</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+            <tr><td>Verdict</td><td><span class="rp rp-ess">Do Not Skip</span></td></tr>
+          </table>
+          <p>If Greene Street shows off SoHo, Crosby Street lets you breathe. It is quieter, less commercial, more intimate &mdash; and somehow even more photogenic. This is where the side of SoHo that feels genuinely local hides. There are no crowds pressing past you every few seconds. You have space to appreciate the buildings, notice details, hear conversations, and find interesting storefronts instead of endless luxury brands.</p>
+          <div class="tip-box">
+            <strong>Why I Love It</strong>
+            Crosby Street feels like the version of SoHo that existed before social media turned every corner into a photo stop. Spend time here. Take your best photographs of the day. Browse a bookstore or gallery.
+          </div>
+          <p><strong>Best Photo Opportunities:</strong> Cobblestones leading toward historic lofts &middot; Boutique storefronts &middot; Fire escapes &middot; Quiet intersections</p>
+        </div>
+        <div class="verdict-strip">Don&rsquo;t skip Crosby Street. It is what makes SoHo more than just a shopping district.</div>
+      </div>
+
+      <!-- OPTIONAL DETOURS -->
+      <h3>Optional Detours Worth Taking</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>Stop</th><th>Time</th><th>Why Go?</th></tr>
+          <tr><td><strong>New York Earth Room</strong></td><td>15 min</td><td>One of NYC&rsquo;s strangest free art installations</td></tr>
+          <tr><td><strong>Housing Works Bookstore</strong></td><td>30 min</td><td>Beautiful bookstore and a welcome break from shopping</td></tr>
+          <tr><td><strong>Judd Foundation</strong></td><td>1 hour</td><td>Fascinating look inside SoHo&rsquo;s artist-loft history</td></tr>
+          <tr><td><strong>Free Gallery</strong></td><td>20 min</td><td>Free, quiet, and rarely crowded</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Where the Walk Should End</div>
+        <p>I strongly recommend continuing into <strong>Nolita</strong>. It is quieter, the restaurants are excellent, and the atmosphere becomes more relaxed. If you still have energy, continue another ten minutes into <strong>Greenwich Village</strong>. Together, these three neighborhoods create one of the best half-day walks in New York City. See our <a href="greenwich-village-walking-itinerary.html">Greenwich Village walking itinerary</a> to plan the full route.</p>
+      </div>
+
+      <h3>Route Summary</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Stop</th><th>Time</th><th>Don&rsquo;t Miss</th></tr>
+          <tr><td>Canal Street</td><td>5&ndash;10 min</td><td>The transition into SoHo</td></tr>
+          <tr><td>Greene Street</td><td>30 min</td><td>Cast-iron architecture</td></tr>
+          <tr><td>Spring Street</td><td>20 min</td><td>Coffee and boutiques</td></tr>
+          <tr><td>Mercer Street</td><td>20 min</td><td>Shopping without Broadway crowds</td></tr>
+          <tr><td>Prince Street</td><td>30 min</td><td>Lunch and people watching</td></tr>
+          <tr><td>Crosby Street</td><td>25 min</td><td>Quiet atmosphere and photography</td></tr>
+          <tr><td>Nolita (Optional)</td><td>45&ndash;90 min</td><td>Restaurants, cafes and independent shops</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BEST STREETS -->
+      <h2 id="streets">The Streets Worth Walking</h2>
+      <p>Ask someone who has spent years exploring New York what makes SoHo famous, and they will almost certainly say the streets &mdash; not the stores. Every block has a different personality.</p>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/18/14/45/caption.jpg?w=1400&h=-1&s=1" alt="SoHo New York City street with cast-iron architecture buildings">
+        <div class="cap">SoHo&rsquo;s streets are best experienced slowly. The details that make this neighborhood remarkable are almost all above eye level.</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:460px;">
+          <tr><th>Street</th><th>Best For</th><th>Don&rsquo;t Miss</th><th>Overall</th></tr>
+          <tr><td><strong>Greene Street</strong></td><td>Architecture</td><td>Cast-iron buildings</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td><strong>Crosby Street</strong></td><td>Photography</td><td>Cobblestones and quiet</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+          <tr><td><strong>Spring Street</strong></td><td>Cafes and boutiques</td><td>Relaxed wandering</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td><strong>Prince Street</strong></td><td>Restaurants</td><td>Lunch stop</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td><strong>Mercer Street</strong></td><td>Shopping</td><td>Flagship stores</td><td><span class="rp rp-vg">Very Good</span></td></tr>
+          <tr><td><strong>Broadway</strong></td><td>Major brands</td><td>Window shopping only</td><td><span class="rp rp-gd">Good</span></td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="street-card">
+          <div class="st-name">Greene Street <span class="st-verdict"><span class="rp rp-ess">Essential</span></span></div>
+          <div class="st-meta">Architecture &middot; Photography &middot; Shopping</div>
+          <p>Almost every block feels like an outdoor architecture museum. Buildings are tall but elegant, decorative without being excessive, and historic without feeling frozen in time. Wide loft windows, decorative columns, ornate cornices, cast-iron facades, old fire escapes &mdash; everything works together. Walk both sides of the street. The perspective changes completely.</p>
+        </div>
+        <div class="street-card">
+          <div class="st-name">Crosby Street <span class="st-verdict"><span class="rp rp-ess">Do Not Skip</span></span></div>
+          <div class="st-meta">Photography &middot; Quiet Walks &middot; Coffee</div>
+          <p>If Greene Street is impressive, Crosby Street is charming. The crowds thin out, the pace slows, and you notice more independent shops and fewer chain retailers. This is where you stop trying to see everything and simply enjoy walking. Space to photograph without blocking twenty people behind you. The version of SoHo that existed before it became famous.</p>
+        </div>
+        <div class="street-card">
+          <div class="st-name">Spring Street <span class="st-verdict"><span class="rp rp-ex">Excellent</span></span></div>
+          <div class="st-meta">Coffee &middot; Fashion &middot; Restaurants &middot; Architecture</div>
+          <p>If someone asked which street best represents modern SoHo, the answer would probably be Spring Street. Coffee shops, fashion, beauty stores, small boutiques, restaurants, historic architecture, street life &mdash; nothing dominates. Buy a coffee, walk one block, stop, people-watch for five minutes, continue. That is Spring Street.</p>
+        </div>
+        <div class="street-card">
+          <div class="st-name">Broadway <span class="st-verdict"><span class="rp rp-gd">Worth Walking</span></span></div>
+          <div class="st-meta">Major Brands &middot; Window Shopping</div>
+          <p>This might be the most controversial opinion in this guide: Broadway is probably the least interesting major street in SoHo. Not because it is bad &mdash; simply because it is too busy. Most storefronts belong to international brands available in other major cities. Walk through it, browse a few stores, then head back to the side streets. Use Broadway to move between neighborhoods. Use the side streets to experience them.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ARCHITECTURE -->
+      <h2 id="architecture">Why SoHo&rsquo;s Architecture Is Unlike Anywhere Else</h2>
+      <p>SoHo contains the <strong>largest collection of cast-iron architecture in the world.</strong> The elaborate building fronts were not carved from stone &mdash; they were manufactured in cast iron, allowing builders to create incredibly detailed facades at a fraction of the cost. More than a century later, they are still one of New York&rsquo;s defining architectural treasures.</p>
+      <p>In the late 1800s, developers ordered building fronts from a factory: piece by piece, column by column, window frame by window frame. Instead of carving expensive stone by hand, decorative iron pieces were manufactured, shipped to the site, and assembled almost like a giant kit. The result was buildings that looked incredibly ornate but were faster and cheaper to construct.</p>
+
+      <h3>Five Architectural Details Almost Everyone Misses</h3>
+      <ul class="arch-list">
+        <li>
+          <span class="arch-num">1</span>
+          <div class="al-text"><strong>Decorative Columns</strong><span>No two buildings are exactly alike. Look closely at the columns supporting the upper floors. The patterns change constantly from building to building.</span></div>
+        </li>
+        <li>
+          <span class="arch-num">2</span>
+          <div class="al-text"><strong>Loft Windows</strong><span>Those oversized windows were not designed to look stylish. Factories needed daylight. Artists later loved them for the exact same reason. Today they are one of SoHo&rsquo;s defining features.</span></div>
+        </li>
+        <li>
+          <span class="arch-num">3</span>
+          <div class="al-text"><strong>Fire Escapes</strong><span>Instead of treating them as obstacles in your photos, use them. They add depth, texture, and unmistakable New York character to almost any composition.</span></div>
+        </li>
+        <li>
+          <span class="arch-num">4</span>
+          <div class="al-text"><strong>Cornices</strong><span>The tops of the buildings are often the most beautiful part. Unfortunately, they are also the part most tourists never see. Take a moment to look all the way up.</span></div>
+        </li>
+        <li>
+          <span class="arch-num">5</span>
+          <div class="al-text"><strong>Historic Entrances</strong><span>Some of the most beautiful entrances in Manhattan are tucked between luxury boutiques. They are easy to walk straight past. Slow down and look beside the storefronts.</span></div>
+        </li>
+      </ul>
+
+      <h3>Buildings Worth Stopping For</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">E.V. Haughwout Building</div>
+          <p>If SoHo has one architectural superstar, this is it. The elegant white cast-iron facade is impossible to miss. Spend five minutes here. Look at it from different angles. Then look upward.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">101 Spring Street</div>
+          <p>Even if you do not tour the interior, it is worth pausing outside. The building tells the story of SoHo&rsquo;s transformation from manufacturing district to artists&rsquo; neighborhood.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PHOTOGRAPHY -->
+      <h2 id="photography">Photography Guide</h2>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/18/14/41/caption.jpg?w=1400&h=-1&s=1" alt="SoHo NYC cobblestone street with historic loft buildings">
+        <div class="cap">The cobblestone streets of SoHo make for some of the most recognizable photographs in New York &mdash; get here before 10 AM for the best light and emptier sidewalks.</div>
+      </div>
+
+      <p>One of the biggest reasons people visit SoHo is simply because it is beautiful. But timing makes a huge difference.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Time</th><th>Rating</th><th>Why</th></tr>
+          <tr><td>8&ndash;10 AM</td><td><span class="rp rp-ess">Outstanding</span></td><td>Quiet streets and soft light</td></tr>
+          <tr><td>10 AM &ndash; Noon</td><td><span class="rp rp-ex">Excellent</span></td><td>Great building detail</td></tr>
+          <tr><td>Golden Hour</td><td><span class="rp rp-ess">Outstanding</span></td><td>Warm light on cast iron</td></tr>
+          <tr><td>Blue Hour</td><td><span class="rp rp-ex">Excellent</span></td><td>Beautiful storefront glow</td></tr>
+          <tr><td>Saturday Afternoon</td><td><span class="rp rp-skip">Skip for Photos</span></td><td>Crowded sidewalks</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Best Photo Spots</div>
+          <ul class="card-list">
+            <li><strong>Greene Street</strong> &mdash; The classic SoHo photograph</li>
+            <li><strong>Crosby Street</strong> &mdash; Cobblestones, minimal crowds</li>
+            <li><strong>Prince and Greene intersection</strong> &mdash; People alongside architecture</li>
+            <li><strong>Side streets looking toward Broadway</strong> &mdash; Quiet blocks against the busier avenue</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Photography Tips</div>
+          <ul class="card-list">
+            <li>Look up as often as you look ahead</li>
+            <li>Photograph entire streets, not individual storefronts</li>
+            <li>Use cobblestones to lead the eye through your composition</li>
+            <li>Cross the street frequently to change perspective</li>
+            <li>Morning light produces cleaner, less crowded images</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Biggest Secret About SoHo Photography</div>
+        <p>The neighborhood becomes dramatically more interesting the slower you walk. Watch how most people visit &mdash; they hurry from one store to the next. Meanwhile, the best architecture, the best photographs, and the most memorable moments are happening above their heads or one block away on a quieter street.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- WHERE TO EAT -->
+      <h2 id="eat">Where to Eat in SoHo</h2>
+
+      <p>One of the biggest misconceptions about SoHo is that it is all style and no substance. Yes, there are expensive restaurants designed for Instagram. But mixed among the trendy spots are genuine New York institutions, outstanding bakeries, and restaurants that have earned their reputation.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Time</th><th>Recommendation</th></tr>
+          <tr><td>8:30&ndash;9:30 AM</td><td>Coffee and a pastry</td></tr>
+          <tr><td>10:30 AM</td><td>Continue walking</td></tr>
+          <tr><td>1:00&ndash;2:00 PM</td><td>Relaxed lunch</td></tr>
+          <tr><td>3:30 PM</td><td>Dessert or another coffee</td></tr>
+          <tr><td>Evening</td><td>Dinner in SoHo, Nolita or Greenwich Village</td></tr>
+        </table>
+      </div>
+
+      <h3>Best Coffee Shops</h3>
+      <div class="card-grid cols-2">
+        <div class="rest-card">
+          <div class="rc-name">Felix Roasting Co.</div>
+          <span class="rc-tag">Best Overall &middot; Beautiful Interiors</span>
+          <p>If you are looking for a coffee shop that feels distinctly New York, Felix is hard to beat. Excellent coffee, elegant interiors, comfortable seating, and a slower pace than many grab-and-go cafes.</p>
+          <ul><li>Order: Flat White, Cappuccino, Seasonal drinks</li><li>Best time: Before 10 AM</li></ul>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">La Cabra</div>
+          <span class="rc-tag">Best for Coffee Enthusiasts</span>
+          <p>If coffee quality is your priority, this is one of the strongest options in the neighborhood. The pastries are equally impressive, making it an excellent breakfast stop.</p>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">% Arabica</div>
+          <span class="rc-tag">Best for Speed</span>
+          <p>Minimalist. Consistently good coffee. Fast service. Ideal if you want to get back to exploring quickly rather than lingering.</p>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">Dominique Ansel Bakery</div>
+          <span class="rc-tag">Best Bakery</span>
+          <p>Most people come for the Cronut, but some of the bakery&rsquo;s best pastries receive far less attention. Also try: DKA (Kouign-Amann), seasonal pastries, cookie shots.</p>
+          <p style="margin-top:8px;font-size:13.5px;font-weight:600;color:var(--navy);">Wait under 20 min: go. Over 45 min: come back another morning. Waiting an hour means sacrificing time on Greene Street.</p>
+        </div>
+      </div>
+
+      <h3>Best Restaurants</h3>
+      <div class="card-grid cols-2">
+        <div class="rest-card">
+          <div class="rc-name">Balthazar</div>
+          <span class="rc-tag">Best Overall &middot; Breakfast, Brunch, Dinner</span>
+          <p>One of New York City&rsquo;s classic dining rooms. Walking inside feels like stepping into a timeless Parisian brasserie. If someone asked me for one SoHo restaurant to visit above all others, this is it.</p>
+          <ul><li>Eggs Benedict, Steak and Eggs, French toast, Bread basket</li><li>Reserve ahead &mdash; especially on weekends</li></ul>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">Raoul&rsquo;s</div>
+          <span class="rc-tag">Best Lunch &middot; French Bistro</span>
+          <p>Part of the neighborhood for decades and still feels relevant. The famous burger is a New York legend. French bistro atmosphere, excellent service, busy dining room. Reservations recommended.</p>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">Blue Ribbon Brasserie</div>
+          <span class="rc-tag">Best Dinner &middot; Dependable</span>
+          <p>Dependable, relaxed, consistently good. Sometimes that is exactly what you want after a morning of walking. Also one of the better evening options if you are staying in the neighborhood after sunset.</p>
+        </div>
+        <div class="rest-card">
+          <div class="rc-name">Sadelle&rsquo;s</div>
+          <span class="rc-tag">Best Brunch</span>
+          <p>Excellent bagels and smoked salmon. A natural fit for a late-morning stop after exploring Greene Street. Reserve ahead if possible.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Food Mistakes to Avoid</div>
+        <p><strong>Waiting too long for brunch.</strong> If there is a 90-minute wait, move on. &nbsp;&middot;&nbsp; <strong>Eating too early.</strong> A pastry in the morning and a proper lunch at 1:30 PM feels far more satisfying than sitting down at 11:30. &nbsp;&middot;&nbsp; <strong>Choosing restaurants only because they are famous.</strong> Popularity is not always quality. &nbsp;&middot;&nbsp; <strong>Carrying shopping bags into every restaurant.</strong> If you are planning serious shopping, eat first.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- SHOPPING -->
+      <h2 id="shopping">Shopping in SoHo</h2>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/a3/db/f7/caption.jpg?w=1400&h=-1&s=1" alt="SoHo NYC cobblestone shopping street with boutique stores">
+        <div class="cap">SoHo&rsquo;s cobblestone streets make even window shopping feel like part of the experience. The side streets are considerably more enjoyable than Broadway for browsing.</div>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">Set Your Expectations Correctly</div>
+        <p>You are not walking into an outlet mall. You are walking through one of Manhattan&rsquo;s premier retail districts, where flagship stores, luxury brands, independent boutiques, and beautifully designed interiors are as much a part of the neighborhood as the cast-iron buildings themselves. The shopping is excellent &mdash; just do not mistake it for the reason to visit SoHo.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;font-size:13.5px;">
+          <tr><th>Shopping Style</th><th>Worth It?</th><th>Notes</th></tr>
+          <tr><td>Luxury brands</td><td><span class="rp rp-ex">Excellent</span></td><td>One of NYC&rsquo;s best areas</td></tr>
+          <tr><td>Flagship stores</td><td><span class="rp rp-ex">Excellent</span></td><td>Often larger than elsewhere</td></tr>
+          <tr><td>Window shopping</td><td><span class="rp rp-ess">Outstanding</span></td><td>A highlight in itself</td></tr>
+          <tr><td>Independent boutiques</td><td><span class="rp rp-vg">Very Good</span></td><td>On quieter side streets</td></tr>
+          <tr><td>Sneaker shopping</td><td><span class="rp rp-gd">Good</span></td><td>Several flagship locations</td></tr>
+          <tr><td>Vintage shopping</td><td><span class="rp rp-av">Fair</span></td><td>Better options in LES, Williamsburg</td></tr>
+          <tr><td>Discount shopping</td><td><span class="rp rp-skip">Not Here</span></td><td>Look elsewhere</td></tr>
+        </table>
+      </div>
+
+      <h3>Best Shopping Streets</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Looking For</th><th>Best Street</th></tr>
+          <tr><td>Overall shopping</td><td><strong>Mercer Street</strong></td></tr>
+          <tr><td>Luxury brands</td><td>Broadway</td></tr>
+          <tr><td>Independent boutiques</td><td>Crosby and Spring Streets</td></tr>
+          <tr><td>Window shopping</td><td>Greene Street</td></tr>
+          <tr><td>Home decor</td><td>Side streets around Spring Street</td></tr>
+          <tr><td>Bookstore</td><td>Housing Works Bookstore</td></tr>
+          <tr><td>Sneaker shopping</td><td>Mercer Street</td></tr>
+          <tr><td>Quiet browsing</td><td>Crosby Street</td></tr>
+        </table>
+      </div>
+
+      <h3>Best Time to Shop</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Time</th><th>Experience</th></tr>
+          <tr><td>Before 10 AM</td><td>Quiet streets, relaxed browsing</td></tr>
+          <tr><td>10 AM &ndash; Noon</td><td>Comfortable</td></tr>
+          <tr><td>Noon &ndash; 2 PM</td><td>Busy but manageable</td></tr>
+          <tr><td>2&ndash;5 PM</td><td>Peak crowds &mdash; avoid</td></tr>
+          <tr><td>Weekday Evening</td><td>Pleasant atmosphere</td></tr>
+          <tr><td>Saturday Afternoon</td><td>Avoid if possible</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Flagship Stores Worth Visiting</div>
+          <p>Many brands have some of their most impressive New York locations in SoHo. Even if you do not plan to buy anything, some stores are worth stepping inside for the interior design alone.</p>
+          <ul class="card-list">
+            <li>Apple, Nike, adidas, Lululemon</li>
+            <li>Uniqlo, Aritzia, Muji</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Window Shopping Route</div>
+          <div class="route-flow" style="margin:8px 0 0;">
+            <div class="rf-label">Best Window Shopping</div>
+            <div class="rf-stops">
+              <span class="rs">Greene St</span><span class="ra">&#8594;</span>
+              <span class="rs">Mercer St</span><span class="ra">&#8594;</span>
+              <span class="rs">Prince St</span><span class="ra">&#8594;</span>
+              <span class="rs">Spring St</span><span class="ra">&#8594;</span>
+              <span class="rs">Crosby St</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HIDDEN GEMS -->
+      <h2 id="hidden">Hidden Gems and Free Things to Do in SoHo</h2>
+      <p>Some of the best places in SoHo are not famous restaurants or luxury boutiques. They are quiet art spaces, historic buildings, tucked-away bookstores, and side streets where the pace suddenly slows down. Many are completely free.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:400px;">
+          <tr><th>Place</th><th>Time</th><th>Cost</th><th>Worth It?</th></tr>
+          <tr><td><strong>New York Earth Room</strong></td><td>15&ndash;20 min</td><td>Free</td><td><span class="rp rp-ess">Essential</span></td></tr>
+          <tr><td><strong>Housing Works Bookstore</strong></td><td>20&ndash;40 min</td><td>Free to browse</td><td><span class="rp rp-ess">Essential</span></td></tr>
+          <tr><td><strong>Judd Foundation</strong></td><td>45&ndash;60 min</td><td>Paid</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td><strong>Free Art Galleries</strong></td><td>10&ndash;30 min each</td><td>Free</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+          <tr><td><strong>Petrosino Square</strong></td><td>10 min</td><td>Free</td><td>Good break</td></tr>
+          <tr><td><strong>Side Streets</strong></td><td>As long as you like</td><td>Free</td><td><span class="rp rp-ess">Do Not Skip</span></td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="gem-card">
+          <div class="gc-name">New York Earth Room</div>
+          <div class="gc-meta"><span>Free</span><span>15&ndash;20 min</span><span>No photography inside</span></div>
+          <p>Imagine walking into an ordinary loft building and discovering an apartment filled with 280,000 pounds (127,000 kg) of earth. No furniture. No explanation beyond a small plaque. Just an enormous room of soil that has remained largely untouched for decades. After an hour surrounded by busy sidewalks and designer storefronts, this feels almost meditative. Most visitors spend less than five minutes here. Stay a little longer. The silence is part of the artwork.</p>
+        </div>
+        <div class="gem-card">
+          <div class="gc-name">Housing Works Bookstore</div>
+          <div class="gc-meta"><span>Free to browse</span><span>30 min</span><span>Coffee available</span></div>
+          <p>High shelves, comfortable chairs, a cozy cafe, natural light through large windows. Even if you are not buying a book, it is worth stepping inside just to slow the pace of your day. This is the perfect antidote to shopping fatigue. Spend twenty minutes here and you will leave refreshed. Also has excellent upstairs seating, regular author events, and a carefully curated used-book selection.</p>
+        </div>
+        <div class="gem-card">
+          <div class="gc-name">Judd Foundation</div>
+          <div class="gc-meta"><span>Paid (guided tour)</span><span>About 1 hour</span><span>Book ahead</span></div>
+          <p>Donald Judd&rsquo;s former home and studio offers a fascinating look at SoHo before it became synonymous with luxury shopping. This is a preserved artist&rsquo;s living and working space, not a traditional museum. If architecture, design, or contemporary art is a genuine interest, it is one of the neighborhood&rsquo;s most rewarding experiences. Visits are by guided tour only; tickets often sell out in advance.</p>
+        </div>
+        <div class="gem-card">
+          <div class="gc-name">Free Galleries</div>
+          <div class="gc-meta"><span>Free</span><span>10&ndash;30 min each</span></div>
+          <p>Most commercial galleries are free to browse even if you have no intention of buying anything. Rotating exhibitions, usually quiet, and a welcome break from shopping. A short gallery visit fits naturally into any part of the walk. Don&rsquo;t worry about understanding every piece &mdash; simply enjoy the experience.</p>
+        </div>
+      </div>
+
+      <h3>Free Things to Do in SoHo</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Activity</th><th>Cost</th></tr>
+          <tr><td>Walk Greene Street</td><td>Free</td></tr>
+          <tr><td>Explore Crosby Street</td><td>Free</td></tr>
+          <tr><td>Browse a gallery</td><td>Free</td></tr>
+          <tr><td>Visit the Earth Room</td><td>Free</td></tr>
+          <tr><td>Browse Housing Works Bookstore</td><td>Free</td></tr>
+          <tr><td>Photograph the architecture</td><td>Free</td></tr>
+          <tr><td>Window shop</td><td>Free</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">The Best Hidden Gem</div>
+        <p>Ironically, the greatest hidden gem in SoHo is not hidden at all. It is simply the streets most people never bother walking. Turn down a street because it looks interesting. Double back if something catches your eye. Some of the best moments in SoHo happen when you stop following an itinerary.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PRACTICAL TIPS -->
+      <h2 id="practical">Practical Tips for Visiting SoHo</h2>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>Time</th><th>Crowds</th><th>Experience</th></tr>
+          <tr><td>8:00&ndash;10:00 AM</td><td>Low</td><td>Best for photography and architecture</td></tr>
+          <tr><td>10:00 AM &ndash; Noon</td><td>Moderate</td><td>Ideal balance</td></tr>
+          <tr><td>Noon &ndash; 2:00 PM</td><td>Busy</td><td>Great for lunch and shopping</td></tr>
+          <tr><td>2:00&ndash;5:00 PM</td><td>Very Busy</td><td>Peak shopping crowds</td></tr>
+          <tr><td>After 6:00 PM</td><td>Moderate</td><td>Relaxed atmosphere and dinner</td></tr>
+        </table>
+      </div>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Best Day of the Week</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><td>Monday &ndash; Thursday</td><td><span class="rp rp-ess">Best</span></td></tr>
+              <tr><td>Friday</td><td><span class="rp rp-vg">Good</span></td></tr>
+              <tr><td>Saturday</td><td>Only if you do not mind crowds</td></tr>
+              <tr><td>Sunday Morning</td><td><span class="rp rp-vg">Very Pleasant</span></td></tr>
+              <tr><td>Sunday Afternoon</td><td>Busy</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-tag">Best Season</div>
+          <div class="table-wrap" style="margin-top:8px;">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><td>Spring</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+              <tr><td>Summer</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+              <tr><td>Fall</td><td><span class="rp rp-ess">Outstanding</span></td></tr>
+              <tr><td>Winter</td><td><span class="rp rp-ex">Excellent</span></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h3>The Five Biggest Mistakes Visitors Make</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">Spending the Entire Visit on Broadway</div><p>Broadway is famous. It is not the best street in SoHo. Walk it once, then head to Greene, Crosby, Mercer, and Spring Streets.</p></div>
+        <div class="card"><div class="card-tag">Looking at Store Windows Instead of Buildings</div><p>The storefronts change every few years. The architecture has been here for more than a century. Look up. Often.</p></div>
+        <div class="card"><div class="card-tag">Expecting Outlet Prices</div><p>SoHo is home to flagship stores and designer boutiques &mdash; not discount shopping. If you are looking for bargains, you will leave disappointed.</p></div>
+        <div class="card"><div class="card-tag">Waiting Too Long for Brunch</div><p>A popular restaurant is worth a short wait. It is rarely worth sacrificing an hour of your day. If the line looks endless, keep walking.</p></div>
+      </div>
+
+      <h3>Is SoHo Family Friendly?</h3>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Great For Families</div>
+          <ul class="card-list">
+            <li>Easy walking distances</li>
+            <li>Bakeries and dessert stops</li>
+            <li>Window shopping</li>
+            <li>Wide sidewalks</li>
+            <li>Short distances between highlights</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Keep in Mind</div>
+          <ul class="card-list">
+            <li>Cobblestone streets can be bumpy for strollers</li>
+            <li>Weekends become crowded</li>
+            <li>Few playgrounds within SoHo itself</li>
+            <li>Limited public seating &mdash; use cafes as rest stops</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Pair SoHo With Another Neighborhood</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Neighborhood</th><th>Walking Time</th><th>Why Go?</th></tr>
+          <tr><td><strong>Nolita</strong></td><td>5 min</td><td>Great cafes, boutiques and restaurants</td></tr>
+          <tr><td><strong>Greenwich Village</strong></td><td>10&ndash;15 min</td><td>Historic streets and Washington Square Park</td></tr>
+          <tr><td><strong>Chinatown</strong></td><td>5 min</td><td>Incredible food and vibrant street life</td></tr>
+          <tr><td><strong>Little Italy</strong></td><td>10 min</td><td>Desserts and Italian cafes</td></tr>
+          <tr><td><strong>Tribeca</strong></td><td>15 min</td><td>Loft buildings and quieter streets</td></tr>
+        </table>
+      </div>
+      <p>The best combination: <strong>SoHo &rarr; Nolita &rarr; Greenwich Village.</strong> If someone asked me to recommend one half-day walk in Manhattan, this would be it. See also our <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a> for a full downtown day.</p>
+
+      <h3>SoHo in One Perfect Day</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Time</th><th>Activity</th></tr>
+          <tr><td>9:00 AM</td><td>Coffee and pastry</td></tr>
+          <tr><td>9:30 AM</td><td>Walk Greene Street</td></tr>
+          <tr><td>10:15 AM</td><td>Explore Spring and Mercer Streets</td></tr>
+          <tr><td>11:00 AM</td><td>Browse boutiques and galleries</td></tr>
+          <tr><td>Noon</td><td>Crosby Street</td></tr>
+          <tr><td>1:00 PM</td><td>Lunch at Raoul&rsquo;s or Balthazar</td></tr>
+          <tr><td>2:00 PM</td><td>Housing Works Bookstore or Earth Room</td></tr>
+          <tr><td>3:00 PM</td><td>Walk into Nolita</td></tr>
+          <tr><td>Evening</td><td>Dinner in Greenwich Village</td></tr>
+        </table>
+      </div>
+      <p>It is an unhurried itinerary &mdash; and that is exactly why it works. SoHo is not a neighborhood to conquer. It is one to savor.</p>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is SoHo worth visiting?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. It is one of New York City&rsquo;s best neighborhoods for walking, architecture, shopping, and cafes. Even if you do not plan to buy anything, it is well worth visiting for the streets alone.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is SoHo famous for?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Three things: cast-iron architecture (the world&rsquo;s largest collection), flagship shopping, and historic artist lofts. Those are what give the neighborhood its unique character.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you visit SoHo without shopping?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Definitely. In fact, many of the best experiences in SoHo involve walking, photography, galleries, cafes, and simply appreciating the architecture. Shopping is optional.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is SoHo expensive?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">It can be. Luxury shopping and upscale restaurants dominate much of the neighborhood. Fortunately, wandering the streets, admiring the buildings, and exploring galleries costs nothing.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is SoHo safe?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. It is one of the busiest and most visited neighborhoods in Lower Manhattan. Like anywhere in New York, stay aware of your surroundings and keep an eye on your belongings, especially in crowded shopping areas.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between SoHo and Nolita?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Think of them as siblings. SoHo is larger, busier, and known for shopping and architecture. Nolita feels smaller, quieter, and more neighborhood-focused, with independent restaurants and boutiques. Visiting both in the same afternoon gives you the best of both worlds.</div>
+        </details>
+        <details class="faq-item">
+          <summary>When is the best time to visit SoHo?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Weekday mornings, around 9 AM. You will have quiet streets, shorter cafe lines, and the best light for photography. Saturday afternoons are the most crowded and least enjoyable. Spring and fall offer the best weather for walking.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How much time do you need in SoHo?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Three hours is the sweet spot for most visitors. That is enough to see the architectural highlights, stop for coffee, browse a few stores, enjoy lunch, and take plenty of photos without every storefront starting to look the same. Shopping enthusiasts may want a full half-day.</div>
+        </details>
+      </div>
+
+      <!-- FINAL VERDICT + CHECKLIST -->
+      <hr class="divider-rule">
+
+      <div class="callout callout-summary">
+        <div class="callout-title">My Final Verdict</div>
+        <p>If you visit SoHo expecting the biggest attractions in New York, you might leave wondering what all the excitement is about. If you visit expecting one of the city&rsquo;s most enjoyable neighborhoods to explore on foot, you will probably understand why people keep coming back. The secret is not finding one hidden landmark. It is slowing down enough to appreciate everything around you.</p>
+      </div>
+
+      <h2>SoHo Checklist: Did You Experience the Real Neighborhood?</h2>
+      <ul class="soho-checklist">
+        <li>Walked Greene Street from end to end</li>
+        <li>Explored Crosby Street</li>
+        <li>Looked up at the cast-iron architecture</li>
+        <li>Visited a gallery</li>
+        <li>Stopped for coffee instead of rushing</li>
+        <li>Browsed Housing Works Bookstore</li>
+        <li>Enjoyed lunch instead of grabbing something quickly</li>
+        <li>Taken photos beyond Broadway</li>
+        <li>Wandered without checking your map</li>
+        <li>Continued into Nolita</li>
+      </ul>
+      <p>If you can tick off most of that list, you have experienced the SoHo worth recommending to any friend visiting New York. Not just the famous one. The memorable one.</p>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="greenwich-village-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Greenwich Village Walking Itinerary: A Self-Guided Walk</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Lower Manhattan: A Walking Itinerary</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="where-to-stay-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</a></li>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City/d687-ttd?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours and Tickets</div>
+        <div class="fc-sub">Reserve now, pay later on Viator</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+var secs=['glance','worth-it','route','streets','architecture','photography','eat','shopping','hidden','practical','faq'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='glance';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
