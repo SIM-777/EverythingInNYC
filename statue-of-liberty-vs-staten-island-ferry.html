@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statue of Liberty vs Staten Island Ferry: An Honest Comparison | EverythingInNYC</title>
+<meta name="description" content="Statue of Liberty or Staten Island Ferry? This honest comparison covers time, cost, views, and who each experience is best for — so you can choose the right one for your trip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- SIDEBAR ---- */
+.side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.sn-title{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+.side-nav a{display:block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);background:rgba(15,23,42,.04);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+
+/* ---- CHOICE CARDS ---- */
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+@media(max-width:580px){.choice-grid{grid-template-columns:1fr;}}
+.choice-card{border-radius:var(--radius-card);padding:18px 20px;border:2px solid transparent;}
+.cc-sol{background:rgba(15,23,42,0.04);border-color:var(--navy);}
+.cc-sif{background:rgba(255,193,7,0.07);border-color:var(--accent);}
+.choice-card .cc-head{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cc-badge{font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px;}
+.cc-sol .cc-badge{background:var(--navy);color:#fff;}
+.cc-sif .cc-badge{background:var(--accent);color:var(--navy);}
+.choice-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+.choice-card li{font-size:14.5px;padding-left:16px;position:relative;}
+.choice-card li::before{content:'›';position:absolute;left:0;color:var(--navy);font-weight:700;}
+
+/* ---- WINNER BADGE ---- */
+.win{display:inline-block;font-size:11px;font-weight:800;padding:2px 9px;border-radius:20px;letter-spacing:.02em;white-space:nowrap;}
+.win-sol{background:var(--navy);color:#fff;}
+.win-sif{background:var(--accent);color:var(--navy);}
+.win-tie{background:rgba(100,116,139,.15);color:#475569;}
+
+/* ---- SECTION HEADER RIBBON ---- */
+.section-ribbon{background:var(--navy);color:#fff;border-radius:12px 12px 0 0;padding:13px 20px;margin:32px 0 0;display:flex;align-items:center;gap:10px;}
+.section-ribbon h2{color:#fff;margin:0;font-size:20px;line-height:1.2;scroll-margin-top:90px;}
+.sr-tag{font-size:12px;font-weight:700;background:var(--accent);color:var(--navy);padding:3px 10px;border-radius:20px;flex:none;}
+.section-body{border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:20px 22px;background:var(--bg-card);margin-bottom:24px;}
+
+/* ---- TIME BREAKDOWN TABLE ---- */
+.time-t{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;}
+.time-t th{background:rgba(15,23,42,.04);font-weight:700;padding:8px 12px;text-align:left;border-bottom:2px solid var(--border);}
+.time-t td{padding:7px 12px;border-bottom:1px solid var(--border);}
+.time-t tr:last-child td{border-bottom:none;}
+.time-t tr:nth-child(even) td{background:rgba(15,23,42,.02);}
+
+/* ---- FERRY SIDE DIAGRAM ---- */
+.ferry-diagram{background:rgba(15,23,42,.04);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:460px){.ferry-diagram{grid-template-columns:1fr;}}
+.fd-box{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;text-align:center;}
+.fd-box .fd-dir{font-family:var(--font-head);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-secondary);margin-bottom:6px;}
+.fd-box .fd-side{font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--navy);}
+.fd-box .fd-note{font-size:13px;color:var(--text-secondary);margin-top:4px;}
+
+/* ---- SECTION IMAGE ---- */
+.section-img{margin:24px 0 16px;}
+.section-img img{width:100%;border-radius:14px;max-height:420px;object-fit:cover;display:block;}
+.section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+/* ---- VIATOR CTA ---- */
+.viator-box{background:rgba(15,23,42,.04);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:16px 0;}
+.vb-text{flex:1;min-width:0;}
+.vb-text strong{display:block;font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--navy);margin-bottom:3px;}
+.vb-text span{font-size:14px;color:var(--text-secondary);}
+.vb-cta{flex:none;}
+
+/* ---- DECISION BOXES ---- */
+.decision-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:640px){.decision-grid{grid-template-columns:1fr;}}
+.dbox{border-radius:12px;padding:15px 16px;border:1px solid var(--border);}
+.dbox .db-time{font-family:var(--font-head);font-weight:800;font-size:14px;color:var(--navy);margin-bottom:6px;}
+.dbox .db-choice{font-size:15px;font-weight:600;margin-bottom:6px;}
+.dbox p{font-size:14px;color:var(--text-secondary);margin:0;}
+
+/* ---- JUMP NAV ---- */
+.jump-nav{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px 20px;margin:20px 0;}
+.jump-nav .jn-title{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.jump-nav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.jump-nav li a{font-size:14px;font-weight:600;color:var(--info);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);}
+@media(min-width:1120px){.jump-nav{display:none;}}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<nav class="side-nav" id="sideNav">
+  <div class="sn-title">Contents</div>
+  <a href="#overview">Overview</a>
+  <a href="#choose-sol">Statue of Liberty</a>
+  <a href="#choose-sif">Staten Island Ferry</a>
+  <a href="#head2head">Head-to-Head</a>
+  <a href="#who">Who Should Choose What</a>
+  <a href="#faq">FAQ</a>
+  <a href="#verdict">Final Verdict</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Travel Planning</span>
+      <h1>Statue of Liberty vs. Staten Island Ferry: An Honest Comparison for First-Time Visitors</h1>
+      <div class="article-meta"><span>Updated 2026</span><span>&middot;</span><span>12 minute read</span><span>&middot;</span><span>Both experiences reviewed in detail</span></div>
+    </div>
+
+    <img class="article-hero-img" src="ferry_vs_island_tour.png" alt="Statue of Liberty vs Staten Island Ferry — which is better for first-time visitors to New York City">
+
+    <div class="article-body" id="overview">
+
+      <p><em>Trying to decide between the Statue of Liberty and the Staten Island Ferry? Here is the answer most travel guides will not give you: they are not really competing attractions. One is a half-day historical experience. The other is one of New York City&rsquo;s best free sightseeing trips. The right choice depends entirely on how you want to spend your limited time.</em></p>
+
+      <div class="jump-nav">
+        <div class="jn-title">Jump to a Section</div>
+        <ul>
+          <li><a href="#choose-sol">Statue of Liberty</a></li>
+          <li><a href="#choose-sif">Staten Island Ferry</a></li>
+          <li><a href="#head2head">Head-to-Head</a></li>
+          <li><a href="#who">Who Should Choose What</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#verdict">Final Verdict</a></li>
+        </ul>
+      </div>
+
+      <!-- SHORT ANSWER -->
+      <div class="callout callout-summary">
+        <div class="callout-title">The Short Answer</div>
+        <p><strong>Choose the Statue of Liberty</strong> if you want to actually experience one of America&rsquo;s most iconic landmarks &mdash; standing beneath Lady Liberty, exploring the museum, and visiting Ellis Island.</p>
+        <p style="margin:8px 0 0;"><strong>Choose the Staten Island Ferry</strong> if your priority is seeing the Statue while making the most of your time in New York City. You will get spectacular skyline views, surprisingly good views of the statue, spend almost nothing, and still have plenty of time left.</p>
+      </div>
+
+      <!-- QUICK COMPARISON -->
+      <h2>Quick Comparison</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:480px;">
+          <tr><th>Category</th><th>Statue of Liberty</th><th>Staten Island Ferry</th></tr>
+          <tr><td><strong>Best For</strong></td><td>History, bucket-list experience</td><td>Sightseeing, photography, budget</td></tr>
+          <tr><td><strong>Cost</strong></td><td>Paid admission</td><td>Free</td></tr>
+          <tr><td><strong>Realistic Time</strong></td><td>4&ndash;6 hours</td><td>1&ndash;2 hours</td></tr>
+          <tr><td><strong>Reservations</strong></td><td>Recommended (required for crown)</td><td>None</td></tr>
+          <tr><td><strong>Statue Views</strong></td><td>Excellent &mdash; up close</td><td>Very Good &mdash; from the harbor</td></tr>
+          <tr><td><strong>Skyline Views</strong></td><td>Good</td><td>Outstanding</td></tr>
+          <tr><td><strong>Educational Value</strong></td><td>Outstanding</td><td>Minimal</td></tr>
+          <tr><td><strong>Family Friendly</strong></td><td>Yes, but requires patience</td><td>Excellent</td></tr>
+          <tr><td><strong>Flexibility</strong></td><td>Low</td><td>High</td></tr>
+          <tr><td><strong>Planning Required</strong></td><td>Moderate</td><td>Very little</td></tr>
+        </table>
+      </div>
+
+      <h2>Before You Decide, Ask Yourself These Questions</h2>
+      <div class="card-grid cols-2">
+        <div class="card"><div class="card-tag">1. How much time do I have?</div><p>If you only have a morning or afternoon, the answer becomes much easier. The Staten Island Ferry fits in 90 minutes. The Statue of Liberty needs half a day, minimum.</p></div>
+        <div class="card"><div class="card-tag">2. Is this my only chance?</div><p>If you may never return to New York, there is a strong argument for visiting Liberty Island properly. Most people who skip it on a first trip wish they hadn&rsquo;t.</p></div>
+        <div class="card"><div class="card-tag">3. What are my priorities?</div><p>History and museums? Statue of Liberty. Skyline photography and a full day of Lower Manhattan? Staten Island Ferry. The answer usually becomes obvious once you frame it this way.</p></div>
+        <div class="card"><div class="card-tag">4. Who am I traveling with?</div><p>Young children generally enjoy the ferry more. Older children and adults who enjoy history usually get more from Liberty Island. Budget-conscious travelers almost always prefer the ferry.</p></div>
+      </div>
+
+      <div class="callout callout-local">
+        <div class="callout-title">What Most Travel Guides Get Wrong</div>
+        <p>Most comparisons focus on ticket prices and ferry durations. That is not what determines which you will enjoy. The real difference is <strong>opportunity cost</strong>. Five hours at Liberty Island is five hours you are not spending at the Brooklyn Bridge, the 9/11 Memorial, DUMBO, or a dozen other neighborhoods. The question is never just "which is better" &mdash; it is "which matches the trip I actually want."</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- STATUE OF LIBERTY SECTION -->
+      <div class="section-ribbon" id="choose-sol">
+        <h2>Statue of Liberty</h2>
+        <span class="sr-tag">Half-Day Historical Experience</span>
+      </div>
+      <div class="section-body">
+
+        <div class="table-wrap">
+          <table class="data-table" style="min-width:260px;">
+            <tr><th>Best For</th><td>First-time visitors, history lovers, families with older children</td></tr>
+            <tr><th>Realistic Time</th><td>4&ndash;6 hours (6&ndash;7 with Ellis Island at a relaxed pace)</td></tr>
+            <tr><th>Cost</th><td>Paid admission</td></tr>
+            <tr><th>Reservations</th><td>Strongly recommended; required for pedestal and crown</td></tr>
+            <tr><th>Walking Required</th><td>Moderate</td></tr>
+            <tr><th>Best Time</th><td>First ferry of the morning</td></tr>
+            <tr><th>Best Season</th><td>Spring and Fall</td></tr>
+          </table>
+        </div>
+
+        <h3>What the Experience Is Actually Like</h3>
+        <p>One thing that surprises many visitors is that the Statue of Liberty is not just one attraction. It is a series of experiences. Your day unfolds across Battery Park, security screening, the ferry crossing, Liberty Island, the museum, an optional pedestal visit, Ellis Island, and the return journey. When you see it laid out, it is easy to understand why this is not a one-hour attraction.</p>
+
+        <h3>Realistic Time Breakdown</h3>
+        <table class="time-t">
+          <tr><th>Activity</th><th>Typical Time</th></tr>
+          <tr><td>Arrive at Battery Park</td><td>15&ndash;20 min</td></tr>
+          <tr><td>Security and boarding</td><td>30&ndash;60 min</td></tr>
+          <tr><td>Ferry ride</td><td>15&ndash;20 min</td></tr>
+          <tr><td>Liberty Island and Statue Museum</td><td>60&ndash;90 min</td></tr>
+          <tr><td>Pedestal visit (optional)</td><td>30&ndash;45 min</td></tr>
+          <tr><td>Ferry to Ellis Island</td><td>15 min</td></tr>
+          <tr><td>Ellis Island Museum</td><td>60&ndash;120 min</td></tr>
+          <tr><td>Return ferry</td><td>20 min</td></tr>
+        </table>
+        <div class="table-wrap" style="margin-top:10px;">
+          <table class="data-table" style="min-width:260px;">
+            <tr><th>Type of Visit</th><th>Total Time</th></tr>
+            <tr><td>Statue only (quick)</td><td>3.5&ndash;4 hours</td></tr>
+            <tr><td>Statue and Museum</td><td>4&ndash;5 hours</td></tr>
+            <tr><td>Statue and Ellis Island</td><td>5&ndash;6 hours</td></tr>
+            <tr><td>Relaxed visit with both islands</td><td>6&ndash;7 hours</td></tr>
+          </table>
+        </div>
+
+        <h3>What Makes It Worth Visiting</h3>
+        <div class="card-grid cols-2" style="margin-top:12px;">
+          <div class="card"><div class="card-tag">1. Standing Beneath the Statue</div><p>Photos do not prepare you for the scale. From Manhattan, Lady Liberty looks elegant. From Liberty Island, she feels enormous. You notice details that disappear from a distance &mdash; the folds in the robe, the massive pedestal, just how high the torch reaches. This is something the Staten Island Ferry simply cannot replicate.</p></div>
+          <div class="card"><div class="card-tag">2. The Statue of Liberty Museum</div><p>One of the most overlooked parts of the visit. The museum explains why France gifted the statue, how it was designed, how it was transported across the Atlantic, construction challenges, and the symbolism behind each element. Even if you are only moderately interested in history, it adds valuable context to everything you see outside.</p></div>
+          <div class="card"><div class="card-tag">3. Liberty Island Itself</div><p>The island is much quieter than many visitors expect once you move away from the ferry dock. Walking around the perimeter provides different views of Manhattan, harbor panoramas, New Jersey skyline, and excellent photo opportunities. It feels less like checking off an attraction and more like spending time in a waterfront park with one of the world&rsquo;s most famous monuments.</p></div>
+          <div class="card"><div class="card-tag">4. Ellis Island</div><p>Many visitors arrive excited for the Statue. They leave talking about Ellis Island. The Immigration Museum tells the story of millions of immigrants who entered the United States through these halls. It is personal, emotional, and incredibly well presented. Even travelers with no family connection to American immigration often describe it as the most memorable part of the day.</p></div>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/9d/94/e0/caption.jpg?w=1400&h=-1&s=1" alt="Statue of Liberty viewed from the base on Liberty Island New York City">
+        <div class="cap">Standing at the base of the Statue of Liberty on Liberty Island &mdash; a perspective no ferry ride can replicate. The scale only becomes apparent up close.</div>
+      </div>
+
+      <!-- Ellis Island -->
+      <div class="section-ribbon">
+        <h2>Ellis Island: Don&rsquo;t Skip It</h2>
+      </div>
+      <div class="section-body">
+        <p>If you ask people what surprised them most about a Liberty Island trip, Ellis Island comes up again and again. Many visitors arrive excited for the Statue and leave talking about Ellis Island instead. The Immigration Museum tells the story of millions of immigrants who passed through these halls &mdash; and it is one of the most emotionally powerful museum experiences in New York City.</p>
+
+        <div class="section-img">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/7b/ec/83/caption.jpg?w=1400&h=-1&s=1" alt="Ellis Island Immigration Museum interior Great Hall New York">
+          <div class="cap">The Ellis Island Immigration Museum &mdash; one of New York&rsquo;s most emotionally powerful historical sites. Visitors consistently rate it as a highlight of the entire trip.</div>
+        </div>
+
+        <div class="callout callout-local">
+          <div class="callout-title">My Advice on Ellis Island</div>
+          <p>Trying to skip Ellis Island to &ldquo;save an hour&rdquo; is often a false economy. If you have already committed half a day to the Statue, spending a little longer to explore Ellis Island usually provides the most rewarding overall experience. It transforms a sightseeing trip into something much richer.</p>
+        </div>
+
+        <h3>Who Should Visit the Statue of Liberty?</h3>
+        <div class="choice-grid">
+          <div class="choice-card cc-sol">
+            <div class="cc-head"><span class="cc-badge">Best For</span> Statue of Liberty</div>
+            <ul>
+              <li>Visiting NYC for the first time with 5+ days</li>
+              <li>Love of museums and American history</li>
+              <li>Wanting to experience an iconic landmark properly</li>
+              <li>Planning to visit Ellis Island</li>
+              <li>Happy to dedicate half a day to one attraction</li>
+              <li>Older children who will engage with the history</li>
+              <li>Not sure when you will return to New York</li>
+            </ul>
+          </div>
+          <div class="choice-card cc-sif">
+            <div class="cc-head"><span class="cc-badge">Skip If&hellip;</span> Consider the Ferry Instead</div>
+            <ul>
+              <li>Only 2&ndash;3 days in New York</li>
+              <li>Main goal is simply to &ldquo;see&rdquo; the Statue</li>
+              <li>Traveling with toddlers or young children</li>
+              <li>Tight budget</li>
+              <li>Already visited Liberty Island on a previous trip</li>
+              <li>Prefer flexible, spontaneous sightseeing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <div class="callout-title">Local Tips for Liberty Island</div>
+          <p>Arrive at least 30&ndash;45 minutes before your ferry departure &middot; Take the first ferry of the morning for shorter queues and cooler temperatures &middot; Visit the museum before crowds build &middot; Walk around the entire island, not just the dock area &middot; Bring water, especially in summer &middot; Don&rsquo;t book another timed attraction immediately afterwards &mdash; delays happen.</p>
+        </div>
+
+        <div class="viator-box">
+          <div class="vb-text">
+            <strong>Book Official Statue of Liberty Tours</strong>
+            <span>Reserve your ferry ticket and entrance in advance &mdash; crown and pedestal tickets sell out weeks ahead, especially in summer.</span>
+          </div>
+          <div class="vb-cta">
+            <a class="btn btn-primary" href="https://www.viator.com/New-York-City-attractions/Statue-of-Liberty/d687-a16?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Book Tickets</a>
+          </div>
+        </div>
+
+        <p>For the complete guide including what to expect, how to get there, and which ticket level is right for you, see our <a href="how-to-visit-statue-of-liberty.html">Full Statue of Liberty and Ellis Island Guide</a>.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- STATEN ISLAND FERRY SECTION -->
+      <div class="section-ribbon" id="choose-sif">
+        <h2>Staten Island Ferry</h2>
+        <span class="sr-tag">Best Free Experience in NYC</span>
+      </div>
+      <div class="section-body">
+
+        <p>If the Statue of Liberty is one of New York&rsquo;s most famous attractions, the Staten Island Ferry is one of its best-kept secrets. It is easy to dismiss it as &ldquo;just a commuter ferry.&rdquo; That would be a mistake. For many travelers &mdash; especially those visiting for two or three days &mdash; the Staten Island Ferry offers something that is surprisingly difficult to beat: an incredible harbor crossing, outstanding skyline views, and a close look at the Statue of Liberty without consuming half your day.</p>
+
+        <div class="table-wrap">
+          <table class="data-table" style="min-width:260px;">
+            <tr><th>Best For</th><td>Short trips, budget travelers, photographers, families with young children</td></tr>
+            <tr><th>Realistic Time</th><td>60&ndash;90 minutes</td></tr>
+            <tr><th>Cost</th><td>Free</td></tr>
+            <tr><th>Reservations</th><td>None required</td></tr>
+            <tr><th>Walking Required</th><td>Minimal</td></tr>
+            <tr><th>Best Time</th><td>Sunset or early morning</td></tr>
+            <tr><th>Best Season</th><td>Year-round</td></tr>
+          </table>
+        </div>
+
+        <h3>Realistic Time Breakdown</h3>
+        <table class="time-t">
+          <tr><th>Activity</th><th>Typical Time</th></tr>
+          <tr><td>Walk to Whitehall Terminal</td><td>10&ndash;15 min</td></tr>
+          <tr><td>Wait for next departure</td><td>10&ndash;20 min</td></tr>
+          <tr><td>Ferry to Staten Island</td><td>25 min</td></tr>
+          <tr><td>Walk to return terminal</td><td>5&ndash;10 min</td></tr>
+          <tr><td>Wait for return ferry</td><td>10&ndash;20 min</td></tr>
+          <tr><td>Return to Manhattan</td><td>25 min</td></tr>
+        </table>
+        <p><strong>Realistic total: 60&ndash;90 minutes for a round trip.</strong> That is why so many experienced visitors recommend it for shorter trips.</p>
+
+        <h3>What Makes It So Good?</h3>
+        <div class="card-grid cols-2" style="margin-top:12px;">
+          <div class="card"><div class="card-tag">1. The Skyline Views</div><p>As the ferry pulls away from Manhattan, the skyline slowly opens up. One World Trade Center dominates the horizon. The Financial District stretches across the waterfront. The Brooklyn Bridge appears in the distance. Many travelers spend hundreds of dollars on observation decks but forget that some of New York&rsquo;s best skyline views come from the water &mdash; for free.</p></div>
+          <div class="card"><div class="card-tag">2. Surprisingly Good Statue Views</div><p>The ferry does not pass directly beneath the Statue of Liberty. But it gets close enough for excellent views. You will have plenty of opportunities to photograph Lady Liberty against the harbor. If your goal is simply to see the Statue rather than visit it, many travelers find the ferry more than satisfying.</p></div>
+          <div class="card"><div class="card-tag">3. It Feels Like Real New York</div><p>Unlike sightseeing cruises, the Staten Island Ferry is not built for tourists. Commuters use it. Students board with backpacks. Locals ride home after work. Visitors stand beside New Yorkers instead of being separated onto a dedicated tourist vessel. That gives the ride an authenticity that is difficult to recreate elsewhere.</p></div>
+          <div class="card"><div class="card-tag">4. You Can Repeat It</div><p>Didn&rsquo;t get good weather? Come back tomorrow. Too crowded? Try the evening. Sunset looked incredible? Ride it again after dinner. Because it is free, there is no pressure to &ldquo;get your money&rsquo;s worth.&rdquo; This flexibility is one of its greatest strengths.</p></div>
+        </div>
+
+        <h3>Which Side of the Ferry Should You Stand On?</h3>
+        <div class="ferry-diagram">
+          <div class="fd-box">
+            <div class="fd-dir">Manhattan &rarr; Staten Island</div>
+            <div class="fd-side">Right-Hand Side</div>
+            <div class="fd-note">Best views of the Statue of Liberty and New York Harbor</div>
+          </div>
+          <div class="fd-box">
+            <div class="fd-dir">Staten Island &rarr; Manhattan</div>
+            <div class="fd-side">Left-Hand Side</div>
+            <div class="fd-note">Best views of Lower Manhattan skyline and One World Trade Center</div>
+          </div>
+        </div>
+        <div class="callout callout-tip" style="margin-top:0;">
+          <div class="callout-title">Pro Tip</div>
+          <p>Stand outside on the deck for the full experience &mdash; even in cooler weather. Walk around the boat during the crossing: each side offers different perspectives. Keep your camera ready throughout; the best photos often happen between the terminals rather than at either end.</p>
+        </div>
+      </div>
+
+      <div class="section-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/c4/70/20/caption.jpg?w=1400&h=-1&s=1" alt="Manhattan skyline view from Staten Island Ferry New York Harbor">
+        <div class="cap">The Manhattan skyline viewed from the Staten Island Ferry &mdash; widely considered one of the best free views in New York City. One World Trade Center and the Financial District in full.</div>
+      </div>
+
+      <div class="section-ribbon" style="margin-top:0;">
+        <h2>Combining the Ferry With Lower Manhattan</h2>
+      </div>
+      <div class="section-body">
+        <p>One reason the Staten Island Ferry is recommended so often is because it fits naturally into one of New York&rsquo;s best full-day walking routes. Rather than making it the focus of your day, use it as part of a larger sightseeing plan.</p>
+        <div class="callout callout-summary">
+          <div class="callout-title">Suggested Lower Manhattan Day</div>
+          <p>Battery Park &rarr; Staten Island Ferry &rarr; Charging Bull &rarr; Wall Street &rarr; Trinity Church &rarr; Federal Hall &rarr; 9/11 Memorial &rarr; One World Observatory &rarr; Oculus &rarr; South Street Seaport &rarr; Brooklyn Bridge</p>
+          <p style="margin-top:8px;">You can comfortably cover all of these in a full day without feeling rushed. Substituting Liberty Island into this itinerary would require removing several attractions.</p>
+        </div>
+        <p>See our complete <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a> for the full day-by-day plan.</p>
+
+        <h3>Who Should Choose the Staten Island Ferry?</h3>
+        <div class="choice-grid">
+          <div class="choice-card cc-sif">
+            <div class="cc-head"><span class="cc-badge">Best For</span> Staten Island Ferry</div>
+            <ul>
+              <li>Only 2&ndash;3 days in New York</li>
+              <li>Love of skyline photography</li>
+              <li>Traveling on a budget</li>
+              <li>Preference for flexible, spontaneous plans</li>
+              <li>Young children who may not enjoy long queues</li>
+              <li>Already visited Liberty Island on a previous trip</li>
+              <li>Wanting to see the Statue rather than explore it</li>
+            </ul>
+          </div>
+          <div class="choice-card cc-sol">
+            <div class="cc-head"><span class="cc-badge">Consider the Statue Instead If&hellip;</span></div>
+            <ul>
+              <li>You have never visited Liberty Island before</li>
+              <li>This may be your only New York trip</li>
+              <li>You love museums and American history</li>
+              <li>You have at least 4&ndash;5 days in the city</li>
+              <li>Ellis Island is on your list</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="viator-box">
+          <div class="vb-text">
+            <strong>Want Narrated Harbor Views?</strong>
+            <span>The Staten Island Ferry has no commentary. For a guided harbor cruise with narration and sunset departures, a sightseeing cruise may suit you better.</span>
+          </div>
+          <div class="vb-cta">
+            <a class="btn btn-secondary" href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">View Cruises</a>
+          </div>
+        </div>
+
+        <p>For more free ways to enjoy New York, see our guide to the <a href="25-free-things-to-do-in-nyc.html">best free things to do in NYC</a>. Also worth comparing: our <a href="nyc-observation-decks-compared.html">NYC observation decks guide</a> for other skyline views worth considering.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- HEAD-TO-HEAD COMPARISON -->
+      <h2 id="head2head">Head-to-Head: The Ultimate Comparison</h2>
+      <p>Now that both experiences have been covered in detail, here is the direct comparison across every category that matters.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:520px;font-size:13.5px;">
+          <tr><th>Category</th><th>Statue of Liberty</th><th>Staten Island Ferry</th><th>Winner</th></tr>
+          <tr><td><strong>Time Required</strong></td><td>4&ndash;6 hours</td><td>1&ndash;2 hours</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Cost</strong></td><td>Paid</td><td>Free</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Statue Experience</strong></td><td>Excellent (up close)</td><td>Good (from harbor)</td><td><span class="win win-sol">Liberty</span></td></tr>
+          <tr><td><strong>Skyline Views</strong></td><td>Good</td><td>Outstanding</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>History / Museums</strong></td><td>Outstanding</td><td>None</td><td><span class="win win-sol">Liberty</span></td></tr>
+          <tr><td><strong>Flexibility</strong></td><td>Moderate</td><td>Excellent</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Crowds Impact</strong></td><td>High</td><td>Moderate</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Planning Required</strong></td><td>Moderate</td><td>Very Low</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Family (Young Children)</strong></td><td>Requires patience</td><td>Excellent</td><td><span class="win win-sif">Ferry</span></td></tr>
+          <tr><td><strong>Family (Older Children)</strong></td><td>Excellent</td><td>Good</td><td><span class="win win-sol">Liberty</span></td></tr>
+          <tr><td><strong>In Bad Weather</strong></td><td>Museum still works</td><td>Much less enjoyable</td><td><span class="win win-sol">Liberty</span></td></tr>
+          <tr><td><strong>Educational Value</strong></td><td>Outstanding</td><td>Minimal</td><td><span class="win win-sol">Liberty</span></td></tr>
+        </table>
+      </div>
+
+      <h3>Which Has Better Photography?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:340px;">
+          <tr><th>Type of Photo</th><th>Best Choice</th></tr>
+          <tr><td>Close-up of the Statue</td><td><span class="win win-sol">Statue of Liberty</span></td></tr>
+          <tr><td>Manhattan skyline</td><td><span class="win win-sif">Staten Island Ferry</span></td></tr>
+          <tr><td>Sunset skyline</td><td><span class="win win-sif">Staten Island Ferry</span></td></tr>
+          <tr><td>Harbor panoramas</td><td><span class="win win-sif">Staten Island Ferry</span></td></tr>
+          <tr><td>Family photos at the monument</td><td><span class="win win-sol">Statue of Liberty</span></td></tr>
+          <tr><td>Monument architectural detail</td><td><span class="win win-sol">Statue of Liberty</span></td></tr>
+          <tr><td>Wide scenic compositions</td><td><span class="win win-sif">Staten Island Ferry</span></td></tr>
+        </table>
+      </div>
+
+      <h3>Which Handles Bad Weather Better?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Weather Condition</th><th>Better Choice</th></tr>
+          <tr><td>Light rain</td><td><span class="win win-sol">Statue of Liberty</span></td></tr>
+          <tr><td>Fog</td><td>Postpone either option if possible</td></tr>
+          <tr><td>Windy winter day</td><td><span class="win win-sol">Statue of Liberty</span> (museum still works)</td></tr>
+          <tr><td>Clear sunny day</td><td><span class="win win-tie">Either is excellent</span></td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- WHO SHOULD CHOOSE WHAT -->
+      <h2 id="who">Which Should You Choose? A Practical Decision Guide</h2>
+
+      <div class="decision-grid">
+        <div class="dbox">
+          <div class="db-time">Only 2 Hours</div>
+          <div class="db-choice">Choose: <strong>Staten Island Ferry</strong></div>
+          <p>Enjoy New York Harbor, photograph the Statue of Liberty, admire the skyline, and still have time for Lower Manhattan.</p>
+        </div>
+        <div class="dbox">
+          <div class="db-time">Half a Day</div>
+          <div class="db-choice">Ask: history or sightseeing?</div>
+          <p>History lover? Statue of Liberty. Maximum sightseeing? Staten Island Ferry combined with Lower Manhattan.</p>
+        </div>
+        <div class="dbox">
+          <div class="db-time">Full Day Downtown</div>
+          <div class="db-choice">You have two good options</div>
+          <p>Either morning at Liberty Island then Battery Park and 9/11 Memorial &mdash; or ferry plus a full Lower Manhattan walk. Neither is wrong.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin:20px 0;">
+        <table class="data-table" style="min-width:480px;">
+          <tr><th>Your Situation</th><th>Recommendation</th><th>Why</th></tr>
+          <tr><td>First-time visitor (5&ndash;7 days)</td><td><strong>Statue of Liberty</strong></td><td>Enough time to experience it properly</td></tr>
+          <tr><td>First-time visitor (2&ndash;3 days)</td><td><strong>Staten Island Ferry</strong></td><td>Saves several hours for neighborhoods</td></tr>
+          <tr><td>Returning visitor</td><td><strong>Staten Island Ferry</strong></td><td>Likely already seen Liberty Island</td></tr>
+          <tr><td>History enthusiast</td><td><strong>Statue of Liberty</strong></td><td>Museum and Ellis Island are the highlights</td></tr>
+          <tr><td>Photographer</td><td><strong>Staten Island Ferry</strong></td><td>Better skyline and harbor compositions</td></tr>
+          <tr><td>Family with toddlers</td><td><strong>Staten Island Ferry</strong></td><td>Less waiting, less walking, more fun</td></tr>
+          <tr><td>Family with older children</td><td><strong>Statue of Liberty</strong></td><td>Strong educational value</td></tr>
+          <tr><td>Budget traveler</td><td><strong>Staten Island Ferry</strong></td><td>Outstanding experience without spending money</td></tr>
+          <tr><td>Couple on a special trip</td><td><strong>Statue of Liberty</strong></td><td>A classic bucket-list experience</td></tr>
+          <tr><td>One week or longer</td><td><strong>Both</strong></td><td>Do each on a separate day</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">My Ideal Itinerary Based on Trip Length</div>
+        <p><strong>Two-day trip:</strong> Staten Island Ferry. The extra hours are better spent in neighborhoods, crossing the Brooklyn Bridge, and visiting the 9/11 Memorial.</p>
+        <p style="margin-top:8px;"><strong>Three-day trip:</strong> Still lean toward the Staten Island Ferry unless the Statue has been a lifelong dream. New York rewards exploration, and every saved hour opens up another neighborhood or landmark.</p>
+        <p style="margin-top:8px;"><strong>Five to seven days:</strong> Visit the Statue of Liberty and Ellis Island. At this point, you have enough flexibility to enjoy it without feeling like you are sacrificing the rest of the city.</p>
+        <p style="margin-top:8px;"><strong>One week or longer:</strong> Do both. Ride the Staten Island Ferry at sunset on one day. Visit Liberty Island on another morning. Each offers something the other simply cannot.</p>
+      </div>
+
+      <p>For help building an itinerary around these choices, see our <a href="ultimate-nyc-itinerary-guide.html">complete NYC itinerary planning guide</a> and our <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan walking itinerary</a>.</p>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is the Staten Island Ferry enough if I don&rsquo;t want to pay for the Statue?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For many travelers, yes. If your goal is to enjoy the harbor, photograph Lady Liberty, and experience the skyline, the ferry delivers excellent value. If your goal is standing beneath the Statue and visiting Ellis Island, it is not a substitute. They deliver fundamentally different experiences.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you see the Statue of Liberty from the Staten Island Ferry?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. You will get clear views as the ferry passes through New York Harbor. They are not as close as Liberty Island, but they are far better than many first-time visitors expect. Stand on the right-hand side of the ferry when heading toward Staten Island.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Statue of Liberty worth visiting?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; provided you approach it as a historical attraction rather than a quick photo opportunity. Visitors who expect to spend half a day there generally leave satisfied. Those expecting a one-hour stop often leave frustrated. The mindset you bring matters as much as the attraction itself.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Ellis Island worth visiting?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. If you enjoy history, it is one of New York&rsquo;s most rewarding museums. Even visitors who arrive mainly interested in the Statue often say Ellis Island was the highlight. The Immigration Museum is surprisingly emotional, even for those with no personal family connection to American immigration.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Staten Island Ferry really free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. There is no fare for passengers walking onto the ferry. You do not need a ticket or reservation. Simply arrive at Whitehall Terminal in Lower Manhattan and board when the ferry is ready. Be aware that there are vendors outside the terminal offering paid alternatives &mdash; the ferry itself costs nothing.</div>
+        </details>
+        <details class="faq-item">
+          <summary>When should I ride the Staten Island Ferry for the best experience?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Sunset is outstanding &mdash; watching Lower Manhattan glow as the sun drops behind the skyline is one of the great free experiences in the city. Early morning is excellent for fewer crowds and soft light. Avoid midday in summer when the light is harsh. The ferry runs 24 hours, so there is always a good time to go.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to book Statue of Liberty tickets in advance?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes &mdash; especially for pedestal or crown access, which can sell out weeks or months ahead in peak season. General admission tickets are also worth booking in advance to avoid selling out on popular days. Only purchase tickets through the official ferry operator or a trusted booking platform; street vendors outside Battery Park regularly overcharge tourists.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which is better for families with children?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Families with toddlers and young children usually have an easier, more enjoyable time on the Staten Island Ferry. Children generally love boats and water, and the shorter experience avoids long security lines and museum fatigue. Families with older children often get more from Liberty Island, particularly Ellis Island, which offers strong educational value and personal stories that engage older kids.</div>
+        </details>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL VERDICT -->
+      <h2 id="verdict">Final Verdict</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local" style="margin:0;">
+          <div class="callout-title">Choose the Statue of Liberty If&hellip;</div>
+          <p>You want to experience history. You have at least 4&ndash;5 days in New York. You enjoy museums, learning the story behind places, and want to visit Ellis Island. You do not mind dedicating half a day to one attraction. And you are unsure when you will visit New York again.</p>
+          <p style="margin-top:8px;">Standing beneath Lady Liberty feels genuinely different than seeing her from afar. For many first-time visitors, it is one of those experiences you will always remember.</p>
+        </div>
+        <div class="callout callout-tip" style="margin:0;">
+          <div class="callout-title">Choose the Staten Island Ferry If&hellip;</div>
+          <p>You want to experience New York. You have only 2&ndash;3 days. You love photography and skyline views. You prefer flexible sightseeing. You are visiting with young children, or you are traveling on a budget.</p>
+          <p style="margin-top:8px;">For many travelers, the ferry becomes one of the biggest surprises of their trip. It is easy, scenic, and fits almost any itinerary. Not the &ldquo;cheap alternative&rdquo; &mdash; one of NYC&rsquo;s best attractions in its own right.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin:24px 0 0;">
+        <table class="data-table" style="min-width:360px;">
+          <tr><th>If You Want&hellip;</th><th>Choose&hellip;</th></tr>
+          <tr><td>Stand beneath the Statue</td><td><strong>Statue of Liberty</strong></td></tr>
+          <tr><td>Visit Ellis Island</td><td><strong>Statue of Liberty</strong></td></tr>
+          <tr><td>Learn American history</td><td><strong>Statue of Liberty</strong></td></tr>
+          <tr><td>Save money</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>Save time</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>Best skyline views</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>Best harbor photography</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>A flexible itinerary</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>A bucket-list landmark experience</td><td><strong>Statue of Liberty</strong></td></tr>
+          <tr><td>Best choice for a 2&ndash;3 day trip</td><td><strong>Staten Island Ferry</strong></td></tr>
+          <tr><td>Best choice for a 5&ndash;7 day trip</td><td><strong>Statue of Liberty + Ellis Island</strong></td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-summary" style="margin-top:24px;">
+        <div class="callout-title">The Bottom Line</div>
+        <p>The Statue of Liberty is a destination. The Staten Island Ferry is a journey. Both are memorable &mdash; but for completely different reasons. You do not have to convince yourself one is objectively better because they were never designed to compete. One tells the story of America. The other gives you one of the best views of New York. If you have the time, experience both. If you only have time for one, choose the one that matches <strong>how you want to experience the city</strong>, not just what you want to tick off your list.</p>
+      </div>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Full Guide: How to Visit the Statue of Liberty and Ellis Island</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Free Things to Do in NYC</a></li>
+      <li><a href="ultimate-nyc-itinerary-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Plan Your NYC Itinerary: The Complete Guide</a></li>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City-attractions/Statue-of-Liberty/d687-a16?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Book Statue of Liberty Tickets</div>
+        <div class="fc-sub">Official tickets with free cancellation</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+var secs=['overview','choose-sol','choose-sif','head2head','who','faq','verdict'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur='overview';
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
