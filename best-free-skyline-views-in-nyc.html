@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Free Skyline Views in NYC: 25 Amazing Viewpoints | EverythingInNYC</title>
+<meta name="description" content="Discover the best free skyline views in NYC. Compare 25 incredible viewpoints for sunset, photography, night views, and iconic Manhattan panoramas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- SIDE NAV ---- */
+.side-nav{display:none;position:fixed;top:80px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);background:rgba(15,23,42,.04);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+
+/* ---- VIEWPOINT CARD ---- */
+.view-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:22px 0;}
+.vc-head{padding:14px 18px;background:var(--navy);display:flex;align-items:flex-start;gap:12px;}
+.vc-num{font-family:var(--font-head);font-weight:800;font-size:28px;color:rgba(255,255,255,.22);flex:none;min-width:36px;line-height:1;}
+.vc-titles{flex:1;}
+.vc-name{font-family:var(--font-head);font-weight:800;font-size:19px;color:#fff;display:block;}
+.vc-sub{font-size:13px;color:rgba(255,255,255,.72);font-style:italic;}
+.vc-body{padding:14px 18px;}
+.vc-head.alt{background:#1a2942;}
+
+/* ---- SNAP TABLE ---- */
+.snap-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:12px;}
+.snap-table td{padding:5px 10px;border-bottom:1px solid var(--border);}
+.snap-table td:first-child{font-weight:700;color:var(--navy);width:38%;}
+.snap-table tr:last-child td{border-bottom:none;}
+.snap-table tr:nth-child(even) td{background:rgba(15,23,42,.025);}
+
+/* ---- SECTION IMAGE ---- */
+.section-img{margin:18px 0 12px;}
+.section-img img{width:100%;border-radius:14px;max-height:440px;object-fit:cover;display:block;}
+.section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+
+/* ---- VERDICT STRIP ---- */
+.verdict-strip{background:rgba(255,193,7,.06);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:8px 14px;margin-top:10px;font-size:14.5px;}
+.verdict-strip strong{color:var(--navy);}
+
+/* ---- RATING BADGE ---- */
+.rating-badge{display:inline-flex;align-items:center;gap:4px;background:var(--navy);color:var(--accent);font-family:var(--font-head);font-weight:800;font-size:12.5px;border-radius:20px;padding:3px 10px;margin-left:6px;vertical-align:middle;}
+
+/* ---- QUICK REF TABLE ---- */
+.qref-table td:first-child{font-weight:700;color:var(--navy);}
+.qref-table td:last-child a{font-weight:700;}
+
+/* ---- PHOTO GUIDE TABLE ---- */
+.photo-table td:first-child{font-weight:700;font-size:13px;color:var(--navy);}
+
+/* ---- DAY COMBO ---- */
+.combo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+@media(max-width:600px){.combo-grid{grid-template-columns:1fr;}}
+.combo-card{border-radius:12px;padding:14px;background:rgba(15,23,42,.04);border:1px solid var(--border);}
+.combo-card h4{margin:0 0 8px;font-size:14px;color:var(--navy);}
+.combo-card ul{margin:0;padding-left:18px;font-size:13.5px;}
+.combo-card ul li{margin-bottom:3px;}
+
+/* ---- TOP 10 TABLE ---- */
+.top10-table td:first-child{font-weight:800;font-family:var(--font-head);color:rgba(15,23,42,.35);font-size:20px;width:40px;text-align:center;}
+.top10-table td:nth-child(2){font-weight:700;}
+
+/* ---- MISTAKE ITEM ---- */
+.mistake-list{list-style:none;padding:0;}
+.mistake-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+.mistake-list li:last-child{border-bottom:none;}
+.ml-num{font-family:var(--font-head);font-weight:800;font-size:20px;color:rgba(15,23,42,.15);flex:none;min-width:28px;}
+.ml-content h4{margin:0 0 3px;font-size:15px;color:var(--navy);}
+.ml-content p{margin:0;font-size:14px;}
+
+/* ---- SECTION JUMP PILLS ---- */
+.jump-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0;}
+.jump-nav a{background:rgba(15,23,42,.06);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:all .15s;}
+.jump-nav a:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+[id]{scroll-margin-top:80px;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- LEFT SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#how-ranked">How I Ranked</a>
+  <a href="#view-1">1. Brooklyn Bridge Park</a>
+  <a href="#view-2">2. Brooklyn Heights</a>
+  <a href="#view-3">3. Gantry Plaza</a>
+  <a href="#view-4">4. Governors Island</a>
+  <a href="#view-5">5. Centre 360</a>
+  <a href="#views-6-10">6&ndash;10 Views</a>
+  <a href="#views-11-15">11&ndash;15 Views</a>
+  <a href="#views-16-20">16&ndash;20 Views</a>
+  <a href="#views-21-25">21&ndash;25 Views</a>
+  <a href="#decision-guide">Decision Guide</a>
+  <a href="#photography-guide">Photography Guide</a>
+  <a href="#mistakes">Common Mistakes</a>
+  <a href="#faq">FAQ</a>
+  <a href="#day-combos">Day Combinations</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Sights &amp; Views</span>
+      <h1>Best Free Skyline Views in NYC: 25 Incredible Viewpoints That Do Not Cost a Dollar</h1>
+      <div class="article-meta">
+        <span>Every viewpoint ranked by skyline quality, photography potential, crowds, and overall experience</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="best-free-skyline-views.png" alt="Best free skyline views in NYC — 25 incredible viewpoints compared">
+
+    <div class="article-body">
+
+      <p>There are plenty of articles claiming to reveal the best free skyline view in New York City. Most of them repeat the same handful of places without explaining <em>why</em> they are worth visiting or <em>who</em> they are best for.</p>
+      <p>After exploring skyline viewpoints across all five boroughs &mdash; and even crossing the Hudson into New Jersey &mdash; the conclusion is clear: there is not one perfect skyline view. There are dozens.</p>
+      <p>Some are made for photographers chasing the perfect blue-hour shot. Others are ideal for couples looking for a sunset walk. Some offer sweeping panoramas of the entire city, while others put you almost face-to-face with Lower Manhattan's skyscrapers.</p>
+      <p>The best part? Most of them cost absolutely nothing.</p>
+      <p>This guide compares 25 free skyline viewpoints based on skyline quality, photography potential, sunset experience, night views, accessibility, crowds, nearby attractions, ease of getting there, and overall experience. By the end, you will know exactly which viewpoint deserves a place on your itinerary.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">Explore All NYC Travel Guides</div>
+        <p>Planning your trip? Browse the complete collection at <a href="https://sim-777.github.io/EverythingInNYC/" target="_blank" rel="noopener">EverythingInNYC</a> for itineraries, attraction comparisons, and insider tips.</p>
+      </div>
+
+      <!-- JUMP NAV -->
+      <div class="jump-nav">
+        <a href="#view-1">Brooklyn Bridge Park</a>
+        <a href="#view-2">Brooklyn Heights</a>
+        <a href="#view-3">Gantry Plaza</a>
+        <a href="#view-4">Governors Island</a>
+        <a href="#view-5">Centre 360</a>
+        <a href="#views-6-10">Views 6&ndash;10</a>
+        <a href="#views-11-15">Views 11&ndash;15</a>
+        <a href="#views-16-20">Views 16&ndash;20</a>
+        <a href="#views-21-25">Views 21&ndash;25</a>
+        <a href="#decision-guide">Decision Guide</a>
+        <a href="#photography-guide">Photography Guide</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- QUICK ANSWER -->
+      <h2 id="quick-answer">Quick Answer: What Is the Best Free Skyline View in NYC?</h2>
+      <p>If you are short on time, here is the shortlist.</p>
+      <div class="table-wrap">
+        <table class="data-table qref-table" style="min-width:300px;">
+          <tr><th>If you want&hellip;</th><th>Go here</th></tr>
+          <tr><td>Best overall skyline</td><td><a href="#view-1">Brooklyn Bridge Park</a></td></tr>
+          <tr><td>Best Midtown skyline</td><td><a href="#view-3">Gantry Plaza State Park</a></td></tr>
+          <tr><td>Best sunset</td><td><a href="#view-4">Governors Island</a></td></tr>
+          <tr><td>Best night skyline</td><td><a href="#view-1">Brooklyn Bridge Park</a></td></tr>
+          <tr><td>Best for photographers</td><td><a href="#view-5">Centre 360</a></td></tr>
+          <tr><td>Best hidden gem</td><td><a href="#view-13">Fort Wadsworth</a></td></tr>
+          <tr><td>Best elevated viewpoint</td><td><a href="#view-5">Centre 360</a></td></tr>
+          <tr><td>Best romantic spot</td><td><a href="#view-2">Brooklyn Heights Promenade</a></td></tr>
+          <tr><td>Best family outing</td><td><a href="#view-1">Brooklyn Bridge Park</a></td></tr>
+          <tr><td>Least crowded</td><td><a href="#view-13">Fort Wadsworth</a></td></tr>
+          <tr><td>Best moving skyline</td><td><a href="#view-10">Staten Island Ferry</a></td></tr>
+          <tr><td>Best outside Manhattan</td><td><a href="#view-11">Hamilton Park (Weehawken)</a></td></tr>
+        </table>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <h2>Skyline View Comparison</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:460px;font-size:13.5px;">
+          <tr><th>Viewpoint</th><th>Skyline</th><th>Sunset</th><th>Night</th><th>Photography</th><th>Crowds</th></tr>
+          <tr><td><strong>Brooklyn Bridge Park</strong></td><td>10/10</td><td>10</td><td>10</td><td>10</td><td>Busy</td></tr>
+          <tr><td><strong>Brooklyn Heights Promenade</strong></td><td>10</td><td>9</td><td>10</td><td>9</td><td>Moderate</td></tr>
+          <tr><td><strong>Gantry Plaza State Park</strong></td><td>9</td><td>10</td><td>9</td><td>10</td><td>Moderate</td></tr>
+          <tr><td><strong>Governors Island</strong></td><td>10</td><td>10</td><td>8</td><td>10</td><td>Moderate</td></tr>
+          <tr><td><strong>Centre 360</strong></td><td>10</td><td>8</td><td>&mdash;</td><td>10</td><td>Very Low</td></tr>
+          <tr><td><strong>Roosevelt Island</strong></td><td>9</td><td>10</td><td>8</td><td>9</td><td>Moderate</td></tr>
+          <tr><td><strong>Hamilton Park</strong></td><td>10</td><td>10</td><td>9</td><td>10</td><td>Low</td></tr>
+          <tr><td><strong>Exchange Place</strong></td><td>10</td><td>9</td><td>10</td><td>10</td><td>Moderate</td></tr>
+        </table>
+      </div>
+
+      <!-- HOW I RANKED -->
+      <h2 id="how-ranked">How I Ranked These Skyline Views</h2>
+      <p>Not every skyline viewpoint offers the same experience. Some places have incredible panoramas but require a long subway ride. Others have postcard-perfect views but become packed with tourists every evening.</p>
+      <p>Instead of ranking locations purely by how impressive they look in photos, each viewpoint was evaluated on what actually matters when you are standing there: overall skyline composition, photography opportunities, sunset and blue hour experience, accessibility, walking distance from transit, nearby attractions, crowds, comfort and amenities, and overall experience.</p>
+      <p>That means a place with a slightly smaller skyline but far fewer crowds may rank higher than a famous location that is difficult to enjoy.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">Prefer a Paid Observation Deck?</div>
+        <p>If you want an elevated panorama with amenities, read the full comparison: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared</a> &mdash; Edge vs Top of the Rock vs Empire State vs OWO.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ====================== VIEWPOINTS 1-5 ====================== -->
+      <h2 id="views-top5" style="margin-bottom:4px;">The Top Five Free Skyline Views in NYC</h2>
+      <p style="margin-top:0;color:var(--text-secondary);font-size:15px;">The five viewpoints that belong on every New York itinerary.</p>
+
+      <!-- #1 BROOKLYN BRIDGE PARK -->
+      <div class="view-card" id="view-1">
+        <div class="vc-head">
+          <div class="vc-num">01</div>
+          <div class="vc-titles">
+            <span class="vc-name">Brooklyn Bridge Park</span>
+            <span class="vc-sub">Why It Is My Number One Pick</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If I could recommend only one free skyline viewpoint in New York City, this would be it. No other location combines iconic views, easy access, beautiful waterfront paths, restaurants, parks, and multiple photography angles quite like Brooklyn Bridge Park.</p>
+          <p>Instead of offering just one overlook, the park stretches for more than a mile along the East River, giving you a constantly changing perspective of Lower Manhattan. The skyline almost feels alive as you walk between the different piers. One moment you are looking directly at One World Trade Center. A few minutes later the Brooklyn Bridge frames the skyline perfectly. Then you arrive at Jane's Carousel where glass reflections create one of the city's most photographed scenes.</p>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/8f/20/f4/caption.jpg?w=1400&h=-1&s=1" alt="Panoramic view from Pier 1, Brooklyn Bridge Park — Manhattan skyline and Brooklyn Bridge from the East River waterfront">
+            <div class="cap">The view from Pier 1 at Brooklyn Bridge Park &mdash; arguably the finest free skyline panorama in New York City, combining the Brooklyn Bridge, One World Trade Center, and the entire Lower Manhattan waterfront in a single frame.</div>
+          </div>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>First-time visitors</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>10/10</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Accessibility</td><td>Fully accessible</td></tr>
+            <tr><td>Time Needed</td><td>2&ndash;3 hours</td></tr>
+          </table>
+
+          <h4>What Makes It Special?</h4>
+          <p>Unlike many waterfront parks, Brooklyn Bridge Park gives you several completely different skyline compositions. Each pier feels like a new viewpoint.</p>
+          <p><strong>Pier 1:</strong> Best overall panorama. Perfect for sunset. <strong>Pier 2:</strong> Fantastic balance between the skyline and Brooklyn Bridge. <strong>Pier 3:</strong> Less crowded with landscaped foregrounds. <strong>Piers 5&ndash;6:</strong> The quietest section. Much calmer than the northern end.</p>
+
+          <h4>Best Time to Visit</h4>
+          <p>Arrive about 60&ndash;90 minutes before sunset. You will experience warm golden light over the harbor, sunset, blue hour, and city lights reflecting across the East River. Staying after dark completely changes the atmosphere.</p>
+
+          <h4>Photography Tips</h4>
+          <p>Wide-angle lenses shine here, but do not overlook a telephoto. A longer lens compresses the skyline beautifully and makes One World Trade Center appear even more dramatic. For the best compositions, use the piers as leading lines, include the Brooklyn Bridge where possible, stay through blue hour, and after rain, look for reflections on the promenade.</p>
+
+          <h4>Local Tip</h4>
+          <p>Most visitors never walk beyond Jane's Carousel. That is a mistake. Continue south toward Piers 5 and 6. The crowds thin dramatically, and the skyline opens up into one of the most peaceful waterfront walks in the city.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>DUMBO, Brooklyn Heights Promenade, Jane's Carousel, Time Out Market, Empire Fulton Ferry, Brooklyn Ice Cream Factory.</p>
+
+          <p>Planning the rest of your Brooklyn visit? Read: <a href="things-to-do-first-timers.html">40 Best Things to Do in NYC for First-Time Visitors</a></p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> If you are visiting New York for the first time, this is the skyline view to build your entire afternoon around.</div>
+        </div>
+      </div>
+
+      <!-- #2 BROOKLYN HEIGHTS PROMENADE -->
+      <div class="view-card" id="view-2">
+        <div class="vc-head alt">
+          <div class="vc-num">02</div>
+          <div class="vc-titles">
+            <span class="vc-name">Brooklyn Heights Promenade</span>
+            <span class="vc-sub">The Classic Postcard View</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If Brooklyn Bridge Park is energetic, Brooklyn Heights Promenade is elegant. The promenade sits high above the Brooklyn-Queens Expressway, creating a clean, uninterrupted view across the East River toward Lower Manhattan. There is no need to hunt for the perfect angle. Almost every step delivers one.</p>
+          <p>The atmosphere is quieter too. People come here to sit on benches, watch ferries glide across the river, and enjoy one of the most iconic city skylines in the world. It feels less like a tourist attraction and more like a neighborhood living room with an incredible backdrop.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Couples</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>9/10</td></tr>
+            <tr><td>Night</td><td>10/10</td></tr>
+            <tr><td>Crowd Level</td><td>Moderate</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is where you will capture one of New York's classic postcard views. One World Trade Center rises above Lower Manhattan while the Brooklyn Bridge stretches elegantly across the East River. At blue hour, the city lights begin reflecting on the water, creating a scene that feels surprisingly peaceful despite being only minutes from Downtown Manhattan. Unlike busier waterfront parks, the promenade encourages you to slow down. Grab a bench, watch the skyline change color, and simply enjoy the view.</p>
+
+          <h4>Best Time</h4>
+          <p>Blue hour is magical here. The skyline glows, ferries leave soft trails across the river, and the Brooklyn Bridge lights become part of the composition. Early weekday mornings are the quietest if you are hoping to photograph the skyline without crowds.</p>
+
+          <h4>Photography Tips</h4>
+          <p>A standard zoom (24&ndash;70mm) is perfect for most shots, while a telephoto lens helps isolate the bridge and One World Trade Center. Do not stop at the first overlook. Walk the full length of the promenade &mdash; the southern end often offers the cleanest composition of the Brooklyn Bridge against Lower Manhattan.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Brooklyn Bridge Park, Brooklyn Historical Society, Montague Street, DUMBO.</p>
+        </div>
+      </div>
+
+      <!-- #3 GANTRY PLAZA STATE PARK -->
+      <div class="view-card" id="view-3">
+        <div class="vc-head">
+          <div class="vc-num">03</div>
+          <div class="vc-titles">
+            <span class="vc-name">Gantry Plaza State Park</span>
+            <span class="vc-sub">Best Midtown Skyline View in NYC</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If Brooklyn Bridge Park owns the best view of Lower Manhattan, Gantry Plaza State Park owns Midtown. This is where New York starts to feel like the city you have seen in movies. The Empire State Building rises almost perfectly in the center of the skyline. The Chrysler Building still stands out despite the newer skyscrapers around it, and Hudson Yards stretches the skyline farther west than many first-time visitors expect.</p>
+          <p>What makes Gantry Plaza special is not just the skyline &mdash; it is the foreground. The restored industrial gantries, old rail tracks, and East River waterfront give your photos character. Without them, it would simply be another skyline across the water. With them, it becomes unmistakably Long Island City. It also feels noticeably calmer than Brooklyn Bridge Park.</p>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/ec/96/4f/view-down-the-east-river.jpg?w=1400&h=-1&s=1" alt="Gantry Plaza State Park — view of the Midtown Manhattan skyline from the East River waterfront in Long Island City">
+            <div class="cap">The view down the East River from Gantry Plaza State Park, Long Island City &mdash; with the Midtown Manhattan skyline framed by the historic gantries and the waterfront promenade.</div>
+          </div>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Midtown skyline</td></tr>
+            <tr><td>Skyline</td><td>Midtown Manhattan</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>9/10</td></tr>
+            <tr><td>Crowd Level</td><td>Moderate</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is the favorite place to photograph Midtown. The skyline is close enough to appreciate individual buildings, but far enough away to fit everything into one frame. Unlike Manhattan's west side, you are not looking up at skyscrapers &mdash; you can actually admire the skyline as a complete composition. If you have already visited Top of the Rock or the Empire State Building, Gantry Plaza gives you something completely different.</p>
+
+          <h4>Best Time</h4>
+          <p>Plan to arrive about an hour before sunset. During golden hour, the western light warms the glass towers. Blue hour is equally rewarding as office lights begin to illuminate the skyline. After rain, the polished waterfront often creates beautiful reflections. Winter usually offers the clearest air and the sharpest skyline.</p>
+
+          <h4>Photography Tips</h4>
+          <p>A 24&ndash;70mm lens covers almost every composition you will want. For tighter shots of the Empire State Building or Chrysler Building, switch to a telephoto lens. Do not spend your entire visit beside the famous Pepsi-Cola sign. Walk through the park and use the gantries, piers, and riverfront railings as foreground elements.</p>
+
+          <h4>Local Tip</h4>
+          <p>Most visitors never continue south into Hunter's Point South Park. Do not make that mistake. Together, these two parks create one of the best free waterfront walks in New York City.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Hunter's Point South Park, Long Island City waterfront, NYC Ferry landing, MoMA PS1, local cafes and breweries.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> If Midtown is the skyline you picture when you think of New York, Gantry Plaza State Park is difficult to beat.</div>
+        </div>
+      </div>
+
+      <!-- #4 GOVERNORS ISLAND -->
+      <div class="view-card" id="view-4">
+        <div class="vc-head alt">
+          <div class="vc-num">04</div>
+          <div class="vc-titles">
+            <span class="vc-name">Governors Island</span>
+            <span class="vc-sub">Best for Sunset &amp; Half-Day Trips</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If you only have one free day in New York and want more than just a skyline photo, spend it on Governors Island. Unlike almost every other viewpoint in this guide, Governors Island is not one overlook. It is an entire destination. You can spend hours wandering between waterfront promenades, climbing grassy hills, relaxing in hammocks, exploring historic forts, and discovering new skyline angles around almost every corner.</p>
+          <p>Instead of fighting for space beside a railing, you are walking through one of the city's most peaceful parks with Lower Manhattan constantly appearing in the background. This is where New York feels surprisingly quiet.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Half-day trip</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Cost</td><td>Island entry free (ferry ticket required)</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>8/10</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>3&ndash;5 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The biggest advantage is variety. One moment you are looking directly toward One World Trade Center. A few minutes later you are standing on Outlook Hill with panoramic harbor views. Then you are watching ferries from Picnic Point while the Statue of Liberty appears just beyond the trees. No other place offers so many different skyline compositions in one visit.</p>
+
+          <h4>Best Areas</h4>
+          <p><strong>Outlook Hill:</strong> The highest point on the island with the best panoramic skyline. <strong>Picnic Point:</strong> Fantastic sunset location with excellent Statue of Liberty views. <strong>Hammock Grove:</strong> Ideal if you simply want to relax with a skyline backdrop. <strong>Western Promenade:</strong> One of the best places to watch ferries crossing New York Harbor.</p>
+
+          <h4>Photography Tips</h4>
+          <p>Bring both a wide-angle and a telephoto lens. The island's rolling hills make excellent foregrounds &mdash; something almost impossible to find elsewhere in Manhattan.</p>
+
+          <h4>Local Tip</h4>
+          <p>Most visitors stay close to the ferry terminal. Walk farther south. The crowds disappear surprisingly quickly.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Castle Williams, Fort Jay, Hammock Grove, public art installations.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> This is not just one of the best skyline viewpoints. It is one of the best free days you can spend in New York.</div>
+        </div>
+      </div>
+
+      <!-- #5 CENTRE 360 -->
+      <div class="view-card" id="view-5">
+        <div class="vc-head">
+          <div class="vc-num">05</div>
+          <div class="vc-titles">
+            <span class="vc-name">Centre 360</span>
+            <span class="vc-sub">NYC's Only Free Observation Deck</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Centre 360 completely changed the conversation about free skyline views. For years, if you wanted an elevated panorama of New York City, you had to pay for an observation deck. Now you do not. Located at the top of the David N. Dinkins Municipal Building, Centre 360 offers something remarkably close to a premium observation deck experience &mdash; without the premium ticket price.</p>
+          <p>The biggest difference is that it feels far more intimate. Visitor numbers are limited, reservations are required, and you are never surrounded by the huge crowds found at the city's famous observation decks.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Elevated panoramic views</td></tr>
+            <tr><td>Cost</td><td>Free (reservation required)</td></tr>
+            <tr><td>Skyline</td><td>360-degree city panorama</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Crowd Level</td><td>Very Low</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is the closest thing New York has to a free observation deck. From one location you can see Lower Manhattan, Midtown, Brooklyn, the East River bridges, and New York Harbor. It is an incredible orientation point, especially early in your trip.</p>
+
+          <h4>Photography Tips</h4>
+          <p>A wide-angle lens lets you capture the sweeping panorama, while a telephoto lens isolates famous landmarks like the Empire State Building or Brooklyn Bridge. Because visitor numbers are controlled, it is easier to take clean, unobstructed photos than at most paid observation decks.</p>
+
+          <h4>Local Tip</h4>
+          <p>Reserve as early as possible. Availability disappears quickly, particularly during peak travel seasons. Book your spot at <a href="https://www.centre360nyc.com/" target="_blank" rel="noopener">the official Centre 360 reservation page</a>.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>City Hall Park, Brooklyn Bridge, South Street Seaport, Oculus, One World Trade Center.</p>
+          <p>Combining this with a walk through Lower Manhattan? Read: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary</a></p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> If you manage to reserve a spot, Centre 360 belongs near the top of every skyline lover's itinerary.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ====================== VIEWPOINTS 6-10 ====================== -->
+      <h2 id="views-6-10">Viewpoints 6&ndash;10: Outstanding and Underrated</h2>
+
+      <!-- #6 ROOSEVELT ISLAND -->
+      <div class="view-card" id="view-6">
+        <div class="vc-head alt">
+          <div class="vc-num">06</div>
+          <div class="vc-titles">
+            <span class="vc-name">Roosevelt Island</span>
+            <span class="vc-sub">A Perspective Most Visitors Never Experience</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Some skyline viewpoints impress because they are dramatic. Roosevelt Island impresses because they are unexpected. Floating quietly between Manhattan and Queens, the island offers a perspective that most visitors never experience. The skyline does not feel distant. It feels close enough to touch.</p>
+          <p>The journey is half the experience. Riding the Roosevelt Island Tram above the East River is one of New York's best budget-friendly attractions, and it is the perfect introduction to the island before walking south toward Four Freedoms Park.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Unique perspective</td></tr>
+            <tr><td>Skyline</td><td>Midtown &amp; East River</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Crowd Level</td><td>Moderate</td></tr>
+            <tr><td>Time Needed</td><td>2&ndash;3 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>Four Freedoms Park frames Midtown with beautiful granite architecture. Unlike waterfront parks, you are standing in the middle of the East River, creating a perspective unlike anywhere else in the city. The minimalist design of the park naturally draws your eye toward the skyline.</p>
+
+          <h4>Best Time</h4>
+          <p>Late afternoon into sunset. The warm light transforms Midtown's glass towers while the river reflects changing colors.</p>
+
+          <h4>Photography Tips</h4>
+          <p>Use the granite walkways as leading lines. A 70&ndash;200mm lens beautifully compresses Midtown behind the park's geometric design.</p>
+
+          <h4>Local Tip</h4>
+          <p>Do not just ride the tram and head back. Walk the island. You will discover waterfront paths, small parks, public art, and some surprisingly peaceful places to sit with a skyline view.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Roosevelt Island Tram, Southpoint Park, Cornell Tech, Smallpox Hospital ruins.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of New York's most rewarding hidden experiences.</div>
+        </div>
+      </div>
+
+      <!-- #7 HUNTER'S POINT SOUTH PARK -->
+      <div class="view-card" id="view-7">
+        <div class="vc-head">
+          <div class="vc-num">07</div>
+          <div class="vc-titles">
+            <span class="vc-name">Hunter's Point South Park</span>
+            <span class="vc-sub">Quiet Photography Perfection</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Hunter's Point South Park feels like the quieter sibling of Gantry Plaza. It does not have the famous Pepsi-Cola sign or the industrial gantries. What it does have is space. Wide promenades, open lawns, beautiful waterfront seating, and one of the cleanest views of Midtown anywhere in the city. For photographers, it is often the better choice simply because there are fewer distractions and fewer people.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Quiet photography</td></tr>
+            <tr><td>Skyline</td><td>Midtown</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Crowds</td><td>Low to Moderate</td></tr>
+            <tr><td>Time Needed</td><td>1 hour</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>If you prefer peaceful waterfront parks over tourist hotspots, this will quickly become a favorite. The skyline feels almost cinematic at sunset.</p>
+
+          <h4>Local Tip</h4>
+          <p>Walk all the way to the ferry landing. Many visitors turn around too early and miss some of the park's strongest viewpoints.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the city's most underrated places to watch the skyline change from day to night.</div>
+        </div>
+      </div>
+
+      <!-- #8 DOMINO PARK -->
+      <div class="view-card" id="view-8">
+        <div class="vc-head alt">
+          <div class="vc-num">08</div>
+          <div class="vc-titles">
+            <span class="vc-name">Domino Park</span>
+            <span class="vc-sub">Industrial History Meets Skyline Photography</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Domino Park proves that great skyline views do not have to come from historic parks. Built on the site of the former Domino Sugar Refinery, it combines New York's industrial past with one of its best modern waterfronts. The restored cranes, brick buildings, and refinery structures give every photo a sense of place. Without them, it would simply be another skyline across the river. With them, it is unmistakably Williamsburg.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Creative photography</td></tr>
+            <tr><td>Skyline</td><td>Midtown</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>9/10</td></tr>
+            <tr><td>Families</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The industrial architecture transforms ordinary skyline photos into something much more interesting. Children will enjoy the playgrounds while photographers can spend hours experimenting with different foregrounds.</p>
+
+          <h4>Local Tip</h4>
+          <p>Walk to the northern end of the park. The skyline becomes noticeably wider, and the crowds become noticeably smaller.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Williamsburg waterfront, Smorgasburg (seasonal), East River Ferry, local cafes.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the most photogenic places in New York, blending history, architecture, and skyline views into a single unforgettable stop.</div>
+        </div>
+      </div>
+
+      <!-- #9 PIER 57 ROOFTOP PARK -->
+      <div class="view-card" id="view-9">
+        <div class="vc-head">
+          <div class="vc-num">09</div>
+          <div class="vc-titles">
+            <span class="vc-name">Pier 57 Rooftop Park</span>
+            <span class="vc-sub">Manhattan's Best Free Elevated View</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If someone asked for a free skyline view in Manhattan itself, this is where to send them. Most visitors do not realize there is a public rooftop park sitting above Pier 57. There is no expensive ticket, no security line that feels like an airport, and no pressure to rush because you have paid for timed entry. Instead, you step onto a spacious rooftop lawn with sweeping views over the Hudson River, Lower Manhattan, Little Island, and the Chelsea waterfront. It feels like one of those places locals hope tourists never discover.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Elevated Manhattan views</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan &amp; Hudson River</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>9/10</td></tr>
+            <tr><td>Accessibility</td><td>Elevator access</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;90 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>Unlike observation decks hundreds of feet in the air, Pier 57 feels connected to the city. You can watch ferries crossing the Hudson, helicopters arriving downtown, sailboats passing by, and the skyline slowly lighting up as the sun disappears behind New Jersey. It is one of the best places to simply sit and enjoy New York without feeling rushed.</p>
+
+          <h4>Photography Tips</h4>
+          <p>The rooftop lawn creates excellent foregrounds. Bring both a wide-angle lens for panoramic shots and a short telephoto to isolate Lower Manhattan.</p>
+
+          <h4>Local Tip</h4>
+          <p>Visit Little Island first, then walk directly across to Pier 57 for sunset. It is one of the easiest and most rewarding evening walks in Manhattan.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Little Island, Chelsea Market, High Line, Hudson River Park.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> If you are staying in Manhattan and only have time for one free skyline stop, Pier 57 deserves serious consideration.</div>
+        </div>
+      </div>
+
+      <!-- #10 STATEN ISLAND FERRY -->
+      <div class="view-card" id="view-10">
+        <div class="vc-head alt">
+          <div class="vc-num">10</div>
+          <div class="vc-titles">
+            <span class="vc-name">Staten Island Ferry</span>
+            <span class="vc-sub">The Best Free Sightseeing Cruise in America</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>The Staten Island Ferry is not just transportation. It is one of the best free sightseeing cruises in America. Thousands of commuters ride it every day without thinking twice about the views, while visitors often discover that the journey itself becomes one of the highlights of their trip.</p>
+          <p>Unlike every park in this guide, the scenery constantly changes. As the ferry pulls away from Lower Manhattan, One World Trade Center slowly dominates the skyline. A few minutes later the Statue of Liberty comes into perfect view before the harbor opens into a broad panorama of bridges, islands, ships, and skyscrapers. It is impossible to recreate this perspective anywhere else.</p>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a9/31/22/photo0jpg.jpg?w=1400&h=-1&s=1" alt="Staten Island Ferry — view of Lower Manhattan skyline from the ferry crossing New York Harbor">
+            <div class="cap">The Lower Manhattan skyline seen from the Staten Island Ferry &mdash; a completely free harbor cruise that ranks among the best sightseeing experiences in New York City.</div>
+          </div>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Harbor panoramas</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>9/10</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Local Tips</h4>
+          <p>Ride both directions. On the trip from Manhattan to Staten Island, stand on the right-hand side for the best Statue of Liberty views. Return on the opposite side for different skyline angles. Avoid peak commuter periods if you want space for photography.</p>
+
+          <h4>Common Mistakes</h4>
+          <ul>
+            <li>Leaving immediately after arriving at Staten Island</li>
+            <li>Staying inside the cabin</li>
+            <li>Only taking one crossing</li>
+          </ul>
+
+          <h4>Nearby Attractions</h4>
+          <p>Battery Park, Fort Wadsworth, Empire Outlets, St. George waterfront.</p>
+          <p>Want to see the Statue of Liberty up close? Read: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty</a></p>
+          <p>Comparing options? Read: <a href="statue-of-liberty-vs-staten-island-ferry.html">Statue of Liberty vs Staten Island Ferry: The Honest Comparison</a></p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> Hard to argue with a free harbor cruise that delivers views many paid sightseeing cruises are trying to sell.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ====================== VIEWPOINTS 11-15 ====================== -->
+      <h2 id="views-11-15">Viewpoints 11&ndash;15: Hidden Gems and Elevated Perspectives</h2>
+
+      <!-- #11 HAMILTON PARK -->
+      <div class="view-card" id="view-11">
+        <div class="vc-head">
+          <div class="vc-num">11</div>
+          <div class="vc-titles">
+            <span class="vc-name">Hamilton Park (Weehawken)</span>
+            <span class="vc-sub">Best Skyline View Outside New York City</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If someone showed a skyline photo without telling you where it was taken, there is a good chance you would guess Hamilton Park. The view is that impressive. Perched high above the Hudson River, Hamilton Park reveals Manhattan from an angle that few visitors ever see. Instead of looking across the river at eye level, you are looking slightly down toward the skyline, giving the entire city an almost miniature appearance. This is the place to visit when you want to appreciate the skyline as a whole rather than focus on individual buildings.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Panoramic skyline</td></tr>
+            <tr><td>Skyline</td><td>Midtown &amp; Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Crowds</td><td>Low</td></tr>
+            <tr><td>Time Needed</td><td>1 hour</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The elevated position gives you a perspective that is impossible to replicate from within New York City. The Hudson River stretches across the foreground while Midtown rises dramatically beyond it.</p>
+
+          <h4>Photography Tips</h4>
+          <p>A tripod is worth bringing if you plan to stay after sunset. Blue hour here is spectacular.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the finest skyline viewpoints in the entire metropolitan area.</div>
+        </div>
+      </div>
+
+      <!-- #12 EXCHANGE PLACE -->
+      <div class="view-card" id="view-12">
+        <div class="vc-head alt">
+          <div class="vc-num">12</div>
+          <div class="vc-titles">
+            <span class="vc-name">Exchange Place</span>
+            <span class="vc-sub">Best Night Skyline View in the Metro Area</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If Brooklyn Heights Promenade is New York's postcard, Exchange Place is its mirror. Standing directly across the Hudson River, you will enjoy one of the closest and cleanest views of Lower Manhattan anywhere. There is very little between you and the skyline except water. The result is a wonderfully uncluttered composition that photographers love.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Night skyline</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Night</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>9/10</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Local Tip</h4>
+          <p>Do not stop near the PATH station. Walk north along the waterfront. The skyline becomes more dramatic with every block.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Jersey City waterfront, PATH Station, waterfront restaurants.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the best places to photograph Lower Manhattan without the crowds found in Brooklyn.</div>
+        </div>
+      </div>
+
+      <!-- #13 FORT WADSWORTH -->
+      <div class="view-card" id="view-13">
+        <div class="vc-head">
+          <div class="vc-num">13</div>
+          <div class="vc-titles">
+            <span class="vc-name">Fort Wadsworth</span>
+            <span class="vc-sub">Best Hidden Gem &mdash; Least Crowded View in NYC</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Fort Wadsworth surprised me more than any other location in this guide. It is rarely mentioned in mainstream travel articles, yet it delivers one of the most dramatic skyline experiences anywhere around New York Harbor. Instead of focusing solely on skyscrapers, this viewpoint combines the Verrazzano-Narrows Bridge, cruise ships, the harbor, and the Manhattan skyline into one enormous panorama. It feels cinematic.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Hidden gem</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Crowds</td><td>Very Low</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Photography Tips</h4>
+          <p>Bring a telephoto lens. This is where long focal lengths really shine.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> If you are willing to travel a little farther, Fort Wadsworth rewards you with one of the most memorable skyline views in New York.</div>
+        </div>
+      </div>
+
+      <!-- #14 TRANSMITTER PARK -->
+      <div class="view-card" id="view-14">
+        <div class="vc-head alt">
+          <div class="vc-num">14</div>
+          <div class="vc-titles">
+            <span class="vc-name">Transmitter Park</span>
+            <span class="vc-sub">Brooklyn's Best-Kept Secret Waterfront</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Transmitter Park feels like the kind of place locals quietly recommend to friends. The skyline is outstanding, the waterfront is peaceful, and there are usually more neighborhood residents than tourists. It lacks the fame of Brooklyn Bridge Park, but that is exactly why it is worth visiting.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Quiet waterfront</td></tr>
+            <tr><td>Skyline</td><td>Midtown</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Crowds</td><td>Low</td></tr>
+            <tr><td>Time Needed</td><td>1 hour</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The fishing pier stretches directly toward Manhattan, creating fantastic leading lines for photography. It is also one of the easiest places to slow down and simply enjoy the skyline without feeling surrounded by crowds.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of Brooklyn's most overlooked waterfront parks.</div>
+        </div>
+      </div>
+
+      <!-- #15 SUNSET PARK -->
+      <div class="view-card" id="view-15">
+        <div class="vc-head">
+          <div class="vc-num">15</div>
+          <div class="vc-titles">
+            <span class="vc-name">Sunset Park</span>
+            <span class="vc-sub">Brooklyn's Broadest Skyline Panorama</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If you are expecting another waterfront viewpoint, Sunset Park will surprise you. Instead of standing beside the river, you are looking across the entire city from one of Brooklyn's highest natural points. The result is one of the broadest skyline panoramas in New York. You can see Midtown, Lower Manhattan, Downtown Brooklyn, New York Harbor, and even New Jersey on a clear day.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Elevated panorama</td></tr>
+            <tr><td>Photography</td><td>10/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Hidden Gem</td><td>10/10</td></tr>
+            <tr><td>Time Needed</td><td>1 hour</td></tr>
+          </table>
+
+          <h4>Local Tip</h4>
+          <p>Walk to the highest part of the park. Many visitors stop halfway up and never reach the best viewpoint.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the city's most underrated skyline experiences.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ====================== VIEWPOINTS 16-20 ====================== -->
+      <h2 id="views-16-20">Viewpoints 16&ndash;20: Local Favorites Worth Knowing</h2>
+
+      <!-- #16 LITTLE ISLAND -->
+      <div class="view-card" id="view-16">
+        <div class="vc-head alt">
+          <div class="vc-num">16</div>
+          <div class="vc-titles">
+            <span class="vc-name">Little Island</span>
+            <span class="vc-sub">Where the Skyline Becomes a Backdrop</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Little Island is not the place to choose for the biggest skyline. It is the place to choose for the atmosphere. The floating park's gardens, winding paths, and elevated platforms create a beautiful foreground that makes the skyline feel like part of the landscape rather than the main attraction. It is especially enjoyable in the late afternoon before walking over to Pier 57 for sunset.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Scenic walk</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>8.5/10</td></tr>
+            <tr><td>Families</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> Come for the park. Stay for the skyline.</div>
+        </div>
+      </div>
+
+      <!-- #17 BROOKLYN BRIDGE PEDESTRIAN WALKWAY -->
+      <div class="view-card" id="view-17">
+        <div class="vc-head">
+          <div class="vc-num">17</div>
+          <div class="vc-titles">
+            <span class="vc-name">Brooklyn Bridge Pedestrian Walkway</span>
+            <span class="vc-sub">Walk It for the Experience, Photograph Elsewhere</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Walking across the Brooklyn Bridge is one of those experiences that almost every first-time visitor has on their itinerary. It is iconic, historic, and offers incredible views in every direction. But here is something that often surprises people: the Brooklyn Bridge is not actually one of the best places to photograph the Manhattan skyline. That is not because the view is bad. It is because the bridge itself becomes the star of the show.</p>
+          <p>Steel cables slice across your frame, pedestrians constantly pass in front of your camera, cyclists ring their bells behind you, and finding a quiet spot to stop can be challenging. Yet skipping it entirely would be a mistake. The bridge delivers something no waterfront park can &mdash; you are suspended above the East River with Manhattan unfolding around you.</p>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/95/e9/ef/caption.jpg?w=1400&h=-1&s=1" alt="Brooklyn Bridge pedestrian walkway looking toward Lower Manhattan — view from the bridge center">
+            <div class="cap">Looking toward Lower Manhattan from the Brooklyn Bridge pedestrian walkway. The bridge itself dominates the frame &mdash; which is exactly the point. For pure skyline photography, Brooklyn Bridge Park or the Promenade nearby will serve you better.</div>
+          </div>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Classic NYC experience</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>8.5/10</td></tr>
+            <tr><td>Sunset</td><td>8/10</td></tr>
+            <tr><td>Night</td><td>9/10</td></tr>
+            <tr><td>Crowd Level</td><td>Very High</td></tr>
+            <tr><td>Walking Time</td><td>30&ndash;45 minutes one way</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The real attraction is not one single viewpoint &mdash; it is the journey. As you walk toward Manhattan, the skyline slowly grows larger while the bridge's Gothic towers create one of the city's most recognizable architectural scenes. You will also enjoy excellent views of Brooklyn Bridge Park, Manhattan Bridge, East River ferries, South Street Seaport, and Governors Island.</p>
+
+          <h4>Best Time</h4>
+          <p>Early morning. If you arrive shortly after sunrise, you will experience cooler temperatures, far fewer people, softer light, and easier photography. By late morning, the bridge becomes significantly busier.</p>
+
+          <h4>Photography Tips</h4>
+          <p>Rather than photographing only the skyline, combine it with the bridge's architecture. The strongest images here include bridge cables as leading lines, stone arches framing the skyline, pedestrians walking toward Manhattan, and cyclists crossing. The skyline works best as the background rather than the main subject.</p>
+
+          <h4>Local Tip</h4>
+          <p>If skyline photography is your priority, walk the bridge once for the experience, then head straight to Brooklyn Bridge Park or the Brooklyn Heights Promenade. You will get much stronger skyline compositions there.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>DUMBO, Brooklyn Bridge Park, South Street Seaport, City Hall Park.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> Walk it for the experience. Photograph the skyline somewhere else.</div>
+        </div>
+      </div>
+
+      <!-- #18 BUSH TERMINAL PIERS PARK -->
+      <div class="view-card" id="view-18">
+        <div class="vc-head alt">
+          <div class="vc-num">18</div>
+          <div class="vc-titles">
+            <span class="vc-name">Bush Terminal Piers Park</span>
+            <span class="vc-sub">Brooklyn's Quietest Waterfront Escape</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Few visitors venture this far south into Brooklyn. That is their loss. Bush Terminal Piers Park feels completely different from the busy waterfront around DUMBO. Instead of crowds and souvenir shops, you will find wetlands, birdlife, quiet piers, and expansive harbor views. The Manhattan skyline appears farther away, but somehow that makes it even more impressive &mdash; you are seeing the city as part of a much larger landscape.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Quiet harbor views</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>8.5/10</td></tr>
+            <tr><td>Crowds</td><td>Very Low</td></tr>
+            <tr><td>Families</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is one of those places where you will hear birds more often than traffic. If Brooklyn Bridge Park feels energetic, Bush Terminal feels peaceful. It is especially rewarding if you have already seen the famous skyline viewpoints and want something different.</p>
+
+          <h4>Local Tip</h4>
+          <p>Combine this with Sunset Park. The elevated panorama from Sunset Park followed by the waterfront views here creates one of Brooklyn's most underrated half-day itineraries.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Industry City, Sunset Park, Green-Wood Cemetery area, Brooklyn waterfront greenway.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the city's quietest waterfront escapes.</div>
+        </div>
+      </div>
+
+      <!-- #19 BUSHWICK INLET PARK -->
+      <div class="view-card" id="view-19">
+        <div class="vc-head">
+          <div class="vc-num">19</div>
+          <div class="vc-titles">
+            <span class="vc-name">Bushwick Inlet Park</span>
+            <span class="vc-sub">Relaxed Williamsburg Waterfront</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Most visitors exploring Williamsburg never make it this far north. Instead, they stop at Domino Park before heading back toward Bedford Avenue. That means they miss one of the neighborhood's most relaxing waterfront parks. Bushwick Inlet Park does not have dramatic industrial architecture or famous landmarks. What it does offer is space &mdash; wide lawns, uninterrupted waterfront, excellent Midtown views, and surprisingly few people.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Relaxing waterfront</td></tr>
+            <tr><td>Skyline</td><td>Midtown</td></tr>
+            <tr><td>Photography</td><td>8.5/10</td></tr>
+            <tr><td>Crowd Level</td><td>Low</td></tr>
+            <tr><td>Walking Difficulty</td><td>Easy</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>Sometimes the best skyline experience is not about finding the most dramatic viewpoint. Sometimes it is simply about finding a comfortable place to sit. Bushwick Inlet Park excels at exactly that.</p>
+
+          <h4>Local Tip</h4>
+          <p>If you are already visiting Domino Park, continue north for another 15&ndash;20 minutes. You will discover a much quieter atmosphere without sacrificing the skyline.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Domino Park, Williamsburg waterfront, East River Ferry, north Williamsburg cafes.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> A worthwhile addition if you are already exploring Williamsburg.</div>
+        </div>
+      </div>
+
+      <!-- #20 BATTERY PARK CITY ESPLANADE -->
+      <div class="view-card" id="view-20">
+        <div class="vc-head alt">
+          <div class="vc-num">20</div>
+          <div class="vc-titles">
+            <span class="vc-name">Battery Park City Esplanade</span>
+            <span class="vc-sub">Manhattan's Finest Harbor Walk</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Battery Park City is not usually recommended as a skyline destination. That is because you are already standing inside Lower Manhattan. Instead, what makes this waterfront special is the perspective looking outward. You will enjoy sweeping harbor views, ferries crossing the Hudson, sailboats, the Statue of Liberty, and New Jersey stretching across the horizon. It is less about skyscrapers and more about appreciating New York as a waterfront city.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Harbor walk</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>8/10</td></tr>
+            <tr><td>Sunset</td><td>9/10</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is one of Manhattan's best waterfront walks. The beautifully landscaped promenade feels remarkably calm considering you are only minutes from Wall Street.</p>
+
+          <h4>Local Tip</h4>
+          <p>Start at Brookfield Place and walk south toward Battery Park. The skyline gradually gives way to harbor views, making the walk feel constantly changing.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Brookfield Place, Oculus, One World Observatory, Battery Park.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> Come for the waterfront. Treat the skyline as an added bonus.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ====================== VIEWPOINTS 21-25 ====================== -->
+      <h2 id="views-21-25">Viewpoints 21&ndash;25: Beyond the Boroughs and Off the Beaten Path</h2>
+
+      <!-- #21 FORT TRYON PARK -->
+      <div class="view-card" id="view-21">
+        <div class="vc-head">
+          <div class="vc-num">21</div>
+          <div class="vc-titles">
+            <span class="vc-name">Fort Tryon Park</span>
+            <span class="vc-sub">Upper Manhattan's Hidden Scenic Escape</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Fort Tryon Park proves that skyline viewpoints do not always need to showcase skyscrapers. Perched high above the Hudson River in Upper Manhattan, this historic park offers a very different kind of beauty. Instead of glass towers dominating the horizon, you will find dramatic cliffs, wooded trails, river views, and the George Washington Bridge stretching across the landscape. On exceptionally clear days, Midtown appears in the distance, reminding you just how enormous New York really is.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Scenic landscapes</td></tr>
+            <tr><td>Skyline</td><td>Distant Midtown</td></tr>
+            <tr><td>Photography</td><td>8/10</td></tr>
+            <tr><td>Crowds</td><td>Low</td></tr>
+            <tr><td>Hidden Gem</td><td>9/10</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>If you have spent several days surrounded by skyscrapers, Fort Tryon feels refreshing. It is peaceful, elevated, and surprisingly uncrowded.</p>
+
+          <h4>Local Tip</h4>
+          <p>Visit during autumn. The colorful foliage transforms the already beautiful river views into something truly memorable.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>The Met Cloisters, Heather Garden, Inwood Hill Park.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of Manhattan's most underrated scenic parks, even if skyscrapers are not the main attraction.</div>
+        </div>
+      </div>
+
+      <!-- #22 ASTORIA PARK -->
+      <div class="view-card" id="view-22">
+        <div class="vc-head alt">
+          <div class="vc-num">22</div>
+          <div class="vc-titles">
+            <span class="vc-name">Astoria Park</span>
+            <span class="vc-sub">Queens Neighborhood Park with a Bonus Skyline</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>Astoria Park rarely appears on lists of the best skyline views in New York City. That is because it is not trying to compete with Brooklyn Bridge Park or Gantry Plaza. Instead, it offers something different: a relaxed neighborhood park where the skyline complements the scenery rather than dominating it. The real stars here are the East River, the graceful Hell Gate Bridge, and the massive Robert F. Kennedy Bridge. Midtown rises quietly in the distance, creating a layered cityscape that feels more authentic than dramatic.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Scenic neighborhood park</td></tr>
+            <tr><td>Skyline</td><td>Midtown (distant)</td></tr>
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Photography</td><td>8/10</td></tr>
+            <tr><td>Crowds</td><td>Low to Moderate</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>Astoria Park is less about checking off another skyline viewpoint and more about slowing down. The combination of bridges, waterfront, running paths, and open lawns makes it one of Queens' most enjoyable public parks.</p>
+
+          <h4>Best Time</h4>
+          <p>Morning is ideal. The park feels wonderfully quiet, and the softer light works well for photographing the bridges.</p>
+
+          <h4>Local Tip</h4>
+          <p>Bring a coffee and simply enjoy the river. Sometimes the best skyline experiences are the ones where you are not constantly taking photos.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Museum of the Moving Image, Astoria restaurants, Socrates Sculpture Park.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> A worthwhile stop if you are already exploring Queens, but not a destination solely for skyline photography.</div>
+        </div>
+      </div>
+
+      <!-- #23 LOUIS VALENTINO JR. PARK -->
+      <div class="view-card" id="view-23">
+        <div class="vc-head">
+          <div class="vc-num">23</div>
+          <div class="vc-titles">
+            <span class="vc-name">Louis Valentino Jr. Park &amp; Pier (Red Hook)</span>
+            <span class="vc-sub">Brooklyn's Best-Kept Secret</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If Brooklyn Bridge Park is the skyline everyone knows, Valentino Pier is the skyline almost nobody talks about. Tucked away in Red Hook, this quiet waterfront pier delivers a wonderfully wide view of New York Harbor with Lower Manhattan rising beyond it. The atmosphere could not be more different from DUMBO. There are no crowds waiting for selfies, no tour groups, no long lines for famous photo spots. Just benches, harbor breezes, and one of the city's most peaceful waterfronts.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Hidden gem</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Crowds</td><td>Very Low</td></tr>
+            <tr><td>Time Needed</td><td>45&ndash;60 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>The wider harbor creates beautiful layers. You will often see ferries, tugboats, cargo ships, sailboats, and cruise ships passing between you and the skyline. Every visit feels slightly different.</p>
+
+          <h4>Local Tip</h4>
+          <p>Spend some time exploring Red Hook before or after your visit. It is one of Brooklyn's most distinctive neighborhoods, filled with independent cafes, waterfront restaurants, and converted warehouse spaces.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Red Hook waterfront, Brooklyn Cruise Terminal, Steve's Authentic Key Lime Pies, local breweries.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of Brooklyn's best-kept secrets.</div>
+        </div>
+      </div>
+
+      <!-- #24 MANHATTAN BRIDGE PEDESTRIAN WALKWAY -->
+      <div class="view-card" id="view-24">
+        <div class="vc-head alt">
+          <div class="vc-num">24</div>
+          <div class="vc-titles">
+            <span class="vc-name">Manhattan Bridge Pedestrian Walkway</span>
+            <span class="vc-sub">New York's Most Underrated Bridge Walk</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>The Manhattan Bridge often lives in the shadow of its famous neighbor. That is unfortunate because it offers one of the most dramatic elevated views in New York. From here, you are treated to sweeping views of Lower Manhattan, the Brooklyn Bridge, New York Harbor, and the East River. Unlike the Brooklyn Bridge, the pedestrian path attracts far fewer visitors. The trade-off is that the bridge vibrates noticeably whenever subway trains cross overhead. It is not dangerous, but it can surprise first-time visitors.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Elevated skyline views</td></tr>
+            <tr><td>Skyline</td><td>Lower Manhattan</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Crowds</td><td>Moderate</td></tr>
+            <tr><td>Walking Time</td><td>30&ndash;40 minutes</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>This is one of the few places where you can photograph both the skyline and the Brooklyn Bridge from above. It is a perspective many visitors completely overlook.</p>
+
+          <h4>Local Tip</h4>
+          <p>Walk from Brooklyn into Manhattan. The skyline gradually fills your view, making the experience far more dramatic.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of New York's most underrated bridge walks.</div>
+        </div>
+      </div>
+
+      <!-- #25 HOBOKEN WATERFRONT WALKWAY -->
+      <div class="view-card" id="view-25">
+        <div class="vc-head">
+          <div class="vc-num">25</div>
+          <div class="vc-titles">
+            <span class="vc-name">Hoboken Waterfront Walkway</span>
+            <span class="vc-sub">The Best Evening Walk in the Metropolitan Area</span>
+          </div>
+        </div>
+        <div class="vc-body">
+          <p>If you have made it across the Hudson River, do not stop after Hamilton Park. Continue down to the Hoboken Waterfront Walkway. Where Hamilton Park offers elevation, Hoboken offers intimacy. The promenade stretches beside the Hudson with uninterrupted views of Midtown Manhattan almost the entire way. There are parks, marinas, restaurants, cafes, and plenty of benches where you can simply sit and watch the skyline. For many, it is one of the best evening walks anywhere around New York.</p>
+
+          <table class="snap-table">
+            <tr><td>Best For</td><td>Evening stroll</td></tr>
+            <tr><td>Skyline</td><td>Midtown</td></tr>
+            <tr><td>Photography</td><td>9/10</td></tr>
+            <tr><td>Sunset</td><td>10/10</td></tr>
+            <tr><td>Families</td><td>Excellent</td></tr>
+            <tr><td>Time Needed</td><td>1&ndash;2 hours</td></tr>
+          </table>
+
+          <h4>Why Visit?</h4>
+          <p>Unlike many viewpoints that encourage you to stop for a few minutes, Hoboken invites you to keep walking. The skyline changes continuously as you move north and south along the waterfront.</p>
+
+          <h4>Nearby Attractions</h4>
+          <p>Sinatra Park, Pier A Park, Hoboken restaurants, waterfront cafes.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the most enjoyable skyline walks in the metropolitan area.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- DECISION GUIDE -->
+      <h2 id="decision-guide">Which Free Skyline View Is Right for You?</h2>
+      <p>After visiting all of these viewpoints, here is where different types of travelers should go.</p>
+      <div class="table-wrap">
+        <table class="data-table qref-table" style="min-width:300px;">
+          <tr><th>If you want&hellip;</th><th>Go here</th></tr>
+          <tr><td>One unforgettable skyline view</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>The best free elevated panorama</td><td>Centre 360</td></tr>
+          <tr><td>The best Midtown skyline</td><td>Gantry Plaza State Park</td></tr>
+          <tr><td>The most romantic setting</td><td>Brooklyn Heights Promenade</td></tr>
+          <tr><td>The best sunset</td><td>Governors Island</td></tr>
+          <tr><td>The best night photography</td><td>Exchange Place</td></tr>
+          <tr><td>The best hidden gem</td><td>Fort Wadsworth</td></tr>
+          <tr><td>The quietest waterfront</td><td>Louis Valentino Jr. Park</td></tr>
+          <tr><td>A unique local experience</td><td>Roosevelt Island</td></tr>
+          <tr><td>The best harbor views</td><td>Staten Island Ferry</td></tr>
+          <tr><td>A relaxing neighborhood park</td><td>Astoria Park</td></tr>
+          <tr><td>The best family outing</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>The best picnic spot</td><td>Governors Island</td></tr>
+          <tr><td>The best place to avoid crowds</td><td>Fort Wadsworth</td></tr>
+          <tr><td>The best skyline outside NYC</td><td>Hamilton Park</td></tr>
+        </table>
+      </div>
+
+      <!-- TOP 10 TABLE -->
+      <h2>My Top 10 Free Skyline Views in NYC</h2>
+      <div class="table-wrap">
+        <table class="data-table top10-table" style="min-width:260px;">
+          <tr><th>Rank</th><th>Viewpoint</th></tr>
+          <tr><td>1</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>2</td><td>Centre 360</td></tr>
+          <tr><td>3</td><td>Governors Island</td></tr>
+          <tr><td>4</td><td>Gantry Plaza State Park</td></tr>
+          <tr><td>5</td><td>Brooklyn Heights Promenade</td></tr>
+          <tr><td>6</td><td>Hamilton Park</td></tr>
+          <tr><td>7</td><td>Roosevelt Island</td></tr>
+          <tr><td>8</td><td>Exchange Place</td></tr>
+          <tr><td>9</td><td>Pier 57 Rooftop Park</td></tr>
+          <tr><td>10</td><td>Staten Island Ferry</td></tr>
+        </table>
+      </div>
+
+      <!-- BEST BY CATEGORY -->
+      <h2>Best Skyline Views by Category</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:300px;">
+          <tr><th>Category</th><th>Winner</th></tr>
+          <tr><td>Overall</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>Midtown Skyline</td><td>Gantry Plaza State Park</td></tr>
+          <tr><td>Lower Manhattan</td><td>Brooklyn Heights Promenade</td></tr>
+          <tr><td>Photography</td><td>Centre 360</td></tr>
+          <tr><td>Sunset</td><td>Governors Island</td></tr>
+          <tr><td>Blue Hour</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>Night</td><td>Exchange Place</td></tr>
+          <tr><td>Hidden Gem</td><td>Fort Wadsworth</td></tr>
+          <tr><td>Couples</td><td>Brooklyn Heights Promenade</td></tr>
+          <tr><td>Families</td><td>Brooklyn Bridge Park</td></tr>
+          <tr><td>Picnic</td><td>Governors Island</td></tr>
+          <tr><td>Least Crowded</td><td>Louis Valentino Jr. Park</td></tr>
+          <tr><td>Easy to Reach</td><td>Pier 57 Rooftop Park</td></tr>
+          <tr><td>Best Outside NYC</td><td>Hamilton Park</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PHOTOGRAPHY GUIDE -->
+      <h2 id="photography-guide">Skyline Photography Guide</h2>
+      <p>The biggest mistake people make when photographing the New York City skyline is assuming that location is everything. It is not. Standing at incredible viewpoints on hazy summer afternoons can produce flat, lifeless photos. Visiting the same location on a crisp winter evening can yield some of the finest skyline images you have ever taken. The light, weather, season, and even the direction you are facing matter just as much as the viewpoint itself.</p>
+
+      <h3>Best Time of Day</h3>
+      <div class="table-wrap">
+        <table class="data-table photo-table" style="min-width:340px;">
+          <tr><th>Time</th><th>Best For</th><th>Recommended Viewpoints</th></tr>
+          <tr><td>Sunrise</td><td>Quiet parks, soft light, fewer people</td><td>Brooklyn Bridge, Brooklyn Heights Promenade, Gantry Plaza</td></tr>
+          <tr><td>Morning</td><td>Clear air and architecture</td><td>Centre 360, Roosevelt Island, Astoria Park</td></tr>
+          <tr><td>Golden Hour</td><td>Warm light and dramatic colors</td><td>Governors Island, Gantry Plaza, Brooklyn Bridge Park</td></tr>
+          <tr><td>Sunset</td><td>Harbor panoramas</td><td>Governors Island, Pier 57 Rooftop Park, Hoboken Waterfront</td></tr>
+          <tr><td>Blue Hour</td><td>City lights and reflections</td><td>Brooklyn Bridge Park, Exchange Place, Brooklyn Heights Promenade</td></tr>
+          <tr><td>Night</td><td>Long exposures</td><td>Exchange Place, Brooklyn Bridge Park, Gantry Plaza</td></tr>
+        </table>
+      </div>
+
+      <h3>Best Seasons</h3>
+      <p>Every season changes the skyline.</p>
+
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Winter (My Favorite)</div>
+          <p style="font-size:14px;">Winter is the best season for skyline photography. Cold air is usually cleaner, humidity is lower, and distant buildings appear noticeably sharper. The downside is shorter days and colder waterfront conditions, so dress warmly if you plan to stay after sunset.</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;"><strong>Best winter viewpoints:</strong> Brooklyn Heights Promenade, Gantry Plaza, Exchange Place, Centre 360</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Spring</div>
+          <p style="font-size:14px;">Spring combines comfortable temperatures with blooming waterfront parks. Excellent for travelers who want to combine skyline views with long walks.</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;"><strong>Best spring viewpoints:</strong> Little Island, Governors Island, Roosevelt Island, Brooklyn Bridge Park</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Summer</div>
+          <p style="font-size:14px;">Summer offers the longest evenings but also the most crowded viewpoints. Heat haze can soften distant skylines. Plan around sunset when the light improves and temperatures become more comfortable.</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Fall</div>
+          <p style="font-size:14px;">Autumn might be the most underrated season. Cooler temperatures, colorful foliage, and generally clear air make parks such as Fort Tryon and Governors Island particularly beautiful.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-local" style="margin-top:12px;">
+        <div class="callout-title">Timing Your Visit</div>
+        <p>For a full month-by-month breakdown of the best time to visit New York City, including weather patterns that affect visibility, read: <a href="best-time-to-visit-nyc.html">Best Time to Visit NYC</a></p>
+      </div>
+
+      <h3>Best Camera Gear</h3>
+      <p>You do not need expensive equipment to enjoy these viewpoints, but choosing the right lens makes a noticeable difference.</p>
+      <div class="table-wrap">
+        <table class="data-table photo-table" style="min-width:280px;">
+          <tr><th>Lens</th><th>Best Use</th></tr>
+          <tr><td>16&ndash;35mm</td><td>Panoramas and dramatic foregrounds</td></tr>
+          <tr><td>24&ndash;70mm</td><td>Best all-around skyline lens</td></tr>
+          <tr><td>70&ndash;200mm</td><td>Compressing the skyline and isolating landmarks</td></tr>
+          <tr><td>Smartphone</td><td>Daytime photography and casual travel</td></tr>
+        </table>
+      </div>
+      <p>If you are using a phone, switch to the widest lens for sweeping views and avoid digital zoom whenever possible.</p>
+
+      <h3>Tripod Tips</h3>
+      <p>A lightweight travel tripod is one of the best investments if you enjoy photography. It is particularly useful at Brooklyn Bridge Park, Exchange Place, Gantry Plaza State Park, Hamilton Park, and Fort Wadsworth. Always be considerate of other visitors, especially during busy sunset hours. Avoid blocking pathways or setting up in narrow walkways.</p>
+
+      <h3>Do Not Forget the Foreground</h3>
+      <p>The skyline alone rarely creates the strongest image. Some of the best photos include recognizable foreground elements that instantly tell viewers where they were taken. Look for Brooklyn Bridge cables, historic gantries at Gantry Plaza, Jane's Carousel, ferry wakes, harbor boats, waterfront piers, park landscaping, and reflections after rain. These details give your photos a stronger sense of place.</p>
+
+      <hr class="divider-rule">
+
+      <!-- COMMON MISTAKES -->
+      <h2 id="mistakes">Common Mistakes to Avoid</h2>
+      <p>After countless skyline walks, these are the mistakes that happen again and again. Avoid these, and your experience will be much better.</p>
+
+      <ul class="mistake-list">
+        <li>
+          <div class="ml-num">01</div>
+          <div class="ml-content"><h4>Arriving at Sunset Instead of Before It</h4><p>Sunset is not the starting point. It is the finale. Arrive at least an hour early so you can enjoy golden hour, sunset, and blue hour without rushing.</p></div>
+        </li>
+        <li>
+          <div class="ml-num">02</div>
+          <div class="ml-content"><h4>Leaving Too Early</h4><p>Many visitors leave as soon as the sun disappears. That is often when the skyline becomes most beautiful. Blue hour usually lasts another 20&ndash;40 minutes, and the city lights create an entirely different atmosphere.</p></div>
+        </li>
+        <li>
+          <div class="ml-num">03</div>
+          <div class="ml-content"><h4>Only Visiting One Viewpoint</h4><p>No single location tells the whole story of New York. Brooklyn Bridge Park and Gantry Plaza offer completely different skylines. Roosevelt Island feels nothing like Governors Island. If time allows, visit at least two contrasting viewpoints.</p></div>
+        </li>
+        <li>
+          <div class="ml-num">04</div>
+          <div class="ml-content"><h4>Ignoring Weather</h4><p>Bright sunshine does not always produce the best skyline. Some of the finest photos come after rain, on cold winter evenings, during partly cloudy sunsets, or just before storms cleared.</p></div>
+        </li>
+        <li>
+          <div class="ml-num">05</div>
+          <div class="ml-content"><h4>Staying in the Most Crowded Area</h4><p>At nearly every popular viewpoint, simply walking another five minutes dramatically reduces the crowds. This is especially true at Brooklyn Bridge Park, Governors Island, Domino Park, and the Hoboken Waterfront.</p></div>
+        </li>
+        <li>
+          <div class="ml-num">06</div>
+          <div class="ml-content"><h4>Expecting Ground-Level Parks to Feel Like Observation Decks</h4><p>Waterfront parks and observation decks offer different experiences. Observation decks provide height. Waterfront parks provide atmosphere, reflections, bridges, ferries, and a stronger connection to the city. That is why many people enjoy them more.</p></div>
+        </li>
+      </ul>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>What is the best free skyline view in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most visitors, Brooklyn Bridge Park offers the best overall combination of skyline quality, accessibility, photography opportunities, and nearby attractions.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a free observation deck in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. Centre 360 provides a free elevated panoramic experience, although reservations are required and availability is limited. Book your slot at the <a href="https://www.centre360nyc.com/" target="_blank" rel="noopener">official Centre 360 reservation page</a> as early as possible.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which skyline view is best at sunset?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Governors Island is the top pick for sunset thanks to its wide harbor views and relaxed atmosphere. Brooklyn Bridge Park and Gantry Plaza State Park are close behind.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Where can I see the Midtown skyline for free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Gantry Plaza State Park remains the top recommendation. Hunter's Point South Park and the Hoboken Waterfront Walkway are excellent alternatives.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which viewpoint has the fewest crowds?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Fort Wadsworth consistently feels quieter than almost every other skyline viewpoint. Louis Valentino Jr. Park is another excellent option if you are looking to escape the busiest tourist areas.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Staten Island Ferry really free?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. It has been free for decades and remains one of the best-value sightseeing experiences in New York City.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I visit multiple viewpoints in one day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Absolutely. See the day combination suggestions below for four recommended itineraries that pair viewpoints naturally.</div>
+        </details>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- DAY COMBOS -->
+      <h2 id="day-combos">Suggested Day Combinations</h2>
+      <p>Some of the best skyline experiences come from pairing viewpoints that complement each other. Here are four natural combinations.</p>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <h4>Lower Manhattan Afternoon</h4>
+          <ul>
+            <li>Brooklyn Heights Promenade</li>
+            <li>Brooklyn Bridge Park</li>
+            <li>DUMBO</li>
+            <li>Time Out Market</li>
+          </ul>
+        </div>
+        <div class="combo-card">
+          <h4>Midtown Waterfront</h4>
+          <ul>
+            <li>Gantry Plaza State Park</li>
+            <li>Hunter's Point South Park</li>
+            <li>Roosevelt Island</li>
+          </ul>
+        </div>
+        <div class="combo-card">
+          <h4>Manhattan Evening</h4>
+          <ul>
+            <li>Little Island</li>
+            <li>Pier 57 Rooftop Park</li>
+            <li>High Line</li>
+          </ul>
+        </div>
+        <div class="combo-card">
+          <h4>Harbor Adventure</h4>
+          <ul>
+            <li>Staten Island Ferry</li>
+            <li>Fort Wadsworth</li>
+            <li>Governors Island (seasonal)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- RELATED LINKS -->
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State vs OWO</a></li>
+      <li><a href="nyc-helicopter-tours.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Helicopter Tours Compared: Which Flight Is Actually Worth Booking?</a></li>
+      <li><a href="statue-of-liberty-vs-staten-island-ferry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Statue of Liberty vs Staten Island Ferry: The Honest Comparison</a></li>
+      <li><a href="one-world-observatory-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is One World Observatory Worth Visiting? An Honest Review</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary: A Full-Day Self-Guided Walk</a></li>
+      <li><a href="which-attractions-to-book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What NYC Attractions Can You Visit Without Reservations?</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://sim-777.github.io/EverythingInNYC/" target="_blank" rel="noopener">
+        <div class="fc-title">All NYC Travel Guides</div>
+        <div class="fc-sub">Itineraries, tips, and attraction guides</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Progress bar
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+// Sidebar scrollspy
+var secs=['quick-answer','how-ranked','view-1','view-2','view-3','view-4','view-5','views-6-10','views-11-15','views-16-20','views-21-25','decision-guide','photography-guide','mistakes','faq','day-combos'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur=secs[0];
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    var href=a.getAttribute('href').replace('#','');
+    a.classList.toggle('sn-active',href===cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
