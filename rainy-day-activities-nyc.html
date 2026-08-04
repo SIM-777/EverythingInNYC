@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Rainy-Day Attractions in NYC: What to Do When the Weather Ruins Your Plans | EverythingInNYC</title>
+<meta name="description" content="Rain doesn't have to ruin your NYC trip. Discover the best rainy-day attractions in NYC, neighborhood backup plans, free indoor spots, family activities, and exactly what to do when the forecast changes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- FIXED STICKY TOP NAV ---- */
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){
+  .sn-inner{display:none;flex-direction:column;gap:0;padding:0;}
+  .sn-inner.open{display:flex;}
+  .sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .sn-toggle{display:block;}
+  .sticky-nav{display:flex;align-items:center;justify-content:space-between;}
+  .sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}
+}
+/* ---- SIDEBAR ---- */
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+/* ---- RAIN INTENSITY CARDS ---- */
+.rain-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:580px){.rain-grid{grid-template-columns:1fr;}}
+.rain-card{border-radius:12px;padding:14px 16px;border-left:4px solid;}
+.rain-light{background:rgba(59,130,246,.05);border-color:#3B82F6;}
+.rain-medium{background:rgba(245,158,11,.05);border-color:#F59E0B;}
+.rain-heavy{background:rgba(185,28,28,.05);border-color:#B91C1C;}
+.rain-all{background:rgba(15,23,42,.05);border-color:var(--navy);}
+.rain-card h4{margin:0 0 6px;font-size:14px;color:var(--navy);}
+.rain-card p{margin:0;font-size:13.5px;}
+/* ---- ATTRACTION REVIEW CARD ---- */
+.attr-review{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:20px 0;}
+.ar-head{padding:14px 18px;background:var(--navy);display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;}
+.ar-num{font-family:var(--font-head);font-weight:800;font-size:26px;color:rgba(255,255,255,.2);flex:none;min-width:34px;line-height:1;}
+.ar-titles{flex:1;}
+.ar-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:#fff;display:block;}
+.ar-meta{font-size:12.5px;color:rgba(255,255,255,.7);margin-top:2px;}
+.ar-score{display:flex;gap:6px;align-items:center;margin-top:4px;}
+.ar-stars{color:var(--accent);font-size:14px;letter-spacing:1px;}
+.ar-head.alt-head{background:#1a2942;}
+.ar-body{padding:14px 18px;}
+.snap-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:0 0 14px;}
+.snap-table td{padding:5px 10px;border-bottom:1px solid var(--border);}
+.snap-table td:first-child{font-weight:700;color:var(--navy);width:38%;}
+.snap-table tr:last-child td{border-bottom:none;}
+.snap-table tr:nth-child(even) td{background:rgba(15,23,42,.025);}
+/* ---- ROUTE FLOW ---- */
+.route-flow{display:flex;flex-direction:column;gap:2px;margin:12px 0;}
+.rf-stop{display:flex;align-items:center;gap:10px;padding:8px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;font-size:14px;font-weight:600;color:var(--navy);}
+.rf-stop .rf-time{font-size:12px;font-weight:500;color:var(--text-secondary);margin-left:auto;}
+.rf-arrow{text-align:center;color:var(--text-secondary);font-size:18px;line-height:1;}
+/* ---- SECTION IMAGE ---- */
+.section-img{margin:18px 0 12px;}
+.section-img img{width:100%;border-radius:14px;max-height:440px;object-fit:cover;display:block;}
+.section-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+/* ---- NEIGHBORHOOD CLUSTER ---- */
+.cluster-box{background:rgba(15,23,42,.04);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin:14px 0;}
+.cb-title{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cb-badge{background:var(--navy);color:var(--accent);font-family:var(--font-head);font-weight:800;font-size:11px;border-radius:20px;padding:2px 10px;}
+/* ---- VERDICT STRIP ---- */
+.verdict-strip{background:rgba(255,193,7,.06);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:8px 14px;margin:10px 0;font-size:14.5px;}
+.verdict-strip strong{color:var(--navy);}
+/* ---- ITINERARY CARD ---- */
+.itin-card{border-radius:12px;border:1px solid var(--border);overflow:hidden;margin:14px 0;}
+.ic-head{background:var(--navy);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.ic-head h3{margin:0;font-size:16px;color:#fff;}
+.ic-head .ic-label{font-size:12px;color:rgba(255,255,255,.7);}
+.ic-body{padding:14px 16px;}
+/* ---- CROWD TABLE ---- */
+.crowd-table td:first-child{font-weight:700;color:var(--navy);}
+/* ---- CHECKLIST ---- */
+.check-ul{list-style:none;padding:0;margin:8px 0;display:flex;flex-direction:column;gap:3px;}
+.check-ul.yes li::before{content:'>';color:#15803D;font-weight:700;margin-right:7px;}
+.check-ul.no li::before{content:'x';color:#B91C1C;font-weight:700;margin-right:7px;}
+.check-ul li{font-size:14.5px;}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- FIXED STICKY NAV -->
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">NYC Rainy-Day Guide</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#decision">Quick Decision</a>
+    <a href="#by-location">By Location</a>
+    <a href="#top-attractions">Best Attractions</a>
+    <a href="#non-museum">Non-Museum Options</a>
+    <a href="#free-routes">Free Routes</a>
+    <a href="#itineraries">Full Itineraries</a>
+    <a href="#comparison">Comparison Tables</a>
+    <a href="#final-chart">Final Chart</a>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#decision">Quick Decision</a>
+  <a href="#light-rain">Light Rain</a>
+  <a href="#moderate-rain">Moderate Rain</a>
+  <a href="#heavy-rain">Heavy Rain</a>
+  <a href="#by-location">By Location</a>
+  <a href="#top-attractions">Best Attractions</a>
+  <a href="#non-museum">Non-Museum</a>
+  <a href="#free-routes">Free Routes</a>
+  <a href="#traveler-types">By Traveler Type</a>
+  <a href="#itineraries">Full Itineraries</a>
+  <a href="#comparison">Comparison Tables</a>
+  <a href="#final-chart">Final Chart</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Travel Planning</span>
+      <h1>Best Rainy-Day Attractions in NYC: What to Do When the Weather Ruins Your Plans</h1>
+      <div class="article-meta">
+        <span>Complete guide with backup plans by neighborhood, detailed attraction reviews, free indoor routes, and full itineraries for every traveler type</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="rainy-day-activities.png" alt="Best rainy-day activities in NYC — what to do when it rains in New York City">
+
+    <div class="article-body">
+
+      <p>Rain is one of the easiest ways to ruin a carefully planned New York City itinerary. You spent months planning the Brooklyn Bridge walk, Central Park stroll, Statue of Liberty views, rooftop photos, and neighborhood walks through SoHo and Greenwich Village. Then you wake up and see: 80% chance of rain.</p>
+      <p>Your first instinct is usually: "Forget it. We need indoor activities." That is where most visitors make their first mistake. A rainy day in NYC is not automatically a lost day. In fact, some of the most memorable New York experiences happen when the weather forces a change of plans. The crowds disappear from famous streets. Museums become more appealing. Neighborhoods reveal hidden cafes, bookstores, markets, and indoor spaces you would have walked past otherwise.</p>
+      <p>The key is knowing when to continue your original plans, when to wait out the weather, and when to completely change direction.</p>
+      <p>This guide answers the question every traveler actually has: <strong>"It just started raining in NYC. What should I do right now?"</strong></p>
+      <p>You will find: the best rainy-day attractions based on how hard it is raining, what to do based on where you already are, indoor places that are actually worth visiting, attractions that become overcrowded when rain hits, hidden alternatives most tourists miss, and complete rainy-day itineraries for families, couples, solo travelers, and budget visitors.</p>
+
+      <hr class="divider-rule">
+
+      <!-- QUICK DECISION GUIDE -->
+      <h2 id="decision">The Quick Decision Guide: What Should You Do When It Starts Raining in NYC?</h2>
+      <p>Before choosing an attraction, look at the rain itself. Not every rainy day requires abandoning your itinerary. A light drizzle and a thunderstorm require completely different strategies.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:350px;">
+          <tr><th>Weather Situation</th><th>What You Should Do</th><th>Best Options</th></tr>
+          <tr><td><strong>Light drizzle</strong></td><td>Continue outdoor sightseeing</td><td>Central Park, Brooklyn Bridge, High Line, DUMBO</td></tr>
+          <tr><td><strong>Steady rain</strong></td><td>Switch to nearby indoor clusters</td><td>Grand Central, NYPL, Chelsea Market, Oculus</td></tr>
+          <tr><td><strong>Heavy rain</strong></td><td>Choose a full indoor experience</td><td>Museums, Broadway, immersive attractions</td></tr>
+          <tr><td><strong>Thunderstorms</strong></td><td>Avoid exposed areas completely</td><td>Museums, shows, food halls</td></tr>
+          <tr><td><strong>Rain expected all day</strong></td><td>Rebuild your itinerary</td><td>Museum + food + evening entertainment</td></tr>
+        </table>
+      </div>
+
+      <!-- LIGHT RAIN -->
+      <h2 id="light-rain">Light Rain: Do Not Cancel Your Outdoor Plans Too Quickly</h2>
+      <p>This is the mistake many first-time visitors make. A little rain does not automatically make NYC worse. Sometimes it makes it better. Why? Because the biggest problem with famous NYC attractions is often not the attraction itself. It is the crowds.</p>
+      <p>A rainy morning at Central Park, Brooklyn Bridge, DUMBO, or the High Line can feel completely different from the same places on a sunny Saturday afternoon. You may get empty viewpoints, better photos, quieter streets, cooler walking temperatures, and a more local atmosphere. The key is having the right gear: waterproof shoes, a compact umbrella, and a lightweight rain jacket. Avoid long outdoor routes, exposed waterfront walks during strong winds, and anything requiring standing in line outside.</p>
+
+      <h3>Outdoor Attractions That Can Actually Be Better in Light Rain</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:320px;">
+          <tr><th>Attraction</th><th>Rain Recommendation</th><th>Why</th></tr>
+          <tr><td>Central Park</td><td>Go</td><td>Fewer crowds, atmospheric scenery</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>Go if drizzle</td><td>Dramatic photos, fewer tourists</td></tr>
+          <tr><td>DUMBO</td><td>Go if manageable</td><td>Empty streets and better photography</td></tr>
+          <tr><td>High Line</td><td>Go if light rain</td><td>Much quieter than usual</td></tr>
+          <tr><td>Brooklyn Heights Promenade</td><td>Maybe</td><td>Great views if visibility remains good</td></tr>
+        </table>
+      </div>
+
+      <!-- MODERATE RAIN -->
+      <h2 id="moderate-rain">Moderate Rain: Stop Moving Across the City</h2>
+      <p>This is where many travelers lose hours. They try to continue their original itinerary &mdash; Central Park, then SoHo, then Brooklyn, then Times Square &mdash; while carrying wet jackets, umbrellas, and uncomfortable shoes. A better strategy: <strong>stay in one neighborhood and create a mini rainy-day itinerary.</strong> New York has several areas where you can spend half a day mostly indoors.</p>
+
+      <!-- HEAVY RAIN -->
+      <h2 id="heavy-rain">Heavy Rain: Switch Into Rain Rescue Mode</h2>
+      <p>When the weather becomes unpleasant, prioritize places that can absorb several hours. The best rainy-day attractions are not necessarily the most famous. They are places where you can comfortably spend time without constantly checking the weather.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>Type</th><th>Best Choices</th></tr>
+          <tr><td>Families</td><td>American Museum of Natural History, SPYSCAPE, Color Factory</td></tr>
+          <tr><td>First-time visitors</td><td>The Met, 9/11 Museum, Broadway</td></tr>
+          <tr><td>Couples</td><td>Morgan Library, Hall des Lumières, Broadway</td></tr>
+          <tr><td>Budget travelers</td><td>NYPL, Grand Central, Oculus, bookstores</td></tr>
+          <tr><td>Food lovers</td><td>Chelsea Market, Pier 57, Industry City</td></tr>
+          <tr><td>Solo travelers</td><td>Smaller museums, bookstores, galleries</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BY LOCATION -->
+      <h2 id="by-location">Where Are You Right Now? NYC Rain Rescue Plans by Neighborhood</h2>
+      <p>The biggest difference between a good rainy day and a frustrating one is often location. The best plan is usually not across the city. It is within 10&ndash;15 minutes of where you already are.</p>
+
+      <!-- TIMES SQUARE -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are in Times Square<span class="cb-badge">Midtown</span></div>
+        <p>Times Square is actually one of the easiest places to recover from bad weather. Do not immediately run to another neighborhood. Stay nearby.</p>
+        <p><strong>1. Broadway Show</strong> &mdash; A rainy evening is arguably the perfect Broadway night. Instead of thinking "The weather ruined dinner and sightseeing," you get "Tonight we saw a Broadway show in NYC." Best for: couples, first-time visitors, families with older children.</p>
+        <p><strong>2. Museum of Broadway</strong> &mdash; A good choice if you want something uniquely New York. Indoor, interactive, centrally located, connected to NYC culture. Best for: theater fans, visitors who want more than shopping.</p>
+        <p><strong>3. SPYSCAPE</strong> &mdash; One of the better options when someone in your group says "I don't want to spend another rainy day in a museum." Good for teenagers, families, and couples.</p>
+        <p><strong>4. Rockefeller Center</strong> &mdash; Rainy-day advantages: indoor shopping, restaurants, nearby attractions, easy subway access.</p>
+        <div class="table-wrap" style="margin-top:10px;">
+          <table class="data-table" style="min-width:200px;">
+            <tr><th>Time</th><th>Activity</th></tr>
+            <tr><td>First 30 minutes</td><td>Coffee / shelter / weather update</td></tr>
+            <tr><td>Next 1&ndash;2 hours</td><td>Museum of Broadway or SPYSCAPE</td></tr>
+            <tr><td>Afternoon</td><td>Rockefeller Center</td></tr>
+            <tr><td>Evening</td><td>Broadway show or dinner</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- CENTRAL PARK -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are Near Central Park<span class="cb-badge">Upper West/East Side</span></div>
+        <p>Central Park requires the most judgment. The right answer depends completely on the rain.</p>
+        <p><strong>Light Rain:</strong> Continue. Central Park is one of the places that becomes more enjoyable when crowds disappear. Best route: Central Park Mall &rarr; Bethesda Terrace &rarr; Bow Bridge &rarr; exit toward museums.</p>
+        <p><strong>Moderate Rain:</strong> Combine outdoors with indoor attractions. Best nearby choices: American Museum of Natural History (best for families, first-time visitors, science lovers), The Met (best for art lovers, adults, travelers who want several hours indoors), Guggenheim (best for architecture lovers, shorter museum visits).</p>
+        <p><strong>Heavy Rain:</strong> Skip the park. Move indoors immediately.</p>
+      </div>
+
+      <!-- FIFTH AVENUE -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are Near Fifth Avenue<span class="cb-badge">Midtown</span></div>
+        <p>This is one of the easiest rainy-day areas. A perfect free route:</p>
+        <div class="route-flow">
+          <div class="rf-stop">New York Public Library</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Bryant Park</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Grand Central Terminal</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Kinokuniya</div>
+        </div>
+        <p>Almost everything is free, indoors, and close together.</p>
+        <p>Planning a full Midtown walk? Read the <a href="midtown-manhattan-walking-itinerary.html">Midtown Manhattan Walking Itinerary</a> for the complete route.</p>
+      </div>
+
+      <!-- CHELSEA -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are in Chelsea<span class="cb-badge">West Side</span></div>
+        <p>Chelsea might be the best rainy-day neighborhood in Manhattan. A strong backup route:</p>
+        <div class="route-flow">
+          <div class="rf-stop">Chelsea Market</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Pier 57</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Hudson Yards</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">High Line (if weather improves)</div>
+        </div>
+        <p>You have food, shopping, indoor spaces, viewpoints, and entertainment without needing long walks outside. Chelsea gives you one of the best rainy-day clusters in the city &mdash; each stop connects naturally to the next, and all of them work even in heavy rain.</p>
+      </div>
+
+      <!-- LOWER MANHATTAN -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are in Lower Manhattan / Wall Street<span class="cb-badge">Financial District</span></div>
+        <p>Do not leave downtown. Lower Manhattan has one of the strongest rainy-day networks. Recommended route:</p>
+        <div class="route-flow">
+          <div class="rf-stop">Oculus</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">Brookfield Place</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">9/11 Museum</div>
+          <div class="rf-arrow">&#8595;</div>
+          <div class="rf-stop">One World Trade Center area</div>
+        </div>
+        <p>For the complete Lower Manhattan experience, read the <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary</a>.</p>
+      </div>
+
+      <!-- DUMBO -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are in DUMBO<span class="cb-badge">Brooklyn</span></div>
+        <p>This is where weather decisions matter most. The neighborhood is famous for bridge views, waterfront photos, and outdoor walking. Light rain? Continue. Heavy rain? Switch.</p>
+        <p><strong>Better Rain Options:</strong> Time Out Market (food, seating, views), Empire Stores (indoor break, waterfront atmosphere).</p>
+      </div>
+
+      <!-- WILLIAMSBURG -->
+      <div class="cluster-box">
+        <div class="cb-title">If You Are in Williamsburg<span class="cb-badge">Brooklyn</span></div>
+        <p>Williamsburg is surprisingly good in bad weather. The neighborhood works because the experience is not dependent on one attraction. Good rainy-day activities: cafes, restaurants, vintage stores, breweries, indoor entertainment.</p>
+      </div>
+
+      <!-- QUICK NEIGHBORHOOD TABLE -->
+      <h3>Quick Neighborhood Rain Rescue Table</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;">
+          <tr><th>Where You Are</th><th>Best Immediate Move</th></tr>
+          <tr><td>Times Square</td><td>Broadway, Museum of Broadway, SPYSCAPE</td></tr>
+          <tr><td>Central Park</td><td>AMNH, Met, Guggenheim</td></tr>
+          <tr><td>Fifth Avenue</td><td>NYPL, Bryant Park, Grand Central</td></tr>
+          <tr><td>Chelsea</td><td>Chelsea Market, Pier 57, Hudson Yards</td></tr>
+          <tr><td>Wall Street</td><td>Oculus, Brookfield Place, 9/11 Museum</td></tr>
+          <tr><td>DUMBO</td><td>Time Out Market, Empire Stores</td></tr>
+          <tr><td>Williamsburg</td><td>Cafes, food, shopping</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PART 2: BEST ATTRACTIONS -->
+      <h2 id="top-attractions">Best Rainy-Day Attractions in NYC: Detailed Reviews</h2>
+      <p>Not every indoor attraction deserves a place in your rainy-day itinerary. A common mistake is choosing a place simply because it is indoors. The best rainy-day attractions have three things: they are enjoyable even if the weather improves; they can comfortably fill the amount of time you need; they are worth changing your plans for. A good rainy-day attraction should feel like a discovery, not a punishment for bad weather.</p>
+
+      <!-- 1. AMNH -->
+      <div class="attr-review" id="amnh">
+        <div class="ar-head">
+          <div class="ar-num">01</div>
+          <div class="ar-titles">
+            <span class="ar-name">American Museum of Natural History</span>
+            <span class="ar-meta">Upper West Side &bull; Families, first-time visitors, science lovers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid admission (ticket options vary)</td></tr>
+            <tr><td>Visit Duration</td><td>3&ndash;5 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Food Availability</td><td>Yes</td></tr>
+            <tr><td>Crowd Level on Rainy Days</td><td>High</td></tr>
+            <tr><td>Best Time to Visit</td><td>Morning or late afternoon</td></tr>
+          </table>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/3a/6b/6e/hall-of-saurischian-dinosaurs.jpg?w=1400&h=-1&s=1" alt="Hall of Saurischian Dinosaurs at the American Museum of Natural History, New York City">
+            <div class="cap">The Hall of Saurischian Dinosaurs at AMNH &mdash; one of the museum's most visited galleries and a highlight for visitors of all ages. Plan to spend at least half a day to see a fraction of what the museum offers.</div>
+          </div>
+
+          <h4>Why It Is One of NYC's Best Rainy-Day Choices</h4>
+          <p>The American Museum of Natural History is the classic rainy-day backup plan for a reason. Unlike some museums where visitors lose interest after an hour, this place can genuinely absorb an entire afternoon. It works especially well when rain destroys plans involving Central Park, Upper West Side walking, or family sightseeing. The biggest advantage: everyone can find something interesting. Children get dinosaurs, animals, and space exhibits. Adults get cultural history, science, and architecture.</p>
+          <p>For a rainy day, size matters. A small museum may be beautiful, but it will not replace a cancelled half-day itinerary. The Natural History Museum can. You can comfortably spend 2 hours if you are rushing, or 4+ hours if you explore properly.</p>
+
+          <h4>Potential Drawbacks</h4>
+          <p>The biggest downside: everyone else has the same idea. On rainy weekends, the museum can become extremely crowded. Do not arrive during the middle of a rainy afternoon. That is when everyone who cancelled outdoor plans arrives. Better options: arrive near opening, or visit later after peak crowds leave.</p>
+
+          <h4>Nearby Backup Attractions</h4>
+          <p>Central Park (if rain improves), New-York Historical Society, Lincoln Center area.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> The safest rainy-day choice for families and first-time visitors, but not the place to choose if you hate crowds.</div>
+        </div>
+      </div>
+
+      <!-- 2. THE MET -->
+      <div class="attr-review" id="the-met">
+        <div class="ar-head alt-head">
+          <div class="ar-num">02</div>
+          <div class="ar-titles">
+            <span class="ar-name">The Metropolitan Museum of Art</span>
+            <span class="ar-meta">Fifth Avenue / Central Park &bull; Art lovers, couples, full indoor day</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid admission</td></tr>
+            <tr><td>Visit Duration</td><td>3&ndash;6 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Moderate&ndash;Good</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Food Availability</td><td>Yes</td></tr>
+            <tr><td>Crowd Level on Rainy Days</td><td>Very High</td></tr>
+          </table>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/f2/a5/07/a-view-of-museum-goers.jpg?w=1400&h=-1&s=1" alt="The Metropolitan Museum of Art interior — museum-goers exploring the galleries on a rainy NYC day">
+            <div class="cap">Museum-goers at The Met &mdash; on a rainy day, the museum's enormous galleries feel designed for exactly this kind of unhurried exploration.</div>
+          </div>
+
+          <h4>Why Visit on a Rainy Day?</h4>
+          <p>The Met is almost designed for weather emergencies. A sunny day in NYC creates pressure: "I should be outside exploring." Rain removes that pressure. This is when the Met makes sense. Instead of spending hours walking wet streets, you can explore ancient Egypt, European paintings, armor galleries, fashion exhibitions, and rooftop views (weather permitting).</p>
+
+          <h4>Better Strategy</h4>
+          <p>Do not try to see everything. Choose a theme. <strong>First Visit:</strong> Egyptian Wing &rarr; European Paintings &rarr; American Wing. <strong>Couple's Afternoon:</strong> Impressionists &rarr; Cafe break &rarr; Special exhibitions.</p>
+
+          <h4>Potential Drawbacks</h4>
+          <p>The size is both the advantage and weakness. Not ideal for young children with limited patience or travelers who only have one rainy hour. If rain begins unexpectedly near Central Park, the Met is excellent. If you are already tired after several days of sightseeing, choose a smaller museum instead.</p>
+
+          <h4>Nearby Backup Attractions</h4>
+          <p>Guggenheim, Central Park (if weather improves), Museum Mile.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the best rainy-day museums in the world, but only if you have enough energy for it.</div>
+        </div>
+      </div>
+
+      <!-- 3. MORGAN LIBRARY -->
+      <div class="attr-review" id="morgan-library">
+        <div class="ar-head">
+          <div class="ar-num">03</div>
+          <div class="ar-titles">
+            <span class="ar-name">Morgan Library &amp; Museum</span>
+            <span class="ar-meta">Midtown East &bull; Couples, solo travelers, architecture lovers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid admission</td></tr>
+            <tr><td>Visit Duration</td><td>1&ndash;2 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Moderate</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Food Availability</td><td>Cafe</td></tr>
+            <tr><td>Crowd Level</td><td>Low&ndash;Medium</td></tr>
+          </table>
+
+          <h4>Why It Is One of the Best Rainy-Day Recommendations</h4>
+          <p>The Morgan Library solves a very specific problem: "I want a beautiful NYC indoor experience, but I do not want to spend half the day in a giant museum." This is where many travelers discover they actually prefer smaller attractions. The Morgan feels elegant, quiet, intimate, and uniquely New York. The highlight is not only the exhibitions &mdash; it is the building itself. The historic rooms and library interiors create the kind of atmosphere that feels perfect on a rainy afternoon. Especially good for couples, solo travelers, photographers, and book lovers.</p>
+
+          <h4>Local Tip</h4>
+          <p>Pair it with: Morgan Library &rarr; Grand Central &rarr; Bryant Park &rarr; NYPL. This creates one of Midtown's best rainy-day walking routes.</p>
+
+          <h4>Nearby Backup Attractions</h4>
+          <p>Grand Central Terminal, New York Public Library, Chrysler Building, Bryant Park.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the smartest alternatives to overcrowded major museums.</div>
+        </div>
+      </div>
+
+      <!-- 4. NYPL -->
+      <div class="attr-review" id="nypl">
+        <div class="ar-head alt-head">
+          <div class="ar-num">04</div>
+          <div class="ar-titles">
+            <span class="ar-name">New York Public Library (Stephen A. Schwarzman Building)</span>
+            <span class="ar-meta">Midtown &bull; Budget travelers, architecture lovers, short rain breaks &bull; FREE</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Visit Duration</td><td>30 minutes&ndash;1.5 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>No</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Moderate</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Food</td><td>Nearby</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <h4>Why It Is Essential in a Rainy-Day Guide</h4>
+          <p>The New York Public Library is one of the best examples of a place tourists underestimate. Many visitors walk past it while rushing between attractions. That is a mistake. On a rainy day, it becomes exactly what travelers need: warm, beautiful, free, central, and easy to visit without planning. Perfect when rain starts suddenly, you have one free hour, you are traveling on a budget, or you need a break between attractions.</p>
+
+          <h4>Local Tip</h4>
+          <p>Combine it with Bryant Park, Grand Central, and Kinokuniya. This is one of the best free rainy-day routes in Manhattan.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> Possibly the best free rainy-day stop in NYC.</div>
+        </div>
+      </div>
+
+      <!-- 5. GRAND CENTRAL -->
+      <div class="attr-review" id="grand-central">
+        <div class="ar-head">
+          <div class="ar-num">05</div>
+          <div class="ar-titles">
+            <span class="ar-name">Grand Central Terminal</span>
+            <span class="ar-meta">Midtown East &bull; Everyone, especially first-time visitors &bull; FREE</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Visit Duration</td><td>30&ndash;60 minutes</td></tr>
+            <tr><td>Reservation Needed</td><td>No</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Food</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium&ndash;High</td></tr>
+          </table>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/4d/e7/c8/grand-central-terminal.jpg?w=2000&h=-1&s=1" alt="Grand Central Terminal main concourse in New York City — one of the best free indoor attractions on a rainy day">
+            <div class="cap">The main concourse at Grand Central Terminal &mdash; one of New York's great interior spaces and the perfect starting point for a free Midtown rainy-day route.</div>
+          </div>
+
+          <h4>Why It Works So Well</h4>
+          <p>Grand Central is not just a train station. On a rainy day, it becomes architecture, history, food stop, transportation hub, and shelter. You can easily spend an hour exploring the Main Concourse, Whispering Gallery, dining areas, and shops. Best combination: Grand Central &rarr; Chrysler Building exterior &rarr; NYPL &rarr; Bryant Park. It works best as the anchor of a route, not the entire route.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> The perfect "my plans just got cancelled" attraction because it requires zero preparation.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PART 3: MORE ATTRACTIONS -->
+      <h2>More Rain-Proof NYC Attractions (Beyond the Obvious Museums)</h2>
+      <p>The best rainy-day NYC experiences are not always the biggest attractions. In fact, some of the smartest choices are places where you can slow down, eat something, explore at your own pace, and avoid the crowds that rush toward the same famous museums when the weather turns bad.</p>
+
+      <!-- 6. CHELSEA MARKET -->
+      <div class="attr-review" id="chelsea-market">
+        <div class="ar-head alt-head">
+          <div class="ar-num">06</div>
+          <div class="ar-titles">
+            <span class="ar-name">Chelsea Market</span>
+            <span class="ar-meta">Chelsea / Meatpacking District &bull; Food lovers, couples, casual explorers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free entry (pay for food/shopping)</td></tr>
+            <tr><td>Visit Duration</td><td>1&ndash;2 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>No</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Food Availability</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level on Rainy Days</td><td>High</td></tr>
+          </table>
+
+          <div class="section-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/da/f1/9f/photo0jpg.jpg?w=1400&h=-1&s=1" alt="Chelsea Market interior corridor with vendors and food stalls — a top rainy-day destination in New York City">
+            <div class="cap">The interior corridors of Chelsea Market &mdash; a former Nabisco biscuit factory turned into one of New York's best indoor food and shopping destinations. It was built for exactly the kind of unhurried wandering that rainy afternoons encourage.</div>
+          </div>
+
+          <h4>Why Visit on a Rainy Day?</h4>
+          <p>Chelsea Market is one of the easiest rainy-day recommendations because it does not require you to "commit" to an attraction. You can walk around, grab lunch, try different foods, browse shops, and wait out a storm. It works especially well because it combines three things travelers need when the weather changes: shelter, food, and something interesting to explore.</p>
+          <p>Chelsea Market does not feel like a shopping mall. The appeal is the atmosphere: historic industrial building, narrow corridors, local vendors, neighborhood character.</p>
+
+          <h4>Potential Drawbacks</h4>
+          <p>When rain starts, Chelsea Market becomes one of the first places tourists run toward. Expect crowded aisles, limited seating, and long lines at popular vendors. Best times: morning or late afternoon. Worst: rainy Saturday lunch. If it is packed, walk toward Hudson Yards or Pier 57.</p>
+
+          <h4>Nearby Backup Attractions</h4>
+          <p>High Line (if rain improves), Little Island, Hudson Yards, Whitney Museum.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of NYC's best rainy-day food stops, but not a hidden secret anymore.</div>
+        </div>
+      </div>
+
+      <!-- 7. PIER 57 -->
+      <div class="attr-review" id="pier-57">
+        <div class="ar-head">
+          <div class="ar-num">07</div>
+          <div class="ar-titles">
+            <span class="ar-name">Pier 57 Rooftop Park &amp; Market</span>
+            <span class="ar-meta">Chelsea &bull; Travelers near Chelsea, families needing space</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 4/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Visit Duration</td><td>30 minutes&ndash;1.5 hours</td></tr>
+            <tr><td>Indoor Comfort</td><td>Good</td></tr>
+            <tr><td>Family Friendly</td><td>Good</td></tr>
+            <tr><td>Food</td><td>Yes</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <h4>Why It Works</h4>
+          <p>Pier 57 is useful because it combines indoor market areas, food, waterfront location, and rooftop views. On a normal day, the rooftop is the attraction. On a rainy day, the indoor spaces become the reason to visit. A perfect addition after Chelsea Market or the High Line if weather improves. The rooftop loses appeal during heavy rain, strong winds, or poor visibility.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> A great Chelsea backup, but better as part of a route than a standalone rainy-day destination.</div>
+        </div>
+      </div>
+
+      <!-- 8. OCULUS -->
+      <div class="attr-review" id="oculus">
+        <div class="ar-head alt-head">
+          <div class="ar-num">08</div>
+          <div class="ar-titles">
+            <span class="ar-name">Oculus (World Trade Center Transportation Hub)</span>
+            <span class="ar-meta">Financial District &bull; Everyone near Lower Manhattan &bull; FREE</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free</td></tr>
+            <tr><td>Visit Duration</td><td>20 minutes&ndash;1 hour</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <h4>Why It Is One of NYC's Best Rain Shelters</h4>
+          <p>Most visitors treat the Oculus as a quick photo stop. That misses the point. During bad weather, it becomes one of the most useful places in Lower Manhattan. You can stay dry, explore the architecture, eat nearby, connect to transportation, and continue to nearby attractions. Best route: Oculus &rarr; Brookfield Place &rarr; 9/11 Museum &rarr; One World Trade Center area. It works best as part of a larger route.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> The best free emergency rain stop in Lower Manhattan.</div>
+        </div>
+      </div>
+
+      <!-- 9. BROOKFIELD PLACE -->
+      <div class="attr-review" id="brookfield-place">
+        <div class="ar-head">
+          <div class="ar-num">09</div>
+          <div class="ar-titles">
+            <span class="ar-name">Brookfield Place</span>
+            <span class="ar-meta">Battery Park / Financial District &bull; Comfort, food, waiting out bad weather &bull; FREE ENTRY</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free entry</td></tr>
+            <tr><td>Visit Duration</td><td>30 minutes&ndash;2 hours</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Food</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <h4>Why It Is Better Than Most Shopping Centers</h4>
+          <p>Brookfield Place does not feel like a generic mall. The highlight is the Winter Garden atrium, which provides huge indoor space, seating, waterfront views, and restaurants. Excellent for travelers waiting for museum tickets, families needing a break, and couples wanting a relaxed afternoon.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the most comfortable places in NYC when the weather turns unpleasant.</div>
+        </div>
+      </div>
+
+      <!-- 10. 9/11 MUSEUM -->
+      <div class="attr-review" id="911-museum">
+        <div class="ar-head alt-head">
+          <div class="ar-num">10</div>
+          <div class="ar-titles">
+            <span class="ar-name">9/11 Memorial Museum</span>
+            <span class="ar-meta">Financial District &bull; History travelers, first-time visitors, adults, older teenagers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid</td></tr>
+            <tr><td>Visit Duration</td><td>2&ndash;3 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Depends on age</td></tr>
+            <tr><td>Accessibility</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium&ndash;High</td></tr>
+          </table>
+
+          <h4>Why Rain Can Actually Suit This Attraction</h4>
+          <p>The 9/11 Museum is not a casual attraction. It is emotional, reflective, and serious. A rainy day often fits the mood because visitors naturally slow down. This is not where you go because you have "nothing else to do." Choose it because you genuinely want to experience it. Best for first-time NYC visitors, history enthusiasts, adults, and mature teenagers. Avoid if traveling with young children who need interactive entertainment.</p>
+
+          <h4>Nearby Backup Attractions</h4>
+          <p>Oculus, Brookfield Place, Wall Street, <a href="one-world-observatory-review.html">One World Observatory</a>.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of NYC's strongest rainy-day attractions, but only if you are prepared for a serious experience.</div>
+        </div>
+      </div>
+
+      <!-- 11. SPYSCAPE -->
+      <div class="attr-review" id="spyscape">
+        <div class="ar-head">
+          <div class="ar-num">11</div>
+          <div class="ar-titles">
+            <span class="ar-name">SPYSCAPE</span>
+            <span class="ar-meta">Midtown &bull; Families, teenagers, couples wanting something interactive</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid</td></tr>
+            <tr><td>Visit Duration</td><td>1.5&ndash;2 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <h4>Why It Deserves a Place in This Guide</h4>
+          <p>A huge problem with rainy-day recommendations is that they assume everyone loves museums. Many travelers do not. SPYSCAPE fills the gap by giving visitors interactive challenges, puzzles, technology experiences, and participation. Especially good for teenagers, families, and couples. The experience is shorter than a major museum and the price can feel high if you only spend an hour.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the best answers to "What can we do in NYC when we don't want another museum?"</div>
+        </div>
+      </div>
+
+      <!-- 12. COLOR FACTORY -->
+      <div class="attr-review" id="color-factory">
+        <div class="ar-head alt-head">
+          <div class="ar-num">12</div>
+          <div class="ar-titles">
+            <span class="ar-name">Color Factory</span>
+            <span class="ar-meta">SoHo &bull; Families, couples, social travelers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid</td></tr>
+            <tr><td>Visit Duration</td><td>1&ndash;1.5 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Yes</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <p>Color Factory works because it is not passive. You are not walking around reading signs. You are participating. That makes it especially valuable when kids have energy, adults want something fun, and weather eliminates outdoor activities. Some adults without children may find it less appealing. The experience is also relatively short.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> A strong rainy-day choice for families and playful travelers, but not for everyone.</div>
+        </div>
+      </div>
+
+      <!-- 13. MUSEUM OF ICE CREAM -->
+      <div class="attr-review" id="museum-ice-cream">
+        <div class="ar-head">
+          <div class="ar-num">13</div>
+          <div class="ar-titles">
+            <span class="ar-name">Museum of Ice Cream</span>
+            <span class="ar-meta">Best for families with younger children</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 4/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <p>The appeal is simple: it feels like an activity, not a museum. Good for children, families, and colorful photos. The experience can feel expensive for the amount of time spent there.</p>
+          <div class="verdict-strip"><strong>Verdict:</strong> Fun backup option, especially with children, but not the first place to send most adults.</div>
+        </div>
+      </div>
+
+      <!-- 14. STRAND BOOKSTORE -->
+      <div class="attr-review" id="strand-bookstore">
+        <div class="ar-head alt-head">
+          <div class="ar-num">14</div>
+          <div class="ar-titles">
+            <span class="ar-name">Strand Bookstore</span>
+            <span class="ar-meta">Union Square &bull; Solo travelers, couples, book lovers &bull; FREE ENTRY</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free entry</td></tr>
+            <tr><td>Visit Duration</td><td>30 minutes&ndash;2 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>No</td></tr>
+            <tr><td>Family Friendly</td><td>Good</td></tr>
+            <tr><td>Accessibility</td><td>Good</td></tr>
+            <tr><td>Food</td><td>Nearby</td></tr>
+          </table>
+
+          <p>One of the most underrated rainy-day activities in NYC: simply slowing down. A great rainy afternoon can be browsing books, finding souvenirs, grabbing coffee, and watching the city outside.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> The type of place that turns an accidental rainy day into a memorable NYC moment.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PART 4: NON-MUSEUM OPTIONS -->
+      <h2 id="non-museum">Best Rainy-Day NYC Experiences If You Hate Museums</h2>
+      <p>A rainy day in NYC does not automatically mean spending six hours walking through galleries. Many travelers do not want another museum. Maybe you already visited one. Maybe you are traveling with teenagers. Maybe your kids are bored. Maybe you simply want to experience something more interactive. NYC has some of the best non-museum rainy-day options in the world.</p>
+
+      <!-- 15. KINOKUNIYA -->
+      <div class="attr-review" id="kinokuniya">
+        <div class="ar-head">
+          <div class="ar-num">15</div>
+          <div class="ar-titles">
+            <span class="ar-name">Kinokuniya Bookstore</span>
+            <span class="ar-meta">Midtown &bull; Solo travelers, families, anime/manga fans, unique shopping &bull; FREE ENTRY</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free entry</td></tr>
+            <tr><td>Visit Duration</td><td>30 minutes&ndash;2 hours</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Food</td><td>Nearby</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <p>Kinokuniya is exactly the type of place travelers discover when the weather changes their plans. It is not a traditional tourist attraction. That is why it works. You can browse Japanese books, manga, stationery, gifts, and unique souvenirs. For families, it is often more engaging than another museum. Best pairing: Kinokuniya &rarr; NYPL &rarr; Bryant Park &rarr; Grand Central. Creates one of the easiest free Midtown rainy-day routes.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of the best free indoor discoveries in Midtown.</div>
+        </div>
+      </div>
+
+      <!-- 16. INDUSTRY CITY -->
+      <div class="attr-review" id="industry-city">
+        <div class="ar-head alt-head">
+          <div class="ar-num">16</div>
+          <div class="ar-titles">
+            <span class="ar-name">Industry City</span>
+            <span class="ar-meta">Sunset Park, Brooklyn &bull; Food lovers, families, travelers wanting something different</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 4.5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Free entry</td></tr>
+            <tr><td>Visit Duration</td><td>2&ndash;4 hours</td></tr>
+            <tr><td>Indoor Comfort</td><td>Very Good</td></tr>
+            <tr><td>Family Friendly</td><td>Excellent</td></tr>
+            <tr><td>Food</td><td>Excellent</td></tr>
+            <tr><td>Crowd Level</td><td>Low&ndash;Medium</td></tr>
+          </table>
+
+          <p>Industry City is one of the best examples of a place that does not appear on many first-time visitor itineraries. It works because it combines food halls, shops, studios, exhibitions, and indoor spaces. It feels less like sightseeing and more like spending an afternoon in a neighborhood. Especially good for repeat NYC visitors, families, and travelers who have already seen the major attractions. The location requires effort &mdash; if you are staying in Midtown for a short first trip, it may not be worth the transportation time.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> One of NYC's best "locals do this" rainy-day alternatives.</div>
+        </div>
+      </div>
+
+      <!-- 17. BROADWAY -->
+      <div class="attr-review" id="broadway">
+        <div class="ar-head">
+          <div class="ar-num">17</div>
+          <div class="ar-titles">
+            <span class="ar-name">Broadway Shows</span>
+            <span class="ar-meta">Theater District &bull; Couples, first-time visitors, rainy evenings</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>$$$</td></tr>
+            <tr><td>Visit Duration</td><td>2.5&ndash;3 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Yes</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Depends on show</td></tr>
+            <tr><td>Food Nearby</td><td>Excellent</td></tr>
+          </table>
+
+          <h4>Why Rain Makes Broadway Better</h4>
+          <p>A Broadway show is one of the few NYC activities where bad weather can actually improve the experience. On a beautiful evening, you might feel "We should be walking around." On a rainy evening, Broadway becomes the perfect plan. You get a guaranteed indoor activity, classic NYC entertainment, and a memorable night. Do not wait until the rain starts &mdash; popular shows sell out. If Broadway is already part of your trip, keep it as your rainy-evening anchor.</p>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">Book Broadway Tickets in Advance</div>
+            <p>The best seats sell out long before a rainy day changes your plans. <a href="https://www.viator.com/New-York-City-tours/Theater-Shows-and-Musicals/d687-g22-c55?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Compare Broadway show options on Viator</a> with flexible cancellation. Keep Broadway as a confirmed anchor for at least one evening of your trip, regardless of weather.</p>
+          </div>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> The best rainy-night upgrade in NYC.</div>
+        </div>
+      </div>
+
+      <!-- 18. HALL DES LUMIERES -->
+      <div class="attr-review" id="hall-des-lumieres">
+        <div class="ar-head alt-head">
+          <div class="ar-num">18</div>
+          <div class="ar-titles">
+            <span class="ar-name">Hall des Lumi&egrave;res</span>
+            <span class="ar-meta">Financial District &bull; Couples, art lovers, immersive experience seekers</span>
+            <div class="ar-score"><span class="ar-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:13px;color:rgba(255,255,255,.8);">Rainy-Day Rating: 5/5</span></div>
+          </div>
+        </div>
+        <div class="ar-body">
+          <table class="snap-table">
+            <tr><td>Cost</td><td>Paid</td></tr>
+            <tr><td>Visit Duration</td><td>1&ndash;2 hours</td></tr>
+            <tr><td>Reservation Needed</td><td>Recommended</td></tr>
+            <tr><td>Indoor Comfort</td><td>Excellent</td></tr>
+            <tr><td>Family Friendly</td><td>Good</td></tr>
+            <tr><td>Crowd Level</td><td>Medium</td></tr>
+          </table>
+
+          <p>Immersive digital exhibitions solve a common rainy-day problem: you want something visually impressive without spending hours reading museum descriptions. Instead: moving artwork, music, atmosphere, and large-scale projections. Great for couples, photographers, and travelers who want something unique. Not ideal if you prefer traditional museums.</p>
+
+          <div class="verdict-strip"><strong>Verdict:</strong> A strong choice when you want culture without a traditional museum experience.</div>
+        </div>
+      </div>
+
+      <!-- 19. FOOD HALLS -->
+      <h3 id="food-halls">19. Indoor Food Halls: The Underrated Rainy-Day Strategy</h3>
+      <p>Sometimes the best rainy-day activity is not an attraction. It is eating. NYC food halls are ideal because they allow everyone in a group to do something different. One person wants pizza. Another wants ramen. Another wants dessert. Nobody has to compromise. Food halls also beat restaurants during rain because they allow flexibility, exploring, quick stops, and different budgets.</p>
+
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>Place</th><th>Best For</th></tr>
+          <tr><td>Chelsea Market</td><td>First-time visitors, atmosphere</td></tr>
+          <tr><td>Pier 57</td><td>Chelsea + waterfront route</td></tr>
+          <tr><td>Time Out Market</td><td>DUMBO + views</td></tr>
+          <tr><td>Eataly</td><td>Italian food lovers</td></tr>
+          <tr><td>Tin Building</td><td>Food-focused travelers</td></tr>
+          <tr><td>Industry City</td><td>Longer Brooklyn afternoon</td></tr>
+        </table>
+      </div>
+
+      <!-- 20. SHOPPING -->
+      <h3 id="shopping">20. Indoor Shopping Experiences</h3>
+      <p>Shopping is often ignored in rainy-day guides, but NYC is one of the best cities for it. Good rainy-day shopping areas:</p>
+      <ul>
+        <li><strong>Fifth Avenue</strong> &mdash; Best for luxury shopping, iconic stores, first visitors</li>
+        <li><strong>SoHo</strong> &mdash; Best for fashion, independent stores, browsing</li>
+        <li><strong>Hudson Yards</strong> &mdash; Best for modern indoor shopping, families, convenient access</li>
+      </ul>
+      <p>Good department store options: Macy's Herald Square, Bloomingdale's, Saks Fifth Avenue.</p>
+
+      <hr class="divider-rule">
+
+      <!-- FREE RAINY-DAY ITINERARIES -->
+      <h2 id="free-routes">Free Rainy-Day NYC Itineraries</h2>
+      <p>Not every rainy day needs to cost $40 per person.</p>
+
+      <div class="itin-card">
+        <div class="ic-head"><h3>Route 1: Classic NYC Free Indoor Day</h3><span class="ic-label">Midtown &bull; Estimated Cost: $0 (excluding food)</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">New York Public Library<span class="rf-time">45 minutes</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Bryant Park (only if rain allows)<span class="rf-time">15 minutes</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Grand Central Terminal<span class="rf-time">45 minutes</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Chrysler Building lobby area<span class="rf-time">15 minutes</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Kinokuniya<span class="rf-time">45 minutes</span></div>
+          </div>
+          <p>You get a classic NYC experience without spending money on tickets. Best for couples, solo travelers, and budget visitors.</p>
+        </div>
+      </div>
+
+      <div class="itin-card">
+        <div class="ic-head"><h3>Route 2: Downtown Free Rain Route</h3><span class="ic-label">Financial District &bull; Estimated Cost: $0</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Oculus</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Brookfield Place</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Wall Street interiors</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Federal Hall area</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Seaport (if weather improves)</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Best Free Rainy-Day Places Ranked</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Place</th><th>Why It Works</th></tr>
+          <tr><td>NYPL</td><td>Beautiful and free</td></tr>
+          <tr><td>Grand Central</td><td>Iconic NYC interior</td></tr>
+          <tr><td>Oculus</td><td>Architecture + shelter</td></tr>
+          <tr><td>Brookfield Place</td><td>Seating + food</td></tr>
+          <tr><td>Strand</td><td>Relaxed browsing</td></tr>
+          <tr><td>Kinokuniya</td><td>Unique shopping</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- TRAVELER TYPES -->
+      <h2 id="traveler-types">Best Rainy-Day Choices By Traveler Type</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Families With Young Children</div>
+          <p style="font-size:14px;margin-bottom:8px;"><strong>Best:</strong> American Museum of Natural History, Color Factory, SPYSCAPE, Museum of Ice Cream</p>
+          <p style="font-size:14px;"><strong>Avoid:</strong> Spending the entire day in art museums</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Families With Teenagers</div>
+          <p style="font-size:14px;"><strong>Best:</strong> SPYSCAPE, Broadway, shopping, interactive exhibitions</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Couples</div>
+          <p style="font-size:14px;"><strong>Best:</strong> Morgan Library, Broadway, Hall des Lumières, bookstore + cafe afternoon</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Solo Travelers</div>
+          <p style="font-size:14px;"><strong>Best:</strong> Morgan Library, Strand Bookstore, smaller museums, coffee + neighborhood exploration</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Budget Travelers</div>
+          <p style="font-size:14px;"><strong>Best:</strong> NYPL, Grand Central, Oculus, bookstores, free galleries</p>
+          <p style="font-size:14px;margin-top:6px;">Read: <a href="saving-money-on-nyc-trip.html">How to Save Money on Your NYC Trip</a></p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">If You Only Have 2 Hours of Rain</div>
+          <p style="font-size:14px;">Do not overcomplicate it. Choose something close: Midtown &rarr; NYPL + Grand Central. Chelsea &rarr; Chelsea Market. Downtown &rarr; Oculus + Brookfield Place. Central Park &rarr; Nearest museum. SoHo &rarr; Shopping + cafe.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-local" style="margin-top:14px;">
+        <div class="callout-title">Saving Money with a Pass on Rainy Days</div>
+        <p>If you plan to visit several paid museums, a city pass can significantly reduce the total cost. On a rainy day, having a pass already removes the ticket-buying step and lets you walk straight in. Read the full comparison: <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass: Which Is Actually Worth It?</a></p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PART 5: FULL ITINERARIES -->
+      <h2 id="itineraries">Complete Rainy-Day NYC Itineraries</h2>
+      <p>The biggest mistake travelers make when rain changes their plans is trying to replace every outdoor activity with random indoor attractions. That usually creates a bad day: too much transportation, too much decision-making, too much time checking the weather. A better approach is to build a rainy-day flow. A good rainy-day itinerary should have a main attraction that absorbs time, a food stop, a flexible activity, and a backup option nearby.</p>
+
+      <!-- ITINERARY 1: 4-HOUR RESCUE -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>1. The 4-Hour NYC Rain Rescue Plan</h3><span class="ic-label">For unexpected afternoon rain &bull; First-time visitors</span></div>
+        <div class="ic-body">
+          <p>The goal: save the day without wasting time crossing the city.</p>
+          <div class="card-grid cols-2">
+            <div>
+              <strong style="font-size:14px;color:var(--navy);">Option A: Midtown Rain Rescue</strong>
+              <div class="route-flow" style="margin-top:8px;">
+                <div class="rf-stop">Grand Central Terminal<span class="rf-time">30&ndash;45 min</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">New York Public Library<span class="rf-time">45 min&ndash;1 hr</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Kinokuniya<span class="rf-time">30&ndash;45 min</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Dinner or Broadway<span class="rf-time">Evening</span></div>
+              </div>
+              <p style="font-size:13px;margin-top:6px;">Best for: couples, solo travelers, budget visitors.</p>
+            </div>
+            <div>
+              <strong style="font-size:14px;color:var(--navy);">Option B: Chelsea Rain Rescue</strong>
+              <div class="route-flow" style="margin-top:8px;">
+                <div class="rf-stop">Chelsea Market<span class="rf-time">1&ndash;1.5 hrs</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Pier 57<span class="rf-time">30&ndash;60 min</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Hudson Yards<span class="rf-time">30 min</span></div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Dinner Nearby</div>
+              </div>
+              <p style="font-size:13px;margin-top:6px;">Best for: couples, food lovers, travelers who planned the High Line.</p>
+            </div>
+          </div>
+          <div class="route-flow" style="margin-top:14px;">
+            <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Option C: Lower Manhattan Rain Rescue</strong>
+            <div class="rf-stop">Oculus<span class="rf-time">30 min</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Brookfield Place<span class="rf-time">45 min&ndash;1 hr</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">9/11 Museum<span class="rf-time">2&ndash;3 hrs</span></div>
+          </div>
+          <p style="font-size:13px;margin-top:6px;">Best for: first-time visitors, history lovers.</p>
+        </div>
+      </div>
+
+      <!-- ITINERARY 2: FULL DAY -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>2. Full-Day Rainy NYC Itinerary</h3><span class="ic-label">For all-day rain &bull; First NYC visits</span></div>
+        <div class="ic-body">
+          <p><strong>Classic NYC Indoor Day</strong></p>
+          <div class="route-flow">
+            <div class="rf-stop">Morning: American Museum of Natural History<span class="rf-time">3&ndash;4 hrs</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Lunch: Upper West Side cafe or museum dining</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: Central Park weather check (if improved) OR New-York Historical Society</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Broadway show or dinner in Midtown</div>
+          </div>
+          <p>You still experience culture, neighborhoods, and classic NYC entertainment without spending the day watching rain from a hotel window.</p>
+        </div>
+      </div>
+
+      <!-- ITINERARY 3: FAMILY -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>3. Rainy-Day NYC Family Itinerary</h3><span class="ic-label">Families with children &bull; Keep everyone engaged</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Morning: American Museum of Natural History (dinosaurs, space, animals)<span class="rf-time">3 hrs</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Lunch: Upper West Side</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: SPYSCAPE (for teenagers) OR Color Factory (for younger children)</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Family-friendly Broadway show</div>
+          </div>
+          <p><strong>Family Rainy-Day Mistakes to Avoid:</strong> Do not do three museums in one day. Children will remember "walking around tired," not a great cultural experience. Do not choose attractions only adults enjoy. A rainy day requires everyone to stay happy.</p>
+        </div>
+      </div>
+
+      <!-- ITINERARY 4: COUPLES -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>4. Couples Rainy-Day NYC Itinerary</h3><span class="ic-label">Rain can create one of the most romantic NYC experiences</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Morning: Morgan Library &amp; Museum<span class="rf-time">1&ndash;2 hrs</span></div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Lunch: Cozy restaurant nearby</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: Hall des Lumières OR Strand Bookstore + cafe</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Broadway show or cocktail bar</div>
+          </div>
+          <p>This avoids the typical tourist problem: trying to squeeze ten attractions into one day. It creates a slower, more intentional experience that actually suits rainy weather.</p>
+        </div>
+      </div>
+
+      <!-- ITINERARY 5: SOLO -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>5. Solo Traveler Rainy-Day Itinerary</h3><span class="ic-label">Solo travelers can change plans instantly &mdash; use that advantage</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Morning: Morgan Library</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Lunch: Food hall</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: Museum at FIT or small exhibition</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Late Afternoon: Strand Bookstore</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Comedy show or Broadway</div>
+          </div>
+          <div class="table-wrap" style="margin-top:10px;">
+            <table class="data-table" style="min-width:220px;">
+              <tr><th>Activity</th><th>Why It Works Alone</th></tr>
+              <tr><td>Museums</td><td>Move at your own pace</td></tr>
+              <tr><td>Bookstores</td><td>No pressure</td></tr>
+              <tr><td>Coffee shops</td><td>Easy breaks</td></tr>
+              <tr><td>Galleries</td><td>Quiet exploration</td></tr>
+              <tr><td>Shows</td><td>Perfect evening activity</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITINERARY 6: BUDGET -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>6. Budget Rainy-Day NYC Itinerary</h3><span class="ic-label">$0 before food</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Morning: New York Public Library (Free)</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Midday: Grand Central Terminal (Free)</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: Oculus (Free)</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Brookfield Place (Free) &rarr; Dinner</div>
+          </div>
+          <p><strong>Upgrade Option Under $25:</strong> Add bookstore shopping, coffee, or an inexpensive food hall meal.</p>
+          <p>For more free NYC ideas, read: <a href="25-free-things-to-do-in-nyc.html">25 Free Things to Do in NYC</a></p>
+        </div>
+      </div>
+
+      <!-- ITINERARY 7: LUXURY -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>7. Luxury Rainy-Day NYC Itinerary</h3><span class="ic-label">For travelers who do not want weather to reduce the quality of their trip</span></div>
+        <div class="ic-body">
+          <div class="route-flow">
+            <div class="rf-stop">Late Morning: Private exhibition or premium museum experience</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Lunch: Upscale restaurant</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Afternoon: Spa / shopping</div>
+            <div class="rf-arrow">&#8595;</div>
+            <div class="rf-stop">Evening: Broadway &rarr; Cocktails</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITINERARY 8: REPEAT VISITORS -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>8. Already Seen the Main Attractions?</h3><span class="ic-label">For repeat visitors &bull; Skip the obvious</span></div>
+        <div class="ic-body">
+          <p>Do not repeat Times Square, Empire State Building, or major museums unless you want to.</p>
+          <div class="card-grid cols-2">
+            <div>
+              <strong style="font-size:14px;color:var(--navy);">Brooklyn Rain Day</strong>
+              <div class="route-flow" style="margin-top:6px;">
+                <div class="rf-stop">Industry City</div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Food</div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Bookstores &rarr; Neighborhood</div>
+              </div>
+            </div>
+            <div>
+              <strong style="font-size:14px;color:var(--navy);">Lower East Side Rain Day</strong>
+              <div class="route-flow" style="margin-top:6px;">
+                <div class="rf-stop">Shopping</div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Food</div>
+                <div class="rf-arrow">&#8595;</div>
+                <div class="rf-stop">Small museums &rarr; Bars</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITINERARY 9: EMERGENCY TABLE -->
+      <div class="itin-card">
+        <div class="ic-head"><h3>9. Rain Started Near Your Planned Attraction?</h3><span class="ic-label">Emergency Decision Table</span></div>
+        <div class="ic-body">
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:260px;">
+              <tr><th>You Planned</th><th>Rain Alternative</th></tr>
+              <tr><td>Statue of Liberty</td><td>Battery Park + 9/11 Museum + Oculus</td></tr>
+              <tr><td>Brooklyn Bridge</td><td>DUMBO food + Empire Stores</td></tr>
+              <tr><td>Central Park</td><td>AMNH or Met</td></tr>
+              <tr><td>High Line</td><td>Chelsea Market + Pier 57</td></tr>
+              <tr><td>Wall Street</td><td>Oculus + Brookfield Place</td></tr>
+              <tr><td>Fifth Avenue</td><td>NYPL + Grand Central</td></tr>
+              <tr><td>SoHo walk</td><td>Shopping + cafes + Chinatown food</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULA -->
+      <div class="callout callout-summary">
+        <div class="callout-title">10. The Perfect Rainy-Day Formula</div>
+        <p>If you do not know what to choose, use this framework:</p>
+        <p><strong>Morning:</strong> One major indoor attraction (Met, AMNH, 9/11 Museum)</p>
+        <p><strong>Afternoon:</strong> Flexible neighborhood activity (bookstore, market, shopping, food hall)</p>
+        <p><strong>Evening:</strong> A guaranteed indoor experience (Broadway, comedy show, dinner)</p>
+        <p>Do not try to "beat" the weather. Work with it. The best rainy NYC days are usually not the days where you force the original itinerary. They are the days where you discover a different side of the city.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PART 6: COMPARISON TABLES -->
+      <h2 id="comparison">Ultimate Rainy-Day NYC Comparison Tables</h2>
+      <p>There is no single "best rainy-day attraction in NYC." The right choice depends on where you are, how long you have, who you are traveling with, your budget, and whether you want culture, entertainment, food, or simply somewhere comfortable to wait out the weather. Use these tables as a quick decision tool.</p>
+
+      <h3>Complete Attraction Comparison</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:500px;font-size:13px;">
+          <tr><th>Attraction</th><th>Neighborhood</th><th>Cost</th><th>Time</th><th>Indoor Rating</th><th>Rainy Score</th></tr>
+          <tr><td><strong>AMNH</strong></td><td>Upper West Side</td><td>$$</td><td>3&ndash;5 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>The Met</strong></td><td>Upper East Side</td><td>$$</td><td>3&ndash;6 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>9/11 Museum</strong></td><td>Financial District</td><td>$$</td><td>2&ndash;3 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Morgan Library</strong></td><td>Midtown East</td><td>$$</td><td>1&ndash;2 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>NYPL</strong></td><td>Midtown</td><td>Free</td><td>30&ndash;90 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Grand Central</strong></td><td>Midtown</td><td>Free</td><td>30&ndash;60 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Oculus</strong></td><td>Financial District</td><td>Free</td><td>20&ndash;60 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Brookfield Place</strong></td><td>Financial District</td><td>Free</td><td>30&ndash;120 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Chelsea Market</strong></td><td>Chelsea</td><td>Free</td><td>1&ndash;2 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Broadway</strong></td><td>Theater District</td><td>$$$</td><td>3 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>SPYSCAPE</strong></td><td>Midtown</td><td>$$</td><td>1.5&ndash;2 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Color Factory</strong></td><td>SoHo</td><td>$$</td><td>1&ndash;1.5 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Strand Bookstore</strong></td><td>Union Square</td><td>Free</td><td>30&ndash;120 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Kinokuniya</strong></td><td>Midtown</td><td>Free</td><td>30&ndash;90 min</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Hall des Lumières</strong></td><td>Downtown</td><td>$$</td><td>1&ndash;2 hrs</td><td>Excellent</td><td>5/5</td></tr>
+          <tr><td><strong>Industry City</strong></td><td>Brooklyn</td><td>Free</td><td>2&ndash;4 hrs</td><td>Very Good</td><td>4.5/5</td></tr>
+          <tr><td><strong>Pier 57</strong></td><td>Chelsea</td><td>Free</td><td>30&ndash;90 min</td><td>Good</td><td>4/5</td></tr>
+          <tr><td><strong>Museum of Ice Cream</strong></td><td>SoHo</td><td>$$</td><td>1 hr</td><td>Excellent</td><td>4/5</td></tr>
+          <tr><td><strong>Guggenheim Museum</strong></td><td>Upper East Side</td><td>$$</td><td>1&ndash;2 hrs</td><td>Excellent</td><td>4/5</td></tr>
+          <tr><td><strong>Museum at FIT</strong></td><td>Chelsea</td><td>Free</td><td>45&ndash;90 min</td><td>Excellent</td><td>4/5</td></tr>
+        </table>
+      </div>
+
+      <!-- BY TRAVELER TYPE (RANKED) -->
+      <h3>Best by Traveler Type (Ranked)</h3>
+      <div class="card-grid cols-2">
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">First-Time NYC Visitors</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:200px;font-size:13px;">
+              <tr><th>#</th><th>Attraction</th><th>Why</th></tr>
+              <tr><td>1</td><td>Grand Central</td><td>Iconic NYC interior</td></tr>
+              <tr><td>2</td><td>9/11 Museum</td><td>Major NYC history</td></tr>
+              <tr><td>3</td><td>Broadway</td><td>Classic NYC experience</td></tr>
+              <tr><td>4</td><td>NYPL</td><td>Beautiful free landmark</td></tr>
+              <tr><td>5</td><td>Chelsea Market</td><td>Food + atmosphere</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Families With Children</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:200px;font-size:13px;">
+              <tr><th>#</th><th>Attraction</th><th>Best Age</th></tr>
+              <tr><td>1</td><td>AMNH</td><td>All ages</td></tr>
+              <tr><td>2</td><td>SPYSCAPE</td><td>Older children/teens</td></tr>
+              <tr><td>3</td><td>Color Factory</td><td>Younger children</td></tr>
+              <tr><td>4</td><td>Museum of Ice Cream</td><td>Younger children</td></tr>
+              <tr><td>5</td><td>Broadway family show</td><td>Depends on show</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Couples</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:200px;font-size:13px;">
+              <tr><th>#</th><th>Attraction</th><th>Why</th></tr>
+              <tr><td>1</td><td>Morgan Library</td><td>Romantic atmosphere</td></tr>
+              <tr><td>2</td><td>Broadway</td><td>Classic NYC evening</td></tr>
+              <tr><td>3</td><td>Hall des Lumières</td><td>Immersive experience</td></tr>
+              <tr><td>4</td><td>Strand Bookstore</td><td>Relaxed afternoon</td></tr>
+              <tr><td>5</td><td>Chelsea Market</td><td>Food-focused date</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Budget Travelers</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:200px;font-size:13px;">
+              <tr><th>Attraction</th><th>Cost</th><th>Time</th></tr>
+              <tr><td>NYPL</td><td>Free</td><td>30&ndash;90 min</td></tr>
+              <tr><td>Grand Central</td><td>Free</td><td>30&ndash;60 min</td></tr>
+              <tr><td>Oculus</td><td>Free</td><td>20&ndash;60 min</td></tr>
+              <tr><td>Brookfield Place</td><td>Free</td><td>30&ndash;120 min</td></tr>
+              <tr><td>Strand Bookstore</td><td>Free</td><td>Flexible</td></tr>
+              <tr><td>Kinokuniya</td><td>Free</td><td>Flexible</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHEN YOU HAVE 1 HOUR -->
+      <h3>Best Attractions When You Only Have One Hour</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Location</th><th>Best Choice</th></tr>
+          <tr><td>Midtown</td><td>Grand Central</td></tr>
+          <tr><td>Fifth Avenue</td><td>NYPL</td></tr>
+          <tr><td>Downtown</td><td>Oculus</td></tr>
+          <tr><td>Chelsea</td><td>Chelsea Market</td></tr>
+          <tr><td>Union Square</td><td>Strand Bookstore</td></tr>
+          <tr><td>Anywhere</td><td>Coffee + bookstore</td></tr>
+        </table>
+      </div>
+
+      <!-- WHEN YOU HAVE HALF A DAY -->
+      <h3>Best Attractions When You Have Half a Day</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:240px;">
+          <tr><th>Traveler Type</th><th>Best Choice</th></tr>
+          <tr><td>Family</td><td>American Museum of Natural History</td></tr>
+          <tr><td>Art lover</td><td>The Met</td></tr>
+          <tr><td>History lover</td><td>9/11 Museum</td></tr>
+          <tr><td>Couple</td><td>Morgan Library + dinner</td></tr>
+          <tr><td>Food lover</td><td>Chelsea Market + Pier 57</td></tr>
+          <tr><td>Budget traveler</td><td>NYPL + Grand Central route</td></tr>
+        </table>
+      </div>
+
+      <!-- CROWD WARNING -->
+      <h3>Attractions That Become Crowded When It Rains</h3>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip">
+          <div class="callout-title">Highest Crowd Risk</div>
+          <p style="font-size:14px;"><strong>AMNH</strong> &mdash; Family favorite. <strong>The Met</strong> &mdash; Famous + huge. <strong>Chelsea Market</strong> &mdash; Easy food solution. <strong>Broadway ticket rush areas</strong> &mdash; Rainy evenings. <strong>Popular immersive attractions</strong> &mdash; Limited capacity.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Lower Crowd Alternatives</div>
+          <p style="font-size:14px;">Instead of The Met &rarr; Morgan Library. Instead of Natural History Museum &rarr; Smaller museums. Instead of Chelsea Market at lunch &rarr; Pier 57. Instead of busy attractions &rarr; NYPL. Instead of mall shopping &rarr; Bookstores.</p>
+        </div>
+      </div>
+
+      <!-- BY NEIGHBORHOOD SECTION -->
+      <h3>Best Rainy-Day Attractions by Neighborhood</h3>
+      <div class="card-grid cols-2">
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Midtown</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:180px;font-size:13px;">
+              <tr><th>Attraction</th><th>Best For</th></tr>
+              <tr><td>Grand Central</td><td>Everyone</td></tr>
+              <tr><td>NYPL</td><td>Free sightseeing</td></tr>
+              <tr><td>Morgan Library</td><td>Couples</td></tr>
+              <tr><td>Kinokuniya</td><td>Shopping</td></tr>
+              <tr><td>Broadway</td><td>Evening</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Chelsea</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:180px;font-size:13px;">
+              <tr><th>Attraction</th><th>Best For</th></tr>
+              <tr><td>Chelsea Market</td><td>Food</td></tr>
+              <tr><td>Pier 57</td><td>Views + food</td></tr>
+              <tr><td>Whitney Museum</td><td>Art</td></tr>
+              <tr><td>Hudson Yards</td><td>Shopping</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Financial District</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:180px;font-size:13px;">
+              <tr><th>Attraction</th><th>Best For</th></tr>
+              <tr><td>Oculus</td><td>Free</td></tr>
+              <tr><td>Brookfield Place</td><td>Comfort</td></tr>
+              <tr><td>9/11 Museum</td><td>History</td></tr>
+              <tr><td>Hall des Lumières</td><td>Immersive art</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <strong style="font-size:14px;color:var(--navy);display:block;margin-bottom:6px;">Upper West Side &amp; SoHo</strong>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:180px;font-size:13px;">
+              <tr><th>Area</th><th>Best Option</th></tr>
+              <tr><td>Upper West Side</td><td>AMNH + NY Historical Society</td></tr>
+              <tr><td>SoHo</td><td>Shopping, Color Factory, food</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- BY WEATHER CONDITION -->
+      <h3>Best Rainy-Day Attractions by Weather Condition</h3>
+      <div class="rain-grid">
+        <div class="rain-card rain-light">
+          <h4>Light Rain</h4>
+          <p>Central Park, Brooklyn Bridge, High Line, DUMBO</p>
+        </div>
+        <div class="rain-card rain-medium">
+          <h4>Medium Rain</h4>
+          <p>Chelsea Market, Grand Central, NYPL, bookstores, food halls</p>
+        </div>
+        <div class="rain-card rain-heavy">
+          <h4>Heavy Rain</h4>
+          <p>Museums, Broadway, immersive experiences, 9/11 Museum</p>
+        </div>
+        <div class="rain-card rain-all">
+          <h4>All-Day Rain</h4>
+          <p>Morning: Major attraction &rarr; Lunch: Indoor market &rarr; Afternoon: Smaller attraction &rarr; Evening: Show or dinner</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL DECISION CHART -->
+      <h2 id="final-chart">Final "What Should I Choose?" Decision Chart</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">I Am Near Times Square</div>
+          <p>Choose: Broadway, Museum of Broadway, SPYSCAPE</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">I Am Near Central Park</div>
+          <p>Choose: American Museum of Natural History, The Met, Guggenheim</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">I Am Near Wall Street</div>
+          <p>Choose: Oculus, Brookfield Place, 9/11 Museum</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">I Am Near Chelsea</div>
+          <p>Choose: Chelsea Market, Pier 57, Hudson Yards</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">I Am Near Fifth Avenue</div>
+          <p>Choose: NYPL, Grand Central, Kinokuniya</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Observation Decks During Rain?</div>
+          <p>Rain can actually improve the atmosphere at some observation decks. Read: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared</a> to find out which ones are worth it when clouds roll in.</p>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- RELATED -->
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="which-attractions-to-book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What NYC Attractions Can You Visit Without Reservations?</a></li>
+      <li><a href="25-free-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Free Things to Do in NYC</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Is Actually Worth It?</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Midtown Manhattan Walking Itinerary: Grand Central to Times Square</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary: A Full-Day Self-Guided Walk</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">Resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City-tours/Theater-Shows-and-Musicals/d687-g22-c55?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Book Broadway Shows</div>
+        <div class="fc-sub">Compare shows with flexible cancellation</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){
+  document.getElementById('snLinks').classList.toggle('open');
+});
+var secs=['decision','light-rain','moderate-rain','heavy-rain','by-location','top-attractions','non-museum','free-routes','traveler-types','itineraries','comparison','final-chart'];
+var slinks=document.querySelectorAll('.side-nav a');
+var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){
+  var cur=secs[0];
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});
+  snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
