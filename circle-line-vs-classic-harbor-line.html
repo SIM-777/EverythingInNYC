@@ -25,6 +25,7 @@
   .sticky-nav{display:flex;align-items:center;justify-content:space-between;}
   .sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}
 }
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
 /* SIDEBAR */
 .side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
 @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
@@ -82,7 +83,7 @@
 
 <!-- STICKY NAV -->
 <div class="sticky-nav" id="stickyNav">
-  <span class="sn-label">CL vs CHL</span>
+  <span class="sn-label">On This Page</span>
   <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
   <div class="sn-inner" id="snLinks">
     <a href="#quick-verdict">Quick Verdict</a>
