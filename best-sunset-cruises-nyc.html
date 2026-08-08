@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Sunset Cruises in NYC Compared: Which One Is Actually Worth Booking? | EverythingInNYC</title>
+<meta name="description" content="Comparing the best sunset cruises in NYC, including Circle Line, Shearwater and Classic Harbor Line. Find the best cruise for sunset, couples, families, photography and skyline views.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* STICKY NAV */
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){
+  .sn-inner{display:none;flex-direction:column;gap:0;padding:0;}
+  .sn-inner.open{display:flex;}
+  .sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .sn-toggle{display:block;}
+  .sticky-nav{display:flex;align-items:center;justify-content:space-between;}
+  .sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}
+}
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
+/* SIDEBAR */
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+/* CRUISE REVIEW CARD */
+.cruise-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:22px 0;}
+.cc-head{padding:12px 18px 10px;background:var(--navy);display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;}
+.cc-head.alt{background:#1b3057;}
+.cc-num{font-family:var(--font-head);font-weight:800;font-size:28px;color:rgba(255,255,255,.18);flex:none;min-width:36px;line-height:1;}
+.cc-titles{flex:1;}
+.cc-name{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;display:block;}
+.cc-sub{font-size:12.5px;color:rgba(255,255,255,.65);margin-top:3px;display:block;}
+.cc-tag{background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:11px;border-radius:20px;padding:2px 9px;margin-top:5px;display:inline-block;}
+.cc-body{padding:14px 18px;}
+/* SECTION IMAGE */
+.sect-img{margin:14px 0 10px;}
+.sect-img img{width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;}
+.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+/* VERDICT STRIP */
+.verdict{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);border-radius:0 9px 9px 0;padding:8px 14px;margin:10px 0;font-size:14.5px;}
+.verdict strong{color:var(--navy);}
+/* BEST / NOT IDEAL LISTS */
+.two-col-lists{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;}
+@media(max-width:560px){.two-col-lists{grid-template-columns:1fr;}}
+.tcl-box{background:rgba(15,23,42,.03);border:1px solid var(--border);border-radius:10px;padding:10px 14px;}
+.tcl-box h4{font-size:13px;font-weight:700;color:var(--navy);margin:0 0 8px;text-transform:uppercase;letter-spacing:.04em;}
+.tcl-box ul{margin:0;padding-left:16px;}
+.tcl-box li{font-size:13.5px;margin-bottom:4px;}
+/* PHOTOGRAPHER TIP BOX */
+.photo-tip-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;}
+@media(max-width:500px){.photo-tip-grid{grid-template-columns:1fr;}}
+.ptg-item{border-left:3px solid var(--navy);padding:8px 12px;background:rgba(15,23,42,.03);border-radius:0 8px 8px 0;}
+.ptg-item h4{font-size:13px;font-weight:800;color:var(--navy);margin:0 0 5px;}
+.ptg-item p{font-size:13.5px;margin:0;}
+/* SEASONAL STRIP */
+.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;}
+@media(max-width:500px){.season-grid{grid-template-columns:1fr;}}
+.sg-item{border-radius:10px;padding:10px 14px;}
+.sg-spring{background:rgba(22,163,74,.07);border:1px solid rgba(22,163,74,.2);}
+.sg-summer{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.25);}
+.sg-fall{background:rgba(234,88,12,.07);border:1px solid rgba(234,88,12,.2);}
+.sg-winter{background:rgba(37,99,235,.07);border:1px solid rgba(37,99,235,.2);}
+.sg-item h4{font-size:13.5px;font-weight:800;color:var(--navy);margin:0 0 5px;}
+.sg-item p{font-size:13.5px;margin:0;}
+/* DECISION BOX */
+.decision-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);}
+.decision-row:last-child{border-bottom:none;}
+.dr-label{font-size:14px;font-weight:600;color:var(--text-secondary);min-width:160px;flex:none;}
+.dr-pick{font-size:14.5px;font-weight:700;color:var(--navy);}
+@media(max-width:500px){.decision-row{flex-direction:column;gap:3px;}.dr-label{min-width:unset;}}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- STICKY NAV -->
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On This Page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#quick-answer">Quick Answer</a>
+    <a href="#the-mistake">The Mistake</a>
+    <a href="#cruises">Cruise Reviews</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#best-for">Best For</a>
+    <a href="#practical">Practical Tips</a>
+    <a href="#seasonal">Seasons</a>
+    <a href="#what-id-book">What I'd Book</a>
+    <a href="#faq">FAQ</a>
+    <a href="#final-verdict">Final Verdict</a>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#the-mistake">The Big Mistake</a>
+  <a href="#cruises">Cruise Reviews</a>
+  <a href="#comparison">Comparison Table</a>
+  <a href="#actual-sunset">Best Sunset</a>
+  <a href="#skyline-views">Skyline Views</a>
+  <a href="#photography">Photography</a>
+  <a href="#practical">Practical Tips</a>
+  <a href="#obs-vs-cruise">Deck vs Cruise</a>
+  <a href="#best-for">Best For</a>
+  <a href="#seasonal">Seasons</a>
+  <a href="#what-id-book">What I'd Book</a>
+  <a href="#faq">FAQ</a>
+  <a href="#final-verdict">Final Verdict</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Tours &amp; Experiences</span>
+      <h1>Best Sunset Cruises in NYC Compared: Which One Is Actually Worth Booking?</h1>
+      <div class="article-meta">
+        <span>Circle Line, Shearwater, Classic Harbor Line, Bateaux and more &mdash; compared honestly so you can choose the right evening on the water</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="best-sunset-cruises.png" alt="Best sunset cruises in NYC compared — which New York harbor cruise is worth booking for couples, families, photographers and first-time visitors">
+
+    <div class="article-body">
+
+      <p>If you are looking for the best sunset cruise in NYC, there is one mistake worth avoiding right away: assuming every cruise advertised as a "sunset cruise" is actually designed around watching the sun set.</p>
+      <p>They are not.</p>
+      <p>Some cruises are genuinely built around sunset. Others are sightseeing cruises that happen to run in the evening. Some are better for seeing the Statue of Liberty. Others are much better for watching Manhattan light up after dark. And if you are celebrating an anniversary, the right boat is completely different from the right boat for a first-time family trip.</p>
+      <p>After comparing the major NYC sunset and evening cruises, the differences are surprisingly significant.</p>
+      <p><strong>The overall pick for most first-time visitors is Circle Line's Statue at Sunset.</strong> It gives you a lot of NYC in a relatively short time &mdash; Statue of Liberty, Lower Manhattan, skyline views &mdash; with indoor and outdoor options.</p>
+      <p>But if the number-one priority is <strong>actually watching the sunset</strong>, Manhattan by Sail's Shearwater or a Classic Harbor Line sailing experience is a stronger choice. And if the goal is a romantic evening on the water, neither of the most famous cruises may be the right answer at all.</p>
+
+      <hr class="divider-rule">
+
+      <!-- QUICK ANSWER -->
+      <h2 id="quick-answer">Quick Answer: Best NYC Sunset Cruises at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:400px;font-size:13px;">
+          <tr><th>Cruise</th><th>Best For</th><th>Verdict</th></tr>
+          <tr><td><strong><a href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Statue at Sunset</a></strong></td><td>First-time visitors, overall value</td><td>Best overall</td></tr>
+          <tr><td><strong><a href="https://manhattanbysail.com/shearwater/" target="_blank" rel="noopener">Manhattan by Sail Shearwater</a></strong></td><td>Actually watching sunset</td><td>Best true sunset experience</td></tr>
+          <tr><td><strong><a href="https://classicharborline.com/adirondack-schooners/" target="_blank" rel="noopener">Classic Harbor Line Adirondack</a></strong></td><td>Sailing and photography</td><td>Best sailing experience</td></tr>
+          <tr><td><strong><a href="https://sail-nyc.com/public-cruises/sunset-boat-tour-of-nyc-with-cocktails/" target="_blank" rel="noopener">Classic Harbor Line Kingston</a> / <a href="https://sail-nyc.com/public-cruises/nyc-sunset-cocktail-cruise-on-yacht-full-moon-from-chelsea-piers/" target="_blank" rel="noopener">Full Moon</a></strong></td><td>Couples and intimacy</td><td>Best small-boat experience</td></tr>
+          <tr><td><strong><a href="https://www.viator.com/tours/New-York-City/Circle-Line-Harbor-Lights-Night-Cruise/d687-2800HLC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Harbor Lights</a></strong></td><td>NYC skyline after dark</td><td>Best for city lights</td></tr>
+          <tr><td><strong><a href="https://www.cityexperiences.com/new-york/city-cruises/alive-after-five-happy-hour-cruise/" target="_blank" rel="noopener">City Cruises Alive After Five</a></strong></td><td>Drinks, music and atmosphere</td><td>Best party cruise</td></tr>
+          <tr><td><strong><a href="https://www.cityexperiences.com/new-york/city-cruises/bateaux-dinner-cruise/" target="_blank" rel="noopener">Bateaux New York</a></strong></td><td>Dinner and special occasions</td><td>Best dinner cruise</td></tr>
+          <tr><td><strong>Pioneer / smaller sailing alternatives</strong></td><td>Something less touristy</td><td>Best alternative</td></tr>
+          <tr><td><strong>The Mark sailboat</strong></td><td>Ultra-luxury</td><td>Best splurge</td></tr>
+        </table>
+      </div>
+
+      <div class="callout callout-summary">
+        <div class="callout-title">The Short Version</div>
+        <p>Circle Line is the safest choice for most tourists. For the actual sunset rather than an evening sightseeing cruise, Shearwater is the stronger pick. Those are two very different recommendations, and that distinction is the key to choosing the right experience.</p>
+      </div>
+
+      <p>For a broader view of all NYC harbour options including daytime cruises, dinner boats and free ferries, read: <a href="nyc-cruise-tours.html">NYC Cruises Compared: Which New York Harbor Cruise Is Actually Worth Booking?</a></p>
+
+      <hr class="divider-rule">
+
+      <!-- THE MISTAKE -->
+      <h2 id="the-mistake">The Biggest Mistake: Sunset Cruise Does Not Always Mean Sunset</h2>
+      <p>This is the first thing to check before booking. There are three types of evening cruises in New York, and understanding them prevents disappointment.</p>
+
+      <div class="card-grid cols-2" style="margin:14px 0;">
+        <div class="callout callout-local">
+          <div class="callout-title">1. The Actual Sunset Cruise</div>
+          <p style="font-size:13.5px;">The boat is timed around sunset and the experience is built around watching the sun disappear. <strong>Best examples:</strong> Shearwater and Classic Harbor Line sunset sails.</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">2. The Sunset Sightseeing Cruise</div>
+          <p style="font-size:13.5px;">You leave while there is still daylight, see landmarks during golden hour, watch the sunset if timing cooperates, then continue into blue hour. <strong>Best example:</strong> Circle Line Statue at Sunset.</p>
+        </div>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">3. The Evening / Harbor Lights Cruise</div>
+        <p>The sun may already be setting or gone. The real attraction is Manhattan's skyline becoming illuminated. <strong>Best examples:</strong> Circle Line Harbor Lights and several City Cruises experiences.</p>
+      </div>
+
+      <p>That distinction matters much more than the word "sunset" on the booking page. A cruise can be spectacular without giving you a perfect sunset. And a cruise can technically be marketed as a sunset experience while reaching the most important viewpoint after the sun has already disappeared. Circle Line's Statue at Sunset experience illustrates this: the route timing does not always put the boat at the Statue of Liberty at the exact moment of sunset &mdash; some departures do, some do not.</p>
+
+      <hr class="divider-rule">
+
+      <!-- CRUISE REVIEWS -->
+      <h2 id="cruises">NYC Sunset Cruise Reviews</h2>
+
+      <!-- 1. CIRCLE LINE -->
+      <div class="cruise-card" id="circle-line-sunset">
+        <div class="cc-head">
+          <div class="cc-num">01</div>
+          <div class="cc-titles">
+            <span class="cc-name">Circle Line Statue at Sunset</span>
+            <span class="cc-sub">Best Overall &mdash; Approx. 90 minutes &bull; Pier 16</span>
+            <span class="cc-tag">Best overall for first-time visitors</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>If a friend is visiting New York for the first time and wants one sunset cruise without overthinking it, this is the one to recommend. Circle Line's Statue at Sunset combines the Statue of Liberty with views of Lower Manhattan and the harbor, with both indoor and outdoor areas. That combination is hard to beat. You are not paying for a luxury yacht. You are paying for a straightforward sightseeing experience that delivers a lot of NYC in a relatively short time.</p>
+
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/bb/f3/d6/circle-line-cruises.jpg?w=1400&h=-1&s=1" alt="Circle Line sightseeing cruise on New York Harbor at sunset — the best overall NYC sunset cruise for first-time visitors">
+            <div class="cap">Circle Line's fleet departing from Midtown Manhattan &mdash; the most established name in NYC harbour sightseeing and the recommended choice for most first-time visitors wanting an evening cruise. The large vessels give you the freedom to move between decks as the light changes.</div>
+          </div>
+
+          <h4>What you see</h4>
+          <p>Depending on route and conditions: Statue of Liberty, Ellis Island, Lower Manhattan, One World Trade Center, Brooklyn Bridge, Manhattan skyline, and New York Harbor. The major advantage is multiple perspectives rather than one fixed viewpoint.</p>
+
+          <h4>Why it works</h4>
+          <p>The biggest advantage is flexibility. You can move around, spend part of the cruise outside taking photos, move inside when the wind gets annoying, and change position as the boat approaches different landmarks. That is particularly valuable on a sunset cruise because everyone suddenly wants to be outside during the final 20 minutes. Circle Line gives you the space to do that.</p>
+
+          <h4>The catch</h4>
+          <p>The timing. Circle Line calls it Statue at Sunset, but the route does not guarantee that the Statue of Liberty will be directly in front of you at the exact moment the sun disappears. Some departures produce exactly the experience travelers want. Others arrive at the Statue slightly after sunset. If your definition of success is "I want to watch the sun set behind the Statue of Liberty," choose something else. If your definition is "I want a great evening boat ride with the Statue, skyline and hopefully sunset," Circle Line is much easier to recommend.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>First-time visitors</li>
+                <li>Families</li>
+                <li>Short NYC trips</li>
+                <li>Budget travelers</li>
+                <li>Photography</li>
+                <li>Travelers who want indoor backup</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Biggest drawback</h4>
+              <p style="font-size:13.5px;">The sunset timing is not as foolproof as the name suggests.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Statue at Sunset on Viator &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 2. SHEARWATER -->
+      <div class="cruise-card" id="shearwater">
+        <div class="cc-head alt">
+          <div class="cc-num">02</div>
+          <div class="cc-titles">
+            <span class="cc-name">Manhattan by Sail Shearwater</span>
+            <span class="cc-sub">Best for the Actual Sunset &mdash; Approx. 1 hr 45 min &bull; Historic 82-foot schooner</span>
+            <span class="cc-tag">Best true sunset experience</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>If you are serious about seeing the sunset rather than simply taking an evening cruise, Shearwater is the one to look at first. The experience is completely different from Circle Line. You are sailing aboard an 82-foot historic schooner rather than riding a large sightseeing vessel. The departure time changes throughout the year to track the changing sunset &mdash; and that last point is extremely important.</p>
+
+          <h4>The schedule follows the sun</h4>
+          <div class="table-wrap">
+            <table class="data-table" style="min-width:220px;font-size:13px;">
+              <tr><th>Period</th><th>Approximate Departure</th></tr>
+              <tr><td>Early summer</td><td>7:30 PM</td></tr>
+              <tr><td>Later August</td><td>7:00 PM &rarr; 6:30 PM</td></tr>
+              <tr><td>September</td><td>6:00 PM</td></tr>
+              <tr><td>October</td><td>5:30 PM &rarr; 5:00 PM</td></tr>
+            </table>
+          </div>
+          <p>That is exactly how a genuine sunset cruise should be scheduled. The cruise is specifically designed around watching the sunset from the harbor, with the Statue of Liberty as part of the experience.</p>
+
+          <h4>Why this feels more special</h4>
+          <p>The boat is the experience. You are not using the vessel as transportation between viewpoints. You are sitting on a classic schooner, watching the sails, water and skyline change as the light fades. The atmosphere is much more intimate, and that makes a significant difference when taking someone on a date.</p>
+
+          <h4>What you see</h4>
+          <p>Statue of Liberty, Ellis Island, Governors Island, Manhattan skyline, New Jersey skyline, bridges, and New York Harbor.</p>
+
+          <h4>The downside</h4>
+          <p>You need to be prepared for the fact that you are on a sailing boat. That means wind and cooler temperatures. The operator warns that temperatures on the water are generally around 10&deg;F cooler and recommends dressing in layers. Wonderful on a warm summer evening. Considerably less wonderful if you are wearing a thin dress because you assumed August in New York would feel warm.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>Couples and romantic evenings</li>
+                <li>The actual sunset</li>
+                <li>Photography</li>
+                <li>Travelers who enjoy boats</li>
+                <li>Something more memorable than sightseeing</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Biggest drawback</h4>
+              <p style="font-size:13.5px;">Less indoor comfort and considerably more exposure to wind and weather.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://manhattanbysail.com/shearwater/" target="_blank" rel="noopener">Manhattan by Sail Shearwater &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 3. ADIRONDACK -->
+      <div class="cruise-card" id="adirondack">
+        <div class="cc-head">
+          <div class="cc-num">03</div>
+          <div class="cc-titles">
+            <span class="cc-name">Classic Harbor Line Adirondack</span>
+            <span class="cc-sub">Best Sailing Experience &mdash; Approx. 2 hours &bull; Traditional schooner</span>
+            <span class="cc-tag">Best sailing experience</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>If you want to feel like you are actually sailing through New York Harbor, the Adirondack is one of the strongest options. Classic Harbor Line's schooner offers a traditional sailing experience rather than a conventional sightseeing cruise. The sunset sailing lasts approximately two hours and typically includes a complimentary drink, with additional drinks available for purchase. The company emphasizes sailing rather than motoring, attempting to shut off the engines and sail whenever conditions allow. That is a major difference.</p>
+          <p>This is not the cruise for maximum sightseeing efficiency. It is the cruise for the experience of being on a beautiful boat. That distinction matters.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>Couples and sailing enthusiasts</li>
+                <li>Photography</li>
+                <li>Anniversaries and birthdays</li>
+                <li>Travelers who dislike giant tourist boats</li>
+                <li>Anyone wanting a slower, atmospheric experience</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Biggest drawback</h4>
+              <p style="font-size:13.5px;">Two hours is a significant chunk of a NYC itinerary. If you are only in New York for two or three days, Circle Line gives you more sightseeing for your time.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://classicharborline.com/adirondack-schooners/" target="_blank" rel="noopener">Classic Harbor Line Adirondack &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 4. KINGSTON / FULL MOON -->
+      <div class="cruise-card" id="kingston-full-moon">
+        <div class="cc-head alt">
+          <div class="cc-num">04</div>
+          <div class="cc-titles">
+            <span class="cc-name">Classic Harbor Line Kingston and Full Moon</span>
+            <span class="cc-sub">Best for Couples &mdash; Approx. 1.5 hours &bull; Kingston: ~28 guests max</span>
+            <span class="cc-tag">Best small-boat experience</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>Classic Harbor Line also operates smaller boats including Kingston and Full Moon for sunset experiences. The Kingston accommodates only around 28 guests and offers covered seating, an open outer deck, a forward deck and a full bar. The sunset experience lasts approximately 1.5 hours and includes views of the Statue of Liberty and Ellis Island.</p>
+          <p>That small capacity changes the experience entirely. You are not fighting with hundreds of people for the perfect sunset photo. You are not dealing with the feeling of being on a sightseeing bus that floats. You are on a small yacht. For a date, this is the better choice over Circle Line &mdash; not because the views are dramatically better, but because the atmosphere is better. That is what the premium is paying for.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>Date nights and anniversaries</li>
+                <li>Couples</li>
+                <li>Small groups</li>
+                <li>Travelers who want something quieter</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Biggest drawback</h4>
+              <p style="font-size:13.5px;">You pay more for intimacy rather than dramatically more sightseeing.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book:</strong> <a href="https://sail-nyc.com/public-cruises/sunset-boat-tour-of-nyc-with-cocktails/" target="_blank" rel="noopener">Kingston Sunset Cruise &rarr;</a> &nbsp;|&nbsp; <a href="https://sail-nyc.com/public-cruises/nyc-sunset-cocktail-cruise-on-yacht-full-moon-from-chelsea-piers/" target="_blank" rel="noopener">Full Moon Sunset Cruise &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 5. HARBOR LIGHTS -->
+      <div class="cruise-card" id="harbor-lights">
+        <div class="cc-head">
+          <div class="cc-num">05</div>
+          <div class="cc-titles">
+            <span class="cc-name">Circle Line Harbor Lights</span>
+            <span class="cc-sub">Best for the NYC Skyline at Night &mdash; Pier 83</span>
+            <span class="cc-tag">Best for city lights</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>This is where the category stops being a "sunset cruise" in the traditional sense. Circle Line's Harbor Lights experience is much more about the illuminated city than about watching the sun disappear. The cruise is designed around seeing New York after dark, including the bridges and skyline. And that is not a bad thing.</p>
+          <p>There is something genuinely magical about watching Manhattan transition from daylight to a wall of lights. If the ideal photograph is dark blue sky, glowing skyscrapers and the Statue of Liberty, a Harbor Lights-style cruise may actually be better than chasing the final few minutes of sunlight.</p>
+
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/b3/89/4d/pier-83-harbor-lights.jpg?w=1400&h=-1&s=1" alt="Manhattan skyline illuminated at night from New York Harbor — the view on Circle Line's Harbor Lights evening cruise">
+            <div class="cap">The illuminated Manhattan skyline from New York Harbor &mdash; the scene that the Harbor Lights cruise is built around. For nighttime photography and the skyline-after-dark experience, this is often the stronger choice over a sunset-timed departure.</div>
+          </div>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Choose this if:</h4>
+              <ul>
+                <li>You already saw the sunset elsewhere</li>
+                <li>You want nighttime photography</li>
+                <li>You prefer the skyline after dark</li>
+                <li>You are visiting in winter</li>
+                <li>You want a later evening activity</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Skip this if:</h4>
+              <p style="font-size:13.5px;">Your bucket-list moment is watching the actual sun disappear over the horizon.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://www.viator.com/tours/New-York-City/Circle-Line-Harbor-Lights-Night-Cruise/d687-2800HLC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Harbor Lights on Viator &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 6. ALIVE AFTER FIVE -->
+      <div class="cruise-card" id="alive-after-five">
+        <div class="cc-head alt">
+          <div class="cc-num">06</div>
+          <div class="cc-titles">
+            <span class="cc-name">City Cruises Alive After Five</span>
+            <span class="cc-sub">Best for Drinks and Music &mdash; Approx. 1.5 hours &bull; Pier 15</span>
+            <span class="cc-tag">Best party cruise</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>City Cruises takes the sunset-cruise concept in a completely different direction. The Alive After Five experience combines a boat ride, DJ, drinks, food options, Manhattan skyline, Statue of Liberty, Brooklyn Bridge, indoor climate-controlled areas, and outdoor deck. This is not the boat for quiet contemplation. It is much more "let us have drinks on a boat while NYC looks fantastic." And that is perfectly fine.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>Friends and groups</li>
+                <li>Drinks and music</li>
+                <li>Celebrations</li>
+                <li>Casual nights out</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Not ideal for</h4>
+              <ul>
+                <li>Serious photographers</li>
+                <li>Couples wanting intimacy</li>
+                <li>Travelers who want narration</li>
+                <li>People who dislike loud music</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://www.cityexperiences.com/new-york/city-cruises/alive-after-five-happy-hour-cruise/" target="_blank" rel="noopener">City Cruises Alive After Five &rarr;</a></div>
+        </div>
+      </div>
+
+      <!-- 7. BATEAUX -->
+      <div class="cruise-card" id="bateaux">
+        <div class="cc-head">
+          <div class="cc-num">07</div>
+          <div class="cc-titles">
+            <span class="cc-name">Bateaux New York</span>
+            <span class="cc-sub">Best Dinner Cruise &mdash; Approx. 3 hours &bull; Glass-enclosed vessel</span>
+            <span class="cc-tag">Best dinner cruise</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <p>If you are looking for dinner rather than pure sightseeing, Bateaux is a different category altogether. The cruise lasts approximately three hours and combines a plated dinner, glass-enclosed vessel, skyline views, live music, full bar, Brooklyn Bridge, Statue of Liberty and Manhattan skyline. The experience also has a more formal dress expectation than a standard sightseeing cruise.</p>
+          <p>This is the cruise for an anniversary. But there is a catch: Bateaux is not the choice for the best sunset photography. You are paying for the entire evening &mdash; dinner, music, service, atmosphere, boat and skyline. That is a completely different value proposition from paying for a sightseeing cruise.</p>
+
+          <div class="two-col-lists">
+            <div class="tcl-box">
+              <h4>Best for</h4>
+              <ul>
+                <li>Anniversaries and special occasions</li>
+                <li>Dinner and upscale evenings</li>
+                <li>Couples wanting a complete night out</li>
+              </ul>
+            </div>
+            <div class="tcl-box">
+              <h4>Biggest drawback</h4>
+              <p style="font-size:13.5px;">It is expensive and less flexible for photography.</p>
+            </div>
+          </div>
+
+          <div class="verdict"><strong>Book it:</strong> <a href="https://www.cityexperiences.com/new-york/city-cruises/bateaux-dinner-cruise/" target="_blank" rel="noopener">Bateaux New York Dinner Cruise &rarr;</a></div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- COMPARISON TABLE -->
+      <h2 id="comparison">Sunset Cruise Comparison Table</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:600px;font-size:12.5px;">
+          <tr>
+            <th>Feature</th>
+            <th>Circle Line</th>
+            <th>Shearwater</th>
+            <th>Adirondack</th>
+            <th>Kingston/Full Moon</th>
+            <th>City Cruises</th>
+            <th>Bateaux</th>
+          </tr>
+          <tr><td><strong>Actual sunset</strong></td><td>Good</td><td><strong>Excellent</strong></td><td><strong>Excellent</strong></td><td>Excellent</td><td>Moderate</td><td>Moderate</td></tr>
+          <tr><td><strong>Statue of Liberty</strong></td><td><strong>Excellent</strong></td><td>Excellent</td><td>Excellent</td><td>Excellent</td><td>Good</td><td>Good</td></tr>
+          <tr><td><strong>Skyline</strong></td><td><strong>Excellent</strong></td><td>Excellent</td><td>Excellent</td><td>Excellent</td><td>Excellent</td><td>Excellent</td></tr>
+          <tr><td><strong>Night skyline</strong></td><td>Good</td><td>Excellent</td><td>Excellent</td><td>Excellent</td><td><strong>Excellent</strong></td><td><strong>Excellent</strong></td></tr>
+          <tr><td><strong>Photography</strong></td><td><strong>Excellent</strong></td><td><strong>Excellent</strong></td><td><strong>Excellent</strong></td><td>Excellent</td><td>Good</td><td>Moderate</td></tr>
+          <tr><td><strong>Romance</strong></td><td>Good</td><td><strong>Excellent</strong></td><td>Excellent</td><td><strong>Excellent</strong></td><td>Moderate</td><td><strong>Excellent</strong></td></tr>
+          <tr><td><strong>Families</strong></td><td><strong>Excellent</strong></td><td>Good</td><td>Good</td><td>Good</td><td>Good</td><td>Moderate</td></tr>
+          <tr><td><strong>Indoor space</strong></td><td><strong>Excellent</strong></td><td>Limited</td><td>Limited</td><td>Covered</td><td><strong>Excellent</strong></td><td><strong>Excellent</strong></td></tr>
+          <tr><td><strong>Crowds</strong></td><td>High</td><td>Low</td><td>Low/medium</td><td>Low</td><td>Medium/high</td><td>Medium</td></tr>
+          <tr><td><strong>Sailing experience</strong></td><td>No</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>Limited</td><td>No</td><td>No</td></tr>
+          <tr><td><strong>Food</strong></td><td>Snacks/bar</td><td>Drinks</td><td>Drinks</td><td>Drinks</td><td>Food options</td><td><strong>Dinner</strong></td></tr>
+          <tr><td><strong>Music/entertainment</strong></td><td>Some</td><td>Minimal</td><td>Minimal</td><td>Minimal</td><td><strong>DJ</strong></td><td><strong>Live music</strong></td></tr>
+          <tr><td><strong>Value</strong></td><td><strong>Excellent</strong></td><td>Good</td><td>Good</td><td>Good</td><td>Good</td><td>Moderate</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Sightseeing</td><td>Sunset</td><td>Sailing</td><td>Couples</td><td>Party</td><td>Dinner</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BEST FOR ACTUAL SUNSET -->
+      <h2 id="actual-sunset">Which Cruise Is Best for the Actual Sunset?</h2>
+      <p>This is the category where Circle Line does not automatically take first place. The ranking for experiencing the genuine sunset:</p>
+      <ol>
+        <li><strong>Manhattan by Sail Shearwater</strong></li>
+        <li><strong>Classic Harbor Line Adirondack</strong></li>
+        <li><strong>Classic Harbor Line mini-yachts</strong></li>
+        <li><strong>Circle Line Statue at Sunset</strong></li>
+        <li><strong>City Cruises evening experiences</strong></li>
+        <li><strong>Bateaux</strong></li>
+      </ol>
+      <p>The first three are genuinely designed around the sailing experience and sunset timing. Circle Line is better thought of as a sunset sightseeing cruise. That is still an excellent product &mdash; it is just a slightly different promise.</p>
+
+      <!-- BEST SKYLINE VIEWS -->
+      <h2 id="skyline-views">Which Cruise Has the Best Skyline Views?</h2>
+      <p>For sheer sightseeing: <strong>Circle Line wins.</strong> The large vessel gives you excellent viewing opportunities and the ability to move around. For atmosphere and photography: <strong>Classic Harbor Line and Shearwater win.</strong> You are lower to the water, on smaller boats, with fewer people and a more interesting foreground. For nighttime skyline: <strong>Circle Line Harbor Lights and Bateaux</strong> are especially compelling.</p>
+
+      <!-- CLOSEST TO STATUE -->
+      <h2>Which Cruise Gets You Closest to the Statue of Liberty?</h2>
+      <p>If the goal is simply to see Lady Liberty from the water, several of these cruises do a good job. The important distinction is whether you want a close-up sightseeing view or the Statue as part of a sunset composition. For the latter, Shearwater or a Classic Harbor Line sunset sail is the better choice. For a broad sightseeing experience that also includes the Statue: Circle Line.</p>
+      <p>If you actually want to <strong>visit</strong> the Statue of Liberty rather than simply pass it, do not book a sightseeing cruise. Book the official Statue City Cruises ferry experience. Read: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty: Complete Visitor Guide</a> and the <a href="statue-of-liberty-vs-staten-island-ferry.html">Statue of Liberty Ferry vs Staten Island Ferry comparison</a>.</p>
+
+      <!-- PHOTOGRAPHY -->
+      <h2 id="photography">Best Cruise for Photography</h2>
+      <p>If you are carrying a serious camera, do not automatically choose the most expensive cruise. Choose the boat that gives you open deck space, freedom to move, few obstructions, an interesting foreground, enough time around the Statue, sunset and blue hour, and minimal window reflections.</p>
+
+      <p><strong>Photography ranking:</strong></p>
+      <ol>
+        <li>Shearwater</li>
+        <li>Adirondack</li>
+        <li>Classic Harbor Line mini-yachts</li>
+        <li>Circle Line</li>
+        <li>City Cruises</li>
+        <li>Bateaux</li>
+      </ol>
+      <p>The small sailing boats win because they feel more photographic. Circle Line is arguably easier for casual smartphone photography because you have more space and multiple levels.</p>
+
+      <h3>Where to Position Yourself</h3>
+      <p>Do not overthink the "left side versus right side" advice that appears online. There is no universally perfect side &mdash; the sun's position changes throughout the year and boats change direction during the cruise. Use this strategy instead.</p>
+
+      <div class="photo-tip-grid">
+        <div class="ptg-item">
+          <h4>On a large sightseeing boat</h4>
+          <p>Arrive early and claim access to the outdoor deck. Then move around throughout the cruise rather than staying in one place.</p>
+        </div>
+        <div class="ptg-item">
+          <h4>On a small sailing boat</h4>
+          <p>Do not sit in one place for the entire cruise. The best position for the Statue may not be the best position for the sunset.</p>
+        </div>
+        <div class="ptg-item">
+          <h4>For serious photography</h4>
+          <p>Stay away from windows, interior glass, railings directly in front of your lens, and areas where passengers constantly walk through your frame.</p>
+        </div>
+        <div class="ptg-item">
+          <h4>Timing your position</h4>
+          <p>Do not wait until the final five minutes to find your spot. That is when everyone else has the same idea.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- PRACTICAL TIPS -->
+      <h2 id="practical">Practical Tips Before You Book</h2>
+
+      <h3>How Early Should You Arrive?</h3>
+      <p>For a popular sunset cruise, arrive <strong>30&ndash;45 minutes before departure</strong>. The best outdoor positions become much more valuable as sunset approaches. Manhattan by Sail specifically recommends arriving approximately 30 minutes early. For Circle Line, arriving early is also worthwhile because queues can build before popular departures. If photography matters, err toward the earlier end of that range.</p>
+
+      <h3>What Should You Wear?</h3>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local">
+          <div class="callout-title">Large sightseeing boat</div>
+          <p style="font-size:13.5px;">Normal NYC evening clothes are usually fine with an extra layer. The wind on the outer deck can be noticeably cooler than on the streets.</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Sailing boat (Shearwater / Adirondack)</div>
+          <p style="font-size:13.5px;">Bring a jacket. Seriously. Conditions on the water can be around 10&deg;F cooler than Manhattan streets. Manhattan by Sail specifically recommends layers.</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Fall</div>
+          <p style="font-size:13.5px;">Bring an extra layer even if the afternoon feels warm. Evening temperatures on the water drop quickly after sunset.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Winter</div>
+          <p style="font-size:13.5px;">Strongly favor a boat with good indoor or heated space. Circle Line and City Cruises covered vessels are the better choice.</p>
+        </div>
+      </div>
+
+      <h3>What Happens If It Rains?</h3>
+      <p>This is one of the biggest reasons to prefer large boats when the forecast looks questionable. A large sightseeing vessel gives you somewhere to retreat. A small sailing boat is much more dependent on the weather. Before booking, check the individual cruise's cancellation policy, weather policy, rescheduling options, and refund rules. Do not assume every cruise handles bad weather the same way.</p>
+
+      <hr class="divider-rule">
+
+      <!-- OBSERVATION DECK VS CRUISE -->
+      <h2 id="obs-vs-cruise">Is a Sunset Cruise Worth It If You Are Already Visiting an Observation Deck?</h2>
+      <p>Yes &mdash; but only if you understand that you are getting a different perspective. An observation deck gives you NYC from above. A cruise gives you NYC from outside the skyline. From the water, you are looking back at Lower Manhattan, bridges, the Statue of Liberty, Brooklyn, Manhattan's waterfront and the skyscraper wall. That is something you cannot reproduce from Top of the Rock, SUMMIT, Edge or the Empire State Building. But if you are short on time, you do not necessarily need both.</p>
+
+      <p>For the complete guide to observation decks: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></p>
+
+      <h3>Sunset Cruise vs Observation Deck: Which Should You Choose?</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:280px;font-size:13px;">
+          <tr><th>If you want&hellip;</th><th>Choose</th></tr>
+          <tr><td>Statue of Liberty</td><td>Cruise</td></tr>
+          <tr><td>Brooklyn Bridge from water</td><td>Cruise</td></tr>
+          <tr><td>Manhattan skyline from outside</td><td>Cruise</td></tr>
+          <tr><td>Skyscraper views</td><td>Observation deck</td></tr>
+          <tr><td>City below you</td><td>Observation deck</td></tr>
+          <tr><td>Sunset over Manhattan</td><td>Observation deck or waterfront</td></tr>
+          <tr><td>Statue and sunset together</td><td>Cruise</td></tr>
+          <tr><td>Romantic boat experience</td><td>Cruise</td></tr>
+          <tr><td>Best aerial photos</td><td>Observation deck</td></tr>
+          <tr><td>Night skyline from water</td><td>Cruise</td></tr>
+          <tr><td>No motion</td><td>Observation deck</td></tr>
+          <tr><td>Maximum sightseeing variety</td><td>Cruise</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BEST BY TYPE -->
+      <h2 id="best-for">Best Sunset Cruises by Traveler Type</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Best for First-Time Visitors</div>
+          <p style="font-size:13.5px;"><strong>Circle Line Statue at Sunset.</strong> It gives you the most balanced introduction to the harbor &mdash; Statue, skyline, bridges and sunset without committing to a three-hour dinner cruise or premium sailing experience.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Best for Couples</div>
+          <p style="font-size:13.5px;"><strong>Shearwater or Classic Harbor Line.</strong> For an anniversary or date night, pay more for intimacy rather than food.</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Best for Families</div>
+          <p style="font-size:13.5px;"><strong>Circle Line.</strong> The indoor/outdoor flexibility makes it much easier to manage with children.</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Best for Photographers</div>
+          <p style="font-size:13.5px;"><strong>Shearwater or Adirondack.</strong> Small boats and open decks create much better photographic opportunities than large sightseeing vessels.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Best Budget Option</div>
+          <p style="font-size:13.5px;"><strong>Circle Line</strong>, especially when you can find a lower-priced departure. If budget is important, check whether a city pass applies: <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass</a>.</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Best Premium Experience</div>
+          <p style="font-size:13.5px;"><strong>Classic Harbor Line.</strong> You are paying for the boat, atmosphere and intimacy rather than simply buying a more expensive seat on a larger vessel.</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Best Party Cruise</div>
+          <p style="font-size:13.5px;"><strong>City Cruises Alive After Five.</strong> Choose it for drinks, music and atmosphere. Do not choose it because you want a quiet sunset.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Best Dinner Cruise</div>
+          <p style="font-size:13.5px;"><strong>Bateaux New York.</strong> Choose it for the entire evening, not simply the sunset.</p>
+        </div>
+      </div>
+
+      <!-- STATEN ISLAND FERRY NOTE -->
+      <h3>What About the Staten Island Ferry?</h3>
+      <p>If you are looking for a cheap way to see the Statue of Liberty and harbor, the Staten Island Ferry deserves consideration. But it is not a substitute for a sunset cruise. It is transportation first. A sightseeing cruise is an experience. The ferry can be fantastic for budget travelers, but you do not get the same curated route, atmosphere or dedicated sunset experience. Read the full comparison: <a href="statue-of-liberty-vs-staten-island-ferry.html">Staten Island Ferry vs Statue City Cruises: Which Is Better?</a></p>
+
+      <!-- DAYTIME VS SUNSET -->
+      <h3>Is a Sunset Cruise Better Than a Daytime Cruise?</h3>
+      <p>For most tourists, yes. The reason is not simply the sunset. It is the sequence. A good evening cruise can give you daylight, golden hour, sunset, blue hour and the illuminated skyline all in one trip. A daytime cruise gives you excellent visibility. A sunset cruise gives you a changing city. That tends to be more memorable.</p>
+
+      <hr class="divider-rule">
+
+      <!-- SEASONAL -->
+      <h2 id="seasonal">Best Time of Year for a NYC Sunset Cruise</h2>
+      <p>Summer is popular because the weather is warm and sunset is dramatic. But there is a problem: the sun sets very late. In late July, sunset is around 8:13 PM. By early November, it is around 4:52 PM. By early December, around 4:30 PM. That completely changes which cruises work, and at what times.</p>
+
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/b3/8a/3f/lower-manhattan-with.jpg?w=1400&h=-1&s=1" alt="Lower Manhattan skyline at golden hour from New York Harbor — the view that defines a New York sunset cruise experience">
+        <div class="cap">The Lower Manhattan skyline during golden hour &mdash; the moment that makes an evening cruise feel completely different from anything you can see from a rooftop or observation deck. The quality of this light changes dramatically by season, which is why departure time matters as much as the cruise you choose.</div>
+      </div>
+
+      <div class="season-grid">
+        <div class="sg-item sg-spring">
+          <h4>May &ndash; June</h4>
+          <p>Excellent. Long evenings and plenty of time for daylight, sunset and blue hour on the same cruise.</p>
+        </div>
+        <div class="sg-item sg-summer">
+          <h4>July &ndash; August</h4>
+          <p>Excellent, but check the departure time carefully. A cruise at 6 PM may not deliver much actual sunset.</p>
+        </div>
+        <div class="sg-item sg-fall">
+          <h4>September &ndash; October</h4>
+          <p>Possibly the best period. Earlier sunset, comfortable temperatures, and a much better chance of experiencing the full transition in one cruise.</p>
+        </div>
+        <div class="sg-item sg-winter">
+          <h4>November &ndash; December</h4>
+          <p>Do not automatically chase sunset. Look for an evening skyline cruise instead. Early darkness can make winter cruises fantastic for illuminated-city views.</p>
+        </div>
+      </div>
+
+      <p>For more on the best time of year to visit New York: <a href="best-time-to-visit-nyc.html">Best Time to Visit NYC: Month-by-Month Guide</a></p>
+
+      <!-- CROWDS -->
+      <h3>How Crowded Are NYC Sunset Cruises?</h3>
+      <p>Sunset is naturally the most desirable departure period. Everyone wants the outdoor deck at the exact moment the sky turns orange. That creates a predictable rush on larger cruises. On small sailing cruises, the limited capacity does much of the work for you. If taking Circle Line, arrive early. If taking a small yacht, the passenger limit ensures a more controlled experience regardless of when you board.</p>
+
+      <hr class="divider-rule">
+
+      <!-- WHAT I'D BOOK -->
+      <h2 id="what-id-book">What I Would Actually Book</h2>
+      <p>Here is how the decision breaks down for different trips.</p>
+
+      <div class="card-grid cols-2">
+        <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:12px;overflow:hidden;border:1px solid var(--border);">
+          <div class="decision-row" style="padding:10px 14px;background:var(--bg-card);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">First trip to NYC</div>
+            <div class="dr-pick"><a href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Statue at Sunset</a> &mdash; maximum sightseeing</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:rgba(15,23,42,.025);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Romantic weekend</div>
+            <div class="dr-pick"><a href="https://manhattanbysail.com/shearwater/" target="_blank" rel="noopener">Shearwater</a> &mdash; the boat itself becomes part of the date</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:var(--bg-card);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Photography trip</div>
+            <div class="dr-pick"><a href="https://classicharborline.com/adirondack-schooners/" target="_blank" rel="noopener">Adirondack</a> &mdash; schooner, open deck, harbor perspective</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:rgba(15,23,42,.025);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Summer date night</div>
+            <div class="dr-pick"><a href="https://sail-nyc.com/public-cruises/sunset-boat-tour-of-nyc-with-cocktails/" target="_blank" rel="noopener">Classic Harbor Line mini-yacht</a> &mdash; smaller, quieter, more intimate</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:var(--bg-card);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Friends visiting NYC</div>
+            <div class="dr-pick"><a href="https://www.cityexperiences.com/new-york/city-cruises/alive-after-five-happy-hour-cruise/" target="_blank" rel="noopener">City Cruises Alive After Five</a> &mdash; especially if everyone wants drinks and music</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:rgba(15,23,42,.025);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Anniversary dinner</div>
+            <div class="dr-pick"><a href="https://www.cityexperiences.com/new-york/city-cruises/bateaux-dinner-cruise/" target="_blank" rel="noopener">Bateaux</a> &mdash; buying a complete evening, not just a boat ride</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:var(--bg-card);display:flex;gap:12px;align-items:flex-start;">
+            <div class="dr-label">Winter trip</div>
+            <div class="dr-pick"><a href="https://www.viator.com/tours/New-York-City/Circle-Line-Harbor-Lights-Night-Cruise/d687-2800HLC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Harbor Lights</a> &mdash; prioritize comfort and skyline lights</div>
+          </div>
+          <div class="decision-row" style="padding:10px 14px;background:rgba(15,23,42,.025);display:flex;gap:12px;align-items:flex-start;border-bottom:none;">
+            <div class="dr-label">Only one free evening</div>
+            <div class="dr-pick"><a href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Statue at Sunset</a> &mdash; the best compromise</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Final Ranking</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;">
+          <tr><th>#</th><th>Cruise</th><th>Best At</th></tr>
+          <tr><td>1</td><td><strong>Circle Line Statue at Sunset</strong></td><td>Best overall — safest recommendation for most tourists</td></tr>
+          <tr><td>2</td><td><strong>Manhattan by Sail Shearwater</strong></td><td>Best actual sunset experience</td></tr>
+          <tr><td>3</td><td><strong>Classic Harbor Line Adirondack</strong></td><td>Best sailing experience</td></tr>
+          <tr><td>4</td><td><strong>Classic Harbor Line Kingston/Full Moon</strong></td><td>Best intimate experience for couples</td></tr>
+          <tr><td>5</td><td><strong>Circle Line Harbor Lights</strong></td><td>Best skyline after dark</td></tr>
+          <tr><td>6</td><td><strong>Bateaux New York</strong></td><td>Best dinner experience</td></tr>
+          <tr><td>7</td><td><strong>City Cruises Alive After Five</strong></td><td>Best party atmosphere</td></tr>
+        </table>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Is a sunset cruise in NYC worth it?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, especially if you have never seen Manhattan from the water. A good sunset cruise can combine the Statue of Liberty, Lower Manhattan, bridges, golden hour, sunset and the illuminated skyline in a single experience.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the best sunset cruise in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">For most first-time visitors, Circle Line's Statue at Sunset is the best all-around option. For the actual sunset experience, Manhattan by Sail's Shearwater is the stronger choice.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which NYC sunset cruise is best for couples?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Shearwater or a Classic Harbor Line small-boat cruise. They are substantially more intimate than a large sightseeing vessel.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which sunset cruise is best for families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Circle Line is the easiest choice because of its size, indoor/outdoor areas and flexibility.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which NYC cruise is best for photography?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Classic Harbor Line's Adirondack and Manhattan by Sail's Shearwater are the top choices because of their open decks, smaller scale and sailing atmosphere.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you see the Statue of Liberty on a sunset cruise?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes. Circle Line, Manhattan by Sail and Classic Harbor Line sunset experiences all provide Statue of Liberty views.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Will I definitely see the sunset on a NYC sunset cruise?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. This is one of the most important things to understand before booking. Sunset time changes dramatically throughout the year, and the boat's route determines where you are when the sun actually sets.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What month is best for a sunset cruise in NYC?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">September and October are particularly good because sunset occurs earlier than in midsummer while evening temperatures are still comfortable. Summer can be excellent too, but pay closer attention to departure times.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is a sunset cruise better than Top of the Rock?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">They offer completely different views. A cruise gives you the skyline from the water and excellent views of the Statue of Liberty and bridges. Top of the Rock gives you an elevated view over Manhattan. Both can be worthwhile on the same trip if you have the time.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What should I wear on an NYC sunset cruise?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Bring an extra layer, particularly on sailing boats. It can feel significantly cooler and windier on the water than on Manhattan streets.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are NYC sunset cruises good in winter?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">They can be, but focus less on the actual sunset and more on the illuminated skyline. Sunset arrives very early in winter, so many evening cruises are effectively night cruises.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How early should I arrive for a sunset cruise?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Aim for approximately 30&ndash;45 minutes before departure, particularly if you want a good outdoor viewing position.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are sunset cruises good for people who get seasick?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Large sightseeing boats are generally the safer choice for people concerned about motion sickness because they are larger and tend to move more steadily than smaller sailing vessels.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Should I book if I am already going to an observation deck?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">If you have the time and want to experience NYC from the water, yes. The perspectives are completely different. If your itinerary is already packed, you do not necessarily need both.</div>
+        </details>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL VERDICT -->
+      <h2 id="final-verdict">Final Verdict: Which NYC Sunset Cruise Should You Book?</h2>
+      <p>The biggest mistake is shopping for the cruise with the highest rating or the prettiest photo. Instead, decide what you actually want.</p>
+
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Want the most sightseeing?</div>
+          <p><a href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Statue at Sunset &rarr;</a></p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Want the actual sunset?</div>
+          <p><a href="https://manhattanbysail.com/shearwater/" target="_blank" rel="noopener">Manhattan by Sail Shearwater &rarr;</a></p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Want a beautiful sailing experience?</div>
+          <p><a href="https://classicharborline.com/adirondack-schooners/" target="_blank" rel="noopener">Classic Harbor Line Adirondack &rarr;</a></p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Want romance?</div>
+          <p><a href="https://sail-nyc.com/public-cruises/sunset-boat-tour-of-nyc-with-cocktails/" target="_blank" rel="noopener">Classic Harbor Line Kingston &rarr;</a></p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Want skyline lights?</div>
+          <p><a href="https://www.viator.com/tours/New-York-City/Circle-Line-Harbor-Lights-Night-Cruise/d687-2800HLC?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Circle Line Harbor Lights &rarr;</a></p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Want drinks and music?</div>
+          <p><a href="https://www.cityexperiences.com/new-york/city-cruises/alive-after-five-happy-hour-cruise/" target="_blank" rel="noopener">City Cruises Alive After Five &rarr;</a></p>
+        </div>
+        <div class="callout callout-summary" style="grid-column:1/-1;">
+          <div class="callout-title">Want dinner?</div>
+          <p><a href="https://www.cityexperiences.com/new-york/city-cruises/bateaux-dinner-cruise/" target="_blank" rel="noopener">Bateaux New York &rarr;</a></p>
+        </div>
+      </div>
+
+      <p>For the average first-time NYC visitor: <strong>Circle Line Statue at Sunset</strong>. For someone whose entire point of the evening is watching the sun go down over New York Harbor: <strong>Shearwater</strong>. That is the distinction worth keeping in mind before spending your money.</p>
+
+    </div>
+  </article>
+
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-cruise-tours.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Cruises Compared: The Complete Harbor Cruise Guide</a></li>
+      <li><a href="circle-line-vs-classic-harbor-line.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Circle Line vs Classic Harbor Line: Which NYC Cruise Should You Choose?</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Visitor Guide</a></li>
+      <li><a href="statue-of-liberty-vs-staten-island-ferry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Staten Island Ferry vs Statue City Cruises: Which Is Better?</a></li>
+      <li><a href="best-free-skyline-views-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Free Skyline Views in NYC: 25 Viewpoints That Do Not Cost a Dollar</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></li>
+      <li><a href="nyc-helicopter-tours.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Helicopter Tours Compared: Which Flight Is Worth Booking?</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Is Actually Worth It?</a></li>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Evening on the Water</h3>
+    <p class="sub">Book with flexible cancellation so you can plan ahead with confidence.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://www.viator.com/tours/New-York-City/Statue-of-Liberty-Express-Cruise/d687-3763GATEWAY?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">
+        <div class="fc-title">Circle Line Statue at Sunset</div>
+        <div class="fc-sub">Best overall for first-time visitors</div>
+      </a>
+      <a class="footer-card" href="https://manhattanbysail.com/shearwater/" target="_blank" rel="noopener">
+        <div class="fc-title">Shearwater Sunset Sail</div>
+        <div class="fc-sub">Best for the actual sunset experience</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){
+  document.getElementById('snLinks').classList.toggle('open');
+});
+var secs=['quick-answer','the-mistake','cruises','comparison','actual-sunset','skyline-views','photography','practical','obs-vs-cruise','best-for','seasonal','what-id-book','faq','final-verdict'];
+var slinks=document.querySelectorAll('.side-nav a');
+var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){
+  var cur=secs[0];
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});
+  snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+</script>
+</body>
+</html>
