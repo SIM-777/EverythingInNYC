@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which NYC Attractions Are Close Enough to Do Together? | EverythingInNYC</title>
+<meta name="description" content="A practical guide to grouping NYC attractions. Find out which combinations actually work, which to avoid, and how to plan a day without unnecessary backtracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){.sn-inner{display:none;flex-direction:column;gap:0;padding:0;}.sn-inner.open{display:flex;}.sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}.sn-toggle{display:block;}.sticky-nav{display:flex;align-items:center;justify-content:space-between;}.sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}}
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+.vb{display:inline-flex;align-items:center;padding:4px 12px;border-radius:20px;font-family:var(--font-head);font-weight:800;font-size:12px;margin:8px 0;}
+.vb-green{background:#14532d;color:#fff;}.vb-yellow{background:#92400e;color:#fff;}.vb-red{background:#7f1d1d;color:#fff;}
+.cluster-section{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:16px 0;}
+.cs-head{padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.cs-head-green{background:#14532d;}.cs-head-yellow{background:#92400e;}.cs-head-red{background:#7f1d1d;}
+.cs-label{font-family:var(--font-head);font-weight:800;font-size:11px;color:rgba(255,255,255,.7);flex:none;}
+.cs-title{font-family:var(--font-head);font-weight:800;font-size:15.5px;color:#fff;flex:1;}
+.cs-body{padding:14px 16px;}
+.sect-img{margin:14px 0 10px;}.sect-img img{width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+.rf-stop{display:flex;align-items:center;gap:8px;padding:5px 0;}.rf-dot{width:9px;height:9px;border-radius:50%;background:var(--navy);flex:none;}.rf-name{font-size:14px;font-weight:600;color:var(--navy);}
+.cmi-item{border-radius:12px;overflow:hidden;margin:8px 0;}.cmi-head{padding:8px 16px;font-family:var(--font-head);font-weight:800;font-size:13.5px;color:#fff;background:var(--navy);}.cmi-body{padding:10px 16px;background:var(--bg-card);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;font-size:13.5px;}.cmi-route{font-weight:700;color:var(--navy);margin-bottom:5px;}
+.fstep{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);}.fstep:last-child{border-bottom:none;}.fs-n{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);background:var(--navy);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;}.fs-b{flex:1;font-size:14.5px;}.fs-b strong{color:var(--navy);}
+.q-item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);}.q-item:last-child{border-bottom:none;}.q-num{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);background:var(--navy);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;}.q-text{font-size:14.5px;flex:1;}.q-text strong{color:var(--navy);display:block;margin-bottom:2px;}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On This Page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#quick-answer">Quick Answer</a>
+    <a href="#golden-rule">Golden Rule</a>
+    <a href="#midtown">Midtown</a>
+    <a href="#chelsea">Chelsea</a>
+    <a href="#lower-manhattan">Lower Manhattan</a>
+    <a href="#statue">Statue of Liberty</a>
+    <a href="#brooklyn">Brooklyn</a>
+    <a href="#soho">SoHo</a>
+    <a href="#central-park">Central Park</a>
+    <a href="#avoid">What to Avoid</a>
+    <a href="#time-rules">Time Rules</a>
+    <a href="#cluster-map">Cluster Map</a>
+    <a href="#formula">Formula</a>
+    <a href="#final-verdict">Final Verdict</a>
+    <a href="#reference">Quick Reference</a>
+  </div>
+</div>
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#golden-rule">Golden Rule</a>
+  <a href="#five-questions">5 Questions</a>
+  <a href="#system">Green/Yellow/Red</a>
+  <a href="#midtown">Midtown</a>
+  <a href="#chelsea">Chelsea &amp; Hudson Yards</a>
+  <a href="#lower-manhattan">Lower Manhattan</a>
+  <a href="#statue">Statue of Liberty</a>
+  <a href="#brooklyn">Brooklyn</a>
+  <a href="#soho">SoHo</a>
+  <a href="#central-park">Central Park + Met</a>
+  <a href="#avoid">What to Avoid</a>
+  <a href="#time-rules">Time Rules</a>
+  <a href="#add-ons">Easy Add-Ons</a>
+  <a href="#walking-subway">Walk vs Subway</a>
+  <a href="#cluster-map">Cluster Map</a>
+  <a href="#formula">Formula</a>
+  <a href="#final-verdict">Final Verdict</a>
+  <a href="#reference">Quick Reference</a>
+</nav>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>Which NYC Attractions Are Close Enough to Do Together?</h1>
+      <div class="article-meta"><span>A practical guide to grouping attractions &mdash; what actually works, what to avoid, and how to build a day without crossing Manhattan three times</span></div>
+    </div>
+    <img class="article-hero-img" src="nyc-attractions-close-together-map.png" alt="NYC attraction clusters map showing which sightseeing spots to combine in one day">
+    <div class="article-body">
+      <p>Planning an NYC trip sounds simple until you put your attractions on a map. Times Square is here. The Statue of Liberty is there. The Empire State Building looks surprisingly close to everything. The Brooklyn Bridge seems like it should fit into almost any downtown itinerary. And then you try to do all of it. Suddenly you are spending half the day underground, walking 20,000-plus steps, racing toward a timed ticket, or crossing Manhattan for the third time.</p>
+      <p>The best NYC itineraries are not built by asking "What attractions are near each other?" They are built by asking: <strong>"Which attractions can I experience together without wasting time getting from one to the next?"</strong> Two attractions can be half a mile apart and still be a terrible combination. Another two can be several subway stops apart but work beautifully on the same day because the transportation between them is simple and worthwhile. For a complete guide to how many to plan: <a href="how-much-can-you-see-in-one-day-nyc.html">How Many NYC Attractions Can You Realistically Do in One Day?</a></p>
+      <hr class="divider-rule">
+      <h2 id="quick-answer">Quick Answer: The Best NYC Attraction Combinations</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:380px;font-size:13px;">
+          <tr><th>Area</th><th>Attractions to Combine</th><th>Verdict</th></tr>
+          <tr><td>Midtown</td><td>Times Square &rarr; Bryant Park &rarr; NYPL &rarr; Grand Central</td><td>Excellent</td></tr>
+          <tr><td>Midtown</td><td>Grand Central &rarr; Chrysler Building</td><td>Excellent</td></tr>
+          <tr><td>Midtown</td><td>Rockefeller Center &rarr; St. Patrick's Cathedral &rarr; Fifth Avenue</td><td>Excellent</td></tr>
+          <tr><td>Chelsea</td><td>Hudson Yards &rarr; High Line &rarr; Chelsea Market</td><td>Excellent</td></tr>
+          <tr><td>Chelsea</td><td>High Line &rarr; Chelsea Market &rarr; Little Island</td><td>Excellent</td></tr>
+          <tr><td>Lower Manhattan</td><td>9/11 Memorial &rarr; Oculus &rarr; Wall Street &rarr; Battery Park</td><td>Excellent</td></tr>
+          <tr><td>Brooklyn</td><td>Brooklyn Heights &rarr; Brooklyn Bridge Park &rarr; DUMBO &rarr; Brooklyn Bridge</td><td>Excellent</td></tr>
+          <tr><td>Downtown</td><td>SoHo &rarr; Little Italy &rarr; Chinatown</td><td>Excellent</td></tr>
+          <tr><td>Upper East Side</td><td>Central Park &rarr; The Met</td><td>Excellent</td></tr>
+          <tr><td>Statue of Liberty</td><td>Statue of Liberty &rarr; Battery Park &rarr; Wall Street</td><td>Good, anchor the day around the ferry</td></tr>
+          <tr><td>Midtown</td><td>Empire State Building + Midtown attractions</td><td>Good, but reservation-dependent</td></tr>
+          <tr><td>Downtown + Brooklyn</td><td>Statue of Liberty &rarr; Brooklyn Bridge &rarr; DUMBO</td><td>Possible, but a long day</td></tr>
+          <tr><td>Manhattan</td><td>Central Park + Brooklyn Bridge</td><td>Not a natural walking combination</td></tr>
+          <tr><td>Manhattan</td><td>Hudson Yards + DUMBO</td><td>Do not force it</td></tr>
+          <tr><td>Manhattan</td><td>Statue of Liberty + Central Park</td><td>Would not do it</td></tr>
+        </table>
+      </div>
+      <p><strong>Green does not simply mean "close."</strong> It means the attractions work together geographically, directionally and practically.</p>
+      <hr class="divider-rule">
+      <h2 id="golden-rule">The Golden Rule of Grouping NYC Attractions</h2>
+      <div class="callout callout-summary"><div class="callout-title">The rule</div><p><strong>Group attractions that allow you to keep moving in one direction.</strong> This is much more useful than grouping everything within a certain radius.</p></div>
+      <p>Times Square &rarr; Bryant Park &rarr; NYPL &rarr; Grand Central makes sense because you are progressively moving east. DUMBO &rarr; Brooklyn Bridge &rarr; Manhattan makes sense because the bridge becomes your route between two sightseeing areas. But Central Park &rarr; Brooklyn Bridge &rarr; Central Park is just unnecessary backtracking &mdash; the mistake seen most often in NYC trip plans. People look at a map and think "it is only 2 miles." The real question is: why are you going back over there?</p>
+      <hr class="divider-rule">
+      <h2 id="five-questions">What Makes Two NYC Attractions Good to Combine?</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="q-item" style="padding:10px 16px;"><div class="q-num">1</div><div class="q-text"><strong>Are they genuinely walkable?</strong> Not just technically walkable. Comfortably walkable.</div></div>
+        <div class="q-item" style="padding:10px 16px;"><div class="q-num">2</div><div class="q-text"><strong>Do they follow the same direction?</strong> A 15-minute walk south can be much more useful than a 10-minute walk north followed by another 20-minute walk back south.</div></div>
+        <div class="q-item" style="padding:10px 16px;"><div class="q-num">3</div><div class="q-text"><strong>How long does each attraction take?</strong> Times Square and the Metropolitan Museum of Art are not equivalent stops. One can be a 20-minute visit. The other can consume several hours.</div></div>
+        <div class="q-item" style="padding:10px 16px;"><div class="q-num">4</div><div class="q-text"><strong>Does either attraction have a timed entry?</strong> This can completely change an otherwise perfect walking route.</div></div>
+        <div class="q-item" style="padding:10px 16px;border-bottom:none;"><div class="q-num">5</div><div class="q-text"><strong>Will you actually enjoy the combination?</strong> A route can be geographically perfect and still be miserable if you are exhausted by the fourth stop.</div></div>
+      </div>
+      <h2 id="system">The Green, Yellow and Red System</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Green &mdash; Definitely Combine</div><p style="font-size:13.5px;">These attractions naturally belong together. Walking is easy, the route makes sense and you are not creating unnecessary transportation.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Yellow &mdash; Combine With Conditions</div><p style="font-size:13.5px;">The combination works, but something matters: a timed ticket, a long attraction, a ferry, considerable walking, weather, crowds, or a specific order.</p></div>
+      </div>
+      <div class="callout callout-tip"><div class="callout-title">Red &mdash; Do Not Combine</div><p>You technically can. But "Can I do it?" and "Should I do it?" are very different questions in NYC.</p></div>
+      <hr class="divider-rule">
+      <h2 id="midtown">Midtown: The Easiest Area to Build Around</h2>
+      <p>Midtown is where this strategy works beautifully. There are so many famous attractions packed into a relatively small area that you can spend hours sightseeing without touching the subway. But do not treat all of Midtown as one giant cluster &mdash; break it into walking corridors. Read the full step-by-step Midtown route: <a href="nyc-christmas-walking-route.html">Best NYC Midtown Walking Route</a></p>
+      <div class="cluster-section" id="ts-route">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Times Square &rarr; Bryant Park &rarr; NYPL &rarr; Grand Central</span></div>
+        <div class="cs-body">
+          <p>One of the easiest attraction combinations in Manhattan. These are not four separate destinations requiring four separate journeys. They are one continuous sightseeing walk. Times Square to Bryant Park is only a few blocks, and Bryant Park, the NYPL and Grand Central follow naturally eastward.</p>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Times Square</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Bryant Park</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">New York Public Library</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Grand Central Terminal</span></div>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/4d/e7/c8/grand-central-terminal.jpg?w=2000&h=-1&s=1" alt="Grand Central Terminal main concourse &mdash; the endpoint of the Times Square to Bryant Park to NYPL Midtown walking corridor">
+            <div class="cap">Grand Central Terminal &mdash; the natural endpoint of the Times Square &rarr; Bryant Park &rarr; NYPL walking corridor. Give yourself enough time to actually explore the building rather than simply photographing the main concourse. For nearby stops: <a href="best-things-to-do-near-times-square.html">Best Things to Do Near Times Square</a></div>
+          </div>
+          <p><strong>Realistic time:</strong> About 2&ndash;3 hours for a relaxed visit. More if you stop for food or photos.</p>
+          <div class="vb vb-green">GREEN &mdash; Definitely combine</div>
+        </div>
+      </div>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Grand Central + Chrysler Building</span></div>
+        <div class="cs-body"><p>Almost too easy. The Chrysler Building is close enough to Grand Central that it makes little sense to create a separate sightseeing trip. Treat it as an <strong>easy add-on</strong>. Do not build an entire afternoon around traveling to see the Chrysler Building alone.</p><div class="vb vb-green">GREEN &mdash; Add it while you are already in the area</div></div>
+      </div>
+      <div class="cluster-section" id="rock-route">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Rockefeller Center + St. Patrick's Cathedral + Fifth Avenue</span></div>
+        <div class="cs-body">
+          <p>Another excellent walking chain. Move from Rockefeller Center to St. Patrick's Cathedral to Fifth Avenue without transportation. Fifth Avenue gives you an obvious continuation toward Central Park.</p>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Times Square</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Rockefeller Center</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">St. Patrick's Cathedral</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Fifth Avenue</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Central Park</span></div>
+          <p style="font-size:13.5px;margin-top:8px;">For observation deck options in this cluster: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></p>
+          <div class="vb vb-green">GREEN &mdash; One of the best Midtown progressions</div>
+        </div>
+      </div>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-yellow"><span class="cs-label">YELLOW</span><span class="cs-title">Empire State Building + Midtown Attractions</span></div>
+        <div class="cs-body">
+          <p>The Empire State Building absolutely belongs in a Midtown sightseeing day geographically. But it is not simply another 20-minute photo stop. You need a specific reservation time. Your route should be built <strong>around your Empire State Building reservation</strong>, not the other way around. A rigid schedule like 9:00 Times Square &rarr; 9:30 Bryant Park &rarr; 10:00 NYPL &rarr; 10:30 Grand Central &rarr; 11:00 Chrysler &rarr; 11:30 Empire State &rarr; 12:30 Rockefeller &rarr; 1:30 Central Park looks fantastic in a spreadsheet. It is not how a real NYC morning works.</p>
+          <div class="vb vb-yellow">YELLOW &mdash; Excellent geographic combination, but reservation-dependent</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="chelsea">Chelsea and Hudson Yards: One of NYC's Best Walking Clusters</h2>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Hudson Yards &rarr; High Line &rarr; Chelsea Market</span></div>
+        <div class="cs-body">
+          <p>Exactly what useful proximity means. Start at Hudson Yards, visit Vessel and the surrounding complex, then enter the High Line and head south. Eventually you reach Chelsea Market. You have not just visited three attractions &mdash; you have walked through one continuous part of Manhattan. A guided route covering this cluster is about 1.5 miles and three hours, a useful real-world benchmark.</p>
+          <p><strong>Realistic time:</strong> About 2.5&ndash;3.5 hours depending on how much time you spend on the High Line and inside Chelsea Market.</p>
+          <div class="vb vb-green">GREEN &mdash; Definitely combine</div>
+        </div>
+      </div>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN geographically / YELLOW for time</span><span class="cs-title">Add Little Island?</span></div>
+        <div class="cs-body">
+          <p>Hudson Yards &rarr; High Line &rarr; Chelsea Market &rarr; Little Island is very logical. But by this point you are spending several hours walking and exploring. If you are in summer heat, traveling with children, or simply do not enjoy long walking days, stop at Chelsea Market instead.</p>
+          <div class="card-grid cols-2">
+            <div class="callout callout-summary"><div class="callout-title">3 hours available</div><p style="font-size:14px;">Hudson Yards &rarr; High Line &rarr; Chelsea Market</p></div>
+            <div class="callout callout-local"><div class="callout-title">4+ hours available</div><p style="font-size:14px;">Add Little Island</p></div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="lower-manhattan">Lower Manhattan: The Best Downtown Cluster</h2>
+      <p>Lower Manhattan is another area where tourists can save enormous amounts of time simply by walking in the right direction. For a full self-guided route: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary</a></p>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN / YELLOW with Museum</span><span class="cs-title">9/11 Memorial &rarr; Oculus &rarr; Wall Street &rarr; Battery Park</span></div>
+        <div class="cs-body">
+          <p>One of the best downtown combinations. Start around the World Trade Center and progressively work south: 9/11 Memorial &rarr; Oculus &rarr; Wall Street &rarr; Charging Bull &rarr; Stone Street &rarr; Battery Park. There is very little reason to keep jumping on and off the subway.</p>
+          <p><strong>Important distinction:</strong> The 9/11 Memorial itself is easy to incorporate. The 9/11 Museum changes the calculation &mdash; advance tickets are required and it deserves at least 45&ndash;90 minutes. Without the Museum: GREEN. With the Museum: YELLOW.</p>
+          <p><strong>Realistic time:</strong> 3&ndash;4 hours without a substantial museum visit. 4&ndash;5+ hours with the 9/11 Museum.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="statue">Statue of Liberty: The Attraction That Changes Your Entire Day</h2>
+      <p>The Statue of Liberty is not just another Lower Manhattan attraction. It is a <strong>transportation-dependent anchor</strong>. Liberty Island can only be reached by ferry, and ferry schedules determine how the day works. Do not treat it as equivalent to the Charging Bull &mdash; that can be a 5-minute stop; the Statue can consume a major part of your day. Full planning guides: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty</a> &bull; <a href="statue-of-liberty-vs-staten-island-ferry.html">Statue of Liberty Ferry vs Staten Island Ferry</a></p>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Statue of Liberty + Battery Park + Wall Street</span></div>
+        <div class="cs-body"><p>Make the Statue your anchor, return to Battery Park and then work north through Lower Manhattan: Statue of Liberty &rarr; Battery Park &rarr; Charging Bull &rarr; Wall Street &rarr; Stone Street. You are not crossing the city. You are simply continuing north.</p><div class="vb vb-green">GREEN geographically &mdash; but plan the entire day around the ferry</div></div>
+      </div>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-yellow"><span class="cs-label">YELLOW</span><span class="cs-title">Statue of Liberty + Brooklyn Bridge + DUMBO</span></div>
+        <div class="cs-body"><p>Can you do it? Yes. Would you recommend it to everyone? No. If you take an early ferry and are comfortable with a long sightseeing day, you can return to Manhattan, explore Lower Manhattan and make your way toward the Brooklyn Bridge. But this becomes a <strong>full-day sightseeing mission</strong>, not a casual combination.</p><div class="vb vb-yellow">YELLOW &mdash; doable for energetic travelers with enough time</div></div>
+      </div>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-red"><span class="cs-label">RED</span><span class="cs-title">Statue of Liberty + Central Park</span></div>
+        <div class="cs-body"><p>This is one of those combinations that technically works on a map because both attractions are "in Manhattan." You are taking a ferry-based attraction in Lower Manhattan and combining it with an enormous park far uptown. You can visit both during the same trip &mdash; just do not group them into the same sightseeing block. The same logic applies to Statue of Liberty + The Met.</p><div class="vb vb-red">RED &mdash; put them on different parts of your itinerary</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="brooklyn">Brooklyn: Where Direction Matters Most</h2>
+      <p>The mistake is treating DUMBO, Brooklyn Heights, Brooklyn Bridge Park, Brooklyn Bridge, Prospect Park, Brooklyn Botanic Garden, and Brooklyn Museum as one giant "Brooklyn day." There are distinct clusters. For the best skyline photography along this route: <a href="best-free-skyline-views-in-nyc.html">Best Free Skyline Views in NYC</a></p>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">Brooklyn Heights &rarr; Brooklyn Bridge Park &rarr; DUMBO &rarr; Brooklyn Bridge</span></div>
+        <div class="cs-body">
+          <p>One of the best combinations in the city. These areas naturally connect along the Brooklyn waterfront.</p>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Brooklyn Heights</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Brooklyn Bridge Park</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">DUMBO</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Brooklyn Bridge</span></div>
+          <div style="padding-left:3px;color:var(--text-secondary);font-size:12px;">&darr;</div>
+          <div class="rf-stop"><span class="rf-dot"></span><span class="rf-name">Manhattan</span></div>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/8f/20/f4/caption.jpg?w=1400&h=-1&s=1" alt="Brooklyn Bridge Park Pier 1 with Lower Manhattan skyline &mdash; midpoint of the Brooklyn waterfront attraction cluster">
+            <div class="cap">Brooklyn Bridge Park looking back at Lower Manhattan &mdash; the midpoint of one of NYC's strongest attraction clusters. The waterfront route from Brooklyn Heights through DUMBO to the Brooklyn Bridge is directionally clean, scenically rewarding, and requires no subway transfers between stops.</div>
+          </div>
+          <p style="font-size:14px;">You are not using the bridge simply as an attraction. You are using it as <strong>transportation between two sightseeing areas</strong>. That is exactly what an efficient itinerary should do. DUMBO &rarr; Brooklyn Bridge &rarr; City Hall &rarr; 9/11 Memorial creates another possible connection where the bridge becomes the connector, not the endpoint.</p>
+          <div class="vb vb-green">GREEN &mdash; one of the strongest attraction clusters in NYC</div>
+          <h4>Which direction on the Brooklyn Bridge?</h4>
+          <p style="font-size:14px;">If scenery matters, prefer DUMBO &rarr; Brooklyn Bridge &rarr; Manhattan rather than crossing from Manhattan and immediately turning around. Explore Brooklyn first, then cross into Manhattan. You finish near City Hall and can continue into Lower Manhattan if you still have energy.</p>
+          <h4>What about Prospect Park and the Brooklyn Botanic Garden?</h4>
+          <p style="font-size:14px;">Good attractions, but they do not belong in the same cluster as DUMBO. Treat Brooklyn Museum + Brooklyn Botanic Garden + Prospect Park as a <em>separate</em> Brooklyn cluster. Do not try to walk both clusters as one sightseeing route.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="soho">SoHo + Little Italy + Chinatown</h2>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN</span><span class="cs-title">SoHo &rarr; Little Italy &rarr; Chinatown</span></div>
+        <div class="cs-body">
+          <p>A completely different kind of cluster. You are not moving between giant ticketed attractions. You are exploring neighborhoods. That makes this combination incredibly flexible &mdash; browse shops, take photographs, eat, stop for coffee, wander side streets, change your route spontaneously, without worrying that you have destroyed a reservation schedule.</p>
+          <p><strong>Realistic time:</strong> 2&ndash;4 hours depending on how much shopping and eating you do.</p>
+          <div class="vb vb-green">GREEN &mdash; and very flexible</div>
+          <p style="font-size:13.5px;"><strong>Do not make the same mistake with neighborhoods.</strong> SoHo &rarr; Chinatown &rarr; Little Italy is compact. But if you start adding Greenwich Village, Washington Square Park, Union Square, Lower East Side, and East Village, you have moved from a compact neighborhood cluster into a much larger downtown walking day.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="central-park">Central Park + The Met</h2>
+      <div class="cluster-section">
+        <div class="cs-head cs-head-green"><span class="cs-label">GREEN &mdash; with conditions</span><span class="cs-title">Central Park + The Metropolitan Museum of Art</span></div>
+        <div class="cs-body">
+          <p>The Met sits directly along the eastern edge of Central Park, so combining the two makes much more sense than treating them as separate sightseeing destinations. But <strong>Central Park is enormous</strong>. Build the route around the <strong>Upper East Side/east side of Central Park</strong>. Spend some time in the park, then visit the Met. Trying to walk through a huge section of Central Park before arriving at the Museum and then spending three hours inside means you will be tired before you even reach the galleries.</p>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/88/5d/43/fonte-bethesda-com-o.jpg?w=1400&h=-1&s=1" alt="Bethesda Fountain in Central Park near the Upper East Side entrance to the Metropolitan Museum of Art">
+            <div class="cap">Bethesda Fountain on Central Park's east side &mdash; the natural connection point between Central Park and The Met. Keep your park time focused on the eastern sections rather than trying to traverse the full park before a museum visit.</div>
+          </div>
+          <div class="vb vb-green">GREEN &mdash; but control the size of your Central Park visit</div>
+          <p style="font-size:13.5px;"><strong>The Met is an anchor too.</strong> Central Park + Met works beautifully. But Central Park + Met + Natural History Museum + Guggenheim is where to start pushing back. You are not saving time anymore. You are simply collecting attractions. Read: <a href="best-nyc-museums.html">Best NYC Museums: Which Should You Visit?</a></p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="avoid">Attractions That Look Close But Should Not Automatically Be Combined</h2>
+      <p>This is probably the most important section of this guide.</p>
+      <div class="cluster-section"><div class="cs-head cs-head-red"><span class="cs-label">RED</span><span class="cs-title">Central Park + Brooklyn Bridge</span></div><div class="cs-body"><p>Technically possible. Not a natural walking cluster. Use the subway if you want both on the same day.</p><div class="vb vb-red">RED</div></div></div>
+      <div class="cluster-section"><div class="cs-head cs-head-red"><span class="cs-label">RED</span><span class="cs-title">Hudson Yards + DUMBO</span></div><div class="cs-body"><p>Both are fantastic. They are just on opposite sides of your sightseeing map. If you have a reason to visit both on one day, use transit. Do not build a walking itinerary around them.</p><div class="vb vb-red">RED as a walking combination</div></div></div>
+      <div class="cluster-section"><div class="cs-head cs-head-red"><span class="cs-label">RED</span><span class="cs-title">High Line + Brooklyn Bridge</span></div><div class="cs-body"><p>The geography does not make sense as one continuous walking route. Visit the High Line with Chelsea. Visit the Brooklyn Bridge with DUMBO.</p><div class="vb vb-red">RED as a walking cluster</div></div></div>
+      <div class="cluster-section"><div class="cs-head cs-head-yellow"><span class="cs-label">YELLOW</span><span class="cs-title">Statue of Liberty + Empire State Building</span></div><div class="cs-body"><p>Popular and possible. But not naturally efficient. The Statue is schedule-heavy. The Empire State Building is reservation-heavy. You are stacking two anchors. It can work with a full day and carefully timed reservations. Check if a <a href="citypass-vs-new-york-pass.html">city pass</a> saves money on both.</p><div class="vb vb-yellow">YELLOW</div></div></div>
+      <hr class="divider-rule">
+      <h2>How Many Major Attractions Should You Combine?</h2>
+      <p>There is no magic number because attractions are not equal. A good day is 1 major attraction + 4 easy add-ons rather than 5 major attractions. For a detailed breakdown: <a href="how-much-can-you-see-in-one-day-nyc.html">How Many NYC Attractions Can You Realistically Do in One Day?</a></p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Good day: Statue of Liberty anchor</div><p style="font-size:14px;">Statue of Liberty &bull; Battery Park &bull; Wall Street &bull; Stone Street &bull; Oculus</p></div>
+        <div class="callout callout-local"><div class="callout-title">Good day: Met anchor</div><p style="font-size:14px;">The Met &bull; Central Park &bull; Fifth Avenue &bull; Rockefeller Center</p></div>
+        <div class="callout callout-tip" style="grid-column:1/-1;"><div class="callout-title">Good day: Edge anchor</div><p style="font-size:14px;">Edge &bull; Hudson Yards &bull; High Line &bull; Chelsea Market &bull; Little Island</p></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="time-rules">Best NYC Attraction Combinations by Time Available</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:260px;font-size:13.5px;">
+          <tr><th>Free Time</th><th>Best Type of Combination</th></tr>
+          <tr><td>2 hours</td><td>Compact cluster with quick stops (Times Square + Bryant Park + NYPL; DUMBO + Brooklyn Bridge Park; SoHo + Chinatown)</td></tr>
+          <tr><td>3 hours</td><td>One strong walking cluster (Times Square &rarr; Grand Central; Hudson Yards &rarr; High Line &rarr; Chelsea Market; 9/11 Memorial &rarr; Battery Park)</td></tr>
+          <tr><td>4 hours</td><td>Walking cluster + substantial attraction (Brooklyn Heights &rarr; Brooklyn Bridge; Hudson Yards &rarr; Little Island)</td></tr>
+          <tr><td>5&ndash;6 hours</td><td>Major anchor + surrounding cluster (Statue of Liberty + Lower Manhattan; Empire State + Midtown; Met + Central Park)</td></tr>
+          <tr><td>Full day</td><td>One major geographic area + 1&ndash;3 substantial attractions</td></tr>
+          <tr><td>Multiple days</td><td>Separate geographic clusters across different days</td></tr>
+        </table>
+      </div>
+      <p>The biggest mistake is trying to turn a full day into four different geographic clusters. More attractions do not necessarily mean more sightseeing. Sometimes they just mean more transportation.</p>
+      <hr class="divider-rule">
+      <h2 id="add-ons">The Best Easy Add-Ons in NYC</h2>
+      <p>The right question is not "What else can I squeeze in?" Ask: <strong>"What worthwhile thing is naturally on my route?"</strong></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Your Anchor</th><th>Easy Add-Ons</th></tr>
+          <tr><td>Grand Central</td><td>Chrysler Building, NYPL, Bryant Park</td></tr>
+          <tr><td>Rockefeller Center</td><td>St. Patrick's Cathedral, Fifth Avenue</td></tr>
+          <tr><td>Hudson Yards</td><td>Vessel, High Line</td></tr>
+          <tr><td>High Line</td><td>Chelsea Market, Little Island</td></tr>
+          <tr><td>9/11 Memorial</td><td>Oculus, Wall Street</td></tr>
+          <tr><td>Wall Street</td><td>Charging Bull, Stone Street, Battery Park</td></tr>
+          <tr><td>DUMBO</td><td>Washington Street, Brooklyn Bridge Park, Jane's Carousel</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>DUMBO, City Hall</td></tr>
+          <tr><td>Central Park</td><td>The Met, Fifth Avenue</td></tr>
+          <tr><td>SoHo</td><td>Little Italy, Chinatown</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="walking-subway">When Should You Take the Subway Instead of Walking?</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Walk when:</div><p style="font-size:13.5px;">Under roughly 20&ndash;25 minutes apart &bull; Route is straightforward &bull; Moving in your intended direction &bull; The neighborhood itself is interesting &bull; No major weather problem</p></div>
+        <div class="callout callout-local"><div class="callout-title">Consider the subway when:</div><p style="font-size:13.5px;">Crossing a large portion of Manhattan &bull; Walking takes 30+ minutes &bull; Route is visually uninteresting &bull; Moving between separate geographic clusters &bull; Carrying luggage &bull; Extremely hot, cold or rainy &bull; Protecting energy for a major attraction</p></div>
+      </div>
+      <p>A 10-minute train ride is not automatically a 10-minute journey. You still have to get into the station, find the platform, wait, ride, exit and walk to the destination. That is why very short Midtown connections are usually better on foot. For rainy days when outdoor routes change: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC</a></p>
+      <h3>Weather Changes the Definition of "Close"</h3>
+      <p>A 20-minute walk in October can feel completely different from a 20-minute walk in July. Heat, humidity, direct sun, and crowded sidewalks can make a summer route considerably more tiring. Wind, cold, snow, and ice have the same effect in winter. This matters particularly for the High Line, Brooklyn Bridge, Battery Park, and Central Park. A combination that is Green geographically can become Yellow on a particularly hot or miserable day.</p>
+      <h3>Crowds Matter More Than Most Maps Tell You</h3>
+      <p>Times Square, Fifth Avenue, the High Line, and the Brooklyn Bridge are all technically walkable. But a map assumes you are moving efficiently. Tourists stop, take photos, wait for crossings, look for entrances, check phones, and get distracted. Always add breathing room to a route rather than planning around the exact walking time displayed by a map.</p>
+      <div class="callout callout-tip"><div class="callout-title">The most important concept: useful proximity</div><p><strong>0.5 miles + simple sidewalk + same direction + no reservation</strong> = Excellent combination. <strong>0.5 miles + timed ticket + security + complicated entrance + crowds</strong> = Potentially poor combination. The distance is identical. The planning value is not.</p></div>
+      <hr class="divider-rule">
+      <h2 id="cluster-map">My Definitive NYC Attraction Cluster Map</h2>
+      <p>If building a first-time visitor itinerary from scratch, think about NYC in these eight clusters. For a fully mapped version with 250+ pinned spots: <a href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">NYC Bucket List Map &rarr;</a></p>
+      <div class="cmi-item"><div class="cmi-head">Cluster 1: Midtown Core</div><div class="cmi-body"><div class="cmi-route">Times Square &rarr; Bryant Park &rarr; NYPL &rarr; Grand Central &rarr; Chrysler</div>Best for: first-time visitors, short stays, classic NYC sightseeing.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 2: Rockefeller / Fifth Avenue</div><div class="cmi-body"><div class="cmi-route">Rockefeller Center &rarr; St. Patrick's &rarr; Fifth Avenue &rarr; Central Park</div>Best for: iconic Manhattan, shopping, holiday trips, first-time visitors.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 3: Hudson Yards / Chelsea</div><div class="cmi-body"><div class="cmi-route">Hudson Yards &rarr; High Line &rarr; Chelsea Market &rarr; Little Island</div>Best for: modern NYC, architecture, food, photography, walking.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 4: Lower Manhattan</div><div class="cmi-body"><div class="cmi-route">9/11 Memorial &rarr; Oculus &rarr; Wall Street &rarr; Stone Street &rarr; Battery Park</div>Best for: history, architecture, Financial District, first-time visitors.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 5: Statue of Liberty</div><div class="cmi-body"><div class="cmi-route">Statue of Liberty &rarr; Battery Park &rarr; Wall Street</div>Best for: first-time visitors, iconic NYC experiences. Treat the Statue as the anchor.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 6: Brooklyn Waterfront</div><div class="cmi-body"><div class="cmi-route">Brooklyn Heights &rarr; Brooklyn Bridge Park &rarr; DUMBO &rarr; Brooklyn Bridge</div>Best for: skyline views, photography, couples, first-time visitors, walking.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 7: Central Park / Met</div><div class="cmi-body"><div class="cmi-route">Central Park &rarr; The Met &rarr; Fifth Avenue</div>Best for: museums, culture, slower sightseeing.</div></div>
+      <div class="cmi-item"><div class="cmi-head">Cluster 8: Downtown Neighborhoods</div><div class="cmi-body"><div class="cmi-route">SoHo &rarr; Little Italy &rarr; Chinatown</div>Best for: shopping, food, architecture, neighborhood exploration.</div></div>
+      <h3>Combinations to Avoid</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Combination</th><th>Verdict</th></tr>
+          <tr><td>Statue of Liberty + Central Park</td><td>Do not do it as one cluster</td></tr>
+          <tr><td>Statue of Liberty + The Met</td><td>Separate them</td></tr>
+          <tr><td>Hudson Yards + DUMBO</td><td>Separate clusters</td></tr>
+          <tr><td>High Line + Brooklyn Bridge</td><td>Separate them</td></tr>
+          <tr><td>Central Park + Brooklyn Bridge as a walking route</td><td>Do not</td></tr>
+          <tr><td>DUMBO + Prospect Park + Botanic Garden as one walking route</td><td>Too spread out</td></tr>
+          <tr><td>Empire State + multiple timed attractions</td><td>Be very careful</td></tr>
+          <tr><td>9/11 Museum + several major downtown attractions in a tight schedule</td><td>Give yourself more time</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="formula">How to Build a Day Around a Timed Attraction</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="fstep" style="padding:10px 16px;"><div class="fs-n">1</div><div class="fs-b"><strong>Book the anchor</strong> For example: Empire State Building at 2:00 PM.</div></div>
+        <div class="fstep" style="padding:10px 16px;"><div class="fs-n">2</div><div class="fs-b"><strong>Identify everything within easy walking distance</strong> Bryant Park, NYPL, Grand Central, Chrysler Building.</div></div>
+        <div class="fstep" style="padding:10px 16px;"><div class="fs-n">3</div><div class="fs-b"><strong>Build the route toward the reservation</strong> Do not make the reservation interrupt the route. Make the route lead into it.</div></div>
+        <div class="fstep" style="padding:10px 16px;"><div class="fs-n">4</div><div class="fs-b"><strong>Leave a buffer</strong> Never plan to arrive at a timed attraction at exactly 2:00 after walking across Midtown. Give yourself room.</div></div>
+        <div class="fstep" style="padding:10px 16px;border-bottom:none;"><div class="fs-n">5</div><div class="fs-b"><strong>Continue in the same direction afterward</strong> This is how you avoid backtracking.</div></div>
+      </div>
+      <h3>The NYC Attraction Planning Formula</h3>
+      <div class="callout callout-summary"><div class="callout-title">For most sightseeing days</div><p><strong>1 anchor attraction + 2&ndash;4 easy nearby attractions + 1 flexible food/coffee stop + buffer.</strong> That is usually much better than 6 major attractions + 4 reservations + two subway transfers. For booking multiple attractions: <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass: Which Is Actually Worth It?</a></p></div>
+      <hr class="divider-rule">
+      <h2 id="final-verdict">Final Verdict: Which NYC Attractions Should You Actually Combine?</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Definitely combine</div><p style="font-size:13.5px;">Times Square + Bryant Park + NYPL + Grand Central<br>Rockefeller Center + St. Patrick's + Fifth Avenue<br>Hudson Yards + High Line + Chelsea Market<br>9/11 Memorial + Oculus + Wall Street + Battery Park<br>Brooklyn Heights + Bridge Park + DUMBO + Brooklyn Bridge<br>SoHo + Little Italy + Chinatown<br>Central Park + The Met</p></div>
+        <div class="callout callout-local"><div class="callout-title">Combine carefully</div><p style="font-size:13.5px;">Statue of Liberty + Lower Manhattan<br>9/11 Museum + Lower Manhattan<br>Empire State Building + Midtown<br>Top of the Rock + Midtown<br>High Line + Little Island</p></div>
+        <div class="callout callout-tip" style="grid-column:1/-1;"><div class="callout-title">Do not combine just because they look close on the map</div><p style="font-size:13.5px;">Central Park + Brooklyn Bridge &bull; Hudson Yards + DUMBO &bull; Statue of Liberty + Central Park &bull; Statue of Liberty + The Met &bull; High Line + Brooklyn Bridge &bull; DUMBO + Prospect Park + Brooklyn Botanic Garden</p></div>
+      </div>
+      <p>The best NYC itineraries are about <strong>stacking attractions that naturally belong together</strong>. If you are at Grand Central, walk to the Chrysler Building. If you are at Hudson Yards, walk the High Line to Chelsea Market. If you are in DUMBO, cross the Brooklyn Bridge. If you are visiting the Statue of Liberty, build the day around it. And if two attractions look close on the map but require you to zigzag across Manhattan, ask the question that matters: <strong>"Am I actually saving time by combining these, or am I just making my itinerary look impressive?"</strong> The smartest itinerary in NYC is rarely the one with the most attractions. It is the one with the least unnecessary movement.</p>
+      <hr class="divider-rule">
+      <h2 id="reference">Quick Reference: NYC Attraction Combinations</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:400px;font-size:13px;">
+          <tr><th>Attraction You Are Visiting</th><th>Add These Next</th><th>Avoid Adding</th></tr>
+          <tr><td>Times Square</td><td>Bryant Park, NYPL, Grand Central</td><td>Statue of Liberty</td></tr>
+          <tr><td>Grand Central</td><td>Chrysler, NYPL, Bryant Park</td><td>Far-west attractions requiring backtracking</td></tr>
+          <tr><td>Rockefeller Center</td><td>St. Patrick's, Fifth Avenue, Central Park</td><td>Statue of Liberty</td></tr>
+          <tr><td>Hudson Yards</td><td>High Line, Chelsea Market, Little Island</td><td>DUMBO</td></tr>
+          <tr><td>High Line</td><td>Chelsea Market, Little Island</td><td>Brooklyn Bridge</td></tr>
+          <tr><td>9/11 Memorial</td><td>Oculus, Wall Street, Battery Park</td><td>Central Park</td></tr>
+          <tr><td>Statue of Liberty</td><td>Battery Park, Wall Street</td><td>Central Park, The Met</td></tr>
+          <tr><td>DUMBO</td><td>Brooklyn Bridge Park, Brooklyn Bridge</td><td>Prospect Park as a walking add-on</td></tr>
+          <tr><td>Brooklyn Bridge</td><td>DUMBO, City Hall, Lower Manhattan</td><td>High Line</td></tr>
+          <tr><td>Central Park</td><td>The Met, Fifth Avenue</td><td>Brooklyn Bridge</td></tr>
+          <tr><td>The Met</td><td>Central Park, Fifth Avenue</td><td>Statue of Liberty</td></tr>
+          <tr><td>SoHo</td><td>Little Italy, Chinatown</td><td>Attractions requiring a cross-city trip</td></tr>
+        </table>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="how-much-can-you-see-in-one-day-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Many NYC Attractions Can You Realistically Do in One Day?</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="nyc-christmas-walking-route.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Christmas Walking Route (Step-by-Step Guide)</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>If You Can Only Visit One Museum in NYC, Which Should It Be?</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="best-free-skyline-views-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Free Skyline Views in NYC</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Is Actually Worth It?</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="best-things-to-do-near-times-square.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Things to Do Near Times Square</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Day Smarter</h3>
+    <p class="sub">Resources for building itineraries that actually work on the ground.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots organised by neighbourhood cluster</div></a>
+      <a class="footer-card" href="how-much-can-you-see-in-one-day-nyc.html"><div class="fc-title">How Much Can You See in One Day?</div><div class="fc-sub">The credit system for planning a realistic NYC day</div></a>
+      <a class="footer-card" href="citypass-vs-new-york-pass.html"><div class="fc-title">CityPASS vs New York Pass</div><div class="fc-sub">Save money when booking multiple major attractions</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){document.getElementById('snLinks').classList.toggle('open');});
+var secs=['quick-answer','golden-rule','five-questions','system','midtown','ts-route','rock-route','chelsea','lower-manhattan','statue','brooklyn','soho','central-park','avoid','time-rules','add-ons','walking-subway','cluster-map','formula','final-verdict','reference'];
+var slinks=document.querySelectorAll('.side-nav a');var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){var cur=secs[0];secs.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-140) cur=id;});slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});}
+window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+</script>
+</body>
+</html>
