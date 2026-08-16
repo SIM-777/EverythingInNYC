@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Days in NYC: The Ultimate First-Time Itinerary + Custom Options | EverythingInNYC</title>
+<meta name="description" content="Plan the perfect 5 days in NYC with a realistic first-time itinerary covering Midtown, the Statue of Liberty, Central Park, museums, the High Line, Greenwich Village, Brooklyn Bridge and DUMBO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){.sn-inner{display:none;flex-direction:column;gap:0;padding:0;}.sn-inner.open{display:flex;}.sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}.sn-toggle{display:block;}.sticky-nav{display:flex;align-items:center;justify-content:space-between;}.sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}}
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+/* DAY CARD */
+.day-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:20px 0;}
+.dc-head{padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--navy);}
+.dc-day{font-family:var(--font-head);font-weight:800;font-size:11px;color:rgba(255,255,255,.6);}
+.dc-title{font-family:var(--font-head);font-weight:800;font-size:16px;color:#fff;flex:1;}
+.dc-anchor{font-size:12px;color:var(--accent);font-weight:700;background:rgba(255,193,7,.12);padding:2px 10px;border-radius:20px;}
+.dc-body{padding:0;}
+/* TIME ENTRIES */
+.time-block{padding:6px 16px;border-bottom:1px solid rgba(15,23,42,.07);display:flex;gap:10px;align-items:flex-start;}
+.time-block:last-child{border-bottom:none;}
+.tb-time{font-family:var(--font-head);font-weight:800;font-size:12px;color:var(--navy);min-width:80px;flex:none;line-height:1.7;}
+.tb-what{flex:1;font-size:14px;color:var(--navy);}
+.tb-dur{font-size:12px;color:var(--text-secondary);white-space:nowrap;}
+.block-label{font-family:var(--font-head);font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-secondary);padding:7px 16px 3px;border-top:1px solid var(--border);background:rgba(15,23,42,.025);}
+/* SECTION IMAGE */
+.sect-img{margin:14px 16px 10px;}.sect-img img{width:100%;border-radius:10px;max-height:400px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:6px;text-align:center;}
+/* FINAL IMAGE (full-bleed) */
+.closing-img{margin:20px 0;}.closing-img img{width:100%;border-radius:14px;max-height:460px;object-fit:cover;display:block;}.closing-img .cap{font-size:13px;color:var(--text-secondary);margin-top:7px;text-align:center;}
+/* VERDICT STRIP */
+.verdict-strip{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:7px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+.verdict-strip strong{color:var(--navy);}
+/* MUSEUM CHOICE */
+.museum-card{border-radius:12px;overflow:hidden;margin:8px 0;}
+.mc-head{padding:7px 14px;font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;}
+.mc-met .mc-head{background:#1b3057;}
+.mc-amnh .mc-head{background:#14532d;}
+.mc-moma .mc-head{background:#4a1d96;}
+.mc-body{padding:9px 14px;background:var(--bg-card);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;font-size:13.5px;}
+/* STRESS TEST */
+.stress-row{display:flex;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);font-size:13.5px;}
+.stress-row:last-child{border-bottom:none;}
+.sr-delay{font-family:var(--font-head);font-weight:800;color:var(--navy);min-width:80px;flex:none;}
+/* ANCHOR ITEM */
+.anchor-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);}
+.anchor-item:last-child{border-bottom:none;}
+.ai-day{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);background:var(--navy);padding:2px 10px;border-radius:20px;flex:none;}
+.ai-body{flex:1;font-size:14.5px;}
+.ai-body strong{color:var(--navy);}
+/* SWAP TABLE */
+.swap-table{width:100%;border-collapse:collapse;font-size:13px;}
+.swap-table th{background:var(--navy);color:#fff;padding:6px 10px;text-align:left;font-size:12px;}
+.swap-table td{padding:6px 10px;border-bottom:1px solid var(--border);}
+.swap-table tr:last-child td{border-bottom:none;}
+.swap-table tr:nth-child(even) td{background:rgba(15,23,42,.025);}
+.swap-table td:first-child{font-weight:700;color:var(--navy);}
+/* FORMULA BOX */
+.formula-box{background:var(--navy);border-radius:14px;padding:20px 22px;text-align:center;margin:18px 0;}
+.fb-title{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);margin-bottom:10px;text-transform:uppercase;letter-spacing:.08em;}
+.fb-formula{font-family:var(--font-head);font-weight:800;font-size:18px;color:#fff;line-height:1.6;}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On This Page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#quick-answer">Quick Answer</a>
+    <a href="#before-you-start">Before You Start</a>
+    <a href="#at-a-glance">At a Glance</a>
+    <a href="#day1">Day 1: Midtown</a>
+    <a href="#day2">Day 2: Statue</a>
+    <a href="#day3">Day 3: Park + Museum</a>
+    <a href="#day4">Day 4: High Line</a>
+    <a href="#day5">Day 5: Brooklyn</a>
+    <a href="#transport">Getting Around</a>
+    <a href="#big-thing">One-Big-Thing Rule</a>
+    <a href="#what-to-book">What to Book</a>
+    <a href="#stress-test">Stress Test</a>
+    <a href="#weather">Weather</a>
+    <a href="#hotel">Hotel Tips</a>
+    <a href="#customize">Customize</a>
+    <a href="#final-itinerary">Final Itinerary</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</div>
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#before-you-start">Before You Start</a>
+  <a href="#at-a-glance">At a Glance</a>
+  <a href="#day1">Day 1: Midtown</a>
+  <a href="#day2">Day 2: Statue</a>
+  <a href="#day3">Day 3: Park + Museum</a>
+  <a href="#day4">Day 4: High Line</a>
+  <a href="#day5">Day 5: Brooklyn</a>
+  <a href="#transport">Getting Around</a>
+  <a href="#walking">Walking Guide</a>
+  <a href="#big-thing">One Big Thing Rule</a>
+  <a href="#fixed-flexible">Fixed vs Flexible</a>
+  <a href="#what-to-book">What to Book</a>
+  <a href="#stress-test">Stress Test</a>
+  <a href="#weather">Weather</a>
+  <a href="#hotel">Hotel Tips</a>
+  <a href="#customize">Customize</a>
+  <a href="#final-itinerary">Final Itinerary</a>
+  <a href="#faq">FAQ</a>
+</nav>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>5 Days in NYC: The Ultimate First-Time Itinerary + Custom Options</h1>
+      <div class="article-meta"><span>A realistic five-day schedule built around geographic clusters, one anchor per day, and enough buffer for New York to actually happen</span></div>
+    </div>
+    <img class="article-hero-img" src="5-days-in-nyc-itinerary-brooklyn-bridge-manhattan.png" alt="5 days in NYC itinerary &mdash; Brooklyn Bridge and Manhattan skyline, the perfect first-time visitor guide">
+    <div class="article-body">
+      <p>Five days is a very good amount of time for a first trip to New York City. It is long enough to see the landmarks you have probably been dreaming about, but short enough that you still need to make some decisions. And that is actually a good thing.</p>
+      <p>You can see the Statue of Liberty, look out over Manhattan from an observation deck, walk through Central Park, visit a great museum, explore the High Line and Greenwich Village, spend time in Brooklyn, cross the Brooklyn Bridge and still have evenings free for Broadway, restaurants or simply collapsing on your hotel bed. What you <strong>cannot</strong> do is see everything. Trying to do that is how a five-day vacation becomes a five-day fitness challenge.</p>
+      <p>This itinerary is built around one principle: <strong>group attractions geographically, choose one major experience each day, protect timed reservations, and leave enough empty space for New York to happen.</strong> Your breakfast will take longer than expected. You will take 47 photos of the same building. The subway will have a service change. You will discover a restaurant you want to try. You will get tired. That is normal. A good NYC itinerary should survive those things. This one is designed to.</p>
+      <hr class="divider-rule">
+      <h2 id="quick-answer">Quick Answer: Is 5 Days Enough for NYC?</h2>
+      <p><strong>Yes.</strong> Five days is enough for an excellent first trip. The key is that these should be <strong>geographic days</strong>, not lists of random attractions. That saves a surprising amount of time. For comparison, read: <a href="nyc-4-day-itinerary.html">NYC in 4 Days: Relaxed vs Maximum-Sightseeing Itinerary</a></p>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:360px;font-size:13px;">
+          <tr><th>Day</th><th>Main Area</th><th>Main Experience</th><th>Walking</th></tr>
+          <tr><td><strong>Day 1</strong></td><td>Midtown</td><td>Rockefeller Center + Top of the Rock + Times Square</td><td>Moderate</td></tr>
+          <tr><td><strong>Day 2</strong></td><td>Lower Manhattan</td><td>Statue of Liberty + Financial District</td><td>Moderate</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>Central Park + museums</td><td>Central Park + one major museum</td><td>Moderate</td></tr>
+          <tr><td><strong>Day 4</strong></td><td>Hudson Yards + Chelsea + Village</td><td>High Line + Chelsea + Greenwich Village</td><td>Moderate&ndash;High</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>Brooklyn</td><td>Brooklyn Heights + DUMBO + Brooklyn Bridge</td><td>Moderate&ndash;High</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="before-you-start">Before You Follow This Itinerary</h2>
+      <div class="callout callout-tip">
+        <div class="callout-title">Two important ground rules</div>
+        <p><strong>Rule 1:</strong> The times start at the day's first sightseeing area &mdash; not at your hotel. If you are staying far from the starting point, add your travel time before the first listed activity.</p>
+        <p style="margin-top:8px;"><strong>Rule 2: Protect reservations. Let everything else move.</strong> If your Top of the Rock ticket is at 3 PM, protect that. If you planned 30 minutes at Bryant Park and spend 45 instead, who cares? If you are running late, cut an optional stop or take the subway. The MTA's official app provides trip planning, maps, arrival information and real-time service status &mdash; check it before heading out rather than relying on a route planned weeks earlier.</p>
+      </div>
+      <h2 id="at-a-glance">Your 5-Day NYC Itinerary at a Glance</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:340px;font-size:13px;">
+          <tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+          <tr><td><strong>1</strong></td><td>Bryant Park, NYPL, Grand Central</td><td>Fifth Avenue, Rockefeller Center, Top of the Rock</td><td>Times Square + Broadway/dinner</td></tr>
+          <tr><td><strong>2</strong></td><td>Statue of Liberty</td><td>Financial District, 9/11 Memorial, Oculus</td><td>Chinatown / dinner / free time</td></tr>
+          <tr><td><strong>3</strong></td><td>Central Park</td><td>Met, AMNH or MoMA</td><td>Broadway / sports / dinner</td></tr>
+          <tr><td><strong>4</strong></td><td>Hudson Yards + High Line</td><td>Chelsea + Greenwich Village</td><td>West Village / dinner</td></tr>
+          <tr><td><strong>5</strong></td><td>Brooklyn Heights</td><td>Brooklyn Bridge Park + DUMBO</td><td>Brooklyn Bridge + Manhattan</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="day1">Day 1: Classic Midtown, Rockefeller Center &amp; Top of the Rock</h2>
+      <p><strong>Route:</strong> Bryant Park &rarr; New York Public Library &rarr; Grand Central Terminal &rarr; Fifth Avenue &rarr; Rockefeller Center &rarr; Top of the Rock &rarr; Times Square. <strong>Best evening option:</strong> Broadway. This is the day to introduce yourself to the classic Manhattan you have probably seen in a thousand movies. Almost everything is close enough to connect on foot &mdash; no complicated subway gymnastics required. For the complete walking route in this area: <a href="midtown-manhattan-walking-itinerary.html">Midtown Manhattan Walking Itinerary</a></p>
+      <div class="day-card" id="d1-schedule">
+        <div class="dc-head"><span class="dc-day">DAY 1</span><span class="dc-title">Classic Midtown</span><span class="dc-anchor">Anchor: Top of the Rock</span></div>
+        <div class="dc-body">
+          <div class="time-block"><div class="tb-time">9:00 AM</div><div class="tb-what">Bryant Park + coffee</div><div class="tb-dur">30 min</div></div>
+          <div class="time-block"><div class="tb-time">9:30 AM</div><div class="tb-what">New York Public Library</div><div class="tb-dur">30 min</div></div>
+          <div class="time-block"><div class="tb-time">10:00 AM</div><div class="tb-what">Walk toward Grand Central</div><div class="tb-dur">15&ndash;20 min</div></div>
+          <div class="time-block"><div class="tb-time">10:20 AM</div><div class="tb-what">Grand Central Terminal</div><div class="tb-dur">40 min</div></div>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/4d/e7/c8/grand-central-terminal.jpg?w=2000&h=-1&s=1" alt="Grand Central Terminal main concourse &mdash; one of the most iconic stops on Day 1 of the NYC 5-day itinerary">
+            <div class="cap">Grand Central Terminal &mdash; give yourself roughly 30&ndash;45 minutes. Look at the Main Concourse. Look up. Take your photos. You are not trying to "complete" Grand Central &mdash; you are starting to absorb Midtown.</div>
+          </div>
+          <div class="time-block"><div class="tb-time">11:00 AM</div><div class="tb-what">Walk toward Fifth Avenue/Rockefeller Center</div><div class="tb-dur">30 min</div></div>
+          <div class="time-block"><div class="tb-time">11:30 AM</div><div class="tb-what">Fifth Avenue + Rockefeller Center (+ St. Patrick's Cathedral if you want)</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">12:30 PM</div><div class="tb-what">Lunch</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">1:30 PM</div><div class="tb-what">Flexible Midtown sightseeing</div><div class="tb-dur">1&ndash;1.5 hrs</div></div>
+          <div class="time-block"><div class="tb-time">3:00 PM</div><div class="tb-what">Top of the Rock &mdash; <a href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">book tickets in advance &rarr;</a></div><div class="tb-dur">~1.5 hrs</div></div>
+          <div class="time-block"><div class="tb-time">4:30 PM</div><div class="tb-what">Rockefeller Center area</div><div class="tb-dur">30 min</div></div>
+          <div class="time-block"><div class="tb-time">5:00 PM</div><div class="tb-what">Times Square</div><div class="tb-dur">~1 hr</div></div>
+          <div class="time-block"><div class="tb-time">6:00 PM</div><div class="tb-what">Dinner</div><div class="tb-dur">1&ndash;1.5 hrs</div></div>
+          <div class="time-block"><div class="tb-time">Evening</div><div class="tb-what">Broadway / dinner / free time</div><div class="tb-dur">&mdash;</div></div>
+        </div>
+      </div>
+      <p>Top of the Rock currently operates daily from 8 AM to midnight with last entry at 11:10 PM, so a mid-afternoon reservation is easy to accommodate. For a first NYC trip, choose <strong>one major observation deck</strong> rather than several. Top of the Rock gives you one of the city's most recognizable views with the Empire State Building visible in the skyline &mdash; something you obviously cannot get when standing on top of the Empire State Building itself. See: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></p>
+      <div class="verdict-strip"><strong>Day 1 verdict:</strong> Very feasible. Almost everything is geographically connected, and Top of the Rock works beautifully as a flexible evening anchor.</div>
+      <hr class="divider-rule">
+      <h2 id="day2">Day 2: Statue of Liberty + Lower Manhattan</h2>
+      <p>This day requires a different mindset. The timing needs treating differently because the Statue of Liberty involves <strong>security, ferry boarding and island time</strong>. The National Park Service currently states that the time printed on your ferry ticket is the time to join the security-screening queue &mdash; not a guaranteed ferry departure time &mdash; and says the wait can be an hour or more during peak periods. Statue City Cruises is the NPS-authorized ferry provider. Since March 2026, the screening and ferry embarkation facility for visitors departing from Manhattan is at The Battery. <strong>Do not plan this morning down to the minute.</strong> Full planning guide: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty</a> &bull; <a href="statue-of-liberty-vs-staten-island-ferry.html">Ferry vs Staten Island Ferry</a></p>
+      <div class="day-card" id="d2-schedule">
+        <div class="dc-head"><span class="dc-day">DAY 2</span><span class="dc-title">Statue of Liberty + Lower Manhattan</span><span class="dc-anchor">Anchor: Statue of Liberty</span></div>
+        <div class="dc-body">
+          <div class="time-block"><div class="tb-time">8:00&ndash;8:30 AM</div><div class="tb-what">Arrive near Battery Park &mdash; <a href="https://statuecitycruises.com/" target="_blank" rel="noopener">official ferry tickets &rarr;</a></div><div class="tb-dur">&mdash;</div></div>
+          <div class="time-block"><div class="tb-time">Reserved time</div><div class="tb-what">Join the security queue (allow 1 hr+ if needed)</div><div class="tb-dur">1 hr+</div></div>
+          <div class="time-block"><div class="tb-time">Morning&ndash;early PM</div><div class="tb-what">Statue of Liberty (pedestal/crown visitors allow extra time)</div><div class="tb-dur">Several hours</div></div>
+          <div class="time-block"><div class="tb-time">~1:00 PM+</div><div class="tb-what">Return to Manhattan + lunch</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">2:00 PM</div><div class="tb-what">Financial District &mdash; Battery Park &rarr; Charging Bull &rarr; Wall Street &rarr; Trinity Church</div><div class="tb-dur">1&ndash;1.25 hrs</div></div>
+          <div class="time-block"><div class="tb-time">3:15 PM</div><div class="tb-what">9/11 Memorial (free, open daily 8 AM&ndash;8 PM)</div><div class="tb-dur">30&ndash;45 min</div></div>
+          <div class="time-block"><div class="tb-time">4:00 PM</div><div class="tb-what">Oculus (easy addition &mdash; you are already here)</div><div class="tb-dur">30&ndash;45 min</div></div>
+          <div class="time-block"><div class="tb-time">4:45 PM+</div><div class="tb-what">Flex time</div><div class="tb-dur">&mdash;</div></div>
+          <div class="time-block"><div class="tb-time">Evening</div><div class="tb-what">Chinatown / dinner / hotel (if exhausted: go back to the hotel)</div><div class="tb-dur">&mdash;</div></div>
+        </div>
+      </div>
+      <div class="callout callout-local">
+        <div class="callout-title">Should you visit Ellis Island?</div>
+        <p>This is a <strong>swap</strong>, not an addition. If immigration history is particularly important to you, visit Ellis Island. But do not think "I will just squeeze it in." The Statue already consumes a substantial portion of the day. <strong>Statue only:</strong> best for most first-time visitors. <strong>Statue + Ellis Island:</strong> best for history-focused travelers. <strong>Statue + Ellis + 9/11 Museum + Chinatown:</strong> too much for a comfortable day.</p>
+      </div>
+      <p>The 9/11 Memorial (free, outdoor) fits naturally into a Lower Manhattan walking route. The 9/11 Museum is a separate experience requiring admission &mdash; if you want it, <strong>make it part of your day's plan rather than squeezing it in</strong>. Remove Chinatown and some of the Financial District wandering if you do. For the complete Lower Manhattan route: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary</a></p>
+      <div class="table-wrap" style="margin:12px 0;">
+        <table class="data-table" style="font-size:13px;min-width:200px;">
+          <tr><th>Delay</th><th>What I'd do</th></tr>
+          <tr><td>30 min</td><td>Keep the plan</td></tr>
+          <tr><td>60 min</td><td>Cut Chinatown</td></tr>
+          <tr><td>90 min</td><td>Reduce Financial District wandering</td></tr>
+          <tr><td>Major delay</td><td>Statue + core Lower Manhattan only</td></tr>
+        </table>
+      </div>
+      <div class="verdict-strip"><strong>Day 2 verdict:</strong> Feasible, but do not treat the Statue of Liberty timing as fixed. This is the one day where reservations and queues can dictate the rest of your schedule.</div>
+      <hr class="divider-rule">
+      <h2 id="day3">Day 3: Central Park + One Major Museum</h2>
+      <p>This is the most customizable day of the trip. The mistake would be trying to visit multiple major museums because you happen to be near them. <strong>Choose one.</strong> Read: <a href="best-nyc-museums.html">If You Can Only Visit One Museum in NYC, Which Should It Be?</a></p>
+      <div class="day-card" id="d3-schedule">
+        <div class="dc-head"><span class="dc-day">DAY 3</span><span class="dc-title">Central Park + One Major Museum</span><span class="dc-anchor">Anchor: Your chosen museum</span></div>
+        <div class="dc-body">
+          <div class="time-block"><div class="tb-time">9:00&ndash;11:30 AM</div><div class="tb-what">Central Park (route depends on your museum &mdash; see below)</div><div class="tb-dur">2&ndash;2.5 hrs</div></div>
+          <div class="time-block"><div class="tb-time">11:30 AM&ndash;12:00 PM</div><div class="tb-what">Walk toward museum</div><div class="tb-dur">30 min</div></div>
+          <div class="time-block"><div class="tb-time">12:00&ndash;1:00 PM</div><div class="tb-what">Lunch</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">1:00&ndash;4:00 PM</div><div class="tb-what">Museum (Met / AMNH / MoMA)</div><div class="tb-dur">~3 hrs</div></div>
+          <div class="time-block"><div class="tb-time">4:00&ndash;5:00 PM</div><div class="tb-what">Coffee/rest</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">Evening</div><div class="tb-what">Broadway / sports / dinner</div><div class="tb-dur">&mdash;</div></div>
+        </div>
+      </div>
+      <p>The exact Central Park route should depend on which museum you choose:</p>
+      <div class="museum-card mc-met">
+        <div class="mc-head">Visiting the Met &mdash; best for art, history, architecture, ancient cultures, major collections</div>
+        <div class="mc-body">Use the eastern side of Central Park. Route: Central Park South &rarr; The Mall &rarr; Bethesda Terrace &rarr; Bow Bridge &rarr; east side &rarr; The Met. That makes the park part of your journey rather than something to backtrack through later. Give the Met several hours and do not attempt to see everything.</div>
+      </div>
+      <div class="museum-card mc-amnh">
+        <div class="mc-head">Visiting AMNH &mdash; best for families, dinosaurs, science, natural history, immersive exhibits</div>
+        <div class="mc-body">Use more of the western side: Central Park South &rarr; Sheep Meadow &rarr; Bethesda Terrace &rarr; Strawberry Fields &rarr; AMNH. This keeps you moving toward the museum instead of walking across the park unnecessarily.</div>
+      </div>
+      <div class="museum-card mc-moma">
+        <div class="mc-head">Visiting MoMA &mdash; best if modern and contemporary art is your priority</div>
+        <div class="mc-body">Do a shorter Central Park experience: Central Park South &rarr; The Mall &rarr; Bethesda Terrace &rarr; return toward Fifth Avenue &rarr; MoMA. There is no reason to walk deep into the park and backtrack toward Midtown.</div>
+      </div>
+      <div class="callout callout-local">
+        <div class="callout-title">Do not visit two major museums</div>
+        <p>Unless museums are the reason you are visiting New York. One museum + Central Park is much more enjoyable than two museums + exhausted traveler.</p>
+      </div>
+      <div class="table-wrap" style="margin:12px 0;">
+        <table class="data-table" style="font-size:13px;min-width:200px;">
+          <tr><th>Delay</th><th>Adjustment</th></tr>
+          <tr><td>30 min</td><td>Keep everything</td></tr>
+          <tr><td>60 min</td><td>Shorten Central Park</td></tr>
+          <tr><td>90 min</td><td>Make the museum the priority</td></tr>
+          <tr><td>Very late</td><td>Skip most of the park and focus on the museum</td></tr>
+        </table>
+      </div>
+      <div class="verdict-strip"><strong>Day 3 verdict:</strong> Very feasible and extremely customizable.</div>
+      <hr class="divider-rule">
+      <h2 id="day4">Day 4: High Line, Chelsea &amp; Greenwich Village</h2>
+      <p><strong>Route:</strong> Hudson Yards &rarr; High Line &rarr; Chelsea Market &rarr; Meatpacking District &rarr; Greenwich Village &rarr; Washington Square Park &rarr; West Village. This might be my favorite day of the itinerary. It feels less like you are completing a checklist and more like you are actually experiencing New York.</p>
+      <div class="day-card" id="d4-schedule">
+        <div class="dc-head"><span class="dc-day">DAY 4</span><span class="dc-title">High Line, Chelsea &amp; Greenwich Village</span><span class="dc-anchor">Anchor: High Line</span></div>
+        <div class="dc-body">
+          <div class="time-block"><div class="tb-time">9:30 AM</div><div class="tb-what">Hudson Yards &mdash; see Vessel from the outside, then start the High Line</div><div class="tb-dur">~30 min</div></div>
+          <div class="time-block"><div class="tb-time">10:00&ndash;11:45 AM</div><div class="tb-what">Walk the High Line &mdash; take your time, stop for photographs, watch the streets below. The walking is the experience.</div><div class="tb-dur">~1 hr 45 min</div></div>
+          <div class="time-block"><div class="tb-time">12:00 PM</div><div class="tb-what">Chelsea Market (natural lunch area &mdash; keep it flexible)</div><div class="tb-dur">~1 hr</div></div>
+          <div class="time-block"><div class="tb-time">1:00 PM</div><div class="tb-what">Lunch</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">2:00 PM</div><div class="tb-what">Meatpacking District</div><div class="tb-dur">~30 min</div></div>
+          <div class="time-block"><div class="tb-time">2:30 PM</div><div class="tb-what">Greenwich Village &mdash; stop worrying about "sightseeing" and simply wander</div><div class="tb-dur">~1.5 hrs</div></div>
+          <div class="time-block"><div class="tb-time">4:00 PM</div><div class="tb-what">Washington Square Park &mdash; sit down, people-watch, take a photo of the arch</div><div class="tb-dur">~45 min</div></div>
+          <div class="time-block"><div class="tb-time">4:45 PM+</div><div class="tb-what">West Village &mdash; dinner, dessert, drinks or Broadway</div><div class="tb-dur">Flexible</div></div>
+        </div>
+      </div>
+      <p>Hudson Yards is the starting point, not a two-hour session. Take a look around. See the Vessel. Then start the High Line, which is the actual attraction here. The atmosphere changes quickly as you move south through Meatpacking District into Greenwich Village: large Midtown-style buildings give way to smaller streets, restaurants and neighborhood architecture.</p>
+      <div class="table-wrap" style="margin:12px 0;">
+        <table class="data-table" style="font-size:13px;min-width:200px;">
+          <tr><th>Delay</th><th>Adjustment</th></tr>
+          <tr><td>30 min</td><td>Keep everything</td></tr>
+          <tr><td>60 min</td><td>Shorten Village wandering</td></tr>
+          <tr><td>90 min</td><td>High Line + Chelsea become the priority</td></tr>
+          <tr><td>Very late</td><td>High Line + dinner</td></tr>
+        </table>
+      </div>
+      <div class="verdict-strip"><strong>Day 4 verdict:</strong> Extremely feasible. Very little depends on timed admission, and the geographic routing is excellent.</div>
+      <hr class="divider-rule">
+      <h2 id="day5">Day 5: Brooklyn Heights, DUMBO &amp; the Brooklyn Bridge</h2>
+      <p><strong>Route:</strong> Brooklyn Heights &rarr; Brooklyn Heights Promenade &rarr; Brooklyn Bridge Park &rarr; DUMBO &rarr; Brooklyn Bridge &rarr; Manhattan. This is your biggest walking day. That is fine. Just do not pretend it is not. For the full standalone guide to this day: <a href="one-day-in-brooklyn.html">One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></p>
+      <div class="day-card" id="d5-schedule">
+        <div class="dc-head"><span class="dc-day">DAY 5</span><span class="dc-title">Brooklyn Heights, DUMBO &amp; Brooklyn Bridge</span><span class="dc-anchor">Anchor: Brooklyn Bridge</span></div>
+        <div class="dc-body">
+          <div class="time-block"><div class="tb-time">9:00 AM</div><div class="tb-what">Brooklyn Heights &mdash; different introduction to Brooklyn, walk toward the waterfront</div><div class="tb-dur">~30 min</div></div>
+          <div class="time-block"><div class="tb-time">9:30 AM</div><div class="tb-what">Brooklyn Heights Promenade &mdash; views toward Lower Manhattan, Brooklyn Bridge, New York Harbor, Statue of Liberty. Sit for a while.</div><div class="tb-dur">~30 min</div></div>
+          <div class="time-block"><div class="tb-time">10:00 AM</div><div class="tb-what">Brooklyn Bridge Park &mdash; explore the waterfront, do not treat it simply as a path toward DUMBO</div><div class="tb-dur">1.5&ndash;2 hrs</div></div>
+          <div class="dc-body">
+            <div class="sect-img">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/52/ce/26/brooklyn-bridge-park.jpg?w=1400&h=-1&s=1" alt="Brooklyn Bridge Park wide aerial scenic view showing the East River waterfront, Brooklyn Bridge and Manhattan skyline &mdash; Day 5 of the NYC 5-day itinerary">
+              <div class="cap">Brooklyn Bridge Park &mdash; 1.3 miles of waterfront with the Brooklyn Bridge overhead and an unbroken view of the Manhattan skyline across the East River. Spend genuine time exploring before heading to DUMBO. This is one of the best scenic stretches in all of New York. For more viewpoints: <a href="best-free-skyline-views-in-nyc.html">Best Free Skyline Views in NYC</a></div>
+            </div>
+          </div>
+          <div class="time-block"><div class="tb-time">12:00 PM</div><div class="tb-what">Lunch in Brooklyn &mdash; there is no reason to cross the city because somebody online declared one restaurant is the only acceptable option</div><div class="tb-dur">1 hr</div></div>
+          <div class="time-block"><div class="tb-time">1:00 PM</div><div class="tb-what">DUMBO &mdash; take the famous Washington Street photograph, then walk around rather than immediately leaving</div><div class="tb-dur">1&ndash;1.5 hrs</div></div>
+          <div class="dc-body">
+            <div class="sect-img">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/a0/c2/69/dumbo.jpg?w=1400&h=-1&s=1" alt="DUMBO Brooklyn neighborhood wide view showing the Manhattan Bridge, historic warehouse architecture and cobblestone streets &mdash; Day 5 of the NYC 5-day itinerary">
+              <div class="cap">DUMBO &mdash; Down Under the Manhattan Bridge Overpass. The neighbourhood takes its character from the massive stone arches of the Manhattan Bridge above, the cobblestone streets and the converted industrial warehouses. The famous Washington Street photograph is worth taking, but the wider neighbourhood rewards slower exploration.</div>
+            </div>
+          </div>
+          <div class="time-block"><div class="tb-time">2:30 PM</div><div class="tb-what">Waterfront / flexible time</div><div class="tb-dur">~1 hr</div></div>
+          <div class="time-block"><div class="tb-time">3:30 PM</div><div class="tb-what">More DUMBO or Brooklyn Bridge Park</div><div class="tb-dur">~1 hr</div></div>
+          <div class="time-block"><div class="tb-time">Late afternoon</div><div class="tb-what">Begin Brooklyn Bridge walk &mdash; time this around weather, sunset and your energy level, not a fixed clock</div><div class="tb-dur">30&ndash;60+ min</div></div>
+          <div class="time-block"><div class="tb-time">After crossing</div><div class="tb-what">Manhattan + dinner</div><div class="tb-dur">&mdash;</div></div>
+        </div>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">Time the Brooklyn Bridge around your priorities</div>
+        <p><strong>Want daytime views?</strong> Cross earlier. <strong>Want golden hour?</strong> Start later. <strong>Want sunset?</strong> Check the actual sunset time for your travel date and work backward. <strong>Want fewer crowds?</strong> Go early. The bridge is roughly 1.1 miles across, but first-time visitors routinely take longer because they stop for photographs. Walking from Brooklyn &rarr; Manhattan keeps the skyline in front of you &mdash; but if your plans work better in reverse, cross the other way. <strong>Feeling exhausted after four days?</strong> Take the subway. The Brooklyn Bridge is an experience, not a mandatory fitness test.</p>
+      </div>
+      <p><strong>Note for first-time visitors:</strong> DUMBO's waterfront is not the same thing as the Brooklyn Bridge pedestrian entrance. After exploring DUMBO, you will need to walk toward the bridge entrance before starting the crossing. Give yourself some transition time.</p>
+      <div class="table-wrap" style="margin:12px 0;">
+        <table class="data-table" style="font-size:13px;min-width:200px;">
+          <tr><th>Delay</th><th>Adjustment</th></tr>
+          <tr><td>30 min</td><td>Keep everything</td></tr>
+          <tr><td>60 min</td><td>Shorten Brooklyn Bridge Park</td></tr>
+          <tr><td>90 min</td><td>Reduce DUMBO wandering</td></tr>
+          <tr><td>Very late/tired</td><td>Skip the bridge walk and take transit</td></tr>
+        </table>
+      </div>
+      <div class="verdict-strip"><strong>Day 5 verdict:</strong> Very good, but physically the most demanding day. Plan it as such.</div>
+      <hr class="divider-rule">
+      <h2 id="transport">How I'd Move Around NYC Each Day</h2>
+      <p>Think in terms of <strong>walking clusters</strong>, not detailed subway plans. Plan the geography ahead of time; plan the exact subway route on the day using the MTA app. That is especially useful when weekend work or service changes affect normal routes. <a href="https://www.mta.info/tripplanner/results" target="_blank" rel="noopener">MTA subway trip planner &rarr;</a></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;min-width:260px;">
+          <tr><th>Day</th><th>Mostly walk</th><th>Use subway</th></tr>
+          <tr><td><strong>1</strong></td><td>Midtown sightseeing</td><td>Hotel &rarr; Midtown if needed</td></tr>
+          <tr><td><strong>2</strong></td><td>Lower Manhattan</td><td>Hotel &rarr; Battery Park</td></tr>
+          <tr><td><strong>3</strong></td><td>Central Park + museum area</td><td>Hotel &rarr; park/museum if needed</td></tr>
+          <tr><td><strong>4</strong></td><td>High Line + Village</td><td>Hotel &rarr; Hudson Yards if needed</td></tr>
+          <tr><td><strong>5</strong></td><td>Brooklyn sightseeing</td><td>Hotel &rarr; Brooklyn</td></tr>
+        </table>
+      </div>
+      <h2 id="walking">How Much Walking Should You Expect?</h2>
+      <p>You will wander. You will take photos. You will enter a shop. You will walk the wrong direction for five minutes. You will discover a cafe. You will change your mind. So a rough guide rather than false precision:</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Walk when the walk is the experience</div>
+          <p style="font-size:13.5px;">High Line &bull; Central Park &bull; Greenwich Village &bull; Financial District &bull; Brooklyn waterfront &bull; Brooklyn Bridge. There is no prize for walking from Midtown to Lower Manhattan.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Take the subway when</div>
+          <p style="font-size:13.5px;">You are simply trying to get from one geographic area to another. Day 5 is the most demanding &mdash; if your feet are finished, use public transportation. Days 1&ndash;3 are moderate; Days 4&ndash;5 are moderate&ndash;high.</p>
+        </div>
+      </div>
+      <h3>The Micro-Stop Tax</h3>
+      <p>This is one of the biggest reasons overly ambitious NYC itineraries fail. Someone might tell you: Charging Bull &mdash; 10 minutes; Wall Street &mdash; 10 minutes; Trinity Church &mdash; 15 minutes; Federal Hall &mdash; 10 minutes. Sounds easy. But those stops are not really 10 minutes each. You have: walking &rarr; finding the attraction &rarr; photos &rarr; looking around &rarr; leaving &rarr; walking again. Those transitions add up. That is why I prefer saying <em>"Spend 1&ndash;1.5 hours exploring the Financial District"</em> rather than creating six tiny appointments.</p>
+      <hr class="divider-rule">
+      <h2 id="big-thing">The One-Big-Thing Rule</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="anchor-item" style="padding:8px 16px;"><div class="ai-day">Day 1</div><div class="ai-body"><strong>Top of the Rock</strong> &mdash; everything else supports this anchor</div></div>
+        <div class="anchor-item" style="padding:8px 16px;"><div class="ai-day">Day 2</div><div class="ai-body"><strong>Statue of Liberty</strong> &mdash; the whole day is built around the ferry</div></div>
+        <div class="anchor-item" style="padding:8px 16px;"><div class="ai-day">Day 3</div><div class="ai-body"><strong>Your chosen museum</strong> &mdash; Central Park leads you in</div></div>
+        <div class="anchor-item" style="padding:8px 16px;"><div class="ai-day">Day 4</div><div class="ai-body"><strong>High Line</strong> &mdash; everything flows from Hudson Yards south</div></div>
+        <div class="anchor-item" style="padding:8px 16px;border-bottom:none;"><div class="ai-day">Day 5</div><div class="ai-body"><strong>Brooklyn Bridge</strong> &mdash; time the crossing around your priorities, not the clock</div></div>
+      </div>
+      <p>Everything else supports that experience. That is why the itinerary can absorb delays.</p>
+      <h2 id="fixed-flexible">Fixed vs. Flexible Attractions</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local">
+          <div class="callout-title">Fixed &mdash; build your day around these</div>
+          <p style="font-size:13.5px;">Statue of Liberty ferry &bull; Broadway &bull; Observation deck reservation &bull; Museum timed entry &bull; Sports game &bull; Special event</p>
+        </div>
+        <div class="callout callout-summary">
+          <div class="callout-title">Flexible &mdash; let these move</div>
+          <p style="font-size:13.5px;">Times Square &bull; Bryant Park &bull; Grand Central &bull; Wall Street &bull; Charging Bull &bull; Brooklyn Bridge Park &bull; Greenwich Village &bull; Washington Square Park &bull; Chinatown</p>
+        </div>
+      </div>
+      <p><strong>Book the fixed things. Let the flexible things breathe.</strong> For help deciding what to combine geographically: <a href="which-nyc-attractions-to-combine.html">Which NYC Attractions Are Close Enough to Do Together?</a></p>
+      <hr class="divider-rule">
+      <h2 id="what-to-book">What to Book Before Your Trip</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;min-width:220px;">
+          <tr><th>Priority</th><th>Book</th></tr>
+          <tr><td><strong>1</strong></td><td>Statue of Liberty &mdash; use <a href="https://statuecitycruises.com/" target="_blank" rel="noopener">Statue City Cruises</a>, the only NPS-authorized provider</td></tr>
+          <tr><td><strong>2</strong></td><td>Broadway</td></tr>
+          <tr><td><strong>3</strong></td><td>Observation deck &mdash; <a href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Top of the Rock recommends booking online</a></td></tr>
+          <tr><td><strong>4</strong></td><td>Major museum or special exhibition</td></tr>
+          <tr><td><strong>5</strong></td><td>Special tours/events</td></tr>
+        </table>
+      </div>
+      <p><strong>What I would not book:</strong> every meal, coffee, or something every two hours. Leave room for spontaneity. Eat when you are actually hungry and wherever makes sense geographically. That is a vacation. For passes covering multiple attractions: <a href="citypass-vs-new-york-pass.html">CityPASS vs New York Pass: Which Is Actually Worth It?</a></p>
+      <hr class="divider-rule">
+      <h2 id="stress-test">The 30/60/90-Minute Stress Test</h2>
+      <p>Before I consider an NYC itinerary finished, I ask three questions: What if I am 30 minutes late? No problem. 60 minutes late? One optional stop disappears. 90 minutes late? The flex layer disappears, but the day's main experience survives. This itinerary passes that test.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13px;min-width:320px;">
+          <tr><th>Day</th><th>30 min late</th><th>60 min late</th><th>90 min late</th></tr>
+          <tr><td><strong>1</strong></td><td>Fine</td><td>Reduce wandering</td><td>Cut optional Midtown stops</td></tr>
+          <tr><td><strong>2</strong></td><td>Fine</td><td>Cut Chinatown</td><td>Cut extra Lower Manhattan stops</td></tr>
+          <tr><td><strong>3</strong></td><td>Fine</td><td>Shorten park</td><td>Museum becomes priority</td></tr>
+          <tr><td><strong>4</strong></td><td>Fine</td><td>Shorten Village</td><td>High Line + Chelsea</td></tr>
+          <tr><td><strong>5</strong></td><td>Fine</td><td>Shorten park</td><td>Skip bridge if necessary</td></tr>
+        </table>
+      </div>
+      <p>Something will go wrong. Your train will be delayed. Someone will oversleep. The restaurant will take 40 minutes. You will spend 20 minutes looking for an entrance that looked obvious on Google Maps. Welcome to New York. The important thing is that the day's anchor survives.</p>
+      <hr class="divider-rule">
+      <h2 id="weather">What If the Weather Is Bad?</h2>
+      <p>Do not stubbornly follow the itinerary. Swap days. For rainy days: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC</a></p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip"><div class="callout-title">Beautiful weather</div><p style="font-size:13.5px;">Prioritize: Central Park &bull; High Line &bull; Brooklyn &bull; Waterfront &bull; Brooklyn Bridge</p></div>
+        <div class="callout callout-local"><div class="callout-title">Rain</div><p style="font-size:13.5px;">Prioritize: museums &bull; Grand Central &bull; NYPL &bull; shopping &bull; Broadway &bull; indoor attractions. Save Central Park, the High Line and Brooklyn for better weather.</p></div>
+        <div class="callout callout-summary" style="grid-column:1/-1;"><div class="callout-title">Extreme heat</div><p style="font-size:13.5px;">Do outdoor activities earlier in the day. Use museums and indoor attractions during the hottest part of the afternoon.</p></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="hotel">Your Hotel Is Part of the Itinerary</h2>
+      <p>If you have been walking all day, being able to return to your hotel for 60&ndash;90 minutes can completely change your evening. Shower, sit down, charge your phone, change clothes, rest your feet &mdash; then go back out. That is not wasted sightseeing time. It is how you survive five days in New York without becoming emotionally attached to the nearest bench.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Midtown</div><p style="font-size:13.5px;">Best for transportation and Broadway.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Chelsea</div><p style="font-size:13.5px;">Excellent balance between Midtown, the High Line and downtown.</p></div>
+        <div class="callout callout-tip"><div class="callout-title">Flatiron/NoMad</div><p style="font-size:13.5px;">A strong central base.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Greenwich Village</div><p style="font-size:13.5px;">Fantastic atmosphere, though less convenient for some routes.</p></div>
+        <div class="callout callout-local" style="grid-column:1/-1;"><div class="callout-title">Lower Manhattan</div><p style="font-size:13.5px;">Excellent for the Statue of Liberty, Financial District and Brooklyn. I would not obsess over having the most famous address &mdash; prioritize convenience.</p></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="customize">How to Customize This 5-Day Itinerary</h2>
+      <p>The beauty of this structure is that you do not need to rebuild your vacation. <strong>Swap things. Do not stack things.</strong></p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip"><div class="callout-title">Art Lover</div><p style="font-size:13.5px;">Make Day 3: Central Park + the Met or MoMA. Do not add another major museum.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Family Trip</div><p style="font-size:13.5px;">Prioritize: Top of the Rock &bull; Statue of Liberty &bull; Central Park &bull; AMNH &bull; Brooklyn Bridge &bull; High Line. Make the hotel break a priority.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Food Lover</div><p style="font-size:13.5px;">Keep the sightseeing route. Change the restaurants: Chinatown/Lower Manhattan (Day 2), Chelsea Market/West Village (Day 4), DUMBO/Brooklyn (Day 5). Do not cross the city every night for one restaurant.</p></div>
+        <div class="callout callout-tip"><div class="callout-title">Photography Trip</div><p style="font-size:13.5px;">Change the <em>timing</em>, not the attractions. Top of the Rock at sunset; DUMBO early morning for fewer crowds; Brooklyn Bridge at golden hour or early morning; Central Park in the morning; Statue of Liberty in morning light.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">More Neighborhoods</div><p style="font-size:13.5px;">Swap attraction time for Williamsburg, SoHo, Chinatown, Upper West Side, Cobble Hill or West Village.</p></div>
+        <div class="callout callout-local"><div class="callout-title">More Relaxed Trip</div><p style="font-size:13.5px;">Remove: second museum, second observation deck, Ellis Island, unnecessary photo stops. Keep: Statue of Liberty, Central Park, one museum, High Line, Brooklyn, one skyline experience. That is still an excellent first trip.</p></div>
+        <div class="callout callout-tip" style="grid-column:1/-1;"><div class="callout-title">See as Much as Possible</div><p style="font-size:13.5px;">Increase the pace. Add Broadway, 9/11 Museum, more Midtown, longer Central Park route, Williamsburg, additional evening activities. But keep the flex layer. <strong>Optional should remain optional.</strong></p></div>
+      </div>
+      <div class="table-wrap" style="margin:16px 0;">
+        <table class="swap-table">
+          <tr><th>Your interest</th><th>Swap in</th><th>Swap out</th></tr>
+          <tr><td>Modern art</td><td>MoMA</td><td>Other museum</td></tr>
+          <tr><td>Natural history</td><td>AMNH</td><td>The Met</td></tr>
+          <tr><td>Immigration history</td><td>Ellis Island</td><td>Extra Lower Manhattan</td></tr>
+          <tr><td>Skyline</td><td>Empire State Building / SUMMIT</td><td>Top of the Rock</td></tr>
+          <tr><td>Food/nightlife</td><td>Williamsburg</td><td>Extra Brooklyn wandering</td></tr>
+          <tr><td>Beach</td><td>Coney Island</td><td>Part of Brooklyn day</td></tr>
+          <tr><td>Gardens</td><td>Brooklyn Botanic Garden</td><td>Part of Brooklyn day</td></tr>
+          <tr><td>Baseball</td><td>Yankees game</td><td>Evening plans</td></tr>
+          <tr><td>Broadway</td><td>Broadway show</td><td>Other evening activity</td></tr>
+          <tr><td>Relaxation</td><td>Hotel reset</td><td>Extra flex stops</td></tr>
+        </table>
+      </div>
+      <p>The secret is: <strong>swap, do not stack.</strong></p>
+      <hr class="divider-rule">
+      <h2>A Better Way to Think About This Trip</h2>
+      <p>Do not ask "How many attractions can I fit into five days?" Ask: <strong>"What do I want to remember about New York after five days?"</strong> Maybe it is standing beside the Statue of Liberty. Seeing Manhattan from Top of the Rock. Sitting in Central Park. Wandering Greenwich Village. Watching the skyline from Brooklyn. Seeing Broadway. Eating an incredible meal. Walking across the Brooklyn Bridge. Those experiences matter much more than whether you checked off 37 landmarks.</p>
+      <div class="formula-box">
+        <div class="fb-title">The Five-Day NYC Formula</div>
+        <div class="fb-formula">One anchor + one geographic cluster<br>+ one good meal + plenty of buffer</div>
+      </div>
+
+      <hr class="divider-rule">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item"><summary>Is 5 days enough for NYC?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes. Five days is enough for an excellent first visit covering Midtown, Lower Manhattan, Central Park, a major museum, the High Line, Greenwich Village and Brooklyn. It is not enough to see everything, and that is okay.</div></details>
+        <details class="faq-item"><summary>What should I book in advance for NYC?<span class="chev">&#9662;</span></summary><div class="faq-a">Prioritize: Statue of Liberty, Broadway, observation deck, major museum or special exhibition, and special tours/events. Leave neighborhood sightseeing flexible.</div></details>
+        <details class="faq-item"><summary>Can I do the Statue of Liberty and Brooklyn Bridge on the same day?<span class="chev">&#9662;</span></summary><div class="faq-a">Technically, yes. Would I recommend it? No. The Statue already provides enough structure for Day 2. Give Brooklyn its own day for a much better experience in both places.</div></details>
+        <details class="faq-item"><summary>Can I visit the Met and AMNH on the same day?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes. I would not. Choose one unless museums are your primary reason for visiting New York. Read: <a href="best-nyc-museums.html">If You Can Only Visit One Museum in NYC</a></div></details>
+        <details class="faq-item"><summary>Should I visit more than one observation deck?<span class="chev">&#9662;</span></summary><div class="faq-a">Not on a typical five-day first trip. Choose one. See: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared</a></div></details>
+        <details class="faq-item"><summary>Should I walk across the Brooklyn Bridge?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, if you want to and your energy and the weather cooperate. If you are exhausted after four days, take the subway. The Brooklyn Bridge is an experience, not a mandatory fitness test.</div></details>
+        <details class="faq-item"><summary>Is NYC easy to visit without a car?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes. For this itinerary, I would actively recommend not renting a car. Walking and public transportation make much more sense for sightseeing.</div></details>
+        <details class="faq-item"><summary>How much walking is involved?<span class="chev">&#9662;</span></summary><div class="faq-a">Expect moderate walking most days, with Days 4 and 5 potentially heavier. Your actual walking will almost certainly be higher than the theoretical route because you will wander. Read: <a href="how-much-can-you-see-in-one-day-nyc.html">How Many NYC Attractions Can You Realistically Do in One Day?</a></div></details>
+        <details class="faq-item"><summary>What if it rains?<span class="chev">&#9662;</span></summary><div class="faq-a">Swap your outdoor-heavy days around. Museums, Grand Central, NYPL, shopping and Broadway are excellent rainy-day options. Save Central Park, the High Line and Brooklyn for better weather. Read: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC</a></div></details>
+      </div>
+      <div class="callout callout-summary" style="margin-top:20px;">
+        <div class="callout-title">Plan Your Own NYC Trip</div>
+        <p>Want the planning done for you? Start with the <a href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><strong>NYC Bucket List Map</strong></a> &mdash; a Google map list featuring 250+ recommended places to visit with live directions, organized by neighborhood. Every stop in this five-day itinerary is included.</p>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-4-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC in 4 Days: Relaxed vs. Maximum-Sightseeing Itinerary</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="how-much-can-you-see-in-one-day-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Many NYC Attractions Can You Realistically Do in One Day?</a></li>
+      <li><a href="which-nyc-attractions-to-combine.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Attractions Are Close Enough to Do Together?</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>If You Can Only Visit One Museum in NYC, Which Should It Be?</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="best-free-skyline-views-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Free Skyline Views in NYC</a></li>
+      <li><a href="citypass-vs-new-york-pass.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CityPASS vs New York Pass: Which Is Actually Worth It?</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your 5 Days in NYC</h3>
+    <p class="sub">Resources for making your first NYC trip as good as it can be.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots &mdash; every stop in this 5-day itinerary mapped</div></a>
+      <a class="footer-card" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck/d687-3784TOPROCK?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener"><div class="fc-title">Top of the Rock Tickets</div><div class="fc-sub">Book the Day 1 anchor in advance &mdash; reserve now, pay later</div></a>
+      <a class="footer-card" href="citypass-vs-new-york-pass.html"><div class="fc-title">City Pass Comparison</div><div class="fc-sub">Save money across multiple major attractions on your 5-day trip</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){document.getElementById('snLinks').classList.toggle('open');});
+var secs=['quick-answer','before-you-start','at-a-glance','day1','d1-schedule','day2','d2-schedule','day3','d3-schedule','day4','d4-schedule','day5','d5-schedule','transport','walking','big-thing','fixed-flexible','what-to-book','stress-test','weather','hotel','customize','final-itinerary','faq'];
+var slinks=document.querySelectorAll('.side-nav a');var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){var cur=secs[0];secs.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-140) cur=id;});slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});}
+window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+</script>
+</body>
+</html>
