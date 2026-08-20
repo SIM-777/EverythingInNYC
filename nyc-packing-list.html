@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYC Packing List by Season: What You'll Actually Use | EverythingInNYC</title>
+<meta name="description" content="Wondering what to pack for New York City? This NYC packing guide breaks down what to wear by season and month, the shoes, bags, coats, and extras you'll actually use, plus what not to bring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){.sn-inner{display:none;flex-direction:column;gap:0;padding:0;}.sn-inner.open{display:flex;}.sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}.sn-toggle{display:block;}.sticky-nav{display:flex;align-items:center;justify-content:space-between;}.sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}}
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);max-height:calc(100vh - 110px);overflow-y:auto;scrollbar-width:thin;}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+/* SEASON HEADER */
+.season-head{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;margin:20px 0 12px;}
+.sh-winter{background:#dbeafe;border-left:4px solid #1d4ed8;}
+.sh-spring{background:#dcfce7;border-left:4px solid #16a34a;}
+.sh-summer{background:#fef9c3;border-left:4px solid #ca8a04;}
+.sh-fall{background:#ffedd5;border-left:4px solid #c2410c;}
+.sh-label{font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--navy);}
+.sh-sub{font-size:13px;color:var(--text-secondary);margin-top:1px;}
+/* SECTION IMAGE */
+.sect-img{margin:14px 0 10px;}.sect-img img{width:100%;border-radius:12px;max-height:400px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:6px;text-align:center;}
+/* CHECKLIST */
+.check-list{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:10px 0;margin:10px 0;}
+.cl-item{display:flex;gap:10px;padding:5px 14px;font-size:14px;border-bottom:1px solid rgba(15,23,42,.06);align-items:baseline;}
+.cl-item:last-child{border-bottom:none;}
+.cl-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;margin-top:5px;}
+.cl-red .cl-dot{background:#ef4444;}
+/* PACK LIST CARD */
+.pl-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:10px 0;}
+.pl-head{background:var(--navy);padding:8px 14px;font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;}
+.pl-body{padding:8px 14px;}
+.pl-row{display:flex;gap:10px;padding:4px 0;font-size:14px;border-bottom:1px solid rgba(15,23,42,.06);}
+.pl-row:last-child{border-bottom:none;}
+.pl-cat{font-family:var(--font-head);font-weight:800;font-size:12px;color:var(--navy);min-width:90px;flex:none;}
+/* VERDICT */
+.verdict-strip{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:7px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On This Page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#short-version">Quick Summary</a>
+    <a href="#packing-rule">Packing Rule</a>
+    <a href="#winter">Winter</a>
+    <a href="#spring">Spring</a>
+    <a href="#summer">Summer</a>
+    <a href="#fall">Fall</a>
+    <a href="#month-guide">Month Guide</a>
+    <a href="#shoes">Shoes</a>
+    <a href="#outerwear">Outerwear</a>
+    <a href="#rain">Rain Gear</a>
+    <a href="#bag">Day Bag</a>
+    <a href="#clothing">Clothing</a>
+    <a href="#tech">Tech</a>
+    <a href="#health">Health</a>
+    <a href="#documents">Documents</a>
+    <a href="#family">Family</a>
+    <a href="#international">International</a>
+    <a href="#do-not-bring">Do Not Bring</a>
+    <a href="#buy-in-nyc">Buy in NYC</a>
+    <a href="#by-trip">By Trip Length</a>
+  </div>
+</div>
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#short-version">Quick Summary</a>
+  <a href="#packing-rule">Packing Rule</a>
+  <a href="#winter">Winter Packing</a>
+  <a href="#spring">Spring Packing</a>
+  <a href="#summer">Summer Packing</a>
+  <a href="#fall">Fall Packing</a>
+  <a href="#month-guide">Month Guide</a>
+  <a href="#shoes">Shoes</a>
+  <a href="#outerwear">Outerwear</a>
+  <a href="#rain">Rain Gear</a>
+  <a href="#bag">Day Bag</a>
+  <a href="#bag-rules">Bag Rules</a>
+  <a href="#clothing">Clothing</a>
+  <a href="#tech">Tech</a>
+  <a href="#health">Health &amp; Comfort</a>
+  <a href="#documents">Documents</a>
+  <a href="#family">Family Packing</a>
+  <a href="#international">International</a>
+  <a href="#do-not-bring">Do Not Bring</a>
+  <a href="#buy-in-nyc">Buy in NYC</a>
+  <a href="#by-trip">By Trip Length</a>
+</nav>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>NYC Packing List by Season: What You'll Actually Use</h1>
+      <div class="article-meta"><span>What to wear by season and month, the shoes, bags, coats, and extras you'll actually use &mdash; plus what not to bring</span></div>
+    </div>
+    <img class="article-hero-img" src="packing-list.png" alt="NYC packing list by season &mdash; what to wear and pack for New York City in winter, spring, summer and fall">
+    <div class="article-body">
+      <p>Packing for New York City is not like packing for a normal city break.</p>
+      <p>You are not just dressing for the weather. You are dressing for 20,000-step days, subway stairs, overheated platforms, wind tunnels between skyscrapers, sudden rain, tiny hotel rooms, tight Broadway seats, museum bag checks, observation deck security, and the very real possibility that you leave your hotel at 9 AM and do not come back until midnight.</p>
+      <p>That is why most generic NYC packing lists are useless. They tell you to "bring comfortable shoes" and "dress in layers." Fine. But what kind of shoes? What layers? Is a winter coat always necessary? Should you bring an umbrella? Can you take a backpack to Broadway or the Statue of Liberty?</p>
+      <p>Here is the packing advice I would actually give someone visiting New York for the first time.</p>
+      <hr class="divider-rule">
+      <h2 id="short-version">The Short Version: What You Really Need for NYC</h2>
+      <p>If you only remember one thing, remember this: <strong>pack lighter than you think, but be pickier about what you bring.</strong></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Category</th><th>Best Choice for NYC</th><th>Skip This</th></tr>
+          <tr><td><strong>Shoes</strong></td><td>Broken-in cushioned sneakers, walking shoes, or waterproof boots in winter</td><td>New shoes, thin flats, leather soles, fashion boots with no grip</td></tr>
+          <tr><td><strong>Coat</strong></td><td>Season-specific outerwear: real winter coat, light jacket, or rain shell</td><td>One "cute" jacket that cannot handle wind or rain</td></tr>
+          <tr><td><strong>Day bag</strong></td><td>Small zippered crossbody, sling, or compact daypack</td><td>Large backpack, tote that does not close, sightseeing with luggage</td></tr>
+          <tr><td><strong>Rain gear</strong></td><td>Packable rain shell plus compact umbrella</td><td>Full-size umbrella or no rain plan</td></tr>
+          <tr><td><strong>Clothes</strong></td><td>Repeatable outfits and layers</td><td>Too many "just in case" outfits</td></tr>
+          <tr><td><strong>Tech</strong></td><td>Power bank, charging cable, offline tickets/maps</td><td>Relying on one phone battery all day</td></tr>
+          <tr><td><strong>Health</strong></td><td>Blister bandages, pain reliever, lip balm, sunscreen, anti-chafe</td><td>Waiting to buy everything in Times Square</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="packing-rule">The NYC Packing Rule Most Tourists Learn Too Late</h2>
+      <p>The biggest NYC packing mistake is <strong>packing for the hotel room instead of the day.</strong></p>
+      <p>In New York, your day might look like this: subway from hotel to Lower Manhattan &rarr; Statue of Liberty ferry security &rarr; lunch outside &rarr; walk across SoHo &rarr; museum or observation deck &rarr; Broadway show &rarr; late dinner &rarr; subway back after 11 PM. Whatever you wear and carry at breakfast needs to work for security lines, stairs, rain, wind, photos, restaurants, and a theater seat. This is why I am ruthless about packing for NYC. Anything bulky, fragile, uncomfortable, or "maybe I'll use it once" has to earn its place. For a realistic picture of what your days will actually look like: <a href="how-much-can-you-see-in-one-day-nyc.html">How Many NYC Attractions Can You Realistically Do in One Day?</a></p>
+      <hr class="divider-rule">
+      <h2 id="winter">What to Pack for NYC in Winter</h2>
+      <div class="season-head sh-winter">
+        <div><div class="sh-label">Winter Packing &mdash; December, January, February</div><div class="sh-sub">Cold + wind + wet sidewalks + overheated interiors + long outdoor waits</div></div>
+      </div>
+      <p>Winter in New York is not just "cold." It is cold plus wind, wet sidewalks, slush puddles, overheated interiors, and long outdoor waits if you are visiting during Christmas. Average winter highs are usually in the upper 30s to low 40s&deg;F, but that number is misleading. Standing on Fifth Avenue in December wind feels very different from checking the forecast from your hotel bed.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Month</th><th>What It Feels Like</th><th>Packing Priority</th></tr>
+          <tr><td><strong>December</strong></td><td>Cold, festive, crowded, wet, sometimes snowy</td><td>Warm coat, waterproof shoes, gloves</td></tr>
+          <tr><td><strong>January</strong></td><td>Coldest-feeling month, icy mornings, wind chill</td><td>Heavy coat, thermals, serious footwear</td></tr>
+          <tr><td><strong>February</strong></td><td>Still winter, slightly brighter, snow/slush possible</td><td>Same as January, with layers</td></tr>
+        </table>
+      </div>
+      <h3>What to Wear in NYC in Winter</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Layer</th><th>What Works</th></tr>
+          <tr><td><strong>Base layer</strong></td><td>Thermal top, Heattech-style shirt, merino or synthetic</td></tr>
+          <tr><td><strong>Mid layer</strong></td><td>Wool sweater, fleece, cardigan, or sweatshirt</td></tr>
+          <tr><td><strong>Outer layer</strong></td><td>Long puffer, insulated parka, or warm wool coat with lining</td></tr>
+          <tr><td><strong>Bottoms</strong></td><td>Jeans with thermals underneath, wool trousers, fleece-lined leggings</td></tr>
+          <tr><td><strong>Shoes</strong></td><td>Waterproof boots, insulated sneakers, rubber-soled leather boots</td></tr>
+          <tr><td><strong>Accessories</strong></td><td>Hat, scarf, touchscreen gloves, wool socks</td></tr>
+        </table>
+      </div>
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e9/92/42/rockefeller-center-christmas.jpg?w=1400&h=-1&s=1" alt="Rockefeller Center Christmas in winter &mdash; the kind of NYC outdoor experience your packing list needs to account for: cold wind, long outdoor waits and festive crowded sidewalks">
+        <div class="cap">Rockefeller Center at Christmas &mdash; iconic, crowded, and exactly the kind of outdoor NYC experience your packing needs to handle. Plan for extended time outdoors, wind between buildings and subway stairs. For the Christmas walking route: <a href="nyc-christmas-walking-route.html">The Best NYC Christmas Walking Route</a></div>
+      </div>
+      <p>For Christmas season, I would rather you pack one genuinely warm coat than three cute jackets. You will be wearing the coat in almost every outdoor photo anyway.</p>
+      <h3>Winter Shoes: Do Not Get Cute First</h3>
+      <p>The wrong winter shoes can ruin your trip. NYC winter sidewalks are a mix of dry pavement, subway stairs, slick marble lobbies, curb slush, black ice, and mysterious puddles. Fashion boots can work only if they have rubber soles, traction, some water resistance, enough room for warm socks, and a heel you can walk in for miles. Avoid smooth leather soles &mdash; they are terrible on wet subway stairs and icy sidewalks.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local">
+          <div class="callout-title">What tourists overpack in winter</div>
+          <p style="font-size:13.5px;">Too many bulky sweaters &bull; Multiple dress coats &bull; Heavy boots worn once &bull; Fancy outfits nobody sees under the coat &bull; Large scarves that become annoying indoors</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">What tourists forget in winter</div>
+          <p style="font-size:13.5px;">Lip balm &bull; Hand cream &bull; Warm socks &bull; Touchscreen gloves &bull; A small bag for hat/gloves indoors &bull; Waterproof footwear, not just warm footwear</p>
+        </div>
+      </div>
+      <p>For observation decks in winter &mdash; where you will be exposed to wind at height for extended time: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></p>
+      <hr class="divider-rule">
+      <h2 id="spring">What to Pack for NYC in Spring</h2>
+      <div class="season-head sh-spring">
+        <div><div class="sh-label">Spring Packing &mdash; March, April, May</div><div class="sh-sub">The season where people make the most weather mistakes</div></div>
+      </div>
+      <p>March is not May. Early March can feel like winter. Late May can feel like summer. April is the wildcard: beautiful one day, wet and chilly the next.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Month</th><th>What It Feels Like</th><th>Packing Priority</th></tr>
+          <tr><td><strong>March</strong></td><td>Chilly mornings, cold rain, occasional surprise warm days</td><td>Warm jacket, layers, rain gear</td></tr>
+          <tr><td><strong>April</strong></td><td>Rainy, breezy, genuinely pleasant on good days</td><td>Trench or rain shell, layers, water-resistant shoes</td></tr>
+          <tr><td><strong>May</strong></td><td>Warm afternoons, still cool evenings</td><td>Light jacket, comfortable layers, sneakers</td></tr>
+        </table>
+      </div>
+      <h3>What to Wear in NYC in Spring</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Layer</th><th>What Works</th></tr>
+          <tr><td><strong>Base layer</strong></td><td>T-shirt or light long-sleeve</td></tr>
+          <tr><td><strong>Mid layer</strong></td><td>Light sweater, hoodie, or cardigan</td></tr>
+          <tr><td><strong>Outer layer</strong></td><td>Trench, rain shell, or light jacket</td></tr>
+          <tr><td><strong>Shoes</strong></td><td>Waterproof sneakers or leather sneakers (March/April), regular sneakers (May)</td></tr>
+          <tr><td><strong>Rain</strong></td><td>Compact umbrella, packable rain shell</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local">
+          <div class="callout-title">What tourists overpack in spring</div>
+          <p style="font-size:13.5px;">Winter-weight coat in late spring &bull; Heavy boots past March &bull; Layers suited for January &bull; Multiple heavy sweaters</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">What tourists forget in spring</div>
+          <p style="font-size:13.5px;">Rain gear for April &bull; Evening layer (warm days can turn cool nights) &bull; Water-resistant shoes &bull; Compact umbrella</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="summer">What to Pack for NYC in Summer</h2>
+      <div class="season-head sh-summer">
+        <div><div class="sh-label">Summer Packing &mdash; June, July, August</div><div class="sh-sub">Hot, humid, thunderstorms &mdash; and aggressively air-conditioned everywhere inside</div></div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Month</th><th>What It Feels Like</th><th>Packing Priority</th></tr>
+          <tr><td><strong>June</strong></td><td>Warm, humid, afternoon storms possible</td><td>Breathable clothes, light AC layer</td></tr>
+          <tr><td><strong>July</strong></td><td>Hot, sticky, intense sun</td><td>Linen/cotton, hat, water, sandals/sneakers</td></tr>
+          <tr><td><strong>August</strong></td><td>Hot nights, thunderstorms, heavy air</td><td>Light fabrics, breathable shoes, rain backup</td></tr>
+        </table>
+      </div>
+      <h3>What to Wear in NYC in Summer</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Item</th><th>Best Choice</th></tr>
+          <tr><td><strong>Tops</strong></td><td>Linen, cotton, moisture-wicking tees, loose blouses</td></tr>
+          <tr><td><strong>Bottoms</strong></td><td>Shorts, skirts, light trousers, breezy dresses</td></tr>
+          <tr><td><strong>Shoes</strong></td><td>Breathable sneakers or supportive sandals</td></tr>
+          <tr><td><strong>Extra layer</strong></td><td>Thin button-down, cardigan, or overshirt for AC</td></tr>
+          <tr><td><strong>Sun</strong></td><td>Sunglasses, sunscreen, baseball cap or packable hat</td></tr>
+          <tr><td><strong>Comfort</strong></td><td>Anti-chafe balm, blister bandages, water bottle</td></tr>
+        </table>
+      </div>
+      <p>Do not pack only tight jeans. You can wear denim in summer, but if you are walking all day in July humidity, lightweight bottoms are a gift to your future self.</p>
+      <h3>Sandals vs Sneakers in NYC Summer</h3>
+      <p>Supportive sandals can work &mdash; especially sport sandals or cushioned leather sandals with a real sole. Flimsy sandals are a mistake. For most visitors: one pair of breathable sneakers, one pair of supportive sandals, and no heels unless you have a specific dinner or event and will take a cab.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">Summer items people regret not packing</div>
+        <p style="font-size:13.5px;">Anti-chafe balm &bull; Sunscreen &bull; Sunglasses &bull; A hat &bull; Refillable water bottle &bull; Power bank &bull; Lightweight layer for restaurants and museums &bull; Extra socks if wearing sneakers</p>
+      </div>
+      <h3>Do You Need Bug Spray in NYC?</h3>
+      <p>Usually not for normal Midtown sightseeing. But if you are spending time in Central Park, Prospect Park, wooded areas, grassy waterfront parks, or visiting May through October, it can be worth packing a small insect repellent. <a href="https://www.nyc.gov/site/doh/health/health-topics/insect-repellent-safety.page" target="_blank" rel="noopener">NYC Health insect repellent safety guidance &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="fall">What to Pack for NYC in Fall</h2>
+      <div class="season-head sh-fall">
+        <div><div class="sh-label">Fall Packing &mdash; September, October, November</div><div class="sh-sub">The easiest season to pack for &mdash; but it still has traps</div></div>
+      </div>
+      <p>Early September can feel like summer. Late November can feel like winter. October is usually the sweet spot: layers, jackets, comfortable walking weather, and fewer extreme temperature swings.</p>
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/c4/c8/4b/caption.jpg?w=1400&h=-1&s=1" alt="Central Park in autumn &mdash; fall foliage in New York City, the perfect walking season with layers and a light jacket">
+        <div class="cap">Central Park in fall &mdash; October is NYC's sweet spot for walking. The weather is comfortable, crowds are manageable, and the foliage provides a completely different backdrop to the city. For seasonal timing advice: <a href="best-time-to-visit-nyc.html">Best Time to Visit NYC: Month-by-Month Guide</a></div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Month</th><th>What It Feels Like</th><th>Packing Priority</th></tr>
+          <tr><td><strong>September</strong></td><td>Warm days, cooler nights</td><td>Light jacket, breathable outfits</td></tr>
+          <tr><td><strong>October</strong></td><td>Crisp, pleasant, occasional rain</td><td>Sweater, jacket, rain layer</td></tr>
+          <tr><td><strong>November</strong></td><td>Chilly, windy, early holiday feel</td><td>Medium coat, scarf, warmer shoes</td></tr>
+        </table>
+      </div>
+      <h3>Fall Layering Formula</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Month</th><th>Outfit Formula</th></tr>
+          <tr><td><strong>September</strong></td><td>T-shirt + light jacket + sneakers</td></tr>
+          <tr><td><strong>October</strong></td><td>Long-sleeve + sweater or light jacket + comfortable shoes</td></tr>
+          <tr><td><strong>November</strong></td><td>Sweater + medium coat + scarf + water-resistant shoes</td></tr>
+        </table>
+      </div>
+      <p>By Thanksgiving week, pack almost like early winter: medium coat, warm socks, scarf, and shoes that can handle rain. Best fall shoe choices: cushioned sneakers, leather sneakers, ankle boots with rubber soles, waterproof sneakers for rainy forecasts. Avoid thin loafers or fashion flats if you plan to walk all day.</p>
+      <hr class="divider-rule">
+      <h2 id="month-guide">Month-by-Month NYC Packing Guide</h2>
+      <p>For a complete breakdown of what to expect each month beyond just clothing: <a href="best-time-to-visit-nyc.html">Best Time to Visit NYC: Month-by-Month Guide</a></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12.5px;">
+          <tr><th>Month</th><th>High/Low</th><th>Street Reality</th><th>What to Wear</th><th>Skip This</th><th>Common Mistake</th></tr>
+          <tr><td><strong>Jan</strong></td><td>39/28&deg;F</td><td>Cold, windy, icy, occasional snow</td><td>Heavy coat, thermals, boots, hat/gloves</td><td>Thin coat, smooth-soled shoes</td><td>Underestimating wind chill</td></tr>
+          <tr><td><strong>Feb</strong></td><td>42/30&deg;F</td><td>Still winter, snow/slush possible</td><td>Winter coat, layers, waterproof shoes</td><td>Spring clothes</td><td>Thinking winter is over</td></tr>
+          <tr><td><strong>Mar</strong></td><td>50/36&deg;F</td><td>Unpredictable, cold mornings, rain</td><td>Warm jacket, sweater, rain shell</td><td>Sandals, light-only outfits</td><td>Packing for "spring"</td></tr>
+          <tr><td><strong>Apr</strong></td><td>62/46&deg;F</td><td>Rainy, breezy, mixed temps</td><td>Trench/rain shell, layers</td><td>Heavy winter coat</td><td>No rain plan</td></tr>
+          <tr><td><strong>May</strong></td><td>71/55&deg;F</td><td>Pleasant, warmer afternoons</td><td>Light jacket, tees, sneakers</td><td>Bulky sweaters</td><td>Overpacking layers</td></tr>
+          <tr><td><strong>Jun</strong></td><td>80/64&deg;F</td><td>Warm, humid, storms</td><td>Breathable clothes, light AC layer</td><td>Heavy denim-only outfits</td><td>Forgetting sunscreen</td></tr>
+          <tr><td><strong>Jul</strong></td><td>85/70&deg;F</td><td>Hot, sticky, intense sun</td><td>Linen/cotton, hat, water, sandals/sneakers</td><td>Tight synthetics</td><td>No anti-chafe</td></tr>
+          <tr><td><strong>Aug</strong></td><td>83/69&deg;F</td><td>Hot nights, thunderstorms</td><td>Light clothes, rain backup, water</td><td>Heavy shoes only</td><td>Ignoring humidity</td></tr>
+          <tr><td><strong>Sep</strong></td><td>76/62&deg;F</td><td>Warm early fall</td><td>T-shirts, light jacket</td><td>Heavy coats</td><td>Dressing like October</td></tr>
+          <tr><td><strong>Oct</strong></td><td>65/51&deg;F</td><td>Crisp, ideal walking weather</td><td>Sweater, light jacket, sneakers</td><td>Summer-only clothes</td><td>No evening layer</td></tr>
+          <tr><td><strong>Nov</strong></td><td>54/42&deg;F</td><td>Chilly, windy, holiday transition</td><td>Medium coat, scarf, waterproof shoes</td><td>Lightweight jacket only</td><td>Not packing warm enough</td></tr>
+          <tr><td><strong>Dec</strong></td><td>44/34&deg;F</td><td>Cold, festive, wet, crowded</td><td>Warm coat, gloves, boots</td><td>Multiple cute coats</td><td>Prioritizing outfits over warmth</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="shoes">The Shoes That Actually Work for NYC</h2>
+      <p>If you splurge on one thing for NYC, make it shoes. New York sidewalks are hard. Subway stairs are unforgiving. Tourist days are long. You do not want to discover on day one that your "comfortable" shoes are only comfortable for brunch, not 9 miles.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Shoe Type</th><th>Best For</th><th>What to Look For</th></tr>
+          <tr><td><strong>Cushioned sneakers</strong></td><td>Most trips, most seasons</td><td>Good arch support, shock absorption, breathable upper</td></tr>
+          <tr><td><strong>Walking/running shoes</strong></td><td>20k-step days</td><td>Wide toe box, stable heel, broken in before trip</td></tr>
+          <tr><td><strong>Waterproof sneakers</strong></td><td>Spring/fall rain</td><td>Rubber sole, water-resistant upper</td></tr>
+          <tr><td><strong>Insulated boots</strong></td><td>Winter</td><td>Warmth, waterproofing, traction</td></tr>
+          <tr><td><strong>Supportive sandals</strong></td><td>Summer</td><td>Cushioned footbed, secure straps, non-slip sole</td></tr>
+          <tr><td><strong>Dress boots</strong></td><td>Broadway/dinner in cold months</td><td>Rubber sole, low/block heel, weather resistance</td></tr>
+        </table>
+      </div>
+      <h3>Shoes to Avoid in NYC</h3>
+      <div class="check-list cl-red">
+        <div class="cl-item"><div class="cl-dot"></div><div>Brand-new sneakers (blisters guaranteed)</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Thin ballet flats for full-day sightseeing</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Flip-flops outside beach or pool situations</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Leather-soled dress shoes</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>High heels for walking between neighborhoods</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Suede shoes if rain is likely</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Fashion boots with no grip</div></div>
+      </div>
+      <h3>Blister Prevention</h3>
+      <p>Pack this even if you never get blisters: blister bandages, good socks, anti-chafe balm, a backup pair of socks, and shoes already tested on long walks. The break-in rule is simple: <strong>if you have not walked at least a few miles in them before the trip, do not make them your main NYC shoe.</strong></p>
+      <hr class="divider-rule">
+      <h2 id="outerwear">Outerwear: What Jacket or Coat Do You Need?</h2>
+      <p>Outerwear is where overpacking happens fast. You do not need five jackets. You need the right one.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Season</th><th>Outerwear to Pack</th></tr>
+          <tr><td><strong>Winter</strong></td><td>Long insulated coat or warm lined wool coat</td></tr>
+          <tr><td><strong>Early spring</strong></td><td>Warm jacket plus rain shell</td></tr>
+          <tr><td><strong>Late spring</strong></td><td>Light jacket or trench/rain shell</td></tr>
+          <tr><td><strong>Summer</strong></td><td>Thin layer for AC, optional rain shell</td></tr>
+          <tr><td><strong>Early fall</strong></td><td>Light jacket</td></tr>
+          <tr><td><strong>Late fall</strong></td><td>Medium coat, scarf, warmer layer</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip">
+          <div class="callout-title">Heavy winter coat is necessary for</div>
+          <p style="font-size:13.5px;">December holiday sightseeing &bull; January and February trips &bull; Outdoor lines &bull; Brooklyn Bridge walks &bull; Observation decks &bull; Central Park winter plans &bull; Traveling with kids or older parents</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Heavy winter coat may be too much for</div>
+          <p style="font-size:13.5px;">Late March &bull; Early November &bull; Mild December trips with mostly indoor plans &bull; Visitors staying close to activities and using taxis</p>
+        </div>
+      </div>
+      <div class="verdict-strip">When in doubt, check the actual forecast two or three days before departure. Average temperatures are helpful for planning, but NYC packing should always be adjusted to the real conditions.</div>
+      <h2 id="rain">Umbrella vs Rain Jacket in NYC</h2>
+      <p>Bring a compact umbrella, but do not rely on it as your only rain gear.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Rain Situation</th><th>Best Gear</th></tr>
+          <tr><td>Light drizzle</td><td>Compact umbrella</td></tr>
+          <tr><td>All-day rain</td><td>Hooded rain jacket</td></tr>
+          <tr><td>Crowded Midtown sidewalks</td><td>Rain jacket</td></tr>
+          <tr><td>Summer thunderstorm</td><td>Compact umbrella plus quick-dry shoes</td></tr>
+          <tr><td>Windy rain</td><td>Rain shell; umbrella may flip</td></tr>
+          <tr><td>Museum/Broadway day</td><td>Small umbrella that fits in bag</td></tr>
+        </table>
+      </div>
+      <p>A full-size umbrella is annoying in NYC. It is awkward on subway stairs, hard to store at restaurants, and not fun in crowded sidewalks. For days when rain changes your entire plan: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC</a></p>
+      <hr class="divider-rule">
+      <h2 id="bag">The Best Day Bag for NYC</h2>
+      <p>The ideal NYC day bag is boring in the best way. It should be: small, zippered, comfortable all day, easy to inspect, big enough for water, charger, a layer and essentials, and small enough to fit under a Broadway seat.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Bag Type</th><th>Best For</th><th>Downsides</th></tr>
+          <tr><td><strong>Crossbody</strong></td><td>Most tourists, museums, Broadway, crowded areas</td><td>Limited space</td></tr>
+          <tr><td><strong>Sling bag</strong></td><td>Minimalist sightseeing</td><td>Can be too small for layers</td></tr>
+          <tr><td><strong>Compact daypack</strong></td><td>Families, photographers, winter layers</td><td>More inspections, bulkier in crowds</td></tr>
+          <tr><td><strong>Tote</strong></td><td>Shopping, casual days</td><td>Must zip closed; uncomfortable if heavy</td></tr>
+          <tr><td><strong>Large backpack</strong></td><td>Rarely worth it</td><td>Security hassle, crowded trains, tired shoulders</td></tr>
+        </table>
+      </div>
+      <p>For most adults, a small crossbody or compact backpack. For winter, choose a bag with enough room to stash gloves, hat, scarf, and maybe a thin layer.</p>
+      <h2 id="bag-rules">Bag Rules That Should Change How You Pack</h2>
+      <div class="check-list cl-red">
+        <div class="cl-item"><div class="cl-dot"></div><div>Broadway bags need to fit under your seat &mdash; theaters do not hold bags</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Luggage is not allowed at Broadway theaters</div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>The Met does not allow large bags or luggage &mdash; <a href="https://www.metmuseum.org/visit" target="_blank" rel="noopener">Met visitor guidelines &rarr;</a></div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Statue of Liberty pedestal/crown rules are strict, especially for backpacks and large umbrellas &mdash; <a href="https://www.nps.gov/stli/planyourvisit/basicinfo.htm" target="_blank" rel="noopener">NPS Statue of Liberty security info &rarr;</a></div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>SUMMIT and Edge prohibit luggage and oversized bags &mdash; <a href="https://www.summitov.com/tickets/" target="_blank" rel="noopener">SUMMIT &rarr;</a></div></div>
+        <div class="cl-item"><div class="cl-dot"></div><div>Observation decks may ban tripods, selfie sticks, glass bottles, and large camera gear</div></div>
+      </div>
+      <div class="verdict-strip">The practical rule: <strong>if your bag would be annoying under an airplane seat, it is probably too big for an NYC sightseeing day.</strong></div>
+      <p>For bag restrictions at specific observation decks: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a> &bull; For Broadway bag policies: check with your specific theater at booking. For Statue of Liberty bag rules: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty: Complete Guide</a></p>
+      <hr class="divider-rule">
+      <h2 id="clothing">Clothing Strategy: Pack Outfits You Can Repeat</h2>
+      <p>NYC is stylish, but visitors overestimate how dressy they need to be. You can go almost everywhere in dark jeans, clean sneakers, a good coat or jacket, and a simple top. Broadway does not require formalwear. Most restaurants are fine with smart casual unless you are booking a very high-end place.</p>
+      <h3>A Simple NYC Capsule Wardrobe</h3>
+      <p>For a 5-day trip (for the full itinerary to match this wardrobe to: <a href="nyc-5-day-itinerary.html">5 Days in NYC: The Ultimate First-Time Itinerary</a>):</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Item</th><th>Quantity</th></tr>
+          <tr><td>Tops</td><td>4&ndash;5</td></tr>
+          <tr><td>Bottoms</td><td>2&ndash;3</td></tr>
+          <tr><td>Sweater/layer</td><td>1&ndash;2</td></tr>
+          <tr><td>Jacket/coat</td><td>1</td></tr>
+          <tr><td>Shoes</td><td>1&ndash;2 pairs</td></tr>
+          <tr><td>Sleepwear</td><td>1</td></tr>
+          <tr><td>Underwear/socks</td><td>Per day plus 1 extra</td></tr>
+          <tr><td>Dressier outfit</td><td>1 optional</td></tr>
+        </table>
+      </div>
+      <h3>What Works for Sightseeing Plus Dinner</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Season</th><th>Easy Day-to-Night Outfit</th></tr>
+          <tr><td><strong>Winter</strong></td><td>Dark jeans, thermal top, sweater, warm coat, leather/rubber-soled boots</td></tr>
+          <tr><td><strong>Spring</strong></td><td>Jeans or trousers, tee or blouse, trench or light jacket, sneakers</td></tr>
+          <tr><td><strong>Summer</strong></td><td>Linen pants or dress, supportive sandals or sneakers, light layer</td></tr>
+          <tr><td><strong>Fall</strong></td><td>Dark denim, sweater, jacket, ankle boots or clean sneakers</td></tr>
+        </table>
+      </div>
+      <p>The goal is not to look like you live in NYC. The goal is to be comfortable enough to enjoy NYC. For days that will run from early morning through late evening: <a href="one-day-in-chelsea-nyc.html">One Day in Chelsea NYC: The Perfect Walking Itinerary</a></p>
+      <hr class="divider-rule">
+      <h2 id="tech">Tech Packing for NYC</h2>
+      <p>Your phone will work hard in New York. You will use it for maps, subway routing, tickets, restaurant reservations, photos, rideshares, weather and payments. Do not assume one full charge will last all day.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Tech checklist</div>
+          <p style="font-size:13.5px;">Power bank &bull; Charging cable &bull; Wall charger &bull; Offline maps &bull; Screenshots of tickets &bull; Weather app &bull; Transit app &bull; Extra phone storage &bull; eSIM or SIM for international visitors &bull; Plug adapter for international visitors</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Photography: pack lighter than instinct says</div>
+          <p style="font-size:13.5px;"><strong>Bring:</strong> Phone or compact camera &bull; Extra battery or power bank &bull; Lens cloth &bull; Small camera pouch &bull; Wrist strap<br><strong>Think twice about:</strong> Tripods &bull; Selfie sticks &bull; Multiple heavy lenses &bull; Large camera backpack &bull; Drone</p>
+        </div>
+      </div>
+      <p>Many major attractions restrict tripods, selfie sticks, drones, or large camera equipment. For most visitors, a phone plus a power bank is the better NYC photography setup.</p>
+      <hr class="divider-rule">
+      <h2 id="health">Health and Comfort Items You'll Actually Use</h2>
+      <p>This is the small stuff that saves a day.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Item</th><th>Why It Matters in NYC</th></tr>
+          <tr><td><strong>Blister bandages</strong></td><td>Long walking days</td></tr>
+          <tr><td><strong>Pain reliever</strong></td><td>Feet, back, headaches</td></tr>
+          <tr><td><strong>Hand sanitizer</strong></td><td>Subway, public spaces</td></tr>
+          <tr><td><strong>Tissues</strong></td><td>Bathrooms, cold weather, allergies</td></tr>
+          <tr><td><strong>Lip balm</strong></td><td>Wind and dry winter air</td></tr>
+          <tr><td><strong>Sunscreen</strong></td><td>Summer, observation decks, parks</td></tr>
+          <tr><td><strong>Electrolytes</strong></td><td>Hot summer days</td></tr>
+          <tr><td><strong>Anti-chafe balm</strong></td><td>Summer humidity and walking</td></tr>
+          <tr><td><strong>Medication</strong></td><td>Do not rely on finding your exact brand</td></tr>
+          <tr><td><strong>Reusable water bottle</strong></td><td>Hydration and saving money</td></tr>
+          <tr><td><strong>Small pack of wipes</strong></td><td>Kids, snacks, spills, subway grime</td></tr>
+        </table>
+      </div>
+      <p>NYC has pharmacies everywhere, but last-minute buying wastes time and costs more in tourist areas. For practical money-saving packing strategies: <a href="saving-money-on-nyc-trip.html">How to Save Money on Your NYC Trip</a></p>
+      <hr class="divider-rule">
+      <h2 id="documents">Documents, Money, and Transit</h2>
+      <p>You do not need much cash in NYC, but you do need payment redundancy.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Pack these</div>
+          <p style="font-size:13.5px;">ID &bull; Credit/debit card &bull; Contactless card or phone wallet for OMNY &bull; Backup card &bull; Small amount of cash &bull; Travel insurance info &bull; Digital ticket screenshots &bull; Hotel address saved offline &bull; Passport/visa/ESTA for international visitors</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">NYC subway payment</div>
+          <p style="font-size:13.5px;">Contactless payment via OMNY is easiest &mdash; tap your card or phone at the turnstile. Use the same card consistently for fare-capping benefits. <a href="https://new.mta.info/omny" target="_blank" rel="noopener">MTA OMNY fare information &rarr;</a></p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="family">Family-Specific NYC Packing</h2>
+      <p>NYC with kids is absolutely doable, but the packing strategy changes.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Item</th><th>Why</th></tr>
+          <tr><td><strong>Compact stroller</strong></td><td>Easier on sidewalks and restaurants</td></tr>
+          <tr><td><strong>Rain cover</strong></td><td>Sudden rain</td></tr>
+          <tr><td><strong>Kid layers</strong></td><td>Subway-to-street temperature swings</td></tr>
+          <tr><td><strong>Snacks</strong></td><td>Lines, transit delays, hangry moments</td></tr>
+          <tr><td><strong>Wipes</strong></td><td>Everything</td></tr>
+          <tr><td><strong>Small diaper bag</strong></td><td>Easier for security and tight spaces</td></tr>
+          <tr><td><strong>Foldable tote</strong></td><td>Extra layers, souvenirs</td></tr>
+          <tr><td><strong>Refillable water bottles</strong></td><td>Summer and long days</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-local">
+        <div class="callout-title">Stroller reality</div>
+        <p>Not every subway station has an elevator. Even when a station does, elevators can be out of service. If you use a stroller, be prepared to fold it and carry it at least sometimes. Compact is better &mdash; oversized strollers, wagons, and jogging strollers can be restricted at some museums and venues.</p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="international">International Visitor Notes</h2>
+      <p>If you are visiting NYC from outside the U.S., do not forget the practical items that are easy to overlook when focused on packing clothes.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Documents and tech</div>
+          <p style="font-size:13.5px;">U.S. plug adapter &bull; Passport &bull; Visa/ESTA documents if applicable &bull; Travel insurance &bull; Prescription meds in original packaging &bull; eSIM or roaming plan &bull; Contactless card that works internationally &bull; Backup payment card &bull; Small amount of U.S. cash</p>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-title">Two tips for international visitors</div>
+          <p style="font-size:13.5px;"><strong>Payment:</strong> NYC is very card-friendly, but not every international card works perfectly at every tap terminal. Bring at least two payment options.<br><strong>Medication:</strong> Do not assume your usual medication has the same name, dosage, or availability in the U.S. Bring what you need.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="do-not-bring">What Not to Bring to NYC</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Do Not Bring</th><th>Why</th></tr>
+          <tr><td><strong>Large luggage during sightseeing</strong></td><td>Subway stairs, bag rules, no storage at many attractions</td></tr>
+          <tr><td><strong>Unbroken shoes</strong></td><td>Blisters by day two</td></tr>
+          <tr><td><strong>Too many dressy outfits</strong></td><td>NYC is more practical than tourists think</td></tr>
+          <tr><td><strong>Full-size umbrella</strong></td><td>Annoying on sidewalks and subway stairs</td></tr>
+          <tr><td><strong>Large backpack</strong></td><td>Security checks, crowded trains, Broadway seats</td></tr>
+          <tr><td><strong>Heavy camera gear</strong></td><td>Often restricted; exhausting to carry all day</td></tr>
+          <tr><td><strong>Leather-soled shoes</strong></td><td>Slippery in rain and winter</td></tr>
+          <tr><td><strong>Too many "just in case" items</strong></td><td>Hotel rooms are small</td></tr>
+          <tr><td><strong>Fashion coat with no warmth</strong></td><td>Winter wind will win</td></tr>
+          <tr><td><strong>Oversized stroller or wagon</strong></td><td>Hard on subway and restricted in venues</td></tr>
+        </table>
+      </div>
+      <h2 id="buy-in-nyc">What You Can Buy Easily in NYC</h2>
+      <p>Do not waste suitcase space on things you can grab easily.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Easy to buy in NYC</div>
+          <p style="font-size:13.5px;">Toothpaste &bull; Shampoo/conditioner &bull; Snacks &bull; Bottled drinks &bull; Basic pain reliever &bull; Umbrella &bull; Socks &bull; Gloves/hats in winter &bull; Tote bags &bull; Basic clothing layers</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Do not plan to buy last-minute</div>
+          <p style="font-size:13.5px;">Winter coat &bull; Waterproof boots &bull; Comfortable walking shoes &bull; Prescription medication &bull; Specialty skincare or hair products &bull; Power bank near tourist areas &bull; Quality rain jacket</p>
+        </div>
+      </div>
+      <p>The more specific the item needs to be, the more you should bring it from home.</p>
+      <hr class="divider-rule">
+      <h2 id="by-trip">Final NYC Packing Lists by Trip Type</h2>
+      <div class="card-grid cols-2">
+        <div class="pl-card">
+          <div class="pl-head">3-Day NYC Packing List</div>
+          <div class="pl-body">
+            <div class="pl-row"><div class="pl-cat">Clothes</div><div>3 tops, 2 bottoms, 1 layer, sleepwear</div></div>
+            <div class="pl-row"><div class="pl-cat">Shoes</div><div>1 excellent walking pair</div></div>
+            <div class="pl-row"><div class="pl-cat">Outerwear</div><div>Season-appropriate jacket or coat</div></div>
+            <div class="pl-row"><div class="pl-cat">Bag</div><div>Small crossbody or compact daypack</div></div>
+            <div class="pl-row"><div class="pl-cat">Tech</div><div>Phone, charger, power bank</div></div>
+            <div class="pl-row"><div class="pl-cat">Comfort</div><div>Blister bandages, pain reliever, lip balm</div></div>
+            <div class="pl-row"><div class="pl-cat">Weather</div><div>Compact umbrella or rain shell</div></div>
+          </div>
+        </div>
+        <div class="pl-card">
+          <div class="pl-head">5-Day NYC Packing List</div>
+          <div class="pl-body">
+            <div class="pl-row"><div class="pl-cat">Clothes</div><div>4&ndash;5 tops, 2&ndash;3 bottoms, 1&ndash;2 layers</div></div>
+            <div class="pl-row"><div class="pl-cat">Shoes</div><div>1 main walking pair, 1 backup or dressier</div></div>
+            <div class="pl-row"><div class="pl-cat">Outerwear</div><div>One correct coat or jacket</div></div>
+            <div class="pl-row"><div class="pl-cat">Bag</div><div>Small zippered day bag</div></div>
+            <div class="pl-row"><div class="pl-cat">Tech</div><div>Power bank, cable, wall charger</div></div>
+            <div class="pl-row"><div class="pl-cat">Health</div><div>Blister kit, meds, sunscreen/anti-chafe as seasonal</div></div>
+            <div class="pl-row"><div class="pl-cat">Extras</div><div>One smart-casual outfit</div></div>
+          </div>
+        </div>
+        <div class="pl-card">
+          <div class="pl-head">7-Day NYC Packing List</div>
+          <div class="pl-body">
+            <div class="pl-row"><div class="pl-cat">Clothes</div><div>5 tops, 3 bottoms, 2 layers</div></div>
+            <div class="pl-row"><div class="pl-cat">Shoes</div><div>2 pairs max</div></div>
+            <div class="pl-row"><div class="pl-cat">Laundry</div><div>Plan to rewear or do laundry</div></div>
+            <div class="pl-row"><div class="pl-cat">Outerwear</div><div>Season-specific coat or jacket</div></div>
+            <div class="pl-row"><div class="pl-cat">Day bag</div><div>Small, secure, inspection-friendly</div></div>
+            <div class="pl-row"><div class="pl-cat">Tech</div><div>Power bank, extra cable</div></div>
+            <div class="pl-row"><div class="pl-cat">Comfort</div><div>Full walking-day kit</div></div>
+          </div>
+        </div>
+        <div class="pl-card">
+          <div class="pl-head">Carry-On Only NYC Packing List</div>
+          <div class="pl-body">
+            <div class="pl-row"><div class="pl-cat">Clothes</div><div>2&ndash;3 bottoms, 4&ndash;5 tops, 1&ndash;2 layers</div></div>
+            <div class="pl-row"><div class="pl-cat">Outerwear</div><div>1 coat or jacket worn on plane</div></div>
+            <div class="pl-row"><div class="pl-cat">Shoes</div><div>1&ndash;2 pairs max</div></div>
+            <div class="pl-row"><div class="pl-cat">Toiletries</div><div>Travel-size only</div></div>
+            <div class="pl-row"><div class="pl-cat">Bag</div><div>Small day bag</div></div>
+            <div class="pl-row"><div class="pl-cat">Plan</div><div>Laundry plan + minimal extras</div></div>
+            <div class="pl-row"><div class="pl-cat">Comfort</div><div>Power bank + blister kit</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="pl-card" style="margin-top:10px;">
+        <div class="pl-head">Winter Christmas Trip Packing List</div>
+        <div class="pl-body">
+          <div class="card-grid cols-2">
+            <div>
+              <div class="pl-row"><div class="pl-cat">Coat</div><div>Long warm coat</div></div>
+              <div class="pl-row"><div class="pl-cat">Base</div><div>Thermal base layers</div></div>
+              <div class="pl-row"><div class="pl-cat">Mid layer</div><div>Sweater or fleece</div></div>
+              <div class="pl-row"><div class="pl-cat">Shoes</div><div>Waterproof boots</div></div>
+              <div class="pl-row"><div class="pl-cat">Socks</div><div>Wool socks</div></div>
+              <div class="pl-row"><div class="pl-cat">Accessories</div><div>Hat, scarf, gloves, lip balm, hand warmers</div></div>
+            </div>
+            <div>
+              <div class="pl-row"><div class="pl-cat">Rain</div><div>Compact umbrella</div></div>
+              <div class="pl-row"><div class="pl-cat">Bag</div><div>Small day bag</div></div>
+              <div class="pl-row"><div class="pl-cat">Tech</div><div>Portable charger</div></div>
+              <div class="pl-row"><div class="pl-cat">Evening</div><div>One polished outfit for dinner/Broadway</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pl-card" style="margin-top:10px;">
+        <div class="pl-head">Summer NYC Packing List</div>
+        <div class="pl-body">
+          <div class="card-grid cols-2">
+            <div>
+              <div class="pl-row"><div class="pl-cat">Tops</div><div>Breathable tops</div></div>
+              <div class="pl-row"><div class="pl-cat">Bottoms</div><div>Lightweight bottoms</div></div>
+              <div class="pl-row"><div class="pl-cat">Shoes</div><div>Supportive sneakers + supportive sandals</div></div>
+              <div class="pl-row"><div class="pl-cat">Sun</div><div>Sunscreen, sunglasses, hat</div></div>
+            </div>
+            <div>
+              <div class="pl-row"><div class="pl-cat">Comfort</div><div>Anti-chafe balm, refillable water bottle, electrolytes</div></div>
+              <div class="pl-row"><div class="pl-cat">Layer</div><div>Thin AC layer</div></div>
+              <div class="pl-row"><div class="pl-cat">Rain</div><div>Compact umbrella</div></div>
+              <div class="pl-row"><div class="pl-cat">Tech</div><div>Power bank</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pl-card" style="margin-top:10px;">
+        <div class="pl-head">Family Trip Packing List</div>
+        <div class="pl-body">
+          <div class="card-grid cols-2">
+            <div>
+              <div class="pl-row"><div class="pl-cat">Stroller</div><div>Compact stroller with rain cover</div></div>
+              <div class="pl-row"><div class="pl-cat">Layers</div><div>Kid layers for temperature swings</div></div>
+              <div class="pl-row"><div class="pl-cat">Snacks</div><div>Snacks for lines and waits</div></div>
+              <div class="pl-row"><div class="pl-cat">Wipes</div><div>Wipes (lots)</div></div>
+            </div>
+            <div>
+              <div class="pl-row"><div class="pl-cat">Bag</div><div>Small diaper bag</div></div>
+              <div class="pl-row"><div class="pl-cat">Water</div><div>Refillable water bottles</div></div>
+              <div class="pl-row"><div class="pl-cat">Extra</div><div>Extra socks, foldable tote, entertainment for waits</div></div>
+              <div class="pl-row"><div class="pl-cat">Plan</div><div>Elevator/subway backup plan</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="callout callout-summary" style="margin-top:18px;">
+        <div class="callout-title">The underlying principle across every version</div>
+        <p>Pack for the <strong>day you are actually going to have</strong>, not the hotel room you will briefly occupy between those days. Whatever you wear and carry at breakfast needs to still be working at midnight. That is the real NYC packing test.</p>
+        <p style="font-size:13.5px;margin-top:8px;">For full trip planning context: <a href="nyc-5-day-itinerary.html">5 Days in NYC: The Ultimate First-Time Itinerary</a> &bull; <a href="things-to-do-first-timers.html">40 Best Things to Do in NYC for First-Time Visitors</a></p>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="best-time-to-visit-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Time to Visit NYC: Month-by-Month Guide</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="nyc-4-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC in 4 Days: Relaxed vs. Maximum-Sightseeing Itinerary</a></li>
+      <li><a href="nyc-christmas-walking-route.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Christmas Walking Route</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared: Edge vs Top of the Rock vs Empire State</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>If You Can Only Visit One Museum in NYC, Which Should It Be?</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="how-much-can-you-see-in-one-day-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Many NYC Attractions Can You Realistically Do in One Day?</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="one-day-in-chelsea-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Chelsea NYC: The Perfect Walking Itinerary</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Trip</h3>
+    <p class="sub">More tools for making your New York City visit as smooth as possible.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots to help you plan where you are actually going</div></a>
+      <a class="footer-card" href="nyc-5-day-itinerary.html"><div class="fc-title">5-Day NYC Itinerary</div><div class="fc-sub">Match your packing list to a realistic five-day first-time schedule</div></a>
+      <a class="footer-card" href="best-time-to-visit-nyc.html"><div class="fc-title">Best Time to Visit NYC</div><div class="fc-sub">Month-by-month guide to crowds, weather and what to expect</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){document.getElementById('snLinks').classList.toggle('open');});
+var secs=['short-version','packing-rule','winter','spring','summer','fall','month-guide','shoes','outerwear','rain','bag','bag-rules','clothing','tech','health','documents','family','international','do-not-bring','buy-in-nyc','by-trip'];
+var slinks=document.querySelectorAll('.side-nav a');var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){var cur=secs[0];secs.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-140) cur=id;});slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});}
+window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+</script>
+</body>
+</html>
