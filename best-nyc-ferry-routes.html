@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best NYC Ferry Routes for Tourists, Ranked by Views and Usefulness | EverythingInNYC</title>
+<meta name="description" content="Best NYC ferry routes for tourists ranked by views, usefulness, cost, itinerary value, and common mistakes, including Staten Island Ferry, East River, Rockaway, Governors Island, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ROUTE CARD */
+.route-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:20px 0;}
+.rc-head{padding:11px 16px;background:var(--navy);display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.rc-rank{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:3px 11px;white-space:nowrap;}
+.rc-title{font-family:var(--font-head);font-weight:800;font-size:16px;color:#fff;flex:1;}
+.rc-scores{display:flex;gap:6px;flex-wrap:wrap;}
+.rc-score{font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap;}
+.rs-views{background:rgba(255,193,7,.2);color:var(--accent);}
+.rs-use{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);}
+.rs-free{background:#14532d;color:#fff;}
+.rc-body{padding:14px 16px;}
+/* VERDICT STRIP */
+.verdict-strip{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:7px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+.verdict-strip strong{color:var(--navy);}
+/* SECTION IMAGE */
+.sect-img{margin:14px 0 10px;}.sect-img img{width:100%;border-radius:12px;max-height:400px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:6px;text-align:center;}
+/* MINI ITINERARY */
+.mini-itin{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:8px 0;}
+.mi-head{background:var(--navy);padding:7px 14px;font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);}
+.mi-body{padding:9px 14px;font-size:14px;}
+/* MISTAKES LIST */
+.mistake-item{display:flex;gap:10px;padding:7px 14px;border-bottom:1px solid var(--border);font-size:14px;align-items:flex-start;}
+.mistake-item:last-child{border-bottom:none;}
+.mi-label{font-family:var(--font-head);font-weight:800;color:var(--navy);min-width:0;flex:none;width:auto;max-width:200px;}
+.mi-why{flex:1;color:var(--text-secondary);}
+/* QUICK RANKING */
+.rank-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.rank-table th{background:var(--navy);color:#fff;padding:7px 10px;text-align:left;font-size:11px;}
+.rank-table td{padding:6px 10px;border-bottom:1px solid var(--border);}
+.rank-table tr:last-child td{border-bottom:none;}
+.rank-table tr:nth-child(even) td{background:rgba(15,23,42,.025);}
+.rank-table td:first-child{font-family:var(--font-head);font-weight:800;color:var(--accent);}
+/* BONUS BADGE */
+.rc-bonus .rc-rank{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);}
+/* GOAL TABLE */
+.goal-row{display:flex;gap:0;padding:6px 14px;border-bottom:1px solid var(--border);font-size:13.5px;}
+.goal-row:last-child{border-bottom:none;}
+.goal-q{flex:1;color:var(--text-secondary);}
+.goal-a{flex:1;font-weight:700;color:var(--navy);}
+[id]{scroll-margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Sightseeing &amp; Planning</span>
+      <h1>Best NYC Ferry Routes for Tourists, Ranked by Views and Usefulness</h1>
+      <div class="article-meta"><span>Every NYC ferry route ranked for tourists &mdash; which to take, which to skip, and which gives you the best views for the money</span></div>
+    </div>
+    <img class="article-hero-img" src="best-NYC-routes.png" alt="Best NYC ferry routes for tourists &mdash; East River, Staten Island Ferry, South Brooklyn, Astoria and more ranked by views and usefulness">
+    <div class="article-body">
+      <p>NYC ferries are one of the best cheap experiences in New York, but not every ferry route deserves a spot in your itinerary.</p>
+      <p>Some routes feel like a mini sightseeing cruise for the price of a snack. Some are genuinely useful for getting between neighborhoods. Some are mostly commuter routes that sound exciting on a map but make very little sense if you only have three or four days in the city.</p>
+      <p>The trick is knowing which ferry to take, where to sit, when to go, and when to ignore the water completely and just take the subway like a sane person. This guide ranks the best NYC ferry routes for tourists by views, usefulness, ease, value, crowd risk, and whether I would actually recommend them to a first-time visitor.</p>
+      <hr class="divider-rule">
+      <h2 id="quick-ranking">Quick Ranking: Best NYC Ferry Routes for Tourists</h2>
+      <div class="table-wrap">
+        <table class="rank-table">
+          <tr><th>#</th><th>Route</th><th>Best For</th><th>Views</th><th>Usefulness</th><th>Cost</th><th>Verdict</th></tr>
+          <tr><td>1</td><td><strong>East River</strong></td><td>Skyline, DUMBO, Williamsburg, LIC</td><td>9/10</td><td>10/10</td><td>$4.50</td><td>Best overall route</td></tr>
+          <tr><td>2</td><td><strong>Staten Island Ferry</strong></td><td>Free Statue of Liberty views</td><td>9/10</td><td>8/10</td><td>Free</td><td>Best free ferry</td></tr>
+          <tr><td>3</td><td><strong>South Brooklyn</strong></td><td>Brooklyn Bridge Park, Red Hook, Governors Island</td><td>8/10</td><td>8/10</td><td>$4.50</td><td>Best for Brooklyn exploring</td></tr>
+          <tr><td>4</td><td><strong>Astoria</strong></td><td>Roosevelt Island, Queensboro Bridge, LIC</td><td>8/10</td><td>7/10</td><td>$4.50</td><td>Best repeat-visitor route</td></tr>
+          <tr><td>5</td><td><strong>Rockaway&ndash;Soundview</strong></td><td>Beach day</td><td>7/10</td><td>6/10</td><td>$4.50 or reserve fare</td><td>Good for beach, not quick sightseeing</td></tr>
+          <tr><td>6</td><td><strong>St. George</strong></td><td>Point-to-point Staten Island trips</td><td>7/10</td><td>5/10</td><td>$4.50</td><td>Niche for tourists</td></tr>
+          <tr><td>7</td><td><strong>Soundview/Bronx</strong></td><td>Local waterfront</td><td>6/10</td><td>4/10</td><td>$4.50</td><td>Skip unless you have a reason</td></tr>
+          <tr><td>Bonus</td><td><strong>Governors Island</strong></td><td>Island day trip</td><td>8/10</td><td>8/10</td><td>Varies</td><td>Great seasonal add-on</td></tr>
+          <tr><td>Bonus</td><td><strong>Rockaway Reserve/Rocket</strong></td><td>Guaranteed summer beach ferry</td><td>7/10</td><td>7/10</td><td>Higher fare</td><td>Useful for peak summer crowds</td></tr>
+        </table>
+      </div>
+      <h2 id="short-answer">Short Answer: Which Ferry Should You Take?</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="goal-row"><div class="goal-q">One NYC Ferry route?</div><div class="goal-a">East River</div></div>
+        <div class="goal-row"><div class="goal-q">Free Statue of Liberty views?</div><div class="goal-a">Staten Island Ferry</div></div>
+        <div class="goal-row"><div class="goal-q">Brooklyn waterfront day?</div><div class="goal-a">South Brooklyn route</div></div>
+        <div class="goal-row"><div class="goal-q">Less-touristy scenic ride?</div><div class="goal-a">Astoria route</div></div>
+        <div class="goal-row"><div class="goal-q">Beach day?</div><div class="goal-a">Rockaway &mdash; but treat it as a real outing, not a quick detour</div></div>
+        <div class="goal-row"><div class="goal-q">First-time visitor, limited time?</div><div class="goal-a">Skip Soundview/Bronx unless you are staying near a stop</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="basics">NYC Ferry Basics Tourists Need to Know</h2>
+      <p>Before ranking the routes properly, you need to understand one thing: <strong>NYC Ferry is not the subway on water.</strong> It is scenic, comfortable, and fun, but it does not run every two minutes. You need to check the schedule, arrive early, and give yourself breathing room.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Question</th><th>Answer</th></tr>
+          <tr><td>How much is NYC Ferry?</td><td>$4.50 one-way</td></tr>
+          <tr><td>Is NYC Ferry included in OMNY?</td><td>No</td></tr>
+          <tr><td>Can you tap a credit card like the subway?</td><td>No &mdash; use the app or ticket machines</td></tr>
+          <tr><td>Are transfers free?</td><td>Yes, within NYC Ferry for 120 minutes after activation</td></tr>
+          <tr><td>Do round trips count as transfers?</td><td>No</td></tr>
+          <tr><td>Do tickets expire?</td><td>Yes, usually 90 days after purchase</td></tr>
+          <tr><td>Are ferries first-come, first-served?</td><td>Yes, unless using a reserve/seasonal ticket</td></tr>
+          <tr><td>What if the ferry is full?</td><td>You wait for the next one</td></tr>
+          <tr><td>Do ferries have bathrooms?</td><td>Yes</td></tr>
+          <tr><td>Can you bring strollers?</td><td>Yes</td></tr>
+          <tr><td>Can you bring bikes?</td><td>Yes, but space can be limited</td></tr>
+          <tr><td>Can you bring dogs?</td><td>Service dogs, or dogs in a carrier/with muzzle</td></tr>
+          <tr><td>Are ferries accessible?</td><td>Yes</td></tr>
+          <tr><td>Is the top deck worth it?</td><td>Absolutely, unless the weather is miserable</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <a class="callout callout-tip" href="https://www.ferry.nyc/tickets-and-fares/" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <div class="callout-title">NYC Ferry ticketing &amp; fares &rarr;</div>
+          <p style="font-size:13.5px;">Official pricing, app download, and ticket machine locations on the NYC Ferry website.</p>
+        </a>
+        <a class="callout callout-local" href="https://www.ferry.nyc/service-alerts/" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <div class="callout-title">NYC Ferry service alerts &rarr;</div>
+          <p style="font-size:13.5px;">Check before you go &mdash; weather, delays, and route changes are posted here.</p>
+        </a>
+      </div>
+      <h2 id="comparison-basics">NYC Ferry vs Staten Island Ferry</h2>
+      <p>This confuses a lot of visitors. <strong>NYC Ferry</strong> is the paid citywide ferry network with routes like East River, Astoria, South Brooklyn, Rockaway, and St. George. <strong>Staten Island Ferry</strong> is a separate, free ferry operated by NYC DOT between Lower Manhattan and Staten Island. The Staten Island Ferry is the classic free harbor ride. NYC Ferry is better for hopping between waterfront neighborhoods.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Feature</th><th>NYC Ferry</th><th>Staten Island Ferry</th></tr>
+          <tr><td><strong>Cost</strong></td><td>$4.50 one-way</td><td>Free</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Neighborhood-hopping and skyline views</td><td>Statue of Liberty and harbor views</td></tr>
+          <tr><td><strong>Payment</strong></td><td>App or ticket machine</td><td>No ticket needed</td></tr>
+          <tr><td><strong>Tourist usefulness</strong></td><td>High on the right routes</td><td>Very high for budget travelers</td></tr>
+          <tr><td><strong>Best route</strong></td><td>East River</td><td>Whitehall to St. George</td></tr>
+          <tr><td><strong>Main catch</strong></td><td>Schedules and route splits</td><td>Must disembark before returning</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="east-river">1. East River Route: Best Overall NYC Ferry Route for Tourists</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 1</span>
+          <span class="rc-title">East River Route</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 9/10</span>
+            <span class="rc-score rs-use">Usefulness 10/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The East River route is the one I recommend most often because it actually solves a tourist problem: it gives you beautiful views and drops you near places you probably wanted to visit anyway. You get Manhattan skyline views, DUMBO, Williamsburg, Greenpoint, Long Island City, Midtown, and Wall Street/Pier 11. That is a very strong return for one ferry ride. This is the closest NYC Ferry gets to feeling like a budget sightseeing cruise.</p>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/b3/8a/3f/lower-manhattan-with.jpg?w=1400&h=-1&s=1" alt="Lower Manhattan skyline seen from the East River &mdash; the view from the NYC Ferry East River route looking toward the Financial District and Manhattan Bridge">
+            <div class="cap">Lower Manhattan from the East River &mdash; the view you get on the East River ferry route. Manhattan skyline, Financial District, and the bridges all visible from the water. This is why the East River route ranks first for tourists: it doubles as a sightseeing experience on a working transit fare.</div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Manhattan skyline, Brooklyn waterfront, bridges</td></tr>
+              <tr><td><strong>Cost</strong></td><td>$4.50 one-way</td></tr>
+              <tr><td><strong>Time</strong></td><td>30&ndash;50 minutes depending on stops</td></tr>
+              <tr><td><strong>Best direction</strong></td><td>Either, but Manhattan-to-Brooklyn gives great outbound views</td></tr>
+              <tr><td><strong>Best side</strong></td><td>Left side going toward Brooklyn for Manhattan skyline views</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Medium &mdash; high on summer weekends</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Almost every tourist, especially first-timers</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>Nobody who can take it</td></tr>
+            </table>
+          </div>
+          <h3>The Route Split Warning</h3>
+          <p>The East River route has A and B service variations. This matters because not all ferries stop at every pier. If you are planning to get off at a specific stop, check which service you are boarding. Getting on the wrong variant and sailing past your stop is a very fixable but annoying mistake.</p>
+          <h3>Best Uses for Tourists</h3>
+          <div class="card-grid cols-2">
+            <div class="callout callout-summary">
+              <div class="callout-title">As transportation</div>
+              <p style="font-size:13.5px;">Wall Street/Pier 11 &rarr; DUMBO or Brooklyn Bridge Park is one of the cleanest point-to-point tourist moves in the city. Beats the subway for the experience. Connect with: <a href="one-day-in-brooklyn.html">One Day in Brooklyn &rarr;</a></p>
+            </div>
+            <div class="callout callout-tip">
+              <div class="callout-title">As a scenic ride</div>
+              <p style="font-size:13.5px;">Pier 11 &rarr; DUMBO &rarr; Williamsburg &rarr; Greenpoint or back is an excellent loop. Sit outside, check the bridges, watch the skyline shift.</p>
+            </div>
+            <div class="callout callout-local" style="grid-column:1/-1;">
+              <div class="callout-title">Sunset ferry</div>
+              <p style="font-size:13.5px;">The East River around golden hour is genuinely beautiful. Aim for a mid-evening departure and you will understand why this route ranks first. For more waterfront view options: <a href="best-free-skyline-views-in-nyc.html">Best Free Skyline Views in NYC &rarr;</a></p>
+            </div>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Take this route. It has the best mix of views, useful stops, and itinerary flexibility of any NYC ferry option.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="staten-island-ferry">2. Staten Island Ferry: Best Free Ferry Ride in NYC</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 2</span>
+          <span class="rc-title">Staten Island Ferry</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 9/10</span>
+            <span class="rc-score rs-free">Free</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a9/31/22/photo0jpg.jpg?w=1400&h=-1&s=1" alt="Staten Island Ferry departing Manhattan &mdash; the free NYC harbor ferry that passes the Statue of Liberty with views of Lower Manhattan">
+            <div class="cap">The Staten Island Ferry &mdash; completely free, runs frequently, and gives you some of the best harbor views in the city without buying a sightseeing cruise ticket. Stand on the right side heading to Staten Island for the best Statue of Liberty views.</div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Statue of Liberty, Lower Manhattan, harbor</td></tr>
+              <tr><td><strong>Cost</strong></td><td>Free</td></tr>
+              <tr><td><strong>Time</strong></td><td>About 25 minutes each way</td></tr>
+              <tr><td><strong>Best direction</strong></td><td>Manhattan to Staten Island for Statue views</td></tr>
+              <tr><td><strong>Best side</strong></td><td>Right side going to Staten Island; left side returning</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Medium</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Budget travelers, first-timers, families</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>Visitors who want to actually visit Liberty Island</td></tr>
+            </table>
+          </div>
+          <h3>What Most Tourists Get Wrong</h3>
+          <p>The Staten Island Ferry <strong>does not take you to the Statue of Liberty.</strong> It passes at a distance. You can see the Statue, take photos, and enjoy the harbor, but you are not getting Liberty Island access. If you want pedestal tickets, crown tickets, the museum, or close-up Statue photos, book the official Statue of Liberty ferry instead. <a href="statue-of-liberty-vs-staten-island-ferry.html">Staten Island Ferry vs Statue of Liberty Ferry: What's the Difference? &rarr;</a> &bull; <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty: Complete Guide &rarr;</a> &bull; <a href="https://www.viator.com/New-York-City-attractions/Statue-of-Liberty/d687-a16?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Statue of Liberty guided tour tickets &rarr;</a></p>
+          <h3>Scam Warning Near Battery Park</h3>
+          <p>Ignore anyone aggressively selling "Statue ferry" tickets near Battery Park or outside the terminal. The Staten Island Ferry is free. You do not need a ticket. If someone near the terminal tells you otherwise, keep walking.</p>
+          <h3>Can You Immediately Reboard?</h3>
+          <p>Usually, you must get off at Staten Island and board again for the return. Do not assume you can stay on the same boat.</p>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> The best free ferry ride in NYC. Not the most flexible ferry experience, but for a first-time visitor on a budget, it absolutely belongs on the list.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="south-brooklyn">3. South Brooklyn Route: Best for Brooklyn Exploring</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 3</span>
+          <span class="rc-title">South Brooklyn Route</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 8/10</span>
+            <span class="rc-score rs-use">Usefulness 8/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The South Brooklyn route is excellent if you are building a day around Brooklyn waterfront stops. It is not as obvious as East River, but it can be more useful than people realize. Depending on current routing and seasonal service, it can connect places like Wall Street/Pier 11, Brooklyn Bridge Park Pier 6, Red Hook, Governors Island, DUMBO, Corlears Hook, Sunset Park, and Bay Ridge.</p>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Lower Manhattan, Brooklyn waterfront, harbor</td></tr>
+              <tr><td><strong>Best stops</strong></td><td>Brooklyn Bridge Park Pier 6, Red Hook, DUMBO, Governors Island</td></tr>
+              <tr><td><strong>Best time</strong></td><td>Late morning to afternoon</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Medium</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Visitors spending half a day in Brooklyn</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>First-timers trying to "see everything" quickly</td></tr>
+            </table>
+          </div>
+          <h3>Why It Works</h3>
+          <p>Red Hook is awkward by subway. Governors Island is seasonal. Brooklyn Bridge Park has multiple sections. The ferry makes these places feel connected. This route is best when you are not rushing. Think waterfront wandering, lunch, parks, and views. For how to spend a full day in Brooklyn using this route: <a href="one-day-in-brooklyn.html">One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond &rarr;</a></p>
+          <div class="callout callout-local">
+            <div class="callout-title">The catch</div>
+            <p>It is easy to overplan this route. Just because a ferry connects two places does not mean it is the fastest option. If your plan is Times Square &rarr; Red Hook &rarr; Central Park &rarr; dinner in the Village, please take a deep breath and delete something.</p>
+          </div>
+          <div class="callout callout-tip">
+            <div class="callout-title">Ideal itinerary pairing</div>
+            <p>Wall Street/Pier 11 &rarr; Brooklyn Bridge Park Pier 6 &rarr; Red Hook lunch &rarr; Governors Island if seasonal &rarr; DUMBO sunset.</p>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> South Brooklyn is not the best route for every tourist, but it is one of the best routes if you want your day to feel slower, local, and waterfront-heavy.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="astoria">4. Astoria Route: Best Less-Touristy Scenic Ride</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 4</span>
+          <span class="rc-title">Astoria Route</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 8/10</span>
+            <span class="rc-score rs-use">Usefulness 7/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The Astoria route is underrated. It is not the route I would force into a first NYC trip, but it is great for repeat visitors or anyone staying in Queens or Midtown East. It connects places like Wall Street/Pier 11, Brooklyn Navy Yard, East 34th Street, Long Island City, Roosevelt Island, Astoria, and East 90th Street.</p>
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/ec/96/4f/view-down-the-east-river.jpg?w=1400&h=-1&s=1" alt="East River view from Long Island City waterfront toward the Queensboro Bridge and Manhattan skyline &mdash; the view from the Astoria/Queens NYC Ferry route">
+            <div class="cap">The East River from Long Island City/Gantry Plaza, looking toward the Queensboro Bridge and Midtown Manhattan skyline &mdash; the kind of view the Astoria ferry route gives you. Uncrowded, relaxed, and a very different angle on the city than the more tourist-heavy routes.</div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Queensboro Bridge, East River, Midtown skyline</td></tr>
+              <tr><td><strong>Best stops</strong></td><td>Roosevelt Island, Long Island City, Astoria</td></tr>
+              <tr><td><strong>Best time</strong></td><td>Afternoon or sunset</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Low to medium</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Repeat visitors, Queens-based travelers, photographers</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>First-timers choosing between this and East River</td></tr>
+            </table>
+          </div>
+          <h3>Astoria Ferry vs Roosevelt Island Tram</h3>
+          <p>The Roosevelt Island Tram is more iconic. The Astoria Ferry is more relaxed. If you have never done either, take the tram one way and use the ferry as your return. That gives you two different views without turning the day into a transit science project.</p>
+          <div class="callout callout-tip">
+            <div class="callout-title">Ideal itinerary pairing</div>
+            <p>Roosevelt Island Tram &rarr; walk Roosevelt Island &rarr; Astoria Ferry or LIC ferry &rarr; Gantry Plaza State Park &rarr; dinner in Queens or Midtown.</p>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Astoria is not the obvious tourist pick, and that is exactly why it is good. Save it for a second visit, a slower day, or a Queens-based itinerary.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="rockaway">5. Rockaway&ndash;Soundview Route: Best for a Beach Day, Not Quick Sightseeing</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 5</span>
+          <span class="rc-title">Rockaway&ndash;Soundview Route</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 7/10</span>
+            <span class="rc-score rs-use">Usefulness 6/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The Rockaway ferry sounds dreamy: a boat ride to the beach from Manhattan. And yes, on the right day, it is fantastic. But this is not a quick "let's squeeze in a ferry ride" route. Rockaway is a real outing. Treat it like a beach day.</p>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Harbor, open water, beach arrival</td></tr>
+              <tr><td><strong>Best use</strong></td><td>Summer beach day</td></tr>
+              <tr><td><strong>Best time</strong></td><td>Morning outbound, late afternoon return</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>High in summer</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Beach-day visitors</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>Anyone with tight sightseeing plans</td></tr>
+            </table>
+          </div>
+          <h3>The Catch</h3>
+          <p>The regular Rockaway ferry is first-come, first-served. On busy summer weekends, you may not get the exact boat you want. There may also be seasonal reserve options &mdash; like Rockaway Reserve or Rockaway Rocket tickets &mdash; that cost more but help guarantee boarding for specific departures. If you are planning a beach day in peak summer, this can be worth it.</p>
+          <div class="card-grid cols-2">
+            <div class="callout callout-tip">
+              <div class="callout-title">Worth the reserve fare if</div>
+              <p style="font-size:13.5px;">Going on a hot summer weekend &bull; You hate uncertainty &bull; You have kids or a group &bull; You care about a specific departure</p>
+            </div>
+            <div class="callout callout-local">
+              <div class="callout-title">Skip the reserve fare if</div>
+              <p style="font-size:13.5px;">You are flexible &bull; Going on a weekday &bull; You do not mind waiting &bull; You are only casually considering Rockaway</p>
+            </div>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Rockaway is worth it for a beach day. It is not worth it as a quick sightseeing ferry for a short NYC trip.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="st-george">6. St. George Route: Useful, But Usually Not for First-Timers</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 6</span>
+          <span class="rc-title">St. George Route</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 7/10</span>
+            <span class="rc-score rs-use">Usefulness 5/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The St. George NYC Ferry route is tricky because tourists already have the free Staten Island Ferry. So when does the paid St. George route make sense? Mostly when the route itself fits your geography: Staten Island, Brooklyn waterfront stops, Battery Park City, Midtown West, or Wall Street depending on current service.</p>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>Harbor, west side, Staten Island/Brooklyn angles</td></tr>
+              <tr><td><strong>Best use</strong></td><td>Specific point-to-point trips</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Medium</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Visitors staying near a relevant stop</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>Most first-time tourists</td></tr>
+            </table>
+          </div>
+          <p>If your goal is simply "ride a ferry to Staten Island," take the free Staten Island Ferry. Paying for St. George only makes sense when the paid route is actually more convenient for your day.</p>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Useful for certain itineraries, but not a must-do tourist ferry.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="soundview">7. Soundview/Bronx Segment: Mostly a Local Route</h2>
+      <div class="route-card">
+        <div class="rc-head">
+          <span class="rc-rank">Rank 7</span>
+          <span class="rc-title">Soundview/Bronx Segment</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 6/10</span>
+            <span class="rc-score rs-use">Usefulness 4/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>The Soundview/Bronx portion is interesting if you love transit, waterfront neighborhoods, or are staying near one of the stops. But for most tourists, it is too far from the classic sightseeing path.</p>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Views</strong></td><td>East River, local waterfront, Bronx/Upper Manhattan angles</td></tr>
+              <tr><td><strong>Best use</strong></td><td>Repeat visitors, transit lovers</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Low</td></tr>
+              <tr><td><strong>Who should take it</strong></td><td>Transit lovers, locals, repeat visitors</td></tr>
+              <tr><td><strong>Who should skip it</strong></td><td>First-time visitors</td></tr>
+            </table>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Cool if you know why you are taking it. Skip it if you are just trying to find "the best ferry ride."</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="governors-island">Seasonal Bonus: Governors Island Ferry</h2>
+      <div class="route-card rc-bonus">
+        <div class="rc-head">
+          <span class="rc-rank">Bonus</span>
+          <span class="rc-title">Governors Island Ferry/Shuttle</span>
+          <div class="rc-scores">
+            <span class="rc-score rs-views">Views 8/10</span>
+            <span class="rc-score rs-use">Usefulness 8/10</span>
+          </div>
+        </div>
+        <div class="rc-body">
+          <p>Governors Island deserves its own category because it is not just about the ferry. <strong>The destination is the point.</strong> Go for skyline views, car-free wandering, hammocks, events, biking, food, and a totally different NYC pace.</p>
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Category</th><th>Details</th></tr>
+              <tr><td><strong>Best season</strong></td><td>Spring through fall</td></tr>
+              <tr><td><strong>Best for</strong></td><td>Families, couples, skyline photos, relaxed afternoons</td></tr>
+              <tr><td><strong>Cost</strong></td><td>Varies by ferry operator and timing</td></tr>
+              <tr><td><strong>Crowd risk</strong></td><td>Medium on nice weekends</td></tr>
+              <tr><td><strong>Best pairing</strong></td><td>Lower Manhattan or Brooklyn Bridge Park</td></tr>
+            </table>
+          </div>
+          <div class="verdict-strip"><strong>Final Verdict:</strong> Do Governors Island as a destination, not just a ferry ride.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="by-goal">Best NYC Ferry Routes By Goal</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="goal-row"><div class="goal-q">Best overall for tourists</div><div class="goal-a">East River</div></div>
+        <div class="goal-row"><div class="goal-q">Best free ride</div><div class="goal-a">Staten Island Ferry</div></div>
+        <div class="goal-row"><div class="goal-q">Best skyline views</div><div class="goal-a">East River</div></div>
+        <div class="goal-row"><div class="goal-q">Best Statue of Liberty views</div><div class="goal-a">Staten Island Ferry</div></div>
+        <div class="goal-row"><div class="goal-q">Best sunset ferry</div><div class="goal-a">East River</div></div>
+        <div class="goal-row"><div class="goal-q">Best Brooklyn exploring</div><div class="goal-a">South Brooklyn</div></div>
+        <div class="goal-row"><div class="goal-q">Best for families</div><div class="goal-a">East River or Staten Island Ferry</div></div>
+        <div class="goal-row"><div class="goal-q">Best for photos</div><div class="goal-a">East River, Staten Island Ferry, Astoria</div></div>
+        <div class="goal-row"><div class="goal-q">Best for hot summer days</div><div class="goal-a">Rockaway</div></div>
+        <div class="goal-row"><div class="goal-q">Best cheap cruise-like experience</div><div class="goal-a">East River</div></div>
+        <div class="goal-row"><div class="goal-q">Best repeat visitor route</div><div class="goal-a">Astoria</div></div>
+        <div class="goal-row"><div class="goal-q">Best route to skip</div><div class="goal-a">Soundview/Bronx segment unless you have a specific reason</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="mini-itineraries">Best Ferry Mini-Itineraries</h2>
+      <div class="mini-itin"><div class="mi-head">1. Cheap Skyline Afternoon</div><div class="mi-body">Start at Wall Street/Pier 11. Take the East River Ferry to DUMBO. Walk Brooklyn Bridge Park. Get pizza or coffee nearby. Walk back over the Brooklyn Bridge if your legs still like you. For the full route: <a href="one-day-in-brooklyn.html">One Day in Brooklyn &rarr;</a></div></div>
+      <div class="mini-itin"><div class="mi-head">2. DUMBO + Williamsburg Ferry Day</div><div class="mi-body">Take the East River Ferry from Pier 11 to DUMBO. Explore Brooklyn Bridge Park. Continue by ferry to Williamsburg or Greenpoint. Eat, shop, wander, then return by subway or ferry.</div></div>
+      <div class="mini-itin"><div class="mi-head">3. Lower Manhattan + Staten Island Ferry</div><div class="mi-body">Visit the 9/11 Memorial, Wall Street, Battery Park, then take the free Staten Island Ferry round trip. Stand on the right side going out for Statue views, left side coming back. For the full Lower Manhattan route: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></div></div>
+      <div class="mini-itin"><div class="mi-head">4. Governors Island + Brooklyn Bridge Park</div><div class="mi-body">Take a ferry to Governors Island, explore for a few hours, then continue to Brooklyn Bridge Park or DUMBO if seasonal connections make sense.</div></div>
+      <div class="mini-itin"><div class="mi-head">5. Rockaway Beach Day</div><div class="mi-body">Take the ferry to Rockaway in the morning. Bring sunscreen, a light layer, and patience. Consider reserve tickets on peak summer weekends. Return before everyone else has the same idea.</div></div>
+      <div class="mini-itin"><div class="mi-head">6. Roosevelt Island + Astoria Ferry</div><div class="mi-body">Take the Roosevelt Island Tram, walk the island, then ferry toward Astoria, LIC, or Midtown. This is a great repeat-visitor day.</div></div>
+      <div class="mini-itin"><div class="mi-head">7. Sunset Ferry + Dinner</div><div class="mi-body">Ride the East River Ferry around golden hour, then plan dinner in DUMBO, Williamsburg, Greenpoint, Seaport, or Long Island City. For more sunset options on the water: <a href="best-sunset-cruises-nyc.html">Best NYC Sunset Cruises &rarr;</a></div></div>
+      <hr class="divider-rule">
+      <h2 id="mistakes">Common NYC Ferry Mistakes Tourists Make</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:12px 0;">
+        <div class="mistake-item"><div class="mi-label">OMNY does not work</div><div class="mi-why">NYC Ferry does not use OMNY. Use the app or ticket machine.</div></div>
+        <div class="mistake-item" style="background:rgba(15,23,42,.025);"><div class="mi-label">Activating tickets early</div><div class="mi-why">Tickets are time-sensitive after activation. Do not activate until you are boarding.</div></div>
+        <div class="mistake-item"><div class="mi-label">Not checking schedules</div><div class="mi-why">Ferries do not run like subways. A missed boat means waiting, not just one minute.</div></div>
+        <div class="mistake-item" style="background:rgba(15,23,42,.025);"><div class="mi-label">Ignoring route splits</div><div class="mi-why">East River A/B service can affect which stops are served. Check before boarding.</div></div>
+        <div class="mistake-item"><div class="mi-label">Assuming ferry is faster</div><div class="mi-why">Often the subway wins on speed. Use the ferry when the ride is the experience.</div></div>
+        <div class="mistake-item" style="background:rgba(15,23,42,.025);"><div class="mi-label">Not checking service alerts</div><div class="mi-why">Weather can affect ferries significantly. <a href="https://www.ferry.nyc/service-alerts/" target="_blank" rel="noopener">Check alerts &rarr;</a></div></div>
+        <div class="mistake-item"><div class="mi-label">Wrong side of the boat</div><div class="mi-why">You miss the best views. Plan which side based on your route direction.</div></div>
+        <div class="mistake-item" style="background:rgba(15,23,42,.025);"><div class="mi-label">Tight reservations after ferry</div><div class="mi-why">Full boats or delays can ruin timing. Never schedule a fixed reservation directly after a ferry.</div></div>
+        <div class="mistake-item"><div class="mi-label">Rockaway as a quick ride</div><div class="mi-why">Rockaway is a real beach-day commitment, not a 45-minute tourist loop.</div></div>
+        <div class="mistake-item" style="background:rgba(15,23,42,.025);"><div class="mi-label">Confusing ferry types</div><div class="mi-why">Staten Island Ferry (free, DOT) and NYC Ferry (paid, citywide) are completely different services.</div></div>
+        <div class="mistake-item"><div class="mi-label">Battery Park hawkers</div><div class="mi-why">The Staten Island Ferry is free. Anyone selling tickets for it near the terminal is a scam.</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="vs-cruise">NYC Ferry vs Paid Sightseeing Cruise</h2>
+      <p>NYC Ferry is the better choice if you want cheap views, flexibility, and actual transportation. A paid sightseeing cruise is better if you want narration, guaranteed tourist framing, closer Statue views, more comfortable timing, or a romantic sunset experience without checking schedules like a commuter.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Category</th><th>NYC Ferry</th><th>Paid Cruise</th></tr>
+          <tr><td><strong>Price</strong></td><td>Much cheaper</td><td>More expensive</td></tr>
+          <tr><td><strong>Narration</strong></td><td>No</td><td>Usually yes</td></tr>
+          <tr><td><strong>Statue views</strong></td><td>Limited, except Staten Island Ferry</td><td>Usually better</td></tr>
+          <tr><td><strong>Skyline views</strong></td><td>Excellent on the right routes</td><td>Excellent</td></tr>
+          <tr><td><strong>Flexibility</strong></td><td>High</td><td>Fixed route</td></tr>
+          <tr><td><strong>Comfort</strong></td><td>Good, but commuter-style</td><td>More tourist-focused</td></tr>
+          <tr><td><strong>Best for</strong></td><td>Budget travelers, independent planners</td><td>First-timers who want easy sightseeing</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <a class="callout callout-tip" href="best-sunset-cruises-nyc.html" style="text-decoration:none;display:block;">
+          <div class="callout-title">Best NYC Sunset Cruises &rarr;</div>
+          <p style="font-size:13.5px;">If you want a proper sunset harbor cruise rather than the ferry, see the full comparison of which NYC cruise is worth booking.</p>
+        </a>
+        <a class="callout callout-summary" href="nyc-cruise-tours.html" style="text-decoration:none;display:block;">
+          <div class="callout-title">NYC Cruises Compared &rarr;</div>
+          <p style="font-size:13.5px;">Harbor cruises, architecture cruises, and sightseeing boats &mdash; all compared for price, views and experience quality.</p>
+        </a>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="faq">FAQ: NYC Ferry for Tourists</h2>
+      <div class="faq-wrap">
+        <details class="faq-item"><summary>Is NYC Ferry worth it for tourists?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, but only on the right routes. East River is absolutely worth it. South Brooklyn and Astoria are worth it if they match your itinerary. Rockaway is worth it for a beach day. Some routes are more commuter-focused and less relevant to sightseeing.</div></details>
+        <details class="faq-item"><summary>Which NYC Ferry route has the best views?<span class="chev">&#9662;</span></summary><div class="faq-a">East River has the best mix of skyline, bridges, and useful stops. Staten Island Ferry has the best free Statue of Liberty view from the water.</div></details>
+        <details class="faq-item"><summary>Is the Staten Island Ferry really free?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes. Completely free. Do not buy a ticket for it. If someone near Battery Park tells you otherwise, keep walking in the opposite direction.</div></details>
+        <details class="faq-item"><summary>Can you see the Statue of Liberty from NYC Ferry?<span class="chev">&#9662;</span></summary><div class="faq-a">The best ferry for Statue views is the Staten Island Ferry. NYC Ferry routes are better for skyline, bridges, and neighborhood-hopping. If you want to actually set foot on Liberty Island, book the Statue of Liberty ferry separately.</div></details>
+        <details class="faq-item"><summary>Is NYC Ferry better than the subway?<span class="chev">&#9662;</span></summary><div class="faq-a">For views, yes. For speed, usually no. Use the ferry when the ride is part of the experience, not when you are late for dinner.</div></details>
+        <details class="faq-item"><summary>Can you use OMNY on NYC Ferry?<span class="chev">&#9662;</span></summary><div class="faq-a">No. OMNY is for the subway and buses. Use the NYC Ferry app or ticket vending machines at the pier.</div></details>
+        <details class="faq-item"><summary>Do NYC ferries run at night?<span class="chev">&#9662;</span></summary><div class="faq-a">Some routes run into the evening, but schedules vary by route and season. Always check the current schedule before planning an evening ferry ride.</div></details>
+        <details class="faq-item"><summary>Are ferries crowded?<span class="chev">&#9662;</span></summary><div class="faq-a">They can be, especially during commute times, summer weekends, and Rockaway beach departures. Arrive a few minutes early if you want a good outdoor spot.</div></details>
+        <details class="faq-item"><summary>Which NYC Ferry route is best at sunset?<span class="chev">&#9662;</span></summary><div class="faq-a">East River. Aim for DUMBO, Williamsburg, Greenpoint, LIC, or Pier 11 around golden hour. The Manhattan skyline in the late afternoon is the best free sightseeing the ferry offers.</div></details>
+        <details class="faq-item"><summary>Can I bring luggage on the ferry?<span class="chev">&#9662;</span></summary><div class="faq-a">Small luggage is generally manageable, but ferries are not ideal if you are hauling giant suitcases during busy departure times. It is not prohibited, but it is inconvenient.</div></details>
+        <details class="faq-item"><summary>What is the difference between NYC Ferry and Staten Island Ferry?<span class="chev">&#9662;</span></summary><div class="faq-a">NYC Ferry is the paid citywide ferry network ($4.50/ride) with routes covering Brooklyn, Queens, the Bronx, and Manhattan waterfront stops. Staten Island Ferry is a separate free service operated by NYC DOT between Whitehall Terminal in Lower Manhattan and St. George Terminal on Staten Island.</div></details>
+        <details class="faq-item"><summary>Is the Rockaway ferry worth it?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes for a beach day. No for a quick tourist ride. If Rockaway Beach is your destination for the day, the ferry is a genuinely fun way to get there. If you are thinking of "quickly doing the Rockaway ferry" between other sightseeing stops, skip it.</div></details>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="final-verdict">Final Verdict: Which NYC Ferry Route Should You Actually Take?</h2>
+      <div class="callout callout-summary">
+        <div class="callout-title">The bottom line</div>
+        <p>If you want the best all-around ferry ride in NYC, take the <strong>East River route</strong>. It has the strongest mix of views, useful stops, value, and itinerary flexibility.</p>
+        <p style="margin-top:8px;">If you want the best free ferry experience, take the <strong>Staten Island Ferry</strong>. If you want a slower Brooklyn day, take <strong>South Brooklyn</strong>. If you have already done the obvious stuff, take <strong>Astoria</strong>. If it is summer and you want the beach, take <strong>Rockaway</strong> &mdash; but respect the logistics.</p>
+        <p style="margin-top:8px;font-size:13.5px;">And if you are staring at the ferry map wondering whether you need to understand every route: you do not. Pick the one that improves your day. The ferry should feel like a bonus, not homework.</p>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="best-sunset-cruises-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Sunset Cruises: Which One Is Worth Booking?</a></li>
+      <li><a href="nyc-cruise-tours.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Cruises Compared: Which Harbor Cruise Is Worth It?</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="statue-of-liberty-vs-staten-island-ferry.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Staten Island Ferry vs Statue of Liberty Ferry: What's the Difference?</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary: A Full-Day Self-Guided Route</a></li>
+      <li><a href="best-free-skyline-views-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Free Skyline Views in NYC</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Water Day</h3>
+    <p class="sub">Resources for making the most of NYC's ferry routes and harbor experiences.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots including all key ferry terminals and waterfront stops</div></a>
+      <a class="footer-card" href="best-sunset-cruises-nyc.html"><div class="fc-title">Best NYC Sunset Cruises</div><div class="fc-sub">If you want narration and a dedicated cruise rather than the ferry</div></a>
+      <a class="footer-card" href="https://www.viator.com/New-York-City-attractions/Statue-of-Liberty/d687-a16?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener"><div class="fc-title">Statue of Liberty Tickets</div><div class="fc-sub">Official ferry &amp; tour options for Liberty Island access</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
