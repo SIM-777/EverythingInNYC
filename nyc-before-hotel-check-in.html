@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to Do in NYC Before Hotel Check-In: Early Arrival Guide | EverythingInNYC</title>
+<meta name="description" content="Arriving in NYC before hotel check-in? Here's exactly what to do with luggage, where to freshen up, and how to plan your first few hours by airport, energy level, weather, and neighborhood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.sn-inner::-webkit-scrollbar{display:none;}
+.sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+.sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+.sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+@media(max-width:680px){.sn-inner{display:none;flex-direction:column;gap:0;padding:0;}.sn-inner.open{display:flex;}.sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}.sn-toggle{display:block;}.sticky-nav{display:flex;align-items:center;justify-content:space-between;}.sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}}
+@media(min-width:1120px){.sticky-nav{display:none !important;}}
+.side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);max-height:calc(100vh - 110px);overflow-y:auto;scrollbar-width:thin;}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+.side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+.side-nav a:hover{color:var(--navy);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+/* SMART ORDER STEPS */
+.smart-steps{counter-reset:step;margin:12px 0;}
+.smart-step{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);font-size:14.5px;}
+.smart-step:last-child{border-bottom:none;}
+.ss-n{font-family:var(--font-head);font-weight:800;font-size:18px;color:rgba(15,23,42,.12);min-width:28px;flex:none;line-height:1.4;}
+/* ENERGY CARD */
+.energy-card{border-radius:12px;overflow:hidden;margin:10px 0;}
+.ec-exhausted .ec-head{background:#1b3057;}
+.ec-low .ec-head{background:#14532d;}
+.ec-normal .ec-head{background:var(--navy);}
+.ec-kids .ec-head{background:#4a1d96;}
+.ec-rain .ec-head{background:#374151;}
+.ec-hot .ec-head{background:#92400e;}
+.ec-cold .ec-head{background:#1e3a5f;}
+.ec-head{padding:8px 14px;font-family:var(--font-head);font-weight:800;font-size:13.5px;color:#fff;}
+.ec-body{padding:10px 14px;background:var(--bg-card);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;font-size:13.5px;}
+/* STOP CARD */
+.stop-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:12px 0;}
+.sc-num{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 10px;}
+.sc-head{padding:8px 14px;background:var(--navy);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.sc-title{font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff;flex:1;}
+.sc-body{padding:10px 14px;font-size:14px;}
+/* SAMPLE ITINERARY */
+.sample-itin{border-radius:12px;overflow:hidden;margin:10px 0;}
+.si-head{padding:8px 14px;font-family:var(--font-head);font-weight:800;font-size:13px;color:#fff;}
+.si-sensible .si-head{background:var(--navy);}
+.si-redeye .si-head{background:#1b3057;}
+.si-family .si-head{background:#14532d;}
+.si-budget .si-head{background:#374151;}
+.si-rainy .si-head{background:#4a1d96;}
+.si-body{padding:10px 14px;background:var(--bg-card);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;}
+.si-row{display:flex;gap:10px;font-size:13.5px;padding:4px 0;border-bottom:1px solid rgba(15,23,42,.06);}
+.si-row:last-child{border-bottom:none;}
+.sir-t{font-family:var(--font-head);font-weight:800;font-size:12px;color:var(--navy);min-width:70px;flex:none;}
+/* SECTION IMAGE */
+.sect-img{margin:14px 0 10px;}.sect-img img{width:100%;border-radius:12px;max-height:400px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:6px;text-align:center;}
+/* VERDICT */
+.verdict-strip{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:7px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+/* AIRPORT SECTION */
+.airport-head{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--navy);padding:8px 0 4px;border-bottom:2px solid var(--accent);margin-bottom:10px;}
+[id]{scroll-margin-top:95px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On This Page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle nav">&#9776;</button>
+  <div class="sn-inner" id="snLinks">
+    <a href="#quick-answer">Quick Answer</a>
+    <a href="#hotel-first">Hotel First?</a>
+    <a href="#luggage">Luggage Options</a>
+    <a href="#day-bag">Day Bag</a>
+    <a href="#early-checkin">Early Check-In</a>
+    <a href="#freshen-up">Freshen Up</a>
+    <a href="#by-energy">By Energy Level</a>
+    <a href="#best-stops">Best Stops</a>
+    <a href="#do-not">What Not to Do</a>
+    <a href="#bag-rules">Bag Rules</a>
+    <a href="#by-airport">By Airport</a>
+    <a href="#by-neighborhood">By Neighborhood</a>
+    <a href="#sample-plans">Sample Plans</a>
+    <a href="#food">Food Strategy</a>
+    <a href="#arrival-packing">Arrival Packing</a>
+    <a href="#final-advice">Final Advice</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</div>
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On This Page</div>
+  <a href="#quick-answer">Quick Answer</a>
+  <a href="#hotel-first">Hotel First?</a>
+  <a href="#luggage">Luggage Options</a>
+  <a href="#third-party">Luggage Apps</a>
+  <a href="#moynihan">Moynihan Storage</a>
+  <a href="#day-bag">Day Bag</a>
+  <a href="#early-checkin">Early Check-In</a>
+  <a href="#red-eye">Red-Eye</a>
+  <a href="#freshen-up">Freshen Up</a>
+  <a href="#restrooms">Public Restrooms</a>
+  <a href="#by-energy">By Energy Level</a>
+  <a href="#best-stops">Best Stops</a>
+  <a href="#do-not">What Not to Do</a>
+  <a href="#bag-rules">Bag Rules</a>
+  <a href="#by-airport">By Airport</a>
+  <a href="#by-neighborhood">By Neighborhood</a>
+  <a href="#sample-plans">Sample Plans</a>
+  <a href="#food">Food Strategy</a>
+  <a href="#arrival-packing">Arrival Packing</a>
+  <a href="#final-advice">Final Advice</a>
+  <a href="#faq">FAQ</a>
+</nav>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>What to Do in NYC Before Hotel Check-In: Early Arrival Guide</h1>
+      <div class="article-meta"><span>How to handle luggage, where to freshen up, and how to plan your first hours in New York City &mdash; by airport, energy level, weather, and hotel neighborhood</span></div>
+    </div>
+    <img class="article-hero-img" src="nyc-before-hotel-check-in-luggage.png" alt="What to do in NYC before hotel check-in &mdash; early arrival guide for handling luggage, freshening up and planning your first hours">
+    <div class="article-body">
+      <p>If your flight lands at 6, 7, 8, or 9 AM, congratulations: you have entered the weirdest part of a New York trip.</p>
+      <p>You are technically "in NYC," but you are not really ready for NYC yet. Your hotel room probably is not ready. You may be tired, sweaty, hungry, over-caffeinated, carrying luggage, traveling with kids, or all of the above. And if you try to treat this like a normal sightseeing day, New York will humble you fast.</p>
+      <p>My strong opinion: your first day in NYC is usually not a full sightseeing day. It is an arrival-recovery day. That does not mean wasting it. It means planning it correctly. The goal is not to "see everything" before check-in. The goal is to avoid dragging a suitcase through Times Square, missing a timed ticket because airport traffic betrayed you, or making your first New York memory a public restroom crisis.</p>
+      <p>Here is the smart order:</p>
+      <div class="smart-steps">
+        <div class="smart-step"><div class="ss-n">1</div><div>Get into the city</div></div>
+        <div class="smart-step"><div class="ss-n">2</div><div>Deal with your luggage</div></div>
+        <div class="smart-step"><div class="ss-n">3</div><div>Freshen up</div></div>
+        <div class="smart-step"><div class="ss-n">4</div><div>Eat something</div></div>
+        <div class="smart-step"><div class="ss-n">5</div><div>Do one low-effort thing near your hotel</div></div>
+        <div class="smart-step"><div class="ss-n">6</div><div>Check in</div></div>
+        <div class="smart-step"><div class="ss-n">7</div><div>Start the real trip after you have a room, a shower, and your will to live back</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="quick-answer">Quick Answer: What Should You Do Before Hotel Check-In in NYC?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Your Situation</th><th>Best Move</th></tr>
+          <tr><td>You have checked luggage</td><td>Go to your hotel or luggage storage first</td></tr>
+          <tr><td>Your hotel is near your arrival route</td><td>Go to the hotel first and ask to store bags</td></tr>
+          <tr><td>You arrive at Penn/Moynihan</td><td>Store bags at your hotel or use Amtrak/Moynihan storage</td></tr>
+          <tr><td>You only have a backpack</td><td>You can do one light activity before the hotel</td></tr>
+          <tr><td>You arrive after a red-eye</td><td>Do not plan a major attraction. Eat, freshen up, and recover.</td></tr>
+          <tr><td>You are with kids or older parents</td><td>Hotel first, then food/restroom/seating. No ambitious wandering.</td></tr>
+          <tr><td>It is hot, freezing, or raining</td><td>Choose indoor recovery: cafe, food hall, museum after opening, or day room</td></tr>
+          <tr><td>Your room absolutely must be ready early</td><td>Book the night before &mdash; that is the only guaranteed early check-in</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="hotel-first">First Decision: Should You Go to the Hotel First?</h2>
+      <p>Usually, yes. I know it feels inefficient to go to the hotel before sightseeing, especially if your room is not ready. But in NYC, luggage changes everything. A suitcase turns a simple 12-minute walk into a character-building exercise. Subway stairs, crowded sidewalks, revolving doors, security checks, restaurant aisles, and tiny restrooms all become annoying.</p>
+      <p><strong>My rule:</strong> if you have luggage, go to the hotel first unless it is wildly out of the way.</p>
+      <p>Most hotels will store bags for confirmed guests before check-in and after checkout. Whatever the name &mdash; bell desk storage, luggage hold, baggage storage, concierge storage &mdash; it is usually the easiest solution. That said, do not assume. Call or email your specific hotel before arrival and ask: Can I store luggage before check-in? Is it free for same-day arriving guests? What time can I drop bags? Is the storage area staffed? Do I receive a claim ticket? Can I use the lobby restroom before my room is ready? Can I request early check-in?</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">Will NYC hotels hold luggage before check-in?</div>
+        <div class="table-wrap" style="margin:6px 0 0;">
+          <table class="data-table" style="font-size:13.5px;">
+            <tr><th>Accommodation Type</th><th>Luggage Storage Before Check-In</th></tr>
+            <tr><td>Full-service hotel</td><td>Usually yes</td></tr>
+            <tr><td>Large chain hotel</td><td>Usually yes</td></tr>
+            <tr><td>Boutique hotel</td><td>Often, but confirm</td></tr>
+            <tr><td>Budget hotel</td><td>Varies</td></tr>
+            <tr><td>Hostel</td><td>Often has lockers/storage, but confirm</td></tr>
+            <tr><td>Airbnb/apartment rental</td><td>Usually no unless host offers it</td></tr>
+          </table>
+        </div>
+        <p style="font-size:13px;margin-top:8px;">If the hotel stores your bags, get a claim ticket or photo of the tag. Keep valuables with you. Tip the bell staff when you drop off or pick up.</p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="luggage">What If Your Hotel Will Not Hold Bags?</h2>
+      <p>Then you need a backup plan. Do not wander into Manhattan hoping luggage storage will magically appear. New York does many things well. Convenient public luggage lockers are not one of them. Your main options:</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Option 1: Third-party luggage apps</div><p style="font-size:13.5px;">Bounce, Stasher, LuggageHero, Radical Storage</p></div>
+        <div class="callout callout-local"><div class="callout-title">Option 2: Moynihan/Amtrak storage</div><p style="font-size:13.5px;">If arriving near Penn Station</p></div>
+        <div class="callout callout-tip"><div class="callout-title">Option 3: Day-use hotel room</div><p style="font-size:13.5px;">Guaranteed bathroom, shower, bed</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Option 4: Airport luggage solution</div><p style="font-size:13.5px;">If available at your specific airport before you leave &mdash; useful if you arrive very early and want to sightsee before going to the hotel area.</p></div>
+      </div>
+      <div class="callout callout-local" style="margin-top:6px;"><div class="callout-title">Option 5: Rework the day around the hotel</div><p style="font-size:13.5px;">Sometimes the simplest backup plan is staying close to your hotel area until check-in rather than trying to store bags elsewhere and venture far.</p></div>
+      <h2 id="third-party">Third-Party Luggage Storage Apps</h2>
+      <p>Apps like Bounce, Stasher, LuggageHero, and Radical Storage partner with hotels, shops, cafes, offices, and storage locations around the city. They can be very useful near Penn Station/Moynihan, Times Square, Port Authority, Grand Central area, Chelsea, Lower Manhattan, and museum areas.</p>
+      <p style="font-size:13px;color:var(--text-secondary);font-style:italic;">Note: Some of the links below may be affiliate links. We may earn a small commission if you book through them, at no extra cost to you.</p>
+      <div class="card-grid cols-2">
+        <a class="callout callout-summary" href="https://usebounce.com/" target="_blank" rel="noopener" style="text-decoration:none;display:block;"><div class="callout-title">Bounce Luggage Storage &rarr;</div><p style="font-size:13.5px;">Well-distributed network with locations across Midtown, downtown and beyond.</p></a>
+        <a class="callout callout-local" href="https://stasher.com/" target="_blank" rel="noopener" style="text-decoration:none;display:block;"><div class="callout-title">Stasher &rarr;</div><p style="font-size:13.5px;">International network with multiple NYC locations.</p></a>
+        <a class="callout callout-tip" href="https://www.luggagehero.com/" target="_blank" rel="noopener" style="text-decoration:none;display:block;"><div class="callout-title">LuggageHero &rarr;</div><p style="font-size:13.5px;">Hourly pricing; flexible if you only need a few hours.</p></a>
+        <a class="callout callout-summary" href="https://radicalstorage.com/" target="_blank" rel="noopener" style="text-decoration:none;display:block;"><div class="callout-title">Radical Storage &rarr;</div><p style="font-size:13.5px;">Flat daily rate; good coverage near major tourist areas.</p></a>
+      </div>
+      <div class="callout callout-local" style="margin-top:6px;">
+        <div class="callout-title">Before booking a luggage app location, check</div>
+        <p style="font-size:13.5px;">Opening hours &bull; Latest pickup time &bull; Whether the location is upstairs/downstairs &bull; Recent reviews for that specific location (not just the app overall) &bull; Insurance/protection terms &bull; Whether ID or QR code is required &bull; Whether bags are tagged or photographed &bull; Distance from your hotel or first activity</p>
+        <p style="font-size:13px;margin-top:6px;">My take: luggage apps are great as a backup, but I would not store passports, laptops, medication, camera gear, or anything deeply painful to lose.</p>
+      </div>
+      <h2 id="moynihan">Moynihan Train Hall / Penn Station Luggage Storage</h2>
+      <p>If you arrive by Amtrak, LIRR, NJ Transit, or you are near Penn Station, Moynihan can be useful. Moynihan Train Hall is open daily from 5 AM to 1 AM. Amtrak provides luggage storage for passengers traveling through the station. Amtrak customers need a valid ticket; general public storage may require valid photo ID. Go to Amtrak Customer Service inside Moynihan to arrange storage.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">Important: Moynihan is not "all of Penn Station has lockers"</div>
+        <p>Do not assume you can just roll up anywhere in Penn and find storage &mdash; that is not how this works. Grand Central is a fantastic arrival-day stop after your bags are handled &mdash; it has food, bathrooms, architecture, and a central Midtown location &mdash; but it does not offer luggage storage. That means Grand Central works beautifully after hotel drop-off, not before.</p>
+      </div>
+      <div class="callout callout-summary" style="margin-top:6px;">
+        <div class="callout-title">Port Authority Bus Terminal Is Not the Plan Either</div>
+        <p style="font-size:13.5px;">If you arrive by bus at Port Authority, assume you need to go to your hotel or use a third-party storage location nearby. The area has storage app options, but the terminal itself should not be your luggage strategy. Do not plan to store anything at Port Authority and then casually sightsee from there with your full luggage still in play.</p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="day-bag">What to Keep in Your Day Bag</h2>
+      <p>Before handing over luggage, pull out everything you might need before check-in. Do not be the person opening a suitcase on the hotel lobby floor.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Item</th><th>Why You Need It</th></tr>
+          <tr><td><strong>Passport/ID</strong></td><td>Never leave it in stored luggage if avoidable</td></tr>
+          <tr><td><strong>Wallet/cards/cash</strong></td><td>Obvious, but people forget</td></tr>
+          <tr><td><strong>Medications</strong></td><td>Keep all essential meds with you</td></tr>
+          <tr><td><strong>Phone charger/power bank</strong></td><td>Arrival days destroy batteries</td></tr>
+          <tr><td><strong>Change of shirt</strong></td><td>Especially in summer or after red-eyes</td></tr>
+          <tr><td><strong>Toothbrush/toothpaste</strong></td><td>Tiny thing, huge morale boost</td></tr>
+          <tr><td><strong>Deodorant</strong></td><td>Your fellow travelers thank you</td></tr>
+          <tr><td><strong>Wipes/tissues</strong></td><td>NYC restrooms are not always stocked</td></tr>
+          <tr><td><strong>Weather layer</strong></td><td>Rain jacket, scarf, or light sweater depending on season</td></tr>
+          <tr><td><strong>Kids' essentials</strong></td><td>Diapers, snacks, comfort item, extra clothes</td></tr>
+          <tr><td><strong>Tickets/reservations</strong></td><td>Keep timed tickets accessible</td></tr>
+          <tr><td><strong>Sunglasses/hat</strong></td><td>Useful for summer and ferry plans</td></tr>
+        </table>
+      </div>
+      <p>Do not leave laptops, cameras, jewelry, passports, cash, medication, or anything irreplaceable in stored luggage if you can reasonably carry it. For the full NYC packing guide: <a href="nyc-packing-list.html">NYC Packing List by Season: What You'll Actually Use</a></p>
+      <hr class="divider-rule">
+      <h2 id="early-checkin">Is Early Check-In Worth Paying For?</h2>
+      <p>Sometimes. But only if it solves a real problem.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip">
+          <div class="callout-title">Early check-in is worth considering if</div>
+          <p style="font-size:13.5px;">Arriving after an overnight flight &bull; Traveling with small kids &bull; Older parents with you &bull; Wedding, meeting, dinner reservation, or Broadway show later &bull; You know you will be miserable without a shower &bull; Hotel offers guaranteed paid early check-in cheaper than booking the previous night</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Early check-in is not worth paying for if</div>
+          <p style="font-size:13.5px;">You only need to drop bags and wander for a few hours. In that case, luggage storage plus a low-effort plan is usually enough. The important word is <strong>guaranteed</strong> &mdash; a "request" for early check-in is not the same as guaranteed early check-in.</p>
+        <p style="font-size:13.5px;margin-top:6px;">The important word is <strong>guaranteed</strong>. A "request" for early check-in is not the same as guaranteed early check-in. If early access is critical for your plans, only a paid guaranteed slot or booking the previous night gives you certainty.</p>
+        </div>
+      </div>
+      <h2 id="red-eye">Should You Book the Night Before If Arriving on a Red-Eye?</h2>
+      <p>If you land at 6 or 7 AM after barely sleeping, and you truly need a room when you arrive, <strong>book the night before.</strong> It feels financially painful. But it is the only reliable way to walk into a hotel at 8 AM and get a room immediately. Do this if you cannot sleep on planes, are traveling with kids, have a big first-night plan, are arriving from a long international flight, or are the kind of person who becomes emotionally unwell after 22 hours without a bed. If you book the previous night, tell the hotel in advance that you will arrive the next morning. Otherwise, they may mark you as a no-show.</p>
+      <hr class="divider-rule">
+      <h2 id="freshen-up">What If You Need a Shower Before Check-In?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Need</th><th>Best Solution</th></tr>
+          <tr><td>Change shirt, brush teeth, wash face</td><td>Airport restroom or hotel lobby restroom</td></tr>
+          <tr><td>Full shower</td><td>Day-use hotel, airport lounge, gym/day pass</td></tr>
+          <tr><td>Nap and shower</td><td>Day-use hotel or airport hotel day room</td></tr>
+          <tr><td>Red-eye survival</td><td>Book previous night or day room</td></tr>
+          <tr><td>Family reset</td><td>Hotel lobby, food, restroom, then room/day-use room</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip"><div class="callout-title">Option 1: Airport restroom before leaving</div><p style="font-size:13.5px;">Use the restroom at JFK, LGA, or EWR before entering Manhattan. Brush your teeth. Change your shirt if needed. This sounds basic &mdash; it prevents you from entering Manhattan already losing.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Option 2: Hotel lobby restroom</div><p style="font-size:13.5px;">If you are a confirmed guest and your hotel is storing your bags, politely ask to use the lobby restroom. Many hotels will allow this. Do not plan a full outfit change in a tiny lobby restroom.</p></div>
+        <div class="callout callout-local" style="grid-column:1/-1;">
+          <div class="callout-title">Option 3: Day-use hotel room &mdash; the most underrated solution</div>
+          <p style="font-size:13.5px;">A day-use hotel room gives you a private bathroom, shower, bed, AC, Wi-Fi, and space to repack. Excellent after red-eyes, long-haul flights, or hot summer arrivals. Look for day rooms near JFK, LGA, EWR, Midtown, Times Square, Chelsea, and the Financial District. Services include: <a href="https://www.dayuse.com/" target="_blank" rel="noopener">Dayuse &rarr;</a> &bull; <a href="https://www.hotelsbyday.com/" target="_blank" rel="noopener">HotelsByDay &rarr;</a> &bull; <a href="https://www.daybreakhotels.com/" target="_blank" rel="noopener">DayBreakHotels &rarr;</a></p>
+        </div>
+        <div class="callout callout-tip"><div class="callout-title">Option 4: Airport hotel day room at JFK</div><p style="font-size:13.5px;">The TWA Hotel offers day-use stays for travelers who need a real break near the airport. Not the cheapest plan, but after a brutal red-eye, "cheap" and "good decision" are not always the same thing.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Option 5: Gym or lounge shower</div><p style="font-size:13.5px;">Some gyms, airport lounges, and premium travel lounges have showers &mdash; but never assume. Verify location, hours, shower access, and whether you need a membership, credit card, airline status, or boarding pass. Great when it works; annoying when it does not.</p></div>
+      </div>
+      <h2 id="restrooms">Public Restrooms: The NYC Reality</h2>
+      <p>NYC has public restrooms, but you need to be strategic. Reliable categories: parks, libraries, transit hubs, department stores, museums after entry, food halls, cafes or restaurants where you are a customer, hotel lobbies if you are a guest.</p>
+      <div class="verdict-strip"><strong>Bryant Park</strong> is one of the best Midtown options because its restroom is central, staffed, and open during posted hours. Do not build your whole morning around "we'll find a bathroom somewhere." That is how bad travel stories begin.</div>
+      <hr class="divider-rule">
+      <h2 id="by-energy">Best Things to Do Before Check-In by Energy Level</h2>
+      <div class="energy-card ec-exhausted">
+        <div class="ec-head">If You Are Exhausted After a Red-Eye</div>
+        <div class="ec-body">
+          <p>Use the airport restroom before leaving &rarr; go to the hotel &rarr; drop bags &rarr; ask if early check-in is possible &rarr; eat breakfast nearby &rarr; sit somewhere easy &rarr; do one gentle walk &rarr; check in as soon as the room is ready.</p>
+          <div class="card-grid cols-2">
+            <div>
+              <p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;">Good options</p>
+              <p style="font-size:13px;">Hotel cafe or nearby diner &bull; Bryant Park &bull; Grand Central after bags are stored &bull; Chelsea Market &bull; Short Central Park walk if weather is good &bull; Day-use hotel room if you are truly wrecked</p>
+            </div>
+            <div>
+              <p style="font-size:13px;font-weight:700;color:#7f1d1d;margin-bottom:4px;">Bad options</p>
+              <p style="font-size:13px;">Statue of Liberty &bull; Empire State Building timed ticket &bull; Major museum &bull; Long walking tour &bull; Broadway matinee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="energy-card ec-low">
+        <div class="ec-head">If You Are Low-Energy but Excited (Most Travelers)</div>
+        <div class="ec-body">
+          <p>Do one easy "I'm in New York" activity, but keep it close to your hotel. <strong>The goal is to feel like the trip has started without draining the battery before dinner.</strong></p>
+          <p style="font-size:13.5px;margin-top:6px;">Good options: Bryant Park and NYPL exterior &bull; Grand Central and coffee &bull; Times Square quick look &bull; Chelsea Market &bull; Rockefeller Center &bull; 9/11 Memorial exterior if staying downtown &bull; Central Park south end if staying Midtown/Uptown</p>
+        </div>
+      </div>
+      <div class="energy-card ec-normal">
+        <div class="ec-head">If You Have Normal Energy</div>
+        <div class="ec-body">
+          <div class="table-wrap">
+            <table class="data-table" style="font-size:13.5px;">
+              <tr><th>Time</th><th>Plan</th></tr>
+              <tr><td>Morning arrival</td><td>Airport to hotel/storage</td></tr>
+              <tr><td>Late morning</td><td>Food + easy walk</td></tr>
+              <tr><td>Early afternoon</td><td>One attraction or neighborhood</td></tr>
+              <tr><td>3&ndash;4 PM</td><td>Check in</td></tr>
+              <tr><td>Evening</td><td>Dinner, walk, or show</td></tr>
+            </table>
+          </div>
+          <p style="font-size:13.5px;margin-top:8px;">If you want an attraction, pick something flexible and close. Avoid anything where being late ruins the day. For help deciding: <a href="how-much-can-you-see-in-one-day-nyc.html">How Many NYC Attractions Can You Realistically Do in One Day?</a></p>
+        </div>
+      </div>
+      <div class="energy-card ec-kids">
+        <div class="ec-head">If You Are Traveling With Kids</div>
+        <div class="ec-body">
+          <p>Your first priority is not sightseeing. It is regulation. Kids need food, bathroom, space to move, a place to sit, minimal transfers, backup snacks, and a realistic nap plan.</p>
+          <p style="font-size:13.5px;margin-top:6px;"><strong>Best pre-check-in family options:</strong> Bryant Park &bull; Hotel lobby/cafe &bull; Chelsea Market &bull; Central Park playground or short walk &bull; American Museum of Natural History only after luggage is stored &bull; Rockefeller Center area if staying nearby</p>
+          <div class="verdict-strip">A cranky toddler in Times Square with suitcases is not a vacation; it is a hostage negotiation.</div>
+        </div>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="energy-card ec-rain" style="margin:0;">
+          <div class="ec-head">If It Is Raining</div>
+          <div class="ec-body">
+            <p style="font-size:13.5px;"><strong>Good:</strong> Chelsea Market &bull; Grand Central &bull; Hotel lobby + early lunch &bull; Museum after opening + luggage stored &bull; Department store &bull; Oculus/WTC if staying downtown</p>
+            <p style="font-size:13.5px;margin-top:6px;"><strong>Avoid:</strong> Central Park &bull; Staten Island Ferry as your main plan &bull; Brooklyn Bridge &bull; Long neighborhood wandering</p>
+            <p style="font-size:13.5px;margin-top:6px;">For rainy day options: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC &rarr;</a></p>
+          </div>
+        </div>
+        <div class="energy-card ec-hot" style="margin:0;">
+          <div class="ec-head">If It Is Hot and Humid</div>
+          <div class="ec-body">
+            <p style="font-size:13.5px;">NYC summer heat is not cute when you are dragging luggage. Your arrival plan should be air-conditioned unless the weather is unusually kind.</p>
+            <p style="font-size:13.5px;margin-top:6px;"><strong>Good:</strong> Hotel first &bull; Indoor food hall &bull; Cafe near hotel &bull; Museum after opening &bull; Short Bryant Park stop only if shaded &bull; Day room if arriving from a long flight</p>
+            <p style="font-size:13.5px;margin-top:6px;">Carry water. Wear breathable clothes. Do not make your first day a 20,000-step sidewalk sauna.</p>
+          </div>
+        </div>
+      </div>
+      <div class="energy-card ec-cold">
+        <div class="ec-head">If It Is Cold or Windy</div>
+        <div class="ec-body">
+          <p style="font-size:13.5px;"><strong>Good:</strong> Grand Central &bull; Bryant Park Winter Village area if open &bull; Chelsea Market &bull; Museum after opening &bull; Coffee or lunch near hotel &bull; Short Rockefeller Center walk</p>
+          <p style="font-size:13.5px;margin-top:4px;">Avoid long exposed waterfront plans unless you packed properly. For winter packing essentials: <a href="nyc-packing-list.html">NYC Packing List: Winter Section &rarr;</a></p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="best-stops">Best Low-Effort Things to Do Before Hotel Check-In</h2>
+      <div class="stop-card" id="stop-1">
+        <div class="sc-head"><span class="sc-num">1</span><span class="sc-title">Bryant Park &mdash; The MVP of Early-Arrival Midtown Plans</span></div>
+        <div class="sc-body">
+          <p>Bryant Park is one of the best Midtown options because its restroom is known, central, staffed, and open daily during posted hours. It is not the flashiest first stop, and that is exactly why it works. Opens early &bull; Central location &bull; Seating &bull; Restroom (one of the best in Midtown) &bull; Near food and coffee &bull; Behind the New York Public Library &bull; Easy to pair with Grand Central, Times Square, Rockefeller Center, or Fifth Avenue.</p>
+          <p>For the full Midtown walking context: <a href="midtown-manhattan-walking-itinerary.html">Midtown Manhattan Walking Itinerary &rarr;</a></p>
+        </div>
+      </div>
+      <div class="stop-card" id="stop-2">
+        <div class="sc-head"><span class="sc-num">2</span><span class="sc-title">Grand Central Terminal &mdash; Perfect After Bags Are Stored</span></div>
+        <div class="sc-body">
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/4d/e7/c8/grand-central-terminal.jpg?w=2000&h=-1&s=1" alt="Grand Central Terminal Main Concourse &mdash; one of the best early-arrival stops in Midtown NYC after your luggage is stored">
+            <div class="cap">Grand Central Terminal &mdash; food, bathrooms, architecture, and a central Midtown location. An excellent early-arrival stop once your bags are at the hotel. It does not offer luggage storage itself &mdash; do not arrive expecting that &mdash; so always handle luggage first.</div>
+          </div>
+          <div class="card-grid cols-2">
+            <div class="callout callout-summary"><div class="callout-title">Do</div><p style="font-size:13.5px;">Look at the Main Concourse &bull; Grab food downstairs &bull; Use the restroom &bull; Take photos &bull; Keep it short</p></div>
+            <div class="callout callout-local"><div class="callout-title">Do not</div><p style="font-size:13.5px;">Arrive expecting luggage storage &bull; Drag big bags around the terminal &bull; Treat it like a full-day attraction</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="stop-card" id="stop-3">
+        <div class="sc-head"><span class="sc-num">3</span><span class="sc-title">Chelsea Market &mdash; Great if Your Hotel Is in That Area</span></div>
+        <div class="sc-body">
+          <p>Chelsea Market is excellent if your hotel is in Chelsea, Meatpacking, Flatiron, West Village, or near Penn Station. Opens early &bull; Indoor &bull; Food options &bull; Good in rain or heat &bull; Pairs with a short High Line walk if weather is nice. Downside: it gets crowded, and it is not fun with luggage. Store bags first. For more on making the most of the area: <a href="one-day-in-chelsea-nyc.html">One Day in Chelsea NYC &rarr;</a></p>
+        </div>
+      </div>
+      <div class="stop-card" id="stop-4">
+        <div class="sc-head"><span class="sc-num">4</span><span class="sc-title">Times Square Quick Look</span></div>
+        <div class="sc-body"><p>I am not anti-Times Square. I am anti-luggage-in-Times-Square. If you are a first-timer, go look. Take the photo. Feel the chaos. Then leave. Times Square is best as a 15-minute arrival moment, not a place to kill four hours while tired.</p></div>
+      </div>
+      <div class="stop-card" id="stop-5">
+        <div class="sc-head"><span class="sc-num">5</span><span class="sc-title">Rockefeller Center</span></div>
+        <div class="sc-body"><p>A solid Midtown option after luggage drop. Good for photos, coffee, shops, seasonal decorations, and easy walking. Top of the Rock can work later, but do not book it too close to landing time. See: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared &rarr;</a></p></div>
+      </div>
+      <div class="stop-card" id="stop-6">
+        <div class="sc-head"><span class="sc-num">6</span><span class="sc-title">Central Park Short Loop</span></div>
+        <div class="sc-body">
+          <div class="sect-img">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/c4/c8/4b/caption.jpg?w=1400&h=-1&s=1" alt="Central Park in autumn &mdash; a short walk through the south end of the park is one of the best low-effort arrival-day activities in New York City">
+            <div class="cap">Central Park &mdash; wonderful on a good-weather arrival day if bags are stored and you are not exhausted. Do a short loop through the south end, not a heroic march. The south end works well for Midtown hotels without a long transit leg.</div>
+          </div>
+          <p>Central Park is wonderful if weather is good, bags are stored, you are not exhausted, and you are staying nearby. Do a short loop, not a heroic march. South end of the park works well for Midtown hotels. For the full park context: <a href="nyc-5-day-itinerary.html">Day 3 of the 5-Day NYC Itinerary &rarr;</a></p>
+        </div>
+      </div>
+      <div class="stop-card" id="stop-7">
+        <div class="sc-head"><span class="sc-num">7</span><span class="sc-title">9/11 Memorial Exterior</span></div>
+        <div class="sc-body"><p>If you are staying in Lower Manhattan, the 9/11 Memorial exterior can be a meaningful, low-effort first stop after luggage storage. The Museum is different &mdash; it requires more time, more emotional bandwidth, and bag/security planning. For the full downtown route: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></p></div>
+      </div>
+      <div class="stop-card" id="stop-8">
+        <div class="sc-head"><span class="sc-num">8</span><span class="sc-title">Staten Island Ferry</span></div>
+        <div class="sc-body"><p>The Staten Island Ferry is free, scenic, and useful if you want Statue of Liberty views without committing to the full visit. But do it only if bags are stored, weather is decent, you are staying downtown or do not mind the trip, and you are not running on fumes. Do not make this your first move after a red-eye with luggage. See: <a href="best-nyc-ferry-routes.html">Best NYC Ferry Routes for Tourists &rarr;</a></p></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="do-not">What Not to Do Before Hotel Check-In</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Do Not</th><th>Why</th></tr>
+          <tr><td>Book a non-refundable timed attraction right after landing</td><td>Flights, baggage claim, immigration, traffic, and transit delays happen</td></tr>
+          <tr><td>Drag suitcases through Times Square</td><td>Crowds, curbs, stairs, chaos</td></tr>
+          <tr><td>Plan Statue of Liberty before luggage drop</td><td>Suitcases and carry-ons are not allowed on the ferry or islands</td></tr>
+          <tr><td>Go to MoMA/The Met/AMNH with luggage</td><td>Major museums restrict luggage and large bags</td></tr>
+          <tr><td>Assume Grand Central has storage</td><td>It does not</td></tr>
+          <tr><td>Schedule a Broadway matinee after a red-eye</td><td>Theaters do not hold luggage, and you may fall asleep</td></tr>
+          <tr><td>Leave valuables in stored luggage</td><td>Keep passport, laptop, meds, cash, jewelry, and cameras with you</td></tr>
+          <tr><td>Accept unofficial airport rides</td><td>Use authorized taxis, rideshare areas, shuttles, or official staff guidance</td></tr>
+          <tr><td>Underestimate JFK/EWR construction delays</td><td>Check advisories before choosing taxi/rideshare vs transit</td></tr>
+          <tr><td>Try to "see everything" before check-in</td><td>You will enjoy less and complain more</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="bag-rules">Attraction Bag Rules That Matter on Arrival Day</h2>
+      <p>This is where early-arrival plans often fall apart.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Attraction</th><th>Arrival-Day Luggage Reality</th></tr>
+          <tr><td><strong>Empire State Building</strong></td><td>Large bags, suitcases, carry-ons, and oversized packages are prohibited. No on-site storage.</td></tr>
+          <tr><td><strong>Statue of Liberty/Ellis Island</strong></td><td>Suitcases, carry-ons, and large parcels are not permitted on ferries or islands. No lockers at Battery/Liberty State Park screening areas.</td></tr>
+          <tr><td><strong>Broadway theaters</strong></td><td>Bags must fit under your seat. Theaters will not hold bags. Luggage is not permitted.</td></tr>
+          <tr><td><strong>MoMA</strong></td><td>Luggage of any size is prohibited. Objects larger than 11 x 17 x 5 inches are prohibited.</td></tr>
+          <tr><td><strong>The Met</strong></td><td>Large bags and luggage are not allowed in the building or coat check.</td></tr>
+          <tr><td><strong>AMNH</strong></td><td>Large bags/backpacks over 11 x 17 inches are prohibited.</td></tr>
+          <tr><td><strong>9/11 Memorial &amp; Museum</strong></td><td>Baggage larger than 19 x 17 x 8 inches is not permitted. Museum visitors go through screening.</td></tr>
+        </table>
+      </div>
+      <div class="verdict-strip"><strong>Translation: store your luggage first. Then sightsee.</strong></div>
+      <p>For attraction-specific bag and planning details: <a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty &rarr;</a> &bull; <a href="nyc-observation-decks-compared.html">NYC Observation Decks: Bag Rules &rarr;</a> &bull; <a href="best-nyc-museums.html">NYC Museums: What to Know Before Visiting &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="by-airport">Arrival Plans by Airport or Station</h2>
+      <div class="airport-head">If You Arrive at JFK Before Check-In</div>
+      <p>JFK is the airport where planning matters most right now because construction can slow down taxis, ride apps, and private cars. Public transportation is often the smarter move if your bags and energy level allow it.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Hotel Area</th><th>Smart First Move</th></tr>
+          <tr><td>Midtown West/Times Square</td><td>AirTrain + LIRR to Penn, then hotel/storage</td></tr>
+          <tr><td>Midtown East/Grand Central</td><td>AirTrain + LIRR to Grand Central, then hotel/storage</td></tr>
+          <tr><td>Downtown/Financial District</td><td>Consider subway route or taxi depending on bags</td></tr>
+          <tr><td>Brooklyn</td><td>Compare taxi vs transit based on exact neighborhood</td></tr>
+          <tr><td>Queens</td><td>Taxi/rideshare may be simplest depending on hotel</td></tr>
+        </table>
+      </div>
+      <p>If arriving internationally, add buffer for immigration and baggage claim. Do not book anything timed too close to landing. <a href="https://www.panynj.gov/airports/en/jfk.html" target="_blank" rel="noopener">Official JFK airport information &rarr;</a> &bull; <a href="https://new.mta.info/airports" target="_blank" rel="noopener">MTA airport transit guide &rarr;</a></p>
+      <div class="airport-head" style="margin-top:18px;">If You Arrive at LaGuardia Before Check-In</div>
+      <p>LaGuardia has no direct train. The Q70 bus is free and connects LaGuardia with subway/LIRR options in Queens &mdash; great if you are traveling light, less ideal with multiple suitcases, kids, or bad weather.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary"><div class="callout-title">Heavy luggage</div><p style="font-size:13.5px;">Taxi or rideshare to hotel</p></div>
+        <div class="callout callout-local"><div class="callout-title">Light luggage</div><p style="font-size:13.5px;">Q70 + subway/LIRR can work well</p></div>
+        <div class="callout callout-tip"><div class="callout-title">With kids</div><p style="font-size:13.5px;">Direct car to hotel is often worth it</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Staying Midtown/UES/Queens</div><p style="font-size:13.5px;">LGA can be very convenient by taxi</p></div>
+      </div>
+      <div class="airport-head" style="margin-top:18px;">If You Arrive at Newark Before Check-In</div>
+      <p>Newark often works well for Penn Station/Midtown stays, but check current AirTrain service before you travel. There may be weekday construction periods where shuttle buses replace AirTrain service between the airport rail station and terminals &mdash; that can add time and friction.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Situation</th><th>Best Move</th></tr>
+          <tr><td>Staying near Penn/Moynihan</td><td>NJ Transit to Penn, then hotel/storage</td></tr>
+          <tr><td>Staying Times Square/Chelsea</td><td>NJ Transit to Penn, then walk/taxi/subway</td></tr>
+          <tr><td>Staying Downtown</td><td>PATH/NJ Transit options may work, but compare transfers</td></tr>
+          <tr><td>Heavy luggage/kids</td><td>Taxi/rideshare may be worth it</td></tr>
+          <tr><td>Tight schedule</td><td>Check advisories before choosing train</td></tr>
+        </table>
+      </div>
+      <div class="airport-head" style="margin-top:18px;">If You Arrive at Penn Station or Moynihan</div>
+      <p>One of the easiest early-arrival scenarios if your hotel is nearby. Go to hotel &rarr; store bags (or Amtrak/Moynihan storage) &rarr; eat nearby &rarr; do a short Midtown/Chelsea activity. Easy nearby plans: Koreatown breakfast &bull; Hudson Yards &bull; High Line if weather is good &bull; Bryant Park &bull; Times Square quick look &bull; Chelsea Market</p>
+      <div class="airport-head" style="margin-top:18px;">If You Arrive at Grand Central</div>
+      <p>Go to your hotel first if it is nearby. Grand Central has bathrooms, food, and beauty, but not luggage storage. Good nearby options after bag drop: Grand Central Main Concourse &bull; Bryant Park &bull; NYPL exterior &bull; Rockefeller Center &bull; Fifth Avenue &bull; Midtown East cafe/lunch</p>
+      <div class="airport-head" style="margin-top:18px;">If You Arrive by Bus at Port Authority</div>
+      <p>Port Authority is close to Times Square, Hell's Kitchen, Bryant Park, and many Midtown hotels. But the terminal itself should not be your storage plan. Go to hotel if nearby; if not, use a nearby luggage storage app location; get out of the terminal area once bags are handled; do Bryant Park, Times Square quick look, or lunch nearby.</p>
+      <hr class="divider-rule">
+      <h2 id="by-neighborhood">Best Pre-Check-In Plans by Hotel Neighborhood</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Hotel Neighborhood</th><th>Best First Few Hours</th></tr>
+          <tr><td>Times Square</td><td>Drop bags, quick Times Square look, Bryant Park, lunch</td></tr>
+          <tr><td>Midtown West/Penn</td><td>Drop bags, Koreatown breakfast, Bryant Park, Hudson Yards, or Chelsea Market</td></tr>
+          <tr><td>Midtown East/Grand Central</td><td>Drop bags, Grand Central, Bryant Park, Rockefeller Center</td></tr>
+          <tr><td>Chelsea/Flatiron</td><td>Drop bags, Chelsea Market, High Line, Madison Square Park</td></tr>
+          <tr><td>Upper West Side</td><td>Drop bags, Central Park short walk, AMNH after opening</td></tr>
+          <tr><td>Upper East Side</td><td>Drop bags, Central Park, museum only if rested</td></tr>
+          <tr><td>Financial District</td><td>Drop bags, 9/11 Memorial exterior, Oculus, Battery Park</td></tr>
+          <tr><td>Brooklyn/DUMBO</td><td>Drop bags, waterfront walk, coffee, Brooklyn Bridge Park</td></tr>
+          <tr><td>Long Island City</td><td>Drop bags, Gantry Plaza views, easy cafe reset</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="sample-plans">Sample Early Arrival Itineraries</h2>
+      <div class="sample-itin si-sensible">
+        <div class="si-head">The Sensible First-Timer Plan &mdash; first NYC trip, normal tiredness, Midtown hotel</div>
+        <div class="si-body">
+          <div class="si-row"><div class="sir-t">8:00 AM</div><div>Land</div></div>
+          <div class="si-row"><div class="sir-t">9:30 AM</div><div>Arrive at hotel</div></div>
+          <div class="si-row"><div class="sir-t">9:45 AM</div><div>Store luggage and ask about early check-in</div></div>
+          <div class="si-row"><div class="sir-t">10:15 AM</div><div>Breakfast or coffee nearby</div></div>
+          <div class="si-row"><div class="sir-t">11:00 AM</div><div>Bryant Park + NYPL exterior</div></div>
+          <div class="si-row"><div class="sir-t">12:00 PM</div><div>Grand Central or Rockefeller Center</div></div>
+          <div class="si-row"><div class="sir-t">1:30 PM</div><div>Lunch</div></div>
+          <div class="si-row"><div class="sir-t">3:00 PM</div><div>Check in</div></div>
+          <div class="si-row"><div class="sir-t">Evening</div><div>Easy dinner or short walk</div></div>
+        </div>
+      </div>
+      <div class="sample-itin si-redeye">
+        <div class="si-head">The Red-Eye Survival Plan &mdash; West Coast/international overnight arrivals</div>
+        <div class="si-body">
+          <div class="si-row"><div class="sir-t">Arriving</div><div>Use airport restroom before leaving</div></div>
+          <div class="si-row"><div class="sir-t">Step 1</div><div>Go directly to hotel</div></div>
+          <div class="si-row"><div class="sir-t">Step 2</div><div>Store bags and ask if any room is ready</div></div>
+          <div class="si-row"><div class="sir-t">Step 3</div><div>Eat breakfast nearby</div></div>
+          <div class="si-row"><div class="sir-t">Step 4</div><div>Sit somewhere calm &mdash; do not book a major attraction</div></div>
+          <div class="si-row"><div class="sir-t">Step 5</div><div>Check in as soon as possible &rarr; nap or shower</div></div>
+          <div class="si-row"><div class="sir-t">Evening</div><div>Keep evening flexible</div></div>
+          <p style="font-size:13px;margin-top:8px;">Optional upgrade: day-use hotel room, or book the previous night.</p>
+        </div>
+      </div>
+      <div class="sample-itin si-family">
+        <div class="si-head">The Family Arrival Plan &mdash; kids, stroller, tired parents</div>
+        <div class="si-body">
+          <div class="si-row"><div class="sir-t">Step 1</div><div>Direct transfer to hotel if budget allows</div></div>
+          <div class="si-row"><div class="sir-t">Step 2</div><div>Store luggage</div></div>
+          <div class="si-row"><div class="sir-t">Step 3</div><div>Use restroom, change kids</div></div>
+          <div class="si-row"><div class="sir-t">Step 4</div><div>Food immediately</div></div>
+          <div class="si-row"><div class="sir-t">Step 5</div><div>Bryant Park, Central Park, or hotel lounge</div></div>
+          <div class="si-row"><div class="sir-t">Step 6</div><div>No big attraction before check-in</div></div>
+          <div class="si-row"><div class="sir-t">Step 7</div><div>Check in, decompress, then decide evening plan</div></div>
+        </div>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="sample-itin si-budget" style="margin:0;">
+          <div class="si-head">The Budget Traveler Plan</div>
+          <div class="si-body">
+            <div class="si-row"><div class="sir-t">Step 1</div><div>Public transit from airport</div></div>
+            <div class="si-row"><div class="sir-t">Step 2</div><div>Store bags at hotel or affordable luggage app</div></div>
+            <div class="si-row"><div class="sir-t">Step 3</div><div>Cheap breakfast/lunch</div></div>
+            <div class="si-row"><div class="sir-t">Step 4</div><div>Free/low-cost: Bryant Park, Grand Central, Central Park, Staten Island Ferry after storage</div></div>
+            <div class="si-row"><div class="sir-t">Step 5</div><div>Avoid paid timed attractions until later</div></div>
+          </div>
+        </div>
+        <div class="sample-itin si-rainy" style="margin:0;">
+          <div class="si-head">The Rainy-Day Plan</div>
+          <div class="si-body">
+            <div class="si-row"><div class="sir-t">Step 1</div><div>Hotel/storage first</div></div>
+            <div class="si-row"><div class="sir-t">Step 2</div><div>Food hall or cafe</div></div>
+            <div class="si-row"><div class="sir-t">Step 3</div><div>Grand Central, Chelsea Market, Oculus, or museum after opening</div></div>
+            <div class="si-row"><div class="sir-t">Step 4</div><div>Check in &mdash; save outdoor sightseeing for later</div></div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="food">Arrival-Day Food Strategy</h2>
+      <p>Do not underestimate the importance of food. A hungry arrival day becomes dramatic fast. Good first meals are near your hotel, casual, not reservation-dependent, bathroom-accessible, easy with luggage already stored, and not a 45-minute subway ride away.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip">
+          <div class="callout-title">Good categories</div>
+          <p style="font-size:13.5px;">Diner &bull; Bagel shop with seating &bull; Hotel cafe &bull; Food hall &bull; Casual brunch spot &bull; Pizza slice if you need speed &bull; Coffee shop plus pastry if you are barely functioning</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Avoid on arrival day</div>
+          <p style="font-size:13.5px;">Making your first meal a famous restaurant across town unless it is genuinely convenient. Arrival day is not the time to chase a viral bagel while your suitcase sits in limbo.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="arrival-packing">What to Pack for an Early Arrival in NYC</h2>
+      <p>Your arrival-day packing matters more than people think. See the full guide: <a href="nyc-packing-list.html">NYC Packing List by Season &rarr;</a></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Always pack</th><th>In summer add</th><th>In winter add</th><th>In rain add</th></tr>
+          <tr><td>Small day bag &bull; Portable charger &bull; Water bottle &bull; Toothbrush/toothpaste &bull; Deodorant &bull; Wipes/tissues &bull; Hand sanitizer &bull; Change of shirt &bull; Weather layer &bull; Medication &bull; Snacks &bull; Hotel/storage confirmations</td><td>Sunglasses &bull; Hat &bull; Cooling wipe &bull; Extra shirt</td><td>Gloves &bull; Hat &bull; Scarf &bull; Warm socks</td><td>Compact umbrella &bull; Light rain jacket &bull; Waterproof shoes if possible</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="final-advice">Final Advice: Make the First Day Easy on Purpose</h2>
+      <p>The best NYC arrival plan is not the most ambitious one. It is the one that gets you from airport/station to hotel/storage with the least drama, gives you food and a bathroom, and lets you enjoy a small taste of the city before your room is ready.</p>
+      <p>Do not waste the day. But also do not bully yourself into pretending you are fresh after a 6 AM landing. Drop the bags. Eat something. Walk somewhere easy. Sit down when you need to. Save the giant attractions for when you are showered, checked in, and able to appreciate them.</p>
+      <div class="callout callout-summary">
+        <div class="callout-title">The rule that applies to every version of this day</div>
+        <p>New York is not going anywhere. Your first impression will be a lot better if it does not involve dragging a suitcase through a crowd while silently negotiating with your bladder.</p>
+        <p style="font-size:13.5px;margin-top:8px;">For the full trip plan once you are checked in: <a href="nyc-5-day-itinerary.html">5 Days in NYC: The Ultimate First-Time Itinerary</a> &bull; <a href="things-to-do-first-timers.html">40 Best Things to Do in NYC for First-Time Visitors</a></p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="faq">FAQ: Arriving in NYC Before Hotel Check-In</h2>
+      <div class="faq-wrap">
+        <details class="faq-item"><summary>What time is hotel check-in in NYC?<span class="chev">&#9662;</span></summary><div class="faq-a">Most NYC hotels have check-in around 3 or 4 PM. Some rooms may be ready earlier, but treat that as a bonus, not a guarantee.</div></details>
+        <details class="faq-item"><summary>Can I leave luggage at my NYC hotel before check-in?<span class="chev">&#9662;</span></summary><div class="faq-a">Usually, yes, if you are a confirmed guest. Still, call or email your specific hotel before arrival to confirm hours, fees, and whether storage is available.</div></details>
+        <details class="faq-item"><summary>Do NYC hotels charge for luggage storage?<span class="chev">&#9662;</span></summary><div class="faq-a">Many hotels store luggage for arriving guests for free, but policies vary. Tipping the bell staff is customary.</div></details>
+        <details class="faq-item"><summary>What if my hotel will not store my luggage?<span class="chev">&#9662;</span></summary><div class="faq-a">Use a nearby luggage storage app (Bounce, Stasher, LuggageHero), Amtrak/Moynihan storage if relevant, or book a day-use hotel room. Choose storage based on your route, not just the cheapest price.</div></details>
+        <details class="faq-item"><summary>Can I bring luggage to the Empire State Building?<span class="chev">&#9662;</span></summary><div class="faq-a">No. Large bags, suitcases, carry-on luggage, and oversized packages are prohibited, and there are no lockers or storage facilities on-site.</div></details>
+        <details class="faq-item"><summary>Can I bring luggage to the Statue of Liberty?<span class="chev">&#9662;</span></summary><div class="faq-a">No. Suitcases, carry-ons, and large parcels are not permitted on the ferry system or on Liberty/Ellis Islands. There are no lockers at the Battery or Liberty State Park screening areas.</div></details>
+        <details class="faq-item"><summary>Can I bring luggage to a Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">No. Bags must fit under your seat, theaters will not hold bags, and luggage is not permitted.</div></details>
+        <details class="faq-item"><summary>What is the best thing to do in NYC before hotel check-in?<span class="chev">&#9662;</span></summary><div class="faq-a">For most travelers: store luggage at the hotel, eat nearby, then do one low-effort activity like Bryant Park, Grand Central, Chelsea Market, Rockefeller Center, or a short neighborhood walk.</div></details>
+        <details class="faq-item"><summary>Is it worth booking the previous night for a red-eye arrival?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, if you need guaranteed access to a room, bed, and shower when you arrive. It is the only reliable way to check in early in the morning.</div></details>
+        <details class="faq-item"><summary>Where can I freshen up before hotel check-in?<span class="chev">&#9662;</span></summary><div class="faq-a">Use the airport restroom before leaving, ask your hotel about lobby restroom access, book a day-use hotel room, or use a verified lounge/gym/day-pass option with shower access.</div></details>
+        <details class="faq-item"><summary>Should I use a taxi, rideshare, or public transit from the airport?<span class="chev">&#9662;</span></summary><div class="faq-a">It depends on your airport, hotel location, luggage, budget, and energy. JFK often works well by AirTrain + LIRR if traveling light. LGA is often easiest by taxi/rideshare if you have luggage or kids. Newark can work well by NJ Transit to Penn Station, but check current AirTrain service changes before relying on it.</div></details>
+        <details class="faq-item"><summary>What should I avoid doing before check-in?<span class="chev">&#9662;</span></summary><div class="faq-a">Avoid major timed attractions, Statue of Liberty, Broadway matinees, big museums, long walks with luggage, and anything that depends on perfect airport timing.</div></details>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="nyc-4-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC in 4 Days: Relaxed vs. Maximum-Sightseeing Itinerary</a></li>
+      <li><a href="nyc-packing-list.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Packing List by Season: What You'll Actually Use</a></li>
+      <li><a href="how-much-can-you-see-in-one-day-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Many NYC Attractions Can You Realistically Do in One Day?</a></li>
+      <li><a href="midtown-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Midtown Manhattan Walking Itinerary</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="one-day-in-chelsea-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Chelsea NYC: The Perfect Walking Itinerary</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>If You Can Only Visit One Museum in NYC, Which Should It Be?</a></li>
+      <li><a href="best-nyc-ferry-routes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Ferry Routes for Tourists</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Arrival</h3>
+    <p class="sub">Tools for getting from airport to hotel without drama.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots including all early-arrival stops mapped by neighborhood</div></a>
+      <a class="footer-card" href="nyc-5-day-itinerary.html"><div class="fc-title">5-Day NYC Itinerary</div><div class="fc-sub">Once you are checked in &mdash; the full first-time NYC schedule</div></a>
+      <a class="footer-card" href="nyc-packing-list.html"><div class="fc-title">NYC Packing List</div><div class="fc-sub">What to have in your day bag for the arrival hours and beyond</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('snToggle').addEventListener('click',function(){document.getElementById('snLinks').classList.toggle('open');});
+var secs=['quick-answer','hotel-first','luggage','third-party','moynihan','day-bag','early-checkin','red-eye','freshen-up','restrooms','by-energy','best-stops','stop-1','stop-2','stop-3','stop-4','stop-5','stop-6','stop-7','stop-8','do-not','bag-rules','by-airport','by-neighborhood','sample-plans','food','arrival-packing','final-advice','faq'];
+var slinks=document.querySelectorAll('.side-nav a');var snlinks=document.querySelectorAll('.sn-inner a');
+function updateNav(){var cur=secs[0];secs.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-140) cur=id;});slinks.forEach(function(a){a.classList.toggle('sn-active',a.getAttribute('href')==='#'+cur);});snlinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});}
+window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+</script>
+</body>
+</html>
