@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The NYC "Sit Down" Itinerary: A Full Day With Built-In Rest Stops | EverythingInNYC</title>
+<meta name="description" content="A realistic NYC itinerary with built-in rest stops, bathrooms, food, taxis and shorter walking routes through Midtown, Lower Manhattan, Chelsea and Central Park.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.route-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:16px 0;}
+.rc-head{padding:10px 16px;background:var(--navy);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.rc-badge{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 10px;white-space:nowrap;flex:none;}
+.rc-title{font-family:var(--font-head);font-weight:800;font-size:14.5px;color:#fff;flex:1;}
+.rc-best{font-size:12px;color:rgba(255,255,255,.6);flex:none;}
+.rc-body{padding:10px 16px;}
+.time-row{display:flex;gap:0;border-bottom:1px solid rgba(15,23,42,.07);font-size:14px;}
+.time-row:last-child{border-bottom:none;}
+.time-row:nth-child(even){background:rgba(15,23,42,.025);}
+.tr-time{font-family:var(--font-head);font-weight:800;font-size:11.5px;color:var(--accent);min-width:120px;flex:none;padding:7px 10px 7px 0;line-height:1.4;}
+.tr-body{padding:7px 0;flex:1;line-height:1.6;}
+.tr-body ul{margin:4px 0;padding-left:18px;}
+.tr-body li{font-size:13.5px;margin-bottom:2px;}
+.rest-tag{display:inline-block;font-size:10.5px;font-weight:700;background:var(--accent);color:var(--navy);padding:1px 7px;border-radius:20px;vertical-align:middle;margin-left:6px;white-space:nowrap;}
+.taxi-tag{display:inline-block;font-size:10.5px;font-weight:700;background:#e8f4fd;color:#1a6c9e;border:1px solid #a8d3f0;padding:1px 7px;border-radius:20px;vertical-align:middle;margin-left:6px;white-space:nowrap;}
+.var-block{background:rgba(15,23,42,.025);border:1px solid var(--border);border-radius:10px;padding:10px 14px;margin:10px 0;font-size:13.5px;}
+.var-title{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--navy);margin-bottom:6px;}
+.map-btn{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:12.5px;padding:7px 16px;border-radius:30px;text-decoration:none;margin:10px 0;transition:opacity .15s;}
+.map-btn:hover{opacity:.85;}
+.links-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;}
+.links-row a{font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;transition:all .15s;}
+.links-row a:hover{background:var(--navy);color:#fff;}
+.sect-img{margin:12px 0 8px;}.sect-img img{width:100%;border-radius:12px;max-height:380px;object-fit:cover;display:block;}.sect-img .cap{font-size:13px;color:var(--text-secondary);margin-top:6px;text-align:center;}
+.seating-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;}
+@media(max-width:640px){.seating-grid{grid-template-columns:1fr;}}
+.seat-col{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;}
+.seat-col-title{font-family:var(--font-head);font-weight:800;font-size:12.5px;margin-bottom:8px;}
+.seat-col ul{margin:0;padding-left:16px;}
+.seat-col li{font-size:13.5px;margin-bottom:3px;}
+.rhythm-item{display:flex;gap:12px;padding:7px 14px;border-bottom:1px solid var(--border);font-size:14px;}
+.rhythm-item:last-child{border-bottom:none;}
+.rhythm-item:nth-child(even){background:rgba(15,23,42,.025);}
+.rn{font-family:var(--font-head);font-weight:800;font-size:18px;color:rgba(15,23,42,.14);min-width:24px;flex:none;line-height:1.4;}
+.reality-item{padding:7px 14px;border-bottom:1px solid var(--border);font-size:14px;}
+.reality-item:last-child{border-bottom:none;}
+.reality-item:nth-child(even){background:rgba(15,23,42,.025);}
+.ri-name{font-weight:700;color:var(--navy);}
+/* Bucket List CTA */
+.bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
+.bc-icon{font-size:28px;flex:none;line-height:1;color:var(--accent);}
+.bc-body{flex:1;}
+.bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+.bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
+.bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
+.bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
+.bc-btn:hover{opacity:.88;}
+[id]{scroll-margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>The NYC "Sit Down" Itinerary: A Full Day With Built-In Rest Stops</h1>
+      <div class="article-meta"><span>A realistic NYC itinerary with built-in rest stops, bathrooms, food, taxis and shorter walking routes through Midtown, Lower Manhattan, Chelsea and Central Park</span></div>
+    </div>
+    <img class="article-hero-img" src="nyc-sit-down-itinerary-cover.png" alt="The NYC sit down itinerary &mdash; a full day in New York City with built-in rest stops, reliable bathrooms and shorter walking routes">
+    <div class="article-body">
+      <p>New York is not difficult because the attractions are hard to find. It is difficult because the city quietly turns every "quick walk" into another 15 minutes, every subway transfer into a staircase expedition and every lunch break into a search for an available table.</p>
+      <p>That is how a promising day in New York ends with someone saying, "I never want to walk again."</p>
+      <p>This itinerary is designed for travelers who still want to see the major sights without destroying their feet, energy or family harmony. It is not a zero-walking itinerary. It is a zero-pointless-walking itinerary.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">The idea is simple</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+          <div style="font-size:14px;padding:3px 0;">Visit attractions that naturally sit close together</div>
+          <div style="font-size:14px;padding:3px 0;">Build in a proper seated break every 60&ndash;90 minutes</div>
+          <div style="font-size:14px;padding:3px 0;">Use reliable bathrooms instead of hoping to find one</div>
+          <div style="font-size:14px;padding:3px 0;">Take taxis for awkward cross-town sections</div>
+          <div style="font-size:14px;padding:3px 0;">Choose one major ticketed attraction rather than attempting everything</div>
+          <div style="font-size:14px;padding:3px 0;">Keep an obvious exit point if the group is tired</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="choose-route">Choose the Right Version of the Day</h2>
+      <p>You should not try to combine all of these routes. Choose one neighborhood cluster and stay there.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Route</th><th>Best For</th><th>Approximate Outdoor Walking</th><th>Main Advantage</th></tr>
+          <tr><td><strong>Midtown</strong></td><td>First-time visitors</td><td>1.5&ndash;2 miles</td><td>Best balance of iconic sights and rest stops</td></tr>
+          <tr><td><strong>Lower Manhattan</strong></td><td>Harbor views and a Statue of Liberty perspective</td><td>1.5&ndash;2 miles</td><td>Brookfield Place, The Battery and a seated ferry ride</td></tr>
+          <tr><td><strong>Chelsea and Hudson Yards</strong></td><td>Food, design and flexible pacing</td><td>1.25&ndash;1.75 miles</td><td>Chelsea Market, Little Island and indoor Hudson Yards</td></tr>
+          <tr><td><strong>Met and Central Park</strong></td><td>Older travelers, families and rainy days</td><td>0.75&ndash;1.25 miles</td><td>Fewer unpredictable street transfers</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--text-secondary);">Walking estimates are planning estimates, not promises. Crowds, construction, street crossings and the size of the buildings can all add time.</p>
+      <div class="bucket-cta">
+        <div class="bc-icon">&#128205;</div>
+        <div class="bc-body">
+          <div class="bc-label">Essential NYC Resource</div>
+          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
+          <div class="bc-desc">250+ hand-picked spots pinned across all the routes in this itinerary &mdash; rest stops, bathrooms, food halls, parks, scenic viewpoints, and hidden gems that don't show up on standard tourist maps. The easiest way to plan a day around reliable stops instead of guessing.</div>
+          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="seating-rule">The Most Important Rule: Not All Seating Is Equal</h2>
+      <p>Two categories of NYC rest stops exist. The difference matters more than most visitors expect.</p>
+      <div class="seating-grid">
+        <div class="seat-col">
+          <div class="seat-col-title" style="color:var(--navy);">Reliable Rest Stops</div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">These have indoor seating, food, bathrooms or some combination of the three:</p>
+          <ul>
+            <li>Brookfield Place</li>
+            <li>Bryant Park</li>
+            <li>Grand Central Terminal bathrooms</li>
+            <li>Little Island</li>
+            <li>The Metropolitan Museum of Art</li>
+            <li>Chelsea Market</li>
+            <li>Hudson Yards</li>
+            <li>The Shops at Columbus Circle</li>
+          </ul>
+        </div>
+        <div class="seat-col" style="border-color:rgba(15,23,42,.15);background:rgba(15,23,42,.02);">
+          <div class="seat-col-title" style="color:var(--text-secondary);">Unreliable Rest Stops</div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">These may be lovely, but you should not depend on them:</p>
+          <ul>
+            <li>A random park bench</li>
+            <li>High Line seating during a busy weekend</li>
+            <li>A crowded food hall</li>
+            <li>A restaurant without a reservation</li>
+            <li>The main concourse of a major train station</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout callout-summary">
+        <div class="callout-title">Plan around the reliable stops. Treat everything else as a bonus.</div>
+        <p style="font-size:14px;">The High Line may have attractive benches, but that does not mean your family of four will find four seats together. A park may look full of chairs in photographs while having nowhere comfortable to sit when you arrive.</p>
+      </div>
+      <p>For a detailed look at where to sit near every major attraction: <a href="best-places-to-rest-nyc.html">Best Places to Sit Down and Rest Near Major NYC Attractions &rarr;</a> &bull; For a broader afternoon-break itinerary: <a href="nyc-itinerary-afternoon-breaks.html">The Best NYC Itinerary for People Who Need Afternoon Breaks &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="midtown">The Recommended Route: Midtown with Central Park</h2>
+      <p>Midtown is still the best default for most visitors because the sights are familiar, the distances are manageable and there are several places to escape into air-conditioning, warmth or a bathroom.</p>
+      <div class="route-card">
+        <div class="rc-head"><span class="rc-badge">Recommended</span><span class="rc-title">Midtown, Bryant Park, Rockefeller Center and Central Park</span><span class="rc-best">1.5&ndash;2 miles outdoor walking</span></div>
+        <div class="rc-body">
+          <div class="time-row"><div class="tr-time">9:00&ndash;9:35 AM</div><div class="tr-body"><strong>Grand Central Terminal</strong><br>See the Main Concourse, the famous clock, the ceiling and the Whispering Gallery if the group is interested. Visit the lower-level dining area only if someone needs food. Keep this stop to 30&ndash;35 minutes. Grand Central is an excellent opening sight and a poor place to linger aimlessly.<div class="links-row" style="margin-top:6px;"><a href="https://grandcentralterminal.com/visit/" target="_blank" rel="noopener">Grand Central visitor information &rarr;</a><a href="https://www.mta.info/stations/grand-central-terminal" target="_blank" rel="noopener">MTA station information &rarr;</a></div></div></div>
+          <div class="time-row"><div class="tr-time">9:35&ndash;9:50 AM</div><div class="tr-body"><strong>Walk to Bryant Park</strong><br>Approximately 0.3 miles, six to eight minutes west along 42nd Street. There is no reason to use the subway for this section.</div></div>
+          <div class="time-row"><div class="tr-time">9:50&ndash;11:15 AM</div><div class="tr-body"><strong>Bryant Park and the NYPL exterior</strong> <span class="rest-tag">Rest stop</span><br>Sit in the movable chairs, walk only as much as you want and use the restroom before leaving. Bryant Park's main 42nd Street restroom is listed as open daily from approximately 8:00 AM to 10:00 PM. Secondary restroom hours can vary. The New York Public Library's Stephen A. Schwarzman Building is directly behind the park and is worth seeing from the outside. Enter only if the building is open and the group genuinely wants to explore it.<p style="font-size:13.5px;font-weight:700;margin:6px 0 0;color:var(--navy);">The point of this stop is not to rush through another attraction. It is to sit before the day begins to catch up with you.</p><div class="links-row" style="margin-top:6px;"><a href="https://bryantpark.org/the-park/hours-and-directions" target="_blank" rel="noopener">Bryant Park hours and directions &rarr;</a></div></div></div>
+          <div class="time-row"><div class="tr-time">11:15 AM&ndash;12:15 PM</div><div class="tr-body"><strong>Lunch in or around Bryant Park</strong><br>The simplest option is Bryant Park Grill, especially if you can reserve an indoor table. Outdoor seating is more dependent on availability and weather. Le Pain Quotidien near Bryant Park is a useful alternative for a lighter, more casual meal. Keep a backup plan &mdash; never build a low-stress itinerary around one restaurant alone. Try to finish lunch before 12:30 PM to avoid turning the next attraction into an early-afternoon queue. For more food options nearby: <a href="nyc-food-day-without-reservations.html">How to Build a NYC Food Day Without Reservations &rarr;</a></div></div>
+          <div class="time-row"><div class="tr-time">12:15&ndash;12:30 PM</div><div class="tr-body"><strong>Walk to Rockefeller Center</strong><br>Approximately 0.5 miles, around 10&ndash;12 minutes. Walk north on Fifth Avenue or use the quieter side streets if the sidewalks are crowded. This is the longest continuous walk of the Midtown morning, so do not add extra stops along the way.</div></div>
+          <div class="time-row"><div class="tr-time">12:30&ndash;2:00 PM</div><div class="tr-body"><strong>Rockefeller Center</strong><br>Use Rockefeller Center as the day's major landmark stop. You can:
+            <ul>
+              <li>See the plaza and Atlas statue</li>
+              <li>Visit St. Patrick's Cathedral across Fifth Avenue</li>
+              <li>Browse the concourses and shops</li>
+              <li>Visit Top of the Rock with a timed ticket</li>
+              <li>Stop at The Weather Room for a drink or food if you want a seated skyline break</li>
+            </ul>
+            Top of the Rock and Rockefeller Center are wheelchair accessible, with elevator access to all observation-deck levels and accessible public restroom stalls. Do not schedule another demanding attraction immediately afterward.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.rockefellercenter.com/accessibility/" target="_blank" rel="noopener">Rockefeller Center accessibility &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">2:00&ndash;2:15 PM</div><div class="tr-body"><strong>Taxi to Columbus Circle</strong> <span class="taxi-tag">Take a taxi</span><br>Rockefeller Center to Columbus Circle is walkable &mdash; approximately 12 minutes &mdash; but after Grand Central, Bryant Park, lunch and a major attraction, this is exactly where an unnecessary walk can undermine the rest of the day. Take a taxi or rideshare. The cost is worth it for this particular transfer.<div class="links-row" style="margin-top:6px;"><a href="https://www.rockefellercenter.com/map-directions" target="_blank" rel="noopener">Rockefeller Center directions &rarr;</a></div></div></div>
+          <div class="time-row"><div class="tr-time">2:15&ndash;3:15 PM</div><div class="tr-body"><strong>Central Park South</strong> <span class="rest-tag">Rest stop</span><br>Keep Central Park short. Enter near Columbus Circle and choose <strong>one</strong> compact destination:
+            <ul>
+              <li>The Pond</li>
+              <li>Gapstow Bridge</li>
+              <li>A short loop around the southeast corner of the park</li>
+            </ul>
+            Do not attempt to walk from Columbus Circle to Bethesda Terrace, the Reservoir and the Met in the same afternoon. That is a different itinerary. Central Park is open from 6:00 AM to 1:00 AM.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.centralparknyc.org/restrooms" target="_blank" rel="noopener">Central Park restroom map &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">3:15&ndash;4:30 PM</div><div class="tr-body"><strong>The Shops at Columbus Circle</strong> <span class="rest-tag">Rest stop</span><br>Finish the sightseeing portion indoors. The Shops at Columbus Circle provide food, restaurants, shops and a useful climate-controlled recovery period. Most shops list hours of 10:00 AM&ndash;8:00 PM Monday through Saturday and 11:00 AM&ndash;7:00 PM Sunday, but holiday hours vary. This is where the group can decide whether to have an early dinner, return to the hotel, continue to a reserved Broadway show, or stop sightseeing entirely. If you have Broadway tickets, choose a seated performance and eat first.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.theshopsatcolumbuscircle.com/" target="_blank" rel="noopener">The Shops at Columbus Circle &rarr;</a></div>
+          </div></div>
+          <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=Grand+Central+Terminal,+89+E+42nd+St,+New+York,+NY+10017&destination=The+Shops+at+Columbus+Circle,+10+Columbus+Circle,+New+York,+NY+10019&waypoints=Bryant+Park%7CRockefeller+Center%7CThe+Pond,+Central+Park&travelmode=walking" target="_blank" rel="noopener">&#128506; Open Midtown Route in Google Maps</a>
+          <div class="var-block">
+            <div class="var-title">Top of the Rock or SUMMIT?</div>
+            <p style="font-size:13.5px;margin:0 0 8px;">SUMMIT One Vanderbilt is an interesting alternative, but it is not automatically the easier option. SUMMIT is a roughly 90-minute, multi-level experience with mirrored rooms, sensory effects and a one-way route after the upper levels. It is accessible and has benches in selected areas, a family bathroom and sensory aids, but the experience involves more continuous movement and visual stimulation than some travelers expect.</p>
+            <ul style="font-size:13.5px;margin:0;padding-left:18px;"><li><strong>Top of the Rock</strong> &mdash; classic skyline views and a simpler layout</li><li><strong>SUMMIT</strong> &mdash; an immersive experience for those comfortable with mirrors, crowds and sensory effects</li></ul>
+            <p style="font-size:13.5px;margin:8px 0 0;font-weight:700;color:var(--navy);">Do not schedule both.</p>
+            <p style="font-size:13px;margin:6px 0 0;color:var(--text-secondary);">Full comparison: <a href="nyc-observation-decks-compared.html">NYC Observation Decks Compared &rarr;</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/86/f4/72/bryan-parc.jpg?w=2000&h=-1&s=1" alt="Bryant Park New York City &mdash; the best first rest stop on the Midtown sit-down itinerary, with movable chairs, a reliable restroom and a shaded break between Grand Central Terminal and Rockefeller Center">
+        <div class="cap">Bryant Park &mdash; the first genuine recovery point on the Midtown route. Sit before the day catches up with you. The restroom is reliable, the chairs are movable and the walk from Grand Central takes about eight minutes.</div>
+      </div>      <hr class="divider-rule">
+      <h2 id="lower-manhattan">Alternative Route 1: Lower Manhattan, Brookfield Place and the Harbor</h2>
+      <p>Choose this route for the Oculus, the 9/11 Memorial, skyline views and a free Statue of Liberty perspective from the water. The key is to make Brookfield Place the central recovery stop rather than treating it as a quick shopping detour. For a complete Lower Manhattan walking plan: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></p>
+      <div class="route-card">
+        <div class="rc-head"><span class="rc-badge">Alternative 1</span><span class="rc-title">Lower Manhattan, Brookfield Place and the Harbor</span><span class="rc-best">1.5&ndash;2 miles outdoor walking</span></div>
+        <div class="rc-body">
+          <div class="time-row"><div class="tr-time">9:30&ndash;10:00 AM</div><div class="tr-body"><strong>Oculus and World Trade Center</strong><br>Spend 20&ndash;30 minutes looking around the Oculus and nearby World Trade Center concourse. Do not stay too long. The Oculus is visually impressive, but it is not the place to promise a long, peaceful seated break.</div></div>
+          <div class="time-row"><div class="tr-time">10:00&ndash;10:45 AM</div><div class="tr-body"><strong>9/11 Memorial or Museum &mdash; choose one</strong><br>
+            <ul>
+              <li>Visit the Memorial exterior for a shorter, quieter stop. The Memorial is free and open daily from 8:00 AM&ndash;8:00 PM.</li>
+              <li>Visit the Museum if you have advance tickets and want a substantial indoor experience. Allow at least 45&ndash;90 minutes.</li>
+            </ul>
+            Do not treat the Memorial and Museum as two separate sightseeing boxes. They are part of the same emotional and historical experience, and the Museum can be more demanding than visitors expect.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.911memorial.org/visit" target="_blank" rel="noopener">9/11 Memorial visitor information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">10:45 AM&ndash;12:15 PM</div><div class="tr-body"><strong>Brookfield Place and Winter Garden</strong> <span class="rest-tag">Rest stop</span><br>Walk approximately 0.3 miles from the World Trade Center area. This is the most dependable indoor reset on the Downtown route. Brookfield Place lists more than 30 eateries, accessible entrances and several accessible restroom locations, including the Winter Garden, Courtyard and Hudson Eats. Traveler feedback consistently emphasizes the airy glass atrium, plentiful places to sit and the clean, convenient bathrooms. That is exactly why it works so well in this itinerary.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.bfplny.com/faq/" target="_blank" rel="noopener">Brookfield Place visitor information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">12:15&ndash;1:00 PM</div><div class="tr-body"><strong>Lunch at Brookfield Place</strong><br>Hudson Eats works well for groups because everyone can choose something different. A sit-down restaurant is better if anyone needs a proper recovery period. Eat before continuing south.</div></div>
+          <div class="time-row"><div class="tr-time">1:00&ndash;1:25 PM</div><div class="tr-body"><strong>Transfer to The Battery</strong> <span class="taxi-tag">Walk or taxi</span><br>The Battery is approximately 0.8&ndash;0.9 miles away. Walk only if the weather is comfortable and the group still feels good. Otherwise, take a short taxi. This is not the place to prove that a taxi is unnecessary.</div></div>
+          <div class="time-row"><div class="tr-time">1:25&ndash;2:15 PM</div><div class="tr-body"><strong>The Battery</strong> <span class="rest-tag">Rest stop</span><br>Visit the gardens, Battery Oval and the area around Castle Clinton. The Battery has movable chairs and three public restrooms, currently listed as open from 9:00 AM&ndash;4:30 PM, so use them before boarding the ferry. The Battery is exposed to the weather, so this route is much better on a clear day than in heavy rain, strong wind or extreme heat.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.thebattery.org/faq/" target="_blank" rel="noopener">The Battery FAQ &rarr;</a><a href="https://www.thebattery.org/visit-the-battery/" target="_blank" rel="noopener">The Battery visitor information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">2:15 PM onward</div><div class="tr-body"><strong>Staten Island Ferry</strong> <span class="rest-tag">Seated break</span><br>The Staten Island Ferry is free and takes approximately 25 minutes each way. Take the next suitable departure and check the current schedule. Allow extra time for boarding, waiting and the turnaround at St. George.
+            <ul>
+              <li>The ferry passes the Statue of Liberty but does not stop there</li>
+              <li>Ignore anyone outside the terminal trying to sell a ticket for the public ferry</li>
+              <li>The ride is windier and cooler than the shore</li>
+              <li>On listed holidays including Labor Day, the ferry follows a weekend schedule</li>
+              <li>If the view is the main reason for going, avoid gray or foggy weather</li>
+            </ul>
+            <p style="font-size:13.5px;font-weight:700;margin:6px 0 0;color:var(--navy);">The ferry is the rest stop. That is what makes this route work.</p>
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.nyc.gov/html/dot/html/ferrybus/siferryschedule.shtml" target="_blank" rel="noopener">Staten Island Ferry schedule &rarr;</a><a href="best-nyc-ferry-routes.html">Best NYC Ferry Routes for Tourists &rarr;</a><a href="how-to-visit-statue-of-liberty.html">How to Visit the Statue of Liberty &rarr;</a></div>
+          </div></div>
+          <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=The+Oculus,+185+Greenwich+St,+New+York,+NY+10006&destination=Whitehall+Ferry+Terminal,+4+Whitehall+St,+New+York,+NY+10004&waypoints=9%2F11+Memorial%7CBrookfield+Place%7CThe+Battery&travelmode=walking" target="_blank" rel="noopener">&#128506; Open Lower Manhattan Route in Google Maps</a>
+          <div class="var-block">
+            <div class="var-title">Brooklyn Bridge Park Variation</div>
+            <p style="font-size:13.5px;margin:0 0 8px;">Replace the ferry with a taxi to DUMBO and Brooklyn Bridge Park. Spend 60&ndash;90 minutes around Pier 1 or Empire Stores, using the benches, waterfront views and public restrooms. Brooklyn Bridge Park has accessible pathways, accessible lawns, benches with backs and handrails, accessible picnic tables and fully accessible restrooms.</p>
+            <p style="font-size:13.5px;margin:0 0 8px;">Do not add a full Brooklyn Bridge walk afterward. Take a taxi back to Manhattan. NYC Ferry can also connect Lower Manhattan and Brooklyn as an optional variation, but check current routes and fares before recommending it for a specific day.</p>
+            <div class="links-row"><a href="https://brooklynbridgepark.org/about/accessibility/" target="_blank" rel="noopener">Brooklyn Bridge Park accessibility &rarr;</a><a href="https://www.ferry.nyc/routes-and-schedules/" target="_blank" rel="noopener">NYC Ferry routes and schedules &rarr;</a><a href="https://www.ferry.nyc/ticketing-info/" target="_blank" rel="noopener">NYC Ferry ticket information &rarr;</a><a href="one-day-in-brooklyn.html">One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/45/96/a5/staten-island-ferry.jpg?w=2000&h=-1&s=1" alt="Staten Island Ferry New York City &mdash; the free 25-minute harbor ferry that serves as the best seated rest stop on the Lower Manhattan sit-down itinerary, with views of the Statue of Liberty and the Manhattan skyline">
+        <div class="cap">The Staten Island Ferry &mdash; free, seated, and about 25 minutes each way. The ferry is not just transport on this route. It is the rest stop. Check departure times before heading to the terminal.</div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="chelsea">Alternative Route 2: Chelsea Market, Little Island, the High Line and Hudson Yards</h2>
+      <p>This is the best alternative for travelers who care about food, architecture and a more flexible West Side day. The order matters. The cleaner sequence is: Chelsea Market &rarr; Little Island &rarr; short High Line section &rarr; Hudson Yards. For a full Chelsea day guide: <a href="one-day-in-chelsea-nyc.html">One Day in Chelsea NYC &rarr;</a></p>
+      <div class="route-card">
+        <div class="rc-head"><span class="rc-badge">Alternative 2</span><span class="rc-title">Chelsea Market, Little Island, High Line and Hudson Yards</span><span class="rc-best">1.25&ndash;1.75 miles outdoor walking</span></div>
+        <div class="rc-body">
+          <div class="time-row"><div class="tr-time">9:30&ndash;10:30 AM</div><div class="tr-body"><strong>Chelsea Market</strong> <span class="rest-tag">Indoor anchor</span><br>Start indoors with breakfast, coffee and browsing. Chelsea Market is currently listed as open from 7:00 AM&ndash;10:00 PM, although individual vendors have their own hours. Treat it as a food and shelter anchor, not a guaranteed private seating area. It can become very busy on weekends, especially around lunchtime.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.chelseamarket.com/" target="_blank" rel="noopener">Chelsea Market current information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">10:30&ndash;11:15 AM</div><div class="tr-body"><strong>Walk to Little Island</strong><br>Walk approximately 0.3 miles from Chelsea Market toward Little Island, between 13th and 14th Streets. Its paved routes, water stations and accessible restroom make it a useful pause before continuing north.
+            <div class="links-row" style="margin-top:6px;"><a href="https://littleisland.org/getting-here/" target="_blank" rel="noopener">Getting to Little Island &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">11:15 AM&ndash;12:00 PM</div><div class="tr-body"><strong>Little Island</strong> <span class="rest-tag">Rest stop</span><br>Keep this stop relaxed. Little Island is free and fully accessible. It has an ADA-accessible all-gender restroom, changing tables and water refill stations. Its lawns can close for maintenance on Mondays and Tuesdays, but the paved paths remain the main way to explore the park. Food carts operate seasonally &mdash; do not rely on them as the main lunch plan. Hours change seasonally; always check before visiting.
+            <div class="links-row" style="margin-top:6px;"><a href="https://littleisland.org/accessibility/" target="_blank" rel="noopener">Little Island accessibility &rarr;</a><a href="https://littleisland.org/rules-faq/" target="_blank" rel="noopener">Little Island rules and hours &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">12:00&ndash;12:45 PM</div><div class="tr-body"><strong>Short High Line walk</strong><br>Enter the High Line near 14th Street and walk north only as far as 18th&ndash;20th Street. Do not attempt the full High Line simply because it is technically possible. The complete park is roughly 1.5 miles, and the narrow path can become crowded. Traveler feedback mentions attractive seating and loungers, but also difficulty finding space during busy periods. The High Line is the scenic component of the day, not the place where you need to reach a certain mileage target.
+            <div class="links-row" style="margin-top:6px;"><a href="https://files.thehighline.org/pdf/high-line-map.pdf" target="_blank" rel="noopener">High Line map &rarr;</a><a href="https://www.tripadvisor.com/Attraction_Review-g60763-d519474-Reviews-The_High_Line-New_York_City_New_York.html" target="_blank" rel="noopener">High Line traveler reviews &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">12:45&ndash;1:00 PM</div><div class="tr-body"><strong>Taxi to Hudson Yards</strong> <span class="taxi-tag">Take a taxi</span><br>From the High Line, either take a taxi to Hudson Yards or continue north only if everyone is still comfortable. This taxi is what keeps the route practical.</div></div>
+          <div class="time-row"><div class="tr-time">1:00&ndash;2:15 PM</div><div class="tr-body"><strong>Lunch at Hudson Yards</strong><br>Use Mercado Little Spain or another Hudson Yards restaurant for lunch. Hudson Yards provides indoor shopping, restaurants and a clear place to sit down after the outdoor portion. Current visitor information lists regular indoor shopping hours of approximately 10:00 AM&ndash;9:00 PM Monday through Saturday and 11:00 AM&ndash;7:00 PM Sunday, with individual restaurants varying.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.hudsonyardsnewyork.com/open-now" target="_blank" rel="noopener">Hudson Yards current visitor information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">2:15&ndash;3:30 PM</div><div class="tr-body"><strong>Indoor Hudson Yards break</strong> <span class="rest-tag">Rest stop</span><br>Browse The Shops, see Vessel from the outside or simply sit. Edge is optional &mdash; it is not necessary to complete the route, and it adds another ticket, queue and observation-deck experience. If the group is tired, skip it without feeling that the day is incomplete.</div></div>
+          <div class="var-block">
+            <div class="var-title">Bad-Weather Version</div>
+            <p style="font-size:13.5px;margin:0;">On a rainy, cold or excessively hot day: Chelsea Market &rarr; taxi to Hudson Yards &rarr; lunch and indoor shopping. Little Island is open rain or shine unless extreme weather causes a closure, but "open" does not necessarily mean comfortable. The High Line is even less appealing in strong wind or heavy rain. More rainy-day options: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC &rarr;</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="sect-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/da/f1/9f/photo0jpg.jpg?w=1400&h=-1&s=1" alt="Chelsea Market interior New York City &mdash; the indoor food market that serves as the anchor rest stop on the Chelsea and Hudson Yards sit-down itinerary">
+        <div class="cap">Chelsea Market &mdash; the indoor anchor of the Chelsea and Hudson Yards route. Arrive before the weekend lunch rush, treat it as a food and shelter stop, and use the walk to Little Island as the scenic transition. For the full Chelsea area guide: <a href="one-day-in-chelsea-nyc.html">One Day in Chelsea NYC &rarr;</a></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="met-central-park">Alternative Route 3: The Met, Central Park and Columbus Circle</h2>
+      <p>This is the route for older travelers, families who need predictable recovery points or anyone visiting on a rainy day. For family-specific planning: <a href="nyc-with-kids.html">NYC With Kids: The Realistic Family Guide &rarr;</a></p>
+      <div class="route-card">
+        <div class="rc-head"><span class="rc-badge">Alternative 3</span><span class="rc-title">The Met, Central Park and Columbus Circle</span><span class="rc-best">0.75&ndash;1.25 miles outdoor walking</span></div>
+        <div class="rc-body">
+          <div class="time-row"><div class="tr-time">10:00 AM&ndash;12:00 PM</div><div class="tr-body"><strong>The Metropolitan Museum of Art</strong><br>The Met gives you two hours of indoor culture without requiring constant outdoor movement. Do not attempt the entire museum. Choose one or two sections and stop while everyone is still enjoying themselves.
+            <ul>
+              <li>The Met is open 10:00 AM&ndash;5:00 PM Sunday, Monday, Tuesday, Thursday and most other daytime days; open later on Friday and Saturday; closed Wednesday</li>
+              <li>Step-free entrances and first-come, first-served wheelchairs available</li>
+              <li>Many galleries offer places to sit; travelers with mobility concerns often mention the availability of wheelchairs and folding stools</li>
+              <li>The museum is approximately half a mile from the 4, 5 and 6 trains at 86th Street; the M1, M2, M3 and M4 buses can be more convenient</li>
+            </ul>
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener">Met visitor information &rarr;</a><a href="best-nyc-museums.html">Which NYC Museum Should You Visit? &rarr;</a><a href="https://community.ricksteves.com/travel-forum/beyond-europe/new-york-museums-with-benches-and-nice-cafes" target="_blank" rel="noopener">Traveler discussion: NYC museums with seating &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">12:00&ndash;1:00 PM</div><div class="tr-body"><strong>Lunch</strong><br>Have lunch at the museum or choose a nearby restaurant. This is not the day to leave the museum hungry and then walk several blocks searching for somewhere with an available table.</div></div>
+          <div class="time-row"><div class="tr-time">1:00&ndash;1:20 PM</div><div class="tr-body"><strong>Taxi toward Central Park's 72nd Street area</strong> <span class="taxi-tag">Take a taxi</span><br>The Met borders Central Park, but the park is much larger than it appears on a map. A taxi toward 72nd Street lets you enjoy a more attractive central section without walking all the way south through the park.</div></div>
+          <div class="time-row"><div class="tr-time">1:20&ndash;2:30 PM</div><div class="tr-body"><strong>Choose one Central Park section</strong> <span class="rest-tag">Rest stop</span><br>Choose <strong>one</strong>:
+            <ul>
+              <li>Bethesda Terrace</li>
+              <li>The Lake</li>
+              <li>Sheep Meadow</li>
+              <li>The Mall and Literary Walk</li>
+            </ul>
+            Do not attempt all four. The goal is to sit, enjoy the scenery and leave while the park still feels restorative.
+            <div class="links-row" style="margin-top:6px;"><a href="https://www.centralparknyc.org/restrooms" target="_blank" rel="noopener">Central Park restroom information &rarr;</a></div>
+          </div></div>
+          <div class="time-row"><div class="tr-time">2:30&ndash;2:45 PM</div><div class="tr-body"><strong>Taxi to Columbus Circle</strong> <span class="taxi-tag">Take a taxi</span><br>Take a taxi rather than adding another long cross-town walk.</div></div>
+          <div class="time-row"><div class="tr-time">2:45&ndash;4:30 PM</div><div class="tr-body"><strong>The Shops at Columbus Circle</strong> <span class="rest-tag">Rest stop</span><br>Use the indoor mall as the day's final recovery point. Shop, eat, use the facilities and decide whether you want to continue.</div></div>
+          <div class="var-block">
+            <div class="var-title">Family Version: Swap the Met for AMNH</div>
+            <p style="font-size:13.5px;margin:0;">For families, the American Museum of Natural History can replace the Met. It is open daily from 10:00 AM&ndash;5:30 PM and publishes sensory-visit resources. Do not attempt both museums in one day. <a href="https://www.amnh.org/plan-your-visit" target="_blank" rel="noopener">AMNH visitor information &rarr;</a></p>
+          </div>
+          <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=The+Metropolitan+Museum+of+Art,+1000+5th+Ave,+New+York,+NY+10028&destination=The+Shops+at+Columbus+Circle,+10+Columbus+Circle,+New+York,+NY+10019&waypoints=Bethesda+Terrace,+Central+Park&travelmode=walking" target="_blank" rel="noopener">&#128506; Open Met&ndash;Central Park&ndash;Columbus Circle Route in Google Maps</a>
+        </div>
+      </div>      <hr class="divider-rule">
+      <h2 id="cheat-sheet">Walking and Transport Cheat Sheet</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Transfer</th><th>Approximate Distance</th><th>Best Choice</th></tr>
+          <tr><td>Grand Central to Bryant Park</td><td>0.3 miles</td><td>Walk</td></tr>
+          <tr><td>Bryant Park to Rockefeller Center</td><td>0.5 miles</td><td>Walk</td></tr>
+          <tr><td>Rockefeller Center to Columbus Circle</td><td>About 12 minutes</td><td><strong>Taxi recommended for this itinerary</strong></td></tr>
+          <tr><td>Oculus to 9/11 Memorial</td><td>Less than 0.2 miles</td><td>Walk</td></tr>
+          <tr><td>World Trade Center to Brookfield Place</td><td>About 0.3 miles</td><td>Walk through the connected area</td></tr>
+          <tr><td>Brookfield Place to The Battery</td><td>0.8&ndash;0.9 miles</td><td>Walk if comfortable; taxi if tired</td></tr>
+          <tr><td>Chelsea Market to Little Island</td><td>About 0.3 miles</td><td>Walk</td></tr>
+          <tr><td>Little Island to High Line entrance</td><td>Very short</td><td>Walk</td></tr>
+          <tr><td>High Line to Hudson Yards</td><td>0.75&ndash;1 mile depending on exit</td><td><strong>Taxi if tired</strong></td></tr>
+          <tr><td>Met to Bethesda Terrace</td><td>About 0.7 miles</td><td>Taxi or slow walk</td></tr>
+          <tr><td>Columbus Circle to The Pond</td><td>Roughly 0.4&ndash;0.5 miles</td><td>Short walk</td></tr>
+        </table>
+      </div>
+      <div class="callout callout-local" style="margin-top:10px;">
+        <div class="callout-title">Check elevator status before relying on the subway</div>
+        <p style="font-size:14px;">The MTA lists major stations such as Grand Central&ndash;42 Street, 47&ndash;50 Rockefeller Center, 59&ndash;Columbus Circle, World Trade Center and 34&ndash;Hudson Yards as accessible, but elevator outages can still happen. Check elevator status before relying on a subway transfer.</p>
+        <div class="links-row"><a href="https://www.mta.info/accessibility/subway" target="_blank" rel="noopener">MTA accessibility guidance &rarr;</a><a href="https://www.mta.info/accessibility/stations" target="_blank" rel="noopener">Accessible station list &rarr;</a></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="break-rhythm">How Often Should You Take Breaks?</h2>
+      <p>For most visitors, a short pause every 45&ndash;60 minutes is better than waiting until someone is already exhausted.</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="rhythm-item"><div class="rn">1</div><div>Walk or explore for 30&ndash;45 minutes</div></div>
+        <div class="rhythm-item"><div class="rn">2</div><div>Sit for 15&ndash;30 minutes</div></div>
+        <div class="rhythm-item"><div class="rn">3</div><div>Use the bathroom before the next transfer</div></div>
+        <div class="rhythm-item"><div class="rn">4</div><div>Eat before everyone becomes irritable</div></div>
+        <div class="rhythm-item"><div class="rn">5</div><div>Take a taxi when the next section is geographically awkward</div></div>
+      </div>
+      <div class="callout callout-summary">
+        <div class="callout-title">Do not force the group to "push through"</div>
+        <p style="font-size:14px;">Ten minutes in New York can involve traffic lights, crowds, stairs, navigation mistakes and a building that is much larger than it looked online. A ten-minute map distance is rarely a ten-minute walk.</p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="reality-checks">Traveler Reality Checks</h2>
+      <p>The practical impressions travelers consistently reinforce are more useful than a perfect list of attractions:</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="reality-item"><span class="ri-name">Brookfield Place:</span> Comfortable indoor atmosphere, food choices and bathrooms make it one of Downtown's best recovery points.</div>
+        <div class="reality-item"><span class="ri-name">Staten Island Ferry:</span> A free, seated harbor ride with excellent skyline views, but not a replacement for a Statue of Liberty tour. For the full ferry picture: <a href="best-nyc-ferry-routes.html">Best NYC Ferry Routes for Tourists &rarr;</a></div>
+        <div class="reality-item"><span class="ri-name">Chelsea Market:</span> Excellent for food and shelter, but seating becomes less predictable during busy weekend periods.</div>
+        <div class="reality-item"><span class="ri-name">The High Line:</span> Beautiful and relaxing when visited early, but crowded sections can turn a supposedly easy walk into slow standing.</div>
+        <div class="reality-item"><span class="ri-name">The Met:</span> Particularly forgiving for visitors who need occasional seating, wheelchairs or folding stools.</div>
+        <div class="reality-item"><span class="ri-name">Grand Central:</span> Wonderful to see, but not the place to promise everyone a comfortable chair.</div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="final-rule">The Final Rule: Leave Something for Tomorrow</h2>
+      <p>The best version of a New York day is not the one with the most pins on a map. It is the one where everyone still has enough energy to enjoy dinner.</p>
+      <div class="callout callout-local">
+        <div class="callout-title">The sit-down itinerary in one paragraph</div>
+        <p style="font-size:14px;">Choose one major attraction. Build around two dependable seated stops. Use a taxi for the awkward transfer. Keep the bathroom plan visible. Treat the High Line, Central Park and waterfront parks as places to slow down &mdash; not places where you need to reach a mileage target. That is how you see more of New York without spending the entire evening recovering from it.</p>
+      </div>
+      <p>For more planning resources: <a href="nyc-5-day-itinerary.html">5 Days in NYC: The Ultimate First-Time Itinerary &rarr;</a> &bull; <a href="best-places-to-rest-nyc.html">Best Places to Sit Down and Rest Near Major NYC Attractions &rarr;</a> &bull; <a href="nyc-itinerary-afternoon-breaks.html">The Best NYC Itinerary for People Who Need Afternoon Breaks &rarr;</a></p>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="best-places-to-rest-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Places to Sit Down and Rest Near Major NYC Attractions</a></li>
+      <li><a href="nyc-itinerary-afternoon-breaks.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Itinerary for People Who Need Afternoon Breaks</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="nyc-with-kids.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC With Kids: The Realistic Family Guide</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="one-day-in-chelsea-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Chelsea NYC: High Line, Chelsea Market &amp; More</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="best-nyc-ferry-routes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Ferry Routes for Tourists, Ranked</a></li>
+      <li><a href="how-to-visit-statue-of-liberty.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Visit the Statue of Liberty: Complete Guide</a></li>
+      <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Museum Should You Visit?</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="nyc-food-day-without-reservations.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Build a NYC Food Day Without Reservations</a></li>
+      <li><a href="best-nyc-hotel-areas-for-families.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Hotel Areas for Families</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan a Smarter NYC Day</h3>
+    <p class="sub">Realistic itineraries with built-in rest stops, reliable bathrooms and less pointless walking.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">250+ pinned spots including rest stops, bathrooms, parks, food halls and every major attraction on these routes</div></a>
+      <a class="footer-card" href="best-places-to-rest-nyc.html"><div class="fc-title">Best NYC Rest Stops</div><div class="fc-sub">Where to sit, find bathrooms, and escape weather near every major NYC attraction</div></a>
+      <a class="footer-card" href="nyc-5-day-itinerary.html"><div class="fc-title">5-Day NYC Itinerary</div><div class="fc-sub">Day-by-day itinerary by neighborhood with built-in flexibility for breaks and rest</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
