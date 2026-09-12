@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JFK to Manhattan: Best Taxi, Uber, AirTrain &amp; LIRR Options | EverythingInNYC</title>
+<meta name="description" content="Comparing the best ways to get from JFK to Manhattan, including taxis, Uber, AirTrain, subway, LIRR, shuttles, luggage, neighborhoods, and late-night arrivals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.opt-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:14px 0;}
+.oc-head{padding:10px 16px;background:var(--navy);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.oc-icon{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 10px;white-space:nowrap;flex:none;}
+.oc-title{font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff;flex:1;}
+.oc-tag{font-size:12px;color:rgba(255,255,255,.6);flex:none;}
+.oc-body{padding:12px 16px;}
+.oc-body ul{margin:5px 0 8px;padding-left:18px;}
+.oc-body li{font-size:14px;margin-bottom:3px;}
+.links-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;}
+.links-row a{font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;transition:all .15s;}
+.links-row a:hover{background:var(--navy);color:#fff;}
+.warn-block{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:8px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+.warn-block strong{color:var(--navy);}
+.step-list{counter-reset:steps;list-style:none;padding:0;margin:6px 0;}
+.step-list li{counter-increment:steps;display:flex;gap:10px;padding:5px 0;font-size:14px;border-bottom:1px solid rgba(15,23,42,.06);}
+.step-list li:last-child{border-bottom:none;}
+.step-list li::before{content:counter(steps);font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);min-width:22px;flex:none;padding-top:1px;}
+.arrival-row{display:flex;gap:0;border-bottom:1px solid rgba(15,23,42,.07);font-size:14px;}
+.arrival-row:last-child{border-bottom:none;}
+.arrival-row:nth-child(even){background:rgba(15,23,42,.025);}
+.ar-time{font-family:var(--font-head);font-weight:800;font-size:12px;color:var(--accent);min-width:110px;flex:none;padding:7px 10px 7px 0;line-height:1.4;}
+.ar-body{padding:7px 0;flex:1;line-height:1.6;}
+.mistake-item{display:flex;gap:10px;padding:7px 14px;border-bottom:1px solid var(--border);font-size:14px;}
+.mistake-item:last-child{border-bottom:none;}
+.mistake-item:nth-child(even){background:rgba(15,23,42,.025);}
+.mi-n{font-family:var(--font-head);font-weight:800;font-size:16px;color:rgba(15,23,42,.18);min-width:22px;flex:none;line-height:1.5;}
+/* Bucket List CTA */
+.bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
+.bc-icon{font-size:26px;flex:none;line-height:1;color:var(--accent);}
+.bc-body{flex:1;}
+.bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+.bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
+.bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
+.bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
+.bc-btn:hover{opacity:.88;}
+.rec-strip{background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;margin:10px 0;display:flex;align-items:flex-start;gap:10px;}
+.rec-strip-label{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 8px;flex:none;margin-top:1px;white-space:nowrap;}
+[id]{scroll-margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>How to Get from JFK to Manhattan: Taxi, Uber, AirTrain, Subway, or LIRR?</h1>
+      <div class="article-meta"><span>Comparing every option for getting from JFK to Manhattan &mdash; matched to your hotel, arrival time, luggage, group size, and energy level</span></div>
+    </div>
+    <img class="article-hero-img" src="JFK to manhattan.png" alt="How to get from JFK to Manhattan &mdash; taxi, Uber, AirTrain, subway, and LIRR options compared">
+    <div class="article-body">
+      <p>Arriving at JFK can feel like the trip has barely started and you are already solving a transportation puzzle. Which terminal are you at? Should you take the AirTrain to Jamaica or Howard Beach? Is your hotel closer to Penn Station or Grand Central? Will your luggage survive the subway?</p>
+      <p>The good news is that getting from JFK to Manhattan is very manageable once you match the route to your hotel, arrival time, luggage, and energy level.</p>
+      <div class="bucket-cta">
+        <div class="bc-icon">&#128205;</div>
+        <div class="bc-body">
+          <div class="bc-label">Before You Arrive &mdash; Essential NYC Resource</div>
+          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
+          <div class="bc-desc">A personal Google Map with hundreds of hand-picked places across all of New York City &mdash; restaurants, viewpoints, hidden gems, neighborhoods, and local favorites that most tourists never find. Use it to plan your hotel area, discover what's near your transit stop, and build a first-day itinerary while you're still at the airport.</div>
+          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
+        </div>
+      </div>
+      <p>My honest advice is simple:</p>
+      <ul style="font-size:14.5px;margin:0 0 14px;padding-left:20px;line-height:1.7;">
+        <li>Take the <strong>subway</strong> if you are traveling light and want the best value</li>
+        <li>Take the <strong>LIRR</strong> if you are heading toward Penn Station, Grand Central, Midtown, or Atlantic Terminal</li>
+        <li>Take a <strong>yellow taxi</strong> when you want the least decision-making</li>
+        <li>Use <strong>Uber or Lyft</strong> when door-to-door convenience matters, but check the pickup instructions carefully</li>
+        <li>Pre-book a <strong>private car</strong> for late-night arrivals, young children, or complicated luggage</li>
+      </ul>
+      <hr class="divider-rule">
+      <h2 id="quick-answer">The Short Answer: Which JFK-to-Manhattan Option Is Best?</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:13.5px;">
+          <tr><th>Your Situation</th><th>My Recommendation</th></tr>
+          <tr><td>Light luggage and a hotel near a subway station</td><td>AirTrain plus subway</td></tr>
+          <tr><td>Hotel near Penn Station or Grand Central</td><td>AirTrain plus LIRR</td></tr>
+          <tr><td>Two travelers with large suitcases</td><td>Yellow taxi or LIRR</td></tr>
+          <tr><td>Family arriving after midnight</td><td>Taxi or pre-booked private car</td></tr>
+          <tr><td>Heavy rain, snow, or extreme heat</td><td>Taxi, private car, or LIRR</td></tr>
+          <tr><td>Tight budget</td><td>AirTrain plus subway</td></tr>
+          <tr><td>Four or more travelers</td><td>Compare one taxi or car with individual transit fares</td></tr>
+          <tr><td>Mobility concerns</td><td>AirTrain plus LIRR, or an accessible pre-booked vehicle</td></tr>
+          <tr><td>First visit and low stress tolerance</td><td>Yellow taxi</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="lirr">My Favorite Option for Most Tourists: AirTrain Plus LIRR</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Recommended</span><span class="oc-title">AirTrain to Jamaica, then Long Island Rail Road</span><span class="oc-tag">Best for most visitors with luggage</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">For many visitors, the best balance is the AirTrain to Jamaica followed by the Long Island Rail Road. It is faster and more comfortable than the subway, especially when you have luggage, but it avoids the unpredictable road traffic that can turn a simple airport transfer into a frustrating ordeal.</p>
+          <p style="font-size:14px;margin:0 0 8px;">At Jamaica, follow the signs for the LIRR. From there, trains run toward:</p>
+          <ul>
+            <li><strong>Penn Station</strong> &mdash; useful for Midtown West, Chelsea, Herald Square, Hudson Yards, and much of the west side</li>
+            <li><strong>Grand Central Madison</strong> &mdash; useful for Midtown East, the Upper East Side, and hotels near Lexington Avenue</li>
+            <li><strong>Atlantic Terminal</strong> &mdash; useful for Downtown Brooklyn when the schedule lines up</li>
+          </ul>
+          <div class="warn-block"><strong>Important:</strong> You need a separate LIRR ticket. OMNY works for the subway and AirTrain, but it does not replace an LIRR ticket. Download the <strong>TrainTime app</strong> before leaving the airport, buy your ticket there, and check the destination and platform before boarding. Not every train at Jamaica is the right train for Manhattan, and not every train stops at Jamaica. Check the destination carefully.
+          <div class="links-row" style="margin-top:8px;"><a href="https://www.mta.info/traintime" target="_blank" rel="noopener">MTA TrainTime app &rarr;</a></div></div>
+          <div class="warn-block" style="margin-top:6px;"><strong>Why LIRR beats the subway for luggage:</strong> The LIRR has fewer stops, wider aisles, more comfortable seating, and generally less confusion. The main downside is the final walk &mdash; Grand Central Madison can involve a surprisingly long underground walk, and Penn Station is enormous. If your hotel is several blocks away, the last stretch may be harder than expected.</div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="subway">The Cheapest Option: AirTrain Plus Subway</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Best Value</span><span class="oc-title">AirTrain to Jamaica or Howard Beach, then Subway</span><span class="oc-tag">Best for light luggage and tight budgets</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">If you are traveling with a backpack, carry-on, or manageable rolling suitcase, the AirTrain plus subway is usually the best-value way to get from JFK to Manhattan. Most travelers take the AirTrain to Jamaica, then connect to the E train. The E train serves several useful Manhattan stations:</p>
+          <ul>
+            <li><strong>42 St&ndash;Port Authority</strong> &mdash; for Times Square and the Theater District</li>
+            <li><strong>34 St&ndash;Penn Station</strong> &mdash; for Herald Square and Midtown</li>
+            <li><strong>World Trade Center</strong> &mdash; for FiDi and Lower Manhattan. For what to do in Lower Manhattan: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></li>
+            <li><strong>Spring Street, Canal Street, and West 4th Street</strong> &mdash; for SoHo, Greenwich Village, and nearby neighborhoods</li>
+          </ul>
+          <p style="font-size:14px;margin:8px 0;">You can also take the J or Z train from Jamaica for parts of Lower Manhattan, the Lower East Side, and Brooklyn. For hotels near the Financial District, the AirTrain to Howard Beach followed by the A train can also work well. However, Jamaica generally offers more route flexibility and clearer alternatives if there is a disruption.</p>
+          <p style="font-size:14px;margin:0 0 8px;">The subway runs around the clock, which makes it useful for late arrivals. The tradeoff is that overnight service can involve longer waits, local trains, construction changes, and quieter stations.</p>
+          <div class="warn-block"><strong>OMNY tip:</strong> Use OMNY for contactless subway and AirTrain payment. Always use the same physical card or digital device throughout your subway journey so transfers and fare benefits are applied correctly. <div class="links-row" style="margin-top:6px;"><a href="https://omny.info/" target="_blank" rel="noopener">OMNY contactless payment &rarr;</a></div></div>
+          <div class="warn-block" style="margin-top:6px;"><strong>When I would not take the subway from JFK:</strong>
+            <ul style="margin:6px 0 0;padding-left:16px;">
+              <li>Multiple large suitcases</li>
+              <li>Hotel far from the nearest station</li>
+              <li>Traveling with a stroller and tired children</li>
+              <li>Arriving during severe weather</li>
+              <li>Unfamiliar with elevators, stair-heavy stations, or subway service changes</li>
+              <li>Arriving after midnight and wanting to reach the hotel simply</li>
+            </ul>
+            <p style="margin:6px 0 0;font-size:13.5px;">The subway is inexpensive, but it charges you in effort. For budget travel more broadly: <a href="saving-money-on-nyc-trip.html">How to Save Money on Your NYC Trip &rarr;</a></p>
+          </div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="taxi">The Easiest Option: A Yellow Taxi</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Simplest</span><span class="oc-title">Yellow Taxi from the Official Airport Stand</span><span class="oc-tag">Best for low stress, large luggage, or tired travelers</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">A yellow taxi is still one of the simplest ways to get from JFK to Manhattan. Follow the signs to the official taxi queue outside your terminal. Do not accept a ride from anyone approaching you inside the terminal or near baggage claim. Licensed taxis use the official stand, have a visible medallion, and provide a receipt.</p>
+          <p style="font-size:14px;margin:0 0 8px;">The Manhattan trip uses a regulated airport flat-rate structure, with additional surcharges, tolls, and tip. Because these charges can change, check the current fare page before traveling.</p>
+          <div class="warn-block"><strong>Traffic warning:</strong> A taxi can be wonderfully quick in the middle of the day and painfully slow during the evening commute. JFK construction has also created detours and changing road patterns, so allow extra time. A taxi is particularly attractive when two people are sharing the ride and each has a full-size suitcase.
+          <div class="links-row" style="margin-top:8px;"><a href="https://www.nyc.gov/site/tlc/passengers/taxi-fare.page" target="_blank" rel="noopener">Current NYC TLC taxi fare page &rarr;</a></div></div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">For Brooklyn, Queens, or other destinations outside Manhattan, the standard Manhattan flat rate does not apply. The fare is metered instead.</p>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="uber-lyft">Taxi vs. Uber or Lyft from JFK</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Check First</span><span class="oc-title">Uber or Lyft from JFK</span><span class="oc-tag">Good for door-to-door convenience &mdash; but read the pickup instructions</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">Uber and Lyft can be excellent, but they are not automatically better than a taxi. The main advantage is convenience: you see the fare estimate in the app, can usually choose a larger vehicle, and do not need to explain the hotel address to the driver. The main disadvantages are dynamic pricing, pickup confusion, and construction-related rerouting.</p>
+          <div class="warn-block"><strong>Terminal 5 and 7 alert:</strong> Ride-app pickups from Terminals 5 and 7 may be directed to the Howard Beach AirTrain station because of ongoing construction. The AirTrain connection within the airport is free, but you still need to collect your luggage, find the correct platform, ride to Howard Beach, and locate the designated pickup area. Check this on the day you arrive.
+          <div class="links-row" style="margin-top:8px;"><a href="https://www.jfkairport.com/transportation/ride-share-services" target="_blank" rel="noopener">Official JFK ride-share information &rarr;</a><a href="https://www.jfkairport.com/alerts-advisories/t5-t7-ride-app-relocations" target="_blank" rel="noopener">Current T5 and T7 pickup alert &rarr;</a></div></div>
+          <p style="font-size:14px;font-weight:700;margin:10px 0 6px;">Before requesting a car:</p>
+          <ol class="step-list">
+            <li>Follow the airport signs after baggage claim</li>
+            <li>Open the app only when you know where the pickup point is</li>
+            <li>Confirm the terminal or AirTrain station shown in the app</li>
+            <li>Match the license plate, vehicle, and driver before getting in</li>
+            <li>Ignore anyone offering an unofficial ride</li>
+          </ol>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">Accessible ride-app vehicles are available, but if you need a ramp or wheelchair space, arrange it in advance whenever possible.</p>
+        </div>
+      </div>      <hr class="divider-rule">
+      <h2 id="uber-shuttle">Is Uber Shuttle Worth Considering?</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Niche Use</span><span class="oc-title">Uber Shuttle from JFK</span><span class="oc-tag">Works only if your hotel is near a listed Manhattan stop</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">Uber Shuttle can be useful if your hotel is near one of its designated Manhattan stops. Current stops include areas around Port Authority, Times Square, Penn Station, Grand Central, Midtown East and Midtown West, Chelsea, Greenwich Village, and Union Square.</p>
+          <p style="font-size:14px;margin:0 0 8px;">This is not a door-to-door airport shuttle. You reserve a seat, travel on a scheduled route, and walk from the Manhattan stop to your hotel.</p>
+          <div class="warn-block"><strong>Who should use it:</strong> A solo traveler with one suitcase and a hotel near a listed stop. <strong>Who should avoid it:</strong> Travelers with several bags, small children, a late arrival, or a hotel on the Upper West or Upper East Side. The service has luggage limits and schedule rules.
+          <div class="links-row" style="margin-top:8px;"><a href="https://www.uber.com/global/en/r/airports/jfk/shuttle/" target="_blank" rel="noopener">Current Uber Shuttle JFK page &rarr;</a></div></div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="private-car">Private Car Services and Shared Airport Vans</h2>
+      <div class="opt-card">
+        <div class="oc-head"><span class="oc-icon">Pre-Book</span><span class="oc-title">Private Car or Shared Airport Van</span><span class="oc-tag">Best for families, late-night arrivals, and minimal decision-making</span></div>
+        <div class="oc-body">
+          <p style="font-size:14px;margin:0 0 10px;">A pre-booked private car is the calmest choice for families, late-night arrivals, and travelers who do not want to make decisions after landing. The important part is booking ahead and receiving clear instructions for the meeting point. JFK construction can change curb access, so confirm whether the driver meets you inside the terminal, at a designated pickup zone, or at another airport location.</p>
+          <p style="font-size:14px;margin:0 0 8px;">Shared airport vans are a reasonable middle ground. They can take you close to your Manhattan hotel, but they may stop at several hotels before yours. A good choice for a solo traveler with light luggage who cares more about a simple reservation than arriving quickly.</p>
+          <div class="warn-block"><strong>Use only authorized services:</strong> JFK lists authorized providers for van and shuttle service. Do not accept transportation from unlicensed solicitors at the terminal.
+          <div class="links-row" style="margin-top:8px;"><a href="https://www.jfkairport.com/transportation/van-shuttle-service" target="_blank" rel="noopener">JFK authorized van and shuttle services &rarr;</a></div></div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="by-neighborhood">Best Route from JFK by Manhattan Neighborhood</h2>
+      <p>Your hotel address matters more than the name of the transportation method. The "best" route to Times Square may be inconvenient for someone staying in the East Village or Upper East Side.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12.5px;">
+          <tr><th>Hotel Area</th><th>Best Public-Transit Route</th><th>Practical Advice</th></tr>
+          <tr><td>Times Square / Theater District</td><td>AirTrain&ndash;Jamaica&ndash;E to 42 St&ndash;Port Authority</td><td>Excellent with light luggage</td></tr>
+          <tr><td>Penn Station / Herald Square</td><td>AirTrain&ndash;Jamaica&ndash;LIRR to Penn</td><td>Usually easier than subway stairs</td></tr>
+          <tr><td>Grand Central / Midtown East</td><td>AirTrain&ndash;Jamaica&ndash;LIRR to Grand Central Madison</td><td>Comfortable, but expect a long station walk</td></tr>
+          <tr><td>Upper West Side</td><td>LIRR to Penn, then 1/2/3 train uptown</td><td>Taxi becomes attractive with large bags</td></tr>
+          <tr><td>Upper East Side</td><td>LIRR to Grand Central, then 4/5/6</td><td>Good connection if the hotel is near the subway</td></tr>
+          <tr><td>Chelsea / Flatiron</td><td>LIRR to Penn and walk, or E to 34 St</td><td>One of the better areas for LIRR</td></tr>
+          <tr><td>SoHo</td><td>E to Spring, Canal, or West 4th Street</td><td>Subway is usually practical</td></tr>
+          <tr><td>Greenwich Village</td><td>E to West 4th Street</td><td>Uber Shuttle may work if the stop is convenient</td></tr>
+          <tr><td>FiDi / World Trade Center</td><td>E to World Trade Center, or A from Howard Beach</td><td>Good subway destination</td></tr>
+          <tr><td>Lower East Side / Chinatown</td><td>J or Z to Delancey&ndash;Essex</td><td>Check late-night service carefully</td></tr>
+          <tr><td>Williamsburg</td><td>J or Z toward Marcy, Hewes, Lorimer, or Flushing</td><td>Taxi may be worth it with luggage</td></tr>
+          <tr><td>Downtown Brooklyn</td><td>LIRR to Atlantic Terminal, if convenient</td><td>Check the train destination before boarding</td></tr>
+          <tr><td>Long Island City</td><td>E to Court Square or Queens Plaza</td><td>Often one of the easiest subway trips</td></tr>
+        </table>
+      </div>
+      <div class="warn-block">For accessible travel, the AirTrain and its major connections are accessible, but elevator outages can change the practicality of a route. Always check elevator status before leaving the airport.
+        <div class="links-row" style="margin-top:6px;"><a href="https://www.mta.info/accessibility/stations" target="_blank" rel="noopener">MTA elevator and station accessibility &rarr;</a></div>
+      </div>
+      <p style="font-size:13.5px;">Choosing where to stay in NYC? <a href="best-nyc-hotel-areas-for-families.html">Best NYC Hotel Areas for Families Needing Space, Transit, and Quiet &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="travel-times">How Long Does JFK to Manhattan Take?</h2>
+      <p>These are realistic planning ranges from the time you leave the terminal &mdash; not from the moment the plane lands. Add time for immigration, baggage claim, finding the AirTrain, waiting for a vehicle, and walking from the station to your hotel.</p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12.5px;">
+          <tr><th>Destination</th><th>Subway</th><th>LIRR</th><th>Taxi or Rideshare</th></tr>
+          <tr><td>Times Square</td><td>About 50&ndash;70 min</td><td>About 40&ndash;60 min</td><td>About 45&ndash;90 min</td></tr>
+          <tr><td>Penn Station</td><td>About 45&ndash;65 min</td><td>About 35&ndash;50 min</td><td>About 40&ndash;85 min</td></tr>
+          <tr><td>Grand Central</td><td>About 55&ndash;75 min</td><td>About 35&ndash;50 min</td><td>About 40&ndash;85 min</td></tr>
+          <tr><td>Upper West Side</td><td>About 65&ndash;90 min</td><td>About 55&ndash;75 min</td><td>About 45&ndash;95 min</td></tr>
+          <tr><td>Upper East Side</td><td>About 65&ndash;95 min</td><td>About 50&ndash;75 min</td><td>About 45&ndash;95 min</td></tr>
+          <tr><td>Chelsea / Flatiron</td><td>About 50&ndash;75 min</td><td>About 40&ndash;60 min</td><td>About 40&ndash;90 min</td></tr>
+          <tr><td>SoHo / Greenwich Village</td><td>About 50&ndash;75 min</td><td>About 55&ndash;75 min</td><td>About 40&ndash;85 min</td></tr>
+          <tr><td>FiDi / WTC</td><td>About 55&ndash;80 min</td><td>About 55&ndash;75 min</td><td>About 40&ndash;90 min</td></tr>
+          <tr><td>Lower East Side / Chinatown</td><td>About 55&ndash;85 min</td><td>About 55&ndash;80 min</td><td>About 35&ndash;80 min</td></tr>
+          <tr><td>Williamsburg</td><td>About 55&ndash;85 min</td><td>About 50&ndash;75 min</td><td>About 35&ndash;75 min</td></tr>
+          <tr><td>Downtown Brooklyn</td><td>About 50&ndash;80 min</td><td>About 45&ndash;65 min</td><td>About 35&ndash;75 min</td></tr>
+          <tr><td>Long Island City</td><td>About 35&ndash;55 min</td><td>Less convenient</td><td>About 30&ndash;65 min</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--text-secondary);">These are deliberately broad ranges. Construction, traffic, elevator outages, train frequency, and the exact hotel entrance can matter more than the headline travel time.</p>
+      <hr class="divider-rule">
+      <h2 id="arrival-time">The Best Choice Depends on Your Arrival Time</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="arrival-row"><div class="ar-time">Around 6 AM</div><div class="ar-body">The subway is already a reasonable option, and road traffic is usually kinder than later in the day. Choose the LIRR if a convenient train is departing soon, especially for Penn Station or Grand Central.</div></div>
+        <div class="arrival-row"><div class="ar-time">Around 9 AM</div><div class="ar-body">This can overlap with the morning commute. Trains are often more predictable than cars, but they may be crowded. If you have luggage, the LIRR is generally more comfortable than the subway.</div></div>
+        <div class="arrival-row"><div class="ar-time">Around Noon</div><div class="ar-body">This is the easiest time to choose based on your hotel. The subway is practical, LIRR is comfortable, and a taxi may be reasonably efficient.</div></div>
+        <div class="arrival-row"><div class="ar-time">Around 5 PM</div><div class="ar-body">This is when to avoid road transportation unless there is a very good reason. Take the subway or LIRR and let the traffic happen around you.</div></div>
+        <div class="arrival-row"><div class="ar-time">Around 9 PM</div><div class="ar-body">If the next suitable LIRR train is convenient, take it. If you are exhausted, traveling with children, or staying far from the station, a taxi or rideshare may be worth the extra cost and effort.</div></div>
+        <div class="arrival-row"><div class="ar-time">Around Midnight</div><div class="ar-body">For a first arrival after midnight, a yellow taxi or pre-booked private car is the usual recommendation. The subway is available, but late-night service changes and long waits can make the journey feel much harder than it looks on a map.</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="traveling-with-children">Traveling with Children</h2>
+      <p>Families should think about luggage and car seats before thinking about price.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip">
+          <div class="callout-title">Car seats matter</div>
+          <p style="font-size:13.5px;">A taxi is usually easiest for a family with tired children, but do not assume a car seat will be available. Bring your own or reserve a private vehicle that confirms the appropriate child restraint.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Strollers and stations</div>
+          <p style="font-size:13.5px;">The subway and LIRR can work very well with older children. A stroller is manageable, but station elevators may be located far from the obvious entrance. Allow extra time and avoid making a tight connection.</p>
+        </div>
+      </div>
+      <p style="font-size:14px;">For a family of four, compare the cost of one vehicle with four individual transit journeys. The decision is often less about saving money and more about whether everyone can comfortably manage the bags.</p>
+      <p>For complete family travel planning in NYC: <a href="nyc-with-kids.html">NYC With Kids: The Realistic Family Guide &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="weather">Weather Changes the Answer</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-summary">
+          <div class="callout-title">Clear days</div>
+          <p style="font-size:13.5px;">The AirTrain and subway are perfectly reasonable. Choose based on luggage, hotel location, and energy level.</p>
+        </div>
+        <div class="callout callout-local">
+          <div class="callout-title">Rain, snow, or extreme heat</div>
+          <p style="font-size:13.5px;">The same route can involve wet sidewalks, slippery station entrances, crowded platforms, and a difficult walk from the final station to the hotel. Summer heat can be just as unpleasant as winter weather when you are carrying luggage through a large station. Do not underestimate the final walk.</p>
+        </div>
+      </div>
+      <div class="warn-block"><strong>During bad weather, prefer:</strong> LIRR for Midtown or Downtown Brooklyn &bull; A taxi for door-to-door convenience &bull; A private car for families or mobility concerns. For planning indoor options: <a href="rainy-day-activities-nyc.html">Best Rainy-Day Attractions in NYC &rarr;</a></div>
+      <hr class="divider-rule">
+      <h2 id="mistakes">Common Mistakes to Avoid</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="mistake-item"><div class="mi-n">1</div><div>Requesting Uber or Lyft before checking the airport pickup instructions &mdash; at some terminals, the pickup point may not be where you expect</div></div>
+        <div class="mistake-item"><div class="mi-n">2</div><div>Assuming OMNY covers the entire trip &mdash; it works for the subway and AirTrain, but the LIRR requires its own ticket</div></div>
+        <div class="mistake-item"><div class="mi-n">3</div><div>Boarding a train at Jamaica without checking the destination &mdash; not every train is going to Manhattan and not every train stops at Jamaica</div></div>
+        <div class="mistake-item"><div class="mi-n">4</div><div>Accepting an unofficial ride from someone approaching you in the terminal or near baggage claim</div></div>
+        <div class="mistake-item"><div class="mi-n">5</div><div>Underestimating the final walk &mdash; Grand Central Madison, Penn Station, and large subway hubs involve significant walking after arrival</div></div>
+        <div class="mistake-item"><div class="mi-n">6</div><div>Not checking JFK construction alerts before the day of travel &mdash; road patterns and pickup locations can change</div></div>
+        <div class="mistake-item"><div class="mi-n">7</div><div>Planning the subway with large suitcases when the hotel is far from the nearest accessible station</div></div>
+      </div>      <hr class="divider-rule">
+      <h2 id="final-recommendation">My Final Recommendation</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;padding:0;">
+        <div class="arrival-row" style="background:rgba(15,23,42,.03);"><div class="ar-time" style="color:var(--navy);">Most tourists</div><div class="ar-body">AirTrain to Jamaica and then the LIRR. Comfortable, predictable, and much less stressful with luggage than the subway.</div></div>
+        <div class="arrival-row"><div class="ar-time" style="color:var(--navy);">Times Square</div><div class="ar-body">The E train is hard to beat if you are traveling light.</div></div>
+        <div class="arrival-row" style="background:rgba(15,23,42,.03);"><div class="ar-time" style="color:var(--navy);">Late nights, tired families, hotels far from stations</div><div class="ar-body">Yellow taxi or pre-booked private car. Consider the extra cost an investment in a smooth first evening.</div></div>
+      </div>
+      <div class="warn-block">Whatever you choose, check the MTA JFK travel guide, JFK construction alerts, and the relevant taxi or ride-app page shortly before traveling. JFK's transportation landscape changes often, and five minutes of preparation can save an hour of confusion.
+        <div class="links-row" style="margin-top:8px;">
+          <a href="https://www.mta.info/guides/airports/jfk/jfk-airport-to-manhattan" target="_blank" rel="noopener">MTA JFK travel guide &rarr;</a>
+          <a href="https://www.jfkairport.com/alerts-advisories" target="_blank" rel="noopener">JFK construction alerts &rarr;</a>
+        </div>
+      </div>
+      <p>Once you have arrived and settled in: <a href="nyc-before-hotel-check-in.html">What to Do in NYC Before Hotel Check-In &rarr;</a> &bull; <a href="nyc-5-day-itinerary.html">5 Days in NYC: The Ultimate First-Time Itinerary &rarr;</a> &bull; <a href="nyc-sit-down-itinerary.html">The NYC "Sit Down" Itinerary: Built-In Rest Stops &rarr;</a></p>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-before-hotel-check-in.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What to Do in NYC Before Hotel Check-In: Early Arrival Guide</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="nyc-sit-down-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The NYC "Sit Down" Itinerary: A Full Day With Built-In Rest Stops</a></li>
+      <li><a href="best-nyc-hotel-areas-for-families.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Hotel Areas for Families Needing Space, Transit, and Quiet</a></li>
+      <li><a href="nyc-with-kids.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC With Kids: The Realistic Family Guide</a></li>
+      <li><a href="nyc-itinerary-afternoon-breaks.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Itinerary for People Who Need Afternoon Breaks</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="best-nyc-ferry-routes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Ferry Routes for Tourists, Ranked</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="nyc-food-day-without-reservations.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Build a NYC Food Day Without Reservations</a></li>
+      <li><a href="best-places-to-rest-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Places to Sit Down and Rest Near Major NYC Attractions</a></li>
+      <li><a href="things-to-do-first-timers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>40 Best Things to Do in NYC for First-Time Visitors</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Arrival</h3>
+    <p class="sub">Honest guides to getting from JFK to Manhattan and making the most of your first day in New York City.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">Hundreds of hand-picked spots across NYC &mdash; plan your hotel area before you even land</div></a>
+      <a class="footer-card" href="nyc-before-hotel-check-in.html"><div class="fc-title">Before Hotel Check-In</div><div class="fc-sub">What to do in NYC when you arrive early and your room isn't ready yet</div></a>
+      <a class="footer-card" href="nyc-5-day-itinerary.html"><div class="fc-title">5-Day NYC Itinerary</div><div class="fc-sub">The best first-timer itinerary by neighborhood, with practical transit advice throughout</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
