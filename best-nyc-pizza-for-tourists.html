@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Pizza in NYC for Tourists: Where to Go, What to Order &amp; What's Worth the Trip | EverythingInNYC</title>
+<meta name="description" content="The best pizza in NYC for tourists: Joe's, L'Industrie, John's of Bleecker Street, L&B DUMBO, Mama's TOO and more &mdash; matched to your itinerary, neighborhood, and group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.pizza-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:14px 0;}
+.pc-head{padding:10px 16px;background:var(--navy);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.pc-name{font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff;flex:none;}
+.pc-hood{font-size:12px;color:rgba(255,255,255,.6);flex:1;}
+.pc-tag{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 9px;white-space:nowrap;flex:none;}
+.pc-body{padding:0 16px 12px;}
+.pc-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-bottom:1px solid rgba(15,23,42,.08);margin-bottom:10px;}
+@media(max-width:600px){.pc-meta{grid-template-columns:1fr;}}
+.pm-row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid rgba(15,23,42,.05);font-size:13.5px;}
+.pm-row:last-child{border-bottom:none;}
+.pm-label{font-family:var(--font-head);font-weight:800;font-size:11px;color:var(--text-secondary);min-width:68px;flex:none;padding-top:2px;text-transform:uppercase;letter-spacing:.04em;}
+.pm-val{color:var(--navy);font-size:13.5px;flex:1;}
+.pc-desc{font-size:14px;line-height:1.65;margin-bottom:6px;}
+.pc-catch{background:rgba(15,23,42,.04);border-left:3px solid rgba(15,23,42,.15);padding:6px 12px;border-radius:0 8px 8px 0;font-size:13px;color:var(--text-secondary);}
+.pc-catch strong{color:var(--navy);}
+.style-head{font-family:var(--font-head);font-weight:800;font-size:14.5px;color:var(--navy);margin:16px 0 4px;}
+.nbhd-block{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0;}
+.nb-title{font-family:var(--font-head);font-weight:800;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.itin-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:10px 0;}
+.itin-head{padding:7px 14px;background:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);}
+.itin-body{padding:8px 14px;background:var(--bg-card);}
+.itin-step{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid rgba(15,23,42,.07);font-size:14px;}
+.itin-step:last-child{border-bottom:none;}
+.is-n{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);min-width:20px;flex:none;}
+.bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
+.bc-icon{font-size:26px;flex:none;line-height:1;color:var(--accent);}
+.bc-body{flex:1;}
+.bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+.bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
+.bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
+.bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
+.bc-btn:hover{opacity:.88;}
+[id]{scroll-margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Food &amp; Eating</span>
+      <h1>Best Pizza in NYC for Tourists: Where to Go, What to Order, and What Is Worth the Trip</h1>
+      <div class="article-meta"><span>17 NYC pizzerias compared by neighborhood, style, wait, and value &mdash; matched to your itinerary so you spend your time eating pizza, not chasing it</span></div>
+    </div>
+    <img class="article-hero-img" src="best-NYC-pizza-for-tourists.png" alt="Best pizza in NYC for tourists &mdash; Joe's Pizza, L'Industrie, John's of Bleecker Street, L&B Spumoni Gardens DUMBO and the best NYC pizza by neighborhood">
+    <div class="article-body">
+      <p>New York does not have one single "best pizza." The right place depends on the kind of pizza you want, where you are sightseeing, how much time you have, and whether you want a quick slice or a sit-down meal.</p>
+      <p>For a classic New York slice, start with Joe's. For a more modern slice with creative toppings, choose L'Industrie. For a whole pie in a historic setting, try John's of Bleecker Street. If you are visiting the Brooklyn Bridge, L&amp;B Spumoni Gardens in DUMBO is the most convenient destination for a distinctive Sicilian square.</p>
+      <p>The most important advice is simple: do not spend your entire vacation crossing the city for famous pizza. Several of the best restaurants fit naturally into sightseeing days, while others are only worth visiting if pizza is one of your main reasons for coming to New York.</p>
+      <div class="bucket-cta">
+        <div class="bc-icon">&#128205;</div>
+        <div class="bc-body">
+          <div class="bc-label">Plan Your NYC Food Day</div>
+          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
+          <div class="bc-desc">A personal Google Map with hundreds of hand-picked places across all of New York City &mdash; including every pizzeria in this guide pinned alongside nearby attractions, rest stops, bakeries, and local favorites. Use it to build a realistic pizza-and-sightseeing day without crossing the city twice.</div>
+          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="quick-guide">Quick Guide to the Best Pizza in NYC</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:11.5px;">
+          <tr><th>Restaurant</th><th>Neighborhood</th><th>Best For</th><th>What to Order</th><th>Tourist Convenience</th><th>Main Drawback</th></tr>
+          <tr><td><strong>Joe's Pizza</strong></td><td>Greenwich Village, Times Square, Financial District</td><td>Classic NYC slice</td><td>Plain cheese, then pepperoni</td><td>Excellent; several Manhattan locations</td><td>Small, crowded spaces</td></tr>
+          <tr><td><strong>L'Industrie</strong></td><td>West Village, Little Italy, Williamsburg</td><td>Modern slice</td><td>Burrata or fig jam and bacon</td><td>Best at the Manhattan locations</td><td>Lines and limited seating</td></tr>
+          <tr><td><strong>Mama's TOO!</strong></td><td>Upper West Side</td><td>Creative square slices</td><td>Cacio e Pepe or Vodka</td><td>Good with Central Park and museums</td><td>Standing room only</td></tr>
+          <tr><td><strong>John's of Bleecker Street</strong></td><td>West Village</td><td>Historic whole pie</td><td>Plain or a simple topped pie</td><td>Easy to combine with Village sightseeing</td><td>No individual slices</td></tr>
+          <tr><td><strong>Scarr's Pizza</strong></td><td>Lower East Side</td><td>Crust-focused slice</td><td>Plain, pepperoni, or Hotboi</td><td>Good downtown stop</td><td>Dining-room waits and loud music</td></tr>
+          <tr><td><strong>Rubirosa</strong></td><td>Nolita</td><td>Sit-down Italian-American pizza</td><td>Tie Dye or Classic</td><td>Convenient for SoHo and Little Italy</td><td>Reservations are useful</td></tr>
+          <tr><td><strong>Song' E Napule</strong></td><td>Greenwich Village</td><td>Neapolitan pizza</td><td>Margherita or Calzone Classico</td><td>Good for a planned dinner</td><td>Whole pies only</td></tr>
+          <tr><td><strong>L&amp;B Spumoni Gardens</strong></td><td>DUMBO</td><td>Sicilian pizza</td><td>Upside-down square and spumoni</td><td>Excellent near the Brooklyn Bridge</td><td>DUMBO branch lacks the original's atmosphere</td></tr>
+          <tr><td><strong>Best Pizza</strong></td><td>Williamsburg</td><td>Traditional neighborhood slice</td><td>Cheese, pepperoni, or grandma</td><td>Usually easier than viral spots</td><td>Limited seating</td></tr>
+          <tr><td><strong>Fini Pizza</strong></td><td>Williamsburg</td><td>Specialty slices</td><td>White slice or long hot shallot</td><td>Easy to combine with Williamsburg</td><td>Some slices can be oily or undercooked</td></tr>
+          <tr><td><strong>Una Pizza Napoletana</strong></td><td>Lower East Side</td><td>Serious Neapolitan pizza</td><td>Margherita or Marinara</td><td>Best for a planned food trip</td><td>Open only Thursday&ndash;Saturday</td></tr>
+          <tr><td><strong>Lucali</strong></td><td>Carroll Gardens</td><td>Special-occasion pizza</td><td>Pie with basil and calzone</td><td>Poor fit for a tight itinerary</td><td>No reservations, cash only, long waits</td></tr>
+          <tr><td><strong>Di Fara</strong></td><td>Midwood</td><td>Pizza-history pilgrimage</td><td>Regular and square slices</td><td>Difficult for most tourists</td><td>Quality and wait times are inconsistent</td></tr>
+          <tr><td><strong>Razza</strong></td><td>Jersey City</td><td>Destination pizza</td><td>Margherita and a seasonal pie</td><td>Reasonable from Lower Manhattan</td><td>Requires crossing the Hudson</td></tr>
+          <tr><td><strong>Koronet Pizza</strong></td><td>Upper West Side</td><td>Huge late-night slice</td><td>Jumbo cheese slice</td><td>Good near Columbia</td><td>Size is more impressive than refinement</td></tr>
+          <tr><td><strong>Artichoke Basille's</strong></td><td>East Village</td><td>Late-night specialty slice</td><td>Artichoke slice</td><td>Convenient downtown</td><td>Heavy pizza and limited seating</td></tr>
+          <tr><td><strong>Ops</strong></td><td>Bushwick</td><td>Pizza and wine</td><td>Margherita-style and seasonal pie</td><td>Best for a dedicated Brooklyn evening</td><td>Not a quick slice stop</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="styles">NYC Pizza Styles Explained</h2>
+      <div class="style-head">Classic New York Slice</div>
+      <p>This is the large, thin, foldable slice most visitors picture when they think of New York pizza. It is usually sold by the slice at a counter and eaten quickly. Try Joe's, Best Pizza, Scarr's, or NY Pizza Suprema.</p>
+      <div class="style-head">Neapolitan Pizza</div>
+      <p>Neapolitan pizza comes as a smaller whole pie with a soft, blistered crust. It is a sit-down meal rather than a grab-and-go slice. Try Song' E Napule or Una Pizza Napoletana.</p>
+      <div class="style-head">Sicilian and Grandma Pizza</div>
+      <p>These are square pizzas. Sicilian slices are thicker and airier, while grandma-style pizza is generally thinner and crisper. L&amp;B Spumoni Gardens is the clearest Sicilian choice. Mama's TOO!, Best Pizza, Fini, and Scarr's also offer substantial square slices.</p>
+      <div class="style-head">Modern and Specialty Pizza</div>
+      <p>Modern NYC pizzerias use the city's slice tradition as a base for toppings such as burrata, hot honey, fig jam, vodka sauce, or Cacio e Pepe. Try L'Industrie, Mama's TOO!, Rubirosa, or Fini.</p>
+      <div class="style-head">Detroit-Style-Influenced Pizza</div>
+      <p>Some NYC pizzerias use thick, crisp-edged dough and caramelized cheese while still serving New York-style toppings. Mama's TOO! is the most useful choice in this guide if you want that texture.</p>
+      <hr class="divider-rule">
+      <h2 id="restaurants">The Best NYC Pizzerias for Tourists</h2>
+      <div class="pizza-card" id="joes">
+        <div class="pc-head"><span class="pc-tag">Best Classic Slice</span><span class="pc-name">Joe's Pizza</span><span class="pc-hood">Greenwich Village &bull; Times Square &bull; Financial District</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Locations</div><div class="pm-val">7 Carmine St (Greenwich Village); 1435 Broadway (Times Square); 124 Fulton St (Financial District); additional locations</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Plain cheese first &mdash; add pepperoni for a second slice</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin, foldable New York pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$4&ndash;$6 per slice</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, limited seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Usually 5&ndash;20 minutes; line generally moves quickly</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Times Square: ~10 AM&ndash;3&ndash;5 AM depending on day. Check the exact branch.</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Joe's is the safest introduction to classic New York pizza. The slice is thin, lightly charred, foldable, and uncomplicated. The plain slice shows you what the restaurant does best. The Carmine Street location is the best choice for atmosphere and a Greenwich Village itinerary. The Times Square branch is more convenient before or after Broadway, but it is busier and has received more complaints about inconsistency. The Fulton Street location works well after the 9/11 Memorial or while exploring the Financial District. For the full Lower Manhattan picture: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Small, crowded spaces at most locations.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="lindustrie">
+        <div class="pc-head"><span class="pc-tag">Best Modern Slice</span><span class="pc-name">L'Industrie Pizzeria</span><span class="pc-hood">West Village &bull; Little Italy &bull; Williamsburg</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Locations</div><div class="pm-val">104 Christopher St (West Village); 197 Grand St (Little Italy); 254 South 2nd St (Williamsburg)</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Burrata, fig jam and bacon, or Margherita</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin, crisp, airy modern New York slice</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$5.50&ndash;$8 per slice; pies ~$35&ndash;$45</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service with little or no seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">10&ndash;20 minutes on a quieter weekday; longer at peak times</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">L'Industrie is the right choice when you want a slice with more contrast and more adventurous toppings. The crust is thin and crisp, while the burrata and fig-bacon slices are richer and more distinctive than a traditional cheese slice. Lines are common and seating is extremely limited. The Little Italy location is the most useful for tourists because it fits naturally with SoHo, Nolita, Chinatown, Ferrara Bakery, and the Tenement Museum. The Williamsburg location is a good choice when you are already exploring Brooklyn &mdash; do not travel there simply to avoid the Manhattan line. For a full plan around this area: <a href="nyc-food-day-without-reservations.html">How to Build a NYC Food Day Without Reservations &rarr;</a></p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Lines and extremely limited seating. Not the place for a relaxed sit-down meal.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="mamas">
+        <div class="pc-head"><span class="pc-tag">Best Creative Square</span><span class="pc-name">Mama's TOO!</span><span class="pc-hood">Upper West Side</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">2750 Broadway, Upper West Side</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Cacio e Pepe, Vodka, Angry Nonna, or Poached Pear</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thick, crisp square slices with grandma and Detroit-like qualities</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$6&ndash;$10 per slice; pies ~$30&ndash;$50</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, standing room only, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Often 10&ndash;30 minutes; longer on busy weekends</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Mama's TOO! is not a classic floppy slice shop. Its square slices are thick, crisp around the edges, airy inside, and surprisingly filling. The Vodka slice and Cacio e Pepe are the strongest first orders. The Angry Nonna combines hot soppressata, Calabrian chili oil, and hot honey. The Poached Pear is more divisive because of its sweet-and-savory combination. Some visitors report waiting while finished slices cool down under additional toppings &mdash; plan to eat nearby rather than expecting a comfortable restaurant meal. This is one of the best pizza stops for a day around Central Park, the American Museum of Natural History, Columbia University, or the Cathedral of St. John the Divine.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> No chairs. Mama's TOO! squares are filling, so avoid over-ordering.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="johns">
+        <div class="pc-head"><span class="pc-tag">Best Historic Whole Pie</span><span class="pc-name">John's of Bleecker Street</span><span class="pc-hood">West Village</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">278 Bleecker Street, West Village</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Plain, mushroom, or a simple pie with basil or ricotta</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin-crust coal-fired whole pie</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies only &mdash; no slices</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$20&ndash;$35 per pie</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Sit-down restaurant, generally walk-in</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Often 10&ndash;30 minutes, though it varies</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">John's is a proper pizza dinner rather than a quick snack. The pies are thin and crisp around the edges, with a softer center. The room is small, but the atmosphere is part of the appeal. A medium or large pie is the right order for a couple or small group. Do not visit if you only have time for one slice. John's fits naturally after Washington Square Park, while walking through the West Village, or before continuing to Greenwich Village nightlife.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> No individual slices. You need to commit to a whole pie and a sit-down meal.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="scarrs">
+        <div class="pc-head"><span class="pc-tag">Best LES Slice</span><span class="pc-name">Scarr's Pizza</span><span class="pc-hood">Lower East Side</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">35 Orchard Street</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Plain, pepperoni, or Hotboi (pepperoni + jalape&ntilde;os + hot honey)</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin New York slice with a crisp, structured crust</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies; specialty pies available for dine-in</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">Plain slice $4.50; whole pies from ~$33</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service plus small dining room; reservations useful for dine-in</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Weekday afternoons near-immediate; evenings and weekends 15&ndash;45 min</div></div>
+              <div class="pm-row"><div class="pm-label">Payment</div><div class="pm-val">Card payments include a 3% surcharge; cash and debit avoid it</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Scarr's is a good choice for visitors who pay close attention to crust. The plain and pepperoni slices show off the dough, while the Hotboi adds pepperoni, jalape&ntilde;os, and hot honey. The food is generally the reason to come &mdash; the room is lively and the music can be loud, and service and wait times are less predictable than the pizza. Combine Scarr's with the Tenement Museum, Katz's Delicatessen, Chinatown, or a Lower East Side walk.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Dining-room waits and loud music. Not for a quiet meal.</div>
+        </div>
+      </div>      <div class="pizza-card" id="rubirosa">
+        <div class="pc-head"><span class="pc-tag">Best Sit-Down Italian-American</span><span class="pc-name">Rubirosa</span><span class="pc-hood">Nolita</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">235 Mulberry Street, Nolita</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Tie Dye, Classic, Vodka, or Honey Pie</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin-crust Italian-American pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">14-inch and 18-inch whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$25&ndash;$45 per pie</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Full-service restaurant; reservations strongly recommended</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Daily 11 AM&ndash;11 PM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Rubirosa is more of a restaurant meal than a slice-shop stop. The Tie Dye combines vodka sauce, tomato, pesto, and fresh mozzarella. The Classic is a better choice if you want a straightforward pie. The room is narrow and energetic, and walk-in waits can become inconvenient at dinner. The restaurant also offers vegetarian choices, vegan-cheese substitutions, and gluten-free pizzas. Rubirosa works well with a SoHo, Nolita, Little Italy, or Chinatown itinerary. Reserve it when you want a relaxed dinner rather than an impulsive slice.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Reservations are essential to avoid a frustrating walk-in wait at peak dinner hours.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="sone-napule">
+        <div class="pc-head"><span class="pc-tag">Best Neapolitan in Greenwich Village</span><span class="pc-name">Song' E Napule</span><span class="pc-hood">Greenwich Village</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">132 West Houston Street</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Margherita, Diavola, or Calzone Classico</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Neapolitan</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies only</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$16&ndash;$29</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Full-service restaurant; reservations available and recommended for dinner</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Daily noon&ndash;11 PM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Song' E Napule is a strong choice when your group wants a traditional whole pie in a comfortable restaurant. The Margherita is the best first order; the Calzone Classico is useful for sharing. The restaurant fits naturally after Washington Square Park, while exploring the West Village, or before an evening elsewhere downtown. Because the pies are whole and the restaurant offers full service, allow more time than you would at a slice counter.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Whole pies only. Not a slice stop &mdash; this is a planned sit-down meal.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="lb">
+        <div class="pc-head"><span class="pc-tag">Best Near Brooklyn Bridge</span><span class="pc-name">L&amp;B Spumoni Gardens DUMBO</span><span class="pc-hood">DUMBO, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">46 Old Fulton Street, DUMBO</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Classic upside-down square, Vodka square, and spumoni</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Sicilian square pizza with sauce over the cheese</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies; Vodka squares may require a whole pie</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$5&ndash;$10 per slice; full pies ~$30&ndash;$50</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Indoor dining and counter service; usually no reservation needed</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Sun&ndash;Thu 11 AM&ndash;10 PM; Fri&ndash;Sat 11 AM&ndash;11 PM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">L&amp;B's signature square reverses the usual order of toppings: the cheese sits below the tomato sauce. The result is a thick, airy, crisp square with a particularly distinctive sauce-and-cheese balance. The DUMBO location does not have the same atmosphere as the original Bensonhurst restaurant, but it is dramatically more convenient for visitors. Order the square rather than the regular slice, then finish with spumoni. This is the easiest pizza stop to combine with Brooklyn Bridge Park, Jane's Carousel, the waterfront, and a walk across the Brooklyn Bridge. For the full DUMBO day: <a href="one-day-in-brooklyn.html">One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond &rarr;</a></p>
+          <div class="pc-catch"><strong>Main drawback:</strong> The DUMBO branch lacks the atmosphere of the original Bensonhurst restaurant. Treat Grimaldi's and Juliana's nearby as optional only if the line is short.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="best-pizza">
+        <div class="pc-head"><span class="pc-tag">Best Williamsburg Neighborhood Slice</span><span class="pc-name">Best Pizza</span><span class="pc-hood">Williamsburg, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">33 Havemeyer Street; additional location at 800 Grand Street</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Cheese, pepperoni, white, or grandma</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Classic New York pizza with Sicilian and grandma options</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$4&ndash;$8 per slice; pies ~$30&ndash;$40</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, limited seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Usually immediate to brief; evenings can be busier</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Best Pizza is a good alternative to Williamsburg's more crowded destinations. The menu is broad enough to offer classic cheese, pepperoni, white, and grandma slices without becoming difficult to navigate. Customers often describe the crust as thin with some char and the flavor as strong. The quieter neighborhood setting makes it a practical stop when L'Industrie's line is too long.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Limited seating. Not a destination in itself, but an excellent backup or add-on during a Williamsburg day.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="fini">
+        <div class="pc-head"><span class="pc-tag">Best Williamsburg Specialty Slice</span><span class="pc-name">Fini Pizza</span><span class="pc-hood">Williamsburg, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">305 Bedford Avenue, Williamsburg</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">White slice with lemon, pepperoni, or long hot shallot</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin modern New York slice</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$5&ndash;$8 per slice</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service with limited indoor and outdoor seating</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Usually quicker than the most heavily publicized Williamsburg shops</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Fini is especially useful for its white slice, which includes lemon, and its long-hot-shallot slice. The pepperoni is the safer choice for anyone who wants a more familiar flavor. Most experiences are positive, but some visitors find individual slices oily or undercooked. It is best treated as a flexible Williamsburg stop rather than a restaurant worth crossing the city for on its own.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Some slices can be oily or undercooked. Best as part of a Williamsburg day, not a solo trip.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="ops">
+        <div class="pc-head"><span class="pc-tag">Best Pizza and Wine</span><span class="pc-name">Ops</span><span class="pc-hood">Bushwick, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">346 Himrod Street, Bushwick</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Margherita-style pie plus one seasonal pie</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Sourdough, Neapolitan-influenced pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies only</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$25&ndash;$40 per pie, before drinks</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Sit-down restaurant; reservations via Resy, recommended</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Sun&ndash;Thu 5&ndash;10 PM; Fri&ndash;Sat 5&ndash;11 PM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Ops is a pizza dinner with wine, not a quick slice. The sourdough crust is tangy, airy, and charred, while the menu changes around seasonal toppings. The restaurant is best for couples or adults who want to sit down with a bottle and a couple of pies. Do not treat Bushwick as a quick extension of a Williamsburg crawl. It requires its own evening.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Price, distance from Williamsburg, absence of gluten-free pizza, and evening-only hours. Weekend walk-ins can involve a 45-minute or more wait.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="una">
+        <div class="pc-head"><span class="pc-tag">Best Serious Neapolitan</span><span class="pc-name">Una Pizza Napoletana</span><span class="pc-hood">Lower East Side</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">175 Orchard Street, Lower East Side</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Margherita or Marinara</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Highly focused Neapolitan pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies only</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$25&ndash;$40 per person before drinks</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Intimate sit-down; reservations essential (open 14 days ahead at 9 AM Eastern)</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Thursday&ndash;Saturday 5&ndash;10:30 PM only</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Una is for visitors who are specifically interested in Neapolitan pizza. It is not a casual stop between attractions. The menu is deliberately focused on classic pies, and the restaurant opens only three nights each week. Reserve before building it into your trip. For most visitors, it is a destination meal rather than an incidental stop.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Open only Thursday&ndash;Saturday. Reservations are essential and must be planned well in advance.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="lucali">
+        <div class="pc-head"><span class="pc-tag">Best Special-Occasion Pizza</span><span class="pc-name">Lucali</span><span class="pc-hood">Carroll Gardens, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">575 Henry Street, Carroll Gardens</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Large pie with basil, plus a calzone for the table</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thin-crust brick-oven pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies and calzone only</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">$32 pie with basil; toppings ~$3&ndash;$8 each</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Sit-down, BYOB; no reservations &mdash; waitlist names from 4 PM</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">5&ndash;11 PM; closed Tuesday</div></div>
+              <div class="pm-row"><div class="pm-label">Payment</div><div class="pm-val">Cash only</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Lucali can be a memorable pizza dinner, but its logistics are difficult. Long waits, a no-reservation policy, and cash-only payment make it a poor choice for a tightly scheduled sightseeing day. The restaurant is best for travelers who are happy to spend an entire evening in Carroll Gardens. It is not an efficient choice before Broadway, during a short visit, or with children who need a predictable schedule.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> No reservations, cash only, potential multi-hour wait. A full-evening commitment in Brooklyn.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="difara">
+        <div class="pc-head"><span class="pc-tag">Best Pizza History Pilgrimage</span><span class="pc-name">Di Fara</span><span class="pc-hood">Midwood, Brooklyn</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">1424 Avenue J, Midwood</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Regular cheese slice and square slice</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Classic thin New York pizza and square pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$6&ndash;$8 per slice; pies ~$32&ndash;$43</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, sparse seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Currently Tue&ndash;Sun noon&ndash;8 PM; closed Monday</div></div>
+              <div class="pm-row"><div class="pm-label">Wait</div><div class="pm-val">Anything from about 10 minutes to an hour or more</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Di Fara remains historically important, but it is no longer an automatic recommendation for every visitor. Some experiences describe crisp crust, balanced sauce, and excellent fresh basil. Others report soggy squares, long waits, or a noticeable decline in consistency. Go only if you specifically want a pizza pilgrimage. Midwood is far enough from the main tourist areas that the trip needs to be part of the point.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Quality and wait times are inconsistent. Far from Manhattan. Only go for the pilgrimage, not for convenience.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="razza">
+        <div class="pc-head"><span class="pc-tag">Best Destination Pizza Outside NYC</span><span class="pc-name">Razza</span><span class="pc-hood">Jersey City, NJ</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">275&ndash;277 Grove Street, Jersey City</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Margherita plus one seasonal pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Wood-fired artisanal pizza</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$20&ndash;$30 per pie</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Sit-down restaurant with outdoor seating; reservations strongly recommended</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Mon&ndash;Thu 5&ndash;10 PM; Fri&ndash;Sat 3&ndash;10 PM; Sun 3&ndash;9 PM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Razza is across the Hudson in Jersey City, but it is a serious destination for pizza lovers. The Margherita is the safest first order, while seasonal options offer more adventurous flavors. The main complaints involve small pies, price, occasional undercooked centers, and a crowded room. From Lower Manhattan, the trip is reasonable. From Times Square or farther uptown, it is not an efficient detour.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Requires crossing the Hudson. Best approached from Lower Manhattan. Not efficient from Midtown or further north.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="koronet">
+        <div class="pc-head"><span class="pc-tag">Best Huge Late-Night Slice</span><span class="pc-name">Koronet Pizza</span><span class="pc-hood">Upper West Side</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">2848 Broadway, Upper West Side</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Jumbo cheese slice</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Oversized New York slice</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$5 per jumbo slice</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, limited seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">Sun&ndash;Thu 10 AM&ndash;2 AM; Fri&ndash;Sat 10 AM&ndash;4 AM</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Koronet's appeal is size. One jumbo slice is roughly equivalent to two ordinary slices, and the experience is more about generous portions and late-night student energy than subtle craftsmanship. It works well near Columbia University, the Cathedral of St. John the Divine, or after a late evening on the Upper West Side. A plain slice is the best way to experience it.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Size is more impressive than refinement. This is a late-night snack, not a destination pizza meal.</div>
+        </div>
+      </div>
+      <div class="pizza-card" id="artichoke">
+        <div class="pc-head"><span class="pc-tag">Best Late-Night Specialty Slice</span><span class="pc-name">Artichoke Basille's</span><span class="pc-hood">East Village</span></div>
+        <div class="pc-body">
+          <div class="pc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="pm-row"><div class="pm-label">Address</div><div class="pm-val">321 East 14th Street, East Village; additional locations</div></div>
+              <div class="pm-row"><div class="pm-label">Order</div><div class="pm-val">Artichoke slice or Vodka slice</div></div>
+              <div class="pm-row"><div class="pm-label">Style</div><div class="pm-val">Thick specialty slices</div></div>
+              <div class="pm-row"><div class="pm-label">Format</div><div class="pm-val">Slices and whole pies</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="pm-row"><div class="pm-label">Price</div><div class="pm-val">~$6&ndash;$10 per slice</div></div>
+              <div class="pm-row"><div class="pm-label">Seating</div><div class="pm-val">Counter service, minimal seating, no reservations</div></div>
+              <div class="pm-row"><div class="pm-label">Hours</div><div class="pm-val">East Village location currently lists 11 AM&ndash;5 AM daily</div></div>
+            </div>
+          </div>
+          <p class="pc-desc">Artichoke is a late-night indulgence rather than a refined pizza stop. The artichoke slice is creamy, rich, and heavy enough to function as a meal by itself. Visit when you want something distinctive after midnight, especially around the East Village, Union Square, or 14th Street. It is not the best choice for a multi-stop daytime crawl.</p>
+          <div class="pc-catch"><strong>Main drawback:</strong> Heavy pizza and minimal seating. Works as a late-night treat, not a daytime pizza meal.</div>
+        </div>
+      </div>      <hr class="divider-rule">
+      <h2 id="times-square">Best Pizza Near Times Square and Penn Station</h2>
+      <p>For Broadway or Times Square, choose <strong>Joe's Pizza at 1435 Broadway</strong>. It is the most direct classic-slice option. For Madison Square Garden, Penn Station, or a train connection, choose <strong>NY Pizza Suprema</strong> at 413 8th Avenue. It serves classic New York slices and whole pies, offers pickup and delivery, and is currently listed as open daily from approximately 10:30 AM&ndash;11 PM.</p>
+      <div class="callout callout-local"><div class="callout-title">Convenience versus quality</div><p style="font-size:14px;">These are convenience recommendations rather than reasons to cross Manhattan. If you are already downtown, Joe's Carmine Street, L'Industrie, Scarr's, or Rubirosa are stronger reasons to plan a pizza stop.</p></div>
+      <hr class="divider-rule">
+      <h2 id="by-neighborhood">Best Pizza by Neighborhood</h2>
+      <div class="nbhd-block">
+        <div class="nb-title">Greenwich Village and the West Village</div>
+        <p style="font-size:14px;margin:0 0 6px;">Choose Joe's, John's, Song' E Napule, or the West Village L'Industrie location. A sensible plan is one slice at Joe's followed by either a whole pie at John's or a Neapolitan dinner at Song' E Napule.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">SoHo, Nolita, and Little Italy</div>
+        <p style="font-size:14px;margin:0 0 6px;">Choose L'Industrie Little Italy, Rubirosa, or Scarr's. These restaurants work well with shopping, Chinatown, the Tenement Museum, Ferrara Bakery, and the New Museum. Full food day planning for this area: <a href="nyc-food-day-without-reservations.html">How to Build a NYC Food Day Without Reservations &rarr;</a></p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Lower East Side and East Village</div>
+        <p style="font-size:14px;margin:0;">Choose Scarr's, Una Pizza Napoletana, or Artichoke. Scarr's is the most flexible. Una requires advance planning. Artichoke is the late-night option.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Upper West Side and Central Park</div>
+        <p style="font-size:14px;margin:0;">Choose Mama's TOO! for creative squares or Koronet for a giant late-night slice. Mama's TOO! is better for flavor and unusual toppings. Koronet is better when size and convenience matter most.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Williamsburg</div>
+        <p style="font-size:14px;margin:0;">Choose Best Pizza, Fini, or L'Industrie. These restaurants can be combined into a neighborhood food outing, but two stops are generally enough.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Bushwick</div>
+        <p style="font-size:14px;margin:0;">Choose Ops for a sit-down pizza-and-wine meal. Do not treat Bushwick as a quick extension of a Williamsburg crawl. It requires its own evening.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">DUMBO and Brooklyn Heights</div>
+        <p style="font-size:14px;margin:0;">Choose L&amp;B Spumoni Gardens DUMBO. It is the most practical pizza choice after the Brooklyn Bridge or during a Brooklyn waterfront day. For the full Brooklyn day plan: <a href="one-day-in-brooklyn.html">One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond &rarr;</a></p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Midwood</div>
+        <p style="font-size:14px;margin:0;">Choose Di Fara only if the pizza pilgrimage itself is important to you.</p>
+      </div>
+      <div class="nbhd-block">
+        <div class="nb-title">Jersey City</div>
+        <p style="font-size:14px;margin:0;">Choose Razza if you are willing to cross the Hudson for a destination meal.</p>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="itineraries">Practical Pizza Itineraries</h2>
+      <div class="itin-card">
+        <div class="itin-head">A Classic Manhattan Pizza Day</div>
+        <div class="itin-body">
+          <div class="itin-step"><div class="is-n">1</div><div>Begin with Joe's Carmine Street and order one plain slice</div></div>
+          <div class="itin-step"><div class="is-n">2</div><div>Walk through Greenwich Village and Washington Square Park</div></div>
+          <div class="itin-step"><div class="is-n">3</div><div>Have dinner at John's of Bleecker Street or Song' E Napule</div></div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">This is a realistic route because the restaurants are in the same broad downtown area. Do not order full pies at every stop.</p>
+        </div>
+      </div>
+      <div class="itin-card">
+        <div class="itin-head">A Lower Manhattan Pizza Route</div>
+        <div class="itin-body">
+          <div class="itin-step"><div class="is-n">1</div><div>Start at L'Industrie Little Italy and order one burrata or fig-bacon slice</div></div>
+          <div class="itin-step"><div class="is-n">2</div><div>Continue through Little Italy, Nolita, and Chinatown</div></div>
+          <div class="itin-step"><div class="is-n">3</div><div>Choose Rubirosa for a reserved sit-down dinner, or Scarr's for another slice</div></div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">This route works best over several hours. L'Industrie and Scarr's are counter-service stops; Rubirosa is the planned meal.</p>
+        </div>
+      </div>
+      <div class="itin-card">
+        <div class="itin-head">A Brooklyn Bridge and DUMBO Plan</div>
+        <div class="itin-body">
+          <div class="itin-step"><div class="is-n">1</div><div>Visit the Brooklyn Bridge and Brooklyn Bridge Park</div></div>
+          <div class="itin-step"><div class="is-n">2</div><div>Eat the classic square at L&amp;B Spumoni Gardens DUMBO</div></div>
+          <div class="itin-step"><div class="is-n">3</div><div>Finish with spumoni</div></div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">Treat Grimaldi's or Juliana's as optional only if the line is short. L&amp;B is enough for this itinerary. Adding several full pies turns a sightseeing day into a waiting-and-eating marathon.</p>
+        </div>
+      </div>
+      <div class="itin-card">
+        <div class="itin-head">A Williamsburg Pizza Afternoon</div>
+        <div class="itin-body">
+          <div class="itin-step"><div class="is-n">1</div><div>Start at Fini for the white slice or long hot shallot</div></div>
+          <div class="itin-step"><div class="is-n">2</div><div>Continue to Best Pizza for a classic cheese or pepperoni slice</div></div>
+          <div class="itin-step"><div class="is-n">3</div><div>Finish at L'Industrie if the line is manageable</div></div>
+          <p style="font-size:13px;color:var(--text-secondary);margin:8px 0 0;">Order one slice at each stop and share when possible. The point is to compare styles, not eat three full meals.</p>
+        </div>
+      </div>
+      <div class="itin-card">
+        <div class="itin-head">A Planned Neapolitan Dinner</div>
+        <div class="itin-body">
+          <p style="font-size:14px;margin:0 0 8px;">Choose either Song' E Napule or Una Pizza Napoletana. Song' E Napule is easier to combine with Greenwich Village sightseeing and has broader restaurant service. Una is more specialized and operates only Thursday&ndash;Saturday, so reserve it before arranging the rest of your evening.</p>
+        </div>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="itin-card" style="margin:0;"><div class="itin-head">A Family-Friendly Plan</div><div class="itin-body"><p style="font-size:14px;margin:0;">Choose L&amp;B DUMBO, Rubirosa, Song' E Napule, or John's. These options provide seating and are easier for groups than standing-only slice shops. Mama's TOO!, L'Industrie, and Scarr's can still work with families, but limited seating makes them less comfortable. For full family itinerary planning: <a href="nyc-with-kids.html">NYC With Kids: The Realistic Family Guide &rarr;</a></p></div></div>
+        <div class="itin-card" style="margin:0;"><div class="itin-head">A Late-Night Plan</div><div class="itin-body"><div class="itin-step"><div class="is-n">1</div><div>Joe's for a classic late-night slice</div></div><div class="itin-step"><div class="is-n">2</div><div>Artichoke for a rich specialty slice</div></div><div class="itin-step"><div class="is-n">3</div><div>Koronet for the largest possible portion</div></div><p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;">Check the exact branch hours before leaving, especially late at night.</p></div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="famous-not-for-everyone">Famous Pizza Places That Are Not Right for Everyone</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local"><div class="callout-title">Prince Street Pizza</div><p style="font-size:13.5px;">The spicy pepperoni square remains a distinctive order, but it is not worth crossing the city for if the line is long. Go when you are already in Nolita and the wait is short.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Lucali</div><p style="font-size:13.5px;">A full-evening commitment. The no-reservation system, cash-only policy, and potential multi-hour wait make it unsuitable for many tourists.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Di Fara</div><p style="font-size:13.5px;">Makes sense for a dedicated pizza-history trip, not for a casual addition to a Manhattan sightseeing day. Current experiences are too divided to treat it as an automatic must-visit.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Joe's Times Square</div><p style="font-size:13.5px;">Convenient and recognizable, but the Carmine Street location is the better choice when you can reach Greenwich Village.</p></div>
+        <div class="callout callout-local" style="grid-column:1/-1;"><div class="callout-title">Grimaldi's and Juliana's (DUMBO)</div><p style="font-size:14px;">Both are useful to know about in DUMBO, but their famous coal-oven pies can involve long waits. L&amp;B gives you a different Brooklyn style in the same sightseeing area and is usually the more efficient plan.</p></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="tips">Practical NYC Pizza Tips</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">At a slice shop, begin with one plain slice before ordering several specialty slices</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">A thin slice is usually a light meal; two slices may be more appropriate for a hungry visitor</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">Mama's TOO! squares are filling &mdash; avoid over-ordering</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">Koronet's jumbo slice is roughly equivalent to two ordinary slices</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">John's, Song' E Napule, Una, Lucali, Ops, Razza, and Rubirosa are whole-pie or sit-down experiences, not quick slice stops</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">L'Industrie, Joe's, Scarr's, Best Pizza, Fini, Artichoke, and Koronet are better suited to quick stops</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">Bring cash for Lucali</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">Scarr's accepts cards but adds a 3% card surcharge</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">Reserve Rubirosa, Song' E Napule, Una, Ops, and Razza when possible</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">Do not assume that a line outside a slice shop represents the total wait &mdash; some counters move quickly</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);">Visit busy slice shops earlier in the day or on weekday afternoons when possible</div>
+        <div style="padding:6px 14px;font-size:13.5px;border-bottom:1px solid rgba(15,23,42,.06);background:rgba(15,23,42,.025);">Check hours and menus on the day of your visit. Several restaurants have multiple locations with different operating details.</div>
+        <div style="padding:6px 14px;font-size:13.5px;">Do not plan a pizza crawl around five restaurants. Two substantial stops, or three small slices, is usually enough for one outing.</div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item"><summary>What is the best pizza in NYC for first-time visitors?<span class="chev">&#9662;</span></summary><div class="faq-a">Start with Joe's for a classic slice. Add John's if you want a historic whole pie or L'Industrie if you prefer creative toppings.</div></details>
+        <details class="faq-item"><summary>Where can tourists find the best New York slice?<span class="chev">&#9662;</span></summary><div class="faq-a">Joe's, Scarr's, Best Pizza, and NY Pizza Suprema are the most useful choices. Joe's is the clearest introduction to the classic foldable slice.</div></details>
+        <details class="faq-item"><summary>What is the best pizza near Times Square?<span class="chev">&#9662;</span></summary><div class="faq-a">Joe's Pizza at 1435 Broadway is the most convenient classic-slice option. NY Pizza Suprema is more useful around Penn Station and Madison Square Garden.</div></details>
+        <details class="faq-item"><summary>Is it worth traveling to Brooklyn for pizza?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, if you are already visiting DUMBO or Williamsburg. L&amp;B DUMBO, Best Pizza, Fini, and L'Industrie can fit naturally into Brooklyn sightseeing. Di Fara and Lucali require more commitment.</div></details>
+        <details class="faq-item"><summary>Which NYC pizzerias serve slices?<span class="chev">&#9662;</span></summary><div class="faq-a">Joe's, L'Industrie, Mama's TOO!, Scarr's, L&amp;B Spumoni Gardens, Best Pizza, Fini, Di Fara, Artichoke, Koronet, and NY Pizza Suprema serve slices.</div></details>
+        <details class="faq-item"><summary>Which places require reservations?<span class="chev">&#9662;</span></summary><div class="faq-a">Reservations are especially useful or necessary at Rubirosa, Song' E Napule, Una Pizza Napoletana, Ops, and Razza. Lucali does not take reservations and uses a waitlist.</div></details>
+        <details class="faq-item"><summary>What is the best pizza for families?<span class="chev">&#9662;</span></summary><div class="faq-a">Choose L&amp;B DUMBO, Rubirosa, Song' E Napule, John's, or Razza because they offer seated meals. Standing-only shops are less comfortable for families with children.</div></details>
+        <details class="faq-item"><summary>What is the best late-night pizza in NYC?<span class="chev">&#9662;</span></summary><div class="faq-a">Joe's is best for a classic late-night slice. Artichoke is best for a rich specialty slice, while Koronet is best for an enormous portion.</div></details>
+        <details class="faq-item"><summary>How much does NYC pizza cost?<span class="chev">&#9662;</span></summary><div class="faq-a">A standard slice generally costs about $4&ndash;$8. Specialty slices can cost up to approximately $10. Whole pies range from roughly $20 to $50, depending on the restaurant and toppings.</div></details>
+        <details class="faq-item"><summary>Which famous pizza places are overrated or inconvenient?<span class="chev">&#9662;</span></summary><div class="faq-a">Prince Street is conditional when the line is long. Lucali is difficult because of its wait and cash-only policy. Di Fara is far from the main tourist areas and has mixed current experiences.</div></details>
+        <details class="faq-item"><summary>Where should I go if I only have time for one pizza stop?<span class="chev">&#9662;</span></summary><div class="faq-a">Choose the restaurant nearest your itinerary. Joe's is the best all-purpose answer, L&amp;B DUMBO is best near the Brooklyn Bridge, Mama's TOO! is best near Central Park and the Upper West Side, and NY Pizza Suprema is best near Penn Station.</div></details>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="final">Final Recommendation</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Classic slice</div><div>Choose <strong>Joe's</strong> for the classic New York experience</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Modern slice</div><div>Choose <strong>L'Industrie</strong> for burrata, fig jam, or other specialty toppings</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Sit-down pie</div><div>Choose <strong>John's</strong> or <strong>Rubirosa</strong> for a sit-down Manhattan pizza meal</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Neapolitan</div><div>Choose <strong>Song' E Napule</strong> or <strong>Una Pizza Napoletana</strong> for Neapolitan pizza</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Brooklyn Bridge</div><div>Choose <strong>L&amp;B Spumoni Gardens DUMBO</strong> while visiting the Brooklyn Bridge</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:10px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Williamsburg</div><div>Choose <strong>Best Pizza</strong> or <strong>Fini</strong> during a Williamsburg day</div></div>
+        <div style="padding:8px 14px;font-size:14px;display:flex;gap:10px;"><div style="font-family:var(--font-head);font-weight:800;min-width:90px;color:var(--accent);font-size:13px;">Pilgrimage</div><div>Choose <strong>Lucali, Di Fara, or Razza</strong> only when the destination meal is itself part of your travel plan</div></div>
+      </div>
+      <div class="callout callout-summary"><div class="callout-title">The best pizza in NYC for tourists is rarely the restaurant with the longest line</div><p style="font-size:14px;">It is the place that serves the style you want, fits your route, and leaves enough time to enjoy the rest of New York.</p></div>
+      <p>For building a full food day around these stops: <a href="nyc-food-day-without-reservations.html">How to Build a NYC Food Day Without Reservations &rarr;</a> &bull; <a href="nyc-sit-down-itinerary.html">The NYC "Sit Down" Itinerary: Built-In Rest Stops &rarr;</a> &bull; <a href="saving-money-on-nyc-trip.html">How to Save Money on Your NYC Trip &rarr;</a></p>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-food-day-without-reservations.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Build a NYC Food Day Without Reservations</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="one-day-in-brooklyn.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Brooklyn: DUMBO, Brooklyn Bridge &amp; Beyond</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+      <li><a href="nyc-with-kids.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC With Kids: The Realistic Family Guide</a></li>
+      <li><a href="nyc-sit-down-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The NYC "Sit Down" Itinerary: A Full Day With Built-In Rest Stops</a></li>
+      <li><a href="nyc-itinerary-afternoon-breaks.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Itinerary for People Who Need Afternoon Breaks</a></li>
+      <li><a href="best-places-to-rest-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Places to Sit Down and Rest Near Major NYC Attractions</a></li>
+      <li><a href="one-day-in-chelsea-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>One Day in Chelsea NYC: High Line, Chelsea Market &amp; More</a></li>
+      <li><a href="best-nyc-museums.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Which NYC Museum Should You Visit?</a></li>
+      <li><a href="best-nyc-ferry-routes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Ferry Routes for Tourists, Ranked</a></li>
+      <li><a href="saving-money-on-nyc-trip.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Save Money on Your NYC Trip</a></li>
+      <li><a href="rainy-day-activities-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Rainy-Day Attractions in NYC</a></li>
+      <li><a href="jfk-to-manhattan.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Get from JFK to Manhattan</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your NYC Pizza Day</h3>
+    <p class="sub">Honest guides to eating well in New York City &mdash; matched to your itinerary, neighborhood, and group.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">Hundreds of hand-picked spots including every pizzeria in this guide, pinned alongside nearby attractions and rest stops</div></a>
+      <a class="footer-card" href="nyc-food-day-without-reservations.html"><div class="fc-title">NYC Food Day Without Reservations</div><div class="fc-sub">How to build a walk-in food day around the best neighborhoods &mdash; with timing, backup plans, and food hall guides</div></a>
+      <a class="footer-card" href="nyc-5-day-itinerary.html"><div class="fc-title">5-Day NYC Itinerary</div><div class="fc-sub">Day-by-day sightseeing itinerary with natural pizza stop pairings by neighborhood</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
