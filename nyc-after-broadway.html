@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to Do in NYC After Broadway: Food, Subway, Taxi &amp; Late-Night Options | EverythingInNYC</title>
+<meta name="description" content="Leaving a Broadway show late? Find realistic food, subway, taxi and rideshare options, plus backup plans for families, hotels and late-night travel in NYC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Restaurant cards */
+.rest-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:14px 0;}
+.rc-head{padding:10px 16px;background:var(--navy);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.rc-name{font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff;flex:none;}
+.rc-hood{font-size:12px;color:rgba(255,255,255,.6);flex:1;}
+.rc-tag{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 9px;white-space:nowrap;flex:none;}
+.rc-body{padding:0 16px 12px;}
+.rc-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-bottom:1px solid rgba(15,23,42,.08);margin-bottom:10px;}
+@media(max-width:600px){.rc-meta{grid-template-columns:1fr;}}
+.rm-row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid rgba(15,23,42,.05);font-size:13.5px;}
+.rm-row:last-child{border-bottom:none;}
+.rm-label{font-family:var(--font-head);font-weight:800;font-size:11px;color:var(--text-secondary);min-width:72px;flex:none;padding-top:2px;text-transform:uppercase;letter-spacing:.04em;}
+.rm-val{color:var(--navy);font-size:13.5px;flex:1;}
+.rc-desc p{font-size:14px;line-height:1.65;margin:0 0 8px;}
+.rc-catch{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:7px 12px;border-radius:0 8px 8px 0;font-size:13px;margin:8px 0;}
+.rc-catch strong{color:var(--navy);}
+.rc-backup{background:rgba(15,23,42,.04);border-left:3px solid rgba(15,23,42,.15);padding:6px 12px;border-radius:0 8px 8px 0;font-size:13px;color:var(--text-secondary);margin:6px 0;}
+.rc-backup strong{color:var(--navy);}
+.rc-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.rc-links a{font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;transition:all .15s;}
+.rc-links a:hover{background:var(--navy);color:#fff;}
+/* Checklist */
+.check-list{list-style:none;padding:0;margin:6px 0;}
+.check-list li{display:flex;gap:10px;padding:7px 12px;border-bottom:1px solid var(--border);font-size:14px;align-items:flex-start;}
+.check-list li:last-child{border-bottom:none;}
+.check-list li:nth-child(even){background:rgba(15,23,42,.025);}
+.cl-n{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);min-width:22px;flex:none;padding-top:1px;}
+/* Timing grid */
+.timing-row{display:flex;gap:0;border-bottom:1px solid rgba(15,23,42,.07);font-size:13.5px;}
+.timing-row:last-child{border-bottom:none;}
+.timing-row:nth-child(even){background:rgba(15,23,42,.025);}
+.tr-time{font-family:var(--font-head);font-weight:800;font-size:12px;color:var(--accent);min-width:150px;flex:none;padding:8px 12px 8px 0;line-height:1.4;}
+.tr-exit{min-width:140px;flex:none;padding:8px 12px;color:var(--text-secondary);font-size:13px;}
+.tr-what{flex:1;padding:8px 0;line-height:1.55;}
+/* Walk-in list */
+.walkin-item{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;}
+.walkin-item:last-child{border-bottom:none;}
+.wi-label{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--navy);min-width:130px;flex:none;}
+/* Late-night block */
+.late-block{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;}
+.lb-row{display:flex;gap:10px;padding:7px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;}
+.lb-row:last-child{border-bottom:none;}
+.lb-row:nth-child(even){background:rgba(15,23,42,.025);}
+.lb-time{font-family:var(--font-head);font-weight:800;font-size:11.5px;color:var(--accent);min-width:130px;flex:none;padding-top:2px;}
+/* Bucket CTA */
+.bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
+.bc-icon{font-size:26px;flex:none;line-height:1;color:var(--accent);}
+.bc-body{flex:1;}
+.bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+.bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
+.bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
+.bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
+.bc-btn:hover{opacity:.88;}
+/* Area summary pills */
+.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0;}
+@media(max-width:600px){.summary-grid{grid-template-columns:1fr;}}
+.sg-item{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:9px 12px;}
+.sg-label{font-family:var(--font-head);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:4px;}
+.sg-val{font-size:13.5px;color:var(--navy);line-height:1.5;}
+/* Traveler type cards */
+.type-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:10px 0;}
+@media(max-width:640px){.type-grid{grid-template-columns:1fr;}}
+.type-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.tc-head{padding:7px 12px;background:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);}
+.tc-body{padding:8px 12px;}
+.tc-row{display:flex;gap:8px;font-size:13px;padding:3px 0;border-bottom:1px solid rgba(15,23,42,.06);}
+.tc-row:last-child{border-bottom:none;}
+.tc-lbl{font-family:var(--font-head);font-weight:800;font-size:11px;color:var(--text-secondary);min-width:80px;flex:none;padding-top:2px;text-transform:uppercase;letter-spacing:.03em;}
+.tc-val{flex:1;color:var(--navy);line-height:1.5;}
+/* Itinerary blocks */
+.itin-block{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:10px 0;}
+.ib-head{padding:8px 14px;background:var(--navy);display:flex;align-items:center;gap:10px;}
+.ib-num{font-family:var(--font-head);font-weight:800;font-size:13px;background:var(--accent);color:var(--navy);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex:none;}
+.ib-title{font-family:var(--font-head);font-weight:800;font-size:14px;color:#fff;flex:1;}
+.ib-timing{font-size:11.5px;color:rgba(255,255,255,.6);flex:none;}
+.ib-body{padding:8px 14px;background:var(--bg-card);}
+.ib-row{display:flex;gap:8px;font-size:13.5px;padding:4px 0;border-bottom:1px solid rgba(15,23,42,.06);}
+.ib-row:last-child{border-bottom:none;}
+.ib-lbl{font-family:var(--font-head);font-weight:800;font-size:11px;color:var(--text-secondary);min-width:90px;flex:none;padding-top:3px;text-transform:uppercase;letter-spacing:.03em;}
+.ib-val{flex:1;color:var(--navy);line-height:1.55;}
+/* Photo credit */
+.img-credit{font-size:11.5px;color:var(--text-secondary);margin-top:3px;text-align:right;}
+/* Mistake list */
+.mistake-item{display:flex;gap:10px;padding:7px 14px;border-bottom:1px solid var(--border);font-size:14px;}
+.mistake-item:last-child{border-bottom:none;}
+.mistake-item:nth-child(even){background:rgba(15,23,42,.025);}
+.mi-n{font-family:var(--font-head);font-weight:800;font-size:16px;color:rgba(15,23,42,.18);min-width:24px;flex:none;line-height:1.5;}
+/* Inline warn */
+.warn-note{background:rgba(255,193,7,.07);border-left:3px solid var(--accent);padding:8px 14px;border-radius:0 9px 9px 0;font-size:14px;margin:10px 0;}
+.warn-note strong{color:var(--navy);}
+[id]{scroll-margin-top:40px;}
+.img-wrap{margin:14px 0;}
+.img-wrap img{border-radius:12px;width:100%;display:block;}
+</style>
+</head>
+<body>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Trip Planning</span>
+      <h1>What to Do in NYC After Broadway: Food, Subway, Taxi, and Late-Night Options</h1>
+      <div class="article-meta"><span>A realistic plan for eating, getting home, handling subway changes, finding a taxi, and avoiding the post-Broadway scramble &mdash; matched to your exit time, hotel, and group</span></div>
+    </div>
+    <img class="article-hero-img" src="nyc-after-broadway-cover.jpg" alt="Visitors leaving a Broadway theater at night in New York City">
+    <div class="article-body">
+      <p>You have just walked out of a Broadway theater. It is 10:15 p.m., Times Square is crowded, someone in your group is hungry, and everyone wants a different answer: dinner, hotel, subway, taxi, or one quick drink before bed.</p>
+      <p>The best choice depends on details that are easy to overlook: the show's actual ending time, the theater's location, your hotel, the weather, the age and energy of your group, the restaurant's kitchen hours, and whether the subway route home is direct tonight.</p>
+      <p>The practical answer is simple: choose one realistic food plan, one backup, and one sensible route home before the curtain falls. That small amount of planning keeps the rest of the night from becoming an expensive walk around Times Square. For visitors who arrive with luggage or are still choosing a hotel neighborhood: <a href="nyc-before-hotel-check-in.html">What to Do in NYC Before Hotel Check-In &rarr;</a></p>
+      <div class="bucket-cta">
+        <div class="bc-icon">&#128205;</div>
+        <div class="bc-body">
+          <div class="bc-label">Essential NYC Resource</div>
+          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
+          <div class="bc-desc">A personal Google Map with hundreds of hand-picked places across all of New York City &mdash; restaurants, food spots, neighborhoods, and local favorites pinned and ready to open in Google Maps. Use it before the show to find what's closest to your theater, your hotel, and the subway entrance you'll actually use.</div>
+          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="quick-answer">The Quick Answer: What to Do After Broadway</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12px;">
+          <tr><th>Situation</th><th>Best Choice</th><th>Why</th><th>Main Catch</th></tr>
+          <tr><td>You want a proper sit-down meal</td><td>Reserve on Restaurant Row or a nearby theater-district restaurant</td><td>You stay close to the theater and avoid a second long journey</td><td>A reservation does not always mean the kitchen will serve late; check the last seating or kitchen cutoff</td></tr>
+          <tr><td>You want food quickly</td><td>Empanada Mama, Joe's Pizza, or Los Tacos No. 1</td><td>Counter service is usually more realistic after a late curtain</td><td>Lines and limited seating are still possible</td></tr>
+          <tr><td>You have children</td><td>Carmine's if reserved; Junior's or a quick-service backup if not</td><td>Familiar food, large portions, and a short walk</td><td>Carmine's can be loud and busy; a formal dinner may be too much for tired children</td></tr>
+          <tr><td>You are exhausted</td><td>Go directly to the hotel and eat nearby or order takeout</td><td>The least stressful plan is often the one with no extra neighborhood change</td><td>You may give up the "perfect" dinner for a much better night</td></tr>
+          <tr><td>You are staying near Times Square</td><td>Walk to the hotel after food</td><td>Avoids car congestion and a subway decision</td><td>Side streets can still be crowded immediately after curtain time</td></tr>
+          <tr><td>You are staying downtown</td><td>Use a direct subway line if available, or take a yellow taxi</td><td>Downtown routes are often simple from Times Square</td><td>A small hotel-location difference can change the best line</td></tr>
+          <tr><td>You are staying on the Upper West Side</td><td>Take the 1/2/3 or another direct uptown route after checking service</td><td>A direct train is usually easier than a transfer</td><td>Use the exact hotel address in the MTA app; "Upper West Side" covers a large area</td></tr>
+          <tr><td>You are staying in Brooklyn or Queens</td><td>Take a direct trunk line when possible; use a taxi if transfers multiply</td><td>A direct ride avoids late-night navigation</td><td>A route that looks short on the map may require an awkward transfer</td></tr>
+          <tr><td>The show ends after 11 p.m.</td><td>Switch to a late counter-service plan</td><td>Full-service kitchens may be closed or taking their last tables</td><td>Posted restaurant closing hours may not equal kitchen hours</td></tr>
+          <tr><td>You have no reservation</td><td>Try counter service first, then one nearby walk-in restaurant</td><td>You are not gambling the entire evening on one dining room</td><td>"Walk-ins welcome" never means a table is guaranteed</td></tr>
+          <tr><td>It is raining or freezing</td><td>Stay close to the theater or use a taxi after walking to a practical curb</td><td>Reduces the miserable exposed walk and waiting time</td><td>Ride demand and traffic may be worse than usual</td></tr>
+          <tr><td>The subway has a service change</td><td>Check the MTA app, then choose a simple alternate line, bus, or taxi</td><td>You avoid a complicated transfer when tired</td><td>The closest entrance may be closed even when the station is open</td></tr>
+          <tr><td>You need to catch a late train</td><td>Eat something quick and leave a generous margin</td><td>A missed train is more expensive than a less ambitious dinner</td><td>Do not book a restaurant across Manhattan</td></tr>
+          <tr><td>You are heading to the airport</td><td>Use a preplanned route or car service and eat near the theater or airport route</td><td>Luggage and a fixed departure matter more than atmosphere</td><td>Allow for traffic, security, and elevator problems</td></tr>
+          <tr><td>You have luggage</td><td>Store it before the show or go directly to your hotel</td><td>Broadway theaters generally do not hold luggage</td><td>A large bag can make stairs, crowded platforms, and taxis much harder</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="area-summary">What Works Best by Situation</h2>
+      <div class="summary-grid">
+        <div class="sg-item"><div class="sg-label">Best sit-down area</div><div class="sg-val">Restaurant Row, especially with a reservation. Hell's Kitchen is a better bet when you want to escape Times Square and stay within walking distance.</div></div>
+        <div class="sg-item"><div class="sg-label">Best late-night casual</div><div class="sg-val">Hell's Kitchen and the late counter-service spots around the theater district.</div></div>
+        <div class="sg-item"><div class="sg-label">Best for families</div><div class="sg-val">A reserved table at Carmine's or an uncomplicated meal at Junior's, with a quick-service backup already chosen.</div></div>
+        <div class="sg-item"><div class="sg-label">Best quick bite</div><div class="sg-val">Empanada Mama, Joe's Pizza, or Los Tacos No. 1, depending on the line and your group's preferences.</div></div>
+        <div class="sg-item"><div class="sg-label">Best transport (most visitors)</div><div class="sg-val">Walking for nearby hotels; otherwise a direct subway ride with no unnecessary transfer.</div></div>
+        <div class="sg-item"><div class="sg-label">Best transport when tired</div><div class="sg-val">A yellow taxi &mdash; especially for older travelers, children, luggage, bad weather, or a hotel that is awkward to reach by subway.</div></div>
+      </div>
+      <div class="warn-note">For adding a short activity near Times Square before or after dinner: <a href="best-things-near-times-square.html">25 Best Things to Do Near Times Square &rarr;</a></div>
+      <hr class="divider-rule">
+      <h2 id="decide-before">Decide Before the Curtain Falls</h2>
+      <p>Do this before the show begins:</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <ul class="check-list">
+          <li><div class="cl-n">1</div><div>Check the production's approximate running time using a current <a href="https://www.broadway.com/broadway-guide/54/broadway-run-times/" target="_blank" rel="noopener">Broadway run-time guide</a></div></li>
+          <li><div class="cl-n">2</div><div>Add time for the intermission, curtain call, and the crowd leaving the building</div></li>
+          <li><div class="cl-n">3</div><div>Pick one restaurant area rather than searching all of Manhattan</div></li>
+          <li><div class="cl-n">4</div><div>Save one restaurant and one backup in your phone</div></li>
+          <li><div class="cl-n">5</div><div>Check the posted dining hours and whether a kitchen cutoff or last seating is listed</div></li>
+          <li><div class="cl-n">6</div><div>Look at the route from the theater to the hotel, not just the route from Times Square generally</div></li>
+          <li><div class="cl-n">7</div><div>Decide whether walking, subway, taxi, or rideshare makes sense for your group</div></li>
+          <li><div class="cl-n">8</div><div>Leave room to abandon dinner if the show starts late or runs long</div></li>
+        </ul>
+      </div>
+      <p>The mistake is waiting until everyone reaches the sidewalk to begin researching. Hundreds of people leave theaters at roughly the same time, restaurant tables disappear quickly, and a search result showing "open until midnight" may only describe the bar or the dining room &mdash; not the kitchen.</p>
+      <div class="warn-note"><strong>Luggage:</strong> If you are carrying luggage, resolve that before the show. Broadway theaters generally allow only smaller bags that fit under a seat. See <a href="broadway.com/faq/4/broadway-theater-info/77/are-large-bags-or-luggage-allowed-in-the-theater/" target="_blank" rel="noopener">Broadway's large-bag and luggage guidance</a>. For a full luggage-storage plan: <a href="nyc-before-hotel-check-in.html">Where to Store Luggage in NYC Before Hotel Check-In &rarr;</a><br>Check Broadway's full <a href="https://www.broadway.com/faq/8/accessibility-special-needs/" target="_blank" rel="noopener">accessibility FAQ</a> and <a href="https://www.broadway.com/faq/5/broadway-location-travel/" target="_blank" rel="noopener">visitor FAQ</a> before the show.</div>
+      <hr class="divider-rule">
+      <h2 id="exit-timing">How Late Will You Actually Be Out?</h2>
+      <div class="img-wrap">
+        <img src="broadway-theater-district-at-night.jpg" alt="Broadway and the Theater District glowing at night in New York City" loading="lazy">
+      </div>
+      <p>Broadway running times vary widely. Many musicals run about two and a half hours including an intermission, while some plays and shorter productions are much shorter. The exact exit still depends on a late start, intermission length, curtain-call timing, and theater procedures.</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="timing-row" style="background:rgba(15,23,42,.04);font-weight:700;font-size:11.5px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.05em;">
+          <div class="tr-time" style="padding-top:6px;padding-bottom:6px;">Show / Format</div>
+          <div class="tr-exit" style="padding-top:6px;padding-bottom:6px;">Likely Exit</div>
+          <div class="tr-what" style="padding-top:6px;padding-bottom:6px;">What Is Realistic Afterward</div>
+        </div>
+        <div class="timing-row"><div class="tr-time">7:00 PM evening show</div><div class="tr-exit">~9:25&ndash;9:55 PM</div><div class="tr-what">A reserved dinner is possible; counter service is easier if you want to eat immediately</div></div>
+        <div class="timing-row"><div class="tr-time">7:30 PM evening show</div><div class="tr-exit">~9:55&ndash;10:25 PM</div><div class="tr-what">Restaurant Row and Hell's Kitchen can work, but late kitchen hours begin to matter</div></div>
+        <div class="timing-row"><div class="tr-time">8:00 PM evening show</div><div class="tr-exit">~10:25&ndash;10:55 PM</div><div class="tr-what">Treat a full-service dinner as a reservation-only plan; keep a quick backup</div></div>
+        <div class="timing-row"><div class="tr-time">Sunday evening show</div><div class="tr-exit">Similar runtime</div><div class="tr-what">Reduced Monday-adjacent hours make your backup more important</div></div>
+        <div class="timing-row"><div class="tr-time">Monday or Tuesday show</div><div class="tr-exit">Similar runtime</div><div class="tr-what">Some restaurants close earlier or do not open; verify the day specifically</div></div>
+        <div class="timing-row"><div class="tr-time">Matinee</div><div class="tr-exit">Mid-afternoon to early evening</div><div class="tr-what">Dinner is much easier; you can choose the neighborhood rather than the closing time</div></div>
+        <div class="timing-row"><div class="tr-time">Longer musical</div><div class="tr-exit">Add ~10&ndash;25 extra minutes</div><div class="tr-what">A show that begins at 8 may not put you on the street until near 11</div></div>
+        <div class="timing-row"><div class="tr-time">Shorter play or no-intermission</div><div class="tr-exit">Often 80&ndash;110 minutes</div><div class="tr-what">You have more flexibility, but do not assume every play ends at the same time</div></div>
+        <div class="timing-row"><div class="tr-time">Show ending near midnight</div><div class="tr-exit">Midnight or later</div><div class="tr-what">Use late counter service, takeout, or go directly home; avoid a cross-town dinner mission</div></div>
+      </div>
+      <div class="warn-note"><strong>A useful rule of thumb:</strong> If your dinner reservation is less than 30 minutes after the show's advertised end, it is fragile. If it is less than 15 minutes after the expected end, it is usually a bad idea unless the restaurant is inside or directly beside the theater and has a forgiving late-seating policy.</div>
+    </div>
+  </article>    <div class="article-body">
+      <hr class="divider-rule">
+      <h2 id="where-to-eat">Where to Eat After Broadway</h2>
+      <p>The right restaurant is the one that matches your actual exit time, not the one with the most exciting menu.</p>
+      <h3 id="sit-down">Best Sit-Down Dinners</h3>
+      <div class="rest-card" id="joe-allen">
+        <div class="rc-head"><span class="rc-tag">Best Restaurant Row Choice</span><span class="rc-name">Joe Allen</span><span class="rc-hood">326 W 46th St &bull; Restaurant Row</span></div>
+        <div class="rc-body">
+          <div class="rc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="rm-row"><div class="rm-label">Area</div><div class="rm-val">Restaurant Row, between Eighth and Ninth avenues</div></div>
+              <div class="rm-row"><div class="rm-label">Walk</div><div class="rm-val">About 2&ndash;6 minutes from the central 44th&ndash;46th St theater cluster; longer from the Gershwin or far-west theaters</div></div>
+              <div class="rm-row"><div class="rm-label">Cuisine</div><div class="rm-val">Traditional American theater-district cooking in a classic pre- and post-theater setting</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="rm-row"><div class="rm-label">Hours</div><div class="rm-val">Closed Monday; Tue 4:30&ndash;11:30 PM; Wed 11:30 AM&ndash;11:30 PM; Thu&ndash;Fri noon&ndash;11:30 PM; Sat 11:30 AM&ndash;11:30 PM; Sun 11:30 AM&ndash;10:30 PM</div></div>
+              <div class="rm-row"><div class="rm-label">Reservations</div><div class="rm-val">Open one week in advance; call for parties larger than 5 (max party of 10)</div></div>
+              <div class="rm-row"><div class="rm-label">Best arrival</div><div class="rm-val">Around 5:00&ndash;6:00 PM before a show, or promptly after an earlier evening performance</div></div>
+            </div>
+          </div>
+          <div class="rc-desc"><p><strong>Best for:</strong> Couples, theater fans, and adults who want the atmosphere of Restaurant Row without traveling away from Midtown.</p><p><strong>Skip if:</strong> You are leaving a long show after 10:45 PM, have no reservation, or need a guaranteed fast meal.</p></div>
+          <div class="rc-catch"><strong>The catch:</strong> The official hours describe operating hours but do not publish a separate kitchen cutoff or last seating. Confirm when booking. For a long 8:00 PM show, do not assume a table will still be serving when you exit.</div>
+          <div class="rc-backup"><strong>Backup:</strong> Empanada Mama in Hell's Kitchen or a nearby counter-service option.</div>
+          <div class="rc-links"><span style="font-size:12px;color:var(--text-secondary);">Closed Monday.</span><a href="https://joeallenrestaurant.com/hours-location/" target="_blank" rel="noopener">Joe Allen official page &rarr;</a></div>
+        </div>
+      </div>
+      <div class="rest-card" id="glass-house">
+        <div class="rc-head"><span class="rc-tag">Confirm Late Seating First</span><span class="rc-name">Glass House Tavern</span><span class="rc-hood">252 W 47th St &bull; Theater District</span></div>
+        <div class="rc-body">
+          <div class="rc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="rm-row"><div class="rm-label">Area</div><div class="rm-val">Theater District, close to Times Square</div></div>
+              <div class="rm-row"><div class="rm-label">Walk</div><div class="rm-val">About 3&ndash;6 minutes from many central theaters</div></div>
+              <div class="rm-row"><div class="rm-label">Cuisine</div><div class="rm-val">Contemporary American and theater-district dinner fare</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="rm-row"><div class="rm-label">Reservations</div><div class="rm-val">Reserve if you want a real table after the show; call if arriving after 10:30 PM</div></div>
+              <div class="rm-row"><div class="rm-label">Best for</div><div class="rm-val">A planned post-show dinner near the theater when you want a full-service room without leaving Midtown</div></div>
+            </div>
+          </div>
+          <div class="rc-desc"><p><strong>Skip if:</strong> You are relying on a same-night walk-in after a late show and cannot tolerate a failed plan.</p></div>
+          <div class="rc-catch"><strong>The catch:</strong> The restaurant's current official page displays conflicting late-closing information in different sections. Treat listed hours as a prompt to call, not as proof of a late kitchen or last seating.</div>
+          <div class="rc-backup"><strong>Backup:</strong> Junior's or Empanada Mama.</div>
+        </div>
+      </div>
+      <div class="img-wrap">
+        <img src="restaurant-row-after-broadway.jpg" alt="Restaurants along West 46th Street in New York's Restaurant Row" loading="lazy">
+        <div class="img-credit">Restaurant Row on West 46th Street. Photo: Roger Rowlett, Wikimedia Commons, CC BY-SA 2.5.</div>
+      </div>
+      <div class="rest-card" id="carmines">
+        <div class="rc-head"><span class="rc-tag">Best for Groups and Families</span><span class="rc-name">Carmine's Times Square</span><span class="rc-hood">200 W 44th St &bull; Times Square</span></div>
+        <div class="rc-body">
+          <div class="rc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="rm-row"><div class="rm-label">Walk</div><div class="rm-val">About 1&ndash;4 minutes from many theaters around 44th Street; two short blocks from Times Sq&ndash;42 St station</div></div>
+              <div class="rm-row"><div class="rm-label">Cuisine</div><div class="rm-val">Family-style Southern Italian food with large portions</div></div>
+              <div class="rm-row"><div class="rm-label">Hours</div><div class="rm-val">Generally late morning or midday through 11:00 PM; Fri&ndash;Sat to midnight. Mon&ndash;Thu hours vary; check current page for your date.</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="rm-row"><div class="rm-label">Reservations</div><div class="rm-val">Advised; walk-ins accepted but not guaranteed</div></div>
+              <div class="rm-row"><div class="rm-label">Best arrival</div><div class="rm-val">Before 9:30 PM for the least stressful dinner</div></div>
+              <div class="rm-row"><div class="rm-label">Best for</div><div class="rm-val">Families, groups, hungry teenagers, and people who prefer familiar food served family-style</div></div>
+            </div>
+          </div>
+          <div class="rc-desc"><p><strong>Skip if:</strong> You want a quiet, fast, small-portion meal or your group is already too tired to share a large dinner.</p></div>
+          <div class="rc-catch"><strong>The catch:</strong> It is large, busy, and lively. The portions are designed for sharing and the room is not the place to expect a hushed romantic meal.</div>
+          <div class="rc-backup"><strong>Backup:</strong> Junior's for a simpler meal or Empanada Mama for speed.</div>
+          <div class="rc-links"><a href="https://carminesnyc.com/locations/times-square" target="_blank" rel="noopener">Carmine's Times Square &rarr;</a><a href="https://carminesnyc.com/menus/times-square-wheat-gluten-allergy" target="_blank" rel="noopener">Wheat/gluten allergy menu &rarr;</a></div>
+        </div>
+      </div>
+      <div class="rest-card" id="becco">
+        <div class="rc-head"><span class="rc-tag">Pre-Show or Early Post-Show Only</span><span class="rc-name">Becco</span><span class="rc-hood">355 W 46th St &bull; Restaurant Row</span></div>
+        <div class="rc-body">
+          <div class="rc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="rm-row"><div class="rm-label">Walk</div><div class="rm-val">About 2&ndash;6 minutes from the central theater cluster</div></div>
+              <div class="rm-row"><div class="rm-label">Cuisine</div><div class="rm-val">Italian</div></div>
+              <div class="rm-row"><div class="rm-label">Hours</div><div class="rm-val">Closed Monday for dinner; Tue&ndash;Thu dinner to 10:00 PM; Fri&ndash;Sat to 11:00 PM; Sun to 9:00 PM (lunch on some days)</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="rm-row"><div class="rm-label">Best for</div><div class="rm-val">An early dinner before the theater or an early post-show meal after a short production</div></div>
+              <div class="rm-row"><div class="rm-label">Skip if</div><div class="rm-val">Your show ends near 10:30 PM or later</div></div>
+            </div>
+          </div>
+          <div class="rc-catch"><strong>The catch:</strong> The restaurant is close, but closeness does not overcome an early closing time. <strong>Closed Monday.</strong></div>
+          <div class="rc-backup"><strong>Backup:</strong> Joe Allen for an earlier arrival; late counter service for a later exit.</div>
+          <div class="rc-links"><a href="https://www.becco-nyc.com/location/becco/" target="_blank" rel="noopener">Becco official page &rarr;</a></div>
+        </div>
+      </div>
+      <div class="rest-card" id="marseille-5napkin">
+        <div class="rc-head"><span class="rc-tag">Useful Near Ninth Avenue</span><span class="rc-name">Marseille / 5 Napkin Burger</span><span class="rc-hood">630 Ninth Ave &bull; Hell's Kitchen</span></div>
+        <div class="rc-body">
+          <div class="rc-meta">
+            <div style="padding:8px 8px 0 0;">
+              <div class="rm-row"><div class="rm-label">Walk</div><div class="rm-val">About 8&ndash;15 minutes from the central theater cluster; more practical for the Gershwin, Circle in the Square, or other western theaters</div></div>
+              <div class="rm-row"><div class="rm-label">Marseille hours</div><div class="rm-val">Dinner to 10:00 PM Sun&ndash;Tue; to 11:00 PM Wed&ndash;Sat</div></div>
+              <div class="rm-row"><div class="rm-label">5 Napkin hours</div><div class="rm-val">Later on some Wed&ndash;Sat nights, but not after midnight</div></div>
+            </div>
+            <div style="padding:8px 0 0 8px;border-left:1px solid var(--border);">
+              <div class="rm-row"><div class="rm-label">Best for</div><div class="rm-val">A sit-down meal when your theater is already near Ninth Avenue or you can arrive before the kitchen winds down</div></div>
+              <div class="rm-row"><div class="rm-label">Skip if</div><div class="rm-val">The show ends after 10:45 PM and you have not confirmed the kitchen</div></div>
+            </div>
+          </div>
+          <div class="rc-catch"><strong>The catch:</strong> The walk is easy in good weather but feels longer in rain, freezing wind, or with tired children.</div>
+          <div class="rc-backup"><strong>Backup:</strong> Empanada Mama at 765 Ninth Avenue, which is open 24/7 according to its official business page.</div>
+          <div class="rc-links"><a href="https://www.marseillenyc.com/location/marseille/" target="_blank" rel="noopener">Marseille &rarr;</a><a href="https://www.5napkinburger.com/location/hell-s-kitchen-5napkinburger/" target="_blank" rel="noopener">5 Napkin Burger &rarr;</a></div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h3 id="walk-in">Best Walk-In Options</h3>
+      <p>"Walk-ins welcome" and "no reservation required" are not the same thing.</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;padding:8px 14px;">
+        <div class="walkin-item"><div class="wi-label">Carmine's</div><div>Says walk-ins are welcome, but a popular post-show wave can still fill the room</div></div>
+        <div class="walkin-item"><div class="wi-label">Joe's Pizza / Los Tacos No. 1</div><div>Use counter service, so they are often more realistic without a reservation than a formal dining room</div></div>
+        <div class="walkin-item"><div class="wi-label">Empanada Mama</div><div>A strong backup because you can order quickly and take food away if seats are scarce</div></div>
+        <div class="walkin-item"><div class="wi-label">Junior's</div><div>Large dining operation with late listed hours, but late-night demand can still create a wait</div></div>
+        <div class="walkin-item"><div class="wi-label">Bar seating</div><div>Can be easier than a table, but not a good assumption for children, larger groups, or anyone who needs a comfortable seat</div></div>
+      </div>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Check the current seating policy and kitchen status before relying on any walk-in plan. For planning a full food day without reservations: <a href="nyc-food-day-without-reservations.html">How to Build a NYC Food Day Without Reservations &rarr;</a></p>
+      <hr class="divider-rule">
+      <h3 id="quick-meals">Best Quick Meals Near Broadway</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12.5px;">
+          <tr><th>Food Type</th><th>Practical Choice</th><th>How Quickly You Can Eat</th><th>What to Know</th></tr>
+          <tr><td>Pizza</td><td><a href="https://www.joespizzanyc.com/locations" target="_blank" rel="noopener">Joe's Pizza</a>, 1435 Broadway</td><td>Often quick once you reach the counter</td><td>Lines, limited seating, and changing late hours are possible; verify the current schedule</td></tr>
+          <tr><td>Empanadas</td><td><a href="https://www.empanadamama.com/times-square" target="_blank" rel="noopener">Empanada Mama</a>, 200 W 40th St or <a href="https://www.empanadamama.com/hells-kitchen" target="_blank" rel="noopener">765 Ninth Ave (24/7)</a></td><td>Usually fast and easy to take away</td><td>The Ninth Avenue location is the stronger late-night fallback with 24/7 official listing</td></tr>
+          <tr><td>Tacos</td><td><a href="https://www.lostacos1.com/location/los-tacos-times-square/" target="_blank" rel="noopener">Los Tacos No. 1</a>, 229 W 43rd St</td><td>Counter service can be quick, but queues are common</td><td>Current hours run to midnight Mon&ndash;Sat and to 10:00 PM Sunday</td></tr>
+          <tr><td>Ramen</td><td><a href="https://test-ippudo-us.ippudony.com/location/" target="_blank" rel="noopener">Ippudo Westside</a>, 321 W 51st St</td><td>Allow time for a possible wait</td><td>Good when you want a real hot meal near the western theaters; verify hours and kitchen cutoff</td></tr>
+          <tr><td>Italian family-style</td><td>Carmine's</td><td>Not a quick bite unless the table is ready</td><td>Better for a seated group meal than a rushed solo stop</td></tr>
+          <tr><td>Cheesecake and diner food</td><td>Junior's at 1515 Broadway or 1626 Broadway</td><td>Flexible if you can get seated</td><td>Current listed hours run to midnight Tue&ndash;Thu and to 1:00 AM Fri&ndash;Sat</td></tr>
+          <tr><td>Korean food</td><td>Koreatown around 32nd Street</td><td>Some restaurants serve late, but not all</td><td>It is a neighborhood choice, not a universal late-night guarantee; verify the specific restaurant</td></tr>
+          <tr><td>Dumplings</td><td>A verified current counter-service restaurant in Koreatown or near your hotel</td><td>Potentially quick</td><td>Hours and seating vary too much to treat the category as a plan by itself</td></tr>
+          <tr><td>Sandwiches</td><td>A deli, hotel restaurant, or verified current shop near the route home</td><td>Usually fast</td><td>The best choice when the group needs food more than atmosphere</td></tr>
+          <tr><td>Diner food</td><td>Junior's or a hotel-area diner</td><td>Moderate, depending on the queue</td><td>Reliable for a mixed group when a formal reservation is unrealistic</td></tr>
+          <tr><td>Food hall</td><td>A currently open hall near your route</td><td>Flexible if several counters are open</td><td>Food halls can close individual counters before the building's posted hours</td></tr>
+          <tr><td>Bakery or grab-and-go</td><td>Dessert, pastry, or prepared food near the theater or hotel</td><td>Fastest</td><td>Not a substitute for dinner if the group is genuinely hungry</td></tr>
+        </table>
+      </div>
+      <hr class="divider-rule">
+      <h3 id="late-night">Best Late-Night Food After Broadway</h3>
+      <div class="img-wrap">
+        <img src="hells-kitchen-late-night-food.jpg" alt="Late-night food along Ninth Avenue in Hell's Kitchen, New York City" loading="lazy">
+      </div>
+      <p>The key distinction is between the posted dining-room closing time and the last time the kitchen accepts orders.</p>
+      <div class="late-block">
+        <div class="lb-row"><div class="lb-time">After 10:00 PM</div><div>Carmine's, Junior's, Joe Allen, Los Tacos No. 1, Joe's Pizza, and Empanada Mama locations may be options on some nights &mdash; check the date and current hours</div></div>
+        <div class="lb-row"><div class="lb-time">After 11:00 PM</div><div>Empanada Mama Hell's Kitchen is the strongest official option with 24/7 listing. Junior's lists midnight Tue&ndash;Thu and 1:00 AM Fri&ndash;Sat. Carmine's lists midnight on Fri&ndash;Sat.</div></div>
+        <div class="lb-row"><div class="lb-time">Around midnight</div><div>Use Junior's, Empanada Mama, Joe's Pizza, or a verified current counter-service restaurant. Do not assume a full menu is available just because the front door is open.</div></div>
+        <div class="lb-row"><div class="lb-time">After midnight</div><div>Empanada Mama Hell's Kitchen is the clearest current choice. Other late hours &mdash; Joe's Pizza, Times Square Empanada Mama &mdash; should be verified on the day because listings do not always agree.</div></div>
+        <div class="lb-row"><div class="lb-time">Takeout and limited menu</div><div>Empanadas, pizza slices, tacos, sandwiches, and hotel takeout are usually more realistic than a full dinner after midnight</div></div>
+        <div class="lb-row"><div class="lb-time">Monday and Tuesday nights</div><div>Assumptions fail most often on these nights. Joe Allen and Becco currently list Monday closures. Verify every restaurant before committing.</div></div>
+      </div>
+      <p style="font-size:13px;">See also the <a href="https://www.nyctourism.com/articles/where-to-eat-after-broadway-show/" target="_blank" rel="noopener">NYC Tourism late-night dining guide</a> for additional context, keeping in mind that published hours change and should be verified directly.</p>
+      <hr class="divider-rule">
+      <h3 id="dessert">Best Dessert After Broadway</h3>
+      <ul style="font-size:14px;line-height:1.7;margin:8px 0;padding-left:20px;">
+        <li><strong>Cheesecake:</strong> <a href="https://www.juniorscheesecake.com/pages/restaurant-landing/locations" target="_blank" rel="noopener">Junior's</a> is the practical choice, with Broadway locations and late posted hours on several nights</li>
+        <li><strong>Cookies and pastries:</strong> Check a current business listing near the theater or hotel; do not build the route around a bakery unless its hours are confirmed for that night</li>
+        <li><strong>Ice cream:</strong> Useful after an early show or in warm weather, but less dependable after midnight</li>
+        <li><strong>Late-night coffee:</strong> A hotel lobby caf&eacute;, diner, or restaurant with a late beverage service may be easier than a dedicated coffee shop</li>
+        <li><strong>Dessert caf&eacute;s:</strong> Make this a short stop after dinner, not the plan for a group that has not eaten since late afternoon</li>
+      </ul>
+      <p>Practical recommendation: if dinner is already handled, stop at Junior's or choose dessert near the hotel. If dinner is not handled, do not let a cheesecake plan disguise the fact that everyone needs a meal.</p>
+    </div>    <div class="article-body">
+      <hr class="divider-rule">
+      <h2 id="families">Best Options for Families</h2>
+      <div class="img-wrap">
+        <img src="nyc-family-after-broadway.jpg" alt="Family exploring New York City together" loading="lazy">
+      </div>
+      <p>Families usually need four things at once: predictable food, a bathroom, a short walk, and a low chance of a long wait.</p>
+      <div class="card-grid cols-2">
+        <div class="callout callout-tip"><div class="callout-title">Carmine's</div><p style="font-size:13.5px;">The strongest planned family dinner when you reserve and your group likes shared Italian food.</p></div>
+        <div class="callout callout-tip"><div class="callout-title">Junior's</div><p style="font-size:13.5px;">A flexible choice for a mixed group that wants a meal and dessert in one place.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Empanada Mama</div><p style="font-size:13.5px;">Works when children need food immediately and the adults can accept a fast-casual meal.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Hotel food</div><p style="font-size:13.5px;">Often underrated. If your hotel is nearby, a short walk and a familiar room can beat another crowded restaurant.</p></div>
+      </div>
+      <div class="warn-note"><strong>Strollers and subway:</strong> Do not promise a stroller-friendly route until you have checked the exact station and elevator status. Fold strollers where required, carry children safely on stairs and escalators, and do not bring more than the group can manage. Check <a href="https://www.mta.info/accessibility/subway" target="_blank" rel="noopener">MTA accessibility information</a> before entering the station. For complete family trip planning in NYC: <a href="nyc-with-kids.html">NYC With Kids: The Realistic Family Guide &rarr;</a> &bull; <a href="best-nyc-hotel-areas-for-families.html">Best NYC Hotel Areas for Families &rarr;</a></div>
+      <hr class="divider-rule">
+      <h2 id="dietary">Dietary Needs After Broadway</h2>
+      <p>The safest approach is to match the requirement to information the restaurant actually publishes.</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;"><strong style="min-width:110px;display:inline-block;">Vegetarian:</strong> Carmine's publishes vegetarian options; Empanada Mama and many casual restaurants offer meat-free choices, but confirm fillings and preparation</div>
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;background:rgba(15,23,42,.025);"><strong style="min-width:110px;display:inline-block;">Vegan:</strong> Look for a current vegan menu or ask about ingredients before ordering. Do not assume a vegetarian empanada or taco is vegan.</div>
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;"><strong style="min-width:110px;display:inline-block;">Gluten-free:</strong> Carmine's publishes a <a href="https://carminesnyc.com/menus/times-square-wheat-gluten-allergy" target="_blank" rel="noopener">wheat/gluten allergy menu</a>, but its own notice says the kitchen is not allergen-free and cross-contact is possible. Joe's has listed a gluten-free cheese pizza, but that does not automatically mean a gluten-free kitchen.</div>
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;background:rgba(15,23,42,.025);"><strong style="min-width:110px;display:inline-block;">Halal:</strong> Confirm the specific restaurant's current certification or preparation. A generic label is not proof of halal food.</div>
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;"><strong style="min-width:110px;display:inline-block;">Kosher:</strong> <a href="https://www.mrbroadwaynyc.com/" target="_blank" rel="noopener">Mr. Broadway</a> at 209 W 38th St is a Glatt Kosher option with certification on its official site, but its hours are not a dependable late post-show plan.</div>
+        <div style="padding:7px 14px;border-bottom:1px solid var(--border);font-size:13.5px;background:rgba(15,23,42,.025);"><strong style="min-width:110px;display:inline-block;">Food allergies:</strong> Call ahead and explain the allergy. Never promise an allergy-safe meal unless the restaurant provides clear, current information about its procedures.</div>
+        <div style="padding:7px 14px;font-size:13.5px;"><strong style="min-width:110px;display:inline-block;">Picky children:</strong> Pizza, plain pasta, rice, dumplings, sandwiches, and simple diner food are the practical categories. Keep one familiar backup near the hotel.</div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="area-comparison">Restaurant Row vs. Hell's Kitchen vs. Koreatown vs. Times Square</h2>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12px;">
+          <tr><th>Area</th><th>Best For</th><th>Walking Distance</th><th>Food Type</th><th>Late-Night Reliability</th><th>Main Catch</th></tr>
+          <tr><td><strong>Restaurant Row</strong></td><td>A planned sit-down meal close to the theaters</td><td>~2&ndash;8 minutes from the central cluster</td><td>Italian, American, French, theater-district dining</td><td>Good early; mixed late</td><td>Reservation pressure and earlier kitchen cutoffs</td></tr>
+          <tr><td><strong>Hell's Kitchen</strong></td><td>Independent restaurants, Ninth Avenue, a calmer meal away from the core</td><td>~7&ndash;15 minutes from many theaters</td><td>Casual restaurants, burgers, ramen, empanadas, international</td><td>Best late fallback when a specific venue is confirmed</td><td>The extra walk feels long in bad weather or with tired children</td></tr>
+          <tr><td><strong>Koreatown</strong></td><td>A specific late Korean meal or a deliberate food detour</td><td>~15&ndash;25 minutes on foot or a short subway/taxi ride</td><td>Korean barbecue, noodles, dumplings, casual Asian food</td><td>Variable; restaurant-by-restaurant</td><td>Not worth the trip unless the exact restaurant is open and your group wants it</td></tr>
+          <tr><td><strong>Times Square</strong></td><td>Fastest access and familiar chains</td><td>~1&ndash;8 minutes</td><td>Chains, casual restaurants, slices, tacos, dessert</td><td>Mixed; many rooms are busy rather than truly late</td><td>Easy to settle for a mediocre meal or wait in a tourist-heavy line</td></tr>
+        </table>
+      </div>
+      <div class="card-grid cols-2" style="margin-top:12px;">
+        <div class="callout callout-summary"><div class="callout-title">Restaurant Row</div><p style="font-size:13.5px;">Best for a reserved dinner before the show or immediately after an earlier performance. Not the best no-reservation strategy at 10:45 PM.</p></div>
+        <div class="callout callout-summary"><div class="callout-title">Hell's Kitchen</div><p style="font-size:13.5px;">Best all-purpose post-show area when the weather is reasonable and you have chosen a specific restaurant. Empanada Mama's 24/7 listing provides a particularly useful late backup. Skip the walk if your group is exhausted, carrying bags, or dealing with heavy rain or freezing wind.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Koreatown</div><p style="font-size:13.5px;">Worth it for food-focused visitors with a confirmed destination. Not the default choice for families who simply need dinner.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Times Square</div><p style="font-size:13.5px;">Best for a fast fallback or a hotel nearby. Move one or two blocks west when you want a better meal and have the energy.</p></div>
+      </div>
+      <p>The <strong>Ultimate NYC Bucket List Map</strong> is most useful here as a pinned Google Map of food spots, attractions, and neighborhoods. Open it in Google Maps for live directions and nearby planning rather than treating it as a fixed restaurant ranking. <a href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the map &rarr;</a></p>
+      <hr class="divider-rule">
+      <h2 id="no-reservation">What to Do If You Have No Reservation</h2>
+      <p>Use this order of operations:</p>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <ul class="check-list">
+          <li><div class="cl-n">1</div><div><strong>Do not stand in the middle of Times Square searching randomly.</strong> Move to the edge of the crowd and decide whether you are eating near the theater or near the hotel.</div></li>
+          <li><div class="cl-n">2</div><div><strong>Check the actual kitchen hours.</strong> A restaurant listed as open until midnight may stop seating earlier.</div></li>
+          <li><div class="cl-n">3</div><div><strong>Choose the closest realistic area.</strong> Restaurant Row, Ninth Avenue, or a counter-service spot is usually better than crossing Manhattan.</div></li>
+          <li><div class="cl-n">4</div><div><strong>Call or check the current reservation platform.</strong> Ask specifically about a table, bar seating, last seating, and the kitchen &mdash; not only "Are you open?"</div></li>
+          <li><div class="cl-n">5</div><div><strong>Use quick service if the group is already hungry.</strong> Waiting for a perfect table is a bad trade when children or tired adults need food now.</div></li>
+          <li><div class="cl-n">6</div><div><strong>Keep dessert or takeaway as the final backup.</strong> A slice, empanada, sandwich, or hotel-room dessert can rescue the night.</div></li>
+          <li><div class="cl-n">7</div><div><strong>Do not travel across Manhattan for a restaurant unless it is genuinely worth the journey.</strong> The restaurant must justify the transfer, the weather, and the risk of arriving after the kitchen closes.</div></li>
+        </ul>
+      </div>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--bg-card);margin:10px 0;padding:10px 14px;">
+        <p style="font-size:13.5px;font-weight:700;color:var(--navy);margin:0 0 8px;">Know the difference:</p>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>No reservation required:</strong> The restaurant may use counter service or may simply accept walk-ins. It does not promise a table.</div>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>Walk-ins accepted:</strong> You may join the queue if space becomes available.</div>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>Walk-ins sometimes available:</strong> The practical wording for a popular restaurant on a performance night.</div>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>Bar seating only:</strong> May be the only immediate option, and may not work for children or a larger group.</div>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>Counter service:</strong> Usually the best backup for a late exit.</div>
+        <div style="font-size:13.5px;margin:5px 0;"><strong>Reservation required after a certain time:</strong> Ask whether the policy applies to all tables or only prime dinner hours.</div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="subway">Subway After Broadway</h2>
+      <div class="img-wrap">
+        <img src="nyc-subway-after-broadway.jpg" alt="Times Square subway entrance near Broadway theaters at night" loading="lazy">
+      </div>
+      <p>The subway is often the best way home after Broadway, but only when the route is direct and the service is normal. Broadway theaters sit close to several useful stations: Times Sq&ndash;42 St, 42 St&ndash;Port Authority Bus Terminal, 49 St, 50 St, 47&ndash;50 Sts&ndash;Rockefeller Center, and 34 St&ndash;Herald Sq. The closest-looking entrance is not always the most useful one: a station complex can have multiple entrances, closed stairways, or an elevator several blocks from the theater. For a deeper subway primer: <a href="nyc-subway-guide.html">I Wish Someone Had Explained the NYC Subway Like This &rarr;</a></p>
+      <h3 id="subway-rules">Basic Subway Rules for First-Time Riders</h3>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;"><strong>Downtown</strong> usually means south toward Lower Manhattan; <strong>uptown</strong> means north toward Upper Manhattan. Read the platform sign rather than guessing from the street.</div>
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;background:rgba(15,23,42,.025);">A direct train is usually better than a theoretically faster route with a transfer</div>
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;">Check whether a train is running local or express, especially late at night</div>
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;background:rgba(15,23,42,.025);">If the nearest entrance is closed, walk to another entrance in the same station complex before changing the entire route</div>
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;">If the app suggests two late transfers, compare it with a taxi or a simple bus</div>
+        <div style="padding:6px 14px;border-bottom:1px solid rgba(15,23,42,.06);font-size:13.5px;background:rgba(15,23,42,.025);">Pay with OMNY or another accepted contactless method. MetroCard sales and refills ended January 1, 2026.</div>
+        <div style="padding:6px 14px;font-size:13.5px;">Keep children close, fold strollers where required, and use the blue Help Point if you need station assistance</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;">
+        <a class="rc-links" style="font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;" href="https://www.mta.info/status/subway-service" target="_blank" rel="noopener">MTA service status &rarr;</a>
+        <a class="rc-links" style="font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;" href="https://www.mta.info/alerts" target="_blank" rel="noopener">MTA planned changes &rarr;</a>
+        <a class="rc-links" style="font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;" href="https://www.mta.info/node/5336" target="_blank" rel="noopener">Late-night subway map &rarr;</a>
+        <a class="rc-links" style="font-size:12.5px;font-weight:600;color:var(--navy);border:1px solid var(--border);padding:3px 10px;border-radius:20px;text-decoration:none;" href="https://www.mta.info/accessibility/subway" target="_blank" rel="noopener">MTA accessibility &rarr;</a>
+      </div>
+      <h3 id="hotel-routes">Typical Hotel Routes After Broadway</h3>
+      <p style="font-size:13.5px;">These are planning patterns, not promises. Use the exact hotel address and current service status before boarding. For choosing a hotel neighborhood: <a href="where-to-stay-nyc.html">Where to Stay in NYC &rarr;</a></p>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:11.5px;">
+          <tr><th>Hotel Area</th><th>Recommended Transport</th><th>Complexity</th><th>Main Risk</th><th>Better Backup</th><th>Children</th><th>Older Travelers</th><th>When Taxi May Be Worth It</th></tr>
+          <tr><td><strong>Times Square</strong></td><td>Walk</td><td>Very low</td><td>Crowds and blocked sidewalks</td><td>Walk one avenue away</td><td>Excellent if route is short</td><td>Excellent</td><td>Heavy rain, luggage, or mobility limits</td></tr>
+          <tr><td><strong>Midtown East</strong></td><td>Walk east or take a simple route toward Grand Central</td><td>Low to medium</td><td>Choosing a station entrance on the wrong side</td><td>Yellow taxi from a side street</td><td>Good</td><td>Good</td><td>Hotel is far east or group is tired</td></tr>
+          <tr><td><strong>Upper West Side</strong></td><td>1/2/3 uptown, or C from 42 St&ndash;Port Authority</td><td>Low when direct</td><td>Wrong uptown platform or late service change</td><td>Taxi or bus</td><td>Good</td><td>Good if elevator is confirmed</td><td>Farther-north hotel, bags, or late disruption</td></tr>
+          <tr><td><strong>Upper East Side</strong></td><td>Route toward Lexington Ave, often with a transfer, or taxi</td><td>Medium</td><td>Complicated transfer late at night</td><td>Taxi or simpler route with more walking</td><td>Mixed</td><td>Taxi often easier</td><td>Almost always worth considering for a tired group</td></tr>
+          <tr><td><strong>Chelsea</strong></td><td>1/2/3 downtown or A/C/E toward 34th/Penn</td><td>Low to medium</td><td>Choosing a station far from the hotel</td><td>Walk from a nearer stop or taxi</td><td>Good</td><td>Good</td><td>Hotel is west of the line or group has luggage</td></tr>
+          <tr><td><strong>Greenwich Village</strong></td><td>1 toward Christopher St or A/C/E toward West 4th</td><td>Medium</td><td>Streets and exits do not line up with the hotel</td><td>Taxi from Midtown</td><td>Good for older children</td><td>Taxi may be simpler</td><td>Rain, late service change, or hotel far from station</td></tr>
+          <tr><td><strong>SoHo</strong></td><td>R/W or A/C/E toward Canal/Spring</td><td>Medium</td><td>Picking the wrong Canal Street station</td><td>Taxi or walk from a better stop</td><td>Mixed</td><td>Taxi often easier</td><td>Bags, rain, or hotel far from platform</td></tr>
+          <tr><td><strong>Lower Manhattan</strong></td><td>1/2/3 downtown or R/W/A/C/E</td><td>Low to medium</td><td>Confusing downtown platforms and exits</td><td>Taxi</td><td>Good on a direct train</td><td>Good if direct</td><td>Multiple transfers or very late arrival</td></tr>
+          <tr><td><strong>Long Island City</strong></td><td>7 or E, depending on hotel</td><td>Low to medium</td><td>Hotel is farther from the chosen station</td><td>Taxi or hotel-area pickup</td><td>Good if direct</td><td>Good if elevator available</td><td>Late-night transfer, luggage, or bad weather</td></tr>
+          <tr><td><strong>Williamsburg</strong></td><td>A/C/E to a connection with the L, or the exact app route</td><td>Medium to high</td><td>A transfer at a busy station late at night</td><td>Taxi</td><td>Mixed</td><td>Taxi often preferable</td><td>Tired group, bags, or disruption</td></tr>
+          <tr><td><strong>Downtown Brooklyn</strong></td><td>A/C, 2/3, R, or another direct route depending on hotel</td><td>Medium</td><td>Choosing the wrong Brooklyn station</td><td>Taxi from Midtown</td><td>Good on a direct train</td><td>Good on a direct train</td><td>Hotel not near station or service changes</td></tr>
+          <tr><td><strong>Jersey City</strong></td><td>Subway to PATH connection, then PATH; check current PATH status</td><td>Medium to high</td><td>Assuming the NYC subway goes directly to New Jersey</td><td>Prebooked car or taxi to a PATH station</td><td>Mixed</td><td>Car is often simpler</td><td>Late hour, luggage, or a fixed last train</td></tr>
+        </table>
+      </div>
+      <p style="font-size:13px;">For Jersey City, check the <a href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener">official PATH information</a> as well as the MTA. The subway does not take you directly into New Jersey.</p>
+      <div class="warn-note"><strong>When the subway route changes after dinner &mdash; use this sequence:</strong><br>1. Recheck the MTA app at the station entrance &bull; 2. Look for a direct line even if it means walking to another station &bull; 3. Do not make a complicated late-night transfer just to save a few minutes on the map &bull; 4. Consider a bus if the route is straight and your group can manage the stop &bull; 5. Walk a few blocks to a yellow taxi pickup point if the station plan has become confusing</div>
+    </div>    <div class="article-body">
+      <hr class="divider-rule">
+      <h2 id="taxi-uber-lyft">Taxi vs. Uber vs. Lyft After Broadway</h2>
+      <div class="img-wrap">
+        <img src="yellow-taxi-after-broadway.jpg" alt="Yellow taxi driving through New York City at night" loading="lazy">
+        <div class="img-credit">Photo: Claudio Schwarz / Unsplash</div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" style="font-size:12.5px;">
+          <tr><th>Option</th><th>Best For</th><th>Advantages</th><th>Disadvantages</th><th>When to Choose It</th></tr>
+          <tr><td><strong>Yellow taxi</strong></td><td>Street-hail, families, four-person groups, no-surge pricing</td><td>Available on the street, metered, accepts cards, provides a receipt</td><td>Theater District congestion can make a short ride slow</td><td>When a curbside ride matters more than an exact upfront price</td></tr>
+          <tr><td><strong>Uber</strong></td><td>A known destination, app payment, prearranged pickup</td><td>Upfront estimate, saved destination, digital receipt</td><td>Surge pricing and difficult Theater District pickups</td><td>When your group can walk to a clear pickup point</td></tr>
+          <tr><td><strong>Lyft</strong></td><td>Same situations as Uber</td><td>App booking and digital receipt</td><td>Pickup congestion, surge pricing, and variable availability</td><td>Compare with Uber, then use the pickup point the app actually gives you</td></tr>
+          <tr><td><strong>Walking to a pickup point</strong></td><td>Anyone staying a few blocks from the theater</td><td>Improves the chance of meeting the car and avoids the worst curb congestion</td><td>Harder in rain, with children, luggage, or mobility limits</td><td>Walk west or away from the densest theater exits when the app permits it</td></tr>
+          <tr><td><strong>Private car service</strong></td><td>Airport trips, older travelers, larger luggage, fixed departure times</td><td>Prearranged, easier coordination, and useful for a specific pickup</td><td>More expensive and still affected by traffic</td><td>Book before the show when the airport or train timing matters</td></tr>
+          <tr><td><strong>Subway</strong></td><td>Most direct, budget-conscious routes</td><td>Low cost, no road traffic, often faster than a car</td><td>Service changes, stairs, crowds, and elevator outages</td><td>Use it when the route is simple and current status is good</td></tr>
+        </table>
+      </div>
+      <div class="warn-note"><strong>The practical pickup rule:</strong> Do not expect an Uber or Lyft to stop directly outside the theater entrance. The curb may be blocked by buses, taxis, delivery vehicles, police activity, or the post-show crowd. Walk a few blocks to the pickup point shown in the app, but do not wander until the driver cancels. If the pickup point is moving or confusing, a yellow taxi from a visible curb is often simpler.</div>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--bg-card);margin:10px 0;padding:10px 14px;">
+        <p style="font-size:14px;font-weight:700;margin:0 0 8px;">Taxi facts worth knowing:</p>
+        <ul style="font-size:13.5px;margin:0;padding-left:18px;line-height:1.7;">
+          <li>Use the <a href="https://www.nyc.gov/site/tlc/passengers/taxi-fare.page" target="_blank" rel="noopener">official NYC taxi fare page</a> for current base fares, surcharges, tolls, and congestion charges &mdash; fares can change</li>
+          <li>The <a href="https://www.nyc.gov/site/tlc/passengers/yellow-taxi-passenger-bill-of-rights.page" target="_blank" rel="noopener">Taxi Passenger Bill of Rights</a> gives you the right to choose a destination within New York City, Westchester, Nassau, or Newark Airport; pay by cash or card; decide the tip; and receive a receipt</li>
+          <li>Use only a yellow taxi or a licensed app/prearranged vehicle. See the <a href="https://www.nyc.gov/site/tlc/passengers/illegal-rides.page" target="_blank" rel="noopener">TLC guidance on illegal rides</a> for why the driver's license, vehicle, and app details matter</li>
+        </ul>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="by-traveler-type">Post-Show Plans by Traveler Type</h2>
+      <div class="type-grid">
+        <div class="type-card"><div class="tc-head">First-Time Visitors</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Reserved Restaurant Row dinner or a simple counter-service meal</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Empanada Mama or Junior's</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Walk if the hotel is nearby; otherwise one direct subway line</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Decoding a complex subway transfer while tired</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The show is running late and the route is already unfamiliar; eat close and leave</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Families with Young Children</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Carmine's if reserved; Junior's or pizza if not</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Empanadas or hotel takeout</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Walk or take a taxi rather than adding a transfer</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Booking a long formal dinner after a two-and-a-half-hour show</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">Children need a bathroom or food immediately; choose the closest workable option</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Teenagers</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Pizza, tacos, ramen, burgers, or cheesecake</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">A food court, deli, or hotel-area takeout</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Subway if direct and supervised; taxi for a late or split group</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Letting everyone scatter in Times Square while deciding</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The line is longer than the meal is worth</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Older Travelers</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">A reserved restaurant within a short walk or a hotel-area meal</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Yellow taxi plus room service or takeout</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Taxi when stairs, weather, luggage, or a transfer are involved</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Assuming the closest-looking station has a working elevator</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The walk requires several avenues in bad weather. Also see: <a href="nyc-itinerary-afternoon-breaks.html">NYC Itinerary for People Who Need Afternoon Breaks &rarr;</a> and <a href="best-places-to-rest-nyc.html">Best Places to Rest Near NYC Attractions &rarr;</a></div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Couples</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Joe Allen or a confirmed Glass House Tavern reservation</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">A short dessert or drink near the hotel</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Walk or take a taxi from a side street</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Chasing a famous restaurant across Manhattan after a long show</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The only available table is at a time that makes the evening feel rushed</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Solo Travelers</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Counter-service pizza, tacos, ramen, or empanadas</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Takeout eaten at the hotel</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Direct subway or yellow taxi</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Joining a long queue without checking the closing time</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The route or restaurant feels uncomfortable; simplify immediately</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Budget Travelers</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Joe's Pizza, Los Tacos, Empanada Mama, or a grocery/deli option</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Eat near the hotel instead of paying for a car and a late dinner</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Subway, with a taxi only when it avoids a long transfer for the whole group</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Treating rideshare surge pricing as inevitable. See: <a href="nyc-trip-cost.html">How Much Does a Trip to NYC Really Cost? &rarr;</a></div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">A "cheap" restaurant requires an expensive cross-town ride</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Food-Focused Visitors</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Koreatown or a specific Hell's Kitchen restaurant selected in advance</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">A strong counter-service option that is actually open</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Choose the restaurant on the same side of Midtown as the return route</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Confusing a neighborhood reputation with a confirmed late kitchen</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The exact restaurant cannot confirm seating or hours</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Visitors Staying Far from Midtown</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Eat close to the theater before starting the long journey, or eat near the hotel</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Takeout on the way back</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Direct subway/PATH route if available; prearranged car for fixed timing</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Adding a restaurant detour before a long ride</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The last train or connection is approaching</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Visitors with Mobility Limitations</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">A nearby restaurant with confirmed accessible entrance and restroom information</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Taxi to a hotel-area restaurant or takeout</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Check elevator status before entering the station; use a taxi if the route depends on an uncertain elevator</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Assuming every historic theater, station entrance, or restaurant entrance is step-free</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The route requires an unverified elevator or a long exposed walk</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Visitors Carrying Shopping Bags</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Close to the theater or hotel</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Takeout</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Taxi or a direct subway route with minimal stairs</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Attempting a crowded transfer with loose bags</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">You cannot keep all bags with the group on a platform or in a taxi</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Visitors with an Early Morning Flight</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Quick food near the theater or hotel, not a multi-course dinner</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Hotel takeout and an early bedtime</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Prearranged car or the simplest reliable transit route</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Spending the last useful hour of sleep waiting for a table</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">The restaurant would require a second taxi or late transfer</div></div>
+        </div></div>
+        <div class="type-card"><div class="tc-head">Visitors Catching a Late Train</div><div class="tc-body">
+          <div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">Takeaway pizza, tacos, empanadas, or sandwiches</div></div>
+          <div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Food at the station or on arrival</div></div>
+          <div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Go directly toward Penn Station, Grand Central, Port Authority, or PATH as appropriate</div></div>
+          <div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Leaving the theater district in the wrong direction for dinner</div></div>
+          <div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">You have less than a generous connection margin</div></div>
+        </div></div>
+        <div class="type-card" style="grid-column:1/-1;max-width:100%;"><div class="tc-head">Visitors Too Tired for a Full Meal</div><div class="tc-body" style="display:flex;flex-wrap:wrap;gap:0 20px;">
+          <div style="flex:1;min-width:200px;"><div class="tc-row"><div class="tc-lbl">Food</div><div class="tc-val">One fast, warm item and a drink</div></div><div class="tc-row"><div class="tc-lbl">Backup</div><div class="tc-val">Hotel delivery or breakfast food for the room</div></div></div>
+          <div style="flex:1;min-width:200px;"><div class="tc-row"><div class="tc-lbl">Route home</div><div class="tc-val">Walk or taxi</div></div><div class="tc-row"><div class="tc-lbl">Avoid</div><div class="tc-val">Treating exhaustion as a reason to make the plan more complicated</div></div><div class="tc-row"><div class="tc-lbl">Skip when</div><div class="tc-val">Everyone is already saying they would rather sleep</div></div></div>
+        </div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="weather">Weather and Seasonal Conditions</h2>
+      <div class="card-grid cols-2">
+        <div class="callout callout-local"><div class="callout-title">Rain</div><p style="font-size:13.5px;">The extra ten-minute walk to Ninth Avenue can become the worst part of the night. Choose the nearest viable restaurant, use a taxi from a side street, and do not count on a rideshare stopping outside the theater. Subway stairs and wet platforms also make luggage and strollers harder to manage.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Snow and Freezing Wind</div><p style="font-size:13.5px;">Stay close to the theater or hotel. A reservation two avenues away is less attractive when the sidewalks are slippery and the group is standing outside waiting for a table. A taxi may be worth the price even for a short ride.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Summer Heat</div><p style="font-size:13.5px;">Avoid building the plan around a long outdoor queue. Confirm that the restaurant can seat you inside and consider eating sooner rather than wandering through a hot crowd after the curtain.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Christmas Crowds</div><p style="font-size:13.5px;">Expect heavier sidewalks, longer waits, and more pressure on familiar restaurants. Reserve earlier, choose one backup, and leave more time for a taxi or subway journey.</p></div>
+        <div class="callout callout-local"><div class="callout-title">New Year's Eve and Major Events</div><p style="font-size:13.5px;">Traffic restrictions, pedestrian controls, event security, and large crowds can change the normal Theater District route. A pickup point that works on an ordinary Tuesday may be unusable. Check current city and transit notices.</p></div>
+        <div class="callout callout-local"><div class="callout-title">Sunday and Monday Nights</div><p style="font-size:13.5px;">Sunday restaurant hours can be shorter, while Monday is a common closing day. Joe Allen and Becco currently list Monday closures. Check the actual day rather than relying on a saved itinerary. Holiday hours may also differ.</p></div>
+      </div>
+    </div>    <div class="article-body">
+      <hr class="divider-rule">
+      <h2 id="common-mistakes">What Most Visitors Get Wrong</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div class="mistake-item"><div class="mi-n">1</div><div>Assuming the show ends exactly on schedule</div></div>
+        <div class="mistake-item"><div class="mi-n">2</div><div>Booking dinner too close to the expected curtain-call time</div></div>
+        <div class="mistake-item"><div class="mi-n">3</div><div>Assuming a posted closing time means the kitchen is open</div></div>
+        <div class="mistake-item"><div class="mi-n">4</div><div>Searching for food only after leaving the theater</div></div>
+        <div class="mistake-item"><div class="mi-n">5</div><div>Staying directly on Seventh Avenue because it looks convenient &mdash; ignoring Restaurant Row and Hell's Kitchen</div></div>
+        <div class="mistake-item"><div class="mi-n">6</div><div>Traveling too far for a restaurant after a long show</div></div>
+        <div class="mistake-item"><div class="mi-n">7</div><div>Trying to get an Uber directly outside the theater</div></div>
+        <div class="mistake-item"><div class="mi-n">8</div><div>Taking a complicated subway transfer late at night</div></div>
+        <div class="mistake-item"><div class="mi-n">9</div><div>Assuming every subway entrance is equally convenient</div></div>
+        <div class="mistake-item"><div class="mi-n">10</div><div>Forgetting to check late-night service and planned MTA work</div></div>
+        <div class="mistake-item"><div class="mi-n">11</div><div>Forgetting that Monday and Tuesday hours may differ from the weekend</div></div>
+        <div class="mistake-item"><div class="mi-n">12</div><div>Bringing tired children to a long formal dinner</div></div>
+        <div class="mistake-item"><div class="mi-n">13</div><div>Ignoring bathrooms &mdash; confirm restroom availability before committing to a restaurant</div></div>
+        <div class="mistake-item"><div class="mi-n">14</div><div>Forgetting luggage restrictions at Broadway theaters</div></div>
+        <div class="mistake-item"><div class="mi-n">15</div><div>Failing to keep a simple backup option</div></div>
+        <div class="mistake-item"><div class="mi-n">16</div><div>Treating "walk-ins welcome" as a guarantee of a table</div></div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="itineraries">14 Ready-Made Post-Show Itineraries</h2>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">1</div><div class="ib-title">The Fastest Meal and Easiest Route Home</div><div class="ib-timing">Exit ~10:00&ndash;10:30 PM</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Joe's Pizza, Los Tacos No. 1, or Empanada Mama near the theater</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Takeout for the hotel room</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Walk to the nearest practical subway station or hail a yellow taxi from a side street</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Hungry, tired visitors and families who need food now</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A line, limited seating, or unverified late closing time. Keep two nearby counters in your phone.</div></div>
+        </div>
+      </div>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">2</div><div class="ib-title">The Best Casual Dinner After Broadway</div><div class="ib-timing">Exit before ~10:30 PM</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">A confirmed table on Restaurant Row or Ninth Avenue</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Empanada Mama Hell's Kitchen</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Walk west; take a taxi home afterward if the hotel is not on a simple subway line</div></div>
+          <div class="ib-row"><div class="ib-lbl">Walk</div><div class="ib-val">About 5&ndash;15 minutes from the theater depending on the restaurant</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Adults and older children who want a real meal without a formal occasion</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">The restaurant may still be open but no longer seating. Call about last seating.</div></div>
+        </div>
+      </div>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">3</div><div class="ib-title">A Family-Friendly Post-Show Plan</div><div class="ib-timing">Reserve ~5:00&ndash;6:00 PM before the show, or use Carmine's after an earlier curtain</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Carmine's if reserved; Junior's if the group needs flexibility</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Pizza, empanadas, or hotel takeout</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Walk or yellow taxi; avoid an extra subway transfer</div></div>
+          <div class="ib-row"><div class="ib-lbl">Walk</div><div class="ib-val">About 1&ndash;5 minutes for Carmine's or Junior's from many theaters</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Families with young children or mixed appetites</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A large restaurant wait arrives at exactly the moment children run out of patience. Eat fast and close rather than waiting for the ideal table.</div></div>
+        </div>
+      </div>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">4</div><div class="ib-title">A Romantic Post-Show Plan</div><div class="ib-timing">Reserve before the show, 30&ndash;45 min buffer after expected exit</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Joe Allen or a confirmed Glass House Tavern reservation</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Dessert near the hotel</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Walk or taxi from a side street</div></div>
+          <div class="ib-row"><div class="ib-lbl">Walk</div><div class="ib-val">About 2&ndash;6 minutes from many central theaters</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Couples who value atmosphere more than a late, elaborate menu</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">If the show runs late and the reservation becomes stressful, call the restaurant and simplify</div></div>
+        </div>
+      </div>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">5</div><div class="ib-title">A Budget Post-Show Plan</div><div class="ib-timing">Eat as soon as you exit</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Slice pizza, tacos, empanadas, or a deli sandwich</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Grocery or hotel food</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Subway with no more than one straightforward transfer</div></div>
+          <div class="ib-row"><div class="ib-lbl">Walk</div><div class="ib-val">Keep food within 5&ndash;8 minutes of the theater</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Budget travelers and solo visitors</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A cheap meal turns expensive when the group adds a surge-priced car or a long detour</div></div>
+        </div>
+      </div>
+      <div class="itin-block">
+        <div class="ib-head"><div class="ib-num">6</div><div class="ib-title">A Late-Night Plan After an 8:00 PM Show</div><div class="ib-timing">Exit ~10:30&ndash;11:00 PM or later for a long musical</div></div>
+        <div class="ib-body">
+          <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Empanada Mama, Joe's Pizza, Junior's, or another confirmed late counter-service option</div></div>
+          <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Eat near the hotel</div></div>
+          <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Direct subway or taxi</div></div>
+          <div class="ib-row"><div class="ib-lbl">Walk</div><div class="ib-val">No more than 10 minutes unless the specific restaurant is worth it</div></div>
+          <div class="ib-row"><div class="ib-lbl">Who it suits</div><div class="ib-val">Anyone who wants food without gambling on a formal kitchen</div></div>
+          <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">The restaurant's posted closing time may hide an earlier last order. Verify before walking.</div></div>
+        </div>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">7</div><div class="ib-title">After a Sunday Performance</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Junior's, Carmine's, or a restaurant with confirmed Sunday hours</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Empanada Mama Hell's Kitchen</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Walk if staying in Midtown; direct subway otherwise</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A restaurant that worked Friday closes earlier on Sunday. Treat Sunday hours as a separate fact.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">8</div><div class="ib-title">After a Monday Performance</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Carmine's, Junior's, Empanada Mama, or confirmed counter-service</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Joe's Pizza or hotel takeout</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Simple subway or taxi</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">Joe Allen and Becco currently list Monday closures. Other restaurants may reduce hours. Verify every restaurant before committing.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">9</div><div class="ib-title">Visitors Staying Uptown</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Counter service or an early reserved meal near the theater</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Food near the hotel</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">1/2/3 or another direct uptown train after checking status</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">Choosing the wrong uptown platform or missing an elevator. Check the station before descending.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">10</div><div class="ib-title">Visitors Staying Downtown</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Restaurant Row if reserved, or a quick meal near Times Square</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Takeout on the way downtown</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">1/2/3 or R/W/A/C/E depending on destination</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">Choosing a downtown stop far from the hotel. Use the exact address, not just the neighborhood name. Also: <a href="lower-manhattan-walking-itinerary.html">Lower Manhattan Walking Itinerary &rarr;</a></div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">11</div><div class="ib-title">Visitors in Brooklyn or Queens</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Pizza, tacos, empanadas, or a reserved early meal</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Direct 7, E, A/C, 2/3, R, or L connection; or the MTA app route</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A transfer becomes awkward late at night. Use a taxi for the group if the route stops being simple.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">12</div><div class="ib-title">Subway Service Disruption</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Eat near the theater or near the alternate route</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">MTA app first, then the simplest line, bus, or taxi</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">Recheck status after dinner, not only before the show. A replacement route creating two late transfers is worth abandoning for a taxi.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">13</div><div class="ib-title">Every Nearby Restaurant Is Full</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Empanada Mama, Joe's, Los Tacos, or Junior's</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Hotel takeout</div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">Decide within ten minutes rather than circling. Move no more than 10&ndash;15 minutes without checking the next option. You spend longer searching than you would have spent eating &mdash; set a cutoff.</div></div>
+          </div>
+        </div>
+        <div class="itin-block" style="margin:0;">
+          <div class="ib-head"><div class="ib-num">14</div><div class="ib-title">Visitors with an Early Flight</div></div>
+          <div class="ib-body">
+            <div class="ib-row"><div class="ib-lbl">Food</div><div class="ib-val">Fast, warm food near the theater or hotel</div></div>
+            <div class="ib-row"><div class="ib-lbl">Backup</div><div class="ib-val">Takeout for the room</div></div>
+            <div class="ib-row"><div class="ib-lbl">Transport</div><div class="ib-val">Prearranged car or the simplest direct transit route. See: <a href="jfk-to-manhattan.html">How to Get from JFK to Manhattan &rarr;</a></div></div>
+            <div class="ib-row"><div class="ib-lbl">Watch for</div><div class="ib-val">A late restaurant turns into a late hotel arrival. Choose certainty over ambition. Keep the walk under 5&ndash;8 minutes in poor weather.</div></div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider-rule">
+      <h2 id="final-recommendation">Final Recommendation</h2>
+      <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg-card);margin:10px 0;">
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">Want food quickly</div><div>Choose <strong>Empanada Mama, Joe's Pizza, or Los Tacos</strong> and accept counter service</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">Best sit-down meal</div><div>Reserve on <strong>Restaurant Row</strong> and confirm the kitchen's last seating</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">Traveling with children</div><div>Reserve <strong>Carmine's</strong> or choose <strong>Junior's</strong>, with a fast backup</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">If you are exhausted</div><div>Go to the hotel and eat nearby or order takeout</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">Staying far from Midtown</div><div>Use a direct route home and do not add a cross-town dinner detour</div></div>
+        <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:14px;display:flex;gap:12px;background:rgba(15,23,42,.025);"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">Show ends after midnight</div><div>Use <strong>Empanada Mama Hell's Kitchen</strong> or another confirmed late counter-service option</div></div>
+        <div style="padding:8px 14px;font-size:14px;display:flex;gap:12px;"><div style="font-family:var(--font-head);font-weight:800;min-width:120px;color:var(--accent);font-size:12.5px;padding-top:2px;">No reservation</div><div>Stop searching for the perfect restaurant and choose a nearby place that is actually serving</div></div>
+      </div>
+      <div class="callout callout-summary"><div class="callout-title">The central rule</div><p style="font-size:14px;">Choose one realistic food plan, one backup, and one route home before the curtain falls. Everything else follows from that.</p></div>
+      <hr class="divider-rule">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details class="faq-item"><summary>What time do Broadway shows usually end?<span class="chev">&#9662;</span></summary><div class="faq-a">Many musicals run about two and a half hours including an intermission, but productions vary from roughly 80 minutes to nearly three hours. A 7:00 PM show often ends around 9:30&ndash;9:55 PM; an 8:00 PM show can end around 10:30&ndash;11:00 PM or later. Check the production's current running time and allow for a late start and curtain call.</div></details>
+        <details class="faq-item"><summary>Where should I eat after a Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Choose Restaurant Row for a planned sit-down meal, Hell's Kitchen for a less concentrated neighborhood with useful late options, and Times Square for speed. Pick the area based on your exit time and hotel route.</div></details>
+        <details class="faq-item"><summary>Can I get dinner after 10 p.m. in NYC?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, but the reliable choices narrow after 10 PM. Counter-service restaurants, pizza, empanadas, tacos, diners, and selected late restaurants are easier than a formal dining room. Always check the kitchen cutoff, not just the posted closing time.</div></details>
+        <details class="faq-item"><summary>Do I need a reservation after Broadway?<span class="chev">&#9662;</span></summary><div class="faq-a">You need one if a specific sit-down restaurant matters to you. You do not need one for counter service, but you may still face a line or limited seating.</div></details>
+        <details class="faq-item"><summary>Is Restaurant Row worth visiting after a show?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, when you have a reservation or leave the theater early enough for the restaurant's kitchen. It is less useful as a 10:45 PM no-reservation strategy.</div></details>
+        <details class="faq-item"><summary>Is Hell's Kitchen better than Times Square for dinner?<span class="chev">&#9662;</span></summary><div class="faq-a">Often, if you can manage the extra 7&ndash;15 minutes of walking and have chosen a specific restaurant. Times Square is faster and more convenient, but it is more crowded and easier to settle for an average meal.</div></details>
+        <details class="faq-item"><summary>Where can I eat after Broadway without a reservation?<span class="chev">&#9662;</span></summary><div class="faq-a">Try Empanada Mama, Joe's Pizza, Los Tacos No. 1, or Junior's. Carmine's accepts walk-ins, but demand may still exceed supply on a performance night.</div></details>
+        <details class="faq-item"><summary>What is open late near Times Square?<span class="chev">&#9662;</span></summary><div class="faq-a">Empanada Mama Hell's Kitchen officially lists 24/7 operation. Junior's lists late hours on several nights, and other options such as Joe's Pizza, Carmine's, and the Times Square Empanada Mama location may be open late depending on the day. Verify current hours and last orders.</div></details>
+        <details class="faq-item"><summary>Is the subway practical after a Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Usually, if your hotel is on a direct line and the MTA shows normal service. It is less attractive when you need multiple transfers, an uncertain elevator, or a complicated late-night route.</div></details>
+        <details class="faq-item"><summary>Should I take a taxi or Uber after Broadway?<span class="chev">&#9662;</span></summary><div class="faq-a">Use a yellow taxi when you want a street hail and a regulated metered ride. Use Uber or Lyft when the app's pickup point is clear and the price is acceptable. Walking a few blocks away from the theater can significantly improve an app pickup.</div></details>
+        <details class="faq-item"><summary>Where should I catch an Uber after a Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Use the pickup point shown in the app &mdash; usually a less congested street a few blocks from the theater. Do not stop in the middle of a theater exit and expect the car to reach you there.</div></details>
+        <details class="faq-item"><summary>Can I walk from Broadway to my hotel?<span class="chev">&#9662;</span></summary><div class="faq-a">Yes, if the hotel is nearby and the weather is reasonable. Walking is often faster than driving around Times Square, but luggage, children, mobility limits, and freezing rain can change the decision.</div></details>
+        <details class="faq-item"><summary>What should families do after a Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Reserve Carmine's when possible, or use Junior's, pizza, or empanadas for a faster meal. Keep a hotel takeout backup and do not add a complicated subway transfer just for dinner.</div></details>
+        <details class="faq-item"><summary>Where can I eat after a late Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Use a confirmed counter-service option. Empanada Mama Hell's Kitchen is the clearest official late-night choice; Junior's, Joe's Pizza, and other places may work depending on the night. Check the kitchen hours, not just the door hours.</div></details>
+        <details class="faq-item"><summary>What should I do after a Sunday Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Check Sunday hours separately. Junior's, Carmine's, Empanada Mama, and some nearby restaurants can work, but several Restaurant Row kitchens close earlier than they do Friday or Saturday.</div></details>
+        <details class="faq-item"><summary>What should I do after a Monday Broadway show?<span class="chev">&#9662;</span></summary><div class="faq-a">Confirm the day before the show. Some restaurants close Monday; Joe Allen and Becco currently list Monday closures. Keep Carmine's, Junior's, Empanada Mama, or a quick meal near the hotel as backups.</div></details>
+        <details class="faq-item"><summary>Where can I get dessert after Broadway?<span class="chev">&#9662;</span></summary><div class="faq-a">Junior's is the most practical dedicated cheesecake option near the theater district. For coffee, pastries, or ice cream, check the current hours of a specific nearby business or choose a hotel-area stop.</div></details>
+        <details class="faq-item"><summary>Is Koreatown worth visiting after Broadway?<span class="chev">&#9662;</span></summary><div class="faq-a">It is worth it when a specific restaurant is open and the group wants that food. It is not a universal late-night solution &mdash; a taxi or subway detour is unnecessary if the restaurant has no confirmed seating.</div></details>
+        <details class="faq-item"><summary>What happens if the restaurant kitchen is closed?<span class="chev">&#9662;</span></summary><div class="faq-a">Switch immediately to counter service, takeaway, or food near the hotel. Do not wait for the bar to decide whether it can serve a full meal.</div></details>
+        <details class="faq-item"><summary>What should I do if the subway has a delay?<span class="chev">&#9662;</span></summary><div class="faq-a">Check the MTA app, look for a direct alternate line, and compare it with a bus or taxi. Avoid stacking multiple transfers late at night just to preserve the original route.</div></details>
+        <details class="faq-item"><summary>Can I bring luggage to a Broadway theater?<span class="chev">&#9662;</span></summary><div class="faq-a">Large luggage is generally not permitted, and theaters do not hold bags. Smaller bags must fit under the seat. Store luggage before the show or return to the hotel first. See the <a href="https://www.broadway.com/faq/4/broadway-theater-info/77/are-large-bags-or-luggage-allowed-in-the-theater/" target="_blank" rel="noopener">official Broadway luggage guidance</a>.</div></details>
+        <details class="faq-item"><summary>Is it better to eat before or after the show?<span class="chev">&#9662;</span></summary><div class="faq-a">Eating before the show is easier when you want a specific restaurant or have children. Eating after works when you choose counter service, have a reservation with enough time, or prefer food near the hotel.</div></details>
+      </div>
+    </div>
+  </article>
+  <div class="related-box">
+    <div class="rb-label">More From EverythingInNYC</div>
+    <ul>
+      <li><a href="nyc-food-day-without-reservations.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Build a NYC Food Day Without Reservations</a></li>
+      <li><a href="best-nyc-pizza-for-tourists.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Pizza in NYC for Tourists</a></li>
+      <li><a href="nyc-with-kids.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC With Kids: The Realistic Family Guide</a></li>
+      <li><a href="best-nyc-hotel-areas-for-families.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best NYC Hotel Areas for Families</a></li>
+      <li><a href="nyc-before-hotel-check-in.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What to Do in NYC Before Hotel Check-In</a></li>
+      <li><a href="nyc-itinerary-afternoon-breaks.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The Best NYC Itinerary for People Who Need Afternoon Breaks</a></li>
+      <li><a href="best-places-to-rest-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Best Places to Sit Down and Rest Near Major NYC Attractions</a></li>
+      <li><a href="nyc-sit-down-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>The NYC "Sit Down" Itinerary: A Full Day With Built-In Rest Stops</a></li>
+      <li><a href="best-things-near-times-square.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>25 Best Things to Do Near Times Square</a></li>
+      <li><a href="nyc-5-day-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>5 Days in NYC: The Ultimate First-Time Itinerary</a></li>
+      <li><a href="jfk-to-manhattan.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How to Get from JFK to Manhattan</a></li>
+      <li><a href="nyc-subway-guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>I Wish Someone Had Explained the NYC Subway Like This</a></li>
+      <li><a href="nyc-trip-cost.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How Much Does a Trip to NYC Really Cost?</a></li>
+      <li><a href="lower-manhattan-walking-itinerary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Lower Manhattan Walking Itinerary</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Your Broadway Night in NYC</h3>
+    <p class="sub">Honest, practical guides to eating, getting home, and making the most of your Broadway evening in New York City.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener"><div class="fc-title">NYC Bucket List Map</div><div class="fc-sub">Restaurants, food spots, and attractions pinned and ready for live directions &mdash; open in Google Maps before or after the show</div></a>
+      <a class="footer-card" href="nyc-food-day-without-reservations.html"><div class="fc-title">NYC Food Day Without Reservations</div><div class="fc-sub">How to build a walk-in food day by neighborhood &mdash; with counter-service backups and a food hall guide</div></a>
+      <a class="footer-card" href="nyc-before-hotel-check-in.html"><div class="fc-title">Before Hotel Check-In</div><div class="fc-sub">What to do if you arrive with luggage before your room is ready &mdash; and how to store it before a Broadway show</div></a>
+    </div>
+    <div class="footer-bottom"><span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span><a href="index.html">Back to top</a></div>
+  </div>
+</footer>
+<script>
+function onScroll(){var st=window.scrollY||document.documentElement.scrollTop;var dh=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
