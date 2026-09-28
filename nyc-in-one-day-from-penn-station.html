@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYC From 10 AM to 8 PM From Penn Station: The Best One-Day Itinerary | EverythingInNYC</title>
+<meta name="description" content="Arriving at Penn Station at 10 AM and catching an 8 PM train? Use this realistic NYC itinerary for luggage storage, food, sightseeing, subway routes, weather plans, and a safe return.">
+<meta property="og:title" content="NYC From 10 AM to 8 PM From Penn Station: The Best One-Day Itinerary">
+<meta property="og:description" content="Arriving at Penn Station at 10 AM and catching an 8 PM train? Here is the realistic way to spend the day in New York City.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="nyc-10-am-to-8-pm-from-penn-station.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- SIDE NAV ---- */
+.side-nav{
+  display:none;position:fixed;top:80px;width:168px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:14px;padding:14px 0;z-index:80;
+  box-shadow:var(--shadow-card);
+  max-height:calc(100vh - 110px);overflow-y:auto;scrollbar-width:thin;
+}
+@media(min-width:1120px){.side-nav{display:block;left:calc(50% - 516px);}}
+@media(min-width:1280px){.side-nav{left:calc(50% - 548px);}}
+.side-nav .snt{
+  font-family:var(--font-head);font-weight:800;font-size:11px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);
+  padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;
+}
+.side-nav a{
+  display:block;padding:5px 14px;font-size:12px;font-weight:600;
+  color:var(--text-secondary);text-decoration:none;
+  border-left:3px solid transparent;transition:all .15s;line-height:1.3;
+}
+.side-nav a:hover{color:var(--navy);background:rgba(15,23,42,.04);}
+.side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+
+/* ---- MOBILE NAV DRAWER ---- */
+.mob-nav-btn{
+  display:flex;align-items:center;gap:8px;
+  position:fixed;bottom:20px;right:16px;z-index:200;
+  background:var(--navy);color:#fff;
+  font-family:var(--font-head);font-weight:700;font-size:13px;
+  padding:11px 18px;border-radius:50px;border:none;cursor:pointer;
+  box-shadow:0 4px 18px rgba(15,23,42,0.35);
+  transition:transform .15s;
+}
+.mob-nav-btn:hover{transform:translateY(-2px);}
+@media(min-width:1120px){.mob-nav-btn{display:none;}}
+
+.mob-nav-overlay{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(15,23,42,0.5);
+}
+.mob-nav-overlay.open{display:block;}
+
+.mob-nav-drawer{
+  position:fixed;bottom:0;left:0;right:0;z-index:400;
+  background:var(--bg-card);border-radius:22px 22px 0 0;
+  padding:20px 0 calc(env(safe-area-inset-bottom) + 24px);
+  transform:translateY(100%);transition:transform .28s cubic-bezier(.16,1,.3,1);
+  max-height:70vh;overflow-y:auto;scrollbar-width:thin;
+}
+.mob-nav-drawer.open{transform:translateY(0);}
+.mob-nav-drawer .drawer-title{
+  font-family:var(--font-head);font-weight:800;font-size:14px;
+  padding:0 20px 14px;border-bottom:1px solid var(--border);
+  margin-bottom:8px;color:var(--navy);
+}
+.mob-nav-drawer a{
+  display:block;padding:11px 20px;font-size:15px;font-weight:600;
+  color:var(--text-secondary);text-decoration:none;
+  border-bottom:1px solid var(--border);
+}
+.mob-nav-drawer a:last-child{border-bottom:none;}
+.mob-nav-drawer a:active{background:rgba(255,193,7,.1);}
+
+/* ---- TIME SCHEDULE STEPS ---- */
+.time-steps{list-style:none;padding:0;margin:18px 0;}
+.time-steps li{
+  display:grid;grid-template-columns:120px 1fr;gap:0;
+  border-bottom:1px solid var(--border);padding:10px 0;
+  font-size:16px;
+}
+.time-steps li:last-child{border-bottom:none;}
+.time-steps .t-time{font-family:var(--font-head);font-weight:700;color:var(--navy);font-size:14px;padding-right:14px;}
+.time-steps .t-act{color:var(--text);}
+@media(max-width:480px){
+  .time-steps li{grid-template-columns:1fr;gap:4px;}
+  .time-steps .t-time{font-size:12.5px;color:var(--text-secondary);}
+}
+
+/* ---- LUGGAGE CARDS ---- */
+.luggage-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+@media(min-width:600px){.luggage-grid{grid-template-columns:1fr 1fr;}}
+
+/* ---- ROUTE CARD ---- */
+.route-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-card);overflow:hidden;margin:20px 0;
+}
+.route-head{
+  padding:16px 20px;background:var(--navy);
+  display:flex;align-items:flex-start;gap:14px;
+}
+.route-num{
+  font-family:var(--font-head);font-weight:800;font-size:26px;
+  color:rgba(255,255,255,.2);flex:none;min-width:32px;line-height:1.1;
+}
+.route-titles{flex:1;}
+.route-name{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;display:block;}
+.route-sub{font-size:13px;color:rgba(255,255,255,.65);}
+.route-body{padding:18px 20px;}
+.route-body p{font-size:15.5px;margin-bottom:.9em;}
+.route-body p:last-child{margin-bottom:0;}
+
+/* ---- DECISION TREE (running late) ---- */
+.decision-grid{display:flex;flex-direction:column;gap:10px;margin:18px 0;}
+.dec-item{
+  display:grid;grid-template-columns:auto 1fr;gap:12px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:12px;padding:14px 16px;align-items:start;
+}
+.dec-time{
+  font-family:var(--font-head);font-weight:800;font-size:12px;
+  color:var(--navy);background:rgba(255,193,7,.18);
+  padding:3px 10px;border-radius:20px;white-space:nowrap;
+  height:fit-content;margin-top:2px;
+}
+.dec-text{font-size:15px;color:var(--text);}
+.dec-text strong{color:var(--navy);}
+
+/* ---- BUDGET SECTION ---- */
+.budget-tier{margin:18px 0;}
+.budget-tier-head{
+  font-family:var(--font-head);font-weight:800;font-size:17px;
+  color:var(--navy);margin-bottom:10px;
+  display:flex;align-items:center;gap:10px;
+}
+.budget-badge{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;
+}
+.badge-budget{background:rgba(22,163,74,.12);color:var(--success);}
+.badge-mid{background:rgba(37,99,235,.12);color:var(--info);}
+.badge-premium{background:rgba(124,58,237,.12);color:var(--purple);}
+
+/* ---- FINAL REC CARDS ---- */
+.final-recs{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0;}
+@media(min-width:600px){.final-recs{grid-template-columns:1fr 1fr;}}
+.rec-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:14px;
+  padding:18px 20px;
+}
+.rec-card .rc-label{
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  color:var(--text-secondary);margin-bottom:8px;
+}
+.rec-card .rc-route{font-family:var(--font-head);font-weight:700;font-size:14.5px;color:var(--navy);line-height:1.45;}
+
+/* ---- ARTICLE SECTION IMAGE ---- */
+.section-img{
+  width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;
+  margin:20px 0 12px;box-shadow:0 4px 18px rgba(15,23,42,.1);
+}
+.img-credit{font-size:12px;color:var(--text-secondary);margin-bottom:24px;text-align:center;}
+
+/* ---- SCROLLING ---- */
+[id]{scroll-margin-top:82px;}
+</style>
+</head>
+<body>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- MOBILE NAV DRAWER -->
+<button class="mob-nav-btn" id="mobNavBtn" aria-label="Jump to section" aria-expanded="false">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  Contents
+</button>
+<div class="mob-nav-overlay" id="mobOverlay"></div>
+<div class="mob-nav-drawer" id="mobDrawer" role="dialog" aria-modal="true" aria-label="Page contents">
+  <div class="drawer-title">Jump to Section</div>
+  <a href="#understand-station">Penn Station Basics</a>
+  <a href="#luggage">Luggage Options</a>
+  <a href="#midtown-itinerary">Midtown Itinerary</a>
+  <a href="#route-options">Seven Route Options</a>
+  <a href="#which-route">Choose Your Route</a>
+  <a href="#getting-around">Getting Around</a>
+  <a href="#return-strategy">Return Strategy</a>
+  <a href="#common-mistakes">Common Mistakes</a>
+  <a href="#budget">Budget Guide</a>
+  <a href="#faq">FAQ</a>
+  <a href="#final-recommendation">Final Picks</a>
+</div>
+
+<!-- DESKTOP SIDE NAV -->
+<nav class="side-nav" id="sideNav" aria-label="Page sections">
+  <div class="snt">On This Page</div>
+  <a href="#understand-station">Penn Station Basics</a>
+  <a href="#luggage">Luggage Options</a>
+  <a href="#midtown-itinerary">Midtown Itinerary</a>
+  <a href="#route-options">Route Options</a>
+  <a href="#which-route">Choose Your Route</a>
+  <a href="#getting-around">Getting Around</a>
+  <a href="#return-strategy">Return Strategy</a>
+  <a href="#common-mistakes">Common Mistakes</a>
+  <a href="#budget">Budget &amp; FAQ</a>
+  <a href="#final-recommendation">Final Picks</a>
+</nav>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<main class="read">
+  <article>
+    <div class="article-head">
+      <span class="cat-pill">NYC Itineraries</span>
+      <h1>NYC From 10&nbsp;AM to 8&nbsp;PM From Penn Station: The Best One-Day Itinerary</h1>
+      <div class="article-meta">
+        <span>A practical guide for travelers arriving at Penn Station or Moynihan Train Hall and leaving on an 8&nbsp;PM train</span>
+      </div>
+    </div>
+
+    <img class="article-hero-img" src="NYC in onde day from penn station_cover.png" alt="NYC one day itinerary from Penn Station — what to do between 10 AM and 8 PM">
+
+    <div class="article-body">
+
+      <p>The easiest way to ruin a short day in New York is to believe you have ten full sightseeing hours. You do not.</p>
+      <p>You have a city arrival, a station exit, perhaps luggage to deal with, subway decisions, crosswalks, queues, meals, bathroom stops, wrong turns, and a hard deadline at the end of the day. Once all of that is accounted for, you have roughly six useful hours&mdash;and that is still plenty of time to have a genuinely excellent day in Manhattan.</p>
+      <p>The secret is choosing one geographical story and sticking to it. Do Midtown properly, walk Chelsea and the High Line, explore Lower Manhattan, visit one museum, or cross the Brooklyn Bridge. You can have a memorable day. Try to combine all five and New York will reduce your itinerary to a series of escalators, turnstiles, and increasingly anxious glances at your phone.</p>
+      <p>This guide is built for the traveler arriving around 10&nbsp;AM at Penn Station or Moynihan Train Hall and needing to be back for an 8&nbsp;PM departure. It covers luggage, seven route options, transport, the return strategy, and what to skip.</p>
+
+      <!-- BUCKET LIST MAP CTA -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Plan Smarter</div>
+        <h4>Get the Ultimate NYC Bucket List Map</h4>
+        <p>Hidden gems, observation decks, best pizza spots, Christmas locations&mdash;all saved directly into Google Maps so you can navigate like a local from day one.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:8px;">
+          <li style="background:rgba(255,255,255,0.08);border-radius:8px;padding:5px 12px;font-size:13.5px;color:rgba(255,255,255,0.85);">&#10003; Hidden gems</li>
+          <li style="background:rgba(255,255,255,0.08);border-radius:8px;padding:5px 12px;font-size:13.5px;color:rgba(255,255,255,0.85);">&#10003; Food hotspots</li>
+          <li style="background:rgba(255,255,255,0.08);border-radius:8px;padding:5px 12px;font-size:13.5px;color:rgba(255,255,255,0.85);">&#10003; Observation decks</li>
+          <li style="background:rgba(255,255,255,0.08);border-radius:8px;padding:5px 12px;font-size:13.5px;color:rgba(255,255,255,0.85);">&#10003; Christmas spots</li>
+          <li style="background:rgba(255,255,255,0.08);border-radius:8px;padding:5px 12px;font-size:13.5px;color:rgba(255,255,255,0.85);">&#10003; Works in Google Maps</li>
+        </ul>
+        <a class="btn btn-primary" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get My NYC Map</a>
+      </div>
+
+      <!-- QUICK ANSWER -->
+      <h2 id="quick-answer">The Short Answer</h2>
+      <p>The best all-around plan for most first-time visitors is:</p>
+
+      <ul class="time-steps">
+        <li><span class="t-time">10:00&ndash;10:45 AM</span><span class="t-act">Exit the station, use the restroom, store luggage if necessary</span></li>
+        <li><span class="t-time">10:45 AM&ndash;1:00 PM</span><span class="t-act">Bryant Park, New York Public Library, Grand Central Terminal, or the Empire State Building area</span></li>
+        <li><span class="t-time">1:00&ndash;2:00 PM</span><span class="t-act">Lunch</span></li>
+        <li><span class="t-time">2:00&ndash;4:30 PM</span><span class="t-act">Choose one major attraction or neighborhood</span></li>
+        <li><span class="t-time">4:30&ndash;5:30 PM</span><span class="t-act">Return gradually toward Penn Station</span></li>
+        <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Early dinner near the station</span></li>
+        <li><span class="t-time">6:45 PM</span><span class="t-act">Be inside Moynihan or Penn, ready for the final boarding process</span></li>
+      </ul>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Key Rule
+        </div>
+        <p>For most travelers, I recommend Midtown, Chelsea, or the High Line. They offer the best balance of iconic New York scenery, manageable travel, food, bathrooms, and a low risk of ending the day on the wrong side of town.</p>
+        <p>If your train leaves at 8&nbsp;PM, treat 7&nbsp;PM as your personal arrival deadline&mdash;not 7:45. Amtrak recommends arriving 30 minutes before departure and 60 minutes early if you need baggage or ticketing assistance. Gates are often posted only about 15 minutes before departure, so waiting near the correct concourse matters more than standing beside a giant departure board. <a href="https://www.amtrak.com/stations/nyp" target="_blank" rel="noopener">amtrak.com</a></p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- UNDERSTAND THE STATION -->
+      <h2 id="understand-station">First: Understand Penn Station</h2>
+      <p>"Penn Station" is not one neat building in the way many visitors imagine. The complex stretches beneath and around Seventh and Eighth Avenues. Moynihan Train Hall occupies the old Farley Post Office across Eighth Avenue, with its main entrance on West 31st Street. Amtrak uses Moynihan as its principal passenger hall, while NJ Transit and Long Island Rail Road use other parts of the larger station complex. Some tracks and concourses are shared. <a href="https://www.amtrak.com/new-york-penn-station" target="_blank" rel="noopener">amtrak.com</a></p>
+
+      <p>The practical version is simple:</p>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Amtrak</div>
+          <h4>Moynihan Train Hall</h4>
+          <p>Expect to spend your final waiting time in Moynihan, across Eighth Avenue on West 31st Street.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">NJ Transit</div>
+          <h4>Seventh Avenue Concourse</h4>
+          <p>Use the NJ Transit concourse around Seventh Avenue&mdash;not Moynihan.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">LIRR</div>
+          <h4>Follow LIRR Signs</h4>
+          <p>Follow Long Island Rail Road signs rather than assuming Moynihan is your destination.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Important</div>
+          <h4>Confirm Your Railroad First</h4>
+          <p>Do not leave based only on the words "Penn Station." Confirm your railroad and concourse before heading outside.</p>
+        </div>
+      </div>
+
+      <p>Moynihan is open roughly 5&nbsp;AM to 1&nbsp;AM. The LIRR concourse operates around the clock, although individual entrances and businesses have different hours. <a href="https://www.mta.info/stations/penn-station" target="_blank" rel="noopener">mta.info</a></p>
+
+      <h3>Give Yourself a Station Buffer</h3>
+      <p>A realistic first 45 minutes looks like this:</p>
+      <ul class="time-steps">
+        <li><span class="t-time">10:00&ndash;10:10</span><span class="t-act">Leave the train and orient yourself</span></li>
+        <li><span class="t-time">10:10&ndash;10:20</span><span class="t-act">Find a restroom and refill water</span></li>
+        <li><span class="t-time">10:20&ndash;10:35</span><span class="t-act">Collect yourself, check the return train, decide on luggage</span></li>
+        <li><span class="t-time">10:35&ndash;10:45</span><span class="t-act">Exit toward the correct avenue</span></li>
+      </ul>
+      <p>If you arrive early, wonderful&mdash;you have gained flexibility. If you arrive late, skip the station wandering. New York is waiting outside.</p>
+
+      <hr class="divider-rule">
+
+      <!-- LUGGAGE -->
+      <h2 id="luggage">What to Do With Luggage</h2>
+      <p>Luggage is the first major decision because it determines how freely you can move throughout the day.</p>
+
+      <div class="luggage-grid">
+        <div class="card">
+          <div class="card-tag">Option 1</div>
+          <h4>Amtrak Baggage Storage</h4>
+          <p>Amtrak provides temporary baggage storage at Moynihan for Amtrak passengers and, subject to availability, members of the public with valid photo ID. Listed rates are approximately $20 per item for Amtrak customers and $30 for the general public (up to 24 hours). <a href="https://www.amtrak.com/baggage-services" target="_blank" rel="noopener">amtrak.com</a></p>
+          <p>The cleanest option if you are on Amtrak and want a station-based solution. Confirm closing time before leaving your bags&mdash;storage hours can matter.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Option 2</div>
+          <h4>Pre-Booked Luggage Storage</h4>
+          <p>Commercial luggage-storage networks near Penn Station can be cheaper for several hours. Some locations advertise from a few dollars per bag, but the real price depends on the partner, service fees, insurance terms, and opening hours. <a href="https://bounce.com/luggage-storage/new-york/penn-station" target="_blank" rel="noopener">bounce.com</a></p>
+          <p>Use only if you have a confirmed reservation, a location open when you return, and enough time to collect bags before heading into the station.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Option 3</div>
+          <h4>Keep Your Luggage With You</h4>
+          <p>Reasonable for a small backpack or compact carry-on if you plan to stay close to Penn Station. A poor choice for the High Line, a full museum day, the Brooklyn Bridge, Lower Manhattan, or any itinerary involving multiple subway transfers.</p>
+          <p>Rolling luggage and New York sidewalks are not natural friends.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-mistake">
+        <div class="callout-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Common Mistake
+        </div>
+        <p>A luggage-storage reservation is useful; a luggage-storage scavenger hunt at 6:45&nbsp;PM is not. Book storage in advance, confirm opening hours include your return time, and always ask about closing time before leaving bags.</p>
+      </div>
+
+      <hr class="divider-rule">
+      <!-- MIDTOWN ITINERARY -->
+      <h2 id="midtown-itinerary">The Best All-Around Itinerary: Midtown Without the Panic</h2>
+      <p>This is the itinerary I would recommend to most first-time visitors. It gives you classic New York, excellent photo opportunities, several food options, indoor escape routes, and a comfortable return to Penn Station.</p>
+
+      <img class="section-img" src="https://images.unsplash.com/photo-1715303927070-ba14c412d6df?auto=format&fit=crop&w=1260&q=80" alt="Bryant Park and Midtown Manhattan skyline — classic New York in one day from Penn Station" loading="lazy">
+      <div class="img-credit">Bryant Park &mdash; Midtown&rsquo;s open-air living room with skyline views</div>
+
+      <div class="numbered-step">
+        <div class="num">1</div>
+        <div>
+          <h4>10:00&ndash;10:45 AM &mdash; Arrive, Reset, and Leave Cleanly</h4>
+          <p>Handle luggage, use the restroom, check your train status, and leave through the side of the station that best matches your first stop. If you are headed toward Bryant Park, Fifth Avenue, or Grand Central, aim for the Seventh Avenue side and walk east. If you are headed toward Chelsea or the High Line, use the Eighth Avenue side.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">2</div>
+        <div>
+          <h4>10:45 AM&ndash;12:15 PM &mdash; Bryant Park and the New York Public Library</h4>
+          <p>Walk east toward Bryant Park. It is one of the most efficient "New York in one hour" stops in Manhattan: skyline, office towers, fountains, trees, chairs, seasonal installations, and the rear facade of the New York Public Library all arrive together. The park sits between Fifth and Sixth Avenues from 40th to 42nd Streets, and its public restroom is open daily from 8&nbsp;AM to 10&nbsp;PM&mdash;unusually valuable in a train-deadline itinerary. <a href="https://bryantpark.org/the-park/hours-and-directions" target="_blank" rel="noopener">bryantpark.org</a></p>
+          <p>Step inside the Stephen A. Schwarzman Building if it is open and you want a quiet architectural break. Check current hours before treating it as a guaranteed stop. <a href="https://www.nypl.org/locations/schwarzman" target="_blank" rel="noopener">nypl.org</a></p>
+          <p>This is also the point where you decide whether you are an attraction person or a wandering person. For a major ticketed sight, continue toward the Empire State Building or Grand Central. For atmosphere, stay above ground and walk east.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">3</div>
+        <div>
+          <h4>12:15&ndash;1:15 PM &mdash; Grand Central Terminal</h4>
+          <p>Grand Central is worth visiting even if you are not taking a train there. Walk through the Main Concourse, look up at the celestial ceiling, and explore the surrounding halls without turning the visit into a museum assignment. The terminal is generally open from about 5:15&nbsp;AM until 2&nbsp;AM, although individual restaurants and shops keep their own hours. <a href="https://grandcentralterminal.com/visit/" target="_blank" rel="noopener">grandcentralterminal.com</a></p>
+          <p>The route is simple: Bryant Park to Grand Central is a pleasant walk east along 42nd Street. If the weather is poor, use the subway or limit the outdoor section.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">4</div>
+        <div>
+          <h4>1:15&ndash;2:15 PM &mdash; Lunch</h4>
+          <p>Choose food based on the next part of your day. <strong>Koreatown</strong> (just south on West 32nd Street) offers Korean and Asian food-court selection at Food Gallery 32. <a href="https://www.foodgallery32nyc.com/about-3-1" target="_blank" rel="noopener">foodgallery32nyc.com</a></p>
+          <p><strong>Eataly Flatiron</strong> at 200 Fifth Avenue is a polished market-style option, open from morning into the evening&mdash;a good choice if you intend to continue toward Madison Square Park or Chelsea. <a href="https://www.eataly.com/us_en/stores/nyc-flatiron" target="_blank" rel="noopener">eataly.com</a></p>
+          <p><strong>Los Tacos No. 1</strong> has a convenient location at 201 West 33rd Street for a quick classic meal near the station. <a href="https://www.lostacos1.com/location/penn-station/" target="_blank" rel="noopener">lostacos1.com</a></p>
+          <p>Do not spend an hour searching for the "perfect" New York lunch. Eat something excellent, reasonably fast, and geographically useful. For the best pizza recommendations near any of these areas, see our guide to the <a href="best-nyc-pizza-for-tourists.html">best NYC pizza for tourists</a>.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">5</div>
+        <div>
+          <h4>2:15&ndash;4:30 PM &mdash; Choose One Major Finish</h4>
+          <p>At this point, choose one:</p>
+          <div class="card-grid cols-2" style="margin-top:10px;">
+            <div class="card">
+              <h4>Empire State Building</h4>
+              <p>Best choice for one unmistakably iconic paid attraction. Reserve ahead, allow at least an hour, and remember that admission is time-dependent. Standard tickets commonly start around the mid-$40s before booking fees. <a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener">esbnyc.com</a></p>
+            </div>
+            <div class="card">
+              <h4>Flatiron and Madison Square Park</h4>
+              <p>Better if you want architecture, street life, and flexibility without committing to a timed ticket.</p>
+            </div>
+            <div class="card">
+              <h4>Museum of Modern Art</h4>
+              <p>Works well in bad weather. Advance online purchase is sensible because same-day access can be limited. <a href="https://www.moma.org/visit/" target="_blank" rel="noopener">moma.org</a></p>
+            </div>
+            <div class="card">
+              <h4>Fifth Avenue and Rockefeller Center</h4>
+              <p>No ticket required for the exterior. A flexible option that works well as a stroll between Bryant Park and a later stop.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">6</div>
+        <div>
+          <h4>4:30&ndash;5:30 PM &mdash; Begin the Return</h4>
+          <p>This is where a good day separates itself from a stressful one. Start walking west. If you are already near Midtown, you can take a slow route through Times Square&mdash;but do not make Times Square your final destination. It is a spectacular place to pass through and a terrible place to discover that your train departs in 25 minutes.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">7</div>
+        <div>
+          <h4>5:30&ndash;6:30 PM &mdash; Dinner Near Penn</h4>
+          <p>Stay within a few blocks of the station: Koreatown, Hudson Yards, Chelsea, or the restaurants around Seventh and Eighth Avenues. If you want an evening out near the Theater District, our guide to <a href="nyc-after-broadway.html">what to do after a Broadway show</a> covers the best dinner spots within walking distance of Penn Station.</p>
+          <p>If you want absolute simplicity, eat before returning to the station concourse. Station food is useful, but "we will just eat at the station" often becomes a hunt for seating and a restaurant that still has a manageable line.</p>
+        </div>
+      </div>
+
+      <div class="numbered-step">
+        <div class="num">8</div>
+        <div>
+          <h4>6:45&ndash;7:00 PM &mdash; Enter the Station</h4>
+          <p>Be at the correct station complex by this point. If you are on Amtrak, proceed toward Moynihan. If you are using NJ Transit or LIRR, follow that operator's signs. Check the departure board, find the relevant waiting area, and stay close enough to respond when the track or gate appears.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- ROUTE OPTIONS -->
+      <h2 id="route-options">Seven Route Options</h2>
+      <p>The Midtown itinerary above works for most people. But New York is a city built for individual preferences. Here are six alternatives, each built around a different kind of day.</p>
+
+      <!-- ROUTE 1: CHELSEA + HIGH LINE -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">1</div>
+          <div class="route-titles">
+            <span class="route-name">Chelsea and the High Line</span>
+            <span class="route-sub">Best for first-time visitors who want a stylish, photogenic day</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <ul class="time-steps" style="margin:0 0 14px;">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage</span></li>
+            <li><span class="t-time">10:45&ndash;11:30</span><span class="t-act">Walk west toward Chelsea</span></li>
+            <li><span class="t-time">11:30 AM&ndash;1:30 PM</span><span class="t-act">Chelsea Market and nearby streets</span></li>
+            <li><span class="t-time">1:30&ndash;3:30 PM</span><span class="t-act">High Line</span></li>
+            <li><span class="t-time">3:30&ndash;4:30 PM</span><span class="t-act">Hudson Yards or Little Island</span></li>
+            <li><span class="t-time">4:30&ndash;5:30 PM</span><span class="t-act">Return toward Penn</span></li>
+            <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Early dinner</span></li>
+            <li><span class="t-time">6:45 PM</span><span class="t-act">Station</span></li>
+          </ul>
+          <p>Chelsea Market at 75 Ninth Avenue generally operates from 7&nbsp;AM to 10&nbsp;PM, although individual vendors keep their own schedules. It is an ideal place to split up for food. <a href="https://www.chelseamarket.com/visit" target="_blank" rel="noopener">chelseamarket.com</a></p>
+          <img class="section-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/da/f1/9f/photo0jpg.jpg?w=1200&h=1200&s=1" alt="Chelsea Market interior — food halls, cafes, and artisan vendors in a landmark converted factory" loading="lazy">
+          <div class="img-credit">Chelsea Market &mdash; one of New York&rsquo;s best indoor food destinations</div>
+          <p>The High Line has multiple entrances around 14th, 16th, and 23rd Streets. Check the current map before setting out, particularly if anyone needs an elevator or accessible entrance. <a href="https://shop.thehighline.org/pages/find-us" target="_blank" rel="noopener">thehighline.org</a></p>
+          <p>The High Line is not a quick shortcut. It is a linear park with bottlenecks, crowds, stairs, and frequent pauses for photographs. Walk at a relaxed pace and leave before you feel finished. The return trip is part of the itinerary.</p>
+          <img class="section-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/92/81/32/photo1jpg.jpg?w=1200&h=1200&s=1" alt="The High Line elevated park in Chelsea — gardens and city views above Tenth Avenue" loading="lazy">
+          <div class="img-credit">The High Line &mdash; an elevated park with neighbourhood and river views above Tenth Avenue</div>
+          <div class="callout callout-tip" style="margin-top:14px;">
+            <div class="callout-title">Best for</div>
+            <p>First-time visitors, couples, travelers who want photos, people who prefer neighborhoods to museums, anyone who wants several food options in one place. Less suitable for large luggage or travelers with mobility limitations unless the route is planned around the available elevators.</p>
+          </div>
+        </div>
+      </div>
+
+      <img class="section-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/6a/d7/27/fb-img-1556736015619.jpg?w=1200&h=-1&s=1" alt="Grand Central Terminal interior — one of the best stops on a Penn Station one-day itinerary" loading="lazy">
+      <div class="img-credit">Grand Central Terminal &mdash; a must-see even if you are not catching a train here</div>
+
+      <!-- ROUTE 2: LOWER MANHATTAN -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">2</div>
+          <div class="route-titles">
+            <span class="route-name">Lower Manhattan and the 9/11 Memorial</span>
+            <span class="route-sub">For visitors who want history and emotional weight</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <ul class="time-steps" style="margin:0 0 14px;">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage</span></li>
+            <li><span class="t-time">10:45&ndash;11:15</span><span class="t-act">Subway to Lower Manhattan</span></li>
+            <li><span class="t-time">11:15 AM&ndash;12:00 PM</span><span class="t-act">Oculus and surrounding area</span></li>
+            <li><span class="t-time">12:00&ndash;1:00 PM</span><span class="t-act">9/11 Memorial</span></li>
+            <li><span class="t-time">1:00&ndash;2:00 PM</span><span class="t-act">Lunch</span></li>
+            <li><span class="t-time">2:00&ndash;3:30 PM</span><span class="t-act">Wall Street, Trinity Church, or Battery Park</span></li>
+            <li><span class="t-time">3:30&ndash;4:15 PM</span><span class="t-act">Return north</span></li>
+            <li><span class="t-time">4:15&ndash;5:30 PM</span><span class="t-act">Flexible Midtown buffer</span></li>
+            <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Dinner near Penn</span></li>
+            <li><span class="t-time">6:45 PM</span><span class="t-act">Station</span></li>
+          </ul>
+          <p>The 9/11 Memorial and Museum are not interchangeable. The outdoor memorial is easier to fit into a short day. The museum is a more substantial visit and should be treated as the principal attraction rather than something squeezed between four other stops. Check current hours and ticket arrangements before committing. <a href="https://www.911memorial.org/visit/visit-museum-1" target="_blank" rel="noopener">911memorial.org</a></p>
+          <p>The Oculus is visually impressive and conveniently connected to several subway lines. Battery Park is a worthwhile endpoint in good weather, but do not turn it into an attempt to fit the Statue of Liberty into the same afternoon.</p>
+          <div class="callout callout-mistake" style="margin-top:14px;">
+            <div class="callout-title">Do Not Attempt</div>
+            <p>9/11 Museum, Statue of Liberty ferry, Brooklyn Bridge, Wall Street, and Midtown dinner&mdash;all in one short day. The Statue of Liberty ferry requires advance planning, security, ferry timing, and a large block of the afternoon. Choose the memorial or the harbor. Do not make the harbor responsible for rescuing an overstuffed itinerary. <a href="https://www.nps.gov/stli/planyourvisit/index.htm" target="_blank" rel="noopener">nps.gov</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROUTE 3: CENTRAL PARK + MUSEUM -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">3</div>
+          <div class="route-titles">
+            <span class="route-name">Central Park and One Museum</span>
+            <span class="route-sub">For travelers who prefer one serious cultural attraction</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <p><strong>The Metropolitan Museum of Art</strong> is a wonderful museum, but not a casual one-hour stop. It is large, absorbing, and located far enough from Penn Station that transportation becomes part of the calculation. Current regular hours are generally 10&nbsp;AM to 5&nbsp;PM on Sunday, Monday, Tuesday, Thursday, and Saturday, with later hours on Friday; it is closed Wednesdays. <a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener">metmuseum.org</a></p>
+          <ul class="time-steps">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage</span></li>
+            <li><span class="t-time">10:45&ndash;11:30</span><span class="t-act">Subway or taxi north</span></li>
+            <li><span class="t-time">11:30 AM&ndash;2:30 PM</span><span class="t-act">Museum (choose two or three departments, not the whole thing)</span></li>
+            <li><span class="t-time">2:30&ndash;3:30 PM</span><span class="t-act">Lunch</span></li>
+            <li><span class="t-time">3:30&ndash;4:30 PM</span><span class="t-act">Central Park southern edge</span></li>
+            <li><span class="t-time">4:30&ndash;5:30 PM</span><span class="t-act">Return to Penn Station area</span></li>
+            <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Dinner near Penn</span></li>
+          </ul>
+          <p><strong>American Museum of Natural History</strong> is a better choice for families and travelers who prefer spectacle to fine art. Generally open daily from 10&nbsp;AM to 5:30&nbsp;PM. One practical caution: the 81st Street subway station is not accessible, so travelers who need step-free access should plan around the accessible 72nd Street station. <a href="https://www.amnh.org/plan-your-visit" target="_blank" rel="noopener">amnh.org</a></p>
+          <p><strong>Central Park without a museum</strong> is a good option for repeat visitors, exhausted travelers, families with children, or anyone who wants an unstructured afternoon. Take the subway to the southern edge, walk for 60&ndash;90 minutes, and return south before the afternoon gets late.</p>
+        </div>
+      </div>
+
+      <!-- ROUTE 4: BROOKLYN BRIDGE -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">4</div>
+          <div class="route-titles">
+            <span class="route-name">Brooklyn Bridge and DUMBO</span>
+            <span class="route-sub">The most cinematic route&mdash;and the easiest to underestimate</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <ul class="time-steps" style="margin:0 0 14px;">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage</span></li>
+            <li><span class="t-time">10:45&ndash;11:15</span><span class="t-act">Subway to Lower Manhattan</span></li>
+            <li><span class="t-time">11:15 AM&ndash;12:30 PM</span><span class="t-act">Walk across Brooklyn Bridge</span></li>
+            <li><span class="t-time">12:30&ndash;2:00 PM</span><span class="t-act">DUMBO lunch and photographs</span></li>
+            <li><span class="t-time">2:00&ndash;3:30 PM</span><span class="t-act">Brooklyn Bridge Park</span></li>
+            <li><span class="t-time">3:30&ndash;4:30 PM</span><span class="t-act">Return to Manhattan</span></li>
+            <li><span class="t-time">4:30&ndash;5:30 PM</span><span class="t-act">Midtown buffer</span></li>
+            <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Dinner near Penn</span></li>
+            <li><span class="t-time">6:45 PM</span><span class="t-act">Station</span></li>
+          </ul>
+          <p>The bridge is busy, exposed, and more physically demanding than its postcard image suggests. The pedestrian promenade is shared with cyclists, and the bridge carries heavy traffic below. <a href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml" target="_blank" rel="noopener">nyc.gov</a></p>
+          <p>Once across, continue into DUMBO and Brooklyn Bridge Park rather than turning around immediately. Pier 2 offers restrooms, water fountains, lockers, picnic areas, and accessible facilities. <a href="https://brooklynbridgepark.org/about/faqs/" target="_blank" rel="noopener">brooklynbridgepark.org</a></p>
+          <div class="callout callout-local" style="margin-top:14px;">
+            <div class="callout-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Local Note
+            </div>
+            <p>This route is excellent in clear weather and unpleasant in strong wind, heavy rain, or extreme heat. It also leaves less room for a delayed subway or a long lunch. Check the weather before committing.</p>
+          </div>
+        </div>
+      </div>
+
+      <img class="section-img" src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=1260&q=80" alt="Brooklyn Bridge on a clear day — one of the best one-day routes from Penn Station" loading="lazy">
+      <div class="img-credit">Brooklyn Bridge &mdash; cinematic, memorable, and a full half-day in itself</div>
+
+      <img class="section-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/52/ce/26/brooklyn-bridge-park.jpg?w=1200&h=1200&s=1" alt="Brooklyn Bridge Park waterfront — green lawns and Manhattan skyline views from DUMBO" loading="lazy">
+      <div class="img-credit">Brooklyn Bridge Park &mdash; waterfront lawns and Manhattan skyline views in DUMBO</div>
+
+      <!-- ROUTE 5: FOOD FIRST -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">5</div>
+          <div class="route-titles">
+            <span class="route-name">Food-First New York</span>
+            <span class="route-sub">Some travelers are not trying to see the city. They are trying to eat it.</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <ul class="time-steps" style="margin:0 0 14px;">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage</span></li>
+            <li><span class="t-time">10:45&ndash;11:30</span><span class="t-act">Koreatown breakfast or early snack</span></li>
+            <li><span class="t-time">11:30 AM&ndash;1:00 PM</span><span class="t-act">Midtown wandering</span></li>
+            <li><span class="t-time">1:00&ndash;2:00 PM</span><span class="t-act">Lunch in Koreatown, Chelsea Market, or Eataly</span></li>
+            <li><span class="t-time">2:00&ndash;4:00 PM</span><span class="t-act">Flatiron, Union Square, or Chelsea</span></li>
+            <li><span class="t-time">4:00&ndash;5:00 PM</span><span class="t-act">Coffee and dessert</span></li>
+            <li><span class="t-time">5:00&ndash;6:30 PM</span><span class="t-act">Early dinner near Penn</span></li>
+            <li><span class="t-time">6:45 PM</span><span class="t-act">Station</span></li>
+          </ul>
+          <div class="card-grid cols-2">
+            <div class="card">
+              <div class="card-tag">Koreatown (K-Town)</div>
+              <p>Korean barbecue, noodles, dumplings, and quick meals on West 32nd Street. Convenient to Penn Station.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Chelsea Market</div>
+              <p>Variety for the whole group. Best if you continue to the High Line afterward.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Flatiron / Eataly</div>
+              <p>Polished restaurants and the famous Italian food hall at 200 Fifth Avenue.</p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Hudson Yards</div>
+              <p>A convenient final meal close to the station before your train.</p>
+            </div>
+          </div>
+          <p>Food-first itineraries are underrated because they remove the pressure to turn every block into an attraction. New York is often most memorable when the plan is simply "walk until hungry, then eat somewhere good." For the best pizza in the city, see our guide to the <a href="best-nyc-pizza-for-tourists.html">best NYC pizza for tourists</a>.</p>
+        </div>
+      </div>
+
+      <!-- ROUTE 6: BAD WEATHER -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">6</div>
+          <div class="route-titles">
+            <span class="route-name">Bad-Weather New York</span>
+            <span class="route-sub">Rain does not ruin New York. A bad route does.</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <p>Use indoor anchors that sit close enough together to avoid repeated exposure:</p>
+          <div class="card-grid cols-2">
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Moynihan Train Hall</strong> &mdash; impressive modern architecture worth a slow look</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Koreatown</strong> &mdash; indoor food options just south of Penn</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Macy's Herald Square</strong> &mdash; massive indoor shopping if needed</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>New York Public Library</strong> &mdash; architectural gem, free to enter</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Grand Central Terminal</strong> &mdash; entirely indoors, beautiful, and central</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Museum of Modern Art</strong> &mdash; full day anchor for serious art lovers</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Chelsea Market</strong> &mdash; indoor food hall, warm and varied</p></div>
+            <div class="card"><p style="margin:0;font-size:15px;"><strong>Eataly Flatiron</strong> &mdash; open morning to evening</p></div>
+          </div>
+          <p>The best bad-weather route: lunch in Koreatown &rarr; New York Public Library or Bryant Park &rarr; Grand Central Terminal &rarr; one museum or indoor attraction &rarr; early dinner near Penn.</p>
+          <p>Skip the Brooklyn Bridge and the High Line in serious rain. A light drizzle can be atmospheric. Wind-driven rain turns both into endurance events.</p>
+        </div>
+      </div>
+
+      <!-- ROUTE 7: MINIMAL WALKING -->
+      <div class="route-card">
+        <div class="route-head">
+          <div class="route-num">7</div>
+          <div class="route-titles">
+            <span class="route-name">Minimal Walking</span>
+            <span class="route-sub">New York rewards walking, but you do not have to prove anything.</span>
+          </div>
+        </div>
+        <div class="route-body">
+          <ul class="time-steps" style="margin:0 0 14px;">
+            <li><span class="t-time">10:00&ndash;10:45</span><span class="t-act">Station and luggage (store immediately)</span></li>
+            <li><span class="t-time">10:45&ndash;11:15</span><span class="t-act">Taxi or subway to Grand Central</span></li>
+            <li><span class="t-time">11:15 AM&ndash;12:15 PM</span><span class="t-act">Grand Central at a relaxed pace</span></li>
+            <li><span class="t-time">12:15&ndash;1:15 PM</span><span class="t-act">Seated lunch</span></li>
+            <li><span class="t-time">1:30&ndash;3:30 PM</span><span class="t-act">Museum or Empire State Building</span></li>
+            <li><span class="t-time">3:30&ndash;4:30 PM</span><span class="t-act">Cafe break</span></li>
+            <li><span class="t-time">4:30&ndash;5:30 PM</span><span class="t-act">Return to Penn</span></li>
+            <li><span class="t-time">5:30&ndash;6:30 PM</span><span class="t-act">Dinner</span></li>
+            <li><span class="t-time">6:45 PM</span><span class="t-act">Station</span></li>
+          </ul>
+          <div class="callout callout-local">
+            <div class="callout-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Accessibility Note
+            </div>
+            <p>For a low-walking day: store luggage immediately, use the subway or a taxi to move between neighborhoods, choose one major indoor attraction, build in seated breaks, and keep the final meal near Penn. The 7th Avenue and 33rd Street accessibility improvements make the Penn area easier to navigate, but the broader complex remains large. Check MTA current accessibility information before relying on a specific elevator or entrance. <a href="https://www.mta.info/press-release/mta-unveils-major-accessibility-and-circulation-improvements-34-st-penn-station" target="_blank" rel="noopener">mta.info</a></p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- WHICH ROUTE TO CHOOSE -->
+      <h2 id="which-route">Which Route Should You Choose?</h2>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>If You Want&hellip;</th>
+              <th>Choose&hellip;</th>
+              <th>Main Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Classic New York</td><td>Midtown and Grand Central</td><td>Spending too long shopping</td></tr>
+            <tr><td>Photos and atmosphere</td><td>Chelsea and the High Line</td><td>Crowds and walking</td></tr>
+            <tr><td>History</td><td>Lower Manhattan and the 9/11 Memorial</td><td>Overcommitting to the Statue of Liberty</td></tr>
+            <tr><td>Culture</td><td>One museum and Central Park</td><td>Underestimating museum size</td></tr>
+            <tr><td>A movie-like day</td><td>Brooklyn Bridge and DUMBO</td><td>Weather and return time</td></tr>
+            <tr><td>Food</td><td>Koreatown, Chelsea Market, or Flatiron</td><td>Queues</td></tr>
+            <tr><td>Minimal walking</td><td>Midtown indoor itinerary</td><td>Losing the feeling of discovery</td></tr>
+            <tr><td>Rain-proof sightseeing</td><td>Museums, Grand Central, Chelsea Market</td><td>Indoor crowds</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Realistically Fits in One Day?</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Combination</th><th>Realistic?</th><th>Verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bryant Park + Grand Central + Koreatown</td><td>Yes</td><td>Excellent</td></tr>
+            <tr><td>Chelsea Market + High Line + Hudson Yards</td><td>Yes</td><td>Excellent</td></tr>
+            <tr><td>Brooklyn Bridge + DUMBO + Brooklyn Bridge Park</td><td>Yes</td><td>Strong</td></tr>
+            <tr><td>9/11 Memorial + Wall Street + Battery Park</td><td>Yes</td><td>Strong</td></tr>
+            <tr><td>One museum + Central Park</td><td>Yes</td><td>Good</td></tr>
+            <tr><td>Empire State Building + Bryant Park + Grand Central</td><td>Yes</td><td>Good</td></tr>
+            <tr><td>Statue of Liberty + Lower Manhattan + Midtown</td><td>Barely</td><td>Not recommended</td></tr>
+            <tr><td>Met + Natural History Museum</td><td>No</td><td>Choose one</td></tr>
+            <tr><td>Brooklyn Bridge + High Line + Empire State Building</td><td>Technically possible</td><td>Bad idea</td></tr>
+            <tr><td>Times Square + Central Park + Chelsea + Brooklyn</td><td>No</td><td>Geography has won</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Planning More Days?
+        </div>
+        <p>Arriving by air rather than Amtrak? Our guide to getting from <a href="jfk-to-manhattan.html">JFK to Manhattan</a> covers every transport option, including cost, time, and which one to choose with luggage. For a general-purpose NYC day with full subway guidance, see our <a href="nyc-in-one-day-itinerary.html">NYC in one day itinerary</a>.</p>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- GETTING AROUND -->
+      <h2 id="getting-around">Subway, Taxi, or Walking?</h2>
+      <p>The subway is often the fastest option, but it is not always the easiest option with luggage or unfamiliar travelers. The standard subway and local bus fare is currently $3. Express buses cost more. Use the MTA's current trip planner and service alerts immediately before leaving the station. <a href="https://www.mta.info/fares-tolls" target="_blank" rel="noopener">mta.info</a></p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Walk When</div>
+          <ul class="plain" style="font-size:15px;margin:0;padding-left:18px;">
+            <li>Destination is within 20&ndash;25 minutes</li>
+            <li>You have no luggage</li>
+            <li>Weather is comfortable</li>
+            <li>Moving east or west across Midtown</li>
+            <li>The walk itself is part of the experience</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Take the Subway When</div>
+          <ul class="plain" style="font-size:15px;margin:0;padding-left:18px;">
+            <li>Moving between Midtown and Lower Manhattan</li>
+            <li>Traveling uptown to a museum</li>
+            <li>Crossing several avenues</li>
+            <li>You have a firm timetable</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Take a Taxi or Rideshare When</div>
+          <ul class="plain" style="font-size:15px;margin:0;padding-left:18px;">
+            <li>Traveling with multiple bags</li>
+            <li>Several people splitting the fare</li>
+            <li>Running late</li>
+            <li>Weather is poor</li>
+            <li>Need a direct route to Penn Station</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Local Tip</div>
+          <p style="font-size:15px;margin:0;">A taxi is not a failure of New York travel. It is a useful tool when the city has already given you enough walking. Pay with a card&mdash;NYC taxis accept contactless and chip payments.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- RETURN STRATEGY -->
+      <h2 id="return-strategy">The Return-to-Penn Strategy</h2>
+      <p>The return journey deserves its own plan. It is not the final five minutes of the itinerary&mdash;it is one of the day's major movements.</p>
+
+      <h3>If Your Train Leaves at 8 PM</h3>
+      <ul class="time-steps">
+        <li><span class="t-time">By 6:00 PM</span><span class="t-act">Within 20 minutes of Penn Station</span></li>
+        <li><span class="t-time">5:30&ndash;6:00 PM</span><span class="t-act">Eating dinner near the station</span></li>
+        <li><span class="t-time">6:45&ndash;7:00 PM</span><span class="t-act">Inside the station complex</span></li>
+        <li><span class="t-time">By 7:15 PM</span><span class="t-act">At the correct waiting area</span></li>
+      </ul>
+      <p>You may not need all that time. That is the point. A delayed train, a crowded subway platform, a closed entrance, a forgotten bag, or a long security line can consume 30 minutes without asking permission.</p>
+
+      <h3>Check the Operator, Not Just the Station</h3>
+      <div class="card-grid cols-2">
+        <div class="card"><p style="margin:0;font-size:15px;"><strong>Amtrak</strong> &mdash; Amtrak departure information for your train</p></div>
+        <div class="card"><p style="margin:0;font-size:15px;"><strong>NJ Transit</strong> &mdash; DepartureVision for NJ Transit</p></div>
+        <div class="card"><p style="margin:0;font-size:15px;"><strong>Long Island Rail Road</strong> &mdash; MTA TrainTime</p></div>
+        <div class="card"><p style="margin:0;font-size:15px;"><strong>Subway</strong> &mdash; MTA service alerts for disruptions before heading back</p></div>
+      </div>
+      <p>Do not rely on an old screenshot of a departure board. Track numbers and boarding information can change.</p>
+
+      <h3>The Running-Late Decision Tree</h3>
+      <div class="decision-grid">
+        <div class="dec-item">
+          <div class="dec-time">4:30 PM &mdash; Midtown</div>
+          <div class="dec-text"><strong>You are fine.</strong> Walk west or take one direct subway trip toward Penn. Skip any new attraction.</div>
+        </div>
+        <div class="dec-item">
+          <div class="dec-time">5:00 PM &mdash; Chelsea</div>
+          <div class="dec-text"><strong>You are fine.</strong> Leave the High Line and return directly. Dinner should be near Penn or on the way.</div>
+        </div>
+        <div class="dec-item">
+          <div class="dec-time">5:00 PM &mdash; Lower Manhattan</div>
+          <div class="dec-text"><strong>Take the subway north immediately.</strong> Do not add Battery Park, a ferry, or another viewpoint.</div>
+        </div>
+        <div class="dec-item">
+          <div class="dec-time">5:00 PM &mdash; Brooklyn</div>
+          <div class="dec-text"><strong>Return across the bridge only if you are already at the Manhattan end.</strong> Otherwise take the subway. Do not wait for the perfect sunset photograph.</div>
+        </div>
+        <div class="dec-item">
+          <div class="dec-time">6:15 PM &mdash; Luggage uncollected</div>
+          <div class="dec-text"><strong>Collect it now.</strong> Food comes second.</div>
+        </div>
+        <div class="dec-item">
+          <div class="dec-time">6:45 PM &mdash; Outside Penn</div>
+          <div class="dec-text"><strong>You have recovered the day.</strong> Enter the station, locate the correct concourse, and stop sightseeing.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- COMMON MISTAKES -->
+      <h2 id="common-mistakes">Common Mistakes That Cost Travelers Their Trains</h2>
+
+      <div class="numbered-step">
+        <div class="num">1</div>
+        <div>
+          <h4>Treating Penn Station as a Single Building</h4>
+          <p>It is a connected complex with different railroad operators and multiple entrances. Confirm your railroad and concourse before leaving.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">2</div>
+        <div>
+          <h4>Assuming All Luggage Storage Is Open Late</h4>
+          <p>Confirm the closing time before leaving bags. Storage availability, baggage-desk hours, and Red Cap assistance are separate matters with different schedules.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">3</div>
+        <div>
+          <h4>Starting With a Faraway Attraction</h4>
+          <p>Do not make the first activity the Statue of Liberty, a distant museum, or Brooklyn unless you are prepared to spend much of the day in transit.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">4</div>
+        <div>
+          <h4>Scheduling a Major Attraction at 10 AM</h4>
+          <p>You may not even be out of the station by 10:30. Build the first hour around arrival friction, not a timed-entry ticket you cannot use if you are late.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">5</div>
+        <div>
+          <h4>Eating Only at Peak Hours</h4>
+          <p>A 1&nbsp;PM restaurant queue can quietly destroy an afternoon. Eat at 11:30&nbsp;AM, 2&nbsp;PM, or 5&nbsp;PM when possible.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">6</div>
+        <div>
+          <h4>Leaving the Return Trip Until the End</h4>
+          <p>The return trip is not the final five minutes of the itinerary. It is one of the day's major movements. Plan for it the same way you plan your morning stop.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">7</div>
+        <div>
+          <h4>Overestimating Times Square as a Route</h4>
+          <p>Times Square is close to Penn, but crowds make it slow. Treat it as a pass-through sight, not a transportation shortcut when you are running late.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">8</div>
+        <div>
+          <h4>Trusting a "Quick" Museum Visit</h4>
+          <p>The building may be close. The entry line, security, ticket desk, elevator, and first exhibit are not always quick. Add at least 30 minutes to any museum estimate.</p>
+        </div>
+      </div>
+      <div class="numbered-step">
+        <div class="num">9</div>
+        <div>
+          <h4>Trying to See Everything</h4>
+          <p>This is the biggest mistake. New York is not improved by being experienced at double speed. Choose one story and tell it well.</p>
+        </div>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- BUDGET -->
+      <h2 id="budget">A Realistic Budget</h2>
+      <p>Your spending depends heavily on luggage and ticketed attractions.</p>
+
+      <div class="budget-tier">
+        <div class="budget-tier-head"><span class="budget-badge badge-budget">Lower-Cost Day</span></div>
+        <div class="card">
+          <ul class="plain" style="font-size:15.5px;padding-left:18px;">
+            <li>Subway: a few dollars each way</li>
+            <li>Bryant Park and Grand Central: free</li>
+            <li>Casual lunch: approximately $15&ndash;25</li>
+            <li>Dinner near Penn: approximately $20&ndash;35</li>
+            <li>Luggage storage: roughly $20 per item at Amtrak (eligible customers) or less through a commercial partner</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="budget-tier">
+        <div class="budget-tier-head"><span class="budget-badge badge-mid">Mid-Range Day</span></div>
+        <div class="card">
+          <ul class="plain" style="font-size:15.5px;padding-left:18px;">
+            <li>Subway or occasional taxi</li>
+            <li>One paid attraction</li>
+            <li>Sit-down lunch</li>
+            <li>Coffee and a snack</li>
+            <li>Dinner</li>
+          </ul>
+          <p style="margin:12px 0 0;font-size:15px;"><strong>Plan on approximately $100&ndash;175 per person</strong>, excluding shopping and long-distance rail tickets.</p>
+        </div>
+      </div>
+
+      <div class="budget-tier">
+        <div class="budget-tier-head"><span class="budget-badge badge-premium">Premium Day</span></div>
+        <div class="card">
+          <ul class="plain" style="font-size:15.5px;padding-left:18px;">
+            <li>Taxi or rideshare between neighborhoods</li>
+            <li>Empire State Building or museum tickets</li>
+            <li>Full-service meals</li>
+            <li>Premium luggage arrangements</li>
+            <li>Cocktails or a rooftop stop</li>
+          </ul>
+          <p style="margin:12px 0 0;font-size:15px;"><strong>Plan on $200 or more per person.</strong> Ticket prices change by date, time, and package. Reserve only the attraction that truly matters to you.</p>
+        </div>
+      </div>
+
+      <!-- MID-ARTICLE CTA -->
+      <div class="cta-dark">
+        <div class="cta-eyebrow">Free Resource</div>
+        <h4>Never Miss a Hidden Gem in New York</h4>
+        <p>The NYC Bucket List Map covers observation decks, the best food spots, Christmas locations, and the hidden gems that do not appear in most travel guides&mdash;all saved directly into Google Maps.</p>
+        <a class="btn btn-primary" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get My NYC Map</a>
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+
+        <details class="faq-item">
+          <summary>Can I see the Statue of Liberty in this time window?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>You can see it from Battery Park or take a ferry if you plan very carefully. A full Statue of Liberty visit is not a casual add-on to an 8&nbsp;PM train day. The ferry, security, boarding, island time, and return journey consume a substantial block of the afternoon. Statue City Cruises is the authorized ferry provider, and the last departure often leaves far earlier than visitors expect. <a href="https://www.nps.gov/stli/planyourvisit/index.htm" target="_blank" rel="noopener">nps.gov</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is it better to store luggage at Penn Station or elsewhere?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Use Amtrak storage for convenience and certainty when available. Use a nearby commercial partner if the price and opening hours suit you. Do not choose a location several blocks away simply because it is a few dollars cheaper&mdash;time spent retrieving luggage across the city is not free.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I walk from Penn Station to Times Square?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Yes. It is close enough to walk, but the crowds make the route slower than the map suggests. It is a fine first or final stop, not a reason to abandon your return buffer. Treat Times Square as a pass-through, not a destination.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the Empire State Building worth it for a one-day visit?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Yes, if you want a single iconic observation deck and are willing to reserve a time. No, if you are already trying to fit a museum, Central Park, Chelsea, and Lower Manhattan into the same afternoon. Reserve in advance&mdash;same-day queues can be long and time-dependent tickets mean you cannot postpone if you are running late.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the High Line suitable for someone with limited mobility?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Parts of it are accessible, but the route includes crowds, changing entrance conditions, stairs, and elevator-dependent access. Check the current map and plan around accessible entrances before committing to this route. The minimal-walking route (Route 7) is a better starting point for travelers with mobility concerns.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which is better: Grand Central or Moynihan Train Hall?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Grand Central is the more historic and atmospheric visit. Moynihan is the more practical station for Amtrak travelers and has impressive modern architecture. If your train departs from Moynihan, arrive there early enough to enjoy it without turning boarding into a sprint.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the safest time to return to Penn Station for an 8 PM train?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>For an 8&nbsp;PM train, return to the station area by 6:45 or 7&nbsp;PM. Earlier is better if you have luggage, children, mobility concerns, or a ticketed train with a complicated boarding process. Amtrak recommends arriving at least 30 minutes before departure, and 60 minutes early if you need baggage or ticketing help.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I leave my luggage in a hotel?
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Only if the hotel agrees and you are a guest or have arranged a paid service. Never assume a hotel will store bags for a non-guest. Some hotels offer this as a courtesy for recent guests, but policies vary and it is never guaranteed.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <hr class="divider-rule">
+
+      <!-- FINAL RECOMMENDATION -->
+      <h2 id="final-recommendation">The Final Recommendation</h2>
+      <p>If this is your first short stop in New York, choose one of these four:</p>
+
+      <div class="final-recs">
+        <div class="rec-card">
+          <div class="rc-label">The Reliable Classic</div>
+          <div class="rc-route">Penn Station &rarr; Bryant Park &rarr; New York Public Library &rarr; Grand Central &rarr; Koreatown &rarr; Penn Station</div>
+        </div>
+        <div class="rec-card">
+          <div class="rc-label">The Best-Looking Day</div>
+          <div class="rc-route">Penn Station &rarr; Chelsea Market &rarr; High Line &rarr; Hudson Yards &rarr; Dinner near Penn</div>
+        </div>
+        <div class="rec-card">
+          <div class="rc-label">The Most Memorable Walk</div>
+          <div class="rc-route">Penn Station &rarr; Lower Manhattan &rarr; Brooklyn Bridge &rarr; DUMBO &rarr; Brooklyn Bridge Park &rarr; Penn Station</div>
+        </div>
+        <div class="rec-card">
+          <div class="rc-label">The Least Stressful Day</div>
+          <div class="rc-route">Penn Station &rarr; Luggage storage &rarr; One museum or major attraction &rarr; Early meal &rarr; Penn Station by 6:45&nbsp;PM</div>
+        </div>
+      </div>
+
+      <blockquote><p>My strongest advice is also the least glamorous: stop sightseeing before you think you need to. The best version of this day ends with you seated comfortably near your train, fed, organized, and slightly annoyed that you did not have another day in New York. That is a much better ending than running through Moynihan with a slice of pizza in one hand and a suitcase in the other.</p></blockquote>
+
+      <!-- RELATED ARTICLES -->
+      <div class="related-box">
+        <div class="rb-label">More NYC Planning</div>
+        <ul>
+          <li>
+            <a href="nyc-in-one-day-itinerary.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              NYC in One Day Without Spending the Whole Day on the Subway
+            </a>
+          </li>
+          <li>
+            <a href="jfk-to-manhattan.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              JFK to Manhattan: Every Transport Option Compared
+            </a>
+          </li>
+          <li>
+            <a href="best-nyc-pizza-for-tourists.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              Best NYC Pizza for Tourists: 17 Spots Worth the Wait
+            </a>
+          </li>
+          <li>
+            <a href="nyc-after-broadway.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              What to Do After a Broadway Show: Dinner and Late-Night NYC
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /article-body -->
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Continue Your NYC Planning</h3>
+    <p class="sub">More guides for first-time visitors to New York City.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="nyc-in-one-day-itinerary.html">
+        <div class="fc-title">NYC in One Day</div>
+        <div class="fc-sub">Six proven routes, timed to the minute</div>
+      </a>
+      <a class="footer-card" href="best-nyc-pizza-for-tourists.html">
+        <div class="fc-title">Best NYC Pizza</div>
+        <div class="fc-sub">17 spots worth the queue</div>
+      </a>
+      <a class="footer-card" href="jfk-to-manhattan.html">
+        <div class="fc-title">JFK to Manhattan</div>
+        <div class="fc-sub">Every transport option compared</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; EverythingInNYC. For visitors planning their first New York City trip.</span>
+      <a href="index.html">Back to all guides</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Progress bar
+function onScroll(){
+  var st=window.scrollY||document.documentElement.scrollTop;
+  var dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressFill').style.width=(dh>0?Math.min(100,Math.max(0,(st/dh)*100)):0)+'%';
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+// Sidebar scrollspy
+var secs=['quick-answer','understand-station','luggage','midtown-itinerary','route-options','which-route','getting-around','return-strategy','common-mistakes','budget','faq','final-recommendation'];
+var slinks=document.querySelectorAll('.side-nav a');
+function updateNav(){
+  var cur=secs[0];
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-140) cur=id;
+  });
+  slinks.forEach(function(a){
+    var href=a.getAttribute('href').replace('#','');
+    a.classList.toggle('sn-active',href===cur);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+
+// Mobile nav drawer
+var mobBtn=document.getElementById('mobNavBtn');
+var mobOverlay=document.getElementById('mobOverlay');
+var mobDrawer=document.getElementById('mobDrawer');
+function openDrawer(){
+  mobDrawer.classList.add('open');
+  mobOverlay.classList.add('open');
+  mobBtn.setAttribute('aria-expanded','true');
+  document.body.style.overflow='hidden';
+}
+function closeDrawer(){
+  mobDrawer.classList.remove('open');
+  mobOverlay.classList.remove('open');
+  mobBtn.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+mobBtn.addEventListener('click',function(){
+  mobDrawer.classList.contains('open')?closeDrawer():openDrawer();
+});
+mobOverlay.addEventListener('click',closeDrawer);
+mobDrawer.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',closeDrawer);
+});
+</script>
+</body>
+</html>
