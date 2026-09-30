@@ -7,13 +7,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZS2FTB88QP');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comparing NYC Observation Decks: Edge vs Top of the Rock vs Empire State Building | EverythingInNYC</title>
-<meta name="description" content="A firsthand comparison of Edge at Hudson Yards, Top of the Rock, and the Empire State Building, with timing tips, costs, and three ready-made one-day itineraries.">
+<meta name="description" content="Compare Edge, Top of the Rock, and the Empire State Building by views, height, crowds, weather, prices, and the best time to visit&mdash;plus SUMMIT and One World Observatory alternatives.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -39,10 +38,14 @@
     font-family:var(--font-head); font-weight:800; font-size:13.5px;
     padding:5px 11px; border-radius:20px; white-space:nowrap;
   }
-  .win-esb  { background:rgba(255,193,7,0.18); color:#7A5400; }
-  .win-rock { background:rgba(37,99,235,0.12); color:var(--info); }
-  .win-edge { background:rgba(15,23,42,0.1);   color:var(--navy); }
-  .win-tie  { background:rgba(22,163,74,0.12);  color:#15803D; }
+  .win-esb    { background:rgba(255,193,7,0.18);  color:#7A5400; }
+  .win-rock   { background:rgba(37,99,235,0.12);  color:var(--info); }
+  .win-edge   { background:rgba(15,23,42,0.1);    color:var(--navy); }
+  .win-tie    { background:rgba(22,163,74,0.12);  color:#15803D; }
+  .win-summit { background:rgba(168,85,247,0.12); color:#7C3AED; }
+  .win-owo    { background:rgba(6,182,212,0.12);  color:#0E7490; }
+  .win-free   { background:rgba(22,163,74,0.14);  color:#166534; }
+  .win-times  { background:rgba(239,68,68,0.12);  color:#B91C1C; }
 
   /* Skip-deck cards */
   .skip-grid {
@@ -120,29 +123,29 @@
   [id]{scroll-margin-top:95px;}
 
   /* Bucket List CTA */
-.bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
-.bc-icon{font-size:26px;flex:none;line-height:1;color:var(--accent);}
-.bc-body{flex:1;}
-.bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
-.bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
-.bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
-.bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
-.bc-btn:hover{opacity:.88;}
-.rec-strip{background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;margin:10px 0;display:flex;align-items:flex-start;gap:10px;}
-.rec-strip-label{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 8px;flex:none;margin-top:1px;white-space:nowrap;}
-[id]{scroll-margin-top:40px;}
+  .bucket-cta{background:linear-gradient(135deg,#0F172A 0%,#1e3a5f 100%);border-radius:16px;padding:20px 22px;margin:18px 0;display:flex;gap:16px;align-items:flex-start;}
+  .bc-icon{font-size:26px;flex:none;line-height:1;color:var(--accent);}
+  .bc-body{flex:1;}
+  .bc-label{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+  .bc-title{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;margin-bottom:6px;line-height:1.3;}
+  .bc-desc{font-size:13.5px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.6;}
+  .bc-btn{display:inline-block;background:var(--accent);color:var(--navy);font-family:var(--font-head);font-weight:800;font-size:13px;padding:8px 20px;border-radius:30px;text-decoration:none;transition:opacity .15s;}
+  .bc-btn:hover{opacity:.88;}
+  .rec-strip{background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;margin:10px 0;display:flex;align-items:flex-start;gap:10px;}
+  .rec-strip-label{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 8px;flex:none;margin-top:1px;white-space:nowrap;}
+  [id]{scroll-margin-top:40px;}
 </style>
 
-  <script>
-  (function (s, t, a, y, twenty, two) {
-    s.Stay22 = s.Stay22 || {};
-    s.Stay22.params = { lmaID: '6ab61efdbcf50f02cdd1e489' };
-    twenty = t.createElement(a);
-    two = t.getElementsByTagName(a)[0];
-    twenty.async = 1;
-    twenty.src = y;
-    two.parentNode.insertBefore(twenty, two);
-  })(window, document, 'script', 'https://scripts.stay22.com/letmeallez.js');
+<script>
+(function (s, t, a, y, twenty, two) {
+  s.Stay22 = s.Stay22 || {};
+  s.Stay22.params = { lmaID: '6ab61efdbcf50f02cdd1e489' };
+  twenty = t.createElement(a);
+  two = t.getElementsByTagName(a)[0];
+  twenty.async = 1;
+  twenty.src = y;
+  two.parentNode.insertBefore(twenty, two);
+})(window, document, 'script', 'https://scripts.stay22.com/letmeallez.js');
 </script>
 </head>
 <body>
@@ -157,10 +160,10 @@
     <a href="#edge">Edge</a>
     <a href="#top-of-the-rock">Top of the Rock</a>
     <a href="#empire-state">Empire State</a>
+    <a href="#other-decks">Other Decks</a>
     <a href="#best-times">Best Times</a>
     <a href="#tickets">Tickets</a>
     <a href="#itineraries">Itineraries</a>
-    <a href="#full-comparison">Full Comparison</a>
     <a href="#faq">FAQ</a>
   </div>
 </div>
@@ -171,11 +174,16 @@
   <a href="#edge">1. Edge NYC</a>
   <a href="#top-of-the-rock">2. Top of the Rock</a>
   <a href="#empire-state">3. Empire State</a>
-  <a href="#best-times">Best Times</a>
-  <a href="#tickets">Tickets &amp; Saving</a>
-  <a href="#itineraries">Itineraries</a>
   <a href="#full-comparison">Full Comparison</a>
+  <a href="#other-decks">Other Decks</a>
+  <a href="#decision-guide">Best For You</a>
+  <a href="#when-to-skip">When to Skip</a>
+  <a href="#best-times">Best Times</a>
+  <a href="#tickets">Tickets</a>
+  <a href="#itineraries">Itineraries</a>
+  <a href="#transportation">Transport</a>
   <a href="#faq">FAQ</a>
+  <a href="#final-recommendation">Final Rec</a>
 </nav>
 
 <header class="site-header">
@@ -194,25 +202,94 @@
       <h1>Comparing NYC Observation Decks: Edge vs Top of the Rock vs Empire State Building</h1>
       <div class="article-meta">
         <span>&middot;</span>
-        <span>&#9201;&#65039; 9 minute read</span>
+        <span>&#9201;&#65039; 14 minute read</span>
       </div>
     </div>
 
     <img class="article-hero-img" src="https://blogger.googleusercontent.com/img/a/AVvXsEgZsdiTWbizWT8eVQcIA1ch_pNB7lif9rQJNdHLf7gFgwNIP2rNQg3VhJc5ZceFzDq0Et1OgGywDG3jR5XK3Y9B2zEQoRui0SrEqbg9TE6e8o3eusjWowJXFaXE-P_y0MDJ5onrAl6srDCuNXf8013qw1dUFjFwO95jvmhPar-MJHDoIfLie52EoiqbG34" alt="NYC observation deck view">
 
     <div class="article-body">
-      <p>Are you planning a trip to New York City and wondering which observation deck is worth your time, money, and energy? I&rsquo;ve visited all three &mdash; Edge at Hudson Yards, Top of the Rock, and the Empire State Building Observatory &mdash; and I want to share my firsthand experience, tips, and recommendations.</p>
-      <p>Each deck offers a unique perspective on the city, from classic skyline shots to thrilling outdoor views. This guide will help you choose the best experience for your trip, whether it&rsquo;s your first time in NYC or your tenth.</p>
 
-       <div class="bucket-cta">
-        <div class="bc-icon">&#128205;</div>
-        <div class="bc-body">
-          <div class="bc-label">Before You Arrive &mdash; Essential NYC Resource</div>
-          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
-          <div class="bc-desc">A personal Google Map with hundreds of hand-picked places across all of New York City &mdash; restaurants, viewpoints, hidden gems, neighborhoods, and local favorites that most tourists never find. Use it to plan your hotel area, discover what's near your transit stop, and build a first-day itinerary while you're still at the airport.</div>
-          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
-        </div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:20px;"><em>Last updated: September 30, 2026</em></p>
+
+      <p>New York&rsquo;s observation decks offer very different experiences. Top of the Rock is best for photographing the Empire State Building, the Empire State Building itself combines history with open-air views, and Edge delivers the most dramatic outdoor experience. SUMMIT focuses on immersive art, while One World Observatory is ideal for Lower Manhattan and harbor views.</p>
+      <p>This guide compares the three classic NYC observation decks in detail and also explains how the newer alternatives fit into your itinerary, budget, and travel plans.</p>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#9889; Quick answer: Which NYC observation deck is best?</div>
+        <p>Choose Top of the Rock for the best Empire State Building photograph, the Empire State Building for history and exhibits, and Edge for an outdoor thrill. Choose SUMMIT One Vanderbilt for immersive art and creative photographs, One World Observatory for harbor and Lower Manhattan views, Centre 360 for a free civic viewpoint, and the Times Square Skywalk for Times Square itself.</p>
       </div>
+
+      <h3 style="margin-top:32px;margin-bottom:14px;">Quick comparison</h3>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:680px;">
+          <thead>
+            <tr>
+              <th>Experience</th>
+              <th>Best for</th>
+              <th>Main views</th>
+              <th>Indoor/outdoor</th>
+              <th>Typical visit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Top of the Rock</strong></td>
+              <td>Empire State Building photographs</td>
+              <td>Empire State Building, Central Park, Midtown</td>
+              <td>Indoor areas and open-air terrace</td>
+              <td>60&ndash;90 minutes</td>
+            </tr>
+            <tr>
+              <td><strong>Empire State Building</strong></td>
+              <td>History and iconic architecture</td>
+              <td>Midtown, Central Park, Brooklyn, harbor</td>
+              <td>Open-air 86th floor and enclosed 102nd floor</td>
+              <td>1&ndash;2 hours</td>
+            </tr>
+            <tr>
+              <td><strong>Edge</strong></td>
+              <td>Outdoor thrills and sunset</td>
+              <td>Hudson River, Midtown, Lower Manhattan</td>
+              <td>Indoor and outdoor areas</td>
+              <td>60&ndash;90 minutes</td>
+            </tr>
+            <tr>
+              <td><strong>SUMMIT One Vanderbilt</strong></td>
+              <td>Immersive art and creative photos</td>
+              <td>Midtown skyline and Central Park</td>
+              <td>Mostly indoor with outdoor areas</td>
+              <td>About 90 minutes</td>
+            </tr>
+            <tr>
+              <td><strong>One World Observatory</strong></td>
+              <td>Harbor and Lower Manhattan</td>
+              <td>Statue of Liberty, bridges, harbor, downtown</td>
+              <td>Fully enclosed</td>
+              <td>45&ndash;60 minutes</td>
+            </tr>
+            <tr>
+              <td><strong>Centre 360</strong></td>
+              <td>Free views</td>
+              <td>City Hall, bridges, Lower Manhattan</td>
+              <td>Enclosed civic viewpoint</td>
+              <td>About 1 hour total</td>
+            </tr>
+            <tr>
+              <td><strong>Times Square Skywalk</strong></td>
+              <td>Times Square itself</td>
+              <td>Times Square signs and New Year&rsquo;s Eve Ball</td>
+              <td>Glass walkway and enclosed areas</td>
+              <td>Roughly 30&ndash;60 minutes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;"><em>Prices and hours change frequently. Check the official attraction website before booking.</em></p>
+
+      <!-- ============================================================
+           SECTION 1 — Edge
+           ============================================================ -->
 
       <h2 id="edge">1. Edge at Hudson Yards</h2>
       <div class="related-box">
@@ -221,35 +298,42 @@
           <li><a href="edge-nyc-observation-deck-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Edge NYC Worth It? My Honest Take</a></li>
         </ul>
       </div>
+      <p><strong>Best for:</strong> outdoor thrills and Hudson River sunsets</p>
       <p><strong>Location:</strong> 30 Hudson Yards, West Midtown Manhattan<br>
-      <strong>Height:</strong> 1,100 feet (highest outdoor sky deck in the Western Hemisphere)<br>
+      <strong>Height:</strong> approximately 1,100 feet above Hudson Yards; official materials list 1,131 feet<br>
       <a href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
-      <p>Edge is the newest and most exhilarating observation deck in NYC. From the 100th floor, you get 360&deg; views of Manhattan and beyond, with angled glass walls and a glass floor section that lets you look straight down to the streets below.</p>
+      <p>Edge is one of New York&rsquo;s most dramatic outdoor observation experiences. The attraction includes a glass floor, angled glass walls, outdoor viewing areas, skyline seating, and an eastern-facing point extending over the city. Every standard ticket also includes indoor immersive installations and indoor viewing areas.</p>
       <p><strong>My Experience:</strong> Stepping onto the Edge outdoor deck feels like floating above the city. The glass floor segment is thrilling, and the views toward the Hudson River and Midtown skyline are unbeatable, especially at sunset or night.</p>
       <div class="card-grid cols-2">
-        <div class="card"><h4>Best For</h4><p>Thrill seekers and photographers, modern architecture fans, couples seeking sunset or night views.</p></div>
-        <div class="card"><h4>Tips</h4><p>Book online for a sunset slot. The Champagne Experience adds drinks. Weekdays are less crowded than weekends.</p></div>
+        <div class="card"><h4>Best For</h4><p>Outdoor-experience seekers, photographers, couples seeking sunset or night views over the Hudson River, visitors who want something modern and dramatic.</p></div>
+        <div class="card"><h4>Tips</h4><p>Standard tickets start around $42. Advance-saver tickets may start around $34 when purchased at least 14 days ahead. Sunset is especially attractive because of the Hudson River position. Weekdays are less crowded than weekends.</p></div>
       </div>
 
       <div class="ta-img">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/ff/72/eb/edge-nyc-is-the-highest.jpg?w=1400&h=-1&s=1" alt="Edge NYC observation deck at Hudson Yards — the highest outdoor sky deck in the Western Hemisphere at 1,100 feet above Manhattan">
-        <div class="cap">Edge NYC at 30 Hudson Yards &mdash; the highest outdoor sky deck in the Western Hemisphere. The angled glass walls and glass floor sections give visitors a perspective that no other NYC observation deck can replicate.</div>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/ff/72/eb/edge-nyc-is-the-highest.jpg?w=1400&h=-1&s=1" alt="Edge NYC observation deck at Hudson Yards — outdoor glass-floor deck with angled glass walls approximately 1,100 feet above Manhattan">
+        <div class="cap">Edge NYC at 30 Hudson Yards &mdash; one of New York&rsquo;s highest outdoor observation experiences. The glass floor and angled glass walls extend over the city; the ticket also includes indoor immersive areas. Take the No.&nbsp;7 subway to 34th Street&ndash;Hudson Yards.</div>
       </div>
+
+      <!-- ============================================================
+           SECTION 2 — Top of the Rock
+           ============================================================ -->
 
       <h2 id="top-of-the-rock">2. Top of the Rock</h2>
       <div class="related-box">
         <div class="rb-label">Related Post</div>
         <ul>
-          <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Top of the Rock Worth It? Honest Review & Visitor Tips</a></li>
+          <li><a href="top-of-the-rock-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Top of the Rock Worth It? Honest Review &amp; Visitor Tips</a></li>
         </ul>
       </div>
-      <p><strong>Location:</strong> 30 Rockefeller Plaza, Midtown Manhattan<br>
+      <p><strong>Best for:</strong> the classic New York skyline photograph</p>
+      <p><strong>Location:</strong> 30 Rockefeller Plaza, Midtown Manhattan (main entrance at 50 West 50th Street)<br>
+      <strong>Height:</strong> approximately 850 feet above street level (open-air 70th-floor terrace)<br>
       <a href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
-      <p>Top of the Rock offers the most balanced views of Manhattan &mdash; you can see Central Park to the north and the Empire State Building to the south. With indoor and outdoor terraces, it&rsquo;s comfortable in any weather and perfect for first-time visitors.</p>
-      <p><strong>My Experience:</strong> I love Top of the Rock for the classic NYC postcard shots. Sunset is magical, but early morning visits are quieter and perfect for unobstructed photography.</p>
+      <p>Top of the Rock is the strongest choice for photographing the Empire State Building with Central Park and Midtown Manhattan behind it. The attraction occupies three observation levels of Rockefeller Center and ends with an open-air 70th-floor terrace. Top of the Rock has indoor viewing areas, but its signature upper terrace is outdoors. Wind, rain, snow, and poor visibility can affect the experience.</p>
+      <p><strong>My Experience:</strong> I love Top of the Rock for the classic NYC postcard shots. For the most dramatic experience, book approximately 60&ndash;90 minutes before sunset so you can see the skyline in daylight, during golden hour, and after dark. Sunrise and early morning visits are often the quietest.</p>
       <div class="card-grid cols-2">
-        <div class="card"><h4>Best For</h4><p>First-time visitors, photographers wanting Central Park + Empire State in one frame, families.</p></div>
-        <div class="card"><h4>Tips</h4><p>Timed tickets reduce waiting. Sunrise and early morning are often the quietest. Night visits show Midtown sparkling.</p></div>
+        <div class="card"><h4>Best For</h4><p>First-time visitors, photographers wanting Central Park and the Empire State Building in one frame, families, visitors who want the definitive Manhattan skyline view.</p></div>
+        <div class="card"><h4>Tips</h4><p>Standard admission from approximately $42. Timed tickets reduce waiting. Book 60&ndash;90 minutes before sunset for changing light. Optional Beam and SKYLIFT upgrades available.</p></div>
       </div>
 
       <div class="ta-img">
@@ -257,373 +341,566 @@
         <div class="cap">The Manhattan skyline from Top of the Rock at Rockefeller Center &mdash; the view most visitors picture when they imagine New York City from above. The Empire State Building sits directly in the sightline, which is the defining advantage of this deck over all others.</div>
       </div>
 
+      <!-- ============================================================
+           SECTION 3 — Empire State Building
+           ============================================================ -->
+
       <h2 id="empire-state">3. Empire State Building</h2>
-            <div class="related-box">
+      <div class="related-box">
         <div class="rb-label">Related Post</div>
         <ul>
           <li><a href="https://sim-777.github.io/EverythingInNYC/empire-state-building-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is the Empire State Building Worth It?</a></li>
         </ul>
       </div>
+      <p><strong>Best for:</strong> history, exhibits, and visiting an iconic landmark</p>
       <p><strong>Location:</strong> 350 5th Ave, Midtown Manhattan<br>
       <a href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
-      <p>The Empire State Building needs no introduction. Its 86th-floor outdoor observatory and enclosed 102nd-floor deck offer legendary views of the city. Visiting here feels like stepping into a movie set.</p>
+      <p>The Empire State Building is more than an observation deck. It is a historic New York landmark with museum exhibits, architectural details, and two different viewing experiences. The 86th-floor Main Deck includes an open-air viewing area. The optional 102nd-floor observatory is enclosed with floor-to-ceiling windows at approximately 1,250 feet above street level. The building also features exhibits on the second and 80th floors.</p>
+      <p>For most visitors, the 86th floor is enough because it provides the open-air experience and the most recognizable views. The 102nd floor is worth adding if you want a fully enclosed viewpoint, floor-to-ceiling windows, or a higher perspective in clear weather.</p>
       <p><strong>My Experience:</strong> The open-air 86th floor is my favorite for nighttime views &mdash; Manhattan lights up like a grid of gold and white. The building&rsquo;s exhibits downstairs add another layer to the visit.</p>
       <div class="card-grid cols-2">
-        <div class="card"><h4>Best For</h4><p>Classic NYC experience, history lovers, nighttime photography.</p></div>
-        <div class="card"><h4>Tips</h4><p>Book timed tickets for sunset or late evening. Combo passes can save money. Weekdays are less crowded.</p></div>
+        <div class="card"><h4>Best For</h4><p>Classic NYC experience, history lovers, nighttime photography, visitors who want an open-air deck with museum-quality exhibits.</p></div>
+        <div class="card"><h4>Tips</h4><p>Current Main Deck prices recently started around $46. Book timed tickets. The busiest periods are the first two hours after opening and the hour after sunset. Midday, around 12&ndash;2 p.m., can sometimes be quieter. Prices vary by date and ticket type.</p></div>
       </div>
 
       <div class="ta-img">
         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/4f/73/35/caption.jpg?w=1400&h=-1&s=1" alt="Empire State Building 86th floor open-air observation deck with 360-degree views of New York City">
-        <div class="cap">The 86th-floor open-air observatory at the Empire State Building &mdash; the deck that has defined the NYC skyline experience for generations of visitors. The open-air setting, with no glass barriers between you and the city, creates a raw connection to New York that enclosed decks cannot match.</div>
+        <div class="cap">The 86th-floor open-air observatory at the Empire State Building &mdash; the deck that has defined the NYC skyline experience for generations of visitors. The open-air setting creates a direct connection to the city that enclosed decks cannot match.</div>
       </div>
 
-      <h2 id="best-times">Best Times to Visit Each Deck</h2>
-      <div class="table-wrap">
-        <table class="data-table">
-          <tr><th>Deck</th><th>Ideal Time</th><th>Notes</th></tr>
-          <tr><td>Edge</td><td>Sunset / Night</td><td>Outdoor thrill + city lights; best photos at dusk</td></tr>
-          <tr><td>Top of the Rock</td><td>Sunrise / Sunset</td><td>Central Park + Empire State shots; quieter in mornings</td></tr>
-          <tr><td>Empire State</td><td>Sunset / Late Night</td><td>Classic postcard + NYC lights; exhibits add value</td></tr>
-        </table>
-      </div>
-      <p><strong>Crowd Tips:</strong> Early morning or late night visits avoid peak lines. Weekdays are quieter than weekends. Online tickets save time and sometimes money.</p>
-
-      <h2 id="tickets">Ticket Options &amp; Money-Saving Tips</h2>
-      <ul class="tag-grid">
-        <li><span class="dot"></span><strong>Standard Admission:</strong> Access to main decks; cheapest option.</li>
-        <li><span class="dot"></span><strong>Flexible Tickets:</strong> Visit anytime during your selected day.</li>
-        <li><span class="dot"></span><strong>Priority / Skip-the-Line:</strong> Avoid long queues at peak times.</li>
-        <li><span class="dot"></span><strong>Combo Passes:</strong> Bundle multiple decks, museums, and tours at a discount.</li>
-        <li><span class="dot"></span><strong>Edge Champagne Experience:</strong> Adds drinks; popular for couples and sunset viewing.</li>
-      </ul>
-
-      <h2 id="itineraries">Suggested One-Day Observation Deck Itineraries</h2>
-      <p>Here are three realistic ways to visit more than one observation deck in a single day:</p>
-
-      <h3>1. Classic Midtown Day (Empire State + Top of the Rock)</h3>
-      <ul class="tag-grid">
-        <li><span class="dot"></span>8:00 AM &mdash; Breakfast near Empire State Building</li>
-        <li><span class="dot"></span>9:00 AM &mdash; Empire State 86th-floor deck</li>
-        <li><span class="dot"></span>11:30 AM &mdash; Lunch in Koreatown</li>
-        <li><span class="dot"></span>3:30 PM &mdash; Top of the Rock for afternoon into sunset</li>
-        <li><span class="dot"></span>6:30 PM &mdash; Dinner nearby; optional Times Square walk</li>
-      </ul>
-
-      <h3>2. Sunset Skyline Day (Top of the Rock + Edge)</h3>
-      <ul class="tag-grid">
-        <li><span class="dot"></span>9:00 AM &mdash; High Line stroll</li>
-        <li><span class="dot"></span>11:30 AM &mdash; Lunch at Chelsea Market</li>
-        <li><span class="dot"></span>1:30 PM &mdash; Explore Hudson Yards</li>
-        <li><span class="dot"></span>4:30 PM &mdash; Top of the Rock, pre-sunset</li>
-        <li><span class="dot"></span>7:30 PM &mdash; Edge for twilight/night photography</li>
-      </ul>
-
-      <h3>3. Night Adventure (Empire State + Edge)</h3>
-      <ul class="tag-grid">
-        <li><span class="dot"></span>10:00 AM &mdash; Brunch in Koreatown</li>
-        <li><span class="dot"></span>12:00 PM &mdash; Central Park stroll or museum visit</li>
-        <li><span class="dot"></span>3:30 PM &mdash; Empire State Building late afternoon slot</li>
-        <li><span class="dot"></span>6:30 PM &mdash; Dinner nearby</li>
-        <li><span class="dot"></span>8:30 PM &mdash; Edge at night for sparkling city lights</li>
-      </ul>
-
-      <div class="callout callout-local">
-        <div class="callout-title">&#128205; Transit Tips</div>
-        <p>Empire State: 34th St&ndash;Herald Sq (B/D/F/M/N/Q/R/W). Top of the Rock: 47&ndash;50th Sts&ndash;Rockefeller Center (B/D/F/M). Edge: 34th St&ndash;Hudson Yards (7 line).</p>
-      </div>
+      <!-- ============================================================
+           SECTION — Full 3-Deck Comparison Table
+           ============================================================ -->
 
       <h2 id="full-comparison">Edge vs Top of the Rock vs Empire State Building: Complete Comparison</h2>
-<p>Everything you actually want to know before choosing which deck &mdash; from photography quality and crowd experience to the one feature that surprises almost every first-time visitor.</p>
+      <p>Everything you actually want to know before choosing which deck &mdash; from photography quality and crowd experience to the one feature that surprises almost every first-time visitor.</p>
 
-<div class="table-wrap">
-  <table class="data-table deck-table" style="min-width:700px;">
-    <thead>
-      <tr>
-        <th class="th-feat">Feature</th>
-        <th class="th-esb">Empire State Building</th>
-        <th class="th-rock">Top of the Rock</th>
-        <th class="th-edge">Edge</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Overall Experience</td>
-        <td>Visiting one of the world&rsquo;s most famous buildings. Feels like stepping into NYC history.</td>
-        <td>Classic New York skyline experience with the city&rsquo;s most iconic view.</td>
-        <td>Modern, adrenaline-filled attraction built around excitement and architecture.</td>
-      </tr>
-      <tr>
-        <td>Best For</td>
-        <td>First-time visitors, history lovers, classic NYC experience.</td>
-        <td>Photography, couples, visitors wanting the best skyline views.</td>
-        <td>Thrill seekers, families with teenagers, Instagram-worthy experiences.</td>
-      </tr>
-      <tr>
-        <td>What You&rsquo;ll Remember Most</td>
-        <td>Standing inside the Empire State Building itself and the open-air observation deck.</td>
-        <td>Seeing the Empire State Building dominate the skyline alongside Central Park.</td>
-        <td>Walking onto the glass floor and looking straight down over Manhattan.</td>
-      </tr>
-      <tr>
-        <td>Atmosphere</td>
-        <td>Historic, nostalgic, iconic.</td>
-        <td>Relaxed, elegant, scenic.</td>
-        <td>Exciting, energetic, futuristic.</td>
-      </tr>
-      <tr>
-        <td>Observation Deck Style</td>
-        <td>Large open-air terrace with protective fencing.</td>
-        <td>Multiple outdoor terraces with minimal obstruction.</td>
-        <td>Outdoor platform with glass walls, angled glass panels and glass floor.</td>
-      </tr>
-      <tr>
-        <td>Photography Quality</td>
-        <td>Excellent. Outdoor deck means very few reflections.</td>
-        <td>Often considered the best photography location in NYC because it includes the Empire State Building.</td>
-        <td>Great for dramatic photos and selfies, but not always the best skyline composition.</td>
-      </tr>
-      <tr>
-        <td>Can You See the Empire State Building?</td>
-        <td>No &mdash; you are standing on it.</td>
-        <td>Yes. The biggest reason photographers choose Top of the Rock.</td>
-        <td>Yes, but from farther away than Top of the Rock.</td>
-      </tr>
-      <tr>
-        <td>Central Park Views</td>
-        <td>Visible but not the main focus.</td>
-        <td>Outstanding. Widely regarded as the best deck for Central Park views.</td>
-        <td>Limited compared with Top of the Rock.</td>
-      </tr>
-      <tr>
-        <td>Downtown Manhattan Views</td>
-        <td>Excellent.</td>
-        <td>Very good.</td>
-        <td>Excellent due to its western location.</td>
-      </tr>
-      <tr>
-        <td>Outdoor Feeling</td>
-        <td>Strongest connection to the city &mdash; wind, sounds, and open air.</td>
-        <td>Comfortable outdoor terraces with fewer barriers.</td>
-        <td>Outdoor but partially protected by angled glass walls.</td>
-      </tr>
-      <tr>
-        <td>Glass Reflections</td>
-        <td>Minimal.</td>
-        <td>Minimal.</td>
-        <td>Possible depending on lighting and angle.</td>
-      </tr>
-      <tr>
-        <td>History &amp; Architecture</td>
-        <td>Exceptional. Rich Art Deco design and museum-quality exhibits.</td>
-        <td>Rockefeller Center history adds context but is secondary.</td>
-        <td>Very little historical significance &mdash; focus is on modern design.</td>
-      </tr>
-      <tr>
-        <td>Pre-Observation Experience</td>
-        <td>One of the best. Interactive exhibits, restored lobby, and historical displays make the journey part of the attraction.</td>
-        <td>Simple elevator experience after entering Rockefeller Center.</td>
-        <td>Multimedia exhibits lead up to a dramatic reveal of the observation deck.</td>
-      </tr>
-      <tr>
-        <td>Most Emotional Moment</td>
-        <td>Stepping onto the 86th-floor deck after seeing the building for years in films and photos.</td>
-        <td>Seeing the Manhattan skyline exactly as you&rsquo;ve always imagined it.</td>
-        <td>Taking the first step onto the suspended platform or glass floor.</td>
-      </tr>
-      <tr>
-        <td>Sunset Experience</td>
-        <td>Beautiful but extremely crowded.</td>
-        <td>Often considered the best sunset observation deck because of the skyline composition.</td>
-        <td>Excellent after sunset when the city lights become the focus.</td>
-      </tr>
-      <tr>
-        <td>Night Experience</td>
-        <td>Romantic, classic city lights.</td>
-        <td>Beautiful skyline with illuminated landmarks.</td>
-        <td>One of the strongest nighttime experiences thanks to the illuminated streets below.</td>
-      </tr>
-      <tr>
-        <td>Crowd Experience</td>
-        <td>Can feel crowded at peak times, especially sunset.</td>
-        <td>Crowds spread across multiple terraces, making it feel less congested.</td>
-        <td>Often busy around the glass floor where everyone queues for photos.</td>
-      </tr>
-      <tr>
-        <td>Average Visit Length</td>
-        <td>1.5&ndash;2.5 hours. Visitors spend time exploring exhibits.</td>
-        <td>Around 1&ndash;2 hours. Many stay longer simply enjoying the skyline.</td>
-        <td>Around 1&ndash;1.5 hours. The experience is more concentrated.</td>
-      </tr>
-      <tr>
-        <td>Photography Style</td>
-        <td>Classic skyline photography.</td>
-        <td>Iconic postcard-style skyline shots.</td>
-        <td>Dramatic perspective shots and social-media content.</td>
-      </tr>
-      <tr>
-        <td>Unique Feature</td>
-        <td>Open-air observation deck on one of the world&rsquo;s most famous skyscrapers.</td>
-        <td>Best overall skyline composition including the Empire State Building.</td>
-        <td>Highest outdoor sky deck in the Western Hemisphere with a glass floor.</td>
-      </tr>
-      <tr>
-        <td>Biggest Strength</td>
-        <td>History, atmosphere and iconic status.</td>
-        <td>Best skyline views and photography.</td>
-        <td>Thrill factor and modern design.</td>
-      </tr>
-      <tr>
-        <td>Biggest Weakness</td>
-        <td>You can&rsquo;t photograph the Empire State Building &mdash; you&rsquo;re standing on it.</td>
-        <td>Less historical significance than the Empire State Building.</td>
-        <td>Some visitors expect the best skyline but discover the attraction is really about the experience.</td>
-      </tr>
-      <tr>
-        <td>Common Visitor Regret</td>
-        <td>Paying extra for the 102nd floor expecting a dramatically different experience.</td>
-        <td>Not staying until the city lights came on.</td>
-        <td>Expecting a traditional observation deck instead of a thrill attraction.</td>
-      </tr>
-      <tr>
-        <td>Who Should Choose It?</td>
-        <td>First-time visitors who want the classic New York experience.</td>
-        <td>Visitors who only plan to visit one observation deck and care most about the skyline.</td>
-        <td>Visitors looking for something exciting, modern and different from traditional observation decks.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <div class="table-wrap">
+        <table class="data-table deck-table" style="min-width:700px;">
+          <thead>
+            <tr>
+              <th class="th-feat">Feature</th>
+              <th class="th-esb">Empire State Building</th>
+              <th class="th-rock">Top of the Rock</th>
+              <th class="th-edge">Edge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Overall Experience</td>
+              <td>Visiting one of the world&rsquo;s most famous buildings. Feels like stepping into NYC history.</td>
+              <td>Classic New York skyline experience with the city&rsquo;s most iconic view.</td>
+              <td>Modern, adrenaline-filled attraction built around excitement and architecture.</td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td>First-time visitors, history lovers, classic NYC experience.</td>
+              <td>Photography, couples, visitors wanting the best skyline views.</td>
+              <td>Thrill seekers, families with teenagers, Instagram-worthy experiences.</td>
+            </tr>
+            <tr>
+              <td>What You&rsquo;ll Remember Most</td>
+              <td>Standing inside the Empire State Building itself and the open-air observation deck.</td>
+              <td>Seeing the Empire State Building dominate the skyline alongside Central Park.</td>
+              <td>Walking onto the glass floor and looking straight down over Manhattan.</td>
+            </tr>
+            <tr>
+              <td>Atmosphere</td>
+              <td>Historic, nostalgic, iconic.</td>
+              <td>Relaxed, elegant, scenic.</td>
+              <td>Exciting, energetic, futuristic.</td>
+            </tr>
+            <tr>
+              <td>Observation Deck Style</td>
+              <td>Large open-air terrace with protective fencing.</td>
+              <td>Multiple outdoor terraces with minimal obstruction.</td>
+              <td>Outdoor platform with glass walls, angled glass panels and glass floor.</td>
+            </tr>
+            <tr>
+              <td>Photography Quality</td>
+              <td>Excellent. Outdoor deck means very few reflections.</td>
+              <td>Often considered the best photography location in NYC because it includes the Empire State Building.</td>
+              <td>Great for dramatic photos and selfies, but not always the best skyline composition.</td>
+            </tr>
+            <tr>
+              <td>Can You See the Empire State Building?</td>
+              <td>No &mdash; you are standing on it.</td>
+              <td>Yes. The biggest reason photographers choose Top of the Rock.</td>
+              <td>Yes, but from farther away than Top of the Rock.</td>
+            </tr>
+            <tr>
+              <td>Central Park Views</td>
+              <td>Visible but not the main focus.</td>
+              <td>Outstanding. Widely regarded as the best deck for Central Park views.</td>
+              <td>Limited compared with Top of the Rock.</td>
+            </tr>
+            <tr>
+              <td>Downtown Manhattan Views</td>
+              <td>Excellent.</td>
+              <td>Very good.</td>
+              <td>Excellent due to its western location.</td>
+            </tr>
+            <tr>
+              <td>Outdoor Feeling</td>
+              <td>Strongest connection to the city &mdash; wind, sounds, and open air.</td>
+              <td>Comfortable outdoor terraces with fewer barriers.</td>
+              <td>Outdoor but partially protected by angled glass walls.</td>
+            </tr>
+            <tr>
+              <td>Glass Reflections</td>
+              <td>Minimal.</td>
+              <td>Minimal.</td>
+              <td>Possible depending on lighting and angle.</td>
+            </tr>
+            <tr>
+              <td>History &amp; Architecture</td>
+              <td>Exceptional. Rich Art Deco design and museum-quality exhibits.</td>
+              <td>Rockefeller Center history adds context but is secondary.</td>
+              <td>Very little historical significance &mdash; focus is on modern design.</td>
+            </tr>
+            <tr>
+              <td>Pre-Observation Experience</td>
+              <td>One of the best. Interactive exhibits, restored lobby, and historical displays make the journey part of the attraction.</td>
+              <td>Simple elevator experience after entering Rockefeller Center.</td>
+              <td>Multimedia exhibits lead up to a dramatic reveal of the observation deck.</td>
+            </tr>
+            <tr>
+              <td>Most Emotional Moment</td>
+              <td>Stepping onto the 86th-floor deck after seeing the building for years in films and photos.</td>
+              <td>Seeing the Manhattan skyline exactly as you&rsquo;ve always imagined it.</td>
+              <td>Taking the first step onto the suspended platform or glass floor.</td>
+            </tr>
+            <tr>
+              <td>Sunset Experience</td>
+              <td>Beautiful but extremely crowded.</td>
+              <td>Often considered the best sunset observation deck because of the skyline composition.</td>
+              <td>Excellent after sunset when the city lights become the focus.</td>
+            </tr>
+            <tr>
+              <td>Night Experience</td>
+              <td>Romantic, classic city lights.</td>
+              <td>Beautiful skyline with illuminated landmarks.</td>
+              <td>One of the strongest nighttime experiences thanks to the illuminated streets below.</td>
+            </tr>
+            <tr>
+              <td>Crowd Experience</td>
+              <td>Can feel crowded at peak times, especially sunset.</td>
+              <td>Crowds spread across multiple terraces, making it feel less congested.</td>
+              <td>Often busy around the glass floor where everyone queues for photos.</td>
+            </tr>
+            <tr>
+              <td>Average Visit Length</td>
+              <td>1.5&ndash;2.5 hours. Visitors spend time exploring exhibits.</td>
+              <td>Around 1&ndash;2 hours. Many stay longer simply enjoying the skyline.</td>
+              <td>Around 1&ndash;1.5 hours. The experience is more concentrated.</td>
+            </tr>
+            <tr>
+              <td>Photography Style</td>
+              <td>Classic skyline photography.</td>
+              <td>Iconic postcard-style skyline shots.</td>
+              <td>Dramatic perspective shots and social-media content.</td>
+            </tr>
+            <tr>
+              <td>Unique Feature</td>
+              <td>Open-air observation deck on one of the world&rsquo;s most famous skyscrapers.</td>
+              <td>Best overall skyline composition including the Empire State Building.</td>
+              <td>One of New York&rsquo;s highest outdoor observation experiences, with a glass floor and outdoor deck.</td>
+            </tr>
+            <tr>
+              <td>Biggest Strength</td>
+              <td>History, atmosphere and iconic status.</td>
+              <td>Best skyline views and photography.</td>
+              <td>Thrill factor and modern design.</td>
+            </tr>
+            <tr>
+              <td>Biggest Weakness</td>
+              <td>You can&rsquo;t photograph the Empire State Building &mdash; you&rsquo;re standing on it.</td>
+              <td>Less historical significance than the Empire State Building.</td>
+              <td>Some visitors expect the best skyline but discover the attraction is really about the experience.</td>
+            </tr>
+            <tr>
+              <td>Common Visitor Regret</td>
+              <td>Paying extra for the 102nd floor expecting a dramatically different experience.</td>
+              <td>Not staying until the city lights came on.</td>
+              <td>Expecting a traditional observation deck instead of a modern outdoor experience.</td>
+            </tr>
+            <tr>
+              <td>Who Should Choose It?</td>
+              <td>First-time visitors who want the classic New York experience.</td>
+              <td>Visitors who only plan to visit one observation deck and care most about the skyline.</td>
+              <td>Visitors looking for something exciting, modern and different from traditional observation decks.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <!-- ============================================================
+           SECTION — Other NYC Observation Decks
+           ============================================================ -->
 
-<!-- ============================================================
-     SECTION B — Quick Decision Guide
-     ============================================================ -->
+      <h2 id="other-decks">Other NYC observation decks worth considering</h2>
+      <p>The three attractions above are the classic NYC observation-deck comparison. New York also has several newer or more specialized viewpoints. These are not all direct substitutes for Edge, Top of the Rock, or the Empire State Building, but they may be a better match depending on your interests and itinerary.</p>
 
-<h2 id="decision-guide">Which NYC Observation Deck Is Best? Quick Decision Guide</h2>
-<p>Find your priority in the left column and see which deck wins for that criteria.</p>
+      <h3 id="summit">SUMMIT One Vanderbilt</h3>
+      <p><strong>Best for:</strong> immersive art and creative photography</p>
+      <p>SUMMIT One Vanderbilt is not a traditional observation deck. It is a three-level immersive art experience with skyline views, located near Grand Central Terminal. The attraction includes mirrored rooms, reflective floors, glass ledges, outdoor areas, and the optional Ascent glass elevator.</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Located near Grand Central Terminal</li>
+        <li><span class="dot"></span>Mirrors and reflective floors throughout</li>
+        <li><span class="dot"></span>Levitation glass ledges</li>
+        <li><span class="dot"></span>Outdoor terrace included</li>
+        <li><span class="dot"></span>Optional Ascent glass elevator experience</li>
+        <li><span class="dot"></span>Typical visit approximately 90 minutes</li>
+        <li><span class="dot"></span>Pants, shorts, or tights recommended because of reflective floors</li>
+        <li><span class="dot"></span>Sunglasses useful on bright days</li>
+        <li><span class="dot"></span>General admission currently starts around $44</li>
+      </ul>
+      <p>Choose SUMMIT for immersive art, mirrors, and creative photos &mdash; not if your only goal is a traditional unobstructed skyline panorama.</p>
 
-<div class="table-wrap">
-  <table class="data-table" style="min-width:420px;">
-    <thead>
-      <tr>
-        <th style="background:var(--navy-soft);color:#fff;">If your priority is&hellip;</th>
-        <th style="background:var(--navy-soft);color:#fff;">Best Choice</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Classic New York experience</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
-      <tr><td>Best skyline photographs</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>Seeing the Empire State Building in your photos</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>History and architecture</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
-      <tr><td>Most thrilling experience</td><td><span class="win-badge win-edge">Edge</span></td></tr>
-      <tr><td>Best observation deck for sunset</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>Best observation deck at night</td><td><span class="win-badge win-edge">Edge</span></td></tr>
-      <tr><td>Best for first-time visitors</td><td><span class="win-badge win-tie">ESB or Top of the Rock</span></td></tr>
-      <tr><td>Best for Instagram and social media</td><td><span class="win-badge win-edge">Edge</span></td></tr>
-      <tr><td>Best for photographers</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>Best if you only care about the view</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>Best if you want to experience an iconic landmark</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
-      <tr><td>Best for teenagers and adventurous travelers</td><td><span class="win-badge win-edge">Edge</span></td></tr>
-      <tr><td>Best overall value</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
-      <tr><td>Best combination if visiting two decks</td><td><span class="win-badge win-tie">ESB + Top of the Rock</span></td></tr>
-    </tbody>
-  </table>
-</div>
+      <h3 id="one-world">One World Observatory</h3>
+      <p><strong>Best for:</strong> harbor views, Lower Manhattan, and poor weather</p>
+      <p>One World Observatory occupies floors 100&ndash;102 of One World Trade Center. It is fully enclosed and provides strong views of the Statue of Liberty, New York Harbor, the Brooklyn Bridge, the Manhattan Bridge, and Lower Manhattan. It is the best choice on cold, windy, or rainy days.</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Fully enclosed experience</li>
+        <li><span class="dot"></span>Floors 100&ndash;102 of One World Trade Center</li>
+        <li><span class="dot"></span>Approximately 1,250 feet above street level</li>
+        <li><span class="dot"></span>Typical visit of 45&ndash;60 minutes</li>
+        <li><span class="dot"></span>Standard admission currently starts around $39</li>
+        <li><span class="dot"></span>Timed tickets; no re-entry</li>
+        <li><span class="dot"></span>Strong choice for cold, windy, or rainy days</li>
+        <li><span class="dot"></span>Enter at least one hour before sunset for sunset views</li>
+      </ul>
+      <p>One World Observatory is the best choice if you want harbor and Lower Manhattan views or prefer a completely enclosed observation deck. <a href="https://sim-777.github.io/EverythingInNYC/one-world-observatory-review.html">Read our full One World Observatory review.</a></p>
 
+      <h3 id="centre-360">Centre 360</h3>
+      <p><strong>Best for:</strong> a free Lower Manhattan viewpoint</p>
+      <p>Centre 360 is a free observation experience inside the cupola of the David N. Dinkins Municipal Building at 1 Centre Street. Availability is weekday daytime only, and a reservation is required. Sessions are limited and sell out quickly, so early planning is essential.</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Free admission</li>
+        <li><span class="dot"></span>Weekday daytime availability only</li>
+        <li><span class="dot"></span>Reservation required; reservations are limited and sell out quickly</li>
+        <li><span class="dot"></span>Approximately 15-minute viewing period per session</li>
+        <li><span class="dot"></span>Allow about one hour for the entire visit</li>
+        <li><span class="dot"></span>Views of City Hall, the Brooklyn Bridge, Manhattan Bridge, Lower Manhattan, and the East River</li>
+        <li><span class="dot"></span>Closed-toe shoes required</li>
+        <li><span class="dot"></span>Sessions can accommodate up to eight visitors; verify current limits on the reservation page</li>
+      </ul>
+      <p>Centre 360 is not a replacement for a major commercial observatory, but it is an unusual free viewpoint for visitors who can obtain a reservation.</p>
 
-<!-- ============================================================
-     SECTION C — When to Skip Each Deck (Cards)
-     ============================================================ -->
+      <h3 id="times-square-skywalk">Times Square Skywalk</h3>
+      <p><strong>Best for:</strong> Times Square after dark</p>
+      <p>The Times Square Skywalk is located at One Times Square, 1475 Broadway. It focuses on Times Square itself rather than providing a broad Manhattan skyline panorama. The attraction is best treated as a short Times Square experience rather than a substitute for a traditional observation deck.</p>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Located at 1475 Broadway (One Times Square)</li>
+        <li><span class="dot"></span>Glass walkway with wraparound Times Square views</li>
+        <li><span class="dot"></span>Views of the New Year&rsquo;s Eve Ball</li>
+        <li><span class="dot"></span>Timed admission; no on-site box office &mdash; purchase online</li>
+        <li><span class="dot"></span>Current tickets from approximately $30</li>
+        <li><span class="dot"></span>Hours vary; best after dark for illuminated signs</li>
+      </ul>
 
-<h2 id="when-to-skip">When You Should Skip Edge, Top of the Rock or the Empire State Building</h2>
-<p>Not every deck is right for every visitor. If any of these priorities sound like yours, it&rsquo;s worth reading before you book.</p>
+      <!-- ============================================================
+           SECTION B — Decision Guide
+           ============================================================ -->
 
-<div class="skip-grid">
+      <h2 id="decision-guide">Which NYC observation deck is best for you?</h2>
+      <p>Find your priority in the left column and see which deck matches it best. These are editorial recommendations based on each attraction&rsquo;s primary strengths.</p>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you want the classic postcard skyline with the ESB in your photos</div>
-    <div class="sk-skip">Empire State Building</div>
-    <div class="sk-choose">Top of the Rock</div>
-    <div class="sk-why">You can&rsquo;t photograph the Empire State Building while standing on it. Top of the Rock gives you the iconic skyline most people imagine.</div>
-  </div>
+      <div class="table-wrap">
+        <table class="data-table" style="min-width:420px;">
+          <thead>
+            <tr>
+              <th style="background:var(--navy-soft);color:#fff;">If your priority is&hellip;</th>
+              <th style="background:var(--navy-soft);color:#fff;">Best Choice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Photographing the Empire State Building</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>History and exhibits</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+            <tr><td>Best skyline photographs</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>Classic New York experience</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+            <tr><td>Most thrilling outdoor experience</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+            <tr><td>Immersive art and creative photos</td><td><span class="win-badge win-summit">SUMMIT One Vanderbilt</span></td></tr>
+            <tr><td>Harbor and Statue of Liberty views</td><td><span class="win-badge win-owo">One World Observatory</span></td></tr>
+            <tr><td>Free observation viewpoint</td><td><span class="win-badge win-free">Centre 360</span></td></tr>
+            <tr><td>Times Square experience</td><td><span class="win-badge win-times">Times Square Skywalk</span></td></tr>
+            <tr><td>Best observation deck for sunset</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>Best observation deck at night</td><td><span class="win-badge win-tie">Edge, ESB, or One World</span></td></tr>
+            <tr><td>Best for bad weather</td><td><span class="win-badge win-owo">One World Observatory</span></td></tr>
+            <tr><td>Central Park views</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>Best for first-time visitors</td><td><span class="win-badge win-tie">ESB or Top of the Rock</span></td></tr>
+            <tr><td>Best for Instagram and social media</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+            <tr><td>Best for photographers</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>Best if you want to experience an iconic landmark</td><td><span class="win-badge win-esb">Empire State Building</span></td></tr>
+            <tr><td>Best for teenagers and adventurous travelers</td><td><span class="win-badge win-edge">Edge</span></td></tr>
+            <tr><td>Best overall value</td><td><span class="win-badge win-rock">Top of the Rock</span></td></tr>
+            <tr><td>Best combination if visiting two decks</td><td><span class="win-badge win-tie">ESB + Top of the Rock</span></td></tr>
+          </tbody>
+        </table>
+      </div>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you&rsquo;re afraid of heights or glass floors</div>
-    <div class="sk-skip">Edge</div>
-    <div class="sk-choose">Empire State Building or Top of the Rock</div>
-    <div class="sk-why">Edge is designed to make you feel like you&rsquo;re suspended over Manhattan. The other two feel much less intimidating.</div>
-  </div>
+      <!-- ============================================================
+           SECTION C — When to Skip
+           ============================================================ -->
 
-  <div class="skip-card">
-    <div class="sk-priority">If you only care about history and iconic landmarks</div>
-    <div class="sk-skip">Edge</div>
-    <div class="sk-choose">Empire State Building</div>
-    <div class="sk-why">The Empire State Building is part of New York&rsquo;s history. Edge is a modern attraction focused on thrills rather than heritage.</div>
-  </div>
+      <h2 id="when-to-skip">When another observation deck may be better</h2>
+      <p>Not every deck is right for every visitor. If any of these priorities match yours, read before you book.</p>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you want an adrenaline-filled experience</div>
-    <div class="sk-skip">Top of the Rock</div>
-    <div class="sk-choose">Edge</div>
-    <div class="sk-why">Top of the Rock is peaceful and scenic. Edge is built around excitement and dramatic design &mdash; not calm skyline gazing.</div>
-  </div>
+      <div class="skip-grid">
 
-  <div class="skip-card">
-    <div class="sk-priority">If you&rsquo;re visiting one deck and want the best overall skyline photos</div>
-    <div class="sk-skip">Empire State Building</div>
-    <div class="sk-choose">Top of the Rock</div>
-    <div class="sk-why">Most photographers and experienced visitors prefer Top of the Rock because it includes the Empire State Building in the skyline.</div>
-  </div>
+        <div class="skip-card">
+          <div class="sk-priority">If you want the classic postcard skyline with the ESB in your photos</div>
+          <div class="sk-skip">Empire State Building</div>
+          <div class="sk-choose">Top of the Rock</div>
+          <div class="sk-why">You can&rsquo;t photograph the Empire State Building while standing on it. Top of the Rock gives you the iconic skyline most people imagine.</div>
+        </div>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you want the most iconic &ldquo;I&rsquo;ve been to NYC&rdquo; experience</div>
-    <div class="sk-skip">Edge</div>
-    <div class="sk-choose">Empire State Building</div>
-    <div class="sk-why">Visiting the Empire State Building is a bucket-list experience that many people associate with New York itself.</div>
-  </div>
+        <div class="skip-card">
+          <div class="sk-priority">If you dislike heights or glass floors</div>
+          <div class="sk-skip">Edge</div>
+          <div class="sk-choose">Empire State Building or Top of the Rock</div>
+          <div class="sk-why">Edge is designed to make you feel like you&rsquo;re suspended over Manhattan. The other two feel much less intimidating.</div>
+        </div>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you&rsquo;re travelling with teenagers who enjoy interactive attractions</div>
-    <div class="sk-skip">Empire State Building</div>
-    <div class="sk-choose">Edge</div>
-    <div class="sk-why">The glass floor, angled glass walls, and thrill factor tend to be a much bigger hit with younger visitors.</div>
-  </div>
+        <div class="skip-card">
+          <div class="sk-priority">If the weather forecast shows heavy fog or rain</div>
+          <div class="sk-skip">Edge</div>
+          <div class="sk-choose">One World Observatory</div>
+          <div class="sk-why">Poor visibility reduces the appeal of Edge&rsquo;s outdoor deck significantly. One World Observatory is fully enclosed and a reasonable choice in poor conditions.</div>
+        </div>
 
-  <div class="skip-card">
-    <div class="sk-priority">If you&rsquo;re looking for a quiet, romantic sunset</div>
-    <div class="sk-skip">Edge</div>
-    <div class="sk-choose">Top of the Rock</div>
-    <div class="sk-why">Top of the Rock generally offers a calmer atmosphere and arguably the city&rsquo;s best sunset skyline composition.</div>
-  </div>
+        <div class="skip-card">
+          <div class="sk-priority">If you mainly want historical exhibits</div>
+          <div class="sk-skip">Edge</div>
+          <div class="sk-choose">Empire State Building</div>
+          <div class="sk-why">The Empire State Building is part of New York&rsquo;s history. Edge is a modern attraction focused on outdoor thrills rather than heritage.</div>
+        </div>
 
-</div>
-<!-- end Section C -->
+        <div class="skip-card">
+          <div class="sk-priority">If you want a fully enclosed observatory</div>
+          <div class="sk-skip">Top of the Rock</div>
+          <div class="sk-choose">One World Observatory</div>
+          <div class="sk-why">Top of the Rock&rsquo;s signature upper terrace is open-air. One World Observatory is completely enclosed, which makes it a better choice in cold or wet weather.</div>
+        </div>
+
+        <div class="skip-card">
+          <div class="sk-priority">If you mainly want harbor and Statue of Liberty views</div>
+          <div class="sk-skip">Top of the Rock</div>
+          <div class="sk-choose">One World Observatory</div>
+          <div class="sk-why">One World Observatory is positioned for Lower Manhattan and harbor views. Top of the Rock faces Midtown and Central Park, not the harbor.</div>
+        </div>
+
+        <div class="skip-card">
+          <div class="sk-priority">If you want the widest unobstructed outdoor deck</div>
+          <div class="sk-skip">Empire State Building</div>
+          <div class="sk-choose">Edge</div>
+          <div class="sk-why">Edge is built around a dramatic outdoor experience with glass walls extending over the city. The Empire State Building&rsquo;s 86th floor is open-air but more traditional in feel.</div>
+        </div>
+
+        <div class="skip-card">
+          <div class="sk-priority">If you want a simple panoramic skyline view without art installations</div>
+          <div class="sk-skip">SUMMIT One Vanderbilt</div>
+          <div class="sk-choose">Top of the Rock or Empire State Building</div>
+          <div class="sk-why">SUMMIT is an immersive art experience with mirrors and reflective floors, not a traditional unobstructed observation deck.</div>
+        </div>
+
+        <div class="skip-card">
+          <div class="sk-priority">If you specifically want an outdoor deck or glass-floor experience</div>
+          <div class="sk-skip">One World Observatory</div>
+          <div class="sk-choose">Edge</div>
+          <div class="sk-why">One World Observatory is fully enclosed. Edge is the best choice if an outdoor deck with dramatic elements is your priority.</div>
+        </div>
+
+        <div class="skip-card">
+          <div class="sk-priority">If you&rsquo;re looking for a quiet, romantic sunset</div>
+          <div class="sk-skip">Edge</div>
+          <div class="sk-choose">Top of the Rock</div>
+          <div class="sk-why">Top of the Rock generally offers a calmer atmosphere and the city&rsquo;s best sunset skyline composition with the Empire State Building in view.</div>
+        </div>
+
+      </div>
+      <!-- end When to Skip -->
 
       <hr class="divider-rule">
 
-      <h2 id="faq">Frequently Asked Questions</h2>
+      <!-- ============================================================
+           SECTION — Best Times
+           ============================================================ -->
+
+      <h2 id="best-times">Best times to visit each observation deck</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Attraction</th><th>Best timing</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Top of the Rock</td><td>Early morning for fewer crowds; 60&ndash;90 minutes before sunset for changing light from daylight through golden hour to darkness</td></tr>
+            <tr><td>Empire State Building</td><td>Midday (around 12&ndash;2 p.m.) for potentially lighter crowds; late evening for city lights</td></tr>
+            <tr><td>Edge</td><td>Sunset for Hudson River views; after dark for illuminated Manhattan</td></tr>
+            <tr><td>SUMMIT One Vanderbilt</td><td>Daylight or golden hour for mirrors and reflections</td></tr>
+            <tr><td>One World Observatory</td><td>Enter at least one hour before sunset, or visit after dark</td></tr>
+            <tr><td>Centre 360</td><td>Weekday daytime only (reservation required)</td></tr>
+            <tr><td>Times Square Skywalk</td><td>After dark for illuminated signs</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Sunset is popular at every major observatory. If you want daylight, golden hour, and nighttime views in one visit, book approximately 60&ndash;90 minutes before sunset. Sunset times change throughout the year.</p>
+
+      <!-- ============================================================
+           SECTION — Tickets
+           ============================================================ -->
+
+      <h2 id="tickets">Tickets, prices, and city passes</h2>
+      <p style="font-size:13.5px;color:var(--text-secondary);"><em>Prices checked September 30, 2026. Starting prices, processing fees, ticket benefits, and opening hours change frequently. Confirm the official attraction website before booking.</em></p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Attraction</th><th>Approximate starting price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Edge</td><td>$34 advance-saver (14+ days ahead); $42 standard</td></tr>
+            <tr><td>Top of the Rock</td><td>$42 standard</td></tr>
+            <tr><td>Empire State Building</td><td>$46 Main Deck</td></tr>
+            <tr><td>SUMMIT One Vanderbilt</td><td>$44 general admission</td></tr>
+            <tr><td>One World Observatory</td><td>$39 standard</td></tr>
+            <tr><td>Times Square Skywalk</td><td>$30</td></tr>
+            <tr><td>Centre 360</td><td>Free (reservation required)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:24px;">City passes</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>CityPASS and C3 pass options include attractions such as the Empire State Building, Edge, and Top of the Rock.</li>
+        <li><span class="dot"></span>Go City currently lists the Empire State Building, Edge, Top of the Rock, and One World Observatory on relevant New York passes.</li>
+        <li><span class="dot"></span>Current pass listings checked did not include SUMMIT, Centre 360, or the Times Square Skywalk.</li>
+        <li><span class="dot"></span>No single pass currently includes every major observation deck. Check the exact pass contents before purchasing.</li>
+      </ul>
+
+      <!-- ============================================================
+           SECTION — Itineraries
+           ============================================================ -->
+
+      <h2 id="itineraries">Practical NYC observation deck itineraries</h2>
+      <p>These are geographically grouped routes that combine an observation deck with nearby attractions. Each can be done in a single day or afternoon.</p>
+
+      <h3>Rockefeller Center and Top of the Rock</h3>
+      <p>Rockefeller Center &rarr; St. Patrick&rsquo;s Cathedral &rarr; Fifth Avenue &rarr; Top of the Rock</p>
+      <p>This is the most convenient route for combining Midtown landmarks with an observation deck visit.</p>
+
+      <h3>Empire State Building and Koreatown</h3>
+      <p>Herald Square &rarr; Empire State Building &rarr; Koreatown &rarr; Bryant Park or Times Square</p>
+      <p>This works well for visitors who want to combine the Empire State Building with food and Midtown shopping.</p>
+
+      <h3>High Line and Edge</h3>
+      <p>High Line &rarr; Hudson Yards &rarr; Edge</p>
+      <p>Book Edge near sunset if the weather is clear for the best Hudson River light.</p>
+
+      <h3>Grand Central and SUMMIT</h3>
+      <p>Grand Central Terminal &rarr; Chrysler Building exterior &rarr; SUMMIT One Vanderbilt</p>
+      <p>This keeps the entire itinerary within Midtown East and makes good use of a single transit hub.</p>
+
+      <h3>Lower Manhattan and One World Observatory</h3>
+      <p>9/11 Memorial &rarr; Oculus &rarr; One World Observatory &rarr; Battery Park</p>
+      <p>Allow additional time if you plan to visit the 9/11 Museum.</p>
+
+      <h3>City Hall and Centre 360</h3>
+      <p>City Hall Park &rarr; Centre 360 &rarr; Brooklyn Bridge or Civic Center</p>
+      <p>This route only works during Centre 360&rsquo;s weekday operating hours. A reservation must be secured well in advance.</p>
+
+      <h3>Broadway and the Times Square Skywalk</h3>
+      <p>Broadway theater district &rarr; Times Square Skywalk &rarr; Bryant Park</p>
+      <p>This is best after dark and works well before or after a Broadway show.</p>
+
+      <!-- ============================================================
+           SECTION — Transportation
+           ============================================================ -->
+
+      <h2 id="transportation">Transportation and planning tips</h2>
+
+      <div class="callout callout-local">
+        <div class="callout-title">&#128205; Getting there by subway</div>
+        <ul style="margin:0;padding-left:18px;line-height:2;">
+          <li><strong>Edge</strong> (30 Hudson Yards): No.&nbsp;7 to 34th Street&ndash;Hudson Yards</li>
+          <li><strong>Top of the Rock</strong> (50 W 50th St): B/D/F/M to 47&ndash;50th Streets&ndash;Rockefeller Center</li>
+          <li><strong>Empire State Building</strong> (350 5th Ave): B/D/F/M/N/Q/R/W to 34th Street&ndash;Herald Square</li>
+          <li><strong>SUMMIT One Vanderbilt</strong>: 4/5/6/7/S to Grand Central&ndash;42nd Street</li>
+          <li><strong>One World Observatory</strong>: Multiple lines to Fulton Center or Cortlandt Street&ndash;WTC</li>
+          <li><strong>Centre 360</strong> (1 Centre Street): 4/5/6 to Brooklyn Bridge&ndash;City Hall, or R/W to City Hall</li>
+          <li><strong>Times Square Skywalk</strong> (1475 Broadway): Multiple lines to Times Square&ndash;42nd Street</li>
+        </ul>
+      </div>
+
+      <h3 style="margin-top:24px;">Booking and planning</h3>
+      <ul class="tag-grid">
+        <li><span class="dot"></span>Book timed tickets in advance for all major observatories, especially for weekend and sunset slots.</li>
+        <li><span class="dot"></span>Sunset times vary throughout the year. Book approximately 60&ndash;90 minutes before sunset to see daylight, golden hour, and darkness in a single visit.</li>
+        <li><span class="dot"></span>Weekdays are generally less crowded than weekends at every major observatory.</li>
+        <li><span class="dot"></span>Centre 360 reservations open in limited batches; book as early as possible.</li>
+        <li><span class="dot"></span>The Times Square Skywalk has no on-site box office; tickets must be purchased online before arrival.</li>
+        <li><span class="dot"></span>One World Observatory has no re-entry; plan your visit time carefully.</li>
+        <li><span class="dot"></span>SUMMIT One Vanderbilt visitors should wear pants, shorts, or tights because of the reflective floors.</li>
+        <li><span class="dot"></span>Centre 360 requires closed-toe shoes.</li>
+      </ul>
+
+      <!-- ============================================================
+           SECTION — FAQ
+           ============================================================ -->
+
+      <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-wrap">
+
         <details class="faq-item">
-          <summary>Can you visit all three in one day?<span class="chev">&#9662;</span></summary>
-          <div class="faq-a">Yes, but two is more comfortable unless you start early. Time each deck with golden hour or night lights for the best experience.</div>
+          <summary>Which observation deck is highest?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">One World Observatory and the Empire State Building&rsquo;s 102nd-floor observatory are both approximately 1,250 feet above street level. Edge is the relevant choice if you specifically want an outdoor observation deck at a similar height.</div>
         </details>
+
         <details class="faq-item">
-          <summary>Which deck is best on a rainy day?<span class="chev">&#9662;</span></summary>
-          <div class="faq-a">Top of the Rock and Empire State are better choices due to indoor viewing areas. Edge is mostly outdoor and less ideal in rain.</div>
+          <summary>Which deck has the best Empire State Building view?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Top of the Rock provides the clearest classic composition because the Empire State Building is one of the main subjects of the view from its open-air terrace.</div>
         </details>
+
+        <details class="faq-item">
+          <summary>Which observation deck is best in the rain?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">One World Observatory is completely enclosed and the strongest choice in poor weather. SUMMIT and the Empire State Building&rsquo;s 102nd floor are also reasonable options. Edge has indoor areas, but poor visibility reduces the appeal of its outdoor deck considerably.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to visit more than one observation deck?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Usually not. Visit two if skyline photography is a major priority, if you want both indoor and outdoor experiences, or if a city pass makes the second visit more economical.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How far ahead should I book?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Book sunset, weekend, and holiday time slots as early as possible. Centre 360 requires particularly early planning because free reservations are limited and sell out quickly.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What should I wear?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Wear comfortable shoes to all observation decks. At SUMMIT One Vanderbilt, pants, shorts, or tights are recommended because of the reflective floors. Centre 360 requires closed-toe shoes.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are all observation decks included in city passes?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">No. City passes include some major attractions, but current pass listings do not include every observatory. Check the exact pass contents before purchasing, as the included attractions vary by pass type.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you visit all three classic decks in one day?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Yes, but two in one day is more comfortable unless you start early. Time each visit with golden hour or night lights for the best experience at each deck.</div>
+        </details>
+
         <details class="faq-item">
           <summary>Is sunset always the best time?<span class="chev">&#9662;</span></summary>
-          <div class="faq-a">Sunset is stunning but crowded. Morning offers smaller crowds and soft light; night gives the full city light experience.</div>
+          <div class="faq-a">Sunset is stunning but crowded. Morning offers smaller crowds and soft light; night gives the full city light experience. Midday at the Empire State Building can sometimes mean shorter queues.</div>
         </details>
+
         <details class="faq-item">
-          <summary>Which deck is best for kids/families?<span class="chev">&#9662;</span></summary>
-          <div class="faq-a">Top of the Rock for ease and safety; Empire State for classic history; Edge if kids enjoy heights.</div>
+          <summary>Which deck is best for kids and families?<span class="chev">&#9662;</span></summary>
+          <div class="faq-a">Top of the Rock for a relaxed family experience; Empire State Building for classic history; Edge if children enjoy heights and glass floors.</div>
         </details>
-        <details class="faq-item">
-          <summary>Can I save money?<span class="chev">&#9662;</span></summary>
-          <div class="faq-a">Yes &mdash; buy tickets online, use combo passes, or visit off-peak times.</div>
-        </details>
+
       </div>
 
       <div class="cta-dark">
@@ -633,11 +910,24 @@
         <a class="btn btn-primary" href="https://saadimunir.gumroad.com/l/lwtsj" target="_blank" rel="noopener">Download Your Free Guide</a>
       </div>
 
-      <div class="cta-dark">
-        <div class="cta-eyebrow">Plan Faster</div>
-        <h4>Explore NYC with the Interactive Google Map</h4>
-        <p>A custom Google Map featuring 250+ bucket list attractions in New York City &mdash; from iconic landmarks to hidden gems, viewable directly in the Google Maps app.</p>
-        <a class="btn btn-primary" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Access the Map</a>
+      <!-- ============================================================
+           SECTION — Final Recommendation
+           ============================================================ -->
+
+      <h2 id="final-recommendation">Final recommendation</h2>
+      <p>The classic NYC observation deck choice comes down to three options: Top of the Rock for the definitive Manhattan skyline photograph, the Empire State Building for history and an iconic landmark, and Edge for a dramatic outdoor experience unlike anything else in the city.</p>
+      <p>Top of the Rock is the strongest single-deck choice for most first-time visitors. The skyline composition &mdash; with the Empire State Building, Central Park, and Midtown in one frame &mdash; is the view people associate with New York. If you want an open-air landmark experience with exhibits and history, the Empire State Building is the classic choice. If you want something modern and dramatic, Edge delivers.</p>
+      <p>The newer alternatives serve different needs. SUMMIT One Vanderbilt is best for visitors drawn to immersive art. One World Observatory is the right choice for Lower Manhattan and harbor views, or on a poor-weather day. Centre 360 is an unusual bonus for visitors who can secure a free weekday reservation. The Times Square Skywalk works as a short complement to a Broadway evening, not as a substitute for a traditional observation deck.</p>
+      <p>If you only have time for one deck: choose Top of the Rock if the skyline photograph is your priority, or the Empire State Building if you want the landmark experience.</p>
+
+      <div class="bucket-cta">
+        <div class="bc-icon">&#128205;</div>
+        <div class="bc-body">
+          <div class="bc-label">NYC Planning Resource</div>
+          <div class="bc-title">The Ultimate NYC Bucket List Map</div>
+          <div class="bc-desc">Planning more than just your skyline views? My Ultimate NYC Bucket List Map brings hundreds of attractions, restaurants, hidden gems, and neighborhood highlights together in one easy-to-use Google Map.</div>
+          <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Bucket List Map &rarr;</a>
+        </div>
       </div>
 
       <div class="related-box">
@@ -655,6 +945,7 @@
     <ul>
       <li><a href="edge-nyc-observation-deck-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Is Edge NYC Worth It? My Honest Take</a></li>
       <li><a href="top-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top Things to Do in NYC&mdash;Ranked by Experience</a></li>
+      <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Read all our NYC travel guides &rarr;</a></li>
     </ul>
   </div>
 
@@ -697,7 +988,7 @@ onScroll();
 document.getElementById('snToggle').addEventListener('click',function(){
   document.getElementById('snLinks').classList.toggle('open');
 });
-var secs=['edge','top-of-the-rock','empire-state','best-times','tickets','itineraries','full-comparison','faq'];
+var secs=['edge','top-of-the-rock','empire-state','full-comparison','other-decks','decision-guide','when-to-skip','best-times','tickets','itineraries','transportation','faq','final-recommendation'];
 var slinks=document.querySelectorAll('.side-nav a');
 var snlinks=document.querySelectorAll('.sn-inner a');
 function updateNav(){
