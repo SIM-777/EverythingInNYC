@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS2FTB88QP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZS2FTB88QP');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Time Visiting NYC? Start Here | EverythingInNYC</title>
+<meta name="description" content="Planning your first trip to New York City? Learn how to choose your days, trip type, hotel area, and what to book first &mdash; a practical guide for first-time visitors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Quick answer table */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;}
+  .qa-table{width:100%;border-collapse:collapse;min-width:540px;}
+  .qa-table th{background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:13.5px;padding:11px 14px;text-align:left;}
+  .qa-table td{font-size:14.5px;padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+  .qa-table tr:nth-child(even) td{background:rgba(15,23,42,0.025);}
+  .qa-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap;}
+
+  /* Hotel neighborhood cards */
+  .hotel-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0;}
+  @media(min-width:640px){.hotel-grid{grid-template-columns:1fr 1fr;}}
+  .hotel-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;}
+  .hotel-card-name{font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--navy);margin-bottom:10px;}
+  .hotel-row{font-size:13.5px;color:var(--text-secondary);margin-bottom:5px;line-height:1.45;}
+  .hotel-row strong{color:var(--navy-soft);}
+
+  /* Booking category cards */
+  .booking-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0;}
+  @media(min-width:640px){.booking-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .booking-card{border-radius:14px;padding:18px 20px;}
+  .bc-first{background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.18);}
+  .bc-maybe{background:rgba(234,179,8,0.06);border:1px solid rgba(234,179,8,0.2);}
+  .bc-flex{background:rgba(22,163,74,0.06);border:1px solid rgba(22,163,74,0.18);}
+  .booking-card-title{font-family:var(--font-head);font-weight:800;font-size:14.5px;margin-bottom:10px;}
+  .bc-first .booking-card-title{color:#B91C1C;}
+  .bc-maybe .booking-card-title{color:#92400E;}
+  .bc-flex .booking-card-title{color:#166534;}
+  .booking-note{font-size:13px;color:var(--text-secondary);margin-bottom:10px;line-height:1.4;}
+
+  /* Numbered safe order */
+  .safe-order{list-style:none;margin:20px 0 0;padding:0;counter-reset:safe;}
+  .safe-order li{counter-increment:safe;display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;font-size:15px;line-height:1.5;}
+  .safe-order li::before{content:counter(safe);flex:none;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+
+  /* Planning formula cards */
+  .formula-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:24px 0 16px;}
+  @media(min-width:640px){.formula-grid{grid-template-columns:1fr 1fr;}}
+  .formula-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;}
+  .formula-card-title{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--navy);margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--accent);}
+
+  /* How to start steps */
+  .start-steps{margin:20px 0 0;padding:0;list-style:none;}
+  .start-steps>li{margin-bottom:20px;}
+  .start-steps .ss-title{font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--navy);margin-bottom:5px;}
+  .start-steps p{margin:0;font-size:15px;line-height:1.6;color:var(--text-secondary);}
+
+  /* STICKY NAV */
+  .sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+  .sn-inner::-webkit-scrollbar{display:none;}
+  .sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+  .sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+  .sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+  @media(max-width:680px){
+    .sn-inner{display:none;flex-direction:column;gap:0;padding:0;}
+    .sn-inner.open{display:flex;}
+    .sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}
+    .sn-toggle{display:block;}
+    .sticky-nav{display:flex;align-items:center;justify-content:space-between;}
+    .sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}
+  }
+  @media(min-width:1120px){.sticky-nav{display:none !important;}}
+
+  /* SIDEBAR */
+  .side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+  .side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+
+  [id]{scroll-margin-top:65px;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">&#128205; EverythingInNYC</a>
+    <nav class="header-nav">
+      <a href="index.html">Guides</a>
+      <a href="index.html#attractions">Attractions</a>
+      <a href="index.html#neighborhoods">Neighborhoods</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div id="progressBar" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--accent);z-index:9999;transition:width .15s;"></div>
+
+<!-- SIDEBAR (desktop only) -->
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On this page</div>
+  <a href="#how-many-days">How Many Days</a>
+  <a href="#type-of-trip">Type of Trip</a>
+  <a href="#where-to-stay">Where to Stay</a>
+  <a href="#what-to-book">What to Book</a>
+  <a href="#getting-around">Getting Around</a>
+  <a href="#budget">Budget</a>
+  <a href="#planning-formula">Planning Tips</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<!-- STICKY NAV (mobile / tablet) -->
+<nav class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On this page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle navigation">&#9776;</button>
+  <div class="sn-inner" id="snInner">
+    <a href="#how-many-days">How Many Days</a>
+    <a href="#type-of-trip">Type of Trip</a>
+    <a href="#where-to-stay">Where to Stay</a>
+    <a href="#what-to-book">What to Book</a>
+    <a href="#getting-around">Getting Around</a>
+    <a href="#budget">Budget</a>
+    <a href="#planning-formula">Planning Tips</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+  <article class="article-content">
+
+    <!-- HERO -->
+    <div class="article-cat-pill">Guide</div>
+    <h1>First Time Visiting NYC? Start Here</h1>
+    <div class="article-meta">
+      <span>Last updated: October 4, 2026</span>
+      <span>&bull;</span>
+      <span>EverythingInNYC</span>
+    </div>
+    <div class="article-hero">
+      <img class="article-hero-img" src="first_time_in_NYC_cover.png" alt="New York City skyline for first-time visitors">
+    </div>
+
+    <!-- INTRO -->
+    <p>New York City is not difficult because there is nothing to do. It is difficult because there is too much to do, and the wrong hotel, reservation, or itinerary can quietly make the trip more tiring and expensive than it needs to be.</p>
+    <p>You do not need to understand every neighborhood, subway line, restaurant, and attraction before visiting. You only need to make a few important decisions in the right order.</p>
+    <p>Start with this:</p>
+    <ol class="article-ol">
+      <li>Decide how many full sightseeing days you have.</li>
+      <li>Choose what kind of NYC experience you want.</li>
+      <li>Pick a hotel area that supports that plan.</li>
+      <li>Book the experiences that can sell out.</li>
+      <li>Organize each day by neighborhood.</li>
+      <li>Leave room for food, weather, walking, and rest.</li>
+    </ol>
+    <p>This guide will help you get started, then point you toward more detailed NYC guides when you are ready to plan the specifics.</p>
+
+    <!-- QUICK ANSWER -->
+    <h2 id="quick-answer">The Short Answer: What Should You Plan First?</h2>
+    <div class="table-scroll">
+      <table class="qa-table">
+        <thead>
+          <tr>
+            <th>If you have&hellip;</th>
+            <th>Start with&hellip;</th>
+            <th>Avoid&hellip;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>One full day</td>
+            <td>One compact neighborhood zone and one major attraction</td>
+            <td>Trying to see every famous landmark</td>
+          </tr>
+          <tr>
+            <td>Two days</td>
+            <td>Midtown plus Lower Manhattan or Central Park</td>
+            <td>Adding multiple boroughs</td>
+          </tr>
+          <tr>
+            <td>Three to four days</td>
+            <td>Midtown, downtown, and one Uptown, Chelsea, or Brooklyn day</td>
+            <td>Booking every hour</td>
+          </tr>
+          <tr>
+            <td>Five or more days</td>
+            <td>A slower mix of landmarks, neighborhoods, food, museums, and rest</td>
+            <td>Treating every day like a checklist</td>
+          </tr>
+          <tr>
+            <td>Children</td>
+            <td>Shorter routes, bathrooms, food, and breaks</td>
+            <td>Long cross-city days</td>
+          </tr>
+          <tr>
+            <td>Older travelers</td>
+            <td>Elevator access, taxis, buses, and realistic walking distances</td>
+            <td>Assuming everyone can walk 20,000 steps</td>
+          </tr>
+          <tr>
+            <td>A tight budget</td>
+            <td>Free attractions, casual food, and a well-connected hotel area</td>
+            <td>Choosing a cheap hotel with expensive daily transportation</td>
+          </tr>
+          <tr>
+            <td>A Broadway show</td>
+            <td>The show first, then nearby dinner and sightseeing</td>
+            <td>Booking a distant restaurant before the performance</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-local">
+      <strong>The most useful NYC planning rule is simple:</strong><br>
+      Choose one geographic area and one main anchor for each day. Add nearby flexible stops around it. That one rule will prevent a remarkable amount of unnecessary subway travel.
+    </div>
+
+    <!-- STEP 1 -->
+    <h2 id="how-many-days">Step 1: Decide How Many Full Days You Actually Have</h2>
+    <p>Do not count your arrival and departure days as normal sightseeing days unless your schedule genuinely allows it.</p>
+    <p>Airport transfers, immigration, luggage, hotel check-in, traffic, and fatigue can consume much more time than visitors expect. A late afternoon arrival is usually the beginning of a light first evening, not the beginning of a full sightseeing day.</p>
+
+    <h3>One full day</h3>
+    <p>Choose one compact area.</p>
+    <p>Good options include:</p>
+    <div class="tag-grid">
+      <span class="dot">Midtown and Rockefeller Center</span>
+      <span class="dot">Chelsea, the High Line, and Chelsea Market</span>
+      <span class="dot">Lower Manhattan and the 9/11 Memorial</span>
+      <span class="dot">Central Park and one nearby museum</span>
+      <span class="dot">A food-focused neighborhood route</span>
+    </div>
+    <p>A one-day visit is not the time to combine the Statue of Liberty, Central Park, Brooklyn Bridge, and several museums.</p>
+
+    <h3>Two full days</h3>
+    <p>Two days can give you a useful first taste of NYC if you stay disciplined.</p>
+    <p>A sensible structure could be:</p>
+    <div class="tag-grid">
+      <span class="dot">Day 1: Midtown, Times Square, Rockefeller Center, and <a href="nyc-observation-decks-compared.html">one observation deck</a></span>
+      <span class="dot">Day 2: Lower Manhattan, Brooklyn, Central Park, or Chelsea</span>
+    </div>
+    <p>Do not try to squeeze all four into the same weekend.</p>
+
+    <h3>Three or four full days</h3>
+    <p>This is a much more comfortable length for a first visit.</p>
+    <p>You can usually include:</p>
+    <div class="tag-grid">
+      <span class="dot">A classic Midtown day</span>
+      <span class="dot">Lower Manhattan or Brooklyn</span>
+      <span class="dot">Central Park and a museum</span>
+      <span class="dot">Chelsea, Greenwich Village, food, Broadway, or shopping</span>
+    </div>
+    <p>You will still need to make choices, but the trip does not have to feel like a race.</p>
+
+    <h3>Five days or more</h3>
+    <p>Longer visits allow you to slow down and explore beyond the standard tourist route.</p>
+    <p>You can add:</p>
+    <div class="tag-grid">
+      <span class="dot">Williamsburg</span>
+      <span class="dot">Long Island City</span>
+      <span class="dot">Queens food neighborhoods</span>
+      <span class="dot">The Bronx</span>
+      <span class="dot">Governors Island</span>
+      <span class="dot">Additional museums</span>
+      <span class="dot">More neighborhood restaurants</span>
+      <span class="dot">A weather or rest day</span>
+    </div>
+    <p>For a detailed breakdown, see <a href="nyc-itinerary-planning-guide.html">how many days you need in NYC</a>.</p>
+
+    <!-- STEP 2 -->
+    <h2 id="type-of-trip">Step 2: Decide What Kind of NYC Trip You Want</h2>
+    <p>Before collecting attraction lists, decide what you actually want the trip to feel like.</p>
+
+    <h3>The classic first visit</h3>
+    <p>Prioritize:</p>
+    <div class="tag-grid">
+      <span class="dot">Times Square</span>
+      <span class="dot">Rockefeller Center</span>
+      <span class="dot">Central Park</span>
+      <span class="dot"><a href="nyc-observation-decks-compared.html">One observation deck</a></span>
+      <span class="dot">One museum or Broadway show</span>
+      <span class="dot">Lower Manhattan or the Statue of Liberty</span>
+    </div>
+
+    <h3>The food-focused visit</h3>
+    <p>Prioritize:</p>
+    <div class="tag-grid">
+      <span class="dot">One food neighborhood per day</span>
+      <span class="dot">Casual meals near your sightseeing route</span>
+      <span class="dot">One special restaurant</span>
+      <span class="dot">Flexible food stops instead of a reservation every few hours</span>
+    </div>
+    <p>Start with <a href="nyc-food-day-without-reservations.html">how to build a NYC food day without reservations</a>.</p>
+
+    <h3>The relaxed neighborhood visit</h3>
+    <p>Prioritize:</p>
+    <div class="tag-grid">
+      <span class="dot">Greenwich Village</span>
+      <span class="dot">Chelsea</span>
+      <span class="dot">The West Village</span>
+      <span class="dot">The Upper West Side</span>
+      <span class="dot">Brooklyn neighborhoods</span>
+      <span class="dot">Markets, parks, caf&eacute;s, and local restaurants</span>
+    </div>
+    <p>This style is less about collecting landmarks and more about enjoying how different parts of the city feel.</p>
+
+    <h3>The museum and culture visit</h3>
+    <p>Choose one major museum per day rather than trying to visit three large museums in a single afternoon.</p>
+    <p>The Met, the American Museum of Natural History, and the Museum of Modern Art can each consume much more time than a first-time visitor expects.</p>
+
+    <h3>The family visit</h3>
+    <p>Prioritize:</p>
+    <div class="tag-grid">
+      <span class="dot">A convenient hotel</span>
+      <span class="dot">Shorter travel distances</span>
+      <span class="dot">Parks and playgrounds</span>
+      <span class="dot">Reliable bathrooms</span>
+      <span class="dot">Food near attractions</span>
+      <span class="dot">One main activity at a time</span>
+    </div>
+    <p>You can find more practical planning advice in <a href="nyc-with-kids.html">NYC With Kids</a>.</p>
+
+    <!-- STEP 3 -->
+    <h2 id="where-to-stay">Step 3: Choose Your Hotel Area Before Choosing Your Hotel</h2>
+    <p>The hotel itself matters, but the neighborhood often matters more.</p>
+    <p>A hotel that saves you $80 per night may not be a bargain if it adds an hour of transportation every day, forces you to take taxis at night, or makes it difficult to return for an afternoon break.</p>
+
+    <div class="hotel-grid">
+      <div class="hotel-card">
+        <div class="hotel-card-name">Midtown East and Grand Central</div>
+        <div class="hotel-row"><strong>Best for:</strong> Short trips, first-time visitors, and travelers who want strong transportation access.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> You are close to several subway lines, Grand Central, Bryant Park, Rockefeller Center, and Midtown attractions.</div>
+        <div class="hotel-row"><strong>The catch:</strong> It can feel more businesslike than residential, particularly on weekends.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Times Square and the Theater District</div>
+        <div class="hotel-row"><strong>Best for:</strong> Broadway, first-time visitors who want a central location, and travelers who plan to return late after shows.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> Many major Midtown attractions are nearby, and transportation is convenient.</div>
+        <div class="hotel-row"><strong>The catch:</strong> It is noisy, crowded, expensive, and not necessarily the best part of Manhattan for restaurants or relaxed evening walks.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Hell's Kitchen</div>
+        <div class="hotel-row"><strong>Best for:</strong> Broadway, food, central convenience, and travelers who want to be near Midtown without sleeping directly in Times Square.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> You can walk to theaters, restaurants, Hudson Yards, and parts of Midtown.</div>
+        <div class="hotel-row"><strong>The catch:</strong> Some blocks are busy, and hotel prices vary widely.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Chelsea and Flatiron</div>
+        <div class="hotel-row"><strong>Best for:</strong> Food, the High Line, Chelsea Market, galleries, and walking.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> It is a strong base for West Side sightseeing and has a more neighborhood-oriented atmosphere.</div>
+        <div class="hotel-row"><strong>The catch:</strong> It is less convenient if most of your plans are in Central Park, the Upper East Side, or Lower Manhattan.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Upper West Side</div>
+        <div class="hotel-row"><strong>Best for:</strong> Families, Central Park, the American Museum of Natural History, and travelers who prefer quieter evenings.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> It feels residential, has useful subway access, and is close to parks, museums, caf&eacute;s, and grocery stores.</div>
+        <div class="hotel-row"><strong>The catch:</strong> Broadway and Lower Manhattan require longer journeys.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Lower Manhattan</div>
+        <div class="hotel-row"><strong>Best for:</strong> The 9/11 Memorial, the Oculus, Wall Street, Battery Park, ferries, and downtown restaurants.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> It can offer better hotel value and places you close to several major downtown attractions.</div>
+        <div class="hotel-row"><strong>The catch:</strong> It is not convenient for a Midtown-heavy itinerary.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Long Island City</div>
+        <div class="hotel-row"><strong>Best for:</strong> Budget-conscious travelers, families, and visitors comfortable using the subway.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> Hotels can offer more space and lower prices while remaining connected to Manhattan.</div>
+        <div class="hotel-row"><strong>The catch:</strong> You do not get the same feeling of stepping directly into Manhattan when you leave the hotel.</div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-name">Williamsburg or DUMBO</div>
+        <div class="hotel-row"><strong>Best for:</strong> Travelers who specifically want a Brooklyn experience.</div>
+        <div class="hotel-row"><strong>Why it works:</strong> You are closer to Brooklyn food, waterfronts, nightlife, and neighborhood attractions.</div>
+        <div class="hotel-row"><strong>The catch:</strong> These areas are not automatically cheaper and may create daily travel time if your itinerary is mostly in Manhattan.</div>
+      </div>
+    </div>
+
+    <p>Use <a href="where-to-stay-nyc.html">Where to Stay in NYC: Best Neighborhoods for First-Time Visitors</a> for the deeper comparison.</p>
+
+    <!-- Stay22 hotel widget -->
+    <div id="stay22-widget" style="margin:28px 0;"></div>
+    <script>
+      (function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(d.getElementById(id))return;
+        js=d.createElement(s);js.id=id;
+        js.src='https://www.stay22.com/embed/gm';
+        js.setAttribute('data-lmaid','6ab61efdbcf50f02cdd1e489');
+        fjs.parentNode.insertBefore(js,fjs);
+      }(document,'script','stay22-widget-script'));
+    </script>
+
+    <!-- STEP 4 -->
+    <h2 id="what-to-book">Step 4: Book the Right Things First</h2>
+    <p>Do not book every activity simply because reservations are available.</p>
+    <p>Instead, divide your plans into three categories.</p>
+
+    <div class="booking-grid">
+      <div class="booking-card bc-first">
+        <div class="booking-card-title">Book These First</div>
+        <p class="booking-note">These may sell out, have limited capacity, or anchor the entire day:</p>
+        <div class="tag-grid">
+          <span class="dot">Broadway shows</span>
+          <span class="dot">Statue of Liberty ferry tickets</span>
+          <span class="dot">Crown or pedestal access</span>
+          <span class="dot"><a href="nyc-observation-decks-compared.html">Popular observation decks</a></span>
+          <span class="dot">The 9/11 Museum</span>
+          <span class="dot">Special museum exhibitions</span>
+          <span class="dot">Sports events</span>
+          <span class="dot">High-demand restaurants</span>
+          <span class="dot">Seasonal events</span>
+        </div>
+      </div>
+      <div class="booking-card bc-maybe">
+        <div class="booking-card-title">Book If Important to You</div>
+        <p class="booking-note">These may be flexible, but reservations can still make the day easier:</p>
+        <div class="tag-grid">
+          <span class="dot">MoMA</span>
+          <span class="dot">American Museum of Natural History exhibitions</span>
+          <span class="dot">Popular cruises</span>
+          <span class="dot">Weekend brunch</span>
+          <span class="dot">Special tours</span>
+          <span class="dot">Popular restaurants</span>
+          <span class="dot">Certain museum time slots</span>
+        </div>
+      </div>
+      <div class="booking-card bc-flex">
+        <div class="booking-card-title">Usually Leave Flexible</div>
+        <p class="booking-note">These work well around your main reservation:</p>
+        <div class="tag-grid">
+          <span class="dot">Central Park</span>
+          <span class="dot">Bryant Park</span>
+          <span class="dot">Grand Central</span>
+          <span class="dot">Neighborhood walks</span>
+          <span class="dot">Brooklyn Bridge Park</span>
+          <span class="dot">Free viewpoints</span>
+          <span class="dot">Markets</span>
+          <span class="dot">Casual restaurants</span>
+          <span class="dot">The Staten Island Ferry</span>
+        </div>
+      </div>
+    </div>
+
+    <p>Your safest order is:</p>
+    <ol class="safe-order">
+      <li>Book the fixed-date experience.</li>
+      <li>Add nearby attractions.</li>
+      <li>Plan food in the same area.</li>
+      <li>Leave space for weather, walking, and delays.</li>
+    </ol>
+
+    <p>See <a href="which-attractions-to-book.html">Which NYC Attractions Should You Book Before Your Trip?</a></p>
+
+    <!-- STEP 5 -->
+    <h2 id="nyc-geography">Step 5: Understand NYC Geography</h2>
+    <p>New York City has five boroughs, but most first-time sightseeing happens in a smaller collection of neighborhoods. Even Manhattan should not be treated as one compact attraction zone. NYC Tourism's official visitor information also separates the city into distinct boroughs and transportation areas.</p>
+
+    <p>These combinations make sense:</p>
+    <div class="tag-grid">
+      <span class="dot">Grand Central and SUMMIT One Vanderbilt</span>
+      <span class="dot">Rockefeller Center, Fifth Avenue, and Times Square</span>
+      <span class="dot">Chelsea Market, the High Line, and Hudson Yards</span>
+      <span class="dot">The 9/11 Memorial, the Oculus, Wall Street, and Battery Park</span>
+      <span class="dot">Brooklyn Bridge, DUMBO, and Brooklyn Bridge Park</span>
+      <span class="dot">The American Museum of Natural History and Central Park</span>
+      <span class="dot">The Met and the Upper East Side</span>
+    </div>
+
+    <p>These combinations require more caution:</p>
+    <div class="tag-grid">
+      <span class="dot">Central Park and the Statue of Liberty</span>
+      <span class="dot">The Met and the 9/11 Museum</span>
+      <span class="dot">Brooklyn Bridge, DUMBO, and a full Midtown itinerary</span>
+      <span class="dot"><a href="nyc-observation-decks-compared.html">Multiple observation decks</a></span>
+      <span class="dot">Brooklyn, Queens, and Lower Manhattan in one day</span>
+    </div>
+
+    <p>The Statue of Liberty is not a quick photo stop. Ferry boarding, security, travel time, and time on the island make it a substantial part of the day.</p>
+    <p>Central Park is not one attraction either. Walking from the southern edge to the Met or the American Museum of Natural History can take much longer than the map suggests.</p>
+
+    <!-- MAP CTA -->
+    <div class="bucket-cta">
+      <div class="bc-head">Plan Your NYC Days on One Map</div>
+      <p>Once you understand how NYC is divided into neighborhoods, planning becomes much easier when you can see everything in one place.</p>
+      <p>The <strong>Ultimate NYC Google Maps Guide</strong> includes more than <strong>250 hand-picked NYC attractions, restaurants, viewpoints, parks, museums, neighborhoods, and hidden gems</strong> across all five boroughs.</p>
+      <p>It works directly inside Google Maps, so you can:</p>
+      <ul class="bc-list">
+        <li>See what is close to your hotel</li>
+        <li>Find restaurants near each attraction</li>
+        <li>Build days around one neighborhood</li>
+        <li>Add nearby viewpoints, parks, and rest stops</li>
+        <li>Get live directions while exploring</li>
+        <li>Create your own customized itinerary</li>
+      </ul>
+      <p>Instead of opening dozens of tabs and saving random places from different websites, you can use one organized map to decide what actually fits together.</p>
+      <a class="bc-btn" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the map here &rarr;</a>
+    </div>
+
+    <p>Check out <a href="which-nyc-attractions-to-combine.html">Which NYC Attractions Are Close Enough to Do Together?</a> before building each day.</p>
+
+    <!-- STEP 6 -->
+    <h2 id="getting-around">Step 6: Learn the Transportation Basics</h2>
+    <p>You do not need to memorize the subway map. You need to understand the basic choices.</p>
+
+    <h3>Walking</h3>
+    <p>Walking is often the best option within one neighborhood or for short Midtown trips. It also helps you experience the city rather than viewing it entirely through a subway window.</p>
+    <p>The mistake is assuming that every attraction that looks close on a map is an easy walk after six hours of sightseeing.</p>
+
+    <h3>Subway</h3>
+    <p>The subway is usually the most useful way to travel between major areas. The MTA provides official route planning, service alerts, subway instructions, and accessibility information. The system runs around the clock, but service patterns, construction, and elevator availability can change.</p>
+    <p>Learn these basic ideas:</p>
+    <div class="tag-grid">
+      <span class="dot">Uptown and downtown refer to direction.</span>
+      <span class="dot">Local trains stop more frequently.</span>
+      <span class="dot">Express trains skip some stations.</span>
+      <span class="dot">Subway routes may change on weekends.</span>
+      <span class="dot">A trip is not only the train time; include walking, waiting, transfers, and finding the correct entrance.</span>
+      <span class="dot">Check the MTA app before a time-sensitive attraction.</span>
+    </div>
+
+    <h3>OMNY</h3>
+    <p>OMNY is the current tap-to-pay system for the subway and local buses. Travelers can generally use a contactless bank card, phone, watch, or OMNY Card.</p>
+    <p>The important rule for groups is easy to miss: use the same physical card or device consistently if you want that payment method to receive transfer and cap benefits. One payment method can pay for multiple riders, but the additional riders do not build the payer's weekly cap.</p>
+    <p>If each adult wants separate cap benefits, separate payment methods are usually the safer approach.</p>
+    <p>For the full explanation, read <a href="metrocard-omny-guide.html">how OMNY works for tourists</a>.</p>
+
+    <h3>Taxis and rideshares</h3>
+    <p>A taxi can be worthwhile when:</p>
+    <div class="tag-grid">
+      <span class="dot">You have luggage.</span>
+      <span class="dot">Someone in your group is tired.</span>
+      <span class="dot">You are traveling late.</span>
+      <span class="dot">You are moving between neighborhoods with poor subway connections.</span>
+      <span class="dot">Rain or extreme cold makes a long walk unpleasant.</span>
+      <span class="dot">The group cost is reasonable compared with several subway fares.</span>
+    </div>
+    <p>A taxi is not automatically faster. Manhattan traffic can be painfully slow.</p>
+    <p>At airports, use official taxi stands or marked rideshare pickup areas. Do not accept transportation from people who approach you inside the terminal. Official airport information provides transportation options and warns travelers about unauthorized drivers.</p>
+
+    <!-- STEP 7 -->
+    <h2 id="airport">Step 7: Plan Your Airport Arrival Separately</h2>
+    <p>JFK, LaGuardia, and Newark are not interchangeable.</p>
+
+    <h3>JFK</h3>
+    <p>JFK offers AirTrain connections to Jamaica and Howard Beach, where travelers can connect to the subway or Long Island Rail Road.</p>
+    <p>Public transportation may be useful for light luggage and straightforward hotel locations. A taxi or rideshare may be easier for families, large bags, or late-night arrivals.</p>
+
+    <h3>LaGuardia</h3>
+    <p>LaGuardia connects to the subway through bus services such as the Q70. This can be practical for certain neighborhoods, but traffic still affects taxis and buses.</p>
+
+    <h3>Newark</h3>
+    <p>Newark connects with New Jersey Transit and other rail options. Remember that NJ Transit, PATH, and the MTA are separate systems with separate fare structures.</p>
+
+    <p>Your airport decision should depend on:</p>
+    <div class="tag-grid">
+      <span class="dot">Hotel location</span>
+      <span class="dot">Arrival time</span>
+      <span class="dot">Number of travelers</span>
+      <span class="dot">Luggage</span>
+      <span class="dot">Weather</span>
+      <span class="dot">Budget</span>
+      <span class="dot">Comfort with transfers</span>
+    </div>
+    <p>Do not book a timed attraction immediately after landing unless you have a generous buffer.</p>
+    <p>For detailed airport decisions, use the relevant airport-transfer guide on the site.</p>
+
+    <!-- STEP 8 -->
+    <h2 id="budget">Step 8: Build a Realistic Budget</h2>
+    <p>A NYC budget is not just a hotel price plus a few subway rides.</p>
+    <p>Plan for:</p>
+    <div class="tag-grid">
+      <span class="dot">Hotel</span>
+      <span class="dot">Airport transportation</span>
+      <span class="dot">Subway, buses, taxis, or rideshares</span>
+      <span class="dot">Attraction tickets</span>
+      <span class="dot">Food</span>
+      <span class="dot">Broadway or entertainment</span>
+      <span class="dot">Tips</span>
+      <span class="dot">Sales tax</span>
+      <span class="dot">Shopping</span>
+      <span class="dot">Luggage storage</span>
+      <span class="dot">Weather backups</span>
+      <span class="dot">Emergency transportation</span>
+    </div>
+    <p>Hotel prices can vary dramatically by dates, neighborhood, season, events, and taxes. Compare the final total, not just the advertised nightly rate.</p>
+    <p>Restaurant prices also expand once you add tax, drinks, tips, and any clearly disclosed service charges. NYC's consumer-protection guidance advises travelers to check prices, fees, ticket sellers, and business policies carefully.</p>
+    <p>For detailed planning bands and examples, see <a href="nyc-trip-budget.html">How Much Does a Trip to NYC Cost?</a></p>
+
+    <!-- STEP 9 -->
+    <h2 id="tourist-rules">Step 9: Know the Basic Tourist Rules</h2>
+    <p>You do not need a legal handbook, but you should know a few practical rules.</p>
+    <div class="tag-grid">
+      <span class="dot">Use official yellow taxis, marked rideshare pickup areas, and licensed businesses.</span>
+      <span class="dot">Do not buy attraction tickets from strangers approaching you on the street.</span>
+      <span class="dot">The Staten Island Ferry is free. Do not pay someone who claims you need a ticket.</span>
+      <span class="dot">Ask for prices before accepting pedicab rides, tours, or other services.</span>
+      <span class="dot">Read restaurant menus for mandatory charges or service fees.</span>
+      <span class="dot">Let subway passengers exit before entering.</span>
+      <span class="dot">Do not stop in the middle of subway stairs or crowded sidewalks to check directions.</span>
+      <span class="dot">Keep passports, phones, and wallets secure in crowded places.</span>
+      <span class="dot">Save receipts if a business overcharges you.</span>
+      <span class="dot">Use 311 or the appropriate agency to report a serious consumer problem.</span>
+    </div>
+    <p>NYC's Department of Consumer and Worker Protection specifically provides tourist guidance about unauthorized ticket sellers, pedicabs, restaurant charges, and complaints.</p>
+    <p>For a more detailed breakdown, read <a href="nyc-tourist-scams.html">NYC Scams Tourists Still Fall For</a>.</p>
+
+    <!-- STEP 10 -->
+    <h2 id="practical-tips">Step 10: Plan for Walking, Bathrooms, Weather, and Rest</h2>
+    <p>A classic sightseeing day can easily become a four-to-eight-mile day before you count hotel transfers, subway stairs, queues, and accidental detours.</p>
+    <p>Plan for reality:</p>
+    <div class="tag-grid">
+      <span class="dot">Wear broken-in shoes.</span>
+      <span class="dot">Save rest stops in your map.</span>
+      <span class="dot">Use a bathroom before ferries, bridges, long queues, or large parks.</span>
+      <span class="dot">Do not assume every park has a nearby restroom.</span>
+      <span class="dot">Do not schedule a long outdoor activity as the only meaningful plan on an uncertain-weather day.</span>
+      <span class="dot">Add indoor alternatives near major outdoor attractions.</span>
+      <span class="dot">Leave time to sit down before everyone becomes miserable.</span>
+    </div>
+    <p>The MTA's accessibility information is station-specific, so check the exact elevator status rather than assuming every subway station is step-free.</p>
+    <p>For practical rest-stop planning, see <a href="best-places-to-sit-down-and-rest-near-major-nyc-attractions.html">Best Places to Sit Down and Rest Near Major NYC Attractions</a>.</p>
+
+    <!-- PLANNING FORMULA -->
+    <h2 id="planning-formula">A Simple Planning Formula</h2>
+    <p>For each sightseeing day, use this structure:</p>
+
+    <div class="formula-grid">
+      <div class="formula-card">
+        <div class="formula-card-title">One major anchor</div>
+        <p>Examples:</p>
+        <div class="tag-grid">
+          <span class="dot">Statue of Liberty</span>
+          <span class="dot">The Met</span>
+          <span class="dot"><a href="nyc-observation-decks-compared.html">One observation deck</a></span>
+          <span class="dot">Broadway</span>
+          <span class="dot">The 9/11 Museum</span>
+          <span class="dot">A major food experience</span>
+        </div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-card-title">Two to four nearby flexible stops</div>
+        <p>Examples:</p>
+        <div class="tag-grid">
+          <span class="dot">A park</span>
+          <span class="dot">A viewpoint</span>
+          <span class="dot">A market</span>
+          <span class="dot">A neighborhood walk</span>
+          <span class="dot">A free landmark</span>
+          <span class="dot">A casual food stop</span>
+        </div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-card-title">One planned meal</div>
+        <p>Choose somewhere close to the day's route.</p>
+      </div>
+      <div class="formula-card">
+        <div class="formula-card-title">One intentional reset</div>
+        <p>This might be:</p>
+        <div class="tag-grid">
+          <span class="dot">A caf&eacute;</span>
+          <span class="dot">A park bench</span>
+          <span class="dot">A museum caf&eacute;</span>
+          <span class="dot">A food hall</span>
+          <span class="dot">A hotel break</span>
+          <span class="dot">A quiet indoor space</span>
+        </div>
+      </div>
+    </div>
+    <div class="formula-card" style="margin-bottom:24px;">
+      <div class="formula-card-title">One backup plan</div>
+      <p>Every outdoor-heavy day should have an indoor alternative.</p>
+    </div>
+
+    <p>This formula gives you enough structure to avoid wasting time without turning the entire trip into a military operation.</p>
+
+    <!-- HOW TO START -->
+    <h2 id="how-to-start">How to Start Planning Your Trip This Week</h2>
+
+    <ul class="start-steps">
+      <li>
+        <div class="ss-title">First, choose your dates and count your full days</div>
+        <p>Ignore the temptation to call a late arrival or early departure a full sightseeing day.</p>
+      </li>
+      <li>
+        <div class="ss-title">Next, choose your top three priorities</div>
+        <p>Maybe they are Broadway, Central Park, pizza, the Statue of Liberty, museums, shopping, skyline views, neighborhood food, or Brooklyn.</p>
+      </li>
+      <li>
+        <div class="ss-title">Then compare hotel areas</div>
+        <p>Do not book based only on the lowest rate. Check the subway, evening atmosphere, airport route, and walking distance.</p>
+      </li>
+      <li>
+        <div class="ss-title">Book only the experiences that can sell out</div>
+        <p>Reserve Broadway, <a href="nyc-observation-decks-compared.html">observation decks</a>, ferries, major museums, or special events first.</p>
+      </li>
+      <li>
+        <div class="ss-title">Build days by neighborhood</div>
+        <p>Use a map to see what is genuinely close together.</p>
+      </li>
+      <li>
+        <div class="ss-title">Add meals and rest stops</div>
+        <p>Food and rest are not interruptions to the itinerary. They are part of what makes the itinerary work.</p>
+      </li>
+      <li>
+        <div class="ss-title">Check the forecast and service status</div>
+        <p>The MTA app can help with current routes and service changes. Attraction hours, fares, restaurant policies, and airport pickup rules should be checked again shortly before travel.</p>
+      </li>
+    </ul>
+
+    <p>If you want all your planning options in one place, the <a href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Ultimate NYC Google Maps Guide</a> includes more than 250 hand-picked attractions, restaurants, parks, viewpoints, museums, and neighborhood stops across the five boroughs. It works directly in Google Maps and helps you see what is actually near your hotel or daily anchor.</p>
+
+    <!-- FAQ -->
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <div class="faq-wrap">
+      <details class="faq-item">
+        <summary>Is NYC difficult for first-time visitors?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">It can feel overwhelming at first because the city is large, busy, and geographically spread out. It becomes much easier once you plan by neighborhood instead of treating the entire city as one attraction zone.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How many days should I spend in NYC for my first visit?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Three or four full days is a strong starting point for many first-time visitors. Two days can work with disciplined planning, while five or more days allows a slower pace and more neighborhood exploration.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is Times Square the best area to stay?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Times Square is convenient, especially for Broadway and short trips, but it is noisy, crowded, and expensive. Compare it with Midtown East, Hell&rsquo;s Kitchen, Chelsea, the Upper West Side, and Lower Manhattan before booking.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Should I stay in Manhattan?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Not necessarily. Long Island City, Jersey City, and parts of Brooklyn can offer value, but compare the daily travel time, fare systems, evening convenience, and atmosphere before choosing them.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Should I rent a car in NYC?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Usually not for a classic first visit. Parking, traffic, tolls, and navigation usually create more problems than they solve.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to reserve every attraction?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">No. Reserve limited-capacity or timed experiences first. Leave parks, neighborhood walks, casual food, and many free sights flexible.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I see the Statue of Liberty in a few hours?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">You can see the Statue from the harbor in several ways, but visiting Liberty Island involves ferry travel, boarding, security, and time on the island. Treat it as a major part of the day.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I walk everywhere?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">You can walk between many attractions within the same area. Walking from Central Park to Lower Manhattan or combining several boroughs in one day is a different story.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is the subway safe for tourists?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Millions of people use it every day, but visitors should use ordinary urban awareness, check service changes, keep belongings secure, and avoid making absolute assumptions about every route or station.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What should I do if it rains?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">Keep at least one indoor backup near your planned area. Museums, markets, food halls, Grand Central, the Oculus, and department stores can rescue a day that was designed around outdoor sightseeing.</div>
+      </details>
+    </div>
+
+    <!-- RELATED BOX -->
+    <div class="related-box">
+      <div class="rb-label">More From EverythingInNYC</div>
+      <ul>
+        <li><a href="top-things-to-do-in-nyc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Top Things to Do in NYC</a></li>
+        <li><a href="nyc-in-one-day-from-penn-station.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC in One Day from Penn Station</a></li>
+        <li><a href="nyc-observation-decks-compared.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>NYC Observation Decks Compared</a></li>
+        <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Read all our NYC travel guides &rarr;</a></li>
+      </ul>
+    </div>
+
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">&#128205; EverythingInNYC</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#attractions">Attractions</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 EverythingInNYC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Progress bar
+var pb = document.getElementById('progressBar');
+function updateProgress() {
+  var h = document.documentElement;
+  var pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  if (pb) pb.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+// Scrollspy — all section IDs
+var secs = ['quick-answer','how-many-days','type-of-trip','where-to-stay','what-to-book','nyc-geography','getting-around','airport','budget','tourist-rules','practical-tips','planning-formula','how-to-start','faq'];
+
+// Map sub-section IDs to the 8 nav items
+var navMap = {
+  'quick-answer':    'how-many-days',
+  'how-many-days':   'how-many-days',
+  'type-of-trip':    'type-of-trip',
+  'where-to-stay':   'where-to-stay',
+  'what-to-book':    'what-to-book',
+  'nyc-geography':   'what-to-book',
+  'getting-around':  'getting-around',
+  'airport':         'getting-around',
+  'budget':          'budget',
+  'tourist-rules':   'budget',
+  'practical-tips':  'budget',
+  'planning-formula':'planning-formula',
+  'how-to-start':    'planning-formula',
+  'faq':             'faq'
+};
+
+var navLinks = document.querySelectorAll('.sn-inner a, .side-nav a');
+
+function updateNav() {
+  var pos = window.scrollY + 120;
+  var cur = '';
+  for (var i = 0; i < secs.length; i++) {
+    var el = document.getElementById(secs[i]);
+    if (el && el.offsetTop <= pos) cur = secs[i];
+  }
+  var target = navMap[cur] || '';
+  navLinks.forEach(function(a) {
+    var href = a.getAttribute('href').replace('#','');
+    var on = href === target;
+    a.classList.toggle('active', on);
+    a.classList.toggle('sn-active', on);
+  });
+}
+window.addEventListener('scroll', updateNav, {passive:true});
+updateNav();
+
+// Mobile nav toggle
+var snToggle = document.getElementById('snToggle');
+var snInner  = document.getElementById('snInner');
+if (snToggle && snInner) {
+  snToggle.addEventListener('click', function() {
+    snInner.classList.toggle('open');
+  });
+  snInner.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      snInner.classList.remove('open');
+    });
+  });
+}
+</script>
+
+</body>
+</html>
