@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS2FTB88QP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZS2FTB88QP');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best NYC Walking Tour for First-Time Visitors: 4 Routes Compared | EverythingInNYC</title>
+<meta name="description" content="Compare four self-guided NYC walking routes for first-time visitors, with practical itineraries, realistic time estimates and tips for choosing the right neighborhood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Route pick cards */
+  .route-pick-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:26px 0;}
+  @media(min-width:640px){.route-pick-grid{grid-template-columns:1fr 1fr;}}
+  .route-pick{border-radius:14px;padding:20px 22px;}
+  .route-pick h4{font-size:15px;font-family:var(--font-head);margin:0 0 8px;}
+  .route-pick p{font-size:14.5px;margin:0;line-height:1.55;}
+  .rp-midtown{background:rgba(255,193,7,0.08);border:1.5px solid rgba(255,193,7,0.4);}
+  .rp-lower{background:rgba(37,99,235,0.06);border:1.5px solid rgba(37,99,235,0.2);}
+  .rp-village{background:rgba(22,163,74,0.06);border:1.5px solid rgba(22,163,74,0.2);}
+  .rp-dumbo{background:rgba(124,58,237,0.06);border:1.5px solid rgba(124,58,237,0.2);}
+  .rp-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;opacity:.7;}
+
+  /* Decision list */
+  .decide-list{list-style:none;padding:0;margin:22px 0;}
+  .decide-list li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);font-size:15.5px;line-height:1.5;}
+  .decide-list li:last-child{border-bottom:none;}
+  .decide-list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:7px;}
+
+  /* Viator CTA */
+  .viator-cta{background:linear-gradient(150deg,#008A5E 0%,#005E41 100%);border-radius:20px;padding:32px 28px;margin:40px 0;color:#fff;}
+  .viator-cta .vc-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:10px;}
+  .viator-cta h4{font-family:var(--font-head);font-size:20px;margin:0 0 10px;color:#fff;}
+  .viator-cta p{font-size:15px;line-height:1.6;margin:0 0 20px;opacity:.92;}
+  .btn-viator{display:inline-block;background:#fff;color:#005E41;font-weight:700;font-size:14px;padding:11px 24px;border-radius:999px;text-decoration:none;transition:opacity .15s;}
+  .btn-viator:hover{opacity:.88;}
+
+  /* STICKY NAV */
+  .sticky-nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);}
+  .sn-inner{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+  .sn-inner::-webkit-scrollbar{display:none;}
+  .sn-inner a{flex:none;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.72);text-decoration:none;padding:11px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
+  .sn-inner a:hover,.sn-inner a.active{color:#fff;border-bottom-color:var(--accent);}
+  .sn-toggle{display:none;background:none;border:none;color:#fff;padding:10px 14px;cursor:pointer;font-size:20px;flex:none;}
+  @media(max-width:680px){
+    .sn-inner{display:none;flex-direction:column;gap:0;padding:0;}
+    .sn-inner.open{display:flex;}
+    .sn-inner a{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.1);}
+    .sn-toggle{display:block;}
+    .sticky-nav{display:flex;align-items:center;justify-content:space-between;}
+    .sn-label{color:#fff;font-size:13px;font-weight:700;padding:0 14px;}
+  }
+  @media(min-width:1120px){.sticky-nav{display:none !important;}}
+
+  /* SIDEBAR */
+  .side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
+  @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
+  .side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+  .side-nav a{display:block;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-secondary);text-decoration:none;border-left:3px solid transparent;transition:all .15s;line-height:1.3;}
+  .side-nav a:hover{color:var(--navy);}
+  .side-nav a.sn-active{color:var(--navy);font-weight:800;border-left-color:var(--accent);background:rgba(255,193,7,.07);}
+
+  [id]{scroll-margin-top:65px;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html"><span class="pin">&#128205;</span> EverythingInNYC</a>
+    <span class="tag">Visiting New York City? You are in the right place.</span>
+    <a class="nav-cta" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Get the NYC Map</a>
+  </div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div id="progressBar" style="position:fixed;top:0;left:0;width:0;height:3px;background:var(--accent);z-index:9999;transition:width .15s;"></div>
+
+<!-- SIDEBAR (desktop only) -->
+<nav class="side-nav" id="sideNav">
+  <div class="snt">On this page</div>
+  <a href="#at-a-glance">At a Glance</a>
+  <a href="#midtown">Midtown Walk</a>
+  <a href="#lower-manhattan">Lower Manhattan</a>
+  <a href="#greenwich-village">Greenwich Village</a>
+  <a href="#dumbo">DUMBO</a>
+  <a href="#best-for-you">Best for You</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<!-- STICKY NAV (mobile / tablet) -->
+<nav class="sticky-nav" id="stickyNav">
+  <span class="sn-label">On this page</span>
+  <button class="sn-toggle" id="snToggle" aria-label="Toggle navigation">&#9776;</button>
+  <div class="sn-inner" id="snInner">
+    <a href="#at-a-glance">At a Glance</a>
+    <a href="#midtown">Midtown</a>
+    <a href="#lower-manhattan">Lower Manhattan</a>
+    <a href="#greenwich-village">Village</a>
+    <a href="#dumbo">DUMBO</a>
+    <a href="#best-for-you">Best for You</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<main>
+<div class="read">
+
+  <div class="article-head">
+    <span class="cat-pill">Walking Guide</span>
+    <h1>Best NYC Walking Tour for First-Time Visitors: Midtown, Lower Manhattan, Greenwich Village, or DUMBO?</h1>
+    <div class="article-meta">
+      <span>Last updated: October 11, 2026</span>
+      <span>&bull;</span>
+      <span>EverythingInNYC</span>
+    </div>
+  </div>
+
+  <img class="article-hero-img" src="best-nyc-walking-tour-first-time-visitors.png" alt="Best NYC walking tour routes for first-time visitors">
+
+  <div class="article-body">
+
+    <p>New York is a brilliant city to explore on foot&mdash;as long as your itinerary leaves room for crosswalks, photo stops, snack breaks and the occasional &ldquo;Wait, which avenue are we on?&rdquo; moment.</p>
+
+    <p>So, which is the best NYC walking tour for a <a href="first-time-in-nyc.html">first-time visitor</a>: Midtown, Lower Manhattan, Greenwich Village or DUMBO? There&rsquo;s no single winner for every traveler. I&rsquo;d choose Midtown for the classic first-trip landmarks, Lower Manhattan for history, Greenwich Village for neighborhood character, and DUMBO for skyline views and photos.</p>
+
+    <p>The routes below are self-guided neighborhood walks, not paid guided tours. Times are planning estimates for walking and sightseeing; meals, ticketed attractions, lines and longer breaks will add time.</p>
+
+    <h2 id="at-a-glance">NYC Walking Tours at a Glance</h2>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Neighborhood</th>
+            <th>Suggested Route</th>
+            <th>Time to Allow</th>
+            <th>Best For</th>
+            <th>Main Trade-off</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Midtown</strong></td>
+            <td>Times Square &rarr; Bryant Park &rarr; NYPL &rarr; Grand Central &rarr; Chrysler Building</td>
+            <td>About 3 hours for the mapped loop</td>
+            <td>First-trip landmarks and architecture</td>
+            <td>Crowds can slow the walk</td>
+          </tr>
+          <tr>
+            <td><strong>Lower Manhattan</strong></td>
+            <td>9/11 Memorial &rarr; Oculus &rarr; Wall Street &rarr; Stone Street &rarr; The Battery</td>
+            <td>About 3&ndash;4 hours without the Museum</td>
+            <td>History and waterfront sights</td>
+            <td>The 9/11 Museum needs its own time</td>
+          </tr>
+          <tr>
+            <td><strong>Greenwich Village</strong></td>
+            <td>Washington Square Park &rarr; Bleecker Street &rarr; Stonewall &rarr; West Village side streets &rarr; Pier 45</td>
+            <td>About 3&ndash;4 hours for the condensed route</td>
+            <td>Brownstones, history and neighborhood atmosphere</td>
+            <td>Longer than it looks; some streets are uneven</td>
+          </tr>
+          <tr>
+            <td><strong>DUMBO</strong></td>
+            <td>Washington Street &rarr; Empire Stores &rarr; Jane&rsquo;s Carousel &rarr; Brooklyn Bridge Park</td>
+            <td>About 45&ndash;90 minutes for the photo loop</td>
+            <td>Skyline views and photography</td>
+            <td>The photo spot can get crowded</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="choose-your-route">Which NYC Walking Tour Should You Choose?</h2>
+
+    <div class="route-pick-grid">
+      <div class="route-pick rp-midtown">
+        <div class="rp-label">Classic First Visit</div>
+        <h4>Choose Midtown for a classic first visit</h4>
+        <p>Midtown packs familiar New York sights into a compact area: Times Square, Bryant Park, the New York Public Library, Grand Central Terminal and the Chrysler Building. If you have only one neighborhood walk and want the greatest concentration of recognizable landmarks, Midtown is the all-around pick.</p>
+      </div>
+      <div class="route-pick rp-lower">
+        <div class="rp-label">History</div>
+        <h4>Choose Lower Manhattan for history</h4>
+        <p>Lower Manhattan is the strongest choice for a walk centered on New York&rsquo;s past and the city&rsquo;s financial district. It also offers a quieter change of pace at The Battery, but a visit to the 9/11 Museum turns the outing into a much longer day.</p>
+      </div>
+      <div class="route-pick rp-village">
+        <div class="rp-label">Neighborhood Character</div>
+        <h4>Choose Greenwich Village for streets with character</h4>
+        <p>Greenwich Village and the West Village are a better fit if you want to slow down, admire historic buildings and explore side streets. It&rsquo;s less of a checklist route and more of a neighborhood walk. That&rsquo;s part of its appeal&mdash;and why it can take longer than a map suggests.</p>
+      </div>
+      <div class="route-pick rp-dumbo">
+        <div class="rp-label">Skyline Views</div>
+        <h4>Choose DUMBO for skyline views and photos</h4>
+        <p>DUMBO is the most focused option: come for the bridge views, waterfront and famous Washington Street photo. It&rsquo;s easy to combine with Brooklyn Bridge Park, but the walk is less about seeing a broad range of Manhattan landmarks.</p>
+      </div>
+    </div>
+
+    <h2 id="midtown">1. Midtown Walking Tour: Times Square to Grand Central</h2>
+
+    <ul class="tag-grid">
+      <li><span class="dot"></span><strong>Best for:</strong> First-time visitors, architecture fans and travelers short on time</li>
+      <li><span class="dot"></span><strong>Allow:</strong> About 3 hours for the mapped loop, including short sightseeing stops</li>
+    </ul>
+
+    <h3>Suggested Route</h3>
+
+    <div class="numbered-step">
+      <div class="num">1</div>
+      <div>
+        <h4>Times Square</h4>
+        <p>Take in the lights and crowds, then move on before your camera roll becomes 40 versions of the same billboard.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">2</div>
+      <div>
+        <h4>Bryant Park</h4>
+        <p>Pause for a breather before continuing east.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">3</div>
+      <div>
+        <h4>New York Public Library</h4>
+        <p>See the landmark building and check the current visitor schedule if you want to go inside.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">4</div>
+      <div>
+        <h4>Grand Central Terminal</h4>
+        <p>Look around the Main Concourse and enjoy one of Midtown&rsquo;s most impressive interiors.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">5</div>
+      <div>
+        <h4>Chrysler Building</h4>
+        <p>Finish with an exterior view. You can end near Grand Central or return west to make the full loop.</p>
+      </div>
+    </div>
+
+    <p>A mapped version of this route is about 1.5 miles and budgets roughly three hours; finishing near Grand Central instead of returning west will shorten it.</p>
+
+    <div class="callout callout-tip">
+      <strong>Practicality:</strong> This route is easy to shorten. If your group is tiring, stop after Bryant Park and the library, or finish at Grand Central. Times Square is a busy, noisy place, and crowds can slow your pace, especially when people stop for photos or wait at crossings.
+      <br><br>
+      One important detail: do not promise that visitors can freely enter the famous Rose Main Reading Room at any time. NYPL lists specific visitor access and tour arrangements, which can change. Check the library&rsquo;s current visitor information before you go.
+      <br><br>
+      Want to make this a full Midtown day? Continue north toward Fifth Avenue, St.&nbsp;Patrick&rsquo;s Cathedral, <a href="nyc-observation-decks-compared.html">Rockefeller Center</a> and Central Park South. That longer route is about four miles and needs around 5&ndash;7 hours, depending on stops.
+    </div>
+
+    <h2 id="lower-manhattan">2. Lower Manhattan Walking Tour: The 9/11 Memorial to The Battery</h2>
+
+    <ul class="tag-grid">
+      <li><span class="dot"></span><strong>Best for:</strong> History, architecture and waterfront views</li>
+      <li><span class="dot"></span><strong>Allow:</strong> About 3&ndash;4 hours without a substantial museum visit</li>
+    </ul>
+
+    <h3>Suggested Route</h3>
+
+    <div class="numbered-step">
+      <div class="num">1</div>
+      <div>
+        <h4>9/11 Memorial</h4>
+        <p>Visit the outdoor pools and give yourself time to take in the site respectfully.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">2</div>
+      <div>
+        <h4>Oculus</h4>
+        <p>Walk through the striking transit hub and shopping concourse.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">3</div>
+      <div>
+        <h4>Wall Street and Trinity Church</h4>
+        <p>Explore the historic corridor, including Trinity&rsquo;s exterior and the surrounding financial district.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">4</div>
+      <div>
+        <h4>Federal Hall and the New York Stock Exchange</h4>
+        <p>See the landmark facades; check opening details if you want to go inside Federal Hall.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">5</div>
+      <div>
+        <h4>Stone Street</h4>
+        <p>Take a food or rest break.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">6</div>
+      <div>
+        <h4>Charging Bull and Bowling Green</h4>
+        <p>Make a quick stop if the crowd allows.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">7</div>
+      <div>
+        <h4>The Battery</h4>
+        <p>End near the harbor and enjoy the waterfront.</p>
+      </div>
+    </div>
+
+    <p>The 9/11 Memorial is open daily from 8&nbsp;a.m. to 8&nbsp;p.m. The Museum has separate hours and requires a ticket, so treat it as a distinct visit rather than a quick stop on the walk.</p>
+
+    <div class="callout callout-local">
+      <strong>Practicality:</strong> This is the most emotionally significant route of the four. If you plan to visit the Museum, leave several hours for it and reduce the number of other stops. The outdoor Memorial and Museum are different experiences, and the Museum is not something to squeeze in between lunch and a ferry.
+      <br><br>
+      Keep the Brooklyn Bridge and DUMBO out of this neighborhood route. They make a natural extension for energetic travelers, but they add distance and turn the outing into a much longer Brooklyn-and-Manhattan day. The Lower Manhattan-only route is estimated at about 3&ndash;4 hours without a substantial Museum visit.
+    </div>
+
+    <h2 id="greenwich-village">3. Greenwich Village and West Village Walking Tour</h2>
+
+    <ul class="tag-grid">
+      <li><span class="dot"></span><strong>Best for:</strong> Neighborhood atmosphere, architecture, history and food stops</li>
+      <li><span class="dot"></span><strong>Allow:</strong> About 3&ndash;4 hours for a condensed walk</li>
+    </ul>
+
+    <h3>Suggested Route</h3>
+
+    <div class="numbered-step">
+      <div class="num">1</div>
+      <div>
+        <h4>Washington Square Park</h4>
+        <p>Start near the arch and take a few minutes to get oriented.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">2</div>
+      <div>
+        <h4>MacDougal Street and Bleecker Street</h4>
+        <p>Browse the area and choose a coffee or food stop. If you want to make the most of the neighborhood&rsquo;s food scene, our <a href="greenwich-village-food-tour.html">Greenwich Village food tour guide</a> covers the best spots by block.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">3</div>
+      <div>
+        <h4>Christopher Street and Stonewall</h4>
+        <p>Visit the historic area around the Stonewall National Monument.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">4</div>
+      <div>
+        <h4>West Village Side Streets</h4>
+        <p>Wander selected blocks around Grove, Commerce and Perry Streets.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">5</div>
+      <div>
+        <h4>Hudson River Park at Pier 45</h4>
+        <p>Add this as an optional finish if you still have time and energy.</p>
+      </div>
+    </div>
+
+    <p>A fuller route that combines Greenwich Village with the West Village covers roughly 2.5&ndash;3.5 miles; the condensed version is estimated at 3&ndash;4 hours with stops. The National Park Service recognizes the area&rsquo;s architectural and cultural significance, including its history of activism and the varied styles of its historic buildings.</p>
+
+    <div class="callout callout-summary">
+      <strong>Practicality:</strong> This walk is less about famous attractions and more about enjoying the streets between them. The West Village&rsquo;s less regular street pattern can make navigation less straightforward, so keep a map handy. Some sections have uneven paving or cobblestones; comfortable shoes are a sensible choice.
+      <br><br>
+      Treat gated lanes and residential courtyards as optional views, not guaranteed walk-through stops. Public access descriptions for places such as Washington Mews vary, so follow posted signs and stay on public streets if a gate is closed.
+      <br><br>
+      If you need to shorten the route, skip the riverfront extension and finish near Christopher Street or Washington Square Park. NYC Parks lists a public restroom in Washington Square Park; check current facility information before relying on any stop for amenities.
+    </div>
+
+    <h2 id="dumbo">4. DUMBO Walking Tour: Washington Street to Brooklyn Bridge Park</h2>
+
+    <ul class="tag-grid">
+      <li><span class="dot"></span><strong>Best for:</strong> Skyline views, photography and a shorter waterfront outing</li>
+      <li><span class="dot"></span><strong>Allow:</strong> About 45&ndash;90 minutes for the photo loop, plus extra time for food or a longer park break</li>
+    </ul>
+
+    <h3>Suggested Route</h3>
+
+    <div class="numbered-step">
+      <div class="num">1</div>
+      <div>
+        <h4>Washington Street at Water Street</h4>
+        <p>Stop for the framed Manhattan Bridge view. Take photos from the sidewalk and keep clear of traffic.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">2</div>
+      <div>
+        <h4>Empire Stores</h4>
+        <p>Browse the waterfront complex or stop for food.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">3</div>
+      <div>
+        <h4>Jane&rsquo;s Carousel and Fulton Ferry</h4>
+        <p>Enjoy the waterfront setting and bridge views.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">4</div>
+      <div>
+        <h4>Brooklyn Bridge Park&rsquo;s Pier 1 Promenade</h4>
+        <p>Walk out toward the lawns and take a break by the river.</p>
+      </div>
+    </div>
+
+    <div class="numbered-step">
+      <div class="num">5</div>
+      <div>
+        <h4>Finish Near Fulton Ferry Landing</h4>
+        <p>Or head back toward a subway station. The <a href="metrocard-omny-guide.html">OMNY and MetroCard guide</a> covers transit options if you&rsquo;re planning your return trip in advance.</p>
+      </div>
+    </div>
+
+    <p>A short DUMBO waterfront photo loop is commonly planned as a 45&ndash;90-minute outing; it will take longer if you linger in the park, shop or sit down to eat. Washington Street can become congested, so treat it as a quick photo stop and move on if the sidewalk is busy.</p>
+
+    <div class="callout callout-tip">
+      <strong>Photo fact:</strong> The famous bridge framed by brick buildings on Washington Street is the <strong>Manhattan Bridge</strong>, not the Brooklyn Bridge. Both bridges are nearby, so the mix-up is understandable.
+    </div>
+
+    <div class="callout callout-local">
+      <strong>Practicality:</strong> Brooklyn Bridge Park is accessible by bus, subway and ferry, and the park&rsquo;s official accessibility information says its entrances, pathways and restrooms are accessible. That applies to the park; it does not automatically confirm every surrounding street or transit approach. Parking is limited, so transit is generally the simpler choice. Check current ferry service before making it part of your plan.
+      <br><br>
+      You can add a Brooklyn Bridge crossing, but make it a separate extension rather than an assumed part of the DUMBO walk. The bridge is about 1.1 miles across.
+    </div>
+
+    <h2 id="best-for-you">Which Route Is Best for Your Travel Style?</h2>
+
+    <ul class="decide-list">
+      <li><strong>You want the most famous first-trip sights:</strong> Choose Midtown.</li>
+      <li><strong>You care most about history:</strong> Choose Lower Manhattan, and decide in advance whether the 9/11 Museum is part of your day.</li>
+      <li><strong>You want food and neighborhood atmosphere:</strong> Choose Greenwich Village and the West Village.</li>
+      <li><strong>You want skyline photos:</strong> Choose DUMBO and Brooklyn Bridge Park.</li>
+      <li><strong>You have limited time:</strong> Choose the compact Midtown loop or the DUMBO photo walk.</li>
+      <li><strong>You&rsquo;re traveling with children:</strong> DUMBO&rsquo;s waterfront, park and carousel make it a flexible option; shorten the walk and leave time for a break.</li>
+      <li><strong>You or someone in your group has limited mobility:</strong> Favor a shorter route and verify the exact street, station entrance and path before setting out. Brooklyn Bridge Park has accessible entrances and pathways, but the route to and from the park needs its own check.</li>
+    </ul>
+
+    <p>For a first-time visitor who wants one walk that feels unmistakably like New York, I&rsquo;d start with Midtown. If history is the main draw, Lower Manhattan may be the more meaningful choice. Your best route is the one that leaves enough energy to enjoy the next stop.</p>
+
+    <p>If you&rsquo;d like to see how more NYC attractions fit together before planning each day, the <a href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">Ultimate NYC Google Maps Guide</a> includes more than 250 hand-picked places pinned in an interactive map for exploring on your phone or planning ahead.</p>
+
+    <div class="viator-cta">
+      <div class="vc-eyebrow">Prefer a guided experience?</div>
+      <h4>Top-Rated NYC Walking Tours on Viator</h4>
+      <p>Self-guided walks let you move at your own pace, but a guided tour adds historical context, local commentary and the convenience of having someone who knows the city lead the way. Viator lists a wide range of NYC walking tours across all four of these neighborhoods.</p>
+      <a class="btn-viator" href="https://www.viator.com/New-York-City/d687-ttd" target="_blank" rel="noopener">Browse NYC Walking Tours &rarr;</a>
+    </div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <div class="faq-wrap">
+
+      <details class="faq-item">
+        <summary>What is the best NYC walking tour for first-time visitors?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">
+          For a classic first visit, the Midtown route from Times Square to Bryant Park, the New York Public Library, Grand Central and the Chrysler Building is the strongest starting point. Choose Lower Manhattan instead if you want to focus on history.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long should I plan for an NYC walking tour?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">
+          Plan around 45&ndash;90 minutes for the DUMBO photo loop, about three hours for the compact Midtown walk, and roughly 3&ndash;4 hours for the Lower Manhattan or Village routes. Add time for meals, queues, ticketed attractions and longer breaks.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is the 9/11 Memorial free to visit?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">
+          The outdoor 9/11 Memorial is free and open daily from 8&nbsp;a.m. to 8&nbsp;p.m. The Museum is separate, has its own schedule and requires a ticket. Check official visitor information at <a href="https://www.911memorial.org" target="_blank" rel="noopener">911memorial.org</a> before you go.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Should I walk the Brooklyn Bridge from Manhattan to DUMBO?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">
+          It&rsquo;s a memorable extension if you have time and energy. The bridge crossing is about 1.1 miles; walking it and then exploring DUMBO makes for a longer outing than the DUMBO neighborhood loop alone.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is a self-guided walk better than a paid tour?<span class="chev">&#9662;</span></summary>
+        <div class="faq-a">
+          A self-guided route lets you choose your pace and stops. A paid guided tour can add historical context and local detail. The routes in this guide are self-guided; book a tour separately if you want a guide.
+        </div>
+      </details>
+
+    </div>
+
+    <div class="related-box">
+      <div class="rb-label">More NYC guides</div>
+      <ul>
+        <li>
+          <a href="first-time-in-nyc.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            First Time Visiting NYC? Start Here
+          </a>
+        </li>
+        <li>
+          <a href="top-things-to-do-in-nyc.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            Top Things to Do in NYC
+          </a>
+        </li>
+        <li>
+          <a href="greenwich-village-food-tour.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            Greenwich Village Food Tour Guide
+          </a>
+        </li>
+        <li>
+          <a href="nyc-observation-decks-compared.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            NYC Observation Decks Compared
+          </a>
+        </li>
+        <li>
+          <a href="realistic-nyc-bucket-list.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            Realistic NYC Bucket List
+          </a>
+        </li>
+        <li>
+          <a href="metrocard-omny-guide.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            MetroCard vs OMNY: NYC Transit Guide
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            Read all our NYC travel guides
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /.article-body -->
+</div><!-- /.read -->
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h3>Plan Smarter, Not Harder</h3>
+    <p class="sub">A few resources readers come back to again and again.</p>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://payhip.com/b/9U4MA" target="_blank" rel="noopener">
+        <div class="fc-title">NYC Bucket List Map</div>
+        <div class="fc-sub">250+ pinned spots by neighborhood</div>
+      </a>
+      <a class="footer-card" href="https://payhip.com/b/bRIqY" target="_blank" rel="noopener">
+        <div class="fc-title">The Ultimate Guide to NYC (2026)</div>
+        <div class="fc-sub">500+ page travel planning guide</div>
+      </a>
+      <a class="footer-card" href="https://www.viator.com/partner-shop/best-nyc-tours" target="_blank" rel="noopener">
+        <div class="fc-title">Top NYC Tours &amp; Tickets</div>
+        <div class="fc-sub">Personally tried and recommended</div>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>EverythingInNYC &middot; Visiting New York City? You are in the right place.</span>
+      <a href="index.html">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Progress bar
+var pb = document.getElementById('progressBar');
+function updateProgress() {
+  var h = document.documentElement;
+  var pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  if (pb) pb.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+// Scrollspy
+var secs = ['at-a-glance','choose-your-route','midtown','lower-manhattan','greenwich-village','dumbo','best-for-you','faq'];
+var navMap = {
+  'at-a-glance':      'at-a-glance',
+  'choose-your-route':'at-a-glance',
+  'midtown':          'midtown',
+  'lower-manhattan':  'lower-manhattan',
+  'greenwich-village':'greenwich-village',
+  'dumbo':            'dumbo',
+  'best-for-you':     'best-for-you',
+  'faq':              'faq'
+};
+var navLinks = document.querySelectorAll('.sn-inner a, .side-nav a');
+
+function updateNav() {
+  var pos = window.scrollY + 120;
+  var cur = '';
+  for (var i = 0; i < secs.length; i++) {
+    var el = document.getElementById(secs[i]);
+    if (el && el.offsetTop <= pos) cur = secs[i];
+  }
+  var target = navMap[cur] || '';
+  navLinks.forEach(function(a) {
+    var href = a.getAttribute('href').replace('#','');
+    var on = href === target;
+    a.classList.toggle('active', on);
+    a.classList.toggle('sn-active', on);
+  });
+}
+window.addEventListener('scroll', updateNav, {passive:true});
+updateNav();
+
+// Mobile nav toggle
+var snToggle = document.getElementById('snToggle');
+var snInner  = document.getElementById('snInner');
+if (snToggle && snInner) {
+  snToggle.addEventListener('click', function() {
+    snInner.classList.toggle('open');
+  });
+  snInner.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      snInner.classList.remove('open');
+    });
+  });
+}
+</script>
+
+</body>
+</html>
