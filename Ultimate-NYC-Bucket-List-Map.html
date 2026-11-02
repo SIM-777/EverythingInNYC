@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NYC Bucket List Map — Detailed Sales Page</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#FAFAF8}
+a{color:#0F172A}a:hover{color:#334155}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+</style>
+</helmet>
+
+<div style="font-family: Inter, system-ui, sans-serif; color: #0F172A; background: #FAFAF8; width: 100%; line-height: 1.6">
+
+<!-- NAV -->
+<header style="background: #0F172A; border-bottom: 1px solid #1E293B">
+<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #FFFFFF; text-decoration: none">Everything<span style="color: {{accent}}">InNYC</span></a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<a href="#tour" style="color: #CBD5E1; text-decoration: none; font-size: 15px; font-weight: 500">See it in action</a>
+<a href="#start" style="color: #CBD5E1; text-decoration: none; font-size: 15px; font-weight: 500">Get started</a>
+<a href="#when" style="color: #CBD5E1; text-decoration: none; font-size: 15px; font-weight: 500">Before &amp; during your trip</a>
+<a href="https://payhip.com/b/9U4MA" style="background: {{accent}}; color: #0F172A; text-decoration: none; font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; padding: 12px 20px; border-radius: 10px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Get the map · $5</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="background: #0F172A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: #1E293B; color: {{accent}}; font-family: Manrope, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>The NYC Bucket List Map</p>
+<h1 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(38px, 5vw, 62px); line-height: 1.05; letter-spacing: -0.03em">Open Google Maps. <span style="color: {{accent}}">See NYC's best 250+ places around you.</span></h1>
+<p style="margin: 0; font-size: 19px; color: #CBD5E1; max-width: 560px">Every pin is a place I'd send a friend: landmarks, food worth the trip and viewpoints most visitors miss. Plan your days on your laptop before you fly, then explore from your phone once you land.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<a href="https://payhip.com/b/9U4MA" style="background: {{accent}}; color: #0F172A; text-decoration: none; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; padding: 18px 28px; border-radius: 12px; display: inline-flex; align-items: center; gap: 10px">Get instant access — $5
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#tour" style="color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 16px 20px; border-radius: 12px; border: 1.5px solid #334155; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">See how it looks</a>
+</div>
+<ul style="margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; color: #CBD5E1">
+<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>One-time payment</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Free automatic updates</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>iPhone &amp; Android</li>
+</ul>
+</div>
+<figure style="flex: 0 1 440px; min-width: 0; margin: 0 auto; display: flex; flex-direction: column; gap: 14px">
+<div style="background: #020617; border-radius: 22px; padding: 10px; box-shadow: 0 30px 80px rgba(0,0,0,0.45)">
+<img src="./assets/fb66c1539a00d80bd82edddb791fe47f.jpg" alt="Google Maps showing the NYC Bucket List Map's red pins across Midtown Manhattan and Central Park" style="display: block; width: 100%; height: auto; border-radius: 14px">
+</div>
+<figcaption style="font-size: 14px; color: #CBD5E1; text-align: center">The real map in Google Maps: every red pin is a saved place.</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- STAT STRIP -->
+<section aria-label="At a glance" style="background: {{accent}}">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column"><span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 36px; line-height: 1.1">250+</span><span style="font-size: 15px; font-weight: 500">hand-picked places</span></div>
+<div style="display: flex; flex-direction: column"><span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 36px; line-height: 1.1">3 steps</span><span style="font-size: 15px; font-weight: 500">from checkout to your phone</span></div>
+<div style="display: flex; flex-direction: column"><span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 36px; line-height: 1.1">2 versions</span><span style="font-size: 15px; font-weight: 500">Google Maps + Google My Maps</span></div>
+<div style="display: flex; flex-direction: column"><span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 36px; line-height: 1.1">$5</span><span style="font-size: 15px; font-weight: 500">once, with free updates</span></div>
+</div>
+</section>
+
+<!-- TOUR -->
+<section id="tour" style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 96px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #475569">See it in action</p>
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.02em">This is exactly what you get. No mockups, just the real map.</h2>
+</div>
+
+<!-- Row 1 -->
+<div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<figure style="flex: 1.2 1 520px; min-width: 0; margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 22px; padding: 12px; box-shadow: 0 20px 50px rgba(15,23,42,0.10)">
+<img src="./assets/10e4e697614c6865b30b934288c33897.jpg" alt="Google Maps showing the NYC bucket list map list with 260 places, and a place card for the Hans Christian Andersen Monument with Directions, Saved, Nearby, Send to phone and Share buttons" style="display: block; width: 100%; height: auto; border-radius: 12px">
+</figure>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<span style="align-self: flex-start; background: #FFF3CD; color: #0F172A; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; padding: 6px 12px; border-radius: 8px">On your phone · Google Maps</span>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.15">Browse the whole list, then tap any place</h3>
+<p style="margin: 0; font-size: 17px; color: #334155">The map lives in your saved lists in Google Maps. Scroll through every place with photos, ratings and what kind of spot it is, or search for one by name.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span><strong>Directions</strong> from wherever you're standing, in one tap</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span><strong>Reviews, photos and tickets</strong> right on the place card</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span><strong>Nearby</strong> to see what else is around once you're there</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span><strong>Send to phone</strong> when you found it on your laptop first</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Row 2 -->
+<div style="display: flex; flex-wrap: wrap-reverse; gap: 56px; align-items: center">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<span style="align-self: flex-start; background: #FFF3CD; color: #0F172A; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; padding: 6px 12px; border-radius: 8px">On your phone · Google Maps</span>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.15">See what's worth your time near you</h3>
+<p style="margin: 0; font-size: 17px; color: #334155">Every place shows up as a red pin right on your normal map. Just finished at Central Park? Look around and you'll spot Bethesda Terrace, a bakery for lunch and a viewpoint for sunset, all within walking distance.</p>
+<p style="margin: 0; font-size: 17px; color: #334155">No more “where should we go next?” on the sidewalk. The answer is already pinned.</p>
+</div>
+<figure style="flex: 0 1 460px; min-width: 0; margin: 0 auto; background: #0F172A; border-radius: 26px; padding: 12px; box-shadow: 0 20px 50px rgba(15,23,42,0.18)">
+<img src="./assets/fb66c1539a00d80bd82edddb791fe47f.jpg" alt="Red pins across Manhattan in Google Maps, from Central Park and Lincoln Center down to Chelsea, Greenwich Village and the Lower East Side" style="display: block; width: 100%; height: auto; border-radius: 16px">
+</figure>
+</div>
+
+<!-- Row 3 -->
+<div style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-end">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<span style="align-self: flex-start; background: #DBEAFE; color: #0F172A; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; padding: 6px 12px; border-radius: 8px">On your laptop · Google My Maps</span>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.15">Plan the whole trip on a big screen</h3>
+<p style="margin: 0; font-size: 17px; color: #334155">The planning version groups places by neighborhood, like Upper West Side, so you can build each day around one area. Pins are color-coded by category, and clicking one shows the address, website, phone number and rating.</p>
+</div>
+<ul style="flex: 1 1 360px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Make your own copy and add your hotel</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Remove the places you're not into</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Turn neighborhoods into a day-by-day plan</span></li>
+</ul>
+</div>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 22px; padding: 12px; box-shadow: 0 20px 50px rgba(15,23,42,0.10)">
+<img src="./assets/ff7f5e06717b3f0339a772a293f7800a.jpg" alt="Google My Maps on desktop with an Upper West Side layer list on the left and color-coded pins across Midtown and Chelsea; a card for Vessel shows its address, website, phone number and 4.6 rating" style="display: block; width: 100%; height: auto; border-radius: 12px">
+</figure>
+</div>
+</section>
+
+<!-- GET STARTED -->
+<section id="start" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #475569">Get started</p>
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Three simple steps. No new app.</h2>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+<li style="background: #FAFAF8; border: 1px solid #E2E8F0; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center">1</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><path d="M9 14h6M9 17h4"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px">Buy the map</h3>
+<p style="margin: 0; font-size: 16px; color: #334155">Pay $5 once. You instantly get a PDF with your access links and a short guide to getting started.</p>
+</li>
+<li style="background: #FAFAF8; border: 1px solid #E2E8F0; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center">2</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg>
+</div>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px">Open the link on your phone</h3>
+<p style="margin: 0; font-size: 16px; color: #334155">Tap the Google Maps link in the PDF. The map opens in your Google Maps app. Save it and it stays in your saved lists.</p>
+</li>
+<li style="background: #0F172A; color: #FFFFFF; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; color: #0F172A; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center">3</span>
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+</div>
+<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px">Explore, or plan first</h3>
+<p style="margin: 0; font-size: 16px; color: #CBD5E1">Out in the city? Tap a pin and go. Still at home? Open the My Maps link on your laptop and plan your days.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- BEFORE / DURING -->
+<section id="when" style="background: #0F172A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">When to use it</p>
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Useful from the day you book until your last afternoon in the city.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+<div style="background: #1E293B; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 14px; background: #0F172A; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
+<div><p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; line-height: 1.2">Before your trip</p><p style="margin: 0; font-size: 14px; color: #CBD5E1">On your laptop · Google My Maps</p></div>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px; color: #E2E8F0">
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800; color: #FFC107">01</span><span><strong style="color: #FFFFFF">Pick where to stay.</strong> See which areas have the most of what you want nearby.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800; color: #FFC107">02</span><span><strong style="color: #FFFFFF">Add your hotel</strong> to your copy and see what's within walking distance.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800; color: #FFC107">03</span><span><strong style="color: #FFFFFF">Group stops by neighborhood</strong> so each day stays in one part of town.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800; color: #FFC107">04</span><span><strong style="color: #FFFFFF">Check tickets and hours</strong> for the big attractions ahead of time.</span></li>
+</ul>
+</div>
+<div style="background: {{accent}}; color: #0F172A; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 14px; background: #0F172A; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg></span>
+<div><p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; line-height: 1.2">During your trip</p><p style="margin: 0; font-size: 14px; font-weight: 500">On your phone · Google Maps app</p></div>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px">
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800">01</span><span><strong>See what's around you</strong> wherever you are in the city.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800">02</span><span><strong>Find food fast</strong> when you're hungry, without searching.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800">03</span><span><strong>Get directions in one tap</strong> by walking, subway or car.</span></li>
+<li style="display: flex; gap: 12px"><span style="flex: none; font-family: Manrope, sans-serif; font-weight: 800">04</span><span><strong>Change plans easily</strong> when it rains or a line's too long.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #475569">From verified buyers</p>
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.02em">What travelers say</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px">Awesome!</p>
+<blockquote style="margin: 0; font-size: 16px; color: #334155">“Exactly what I need for our upcoming trip! So glad I found this. Includes a list as well as easy directions for how to get it to open in your Google Maps app.”</blockquote>
+<figcaption style="margin-top: auto; font-size: 14px; font-weight: 600; color: #475569">Verified buyer</figcaption>
+</figure>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px">NY map</p>
+<blockquote style="margin: 0; font-size: 16px; color: #334155">“I love that I have the map to hand on my phone.”</blockquote>
+<figcaption style="margin-top: auto; font-size: 14px; font-weight: 600; color: #475569">Katton · Verified buyer</figcaption>
+</figure>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px">Great memories</p>
+<blockquote style="margin: 0; font-size: 16px; color: #334155">“I visited New York last fall and plan to go again next year. So far, the map has been easy to navigate.”</blockquote>
+<figcaption style="margin-top: auto; font-size: 14px; font-weight: 600; color: #475569">Diana D. · Verified buyer</figcaption>
+</figure>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px">Great resource</p>
+<blockquote style="margin: 0; font-size: 16px; color: #334155">“Have yet to use but have found it useful in planning.”</blockquote>
+<figcaption style="margin-top: auto; font-size: 14px; font-weight: 600; color: #475569">Vicki Currie · Verified buyer</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="buy" style="background: #0F172A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; align-items: center; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; max-width: 680px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Get the map</p>
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Less planning. More New York.</h2>
+</div>
+<div style="width: 100%; max-width: 520px; box-sizing: border-box; background: #FFFFFF; color: #0F172A; border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.4)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px">The NYC Bucket List Map</p>
+<p style="margin: 0; font-size: 15px; color: #475569">Google Maps + Google My Maps access</p>
+</div>
+<p style="margin: 0; display: flex; align-items: baseline; gap: 10px"><span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 56px; line-height: 1">$5</span><span style="font-size: 15px; color: #475569">one-time payment</span></p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>250+ hand-picked places across NYC</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Google Maps version for exploring on your phone</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Google My Maps version for planning on desktop</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Instant PDF with your links and quick-start steps</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg><span>Free updates, applied to your map automatically</span></li>
+</ul>
+<a href="https://payhip.com/b/9U4MA" style="background: {{accent}}; color: #0F172A; text-decoration: none; text-align: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; padding: 18px 24px; border-radius: 14px">Get the map now</a>
+<p style="margin: 0; font-size: 13px; color: #475569; text-align: center">Secure checkout via Payhip</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="max-width: 860px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.02em">Questions, answered</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0 24px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 44px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">Do I need to download anything?<span class="faq-plus" aria-hidden="true" style="font-size: 24px; line-height: 1; transition: transform .2s">+</span></summary>
+<p style="margin: 0 0 20px; font-size: 16px; color: #334155">No new app. The map opens in Google Maps, which is free on the App Store and Google Play if you don't have it already.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0 24px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 44px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">How do I find the map again later?<span class="faq-plus" aria-hidden="true" style="font-size: 24px; line-height: 1; transition: transform .2s">+</span></summary>
+<p style="margin: 0 0 20px; font-size: 16px; color: #334155">Once you've saved it, it sits with your saved lists in Google Maps. The pins also show up on your normal map whenever you're browsing the city.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0 24px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 44px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">Can I customize it?<span class="faq-plus" aria-hidden="true" style="font-size: 24px; line-height: 1; transition: transform .2s">+</span></summary>
+<p style="margin: 0 0 20px; font-size: 16px; color: #334155">Yes. With the Google My Maps version you can make your own copy, add your hotel, remove places and build your own itinerary.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0 24px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 44px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">Will I get updates?<span class="faq-plus" aria-hidden="true" style="font-size: 24px; line-height: 1; transition: transform .2s">+</span></summary>
+<p style="margin: 0 0 20px; font-size: 16px; color: #334155">Yes, automatically. When I add or change places, your map updates. You pay once and never need to do anything.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0 24px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 44px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">Does it work on iPhone and Android?<span class="faq-plus" aria-hidden="true" style="font-size: 24px; line-height: 1; transition: transform .2s">+</span></summary>
+<p style="margin: 0 0 20px; font-size: 16px; color: #334155">Yes, anywhere you can use Google Maps.</p>
+</details>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; background: {{accent}}; border-radius: 28px; padding: 64px 32px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 760px">Plan it tonight. Explore it next week.</h2>
+<p style="margin: 0; font-size: 18px; max-width: 560px">250+ places I'd send a friend to, waiting in the app you already use.</p>
+<a href="https://payhip.com/b/9U4MA" style="background: #0F172A; color: #FFFFFF; text-decoration: none; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; padding: 18px 32px; border-radius: 14px">Get instant access — $5</a>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFC107","options":["#FFC107","#FACC15","#FB923C","#38BDF8"]},"$preview":{"width":1440,"height":9200}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#FFC107' };
+}
+}
+</script>
+</body>
+</html>
