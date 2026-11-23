@@ -107,7 +107,7 @@
   @media(min-width:1120px){.sticky-nav{display:none !important;}}
 
   /* SIDEBAR */
-  .side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);}
+  .side-nav{display:none;position:fixed;top:90px;width:164px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:14px 0;z-index:80;box-shadow:var(--shadow-card);max-height:calc(100vh - 110px);overflow-y:auto;scrollbar-width:thin;}
   @media(min-width:1120px){.side-nav{display:block;left:calc(50% - 512px);}}
   @media(min-width:1280px){.side-nav{left:calc(50% - 544px);}}
   .side-nav .snt{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);padding:0 14px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;}
@@ -133,7 +133,11 @@
   .bc-btn:hover{opacity:.88;}
   .rec-strip{background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;margin:10px 0;display:flex;align-items:flex-start;gap:10px;}
   .rec-strip-label{font-family:var(--font-head);font-weight:800;font-size:11px;background:var(--accent);color:var(--navy);border-radius:20px;padding:2px 8px;flex:none;margin-top:1px;white-space:nowrap;}
-  [id]{scroll-margin-top:40px;}
+
+  /* Viator link box */
+  .viator-link-box{display:inline-flex;align-items:center;gap:10px;background:rgba(255,193,7,.1);border:1.5px solid rgba(255,193,7,.5);border-radius:10px;padding:11px 20px;font-family:var(--font-head);font-weight:700;font-size:14px;color:var(--navy);text-decoration:none;margin:12px 0;transition:background .15s,border-color .15s;}
+  .viator-link-box::before{content:'';display:block;width:9px;height:9px;background:var(--accent);border-radius:50%;flex-shrink:0;}
+  .viator-link-box:hover{background:rgba(255,193,7,.2);border-color:var(--accent);text-decoration:none;}
 </style>
 
 <script>
@@ -300,8 +304,8 @@
       </div>
       <p><strong>Best for:</strong> outdoor thrills and Hudson River sunsets</p>
       <p><strong>Location:</strong> 30 Hudson Yards, West Midtown Manhattan<br>
-      <strong>Height:</strong> approximately 1,100 feet above Hudson Yards; official materials list 1,131 feet<br>
-      <a href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
+      <strong>Height:</strong> approximately 1,100 feet above Hudson Yards; official materials list 1,131 feet</p>
+      <a class="viator-link-box" href="https://www.viator.com/tours/New-York-City/Edge-Observation-Deck-General-Admission/d687-76823P1?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a>
       <p>Edge is one of New York&rsquo;s most dramatic outdoor observation experiences. The attraction includes a glass floor, angled glass walls, outdoor viewing areas, skyline seating, and an eastern-facing point extending over the city. Every standard ticket also includes indoor immersive installations and indoor viewing areas.</p>
       <p><strong>My Experience:</strong> Stepping onto the Edge outdoor deck feels like floating above the city. The glass floor segment is thrilling, and the views toward the Hudson River and Midtown skyline are unbeatable, especially at sunset or night.</p>
       <div class="card-grid cols-2">
@@ -327,8 +331,8 @@
       </div>
       <p><strong>Best for:</strong> the classic New York skyline photograph</p>
       <p><strong>Location:</strong> 30 Rockefeller Plaza, Midtown Manhattan (main entrance at 50 West 50th Street)<br>
-      <strong>Height:</strong> approximately 850 feet above street level (open-air 70th-floor terrace)<br>
-      <a href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
+      <strong>Height:</strong> approximately 850 feet above street level (open-air 70th-floor terrace)</p>
+      <a class="viator-link-box" href="https://www.viator.com/tours/New-York-City/Top-of-the-Rock-Observation-Deck-New-York/d687-3784TOPROCK?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a>
       <p>Top of the Rock is the strongest choice for photographing the Empire State Building with Central Park and Midtown Manhattan behind it. The attraction occupies three observation levels of Rockefeller Center and ends with an open-air 70th-floor terrace. Top of the Rock has indoor viewing areas, but its signature upper terrace is outdoors. Wind, rain, snow, and poor visibility can affect the experience.</p>
       <p><strong>My Experience:</strong> I love Top of the Rock for the classic NYC postcard shots. For the most dramatic experience, book approximately 60&ndash;90 minutes before sunset so you can see the skyline in daylight, during golden hour, and after dark. Sunrise and early morning visits are often the quietest.</p>
       <div class="card-grid cols-2">
@@ -353,8 +357,8 @@
         </ul>
       </div>
       <p><strong>Best for:</strong> history, exhibits, and visiting an iconic landmark</p>
-      <p><strong>Location:</strong> 350 5th Ave, Midtown Manhattan<br>
-      <a href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
+      <p><strong>Location:</strong> 350 5th Ave, Midtown Manhattan</p>
+      <a class="viator-link-box" href="https://www.viator.com/tours/New-York-City/Empire-State-Building-Tickets-Observatory-Ticket/d687-2194EMPIRE?pid=P00171942&amp;mcid=42383&amp;medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a>
       <p>The Empire State Building is more than an observation deck. It is a historic New York landmark with museum exhibits, architectural details, and two different viewing experiences. The 86th-floor Main Deck includes an open-air viewing area. The optional 102nd-floor observatory is enclosed with floor-to-ceiling windows at approximately 1,250 feet above street level. The building also features exhibits on the second and 80th floors.</p>
       <p>For most visitors, the 86th floor is enough because it provides the open-air experience and the most recognizable views. The 102nd floor is worth adding if you want a fully enclosed viewpoint, floor-to-ceiling windows, or a higher perspective in clear weather.</p>
       <p><strong>My Experience:</strong> The open-air 86th floor is my favorite for nighttime views &mdash; Manhattan lights up like a grid of gold and white. The building&rsquo;s exhibits downstairs add another layer to the visit.</p>
@@ -544,7 +548,7 @@
       <h3 id="summit">SUMMIT One Vanderbilt</h3>
       <p><strong>Best for:</strong> immersive art and creative photography</p>
       <p>SUMMIT One Vanderbilt is not a traditional observation deck. It is a three-level immersive art experience with skyline views, located near Grand Central Terminal. The attraction includes mirrored rooms, reflective floors, glass ledges, outdoor areas, and the optional Ascent glass elevator.</p>
-      <a href="https://www.viator.com/tours/New-York-City/SUMMIT-One-Vanderbilt-Experience-Ticket/d687-77354P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
+      <a class="viator-link-box" href="https://www.viator.com/tours/New-York-City/SUMMIT-One-Vanderbilt-Experience-Ticket/d687-77354P1?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a>
       <ul class="tag-grid">
         <li><span class="dot"></span>Located near Grand Central Terminal</li>
         <li><span class="dot"></span>Mirrors and reflective floors throughout</li>
@@ -561,8 +565,7 @@
       <h3 id="one-world">One World Observatory</h3>
       <p><strong>Best for:</strong> harbor views, Lower Manhattan, and poor weather</p>
       <p>One World Observatory occupies floors 100&ndash;102 of One World Trade Center. It is fully enclosed and provides strong views of the Statue of Liberty, New York Harbor, the Brooklyn Bridge, the Manhattan Bridge, and Lower Manhattan. It is the best choice on cold, windy, or rainy days.</p>
-      <a href="https://www.viator.com/tours/New-York-City/One-World-Observatory-Admission/d687-8747ONEWORLD?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a></p>
-      <ul class="tag-grid">
+      <a class="viator-link-box" href="https://www.viator.com/tours/New-York-City/One-World-Observatory-Admission/d687-8747ONEWORLD?pid=P00171942&mcid=42383&medium=link" target="_blank" rel="noopener">Reserve now and Pay later &rarr;</a>
       <ul class="tag-grid">
         <li><span class="dot"></span>Fully enclosed experience</li>
         <li><span class="dot"></span>Floors 100&ndash;102 of One World Trade Center</li>
